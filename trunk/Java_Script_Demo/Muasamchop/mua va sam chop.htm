@@ -1,0 +1,133 @@
+<HTML>
+<HEAD>
+  <TITLE>javascript Mua va sap chop</TITLE>
+<script language="javascript">
+
+  var sym = " ' ";
+  var speed = 35;
+  var angle = 12;
+  var movex = -speed/angle;
+  var movey = speed;
+
+  var lightning_image = "lightning.gif";
+  var lightning_width = 128;
+  var lightning_height = 192;
+  var num_drops = to_int(screen.width / 60);
+  var width_indent = 0;
+  var left_indent = screen.height / 10;
+  var top_indent = 0;
+  var doc_left = screen.width * .15;
+  var doc_top = screen.height * .15;
+  var doc_width = screen.width * .7;
+  var doc_height = screen.height * .7;
+  var doc_clientleft = doc_left + width_indent;
+  var doc_clienttop = doc_top + top_indent;
+  var doc_clientwidth = doc_width - (width_indent * 2);
+  var doc_clientheight = doc_height * .925;
+  var moverain_timeout = 25;
+  var movelightning_timeout = 5000;
+  var increment = (doc_clientwidth - left_indent) / num_drops;
+  var rainposx = new Array();
+
+  function moverain()
+  {
+    for(move = 0; move < num_drops; move++)
+    {
+      xx[move]+=movex;
+      yy[move]+=mv[move];
+
+      if(xx[move] <= doc_clientleft)
+      {
+        yy[move] = 0;
+        xx[move] = rainposx[move];
+      }
+      if(yy[move]+doc_clienttop >= doc_clienttop+doc_clientheight)
+      {
+        yy[move] = 0;
+        xx[move] = rainposx[move];
+      }
+
+      drop[move].left = xx[move];
+      drop[move].top = yy[move] + doc_clienttop;
+    }
+
+    setTimeout("moverain()", moverain_timeout);
+  }
+
+  function resettext()
+  {
+    window.document.searchform.searchvalue.value = 'Search the Web';
+    window.document.searchform.searchvalue.select();
+  }
+
+  function to_int(n)
+  {
+    for(i=0; i<10000; i++)
+    {
+      if(n>i && n<i+1)
+      {
+        n = i;
+        i = 10000;
+      }
+      else if(n == i)
+      {
+        i = 10000;
+      }
+    }
+
+    return n;
+  }
+
+function movelightning()
+{
+  var minleft = doc_clientleft;
+  var maxleft = doc_clientleft + doc_clientwidth - lightning_width;
+  var totalwidth = maxleft - minleft;
+
+  document.all["lightning"].style.left = Math.random() * totalwidth + minleft;
+  setTimeout("movelightning()", movelightning_timeout);
+}
+</script>
+  <style>
+  a:visited {color: #ffffff; text-decoration: none;}
+  a:hover {color: #00ff00; text-decoration: underline;}
+  a:link {color: #ffffff; text-decoration: none;}
+  a:active {color: #ffffff; text-decoration: none;} 
+
+  .drop {position: absolute; width: 3; filter: flipV(), flipH(); font-size: 40; color: blue;}
+</style>
+</HEAD>
+<BODY BACKGROUND="Ocean Wave.jpg" BGPROPERTIES="FIXED">
+<script language="javascript">
+  if(document.all)
+  {
+    drop = new Array(); xx = new Array(); yy = new Array(); mv = new Array();
+    ly = "document.all[\'"; st = "\'].style";
+
+    for(make=0; make<num_drops; make++)
+    {
+      document.write('<div id="drop'+make+'" class=drop>'+sym+'</div>');
+      drop[make] = eval(ly+'drop'+make+st);
+      maxx = doc_clientleft + doc_clientwidth;
+      maxy = doc_clienttop + doc_clientheight;
+      xx[make] = (make + 1) * increment + doc_clientleft + left_indent;
+      rainposx[make] = xx[make];
+      yy[make] = Math.random() * doc_clientheight + doc_clienttop;
+      drop[make].left = xx[make];
+      drop[make].top = yy[make];
+      mv[make] = (Math.random() * 5) + (speed / 4);
+      drop[make].fontSize = 16;
+      drop[make].color = '#00ffff';
+    }
+
+    moverain();
+
+    document.write("<div id=\"lightning\" style=\"POSITION: absolute; Z-INDEX: 0; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;\"><img src='"+lightning_image+"' border=\"0\"></div>");
+    document.all["lightning"].style.top = doc_clienttop;
+    movelightning();
+    document.all["lightning"].style.visibility = "visible";
+  }
+</script>
+<center><b><font color="#FF0000" face="Arial" size="4">Javascript</font><font color="#FFFFFF" face="Arial" size="4"> M&#432;a và s&#7845;m ch&#7899;p</font></b></center>
+</BODY>
+</HTML>

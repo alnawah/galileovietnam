@@ -1,0 +1,30 @@
+<html>
+<HEAD>
+<SCRIPT>
+var startImage ="fruit.gif";
+var endImage="mouse.gif";
+function doTrans() {
+        imgObj.filters[0].apply();
+        if (oImg.src.indexOf(startImage)!=-1) {
+            oImg.src = endImage;
+            imgObj.style.backgroundColor = "gold";
+            imgObjText.innerHTML = "<BR><B>Trang 1</B><BR><BR>Với đoạn code này, bạn có thể tạo ra những hiệu ứng áp dụng trong các gallery ảnh tuyệt đẹp"
+		} else {
+            oImg.src = startImage;
+            imgObj.style.backgroundColor = "skyblue";
+            imgObjText.innerHTML = "<BR><b>Trang 2</b><BR><BR>Nhấn nút <b>Play</b> để chuyển trở lại trang trước"
+		}
+        imgObj.filters[0].play();
+}
+</SCRIPT>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></HEAD>
+<BODY>
+<SPAN id="imgObj" style="PADDING-RIGHT: 10px; PADDING-LEFT: 13px; FILTER: progid:DXImageTransform.Microsoft.GradientWipe(GradientSize=0.5,wipestyle=0,motion=forward); FONT: 9pt/1.3 verdana; WIDTH: 305px; COLOR: black; HEIGHT: 150px; BACKGROUND-COLOR: gold"><IMG id=oImg style="MARGIN: 8px" src="mouse.gif" align=left>
+<DIV id=imgObjText><BR>
+  <B>Trang 1</B><BR>
+  <BR>
+  Với đoạn code này, bạn có thể tạo ra những hiệu ứng áp dụng trong các gallery 
+  ảnh tuyệt đẹp</DIV>
+</SPAN><BR><BR>
+<input style="width: 150px" type="button" onclick="doTrans()" value="Play">
+</BODY></html>

@@ -1,0 +1,80 @@
+<script>
+var globalmapimage="globalmap2.gif"
+
+var globalmapwidth=315
+var globalmapheight=186
+var nightzonewidth=globalmapwidth
+var nightzoneheight=globalmapheight
+
+var clipnighttop
+var clipnightbottom
+var clipnightright=0
+var clipnightleft=0
+var clipnightpoints
+
+var differencehours
+var differencepixels
+var now=new Date()
+var utchours=now.getUTCHours()
+var monthimage=now.getMonth()
+
+if (monthimage==0) {monthimage="january"}
+else if (monthimage==1) {monthimage="february"}
+else if (monthimage==2) {monthimage="march"}
+else if (monthimage==3) {monthimage="april"}
+else if (monthimage==4) {monthimage="may"}
+else if (monthimage==5) {monthimage="june"}
+else if (monthimage==6) {monthimage="july"}
+else if (monthimage==7) {monthimage="august"}
+else if (monthimage==8) {monthimage="september"}
+else if (monthimage==9) {monthimage="october"}
+else if (monthimage==10) {monthimage="november"}
+else if (monthimage==11) {monthimage="december"}
+
+var preloadmonthimage=new Image()
+preloadmonthimage.src=monthimage
+
+var preloadglobalmap=new Image()
+preloadglobalmap.src=globalmapimage
+
+function initiatedaynight() {
+	clipnighttop=0
+	clipnightbottom=globalmapheight
+	
+	document.all.globalmap.style.visibility="visible"
+	
+	nightzoneright.innerHTML="<img src='"+monthimage+".gif' width='"+nightzonewidth+"' height='"+nightzoneheight+"'>"
+	nightzoneleft.innerHTML="<img src='"+monthimage+".gif' width='"+nightzonewidth+"' height='"+nightzoneheight+"'>"
+	setnightstripes()
+}
+
+function setnightstripes() {
+	differencepixels=globalmapwidth/24*utchours
+	document.all.nightzoneleft.style.posLeft-=differencepixels
+	clipnightleft=document.all.globalmap.style.posLeft-document.all.nightzoneleft.style.posLeft
+	clipnightright=globalmapwidth
+	clipnightpoints="rect("+clipnighttop+" "+clipnightright+" "+clipnightbottom+" "+clipnightleft+")"
+	document.all.nightzoneleft.style.clip=clipnightpoints
+	document.all.nightzoneleft.style.visibility="visible"
+	
+	document.all.nightzoneright.style.posLeft=document.all.nightzoneleft.style.posLeft+globalmapwidth
+	clipnightleft=0
+		clipnightright=globalmapwidth-(document.all.nightzoneright.style.posLeft-document.all.globalmap.style.posLeft)
+	clipnightpoints="rect("+clipnighttop+" "+clipnightright+" "+clipnightbottom+" "+clipnightleft+")"
+	document.all.nightzoneright.style.clip=clipnightpoints
+	document.all.nightzoneright.style.visibility="visible"
+}
+
+if (document.all) {
+	document.write('<span id="roofmap" style="position:relative;width:'+globalmapwidth+'px;height:'+globalmapheight+'px;overflow:hidden">')
+
+	document.write('<div id="globalmap" style="position:absolute;top:0px;left:0px;width:'+globalmapwidth+'px;height:'+globalmapheight+'px;visibility:hidden"><img src="'+globalmapimage+'"></div>')
+
+	document.write('<div id="nightzoneleft" style="position:absolute;top:0px;left:0px;width:'+globalmapwidth+'px;height:'+globalmapheight+'px;visibility:hidden;filter:alpha(opacity=30)"></div>')
+
+	document.write('<div id="nightzoneright" style="position:absolute;top:0px;left:0px;width:'+globalmapwidth+'px;height:'+globalmapheight+'px;visibility:hidden;filter:alpha(opacity=30)"></div>')
+document.write('</span>')
+
+	window.onload=initiatedaynight
+}
+</script>
