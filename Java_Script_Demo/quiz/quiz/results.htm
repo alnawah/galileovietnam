@@ -1,0 +1,98 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Ket qua trac nghiem truc tuyen</title>
+</head>
+
+<body style="font-family: Tahoma">
+
+<p align="center"><strong><script src="solution.js">
+</script>
+<font size="4"> K&#7871;t qu&#7843;</font></strong></p>
+<div align="center"><center>
+
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><form method="POST" name="result" action="--WEBBOT-SELF--">
+      <table border="0" width="100%" cellpadding="0">
+        <tr>
+          <td bgcolor="#D3FFA8"><strong><font size="2">S&#7889; câu
+            h&#7887;i tr&#7843; l&#7901;i &#273;úng:</font></strong></td>
+          <td height="25"><div align="right"><p><input type="text" name="p" size="10"></td>
+        </tr>
+        <tr>
+          <td bgcolor="#D3FFA8"><strong><font size="2">Nh&#7919;ng câu
+            tr&#7843; l&#7901;i sai:</font></strong></td>
+          <td height="17"><div align="right"><p><input type="text" name="T2" size="10"></td>
+        </tr>
+        <tr>
+          <td bgcolor="#D3FFA8"><strong><font size="2">B&#7841;n &#273;&#259;
+            &#273;&#7841;t &#273;&#432;&#7907;c:</font></strong></td>
+          <td height="25"><input type="text" name="q" size="10"></td>
+        </tr>
+      </table>
+    </form>
+    </td>
+  </tr>
+</table>
+</center></div>
+
+<form method="POST" action="--WEBBOT-SELF--">
+  <div align="center"><center><p><script>
+var wrong=0
+var totalquestions=10
+for (e=0;e<=2;e++)
+document.result[e].value=""
+
+var results=document.cookie.split(";")
+for (n=0;n<=results.length-1;n++){
+if (results[n].charAt(1)=='q')
+parse=n
+
+}
+
+var incorrect=results[parse].split("=")
+incorrect=incorrect[1].split("/")
+if (incorrect[incorrect.length-1]=='b')
+incorrect=""
+document.result[0].value=totalquestions-incorrect.length+"/"+totalquestions
+document.result[2].value=(totalquestions-incorrect.length)/totalquestions*100+"%"
+for (temp=0;temp<incorrect.length;temp++)
+document.result[1].value+=incorrect[temp]+", "
+
+function showsolution(){
+var win2=window.open("","win2","width=200,height=250")
+win2.focus()
+win2.document.open()
+win2.document.write('<title>&#272;áp án</title>')
+win2.document.write('<body bgcolor="#FFFFFF">')
+win2.document.write('<center><h3>&#272;áp án</h3></center>')
+win2.document.write('<center><font size="2" face="Tahoma">')
+for (i=1;i<=totalquestions;i++){
+for (temp=0;temp<incorrect.length;temp++){
+if (i==incorrect[temp])
+wrong=1
+}
+if (wrong==1){
+win2.document.write("Câu h&#7887;i "+i+"="+correctchoices[i].fontcolor("red")+"<br>")
+wrong=0
+}
+else
+win2.document.write("Câu h&#7887;i "+i+"="+correctchoices[i]+"<br>")
+}
+
+
+win2.document.write('</center></font>')
+win2.document.write('<font size="1" face="Tahoma">Chú ý: Câu h&#7887;i nao có &#273;áp án mau &#273;&#7887;, &#273;ó chính la câu b&#7841;n &#273;&#259; tr&#7843; l&#7901;i sai.</font>')
+win2.document.close()
+}
+</script>
+<input type="button" value="Quay l&#7841;i" name="B1"
+  onClick="history.go(-1)"> <input type="button" value="Xem &#272;áp án" name="B2"
+  onClick="showsolution()"></p>
+  </center></div>
+</form>
+
+<p align="center"><a href="http://www.echip.com.vn"><font size="1">Echip- Tin h&#7885;c</font><font size="1">
+nh&#432; c&#417;m bình dân</font></a></p>
+</body>
+</html>

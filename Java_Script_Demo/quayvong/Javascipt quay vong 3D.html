@@ -1,0 +1,64 @@
+<HTML><title>Javascipt quay vong 3D</title>
+<BODY bgcolor=blue text=white>
+<SCRIPT>
+var x=0, y=0,spiralCount=1,namesAre,dimx=0.1,blabla=1
+function Ve()
+
+
+    	{
+    	if(spiralCount==169 && dimx<1.1 && blabla==1)
+
+
+        		{
+        		blabla=0
+        		dimx+=0.1
+        		}
+        	else if(spiralCount==169 && dimx<1.1 && blabla==0)	
+
+
+            		{
+            		blabla=1
+            		dimx-=0.1
+            		}
+            	if(spiralCount<170)
+
+
+                		{
+                		namesAre="circle"+spiralCount
+                		document.all.item(namesAre).style.top=300+Math.sin(y)*spiralCount
+                		<!--Suu tam boi Nguyen Truong Minh Chanh -->
+						document.all.item(namesAre).style.left=300+Math.cos(x)*spiralCount
+                		x+=dimx
+                		y+=0.1
+                		spiralCount=spiralCount+1
+                		namesAre="circle" + spiralCount
+                		}
+                	else
+
+
+                    		{
+                    		spiralCount=1
+                    		}
+                    		
+                    		
+                    	
+                }
+                function GoRound()
+
+
+                    {
+                    while(spiralCount<170)
+
+
+                        	{
+                        	namesAre="circle"+spiralCount
+                        	spiralCount=spiralCount+1
+                        	document.write ("<DIV id=" + namesAre + " style='position:absolute;top:100;left:100'><img src='hinhvongtron.gif'></DIV>")	
+                        	}
+                        	spiralCount=1
+                        	Mooki=setInterval('Ve()',10)
+                    }
+                    GoRound()
+                    </SCRIPT>
+                    </BODY>
+                    </HTML>

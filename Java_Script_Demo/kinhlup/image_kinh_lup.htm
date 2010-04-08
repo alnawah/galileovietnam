@@ -1,0 +1,224 @@
+﻿<HTML><HEAD><TITLE>{--} Javascript - XEM HINH ANH BANG KINH LUP - Suu tam boi Mr HOT</TITLE>
+<META content="text/html; charset=UTF-8" http-equiv=Content-Type>
+<STYLE type=text/css>#mglass {
+	LEFT: -2000px; POSITION: absolute; TOP: 50px
+}
+#thumb {
+	LEFT: -2000px; POSITION: absolute; TOP: 50px
+}
+#large {
+	LEFT: -2000px; POSITION: absolute; TOP: 50px
+}
+#framegif {
+	LEFT: -2000px; POSITION: absolute; TOP: 50px
+}
+
+A:link { COLOR: #990000; TEXT-DECORATION: none }
+A:visited { COLOR: #99ccff; TEXT-DECORATION: none }
+A:hover { COLOR: red; TEXT-DECORATION: underline }
+</STYLE>
+
+<SCRIPT language=JavaScript>
+
+var isNav, isIE
+var offsetX, offsetY
+var selectedObj 
+
+var enlargefactor=5
+
+var largewidth = 455
+var largeheight = 523
+var largeleft = 300
+var largetop = 130
+
+var thumbwidth = Math.floor(largewidth/enlargefactor)
+var thumbheight = Math.floor(largeheight/enlargefactor)
+var thumbleft = 190
+var thumbtop = 130
+
+var mglasswidth = 32
+var mglassheight = 32
+var mglassleft = 200
+var mglasstop = 250
+
+var difleft= largeleft-thumbleft
+var diftop= largetop-thumbtop
+
+var clippoints
+
+var cliptop = (thumbheight-mglassheight)*enlargefactor
+var clipbottom = cliptop+(mglassheight*enlargefactor)
+var clipleft =(thumbwidth-mglasswidth)*enlargefactor
+var clipright = clipleft+(mglasswidth*enlargefactor)
+
+
+if (parseInt(navigator.appVersion) >= 4) {
+	if (navigator.appName == "Netscape") {
+		isNav = true
+	} else {
+		isIE = true
+	}
+}
+
+function setZIndex(obj, zOrder) {
+	obj.zIndex = zOrder
+}
+
+function shiftTo(obj, x, y) {
+	if (isNav) {
+		obj.moveTo(x,y)
+	} else {
+		obj.pixelLeft = x
+		obj.pixelTop = y
+	}	
+	cliptop = (y-thumbtop)*enlargefactor
+	clipbottom = cliptop+(mglassheight*enlargefactor)
+	clipleft = (x-thumbleft)*enlargefactor
+	clipright = clipleft+(mglasswidth*enlargefactor)
+
+	
+	if (document.all) {
+		clippoints ="rect("+cliptop+" "+clipright+" "+clipbottom+" "+clipleft+")"
+		document.all.large.style.posTop=largetop-cliptop
+		document.all.large.style.posLeft=largeleft-clipleft
+		document.all.large.style.clip=clippoints
+	}
+	if (document.layers) {
+		document.large.top=largetop-cliptop
+		document.large.left=largeleft-clipleft
+		document.large.clip.left = clipleft
+		document.large.clip.right = clipright
+		document.large.clip.top = cliptop
+		document.large.clip.bottom = clipbottom
+	}
+}
+
+function setSelectedElem(evt) {
+	if (isNav) {
+		var testObj
+		var clickX = evt.pageX
+		var clickY = evt.pageY
+		for (var i = document.layers.length - 1; i >= 0; i--) {
+			testObj = document.layers[i]
+			if ((clickX > testObj.left) && 
+				(clickX < testObj.left + testObj.clip.width) && 
+				(clickY > testObj.top) && 
+				(clickY < testObj.top + testObj.clip.height)) {
+					selectedObj = testObj
+					setZIndex(selectedObj, 100)
+					return
+			}
+		}
+	} else {
+		var imgObj = window.event.srcElement
+		if (imgObj.parentElement.id.indexOf("mglass") != -1) {
+			selectedObj = imgObj.parentElement.style
+			setZIndex(selectedObj,100)
+			return
+		}
+	}
+	selectedObj = null
+	return
+}
+
+function dragIt(evt) {
+	if (selectedObj) {
+		if (isNav) {
+			shiftTo(selectedObj, (evt.pageX - offsetX), (evt.pageY - offsetY))
+		} else {
+			shiftTo(selectedObj, (window.event.clientX - offsetX), (window.event.clientY - offsetY))
+			return false
+		}
+	}
+}
+
+function engage(evt) {
+	setSelectedElem(evt)
+	if (selectedObj) {
+		if (isNav) {
+			offsetX = evt.pageX - selectedObj.left
+			offsetY = evt.pageY - selectedObj.top
+		} else {
+			offsetX = window.event.offsetX
+			offsetY = window.event.offsetY
+		}
+	}
+	return false
+}
+
+function release(evt) {
+	if (selectedObj) {
+		setZIndex(selectedObj, 0)
+		selectedObj = null
+	}
+}
+
+function setNavEventCapture() {
+	if (isNav) {
+		document.captureEvents(Event.MOUSEDOWN | Event.MOUSEMOVE | Event.MOUSEUP)
+	}
+}
+
+function init() {
+
+	if (document.layers) {
+		document.large.left=largeleft
+		document.large.top=largetop
+		
+		document.framegif.left=largeleft-3
+		document.framegif.top=largetop-3
+	
+		document.thumb.left=thumbleft
+		document.thumb.top=thumbtop
+	
+		document.mglass.left=mglassleft
+		document.mglass.top=mglasstop
+		
+		document.large.clip.left = 0
+		document.large.clip.right = 0
+		document.large.clip.top = 0
+		document.large.clip.bottom = 0
+		
+		setNavEventCapture()
+	}
+	
+	if (document.all) {
+		document.all.large.style.posLeft=largeleft
+		document.all.large.style.posTop=largetop
+		
+		document.all.framegif.style.posLeft=largeleft-3
+		document.all.framegif.style.posTop=largetop-3
+	
+		document.all.thumb.style.posLeft=thumbleft
+		document.all.thumb.style.posTop=thumbtop
+	
+		document.all.mglass.style.posLeft=mglassleft
+		document.all.mglass.style.posTop=mglasstop
+		document.all.large.style.clip="rect(0 0 0 0)"
+	}
+	
+	document.onmousedown = engage
+	document.onmousemove = dragIt
+	document.onmouseup = release
+}
+
+</SCRIPT>
+
+</HEAD>
+<BODY bgColor=#ffffff onload=init() >
+
+            <DIV align=center>
+            <DIV id=thumb><IMG name=thumbpic src="hinhve.jpg" width=61></DIV>
+            <DIV id=framegif><IMG name=framepic src="khunganh.gif"></DIV>
+            <DIV id=large><IMG name=largepic src="hinhve.jpg" width=455></DIV>
+            <DIV id=mglass><IMG name=mglasspic src="kinhlup.gif"></DIV>
+
+<font face="Times New Roman">
+Bạn hãy rê "kính lúp" vào bức tranh để xem tranh với kích thước phóng to
+
+<center>        
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<FONT color=#000000 face=verdana size=1 ><b>&nbsp; © 2004 S&#432;u t&#7847;m b&#7903;i <a href=mailto:MrChiliHot@yahoo.com title='{ Lien he voi Mr HOT }'><b><font color=red>Mr HOT</b></a>.            
+
+
+</BODY></HTML>
