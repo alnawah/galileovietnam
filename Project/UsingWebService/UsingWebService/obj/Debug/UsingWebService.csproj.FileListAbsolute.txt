@@ -1,0 +1,9 @@
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\UsingWebService\UsingWebService\bin\Debug\UsingWebService.exe.config
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\UsingWebService\UsingWebService\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\UsingWebService\UsingWebService\obj\Debug\UsingWebService.Form1.resources
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\UsingWebService\UsingWebService\obj\Debug\UsingWebService.Properties.Resources.resources
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\UsingWebService\UsingWebService\obj\Debug\UsingWebService.csproj.GenerateResource.Cache
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\UsingWebService\UsingWebService\bin\Debug\UsingWebService.exe
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\UsingWebService\UsingWebService\bin\Debug\UsingWebService.pdb
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\UsingWebService\UsingWebService\obj\Debug\UsingWebService.exe
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\UsingWebService\UsingWebService\obj\Debug\UsingWebService.pdb

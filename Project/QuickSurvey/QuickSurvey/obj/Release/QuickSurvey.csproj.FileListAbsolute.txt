@@ -1,0 +1,5 @@
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\QuickSurvey\QuickSurvey\bin\QuickSurvey.dll
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\QuickSurvey\QuickSurvey\bin\QuickSurvey.pdb
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\QuickSurvey\QuickSurvey\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\QuickSurvey\QuickSurvey\obj\Release\QuickSurvey.dll
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\QuickSurvey\QuickSurvey\obj\Release\QuickSurvey.pdb

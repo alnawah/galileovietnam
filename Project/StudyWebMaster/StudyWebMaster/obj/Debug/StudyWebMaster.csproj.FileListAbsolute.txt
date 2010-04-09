@@ -1,0 +1,10 @@
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\StudyWebMaster\StudyWebMaster\bin\StudyWebMaster.dll
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\StudyWebMaster\StudyWebMaster\bin\StudyWebMaster.pdb
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\StudyWebMaster\StudyWebMaster\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\StudyWebMaster\StudyWebMaster\obj\Debug\StudyWebMaster.dll
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\StudyWebMaster\StudyWebMaster\obj\Debug\StudyWebMaster.pdb
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\StudyWebMaster\StudyWebMaster\bin\StudyWebMaster.dll
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\StudyWebMaster\StudyWebMaster\bin\StudyWebMaster.pdb
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\StudyWebMaster\StudyWebMaster\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\StudyWebMaster\StudyWebMaster\obj\Debug\StudyWebMaster.dll
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\StudyWebMaster\StudyWebMaster\obj\Debug\StudyWebMaster.pdb

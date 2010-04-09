@@ -1,0 +1,10 @@
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\TestDatabase\TestDatabase\bin\TestDatabase.dll
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\TestDatabase\TestDatabase\bin\TestDatabase.pdb
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\TestDatabase\TestDatabase\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\TestDatabase\TestDatabase\obj\Debug\TestDatabase.dll
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\TestDatabase\TestDatabase\obj\Debug\TestDatabase.pdb
+D:\Working\Galileo\Project\TestDatabase\TestDatabase\bin\TestDatabase.dll
+D:\Working\Galileo\Project\TestDatabase\TestDatabase\bin\TestDatabase.pdb
+D:\Working\Galileo\Project\TestDatabase\TestDatabase\obj\Debug\ResolveAssemblyReference.cache
+D:\Working\Galileo\Project\TestDatabase\TestDatabase\obj\Debug\TestDatabase.dll
+D:\Working\Galileo\Project\TestDatabase\TestDatabase\obj\Debug\TestDatabase.pdb

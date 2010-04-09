@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="BlowfishDemo">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\Quang Minh\My Documents\Downloads\Compressed\BlowfishDemo\BlowfishDemo\BlowfishDemo.sln">
+</Property><Property Name="Date" Value="Monday, April 05, 2010">
+</Property><Property Name="Time" Value="10:48 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="BlowfishDemo.sln" Description="File successfully backed up as C:\Documents and Settings\Quang Minh\My Documents\Downloads\Compressed\BlowfishDemo\BlowfishDemo\Backup\BlowfishDemo.sln">
+</Event><Event ErrorLevel="0" Project="BlowfishDemo" Source="BlowfishDemo.csproj" Description="Project file successfully backed up as C:\Documents and Settings\Quang Minh\My Documents\Downloads\Compressed\BlowfishDemo\BlowfishDemo\Backup\BlowfishDemo.csproj">
+</Event><Event ErrorLevel="0" Project="BlowfishDemo" Source="AssemblyInfo.cs" Description="File successfully backed up as C:\Documents and Settings\Quang Minh\My Documents\Downloads\Compressed\BlowfishDemo\BlowfishDemo\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="BlowfishDemo" Source="BlowfishLib.cs" Description="File successfully backed up as C:\Documents and Settings\Quang Minh\My Documents\Downloads\Compressed\BlowfishDemo\BlowfishDemo\Backup\BlowfishLib.cs">
+</Event><Event ErrorLevel="0" Project="BlowfishDemo" Source="MainForm.cs" Description="File successfully backed up as C:\Documents and Settings\Quang Minh\My Documents\Downloads\Compressed\BlowfishDemo\BlowfishDemo\Backup\MainForm.cs">
+</Event><Event ErrorLevel="0" Project="BlowfishDemo" Source="MainForm.Designer.cs" Description="File successfully backed up as C:\Documents and Settings\Quang Minh\My Documents\Downloads\Compressed\BlowfishDemo\BlowfishDemo\Backup\MainForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="BlowfishDemo" Source="Program.cs" Description="File successfully backed up as C:\Documents and Settings\Quang Minh\My Documents\Downloads\Compressed\BlowfishDemo\BlowfishDemo\Backup\Program.cs">
+</Event><Event ErrorLevel="0" Project="BlowfishDemo" Source="MainForm.resx" Description="File successfully backed up as C:\Documents and Settings\Quang Minh\My Documents\Downloads\Compressed\BlowfishDemo\BlowfishDemo\Backup\MainForm.resx">
+</Event><Event ErrorLevel="0" Project="BlowfishDemo" Source="BlowfishDemo.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="BlowfishDemo" Source="BlowfishDemo.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="BlowfishDemo.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="BlowfishDemo.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="BlowfishDemo" Source="BlowfishDemo.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

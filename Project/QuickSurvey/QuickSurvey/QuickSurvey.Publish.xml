@@ -1,0 +1,86 @@
+<publishData>
+  <publishTarget publishUrl="D:\Working\Survey\">
+    <file relUrl="Result.aspx" publishTime="03/15/2010 10:03:48" />
+    <file relUrl="App_Data/QuickSurvey.mdb" publishTime="03/15/2010 14:55:40" />
+    <file relUrl="bin/QuickSurvey.pdb" publishTime="03/15/2010 16:50:19" />
+    <file relUrl="gal_h_4pms_pos.jpg" publishTime="03/15/2010 13:01:15" />
+    <file relUrl="Web.config" publishTime="03/15/2010 13:09:05" />
+    <file relUrl="Default.aspx" publishTime="03/15/2010 16:50:05" />
+    <file relUrl="logo doc.jpg" publishTime="03/15/2010 11:05:57" />
+    <file relUrl="bin/QuickSurvey.dll" publishTime="03/15/2010 16:50:20" />
+    <file relUrl="G corner Logo.jpg" publishTime="03/15/2010 13:01:33" />
+  </publishTarget>
+  <publishTarget publishUrl="D:\Working\Survey_2.0\">
+    <file relUrl="Result.aspx" publishTime="03/15/2010 10:03:48" />
+    <file relUrl="App_Data/QuickSurvey.mdb" publishTime="03/15/2010 14:55:40" />
+    <file relUrl="bin/QuickSurvey.pdb" publishTime="03/15/2010 16:02:00" />
+    <file relUrl="gal_h_4pms_pos.jpg" publishTime="03/15/2010 13:01:15" />
+    <file relUrl="Web.config" publishTime="03/15/2010 13:09:05" />
+    <file relUrl="Default.aspx" publishTime="03/15/2010 16:01:54" />
+    <file relUrl="logo doc.jpg" publishTime="03/15/2010 11:05:57" />
+    <file relUrl="bin/QuickSurvey.dll" publishTime="03/15/2010 16:02:00" />
+    <file relUrl="G corner Logo.jpg" publishTime="03/15/2010 13:01:33" />
+  </publishTarget>
+  <publishTarget publishUrl="C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\Survey\">
+    <file relUrl="Default.aspx.cs" publishTime="03/15/2010 09:41:03" />
+    <file relUrl="QuickSurvey.csproj" publishTime="03/15/2010 13:09:06" />
+    <file relUrl="G corner Logo.jpg" publishTime="03/15/2010 13:01:33" />
+    <file relUrl="Properties/AssemblyInfo.cs" publishTime="03/12/2010 08:22:39" />
+    <file relUrl="Web.config" publishTime="03/15/2010 13:09:05" />
+    <file relUrl="Result.aspx.cs" publishTime="03/15/2010 10:03:09" />
+    <file relUrl="bin/QuickSurvey.dll" publishTime="03/15/2010 13:33:45" />
+    <file relUrl="Result.aspx.designer.cs" publishTime="03/15/2010 10:03:38" />
+    <file relUrl="QuickSurvey.csproj.user" publishTime="03/15/2010 13:32:34" />
+    <file relUrl="Result.aspx" publishTime="03/15/2010 10:03:48" />
+    <file relUrl="App_Data/QuickSurvey.mdb" publishTime="03/15/2010 09:24:30" />
+    <file relUrl="gal_h_4pms_pos.jpg" publishTime="03/15/2010 13:01:15" />
+    <file relUrl="logo doc.jpg" publishTime="03/15/2010 11:05:57" />
+    <file relUrl="bin/QuickSurvey.pdb" publishTime="03/15/2010 13:33:45" />
+    <file relUrl="Default.aspx" publishTime="03/15/2010 13:08:06" />
+    <file relUrl="Default.aspx.designer.cs" publishTime="03/15/2010 12:51:16" />
+    <file relUrl="DataConnection.cs" publishTime="03/15/2010 09:41:18" />
+  </publishTarget>
+  <publishTarget publishUrl="D:\Working\Survey_3.5\">
+    <file relUrl="Result.aspx" publishTime="03/15/2010 10:03:48" />
+    <file relUrl="Default.aspx" publishTime="03/15/2010 11:00:32" />
+    <file relUrl="App_Data/QuickSurvey.mdb" publishTime="03/15/2010 09:24:30" />
+    <file relUrl="bin/QuickSurvey.pdb" publishTime="03/15/2010 11:25:24" />
+    <file relUrl="Web.config" publishTime="03/15/2010 11:25:13" />
+    <file relUrl="bin/QuickSurvey.dll" publishTime="03/15/2010 11:25:24" />
+  </publishTarget>
+  <publishTarget publishUrl="D:\Working\Survey_3.0\">
+    <file relUrl="Result.aspx" publishTime="03/15/2010 10:03:48" />
+    <file relUrl="bin/QuickSurvey.dll" publishTime="03/15/2010 11:24:49" />
+    <file relUrl="Default.aspx" publishTime="03/15/2010 11:00:32" />
+    <file relUrl="App_Data/QuickSurvey.mdb" publishTime="03/15/2010 09:24:30" />
+    <file relUrl="Web.config" publishTime="03/15/2010 11:16:16" />
+    <file relUrl="bin/QuickSurvey.pdb" publishTime="03/15/2010 11:24:49" />
+  </publishTarget>
+  <publishTarget publishUrl="D:\Working\Quick_Survey_Test\">
+    <file relUrl="bin/QuickSurvey.pdb" publishTime="03/15/2010 09:24:47" />
+    <file relUrl="bin/QuickSurvey.dll" publishTime="03/15/2010 09:24:47" />
+    <file relUrl="Default.aspx" publishTime="03/15/2010 01:53:37" />
+    <file relUrl="App_Data/QuickSurvey.mdb" publishTime="03/15/2010 09:24:30" />
+    <file relUrl="CalendarIcon.png" publishTime="02/01/2010 14:34:29" />
+    <file relUrl="CalendarControl.ascx" publishTime="03/15/2010 09:04:35" />
+    <file relUrl="Web.config" publishTime="03/15/2010 09:04:34" />
+  </publishTarget>
+  <publishTarget publishUrl="D:\Working\Quick_Survey\">
+    <file relUrl="bin/QuickSurvey.pdb" publishTime="03/15/2010 09:20:01" />
+    <file relUrl="Web.config" publishTime="03/15/2010 09:04:34" />
+    <file relUrl="Default.aspx" publishTime="03/15/2010 01:53:37" />
+    <file relUrl="App_Data/QuickSurvey.mdb" publishTime="03/15/2010 08:31:17" />
+    <file relUrl="CalendarControl.ascx" publishTime="03/15/2010 09:04:35" />
+    <file relUrl="CalendarIcon.png" publishTime="02/01/2010 14:34:29" />
+    <file relUrl="bin/QuickSurvey.dll" publishTime="03/15/2010 09:20:02" />
+  </publishTarget>
+  <publishTarget publishUrl="D:\Working\Galileo_Survey\">
+    <file relUrl="bin/QuickSurvey.pdb" publishTime="03/15/2010 09:04:43" />
+    <file relUrl="Web.config" publishTime="03/15/2010 09:04:34" />
+    <file relUrl="Default.aspx" publishTime="03/15/2010 01:53:37" />
+    <file relUrl="App_Data/QuickSurvey.mdb" publishTime="03/15/2010 08:31:17" />
+    <file relUrl="CalendarControl.ascx" publishTime="03/15/2010 09:04:35" />
+    <file relUrl="CalendarIcon.png" publishTime="02/01/2010 14:34:29" />
+    <file relUrl="bin/QuickSurvey.dll" publishTime="03/15/2010 09:04:43" />
+  </publishTarget>
+</publishData>

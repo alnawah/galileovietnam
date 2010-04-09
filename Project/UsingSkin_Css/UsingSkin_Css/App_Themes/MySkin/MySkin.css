@@ -1,0 +1,6 @@
+﻿html{background-color:gray;font:12px Arial;}
+.content{margin:auto;width:800px;border:solid 1px black;background-color:White;padding:10px;}
+h1{color:Gray;font-size:18px;border-bottom:solid 1px orange;}
+label{font-weight:bold;}
+input{background-color:#FFFFCC;border:double 1px orange;}
+.button{background-color:#eeeeee;}

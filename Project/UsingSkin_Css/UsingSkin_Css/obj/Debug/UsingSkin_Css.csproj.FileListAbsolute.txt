@@ -1,0 +1,10 @@
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\UsingSkin_Css\UsingSkin_Css\bin\UsingSkin_Css.dll
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\UsingSkin_Css\UsingSkin_Css\bin\UsingSkin_Css.pdb
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\UsingSkin_Css\UsingSkin_Css\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\UsingSkin_Css\UsingSkin_Css\obj\Debug\UsingSkin_Css.dll
+C:\Documents and Settings\Nguyen Quang Minh\My Documents\Visual Studio 2008\Projects\UsingSkin_Css\UsingSkin_Css\obj\Debug\UsingSkin_Css.pdb
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\UsingSkin_Css\UsingSkin_Css\bin\UsingSkin_Css.dll
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\UsingSkin_Css\UsingSkin_Css\bin\UsingSkin_Css.pdb
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\UsingSkin_Css\UsingSkin_Css\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\UsingSkin_Css\UsingSkin_Css\obj\Debug\UsingSkin_Css.dll
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\UsingSkin_Css\UsingSkin_Css\obj\Debug\UsingSkin_Css.pdb

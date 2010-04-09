@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MaHoaSoHoc</name>
+    </assembly>
+    <members>
+        <member name="T:MaHoaSoHoc.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MaHoaSoHoc.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MaHoaSoHoc.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="M:MaHoaSoHoc.Program.Main(System.String[])">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:MaHoaSoHoc.MaHoa">
+            <summary>
+            Class that provides blowfish encryption.
+            </summary>
+        </member>
+        <member name="M:MaHoaSoHoc.MaHoa.InitBoxes(System.Byte[])">
+            <summary>
+            Method that initialize the SBox and PBox.
+            Client can use this method to reset the SBox and PBox.
+            </summary>
+        </member>
+        <member name="M:MaHoaSoHoc.MaHoa.F(System.UInt32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MaHoaSoHoc.MaHoa.Encipher(System.UInt32@,System.UInt32@)">
+            <summary>
+            
+            </summary>
+            <param name="xl"></param>
+            <param name="xr"></param>
+        </member>
+        <member name="M:MaHoaSoHoc.MaHoa.Decipher(System.UInt32@,System.UInt32@)">
+            <summary>
+            
+            </summary>
+            <param name="xl"></param>
+            <param name="xr"></param>
+        </member>
+        <member name="M:MaHoaSoHoc.MaHoa.Encipher(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="length"></param>
+        </member>
+        <member name="M:MaHoaSoHoc.MaHoa.Decipher(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="length"></param>
+        </member>
+        <member name="M:MaHoaSoHoc.MaHoa.Decipher(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fin"></param>
+            <param name="fout"></param>
+            <returns></returns>
+        </member>
+        <member name="F:MaHoaSoHoc.MaHoa.Message">
+            <summary>
+            Information about the encipher algorithm.
+            </summary>
+        </member>
+        <member name="F:MaHoaSoHoc.MainForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MaHoaSoHoc.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MaHoaSoHoc.MainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>
