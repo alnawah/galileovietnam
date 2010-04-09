@@ -1,0 +1,14 @@
+C:\Documents and Settings\Quang Minh\My Documents\Downloads\Compressed\BlowfishDemo\BlowfishDemo\obj\Debug\BlowfishDemo.exe
+C:\Documents and Settings\Quang Minh\My Documents\Downloads\Compressed\BlowfishDemo\BlowfishDemo\obj\Debug\BlowfishDemo.pdb
+C:\Documents and Settings\Quang Minh\My Documents\Downloads\Compressed\BlowfishDemo\BlowfishDemo\bin\Debug\BlowfishDemo.exe
+C:\Documents and Settings\Quang Minh\My Documents\Downloads\Compressed\BlowfishDemo\BlowfishDemo\bin\Debug\BlowfishDemo.pdb
+C:\Documents and Settings\Quang Minh\My Documents\Downloads\Compressed\BlowfishDemo\BlowfishDemo\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Quang Minh\My Documents\Downloads\Compressed\BlowfishDemo\BlowfishDemo\obj\Debug\BlowfishDemo.MainForm.resources
+C:\Documents and Settings\Quang Minh\My Documents\Downloads\Compressed\BlowfishDemo\BlowfishDemo\obj\Debug\BlowfishDemo.csproj.GenerateResource.Cache
+D:\Working\Galileo\Project\BlowfishDemo\obj\Debug\BlowfishDemo.exe
+D:\Working\Galileo\Project\BlowfishDemo\obj\Debug\BlowfishDemo.pdb
+D:\Working\Galileo\Project\BlowfishDemo\bin\Debug\BlowfishDemo.exe
+D:\Working\Galileo\Project\BlowfishDemo\bin\Debug\BlowfishDemo.pdb
+D:\Working\Galileo\Project\BlowfishDemo\obj\Debug\ResolveAssemblyReference.cache
+D:\Working\Galileo\Project\BlowfishDemo\obj\Debug\BlowfishDemo.MainForm.resources
+D:\Working\Galileo\Project\BlowfishDemo\obj\Debug\BlowfishDemo.csproj.GenerateResource.Cache

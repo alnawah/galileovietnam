@@ -1,0 +1,5 @@
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\LeisureDemo\LeisureDemo\bin\LeisureDemo.dll
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\LeisureDemo\LeisureDemo\bin\LeisureDemo.pdb
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\LeisureDemo\LeisureDemo\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\LeisureDemo\LeisureDemo\obj\Debug\LeisureDemo.dll
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\LeisureDemo\LeisureDemo\obj\Debug\LeisureDemo.pdb
