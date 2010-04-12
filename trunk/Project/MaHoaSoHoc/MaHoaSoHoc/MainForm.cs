@@ -88,7 +88,7 @@ namespace MaHoaSoHoc
         {
             if (txtInputText.Text.Length > 0)
             {
-                byte[] key = GetBytes("nqminh").Clone() as byte[];
+                byte[] key = GetBytes("masohoc").Clone() as byte[];
                 MaHoa objMahoa = new MaHoa(key);
                 byte[] plain = GetBytes(txtInputText.Text).Clone() as byte[];
                 byte[] tmp = FixBytes(plain);
@@ -138,7 +138,7 @@ namespace MaHoaSoHoc
         {
             if (txtInputText.Text.Length > 0)
             {
-                byte[] key = GetBytes("nqminh").Clone() as byte[];
+                byte[] key = GetBytes("masohoc").Clone() as byte[];
                 MaHoa objMahoa = new MaHoa(key);
                 byte[] plain = GetBytes(txtInputText.Text).Clone() as byte[];
                 txtOutputText.Text = GetString(objMahoa.Decipher(plain));
@@ -156,7 +156,7 @@ namespace MaHoaSoHoc
             string fi = txtFileIn.Text;
             string fo = txtFileOut.Text;
 
-            byte[] key = GetBytes("mahoademo");
+            byte[] key = GetBytes("masohoc");
             MaHoa objMahoa = new MaHoa(this);
             objMahoa.InitBoxes(key);
             objMahoa.Encipher(fi, fo);
@@ -166,7 +166,7 @@ namespace MaHoaSoHoc
         {
             string fi = txtFileIn.Text;
             string fo = txtFileOut.Text;
-            byte[] key = GetBytes("mahoademo");
+            byte[] key = GetBytes("masohoc");
 
             MaHoa objMahoa = new MaHoa(this);
             objMahoa.InitBoxes(key);
