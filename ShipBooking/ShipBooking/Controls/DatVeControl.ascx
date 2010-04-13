@@ -1,236 +1,191 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DatVeControl.ascx.cs" Inherits="ShipBooking.Controls.DatVeControl" %>
-<style type="text/css">
-    .style1
-    {
-        width: 100%;
-    }
-    .style4
-    {
-    }
-    .style14
-    {
-        width: 176px;
-    }
-    .style15
-    {
-        width: 63px;
-    }
-    .style16
-    {
-        width: 198px;
-    }
-    .style17
-    {
-        width: 167px;
-    }
-    .style18
-    {
-        width: 92px;
-    }
-    .style20
-    {
-        width: 86px;
-    }
-    .style23
-    {
-        width: 178px;
-    }
-    .style24
-    {
-        width: 179px;
-    }
-    .style25
-    {
-        width: 117px;
-    }
-    .style28
-    {
-    }
-    .style30
-    {
-        width: 77px;
-    }
-    .style31
-    {
-        width: 267px;
-    }
-</style>
-<table class="style1">
+
+<form name="BOOKINGFORM">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
-        <td class="style23">
-        </td>
-        <td class="style20">
-        </td>
-        <td class="style4" colspan="6">
-            <asp:RadioButtonList ID="RadioButtonList1" runat="server" 
-                RepeatDirection="Horizontal">
-                <asp:ListItem Value="KhuHoi">Khứ hồi</asp:ListItem>
-                <asp:ListItem Value="MotLuot">Một lượt</asp:ListItem>
-                <asp:ListItem Value="NhieuLuot">Nhiều lượt</asp:ListItem>
-            </asp:RadioButtonList>
-        </td>
-    </tr>
-    <tr>
-        <td class="style23">
-            &nbsp;</td>
-        <td class="style20">
-            Từ</td>
-        <td class="style14">
-            <asp:DropDownList ID="DropDownList1" runat="server" Width="220px">
-            </asp:DropDownList>
-        </td>
-        <td class="style15">
-            (*)</td>
-        <td class="style18">
-            Đến</td>
-        <td class="style17">
-            <asp:DropDownList ID="DropDownList2" runat="server" Width="220px">
-            </asp:DropDownList>
-        </td>
-        <td class="style16">
-            (*)</td>
         <td>
             &nbsp;</td>
     </tr>
     <tr>
-        <td class="style23">
-            &nbsp;</td>
-        <td class="style20">
-            Ngày đi</td>
-        <td class="style14">
-            <asp:TextBox ID="TextBox1" runat="server" Width="220px"></asp:TextBox>
+        <td align="center" valign="top">
+            <table border="1" bordercolor="#3980f4" cellpadding="0" cellspacing="1" 
+                width="94%">
+                <tr>
+                    <td bgcolor="#3980f4">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td width="49%">
+                                    <font face="Verdana, Arial, Helvetica, sans-serif"><b><font color="#ffffff">Giữ chỗ vé tàu</font></b></font></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" valign="top">
+                        <table border="0" cellpadding="1" cellspacing="2" width="93%">
+                            <tr>
+                                <td align="center" height="8" width="23%">
+                                    <div align="right">
+                                        <asp:RadioButton ID="RadioButton1" runat="server" Text="Khứ hồi" />
+                                    </div>
+                                </td>
+                                <td height="8" width="77%">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td width="37%">
+                                                <div align="right">
+                                                    <asp:RadioButton ID="RadioButton2" runat="server" Text="Một lượt" />
+                                                </div>
+                                            </td>
+                                            <td width="63%">
+                                                <div align="center">
+                                                    <asp:RadioButton ID="RadioButton3" runat="server" Text="Khứ hồi" />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="23%">
+                                    <font>Từ:</font></td>
+                                <td width="77%">
+                                    <asp:DropDownList ID="DropDownList1" runat="server" Height="22px" Width="169px">
+                                    </asp:DropDownList> 
+                                    <font color="#ff0000">&nbsp;(*)</font>
+                                    <font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Đến:&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                                     <asp:DropDownList ID="DropDownList2" runat="server" Height="22px" Width="169px">
+                                    </asp:DropDownList>
+                                    <font color="#ff0000">&nbsp;(*)</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="23%"><font>Ngày đi:</font></td>
+                                <td width="77%">
+                                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                    <asp:ImageButton ID="ImageButton1" runat="server" 
+                                        ImageUrl="~/Images/CalendarIcon.png" />
+                                    <font face="Arial, Helvetica, sans-serif" size="1">(mm/dd/yyyy) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:DropDownList ID="DropDownList3" runat="server" Height="24px" Width="169px">
+                                    </asp:DropDownList>
+                                    <font color="#ff0000">&nbsp;(*)</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="23%">
+                                    <font>Ngày về:</font></td>
+                                <td width="77%">
+                                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                                    <asp:ImageButton ID="ImageButton2" runat="server" 
+                                        ImageUrl="~/Images/CalendarIcon.png" />
+                                    <font face="Arial, Helvetica, sans-serif" size="1">(mm/dd/yyyy) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                                    <asp:CheckBox ID="CheckBox1" runat="server" Text="Open" />
+                            </tr>
+                            <tr>
+                                <td width="23%">
+                                    <font>Loại vé:</font></td>
+                                <td width="77%">
+                                    <asp:DropDownList ID="DropDownList4" runat="server" Height="22px" Width="169px">
+                                    </asp:DropDownList> &nbsp;<font color="#ff0000">(*)</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="23%">
+                                    &nbsp;</td>
+                                <td width="77%">
+                                    &nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
         </td>
-        <td class="style15">
-            <asp:Button ID="Button2" runat="server" Text="Button" />
-        </td>
-        <td class="style18">
-            (mm/dd/yyyy)</td>
-        <td class="style17">
-            <asp:DropDownList ID="DropDownList4" runat="server" Width="126px" Height="17px">
-            </asp:DropDownList>
-        </td>
-        <td class="style16">
-            &nbsp;</td>
-        <td>
+    </tr>
+    <tr>
+        <td align="center">
             &nbsp;</td>
     </tr>
     <tr>
-        <td class="style23">
-            &nbsp;</td>
-        <td class="style20">
-            Ngày về</td>
-        <td class="style14">
-            <asp:TextBox ID="TextBox2" runat="server" Width="220px"></asp:TextBox>
+        <td align="center" valign="top">
+            <table border="1" bordercolor="#3980f4" cellpadding="0" cellspacing="1" 
+                width="94%">
+                <tr>
+                    <td bgcolor="#3980f4">
+                        <font face="Verdana, Arial, Helvetica, sans-serif"><b><font color="#ffffff">
+                        Thông tin về hành khách</font></b></font></td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table border="0" cellpadding="1" cellspacing="1" width="93%">
+                            <tr>
+                                <td width="21%">
+                                    <font>Họ và tên:</font></td>
+                                <td width="79%">
+                                    <asp:TextBox ID="TextBox3" runat="server" Width="345px"></asp:TextBox>
+                                    &nbsp;<font color="#ff0000">(*)</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td bordercolor="#3980F4" width="21%">
+                                    <font>Địa chỉ:</font></td>
+                                <td width="79%">
+                                    <asp:TextBox ID="TextBox4" runat="server" Height="101px" TextMode="MultiLine" 
+                                        Width="345px"></asp:TextBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="21%">
+                                    <font>Quốc tịch:</font></td>
+                                <td width="79%">
+                                    <asp:DropDownList ID="DropDownList5" runat="server" Height="22px" Width="138px"></asp:DropDownList> 
+                                    <font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Độ tuổi</font>: &nbsp;&nbsp;
+                                    <asp:DropDownList ID="DropDownList6" runat="server" Height="22px" Width="138px"></asp:DropDownList> 
+                                    <font color="#ff0000">(*)</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="21%">
+                                    <font>Số điện thoại:</font></td>
+                                <td width="79%">
+                                    <font>
+                                    <asp:TextBox ID="TextBox8" runat="server" Width="133px"></asp:TextBox>
+                                    &nbsp;&nbsp;&nbsp;Số nội bộ:&nbsp;</font>
+                                    <asp:TextBox ID="TextBox6" runat="server" Width="133px"></asp:TextBox>
+                                    <font color="#ff0000">(*)</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="21%">
+                                    <font>Email:</font></td>
+                                <td width="79%">
+                                    <asp:TextBox ID="TextBox7" runat="server" Width="345px"></asp:TextBox>
+                                    <font color="#ff0000">(*)</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="21%">
+                                    &nbsp;</td>
+                                <td width="79%">
+                                    &nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
         </td>
-        <td class="style15">
-            <asp:Button ID="Button1" runat="server" Text="Button" />
-        </td>
-        <td class="style18">
-            (mm/dd/yyyy)</td>
-        <td class="style17">
-            <asp:CheckBox ID="CheckBox1" runat="server" />
-        </td>
-        <td class="style16">
-            &nbsp;</td>
-        <td>
+    </tr>
+    <tr>
+        <td align="center">
             &nbsp;</td>
     </tr>
     <tr>
-        <td class="style23">
-            &nbsp;</td>
-        <td class="style20">
-            Loại vé</td>
-        <td class="style14">
-            <asp:DropDownList ID="DropDownList3" runat="server" Width="220px">
-            </asp:DropDownList>
+        <td align="center">
+            <asp:Button ID="Button1" runat="server" Text="Tiếp tục" />
         </td>
-        <td class="style15">
-            (*)</td>
-        <td class="style18">
-            &nbsp;</td>
-        <td class="style17">
-            &nbsp;</td>
-        <td class="style16">
-            &nbsp;</td>
-        <td>
+    </tr>
+    <tr>
+        <td align="center">
             &nbsp;</td>
     </tr>
 </table>
-
-<p>
-    &nbsp;</p>
-<table class="style1">
-    <tr>
-        <td class="style24">
-            &nbsp;</td>
-        <td class="style25">
-            Họ và tên</td>
-        <td class="style31">
-            <asp:TextBox ID="TextBox3" runat="server" Width="266px"></asp:TextBox>
-        </td>
-    </tr>
-    <tr>
-        <td class="style24">
-            &nbsp;</td>
-        <td class="style25">
-            Địa chỉ</td>
-        <td colspan="3">
-            <asp:TextBox ID="TextBox4" runat="server" Height="122px" Width="266px"></asp:TextBox>
-        </td>
-    </tr>
-    <tr>
-        <td class="style24">
-            &nbsp;</td>
-        <td class="style25">
-            Quốc tịch</td>
-        <td class="style31">
-            <asp:DropDownList ID="DropDownList5" runat="server" Height="16px" Width="200px">
-            </asp:DropDownList>
-        </td>
-        <td class="style30">
-            Độ tuổi</td>
-        <td>
-            <asp:DropDownList ID="DropDownList6" runat="server" Height="16px" Width="200px">
-            </asp:DropDownList>
-        </td>
-        <td>
-            &nbsp;</td>
-    </tr>
-    <tr>
-        <td class="style24">
-            &nbsp;</td>
-        <td class="style25">
-            Số điện thoại</td>
-        <td class="style31">
-            <asp:TextBox ID="TextBox5" runat="server" Width="200px"></asp:TextBox>
-        </td>
-        <td class="style30">
-            Số nội bộ</td>
-        <td>
-            <asp:TextBox ID="TextBox6" runat="server" Height="22px" Width="200px"></asp:TextBox>
-        </td>
-        <td>
-            &nbsp;</td>
-    </tr>
-    <tr>
-        <td class="style24">
-            &nbsp;</td>
-        <td class="style25">
-            Email</td>
-        <td class="style28" colspan="2">
-            <asp:TextBox ID="TextBox7" runat="server" Height="22px" Width="344px"></asp:TextBox>
-        </td>
-        <td>
-            &nbsp;</td>
-    </tr>
-</table>
-<table class="style1">
-    <tr>
-        <td>
-            <asp:Button ID="Button3" runat="server" style="text-align: center" 
-                Text="Button" />
-        </td>
-    </tr>
-</table>
-
-
+</form>
