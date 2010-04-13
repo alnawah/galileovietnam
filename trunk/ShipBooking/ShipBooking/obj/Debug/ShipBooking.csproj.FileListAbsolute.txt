@@ -1,0 +1,5 @@
+D:\Working\Galileo\ShipBooking\ShipBooking\bin\ShipBooking.dll
+D:\Working\Galileo\ShipBooking\ShipBooking\bin\ShipBooking.pdb
+D:\Working\Galileo\ShipBooking\ShipBooking\obj\Debug\ResolveAssemblyReference.cache
+D:\Working\Galileo\ShipBooking\ShipBooking\obj\Debug\ShipBooking.dll
+D:\Working\Galileo\ShipBooking\ShipBooking\obj\Debug\ShipBooking.pdb

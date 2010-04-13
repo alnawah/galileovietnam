@@ -1,0 +1,72 @@
+﻿html
+{
+	background-color:gray;
+	font:12px Arial;
+}
+
+.content
+{
+	margin:auto;
+	width:800px;
+	border:solid 1px black;
+	background-color:White;
+	padding:10px;
+}
+
+h1
+{
+	color:Gray;
+	font-size:18px;
+	border-bottom:solid 1px orange;
+}
+
+label
+{
+	font-weight:bold;
+}
+
+input
+{
+	background-color:#FFFFCC;
+	border:double 1px orange;
+}
+
+.button
+{
+	background-color:#eeeeee;
+}
+
+.banner
+{
+	background-color: #FFFFFF;
+}
+
+.center
+{
+	background-color:White; 
+	border:black 1px solid; 
+	width:700px; 
+	margin:auto;
+}
+
+.left
+{
+	float: left;
+	border-right: black 1px solid;
+	width: 200px;
+	padding: 5px;
+	height: 300px;
+	font-family: 'Bauhaus 93';
+	font-size: large;
+	font-weight: bold;
+}
+
+.right
+{
+	
+}
+
+.footer
+{
+	
+}
