@@ -9,12 +9,6 @@
     <title>Untitled Page</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <style type="text/css">
-        .content
-        {
-            height: 1000px;
-        }
-    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -23,13 +17,8 @@
             <ucBanner:banner ID="ucBanner" runat="server" />
         </div>
         <div class="center">
-            <div class="left">
-                <ucLeftMenu:menu ID="menu" runat="server" />
-            </div>
+            <asp:ContentPlaceHolder ID="contentplaceCenter" runat="server"></asp:ContentPlaceHolder>
         </div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
     </div>
     </form>
 </body>

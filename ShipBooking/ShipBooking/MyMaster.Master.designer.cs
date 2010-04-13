@@ -41,21 +41,12 @@ namespace ShipBooking {
         protected global::ShipBooking.Controls.Layer.BannerControl ucBanner;
         
         /// <summary>
-        /// menu control.
+        /// contentplaceCenter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::ShipBooking.Controls.Layer.LeftControl menu;
-        
-        /// <summary>
-        /// ContentPlaceHolder1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder contentplaceCenter;
     }
 }

@@ -57,6 +57,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\DatVeControl.ascx.cs">
+      <DependentUpon>DatVeControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DatVeControl.ascx.designer.cs">
+      <DependentUpon>DatVeControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Layer\BannerControl.ascx.cs">
       <DependentUpon>BannerControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -92,6 +99,13 @@
     <Compile Include="Controls\Layer\RightControl.ascx.designer.cs">
       <DependentUpon>RightControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="DatVe.aspx.cs">
+      <DependentUpon>DatVe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatVe.aspx.designer.cs">
+      <DependentUpon>DatVe.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
@@ -113,12 +127,24 @@
     <Content Include="App_Themes\MySkin\MySkin.skin" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controls\DatVeControl.ascx" />
     <Content Include="Controls\Layer\BannerControl.ascx" />
     <Content Include="Controls\Layer\ContenControl.ascx" />
     <Content Include="Controls\Layer\FooterControl.ascx" />
     <Content Include="Controls\Layer\LeftControl.ascx" />
     <Content Include="Controls\Layer\RightControl.ascx" />
+    <Content Include="DatVe.aspx" />
+    <Content Include="Images\bang_gia_ve.png" />
     <Content Include="Images\banner.png" />
+    <Content Include="Images\banner1.png" />
+    <Content Include="Images\banner_blue.png" />
+    <Content Include="Images\dat_ve.png" />
+    <Content Include="Images\galileo_logo.jpg" />
+    <Content Include="Images\Hinh-su.gif" />
+    <Content Include="Images\lich_chuyen.png" />
+    <Content Include="Images\menu_bar.gif" />
+    <Content Include="Images\tinh_trang_cho.png" />
+    <Content Include="MenuScript.js" />
     <Content Include="MyMaster.Master" />
   </ItemGroup>
   <ItemGroup>
