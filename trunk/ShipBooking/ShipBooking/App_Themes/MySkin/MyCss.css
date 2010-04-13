@@ -1,16 +1,16 @@
 ﻿html
 {
-	background-color:gray;
-	font:12px Arial;
+	background-color: #FFFFFF;
+	font: 12px Arial;
 }
 
 .content
 {
-	margin:auto;
-	width:800px;
-	border:solid 1px black;
-	background-color:White;
-	padding:10px;
+	border: 1px solid #C0C0C0;
+	margin: auto;
+	width: 1000px;
+	background-color: White;
+	height: auto;
 }
 
 h1
@@ -20,53 +20,45 @@ h1
 	border-bottom:solid 1px orange;
 }
 
-label
-{
-	font-weight:bold;
-}
-
-input
-{
-	background-color:#FFFFCC;
-	border:double 1px orange;
-}
-
-.button
-{
-	background-color:#eeeeee;
-}
 
 .banner
 {
-	background-color: #FFFFFF;
+	border-style: none;
 }
 
 .center
 {
-	background-color:White; 
-	border:black 1px solid; 
-	width:700px; 
-	margin:auto;
+	border-style: none;
 }
 
 .left
 {
+	padding: 1px;
 	float: left;
 	border-right: black 1px solid;
-	width: 200px;
-	padding: 5px;
-	height: 300px;
-	font-family: 'Bauhaus 93';
+	width: 100px;
+	height: auto;
+	font-family: 'Times New Roman' , Times, serif;
 	font-size: large;
-	font-weight: bold;
+	font-weight: normal;
+	border: 0.5px solid #99CCFF;
 }
 
 .right
 {
-	
+	background-color: White;
+	width: 700px;
+	margin: auto;
 }
 
 .footer
 {
 	
+}
+
+.picture
+{
+	border-style: ridge;
+	width: auto;
+	height: auto;
 }

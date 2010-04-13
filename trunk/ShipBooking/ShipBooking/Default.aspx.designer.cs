@@ -12,5 +12,41 @@ namespace ShipBooking {
     
     
     public partial class _Default {
+        
+        /// <summary>
+        /// imgbtnDatve control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton imgbtnDatve;
+        
+        /// <summary>
+        /// imgbtnXemLichChuyen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton imgbtnXemLichChuyen;
+        
+        /// <summary>
+        /// imgbtnTinhTrangCho control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton imgbtnTinhTrangCho;
+        
+        /// <summary>
+        /// imgbtnBangGiaVe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton imgbtnBangGiaVe;
     }
 }

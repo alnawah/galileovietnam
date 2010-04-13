@@ -19,5 +19,25 @@ namespace ShipBooking
         {
 
         }
+
+        protected void Image3_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("~/DatVe.aspx");
+        }
+
+        protected void imgbtnXemLichChuyen_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("http://www.tinhte.com/home/");
+        }
+
+        protected void imgbtnTinhTrangCho_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("http://www.galileo.com.vn/");
+        }
+
+        protected void imgbtnBangGiaVe_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("http://dantri.com.vn/");
+        }
     }
 }
