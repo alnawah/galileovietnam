@@ -85,7 +85,6 @@
   <ItemGroup>
     <Content Include="App_Themes\MySkin\MySkin.skin" />
     <Content Include="App_Themes\MySkin\MySkin.css" />
-    <Content Include="App_Themes\MySkin\MySkin2.css" />
     <Content Include="Control\Calculator.ascx" />
     <Content Include="Theme1.aspx" />
     <Content Include="Theme2.aspx" />
