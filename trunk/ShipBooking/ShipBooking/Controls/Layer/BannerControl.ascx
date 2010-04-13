@@ -51,7 +51,7 @@
     <tr>
         <td class="style5" colspan="2" height="21px">
 		   &nbsp;&nbsp;
-		   <asp:LinkButton ID="LinkButton1" runat="server" Font-Underline="False" 
+		   <asp:LinkButton ID="LinkButton1" PostBackUrl="~/Default.aspx" runat="server" Font-Underline="False" 
                 Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Trang chủ | </asp:LinkButton>
            <asp:LinkButton ID="LinkButton2" PostBackUrl="~/DatVe.aspx" runat="server" Font-Underline="False" 
                 Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Đặt vé | </asp:LinkButton>
