@@ -13,16 +13,16 @@ using System.Xml.Linq;
 
 namespace ShipBooking.Controls
 {
-    public partial class DatVeControl : System.Web.UI.UserControl
+    public partial class DatVeReviewControl : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void Button1_Click1(object sender, EventArgs e)
+        protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Datve_Step2.aspx");
+            Response.Redirect("KetThucBooking.aspx");
         }
     }
 }
