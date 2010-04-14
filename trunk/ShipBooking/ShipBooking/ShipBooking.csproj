@@ -64,6 +64,20 @@
     <Compile Include="Controls\DatVeControl.ascx.designer.cs">
       <DependentUpon>DatVeControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\DatVeReviewControl.ascx.cs">
+      <DependentUpon>DatVeReviewControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DatVeReviewControl.ascx.designer.cs">
+      <DependentUpon>DatVeReviewControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DatVe_Step2.ascx.cs">
+      <DependentUpon>DatVe_Step2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DatVe_Step2.ascx.designer.cs">
+      <DependentUpon>DatVe_Step2.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Layer\BannerControl.ascx.cs">
       <DependentUpon>BannerControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -106,12 +120,33 @@
     <Compile Include="DatVe.aspx.designer.cs">
       <DependentUpon>DatVe.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DatVe_Review.aspx.cs">
+      <DependentUpon>DatVe_Review.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatVe_Review.aspx.designer.cs">
+      <DependentUpon>DatVe_Review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatVe_Step2.aspx.cs">
+      <DependentUpon>DatVe_Step2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatVe_Step2.aspx.designer.cs">
+      <DependentUpon>DatVe_Step2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KetThucBooking.aspx.cs">
+      <DependentUpon>KetThucBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KetThucBooking.aspx.designer.cs">
+      <DependentUpon>KetThucBooking.aspx</DependentUpon>
     </Compile>
     <Compile Include="MyMaster.Master.cs">
       <DependentUpon>MyMaster.Master</DependentUpon>
@@ -128,12 +163,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Controls\DatVeControl.ascx" />
+    <Content Include="Controls\DatVeReviewControl.ascx" />
+    <Content Include="Controls\DatVe_Step2.ascx" />
     <Content Include="Controls\Layer\BannerControl.ascx" />
     <Content Include="Controls\Layer\ContenControl.ascx" />
     <Content Include="Controls\Layer\FooterControl.ascx" />
     <Content Include="Controls\Layer\LeftControl.ascx" />
     <Content Include="Controls\Layer\RightControl.ascx" />
     <Content Include="DatVe.aspx" />
+    <Content Include="DatVe_Review.aspx" />
+    <Content Include="DatVe_Step2.aspx" />
     <Content Include="Images\bang_gia_ve.png" />
     <Content Include="Images\banner.png" />
     <Content Include="Images\banner1.png" />
@@ -144,7 +183,9 @@
     <Content Include="Images\Hinh-su.gif" />
     <Content Include="Images\lich_chuyen.png" />
     <Content Include="Images\menu_bar.gif" />
+    <Content Include="Images\text_banvetau.png" />
     <Content Include="Images\tinh_trang_cho.png" />
+    <Content Include="KetThucBooking.aspx" />
     <Content Include="MenuScript.js" />
     <Content Include="MyMaster.Master" />
   </ItemGroup>
