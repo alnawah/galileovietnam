@@ -15,8 +15,8 @@ namespace MaHoaSoHoc
         [STAThread]
         static void Main(string[] args)
         {
-            if (Registry.ClassesRoot.OpenSubKey(".mhs", false) == null)
-                FileShellExtension.RegisterBLF();
+            //if (Registry.ClassesRoot.OpenSubKey(".mhs", false) == null)
+                //FileShellExtension.RegisterBLF();
 
             if (args.Length < 1)
             {
