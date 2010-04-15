@@ -549,7 +549,7 @@ namespace MaHoaSoHoc
 			FileStream fsout = null;
 			BinaryReader rin = null;
 			BinaryWriter wout = null;
-			
+
 			try
 			{
 				int block = 1600;
@@ -562,15 +562,18 @@ namespace MaHoaSoHoc
 				
 				long Max = fsin.Length/1600 + 1;
 				long seek = 0;
-				
+				float time = 0;
 				if (parent!=null)
 				{
+                    parent.btnEncodeFile.Enabled = false;
+                    parent.btnDecodeFile.Enabled = false;
 					parent.progress.Maximum = (int)(Max & 0xFFFFFFFF);
 					parent.progress.Value = 0;
-					parent.lbState.Text = "Đang mã hóa";
+					parent.lbState.Text = "Đang mã hóa...";
 					Application.DoEvents();
 				}
-				
+
+                
 				do
 				{
 					buff = rin.ReadBytes(block);
@@ -578,10 +581,13 @@ namespace MaHoaSoHoc
 					seek++;
 					if (parent!=null) parent.progress.Value = (int)(seek & 0xFFFFFFFF);
 				} while(seek < Max);
-				
+                time = Max;
+                time = time / 3200;
 				if (parent!=null)
 				{
-					parent.lbState.Text = "Xong";
+					parent.lbState.Text = "Xong, tổng thời gian xử lý: " + time.ToString() + " giây";
+                    parent.btnEncodeFile.Enabled = true;
+                    parent.btnDecodeFile.Enabled = true;
 				}
 			}
 			catch (Exception ioe)
@@ -624,12 +630,14 @@ namespace MaHoaSoHoc
 				
 				long Max = fsin.Length/1600 + 1;
 				long seek = 0;
-				
+                float time = 0;
 				if (parent!=null)
 				{
+                    parent.btnEncodeFile.Enabled = false;
+                    parent.btnDecodeFile.Enabled = false;
 					parent.progress.Maximum = (int)(Max & 0xFFFFFFFF);
 					parent.progress.Value = 0;
-					parent.lbState.Text = "Đang giải mã";
+					parent.lbState.Text = "Đang giải mã...";
 					Application.DoEvents();
 				}
 				
@@ -641,10 +649,14 @@ namespace MaHoaSoHoc
 					if (parent!=null) parent.progress.Value = (int)(seek & 0xFFFFFFFF);
 				}
 				while(seek < Max);
-				
+
+                time = Max;
+                time = time / 3200;
 				if (parent!=null) 
 				{
-					parent.lbState.Text = "Xong";
+                    parent.lbState.Text = "Xong, tổng thời gian xử lý: " + time.ToString() + " giây";
+                    parent.btnEncodeFile.Enabled = true;
+                    parent.btnDecodeFile.Enabled = true;
 				}
 			}
 			catch (Exception ioe)

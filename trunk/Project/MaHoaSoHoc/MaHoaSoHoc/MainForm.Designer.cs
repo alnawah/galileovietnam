@@ -173,7 +173,7 @@
             // lbState
             // 
             this.lbState.AutoSize = true;
-            this.lbState.Location = new System.Drawing.Point(75, 142);
+            this.lbState.Location = new System.Drawing.Point(60, 142);
             this.lbState.Name = "lbState";
             this.lbState.Size = new System.Drawing.Size(55, 13);
             this.lbState.TabIndex = 9;
@@ -181,9 +181,9 @@
             // 
             // progress
             // 
-            this.progress.Location = new System.Drawing.Point(78, 158);
+            this.progress.Location = new System.Drawing.Point(63, 158);
             this.progress.Name = "progress";
-            this.progress.Size = new System.Drawing.Size(412, 20);
+            this.progress.Size = new System.Drawing.Size(427, 20);
             this.progress.TabIndex = 8;
             // 
             // btnDecodeFile
@@ -262,13 +262,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(90, 8);
+            this.label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(178, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(397, 23);
+            this.label1.Size = new System.Drawing.Size(229, 22);
             this.label1.TabIndex = 1;
-            this.label1.Text = "CHƯƠNG TRÌNH DEMO MÃ HÓA SỐ HỌC";
+            this.label1.Text = "DEMO MÃ HÓA SỐ HỌC";
             // 
             // MainForm
             // 
@@ -313,8 +313,8 @@
         private System.Windows.Forms.Button btnOpenInputFile;
         private System.Windows.Forms.TextBox txtFileIn;
         public System.Windows.Forms.ProgressBar progress;
-        private System.Windows.Forms.Button btnDecodeFile;
-        private System.Windows.Forms.Button btnEncodeFile;
+        public System.Windows.Forms.Button btnDecodeFile;
+        public System.Windows.Forms.Button btnEncodeFile;
         public System.Windows.Forms.Label lbState;
     }
 }
