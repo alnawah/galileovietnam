@@ -10,6 +10,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
+using ShipBooking.Library;
 
 namespace ShipBooking.Controls
 {
@@ -17,12 +18,17 @@ namespace ShipBooking.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                ListControlUtilities.FillDataToDropDownList(ddlNoiDi, "tblThanhPho", "Ten", "MaThanhPho");
+                ListControlUtilities.FillDataToDropDownList(ddlNoiDen, "tblThanhPho", "Ten", "MaThanhPho");
+            }
         }
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
             Response.Redirect("Datve_Step2.aspx");
         }
+
     }
 }

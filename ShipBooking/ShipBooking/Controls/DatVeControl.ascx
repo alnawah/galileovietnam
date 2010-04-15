@@ -60,11 +60,11 @@
                     <td>
                         Từ:</td>
                     <td>
-                        <asp:DropDownList ID="DropDownList1" runat="server" Height="22px" Width="160px">
+                        <asp:DropDownList ID="ddlNoiDi" runat="server" Height="22px" Width="160px">
                         </asp:DropDownList>
                         &nbsp;<span class="step1_warning">(*)</span>&nbsp;&nbsp;&nbsp;&nbsp;
                         Đến:
-                        <asp:DropDownList ID="DropDownList5" runat="server" Height="22px" Width="160px">
+                        <asp:DropDownList ID="ddlNoiDen" runat="server" Height="22px" Width="160px">
                         </asp:DropDownList>
                         &nbsp;<span class="step1_warning">(*)</span></td>
                 </tr>
