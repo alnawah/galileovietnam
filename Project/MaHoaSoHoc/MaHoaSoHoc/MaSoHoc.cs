@@ -5,7 +5,8 @@ using System.Text;
 
 namespace MaHoaSoHoc
 {
-    class MaSoHoc
+    public class MaSoHoc
     {
+
     }
 }
