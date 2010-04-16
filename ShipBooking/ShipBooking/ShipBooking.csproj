@@ -57,6 +57,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\BookingFile.cs" />
     <Compile Include="Controls\DatVeControl.ascx.cs">
       <DependentUpon>DatVeControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -141,6 +142,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\HanhKhach.cs" />
     <Compile Include="KetThucBooking.aspx.cs">
       <DependentUpon>KetThucBooking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -156,6 +158,7 @@
     <Compile Include="MyMaster.Master.designer.cs">
       <DependentUpon>MyMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\NguoiNhanVe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App_Code\ShipBookingData.cs" />
   </ItemGroup>

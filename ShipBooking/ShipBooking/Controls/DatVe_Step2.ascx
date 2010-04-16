@@ -39,6 +39,10 @@
         width: 170px;
         text-align: left;
     }
+    .warning_text
+    {
+        color: #FF0000;
+    }
 </style>
 <p style="text-align: center">
     <asp:Image ID="Image1" runat="server" Height="59px" 
@@ -57,56 +61,48 @@
                     <td class="ThongTinDatCho_Title_1">
                         Từ:</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblNoiDi1" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                     <td class="ThongTinDatCho_Title_2">
                         Đến:</td>
                     <td>
-                        <asp:Label ID="Label5" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblNoiDen1" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Từ:</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="Label2" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblNoiDi2" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                     <td class="ThongTinDatCho_Title_2">
                         Đến:</td>
                     <td>
-                        <asp:Label ID="Label6" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblNoiDen2" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Ngày khởi hành:</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="Label3" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblNgayDi" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                     <td class="ThongTinDatCho_Title_2">
                         Ngày về:</td>
                     <td>
-                        <asp:Label ID="Label7" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblNgayVe" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Loại vé:</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="Label4" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblLoaiVe" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                     <td class="ThongTinDatCho_Title_2">
                         Giá cho người Việt Nam:</td>
                     <td>
-                        <asp:Label ID="Label8" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblGiaVN" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -117,8 +113,7 @@
                     <td class="ThongTinDatCho_Title_2">
                         Giá cho người nước ngoài:</td>
                     <td>
-                        <asp:Label ID="Label9" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblGiaNN" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
             </table>
@@ -131,7 +126,7 @@
 </p>
 
 
-<asp:GridView ID="GridView1" runat="server" Width="800px" 
+<asp:GridView ID="grvHanhKhach" runat="server" Width="800px" 
     AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" 
     BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="71px">
     <FooterStyle BackColor="White" ForeColor="#000066" />
@@ -166,22 +161,36 @@
                     <td class="ThongTinDatCho_Title_1">
                         Tên người nhận vé</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:TextBox ID="TextBox1" runat="server" Width="279px"></asp:TextBox>
-                        &nbsp;<span class="warning_text">(*)</span></td>
+                        <asp:TextBox ID="txtTenNguoiNhan" runat="server" Width="279px"></asp:TextBox>
+                        &nbsp;<span class="warning_text">(*)
+                        </span>
+                        <asp:RequiredFieldValidator 
+                            ID="RequiredFieldValidator1" runat="server" 
+                            ErrorMessage="RequiredFieldValidator" Text="Bạn phải nhập tên người nhận"
+                            ControlToValidate="txtTenNguoiNhan">
+                            </asp:RequiredFieldValidator>
+                        </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Địa chỉ</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:TextBox ID="TextBox2" runat="server" Width="279px" Height="100px" 
+                        <asp:TextBox ID="txtDiaChiNguoiNhan" runat="server" Width="279px" Height="100px" 
                             TextMode="MultiLine"></asp:TextBox>
-                    &nbsp;<span class="warning_text">(*)</span></td>
+                    &nbsp;<span class="warning_text">(*)
+                        </span>
+                        <asp:RequiredFieldValidator 
+                            ID="RequiredFieldValidator2" runat="server" 
+                            ErrorMessage="RequiredFieldValidator" Text="Bạn phải nhập địa chỉ"
+                            ControlToValidate="txtDiaChiNguoiNhan">
+                            </asp:RequiredFieldValidator>
+                        </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Tỉnh/Thành phố</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:DropDownList ID="DropDownList1" runat="server" Height="22px" Width="166px">
+                        <asp:DropDownList ID="ddlThanhPho" runat="server" Height="22px" Width="166px">
                         </asp:DropDownList>
                     &nbsp;<span class="warning_text">(*)</span></td>
                 </tr>
@@ -189,15 +198,25 @@
                     <td class="ThongTinDatCho_Title_1">
                         Điện thoại</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:TextBox ID="TextBox3" runat="server" Width="163px"></asp:TextBox>
-&nbsp;<span class="warning_text">(*)</span></td>
+                        <asp:TextBox ID="txtDienThoaiNguoiNhan" runat="server" Width="163px"></asp:TextBox>&nbsp;<span class="warning_text">(*)</span>
+                        <asp:RequiredFieldValidator 
+                            ID="RequiredFieldValidator3" runat="server" 
+                            ErrorMessage="RequiredFieldValidator" Text="Bạn phải nhập số điện thoại"
+                            ControlToValidate="txtDienThoaiNguoiNhan">
+                            </asp:RequiredFieldValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Email</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:TextBox ID="TextBox5" runat="server" Width="279px"></asp:TextBox>
-&nbsp;<span class="warning_text">(*)</span></td>
+                        <asp:TextBox ID="txtEmailNguoiNhan" runat="server" Width="279px"></asp:TextBox>&nbsp;<span class="warning_text">(*)</span>
+                        <asp:RequiredFieldValidator 
+                            ID="RequiredFieldValidator4" runat="server" 
+                            ErrorMessage="RequiredFieldValidator" Text="Bạn phải nhập email"
+                            ControlToValidate="txtEmailNguoiNhan">
+                            </asp:RequiredFieldValidator>
+                        </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
@@ -211,7 +230,7 @@
                     <td class="ThongTinDatCho_Title_1">
                         Thời gian giao vé</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:DropDownList ID="DropDownList2" runat="server" Width="162px">
+                        <asp:DropDownList ID="ddlThoiGianGiaoVe" runat="server" Width="162px">
                         </asp:DropDownList>
                     </td>
                 </tr>
