@@ -47,6 +47,11 @@
       <DependentUpon>Product.mdf</DependentUpon>
     </Content>
     <Content Include="Default.aspx" />
+    <Content Include="images\galileo_logo.jpg" />
+    <Content Include="images\step1.jpg" />
+    <Content Include="images\step2.jpg" />
+    <Content Include="images\step3.jpg" />
+    <Content Include="images\step4.jpg" />
     <Content Include="LeftMenuControl.ascx" />
     <Content Include="UsingDataControls.aspx" />
     <Content Include="Web.config" />
