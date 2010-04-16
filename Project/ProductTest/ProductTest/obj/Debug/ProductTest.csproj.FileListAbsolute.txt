@@ -8,3 +8,8 @@ C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\Pr
 C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\ProductTest\ProductTest\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\ProductTest\ProductTest\obj\Debug\ProductTest.dll
 C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\ProductTest\ProductTest\obj\Debug\ProductTest.pdb
+D:\Working\Galileo\Project\ProductTest\ProductTest\bin\ProductTest.dll
+D:\Working\Galileo\Project\ProductTest\ProductTest\bin\ProductTest.pdb
+D:\Working\Galileo\Project\ProductTest\ProductTest\obj\Debug\ResolveAssemblyReference.cache
+D:\Working\Galileo\Project\ProductTest\ProductTest\obj\Debug\ProductTest.dll
+D:\Working\Galileo\Project\ProductTest\ProductTest\obj\Debug\ProductTest.pdb
