@@ -18,7 +18,7 @@ namespace ShipBooking.Controls
     public partial class DatVeControl : System.Web.UI.UserControl
     {
         public static BookingFile bf = new BookingFile();
-        public static HanhKhach khach = new HanhKhach();
+        public static HanhKhach[] khach;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -145,14 +145,15 @@ namespace ShipBooking.Controls
 
         protected void GetHanhKhachData()
         {
-            khach.MaHK = "HK01";
-            khach.Ten = txtHoTen.Text;
-            khach.DiaChi = txtDiaChi.Text;
-            khach.QuocTich = ddlQuocTich.SelectedItem.Text;
-            khach.DoTuoi = ddlDoTuoi.SelectedItem.Text;
-            khach.DienThoai = txtSoDienThoai.Text;
-            khach.Email = txtEmail.Text;
-            khach.MaBF = "BF01";
+            khach[0] = new HanhKhach();
+            khach[0].MaHK = "HK01";
+            khach[0].Ten = txtHoTen.Text;
+            khach[0].DiaChi = txtDiaChi.Text;
+            khach[0].QuocTich = ddlQuocTich.SelectedItem.Text;
+            khach[0].DoTuoi = ddlDoTuoi.SelectedItem.Text;
+            khach[0].DienThoai = txtSoDienThoai.Text;
+            khach[0].Email = txtEmail.Text;
+            khach[0].MaBF = "BF01";
         }
     }
 }

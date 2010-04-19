@@ -125,26 +125,25 @@
         Text="Ghi chú: Giá trên chưa bao gồm phí cảng"></asp:Label>
 </p>
 
-
-<asp:GridView ID="grvHanhKhach" runat="server" Width="800px" 
-    AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" 
-    BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="71px">
-    <FooterStyle BackColor="White" ForeColor="#000066" />
-    <RowStyle ForeColor="#000066" />
-    <Columns>
-        <asp:BoundField DataField="stt" HeaderText="STT" />
-        <asp:BoundField DataField="TenKhach" HeaderText="Tên khách" />
-        <asp:BoundField DataField="DiaChi" HeaderText="Địa chỉ" />
-        <asp:BoundField DataField="LoaiQuocTich" HeaderText="VN/Nước ngoài" />
-        <asp:BoundField DataField="LoaiTuoi" HeaderText="Tuổi" />
-        <asp:BoundField DataField="GiaVe" HeaderText="Giá vé" />
-    </Columns>
-    <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-    <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
-    <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-</asp:GridView>
-
-
+<center>
+    <asp:GridView ID="grvHanhKhach" runat="server" Width="800px" 
+        AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" 
+        BorderStyle="Solid" BorderWidth="1px" CellPadding="3" Height="71px">
+        <FooterStyle BackColor="White" ForeColor="#000066" />
+        <RowStyle ForeColor="#000066" />
+        <Columns>
+            <asp:BoundField DataField="Stt" HeaderText="STT" />
+            <asp:BoundField DataField="TenKhach" HeaderText="Tên khách" />
+            <asp:BoundField DataField="DiaChi" HeaderText="Địa chỉ" />
+            <asp:BoundField DataField="LoaiQuocTich" HeaderText="VN/Nước ngoài" />
+            <asp:BoundField DataField="LoaiTuoi" HeaderText="Tuổi" />
+            <asp:BoundField DataField="GiaVe" HeaderText="Giá vé" />
+        </Columns>
+        <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+        <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+    </asp:GridView>
+</center>
 
 <p style="text-align: center">
     <asp:LinkButton ID="LinkButton1" runat="server">Thêm hoặc sửa danh sách khách</asp:LinkButton>
@@ -222,7 +221,7 @@
                     <td class="ThongTinDatCho_Title_1">
                         Các yêu cầu khác (nếu có)</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:TextBox ID="TextBox6" runat="server" Width="279px" Height="100px" 
+                        <asp:TextBox ID="txtYeuCauKhac" runat="server" Width="279px" Height="100px" 
                             TextMode="MultiLine"></asp:TextBox>
                     </td>
                 </tr>
@@ -254,7 +253,7 @@
                     <td class="ThongTinDatCho_Detail">
                         <asp:RadioButtonList ID="RadioButtonList1" runat="server">
                             <asp:ListItem Value="VanPhongDaiLy">Tại văn phòng đại lý</asp:ListItem>
-                            <asp:ListItem Value="KhiGiaoVe">Thanh toán khi giao ve</asp:ListItem>
+                            <asp:ListItem Value="KhiGiaoVe">Thanh toán khi giao vé</asp:ListItem>
                             <asp:ListItem Value="TheTinDung">Thanh toán bằng thẻ tín dụng</asp:ListItem>
                         </asp:RadioButtonList>
                     </td>
