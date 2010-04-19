@@ -7,12 +7,12 @@ C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\Ma
 C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\MaHoaSoHoc\MaHoaSoHoc\bin\Release\MaHoaSoHoc.pdb
 C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\MaHoaSoHoc\MaHoaSoHoc\obj\Release\MaHoaSoHoc.exe
 C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\MaHoaSoHoc\MaHoaSoHoc\obj\Release\MaHoaSoHoc.pdb
-C:\Users\Quang Minh\Desktop\Galileo\Project\MaHoaSoHoc\MaHoaSoHoc\obj\Release\MaHoaSoHoc.exe
-C:\Users\Quang Minh\Desktop\Galileo\Project\MaHoaSoHoc\MaHoaSoHoc\obj\Release\MaHoaSoHoc.pdb
+C:\Users\Quang Minh\Desktop\Galileo\Project\MaHoaSoHoc\MaHoaSoHoc\bin\Release\MaHoaSoHoc.XML
 C:\Users\Quang Minh\Desktop\Galileo\Project\MaHoaSoHoc\MaHoaSoHoc\bin\Release\MaHoaSoHoc.exe
 C:\Users\Quang Minh\Desktop\Galileo\Project\MaHoaSoHoc\MaHoaSoHoc\bin\Release\MaHoaSoHoc.pdb
 C:\Users\Quang Minh\Desktop\Galileo\Project\MaHoaSoHoc\MaHoaSoHoc\obj\Release\ResolveAssemblyReference.cache
 C:\Users\Quang Minh\Desktop\Galileo\Project\MaHoaSoHoc\MaHoaSoHoc\obj\Release\MaHoaSoHoc.MainForm.resources
 C:\Users\Quang Minh\Desktop\Galileo\Project\MaHoaSoHoc\MaHoaSoHoc\obj\Release\MaHoaSoHoc.Properties.Resources.resources
 C:\Users\Quang Minh\Desktop\Galileo\Project\MaHoaSoHoc\MaHoaSoHoc\obj\Release\MaHoaSoHoc.csproj.GenerateResource.Cache
-C:\Users\Quang Minh\Desktop\Galileo\Project\MaHoaSoHoc\MaHoaSoHoc\bin\Release\MaHoaSoHoc.XML
+C:\Users\Quang Minh\Desktop\Galileo\Project\MaHoaSoHoc\MaHoaSoHoc\obj\Release\MaHoaSoHoc.exe
+C:\Users\Quang Minh\Desktop\Galileo\Project\MaHoaSoHoc\MaHoaSoHoc\obj\Release\MaHoaSoHoc.pdb

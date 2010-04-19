@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlowfishLib.cs" />
+    <Compile Include="MHSH.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
