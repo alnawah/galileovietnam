@@ -13,35 +13,11 @@ using System.Xml.Linq;
 
 namespace ShipBooking.Controls
 {
-    public partial class DatVeReviewControl : System.Web.UI.UserControl
+    public partial class ThemHanhKhachControl : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                SetBookingData();
-                SetHanhKhachData();
-                SetNguoiNhanVeData();
 
-            }
-        }
-
-        protected void Button2_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("KetThucBooking.aspx");
-        }
-
-        protected void SetBookingData()
-        {
-            lblNoiDen1.Text = DatVeControl.bf.NoiDen;
-            lblNoiDen2.Text = "";
-            lblNoiDi1.Text = DatVeControl.bf.NoiDi;
-            lblNoiDi2.Text = "";
-            lblNgayDi.Text = DatVeControl.bf.NgayDi;
-            lblNgayVe.Text = DatVeControl.bf.NgayVe;
-            lblLoaiVe.Text = DatVeControl.bf.LoaiVe;
-            lblGiaVN.Text = DatVeControl.bf.GiaTien;
-            lblGiaNN.Text = "";
         }
 
         protected void SetHanhKhachData()
@@ -68,16 +44,9 @@ namespace ShipBooking.Controls
             grvHanhKhach.DataBind();
         }
 
-        protected void SetNguoiNhanVeData()
+        protected void btnHoanTat_Click(object sender, EventArgs e)
         {
-            lblTenNguoiNhan.Text = DatVe_Step2.NguoiNhan.Ten;
-            lblDiaChiNguoiNhan.Text = DatVe_Step2.NguoiNhan.DiaChi;
-            lblThanhPho.Text = DatVe_Step2.NguoiNhan.MaThanhPho;
-            lblSoDienThoai.Text = DatVe_Step2.NguoiNhan.DienThoai;
-            lblEmail.Text = DatVe_Step2.NguoiNhan.Email;
-            lblYeuCauKhac.Text = DatVe_Step2.NguoiNhan.YeuCauKhac;
-            lblThoiGianGiaoVe.Text = DatVe_Step2.NguoiNhan.ThoiGianGiaoVe;
-            lblThanhToan.Text = "Trả tiền mặt";
+            Response.Redirect("DatVe_Step2.aspx");
         }
     }
 }

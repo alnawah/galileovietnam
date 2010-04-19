@@ -11,11 +11,14 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using ShipBooking.Library;
+using ShipBooking.Module;
 
 namespace ShipBooking.Controls
 {
     public partial class DatVe_Step2 : System.Web.UI.UserControl
     {
+        public static NguoiNhanVe NguoiNhan = new NguoiNhanVe();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -23,11 +26,13 @@ namespace ShipBooking.Controls
                 ListControlUtilities.FillDataToDropDownList(ddlThanhPho, "tblThanhPho", "Ten", "MaThanhPho");
                 FillDataToDdlThoiGian();
                 SetBookingData();
+                SetHanhKhachData();
             }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            GetNguoiNhanVeData();
             Response.Redirect("DatVe_Review.aspx");
         }
 
@@ -69,7 +74,40 @@ namespace ShipBooking.Controls
 
         protected void SetHanhKhachData()
         {
-            
+            DataTable dt = new DataTable("HanhKhach");
+            dt.Columns.Add("Stt");
+            dt.Columns.Add("TenKhach");
+            dt.Columns.Add("DiaChi");
+            dt.Columns.Add("LoaiQuocTich");
+            dt.Columns.Add("LoaiTuoi");
+            dt.Columns.Add("GiaVe");
+
+            DataSet ds = new DataSet();
+            ds.Tables.Add(dt);
+
+
+
+            ds.Tables[0].Rows.Add();
+            ds.Tables[0].Rows[0].SetField("Stt", "1");
+            ds.Tables[0].Rows[0].SetField("TenKhach", DatVeControl.khach.Ten);
+            ds.Tables[0].Rows[0].SetField("DiaChi", DatVeControl.khach.DiaChi);
+            ds.Tables[0].Rows[0].SetField("LoaiQuocTich", DatVeControl.khach.QuocTich);
+            ds.Tables[0].Rows[0].SetField("LoaiTuoi", DatVeControl.khach.DoTuoi);
+            ds.Tables[0].Rows[0].SetField("GiaVe", "4.500.000 VND");
+
+            grvHanhKhach.DataSource = ds.Tables[0];
+            grvHanhKhach.DataBind();
+        }
+
+        protected void GetNguoiNhanVeData()
+        {
+            NguoiNhan.Ten = txtTenNguoiNhan.Text;
+            NguoiNhan.DiaChi = txtDiaChiNguoiNhan.Text;
+            NguoiNhan.MaThanhPho = ddlThanhPho.SelectedItem.Text ;
+            NguoiNhan.DienThoai = txtDienThoaiNguoiNhan.Text;
+            NguoiNhan.Email = txtEmailNguoiNhan.Text;
+            NguoiNhan.YeuCauKhac = txtYeuCauKhac.Text;
+            NguoiNhan.ThoiGianGiaoVe = ddlThoiGianGiaoVe.SelectedItem.Text;
         }
     }
 }

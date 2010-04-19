@@ -56,56 +56,49 @@
                     <td class="ThongTinDatCho_Title_1">
                         Từ:</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblNoiDi1" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                     <td class="ThongTinDatCho_Title_2">
                         Đến:</td>
                     <td>
-                        <asp:Label ID="Label5" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblNoiDen1" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Từ:</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="Label2" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblNoiDi2" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                     <td class="ThongTinDatCho_Title_2">
                         Đến:</td>
                     <td>
-                        <asp:Label ID="Label6" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblNoiDen2" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Ngày khởi hành:</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="Label3" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblNgayDi" runat="server" Font-Bold="True" 
+                            ForeColor="#0000CC"></asp:Label>
                     </td>
                     <td class="ThongTinDatCho_Title_2">
                         Ngày về:</td>
                     <td>
-                        <asp:Label ID="Label7" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblNgayVe" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Loại vé:</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="Label4" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblLoaiVe" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                     <td class="ThongTinDatCho_Title_2">
                         Giá cho người Việt Nam:</td>
                     <td>
-                        <asp:Label ID="Label8" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblGiaVN" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -116,8 +109,7 @@
                     <td class="ThongTinDatCho_Title_2">
                         Giá cho người nước ngoài:</td>
                     <td>
-                        <asp:Label ID="Label9" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblGiaNN" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
             </table>
@@ -129,24 +121,26 @@
         Text="Ghi chú: Giá trên chưa bao gồm phí cảng"></asp:Label>
 </p>
 
+<center>
+    <asp:GridView ID="grvHanhKhach" runat="server" Width="800px" 
+        AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" 
+        BorderStyle="Solid" BorderWidth="1px" CellPadding="3" Height="71px">
+        <FooterStyle BackColor="White" ForeColor="#000066" />
+        <RowStyle ForeColor="#000066" />
+        <Columns>
+            <asp:BoundField DataField="stt" HeaderText="STT" />
+            <asp:BoundField DataField="TenKhach" HeaderText="Tên khách" />
+            <asp:BoundField DataField="DiaChi" HeaderText="Địa chỉ" />
+            <asp:BoundField DataField="LoaiQuocTich" HeaderText="VN/Nước ngoài" />
+            <asp:BoundField DataField="LoaiTuoi" HeaderText="Tuổi" />
+            <asp:BoundField DataField="GiaVe" HeaderText="Giá vé" />
+        </Columns>
+        <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+        <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+    </asp:GridView>
+</center>
 
-<asp:GridView ID="GridView1" runat="server" Width="800px" 
-    AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" 
-    BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="71px">
-    <FooterStyle BackColor="White" ForeColor="#000066" />
-    <RowStyle ForeColor="#000066" />
-    <Columns>
-        <asp:BoundField DataField="stt" HeaderText="STT" />
-        <asp:BoundField DataField="TenKhach" HeaderText="Tên khách" />
-        <asp:BoundField DataField="DiaChi" HeaderText="Địa chỉ" />
-        <asp:BoundField DataField="LoaiQuocTich" HeaderText="VN/Nước ngoài" />
-        <asp:BoundField DataField="LoaiTuoi" HeaderText="Tuổi" />
-        <asp:BoundField DataField="GiaVe" HeaderText="Giá vé" />
-    </Columns>
-    <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-    <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
-    <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-</asp:GridView>
 
 <p style="text-align: center">
     <asp:LinkButton ID="LinkButton1" runat="server">Thêm hoặc sửa danh sách khách</asp:LinkButton>
@@ -163,64 +157,62 @@
                     <td class="ThongTinDatCho_Title_1">
                         Tên người nhận vé:</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="Label19" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblTenNguoiNhan" runat="server" Font-Bold="True" 
+                            ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Địa chỉ</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="Label20" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblDiaChiNguoiNhan" runat="server" Font-Bold="True" 
+                            ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Tỉnh/Thành phố</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="Label21" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblThanhPho" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Số điện thoại:</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="Label22" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblSoDienThoai" runat="server" Font-Bold="True" 
+                            ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Email</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="Label23" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblEmail" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Các yêu cầu khác (nếu có)</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="Label24" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblYeuCauKhac" runat="server" Font-Bold="True" 
+                            ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Thời gian giao vé</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="Label25" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblThoiGianGiaoVe" runat="server" Font-Bold="True" 
+                            ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Thanh toán</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="Label26" runat="server" Font-Bold="True" ForeColor="#0000CC" 
-                            Text="TP Hồ Chí Minh"></asp:Label>
+                        <asp:Label ID="lblThanhToan" runat="server" Font-Bold="True" 
+                            ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
             </table>
