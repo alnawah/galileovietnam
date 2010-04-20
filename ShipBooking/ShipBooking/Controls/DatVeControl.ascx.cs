@@ -11,17 +11,19 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using ShipBooking.Library;
-using ShipBooking.Module;
+using ShipBooking.Module;   
+using System.Collections.Generic;
 
 namespace ShipBooking.Controls
 {
     public partial class DatVeControl : System.Web.UI.UserControl
     {
         public static BookingFile bf = new BookingFile();
-        public static HanhKhach[] khach;
+        public static List<HanhKhach> listKhach = new List<HanhKhach>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            InitData();
             if (!IsPostBack)
             {
                 ListControlUtilities.FillDataToDropDownList(ddlNoiDi, "tblThanhPho", "Ten", "MaThanhPho");
@@ -35,6 +37,14 @@ namespace ShipBooking.Controls
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
+            RequiredFieldValidator1.Visible = true;
+            RequiredFieldValidator2.Visible = true;
+            RequiredFieldValidator3.Visible = true;
+            RequiredFieldValidator4.Visible = true;
+            RequiredFieldValidator5.Visible = true;
+            RequiredFieldValidator6.Visible = true;
+            RequiredFieldValidator7.Visible = true;
+
             GetBookingData();
             GetHanhKhachData();
             Response.Redirect("Datve_Step2.aspx");
@@ -129,7 +139,7 @@ namespace ShipBooking.Controls
         protected void GetBookingData()
         {
             bf.MaBF = "123";
-            bf.LoaiChuyen = "Khứ hồi";
+            bf.LoaiChuyen = rblLoaiHanhTrinh.SelectedItem.Text;
             bf.NoiDi = ddlNoiDi.SelectedItem.Text;
             bf.NoiDen = ddlNoiDen.SelectedItem.Text;
             bf.NgayDi = txtNgayDi.Text;
@@ -139,21 +149,35 @@ namespace ShipBooking.Controls
             bf.LoaiVe = ddlLoaiVe.SelectedItem.Text;
             bf.SoGhe = "30";
             bf.GiaTien = "4500000";
-            bf.ThanhToan = "Chuyển khoản";
             bf.MaNguoiNhan = "NN01";
         }
 
         protected void GetHanhKhachData()
         {
-            khach[0] = new HanhKhach();
-            khach[0].MaHK = "HK01";
-            khach[0].Ten = txtHoTen.Text;
-            khach[0].DiaChi = txtDiaChi.Text;
-            khach[0].QuocTich = ddlQuocTich.SelectedItem.Text;
-            khach[0].DoTuoi = ddlDoTuoi.SelectedItem.Text;
-            khach[0].DienThoai = txtSoDienThoai.Text;
-            khach[0].Email = txtEmail.Text;
-            khach[0].MaBF = "BF01";
+            HanhKhach khach = new HanhKhach();
+
+            khach.MaHK = "HK01";
+            khach.Ten = txtHoTen.Text;
+            khach.DiaChi = txtDiaChi.Text;
+            khach.QuocTich = ddlQuocTich.SelectedItem.Text;
+            khach.DoTuoi = ddlDoTuoi.SelectedItem.Text;
+            khach.DienThoai = txtSoDienThoai.Text;
+            khach.Email = txtEmail.Text;
+            khach.MaBF = "BF01";
+
+            listKhach.Add(khach);
+        }
+
+        protected void InitData()
+        {
+            rblLoaiHanhTrinh.SelectedIndex = 0;
+            txtNgayDi.Text = "";
+            txtNgayVe.Text = "";
+            txtHoTen.Text = "";
+            txtDiaChi.Text = "";
+            txtSoDienThoai.Text = "";
+            txtEmail.Text = "";
+            ddlDoTuoi.SelectedIndex = 2;
         }
     }
 }

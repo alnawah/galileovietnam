@@ -21,6 +21,7 @@ namespace ShipBooking.Controls
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            InitData();
             if (!IsPostBack)
             {
                 ListControlUtilities.FillDataToDropDownList(ddlThanhPho, "tblThanhPho", "Ten", "MaThanhPho");
@@ -32,6 +33,11 @@ namespace ShipBooking.Controls
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            RequiredFieldValidator1.Visible = true;
+            RequiredFieldValidator2.Visible = true;
+            RequiredFieldValidator3.Visible = true;
+            RequiredFieldValidator4.Visible = true;
+
             GetNguoiNhanVeData();
             Response.Redirect("DatVe_Review.aspx");
         }
@@ -85,16 +91,16 @@ namespace ShipBooking.Controls
             DataSet ds = new DataSet();
             ds.Tables.Add(dt);
 
-
-
-            ds.Tables[0].Rows.Add();
-            ds.Tables[0].Rows[0].SetField("Stt", "1");
-            ds.Tables[0].Rows[0].SetField("TenKhach", DatVeControl.khach.Ten);
-            ds.Tables[0].Rows[0].SetField("DiaChi", DatVeControl.khach.DiaChi);
-            ds.Tables[0].Rows[0].SetField("LoaiQuocTich", DatVeControl.khach.QuocTich);
-            ds.Tables[0].Rows[0].SetField("LoaiTuoi", DatVeControl.khach.DoTuoi);
-            ds.Tables[0].Rows[0].SetField("GiaVe", "4.500.000 VND");
-
+            for (int i = 0; i < DatVeControl.listKhach.Count(); i++)
+            {
+                ds.Tables[0].Rows.Add();
+                ds.Tables[0].Rows[i].SetField("Stt", i + 1);
+                ds.Tables[0].Rows[i].SetField("TenKhach", DatVeControl.listKhach[i].Ten);
+                ds.Tables[0].Rows[i].SetField("DiaChi", DatVeControl.listKhach[i].DiaChi);
+                ds.Tables[0].Rows[i].SetField("LoaiQuocTich", DatVeControl.listKhach[i].QuocTich);
+                ds.Tables[0].Rows[i].SetField("LoaiTuoi", DatVeControl.listKhach[i].DoTuoi);
+                ds.Tables[0].Rows[i].SetField("GiaVe", "4.500.000 VND");
+            }
             grvHanhKhach.DataSource = ds.Tables[0];
             grvHanhKhach.DataBind();
         }
@@ -108,6 +114,12 @@ namespace ShipBooking.Controls
             NguoiNhan.Email = txtEmailNguoiNhan.Text;
             NguoiNhan.YeuCauKhac = txtYeuCauKhac.Text;
             NguoiNhan.ThoiGianGiaoVe = ddlThoiGianGiaoVe.SelectedItem.Text;
+            NguoiNhan.ThanhToan = rblHinhThucThanhToan.SelectedItem.Text;
+        }
+
+        protected void InitData()
+        {
+            rblHinhThucThanhToan.SelectedIndex = 1;
         }
     }
 }
