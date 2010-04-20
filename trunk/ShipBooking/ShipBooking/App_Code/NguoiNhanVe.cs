@@ -63,6 +63,13 @@ namespace ShipBooking.Module
             set { _YeuCauKhac = value; }
         }
 
+        string _ThanhToan;
+        public string ThanhToan
+        {
+            get { return _ThanhToan; }
+            set { _ThanhToan = value; }
+        }
+
         string _ThoiGianGiaoVe;
         public string ThoiGianGiaoVe
         {

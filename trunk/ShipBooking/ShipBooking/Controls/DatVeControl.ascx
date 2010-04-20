@@ -50,7 +50,7 @@
                     <td>
                     </td>
                     <td>
-                        <asp:RadioButtonList ID="RadioButtonList1" runat="server" Height="22px" 
+                        <asp:RadioButtonList ID="rblLoaiHanhTrinh" runat="server" Height="22px" 
                             RepeatDirection="Horizontal" Width="364px">
                             <asp:ListItem Value="KhuHoi">Khứ hồi</asp:ListItem>
                             <asp:ListItem Value="MotLuot">Một lượt</asp:ListItem>
@@ -100,9 +100,9 @@
                         <asp:DropDownList ID="ddlLoaiVe" runat="server" Height="22px" Width="160px">
                         </asp:DropDownList>
                     &nbsp;<span class="step1_warning">(*)
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" 
-        ErrorMessage="RequiredFieldValidator" ControlToValidate="ddlLoaiVe"
-        Text="Bạn phải chọn loại vé"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" 
+                        ErrorMessage="RequiredFieldValidator" ControlToValidate="ddlLoaiVe"
+                        Text="Bạn phải chọn loại vé" Visible="false"></asp:RequiredFieldValidator>
                         </span></td>
                 </tr>
                 </table>
@@ -126,7 +126,7 @@
                     &nbsp;<span class="step1_warning">(*) </span>
     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
         ErrorMessage="RequiredFieldValidator" ControlToValidate="txtHoTen"
-        Text="Bạn phải nhập họ tên"></asp:RequiredFieldValidator>
+        Text="Bạn phải nhập họ tên" Visible="False"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -138,7 +138,7 @@
                         <span class="step1_warning">(*)
     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
         ErrorMessage="RequiredFieldValidator" ControlToValidate="txtDiaChi"
-        Text="Bạn phải địa chỉ"></asp:RequiredFieldValidator>
+        Text="Bạn phải địa chỉ" Visible="False"></asp:RequiredFieldValidator>
                         </span>
                     </td>
                 </tr>
@@ -151,7 +151,7 @@
                     &nbsp;<span class="step1_warning">(*)
     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
         ErrorMessage="RequiredFieldValidator" ControlToValidate="ddlQuocTich"
-        Text="Bạn phải chọn quốc tịch"></asp:RequiredFieldValidator>
+        Text="Bạn phải chọn quốc tịch" Visible="False"></asp:RequiredFieldValidator>
                         </span></td>
                 </tr>
                 <tr>
@@ -163,7 +163,7 @@
                     &nbsp;<span class="step1_warning">(*)
     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
         ErrorMessage="RequiredFieldValidator" ControlToValidate="ddlDoTuoi"
-        Text="Bạn phải chọn độ tuổi"></asp:RequiredFieldValidator>
+        Text="Bạn phải chọn độ tuổi" Visible="False"></asp:RequiredFieldValidator>
                         </span></td>
                 </tr>
                 <tr>
@@ -174,7 +174,7 @@
                         &nbsp;<span class="step1_warning">(*) 
     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
         ErrorMessage="RequiredFieldValidator" ControlToValidate="txtSoDienThoai"
-        Text="Bạn phải nhập số điện thoại"></asp:RequiredFieldValidator>
+        Text="Bạn phải nhập số điện thoại" Visible="False"></asp:RequiredFieldValidator>
                         </span>
                         </td>
                 </tr>
@@ -186,7 +186,7 @@
                     &nbsp;<span class="step1_warning">(*) 
     <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" 
         ErrorMessage="RequiredFieldValidator" ControlToValidate="txtEmail"
-        Text="Bạn phải nhập email"></asp:RequiredFieldValidator>
+        Text="Bạn phải nhập email" Visible="False"></asp:RequiredFieldValidator>
                         </span>
                     </td>
                 </tr>

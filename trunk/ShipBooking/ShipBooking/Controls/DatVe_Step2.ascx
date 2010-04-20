@@ -146,7 +146,7 @@
 </center>
 
 <p style="text-align: center">
-    <asp:LinkButton ID="LinkButton1" runat="server">Thêm hoặc sửa danh sách khách</asp:LinkButton>
+    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/ThemHanhKhach.aspx">Thêm hoặc sửa danh sách khách</asp:LinkButton>
 </p>
 <table class="tblThongTinDatCho_Summary_Style">
     <tr>
@@ -166,8 +166,7 @@
                         <asp:RequiredFieldValidator 
                             ID="RequiredFieldValidator1" runat="server" 
                             ErrorMessage="RequiredFieldValidator" Text="Bạn phải nhập tên người nhận"
-                            ControlToValidate="txtTenNguoiNhan">
-                            </asp:RequiredFieldValidator>
+                            ControlToValidate="txtTenNguoiNhan" Visible="False"></asp:RequiredFieldValidator>
                         </td>
                 </tr>
                 <tr>
@@ -181,8 +180,7 @@
                         <asp:RequiredFieldValidator 
                             ID="RequiredFieldValidator2" runat="server" 
                             ErrorMessage="RequiredFieldValidator" Text="Bạn phải nhập địa chỉ"
-                            ControlToValidate="txtDiaChiNguoiNhan">
-                            </asp:RequiredFieldValidator>
+                            ControlToValidate="txtDiaChiNguoiNhan" Visible="False"></asp:RequiredFieldValidator>
                         </td>
                 </tr>
                 <tr>
@@ -201,8 +199,7 @@
                         <asp:RequiredFieldValidator 
                             ID="RequiredFieldValidator3" runat="server" 
                             ErrorMessage="RequiredFieldValidator" Text="Bạn phải nhập số điện thoại"
-                            ControlToValidate="txtDienThoaiNguoiNhan">
-                            </asp:RequiredFieldValidator>
+                            ControlToValidate="txtDienThoaiNguoiNhan" Visible="False"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -213,8 +210,7 @@
                         <asp:RequiredFieldValidator 
                             ID="RequiredFieldValidator4" runat="server" 
                             ErrorMessage="RequiredFieldValidator" Text="Bạn phải nhập email"
-                            ControlToValidate="txtEmailNguoiNhan">
-                            </asp:RequiredFieldValidator>
+                            ControlToValidate="txtEmailNguoiNhan" Visible="False"></asp:RequiredFieldValidator>
                         </td>
                 </tr>
                 <tr>
@@ -251,7 +247,7 @@
             <table class="tblThongTinDatCho_Detail_Style">
                 <tr>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+                        <asp:RadioButtonList ID="rblHinhThucThanhToan" runat="server">
                             <asp:ListItem Value="VanPhongDaiLy">Tại văn phòng đại lý</asp:ListItem>
                             <asp:ListItem Value="KhiGiaoVe">Thanh toán khi giao vé</asp:ListItem>
                             <asp:ListItem Value="TheTinDung">Thanh toán bằng thẻ tín dụng</asp:ListItem>

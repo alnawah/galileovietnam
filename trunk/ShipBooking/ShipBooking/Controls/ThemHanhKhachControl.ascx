@@ -122,7 +122,8 @@
 </table>
 
 <p style="text-align: center">
-    <asp:Button ID="btnThemKhach" runat="server" Text="Thêm mới" />
+    <asp:Button ID="btnThemKhach" runat="server" Text="Thêm mới" 
+        onclick="btnThemKhach_Click" />
 </p>
 
 <center>
