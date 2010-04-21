@@ -248,9 +248,6 @@
                 <tr>
                     <td class="ThongTinDatCho_Detail">
                         <asp:RadioButtonList ID="rblHinhThucThanhToan" runat="server">
-                            <asp:ListItem Value="VanPhongDaiLy">Tại văn phòng đại lý</asp:ListItem>
-                            <asp:ListItem Value="KhiGiaoVe">Thanh toán khi giao vé</asp:ListItem>
-                            <asp:ListItem Value="TheTinDung">Thanh toán bằng thẻ tín dụng</asp:ListItem>
                         </asp:RadioButtonList>
                     </td>
                 </tr>

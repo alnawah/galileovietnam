@@ -20,6 +20,8 @@ namespace ShipBooking.Controls
         {
             if (!IsPostBack)
             {
+                InitData();
+                SetVisibleRequiredValidatorControl();
                 FillDataToDdlQuocTich();
                 FillDataToDdlDoTuoi();
                 SetHanhKhachData();
@@ -62,7 +64,7 @@ namespace ShipBooking.Controls
         {
             GetHanhKhachData();
             SetHanhKhachData();
-
+            InitData();
         }
 
         protected void FillDataToDdlQuocTich()
@@ -122,5 +124,26 @@ namespace ShipBooking.Controls
 
             khach = null;
         }
+
+        protected void InitData()
+        {
+            txtHoTen.Text = "";
+            txtDiaChi.Text = "";
+            txtSoDienThoai.Text = "";
+            txtEmail.Text = "";
+            ddlQuocTich.SelectedIndex = 0;
+            ddlDoTuoi.SelectedIndex = 0;
+        }
+
+        protected void SetVisibleRequiredValidatorControl()
+        {
+            RequiredFieldValidator1.Visible = false;
+            RequiredFieldValidator2.Visible = false;
+            RequiredFieldValidator3.Visible = false;
+            RequiredFieldValidator4.Visible = false;
+            RequiredFieldValidator5.Visible = false;
+            RequiredFieldValidator6.Visible = false;
+        }
+
     }
 } 

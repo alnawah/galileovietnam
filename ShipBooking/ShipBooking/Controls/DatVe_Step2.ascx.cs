@@ -21,11 +21,11 @@ namespace ShipBooking.Controls
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            InitData();
             if (!IsPostBack)
             {
                 ListControlUtilities.FillDataToDropDownList(ddlThanhPho, "tblThanhPho", "Ten", "MaThanhPho");
                 FillDataToDdlThoiGian();
+                FillDataToRdbHinhThucThanhToan();
                 SetBookingData();
                 SetHanhKhachData();
             }
@@ -65,12 +65,40 @@ namespace ShipBooking.Controls
             item = null;
         }
 
+        protected void FillDataToRdbHinhThucThanhToan()
+        {
+            ListItem item;
+
+            item = new ListItem();
+            item.Text = "Tại văn phòng đại lý";
+            item.Value = "TaiVanPhongDaiLy";
+            rblHinhThucThanhToan.Items.Add(item);
+            item = null;
+
+            item = new ListItem();
+            item.Text = "Thanh toán khi giao vé";
+            item.Value = "ThanhToanKhiGiaoVe";
+            rblHinhThucThanhToan.Items.Add(item);
+            item = null;
+
+            item = new ListItem();
+            item.Text = "Thanh toán bằng thẻ tín dụng";
+            item.Value = "ThanhToanBangTheTinDung";
+            rblHinhThucThanhToan.Items.Add(item);
+            item = null;
+
+            rblHinhThucThanhToan.SelectedIndex = 0;
+        }
+
         protected void SetBookingData()
         {
             lblNoiDen1.Text = DatVeControl.bf.NoiDen;
-            lblNoiDen2.Text = "";
             lblNoiDi1.Text = DatVeControl.bf.NoiDi;
-            lblNoiDi2.Text = "";
+            if (DatVeControl.bf.LoaiChuyen == "Khứ hồi")
+            {
+                lblNoiDi2.Text = DatVeControl.bf.NoiDen;
+                lblNoiDen2.Text = DatVeControl.bf.NoiDi;
+            }
             lblNgayDi.Text = DatVeControl.bf.NgayDi;
             lblNgayVe.Text = DatVeControl.bf.NgayVe;
             lblLoaiVe.Text = DatVeControl.bf.LoaiVe;
@@ -115,11 +143,6 @@ namespace ShipBooking.Controls
             NguoiNhan.YeuCauKhac = txtYeuCauKhac.Text;
             NguoiNhan.ThoiGianGiaoVe = ddlThoiGianGiaoVe.SelectedItem.Text;
             NguoiNhan.ThanhToan = rblHinhThucThanhToan.SelectedItem.Text;
-        }
-
-        protected void InitData()
-        {
-            rblHinhThucThanhToan.SelectedIndex = 1;
         }
     }
 }

@@ -34,9 +34,12 @@ namespace ShipBooking.Controls
         protected void SetBookingData()
         {
             lblNoiDen1.Text = DatVeControl.bf.NoiDen;
-            lblNoiDen2.Text = "";
             lblNoiDi1.Text = DatVeControl.bf.NoiDi;
-            lblNoiDi2.Text = "";
+            if (DatVeControl.bf.LoaiChuyen == "Khứ hồi")
+            {
+                lblNoiDi2.Text = DatVeControl.bf.NoiDen;
+                lblNoiDen2.Text = DatVeControl.bf.NoiDi;
+            }
             lblNgayDi.Text = DatVeControl.bf.NgayDi;
             lblNgayVe.Text = DatVeControl.bf.NgayVe;
             lblLoaiVe.Text = DatVeControl.bf.LoaiVe;
@@ -80,7 +83,7 @@ namespace ShipBooking.Controls
             lblEmail.Text = DatVe_Step2.NguoiNhan.Email;
             lblYeuCauKhac.Text = DatVe_Step2.NguoiNhan.YeuCauKhac;
             lblThoiGianGiaoVe.Text = DatVe_Step2.NguoiNhan.ThoiGianGiaoVe;
-            lblThanhToan.Text = "Trả tiền mặt";
+            lblThanhToan.Text = DatVe_Step2.NguoiNhan.ThanhToan;
         }
     }
 }

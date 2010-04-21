@@ -140,11 +140,7 @@
         <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
     </asp:GridView>
 </center>
-
-
-<p style="text-align: center">
-    <asp:LinkButton ID="LinkButton1" runat="server">Thêm hoặc sửa danh sách khách</asp:LinkButton>
-</p>
+<br />
 <table class="tblThongTinDatCho_Summary_Style">
     <tr>
         <td bgcolor="#006699" class="table_header_style">
@@ -163,7 +159,7 @@
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
-                        Địa chỉ</td>
+                        Địa chỉ:</td>
                     <td class="ThongTinDatCho_Detail">
                         <asp:Label ID="lblDiaChiNguoiNhan" runat="server" Font-Bold="True" 
                             ForeColor="#0000CC"></asp:Label>
@@ -171,7 +167,7 @@
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
-                        Tỉnh/Thành phố</td>
+                        Tỉnh/Thành phố:</td>
                     <td class="ThongTinDatCho_Detail">
                         <asp:Label ID="lblThanhPho" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
@@ -186,14 +182,14 @@
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
-                        Email</td>
+                        Email:</td>
                     <td class="ThongTinDatCho_Detail">
                         <asp:Label ID="lblEmail" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
-                        Các yêu cầu khác (nếu có)</td>
+                        Các yêu cầu khác (nếu có):</td>
                     <td class="ThongTinDatCho_Detail">
                         <asp:Label ID="lblYeuCauKhac" runat="server" Font-Bold="True" 
                             ForeColor="#0000CC"></asp:Label>
@@ -201,7 +197,7 @@
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
-                        Thời gian giao vé</td>
+                        Thời gian giao vé:</td>
                     <td class="ThongTinDatCho_Detail">
                         <asp:Label ID="lblThoiGianGiaoVe" runat="server" Font-Bold="True" 
                             ForeColor="#0000CC"></asp:Label>
@@ -209,7 +205,7 @@
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
-                        Thanh toán</td>
+                        Thanh toán:</td>
                     <td class="ThongTinDatCho_Detail">
                         <asp:Label ID="lblThanhToan" runat="server" Font-Bold="True" 
                             ForeColor="#0000CC"></asp:Label>

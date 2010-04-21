@@ -8,3 +8,8 @@ C:\Users\Quang Minh\Desktop\Galileo\ShipBooking\ShipBooking\bin\ShipBooking.pdb
 C:\Users\Quang Minh\Desktop\Galileo\ShipBooking\ShipBooking\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Quang Minh\Desktop\Galileo\ShipBooking\ShipBooking\obj\Debug\ShipBooking.dll
 C:\Users\Quang Minh\Desktop\Galileo\ShipBooking\ShipBooking\obj\Debug\ShipBooking.pdb
+D:\Working\GalileoData\ShipBooking\ShipBooking\bin\ShipBooking.dll
+D:\Working\GalileoData\ShipBooking\ShipBooking\bin\ShipBooking.pdb
+D:\Working\GalileoData\ShipBooking\ShipBooking\obj\Debug\ResolveAssemblyReference.cache
+D:\Working\GalileoData\ShipBooking\ShipBooking\obj\Debug\ShipBooking.dll
+D:\Working\GalileoData\ShipBooking\ShipBooking\obj\Debug\ShipBooking.pdb
