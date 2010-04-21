@@ -23,14 +23,16 @@ namespace ShipBooking.Controls
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            InitData();
+            
             if (!IsPostBack)
             {
+                InitData();
                 ListControlUtilities.FillDataToDropDownList(ddlNoiDi, "tblThanhPho", "Ten", "MaThanhPho");
                 ListControlUtilities.FillDataToDropDownList(ddlNoiDen, "tblThanhPho", "Ten", "MaThanhPho");
                 FillDataToDdlThoiGian();
                 FillDataToDdlQuocTich();
                 FillDataToDdlDoTuoi();
+                FillDataToRdbLoaiHanhTrinh();
                 FillDataToDdlLoaiVe();
             }
         }
@@ -136,6 +138,31 @@ namespace ShipBooking.Controls
             item = null;
         }
 
+        protected void FillDataToRdbLoaiHanhTrinh()
+        {
+            ListItem item;
+            
+            item = new ListItem();
+            item.Text = "Khứ hồi";
+            item.Value = "KhuHoi";
+            rblLoaiHanhTrinh.Items.Add(item);
+            item = null;
+
+            item = new ListItem();
+            item.Text = "Một lượt";
+            item.Value = "MotLuot";
+            rblLoaiHanhTrinh.Items.Add(item);
+            item = null;
+
+            item = new ListItem();
+            item.Text = "Nhiều lượt";
+            item.Value = "NhieuLuot";
+            rblLoaiHanhTrinh.Items.Add(item);
+            item = null;
+
+            rblLoaiHanhTrinh.SelectedIndex = 0;
+        }
+
         protected void GetBookingData()
         {
             bf.MaBF = "123";
@@ -170,6 +197,7 @@ namespace ShipBooking.Controls
 
         protected void InitData()
         {
+            SetVisibleRequiredValidatorControl();
             rblLoaiHanhTrinh.SelectedIndex = 0;
             txtNgayDi.Text = "";
             txtNgayVe.Text = "";
@@ -178,6 +206,17 @@ namespace ShipBooking.Controls
             txtSoDienThoai.Text = "";
             txtEmail.Text = "";
             ddlDoTuoi.SelectedIndex = 2;
+        }
+
+        protected void SetVisibleRequiredValidatorControl()
+        {
+            RequiredFieldValidator1.Visible = false;
+            RequiredFieldValidator2.Visible = false;
+            RequiredFieldValidator3.Visible = false;
+            RequiredFieldValidator4.Visible = false;
+            RequiredFieldValidator5.Visible = false;
+            RequiredFieldValidator6.Visible = false;
+            RequiredFieldValidator7.Visible = false;
         }
     }
 }
