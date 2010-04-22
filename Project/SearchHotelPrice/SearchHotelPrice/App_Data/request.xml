@@ -1,0 +1,20 @@
+<Request>
+  <Source>
+    <RequestorID Client="3926" EMailAddress="quangminh_1203@yahoo.com" Password="oooooo" />
+    <RequestorPreferences Language="en">
+      <RequestMode>SYNCHRONOUS</RequestMode>
+    </RequestorPreferences>
+  </Source>
+  <RequestDetails>
+    <SearchHotelPriceRequest>
+      <ItemDestination DestinationType="city" DestinationCode="HAN" />
+      <PeriodOfStay>
+        <CheckInDate>2010-04-28</CheckInDate>
+        <Duration>2</Duration>
+      </PeriodOfStay>
+      <Rooms>
+        <Room Code="sb" NumberOfRooms="1" />
+      </Rooms>
+    </SearchHotelPriceRequest>
+  </RequestDetails>
+</Request>
