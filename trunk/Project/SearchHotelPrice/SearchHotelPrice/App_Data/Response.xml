@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Response ResponseReference="1479_1203_TOKEN">
+    <ResponseDetails Language="en">
+	    <SearchHotelPriceResponse>
+	        <HotelDetails>
+		      <Hotel HasExtraInfo="true" HasMap="true" HasPictures="true">
+			    <City Code="AMS"><![CDATA[ Amsterdam ]]></City>
+			    <Item Code="AME"><![CDATA[ AMERICAN ]]></Item>
+			    <LocationDetails>
+			        <Location Code="G1"><![CDATA[ Central  ]]></Location>
+			    </LocationDetails>
+			    <StarRating>5</StarRating>
+			    <Meals>
+			        <Basis Code="B"><![CDATA[ breakfast ]]> </Basis>
+			        <Breakfast Code="H"><![CDATA[ Hot Buffet ]]> </Breakfast>
+			    </Meals>
+			    <ItemPrice Currency="GBP">2185.00</ItemPrice>
+			    <Confirmation Code="IM"><![CDATA[ AVAILABLE ]]></Confirmation>
+                          <EssentialInformation>
+		              <Information>
+			   	     <Text><![CDATA[Complimentary dinner provided. ]]></Text>
+				     <DateRange>
+				          <FromDate>0001-01-01</FromDate>
+				          <ToDate>9999-12-31</ToDate>
+				     </DateRange>
+			       </Information>
+			    </EssentialInformation>
+		       </Hotel>
+		       <Hotel HasExtraInfo="true">
+		          <City Code="AMS"><![CDATA[ Amsterdam ]]></City>
+		          <Item Code="JAN"><![CDATA[ JAN LUYKEN HTL AND RESIDENCE]]></Item>
+		          <LocationDetails>
+		              <Location Code="G1"><![CDATA[ Central ]]></Location>
+		          </LocationDetails>
+		          <StarRating>4</StarRating>
+                       <HotelRooms>
+                           <HotelRoom Code="SB" NumberOfRooms="1" />    
+                           <HotelRoom Code="TB" ExtraBed="true"                            
+                                NumberCots="1" SharingBedding="true" 
+                                NumberOfRooms="1 />                                     
+                           </HotelRooms>
+		         <Meals>
+			       <Basis Code="B"><![CDATA[ breakfast ]]></Basis>
+			       <Breakfast Code="H"><![CDATA[ Hot Buffet ]]></Breakfast>
+		         </Meals>
+		         <ItemPrice 
+                           Currency="GBP"
+                           GrossWithoutDiscount="1417.00"
+                           IncludedOfferDiscount="169.50">1247.50</ItemPrice>
+                       <Offer Code="FNT"><![CDATA[ Free Night(s) ]]></Offer>
+		          <Confirmation Code="IM"><![CDATA[ AVAILABLE  ]]></Confirmation>
+	      	      </Hotel>
+	         </HotelDetails>
+	     </SearchHotelPriceResponse>
+    </ResponseDetails>
+</Response>

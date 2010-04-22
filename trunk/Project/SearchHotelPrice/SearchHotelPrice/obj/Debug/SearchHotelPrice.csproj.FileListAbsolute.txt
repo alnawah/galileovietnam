@@ -1,0 +1,5 @@
+C:\Users\Quang Minh\Documents\Visual Studio 2008\Projects\SearchHotelPrice\SearchHotelPrice\bin\SearchHotelPrice.dll
+C:\Users\Quang Minh\Documents\Visual Studio 2008\Projects\SearchHotelPrice\SearchHotelPrice\bin\SearchHotelPrice.pdb
+C:\Users\Quang Minh\Documents\Visual Studio 2008\Projects\SearchHotelPrice\SearchHotelPrice\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Quang Minh\Documents\Visual Studio 2008\Projects\SearchHotelPrice\SearchHotelPrice\obj\Debug\SearchHotelPrice.dll
+C:\Users\Quang Minh\Documents\Visual Studio 2008\Projects\SearchHotelPrice\SearchHotelPrice\obj\Debug\SearchHotelPrice.pdb

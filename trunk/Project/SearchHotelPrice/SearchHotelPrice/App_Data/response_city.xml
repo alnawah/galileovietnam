@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Response ResponseReference = "REF_268-102978-726298643991981"> 
+
+    <ResponseDetails Language = "en"> 
+        <SearchCityResponse ISO = "true" CountryCode = "ID"> 
+            <CityDetails> 
+                <City Code = "ABAL"><![CDATA[Bali]]></City> 
+                <City Code = "AMAN"><![CDATA[Bali-Manggis]]></City> 
+                <City Code = "BNEG"><![CDATA[Bali-Negara]]></City> 
+                <City Code = "BPN"><![CDATA[Balikpapan]]></City> 
+                <City Code = "BTUB"><![CDATA[Bali-Batubelig Beach]]></City> 
+                <City Code = "DCAN"><![CDATA[Bali-Canggu]]></City> 
+                <City Code = "DENR"><![CDATA[Bali-Denpasar]]></City> 
+                <City Code = "ECAN"><![CDATA[Bali-Candi Dasa]]></City> 
+                <City Code = "GIAY"><![CDATA[Bali-Gianyar]]></City> 
+                <City Code = "JIMB"><![CDATA[Bali-Jimbaran Bay]]></City> 
+                <City Code = "KROB"><![CDATA[Bali-Kerobokan]]></City> 
+                <City Code = "KUTB"><![CDATA[Bali-Kuta Beach]]></City> 
+                <City Code = "LEGI"><![CDATA[Bali-Legian Beach]]></City> 
+                <City Code = "MNDU"><![CDATA[Bali-Munduk Village]]></City> 
+                <City Code = "NUSA"><![CDATA[Bali-Nusa Dua]]></City> 
+                <City Code = "SANH"><![CDATA[Bali-Sanur Beach]]></City> 
+                <City Code = "SIGJ"><![CDATA[Bali-Singaraja]]></City> 
+                <City Code = "SMIN"><![CDATA[Bali-Seminyak]]></City> 
+                <City Code = "TABN"><![CDATA[Bali-Tabanan]]></City> 
+                <City Code = "TUBA"><![CDATA[Bali-Tuban Beach]]></City> 
+                <City Code = "UBUD"><![CDATA[Bali-Ubud]]></City> 
+                <City Code = "ULUW"><![CDATA[Bali-Uluwatu]]></City> 
+            </CityDetails> 
+        </SearchCityResponse> 
+    </ResponseDetails> 
+</Response>
