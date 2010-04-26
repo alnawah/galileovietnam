@@ -16,7 +16,7 @@
             onselectednodechanged="treeViewRequest_SelectedNodeChanged" >
         </asp:TreeView>
         <asp:XmlDataSource ID="SearchHotelPrice_XmlDataSource" runat="server" 
-            DataFile="~/App_Data/request.xml"></asp:XmlDataSource>
+            DataFile="~/XMLFile1.xml"></asp:XmlDataSource>
         <br />
         <asp:Label ID="lblResult" runat="server"></asp:Label>
     </form>

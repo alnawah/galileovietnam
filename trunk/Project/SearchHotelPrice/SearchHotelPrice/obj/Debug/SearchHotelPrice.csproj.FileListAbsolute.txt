@@ -3,3 +3,8 @@ C:\Users\Quang Minh\Documents\Visual Studio 2008\Projects\SearchHotelPrice\Searc
 C:\Users\Quang Minh\Documents\Visual Studio 2008\Projects\SearchHotelPrice\SearchHotelPrice\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Quang Minh\Documents\Visual Studio 2008\Projects\SearchHotelPrice\SearchHotelPrice\obj\Debug\SearchHotelPrice.dll
 C:\Users\Quang Minh\Documents\Visual Studio 2008\Projects\SearchHotelPrice\SearchHotelPrice\obj\Debug\SearchHotelPrice.pdb
+D:\Working\GalileoData\Project\SearchHotelPrice\SearchHotelPrice\bin\SearchHotelPrice.dll
+D:\Working\GalileoData\Project\SearchHotelPrice\SearchHotelPrice\bin\SearchHotelPrice.pdb
+D:\Working\GalileoData\Project\SearchHotelPrice\SearchHotelPrice\obj\Debug\ResolveAssemblyReference.cache
+D:\Working\GalileoData\Project\SearchHotelPrice\SearchHotelPrice\obj\Debug\SearchHotelPrice.dll
+D:\Working\GalileoData\Project\SearchHotelPrice\SearchHotelPrice\obj\Debug\SearchHotelPrice.pdb
