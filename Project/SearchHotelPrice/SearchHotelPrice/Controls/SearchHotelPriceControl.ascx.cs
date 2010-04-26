@@ -96,7 +96,7 @@ namespace SearchHotelPrice.Controls
             Stream StreamData = HttpWReq.GetRequestStream();
             StreamData.Write(byte1, 0, byte1.Length);
 
-            XMLDoc.Save("F:\\request.xml");
+            //XMLDoc.Save("F:\\request.xml");
 
             //Get response
             WebResponse HttpWRes = HttpWReq.GetResponse();
