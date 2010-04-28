@@ -172,5 +172,74 @@ namespace MaHoaSoHoc
             objMahoa.InitBoxes(key);
             objMahoa.Decipher(fi, fo);
         }
+
+        //Thuat toan ma hoa
+        protected string MaHoa()
+        {
+            //Khai bao cac bien
+            string strMaHoa = "";
+            string P = txtInputText.Text;
+            int n = P.Length;
+            int D = n * 1000;
+            string low_range = "";
+            string hi_range = "";
+            string T = "";
+            string ch = "";
+            char[] low_code = new char[99999];
+            char[] hi_code = new char[99999];
+
+            //Khoi tao gia tri
+            low_code[1] = low_range[1];
+            hi_code[1] = hi_range[1];
+
+            //Lap
+            for (int i = 2; i <= n; i++)
+            {
+                low_code[i] = (char)(low_code[i - 1] + low_range[(int)ch[i]] * (hi_code[i - 1] - low_code[i - 1]) / D);
+                hi_code[i] = (char)(low_code[i - 1] + hi_range[(int)ch[i]] * (hi_code[i - 1] - low_code[i - 1]) / D);
+                T.ToCharArray()[i] = P[i];
+            }
+
+            //Tra ve chuoi ma hoa
+            strMaHoa = T;
+            return strMaHoa;
+        }
+
+        //Thuạt toan giai ma
+        protected string GiaiMa()
+        {
+            //Khai bao cac bien
+            string strGiaiMa = "";
+            string P = txtInputText.Text;
+            int n = P.Length;
+            int D = n * 1000;
+            string x = "";
+            string low_range = "";
+            string hi_range = "";
+            char[] ch = new char[99999];
+            char[] low_code = new char[99999];
+            char[] hi_code = new char[99999];
+            int number_code = 0;
+
+            //Khoi tao gia tri
+            low_code[1] = low_range[1];
+            hi_code[1] = hi_range[1];
+
+            //Lap de tim ban goc
+            for (int i = 1; i <= n; i++)
+            {
+                if (low_range[(int)ch[i]] != x.ToCharArray()[i] && hi_range[(int)ch[i]] != x.ToCharArray()[i])
+                {
+                    ch[i] = ch[0];
+                    number_code = (number_code - low_range[(int)ch[i]]) * D / (hi_range[(int)ch[i]] - low_range[(int)ch[i]]);
+                    strGiaiMa.ToCharArray()[i] = ch[i];
+                }
+            }
+
+            //Tra ve gia tri ban goc
+            return strGiaiMa;
+        }
+
+
     }
 }
