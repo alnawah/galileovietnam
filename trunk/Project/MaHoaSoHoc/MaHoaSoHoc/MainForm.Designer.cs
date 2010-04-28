@@ -80,7 +80,7 @@
             this.tabPage1.Size = new System.Drawing.Size(549, 193);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mã hóa/giải mã text";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.UseVisualStyleBackColor = true;            
             // 
             // btnReset
             // 
