@@ -165,18 +165,23 @@ namespace ShipBooking.Controls
 
         protected void GetBookingData()
         {
-            bf.MaBF = "123";
             bf.LoaiChuyen = rblLoaiHanhTrinh.SelectedItem.Text;
             bf.NoiDi = ddlNoiDi.SelectedItem.Text;
             bf.NoiDen = ddlNoiDen.SelectedItem.Text;
             bf.NgayDi = txtNgayDi.Text;
             bf.NgayVe = txtNgayVe.Text;
             bf.ThoiGian = ddlThoiGian.SelectedItem.Text;
-            bf.OpenChecking = true;
+            if (chkOpen.Checked == true)
+            {
+                bf.OpenChecking = true;
+            }
+            else
+            {
+                bf.OpenChecking = false;
+            }
             bf.LoaiVe = ddlLoaiVe.SelectedItem.Text;
             bf.SoGhe = "30";
             bf.GiaTien = "4500000";
-            bf.MaNguoiNhan = "NN01";
         }
 
         protected void GetHanhKhachData()

@@ -87,7 +87,7 @@
                         <asp:ImageButton ID="ImageButton2" runat="server" 
                             ImageUrl="~/Images/CalendarIcon.png" />
                     &nbsp;(dd/mm/yyyy)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:CheckBox ID="CheckBox1" runat="server" Text="Open" />
+                        <asp:CheckBox ID="chkOpen" runat="server" Text="Open" />
                     </td>
                 </tr>
                 <tr>

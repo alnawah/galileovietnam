@@ -135,6 +135,12 @@ namespace ShipBooking.Controls
 
         protected void GetNguoiNhanVeData()
         {
+            string strMaNN = "NN";
+            Random rdm = new Random();
+            strMaNN += rdm.Next(1000, 9999).ToString();
+
+
+            NguoiNhan.MaNguoiNhan = strMaNN;
             NguoiNhan.Ten = txtTenNguoiNhan.Text;
             NguoiNhan.DiaChi = txtDiaChiNguoiNhan.Text;
             NguoiNhan.MaThanhPho = ddlThanhPho.SelectedItem.Text ;
@@ -142,6 +148,7 @@ namespace ShipBooking.Controls
             NguoiNhan.Email = txtEmailNguoiNhan.Text;
             NguoiNhan.YeuCauKhac = txtYeuCauKhac.Text;
             NguoiNhan.ThoiGianGiaoVe = ddlThoiGianGiaoVe.SelectedItem.Text;
+            
             NguoiNhan.ThanhToan = rblHinhThucThanhToan.SelectedItem.Text;
         }
     }
