@@ -10,6 +10,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
+using ShipBooking.Module;
 
 namespace ShipBooking.Controls
 {
@@ -28,6 +29,8 @@ namespace ShipBooking.Controls
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            SaveNguoiNhanVeData();
+            SaveBookingFileData();
             Response.Redirect("KetThucBooking.aspx");
         }
 
@@ -84,6 +87,42 @@ namespace ShipBooking.Controls
             lblYeuCauKhac.Text = DatVe_Step2.NguoiNhan.YeuCauKhac;
             lblThoiGianGiaoVe.Text = DatVe_Step2.NguoiNhan.ThoiGianGiaoVe;
             lblThanhToan.Text = DatVe_Step2.NguoiNhan.ThanhToan;
+        }
+
+        protected BookingFile GetBookingFile()
+        {
+            string bfID = "";
+            Random rdm = new Random();
+            bfID = rdm.Next(10000, 99999).ToString();
+            BookingFile bookingFile = new BookingFile();
+
+            bookingFile.MaBF = bfID;
+            bookingFile.LoaiChuyen = DatVeControl.bf.LoaiChuyen;
+            bookingFile.NoiDi = DatVeControl.bf.NoiDi;
+            bookingFile.NoiDen = DatVeControl.bf.NoiDen;
+            bookingFile.NgayDi = DatVeControl.bf.NgayDi;
+            bookingFile.NgayVe = DatVeControl.bf.NgayVe;
+            bookingFile.ThoiGian = DatVeControl.bf.ThoiGian;
+            bookingFile.OpenChecking = DatVeControl.bf.OpenChecking;
+            bookingFile.LoaiVe = DatVeControl.bf.LoaiVe;
+                bookingFile.SoGhe = DatVeControl.bf.SoGhe;
+                bookingFile.GiaTien = DatVeControl.bf.GiaTien;
+            bookingFile.ThanhToan = DatVe_Step2.NguoiNhan.ThanhToan;
+            bookingFile.MaNguoiNhan = DatVe_Step2.NguoiNhan.MaNguoiNhan;
+
+            return bookingFile;
+        }
+
+        protected void SaveBookingFileData()
+        {
+            BookingFile bookingFile = new BookingFile();
+            bookingFile = GetBookingFile();
+            BookingFileDB.Insert(bookingFile);   
+        }
+
+        protected void SaveNguoiNhanVeData()
+        {
+            NguoiNhanVeDB.Insert(DatVe_Step2.NguoiNhan);
         }
     }
 }
