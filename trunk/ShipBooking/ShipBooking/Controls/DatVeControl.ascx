@@ -1,4 +1,17 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DatVeControl.ascx.cs" Inherits="ShipBooking.Controls.DatVeControl" %>
+<script type="text/javascript">
+    function displayCalendar1()
+    {
+        var datePicker = document.getElementById('datePicker1');
+        datePicker.style.display = 'block';
+    }
+    
+    function displayCalendar2()
+    {
+        var datePicker = document.getElementById('datePicker2');
+        datePicker.style.display = 'block';
+    }
+</script>
 
 <style type="text/css">
 
@@ -30,7 +43,21 @@
     {
         color: #FF0000;
     }
-
+    
+    #datePicker1
+    {
+        display:none;
+        position:absolute;
+        border:solid 2px black;
+        background-color:white;
+    }
+    #datePicker2
+    {
+        display:none;
+        position:absolute;
+        border:solid 2px black;
+        background-color:white;
+    }
 </style>
 <p style="text-align: center">
     <asp:Image ID="Image1" runat="server" Height="59px" 
@@ -57,12 +84,11 @@
                 </tr>
                 <tr>
                     <td>
-                        Từ:</td>
+                                                Từ</td>
                     <td>
                         <asp:DropDownList ID="ddlNoiDi" runat="server" Height="22px" Width="160px">
                         </asp:DropDownList>
-                        &nbsp;<span class="step1_warning">(*)</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                        Đến:
+                        &nbsp;<span class="step1_warning">(*)</span>&nbsp;&nbsp;&nbsp;&nbsp; Đến&nbsp;
                         <asp:DropDownList ID="ddlNoiDen" runat="server" Height="22px" Width="160px">
                         </asp:DropDownList>
                         &nbsp;<span class="step1_warning">(*)</span></td>
@@ -72,8 +98,25 @@
                         Ngày đi</td>
                     <td>
                         <asp:TextBox ID="txtNgayDi" runat="server" Width="138px"></asp:TextBox>
-                        <asp:ImageButton ID="ImageButton1" runat="server" 
-                            ImageUrl="~/Images/CalendarIcon.png" />
+                        
+                        <img src="~/Images/CalendarIcon.png" alt="" runat="server" 
+                            onclick="displayCalendar1()" height="16" />
+                        <div id="datePicker1">
+                            <asp:Calendar id="calEventDate" 
+                                OnSelectionChanged="calEventDate_SelectionChanged" Runat="server" 
+                                BackColor="#FFFFCC" BorderColor="#FFCC66" BorderWidth="1px" 
+                                DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" 
+                                ForeColor="#663399" Height="200px" ShowGridLines="True" Width="220px" >
+                                <SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />
+                                <SelectorStyle BackColor="#FFCC66" />
+                                <TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
+                                <OtherMonthDayStyle ForeColor="#CC9966" />
+                                <NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />
+                                <DayHeaderStyle BackColor="#FFCC66" Font-Bold="True" Height="1px" />
+                                <TitleStyle BackColor="#990000" Font-Bold="True" Font-Size="9pt" 
+                                    ForeColor="#FFFFCC" />
+                            </asp:Calendar>
+                        </div>
                     &nbsp;(dd/mm/yyyy) &nbsp;
                         <asp:DropDownList ID="ddlThoiGian" runat="server" Height="21px" Width="136px">
                         </asp:DropDownList>
@@ -84,15 +127,31 @@
                         Ngày về</td>
                     <td>
                         <asp:TextBox ID="txtNgayVe" runat="server" Width="138px"></asp:TextBox>
-                        <asp:ImageButton ID="ImageButton2" runat="server" 
-                            ImageUrl="~/Images/CalendarIcon.png" />
+                        <img id="Img1" src="~/Images/CalendarIcon.png" alt="" runat="server" 
+                            onclick="displayCalendar2()" height="16"/>
+                        <div id="datePicker2">
+                            <asp:Calendar id="Calendar1" Runat="server" BackColor="#FFFFCC" 
+                                BorderColor="#FFCC66" BorderWidth="1px" DayNameFormat="Shortest" 
+                                Font-Names="Verdana" Font-Size="8pt" ForeColor="#663399" Height="200px" 
+                                ShowGridLines="True" Width="220px" 
+                                onselectionchanged="Calendar1_SelectionChanged" >
+                                <SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />
+                                <SelectorStyle BackColor="#FFCC66" />
+                                <TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
+                                <OtherMonthDayStyle ForeColor="#CC9966" />
+                                <NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />
+                                <DayHeaderStyle BackColor="#FFCC66" Font-Bold="True" Height="1px" />
+                                <TitleStyle BackColor="#990000" Font-Bold="True" Font-Size="9pt" 
+                                    ForeColor="#FFFFCC" />
+                            </asp:Calendar>
+                        </div>
                     &nbsp;(dd/mm/yyyy)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:CheckBox ID="chkOpen" runat="server" Text="Open" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        Loại vé:</td>
+                                                Loại vé</td>
                     <td>
                         <asp:DropDownList ID="ddlLoaiVe" runat="server" Height="22px" Width="160px">
                         </asp:DropDownList>
@@ -102,96 +161,22 @@
                         Text="Bạn phải chọn loại vé"></asp:RequiredFieldValidator>
                         </span></td>
                 </tr>
+                <tr>
+                    <td>
+                        Số ghế</td>
+                    <td>
+                        <asp:RadioButtonList ID="rdbSoGhe" runat="server" RepeatColumns="5" 
+                            RepeatDirection="Horizontal">
+                        </asp:RadioButtonList>
+                    </td>
+                </tr>
                 </table>
             </td>
     </tr>
 </table>
 <br />
-<table class="step1_tblThongTinDatCho_Summary_Style">
-    <tr>
-        <td bgcolor="#006699" class="step1_table_header_style">
-            Thông tin về hành khách</td>
-    </tr>
-    <tr>
-        <td class="step1_table_contain_style">
-            <table class="step1_tblThongTinDatCho_Detail_Style">
-                <tr>
-                    <td>
-                        Họ và tên:</td>
-                    <td>
-                        <asp:TextBox ID="txtHoTen" runat="server" Width="250px"></asp:TextBox>
-                    &nbsp;<span class="step1_warning">(*) </span>
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
-        ErrorMessage="RequiredFieldValidator" ControlToValidate="txtHoTen"
-        Text="Bạn phải nhập họ tên"></asp:RequiredFieldValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Địa chỉ:</td>
-                    <td>
-                        <asp:TextBox ID="txtDiaChi" runat="server" Height="100px" TextMode="MultiLine" 
-                            Width="250px"></asp:TextBox>
-                        <span class="step1_warning">(*)
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-        ErrorMessage="RequiredFieldValidator" ControlToValidate="txtDiaChi"
-        Text="Bạn phải địa chỉ"></asp:RequiredFieldValidator>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Quốc tịch:</td>
-                    <td>
-                        <asp:DropDownList ID="ddlQuocTich" runat="server" Height="22px" Width="160px">
-                        </asp:DropDownList>
-                    &nbsp;<span class="step1_warning">(*)
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
-        ErrorMessage="RequiredFieldValidator" ControlToValidate="ddlQuocTich"
-        Text="Bạn phải chọn quốc tịch"></asp:RequiredFieldValidator>
-                        </span></td>
-                </tr>
-                <tr>
-                    <td>
-                        Độ tuổi</td>
-                    <td>
-                        <asp:DropDownList ID="ddlDoTuoi" runat="server" Height="22px" Width="160px">
-                        </asp:DropDownList>
-                    &nbsp;<span class="step1_warning">(*)
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
-        ErrorMessage="RequiredFieldValidator" ControlToValidate="ddlDoTuoi"
-        Text="Bạn phải chọn độ tuổi"></asp:RequiredFieldValidator>
-                        </span></td>
-                </tr>
-                <tr>
-                    <td>
-                        Số điện thoại:</td>
-                    <td>
-                        <asp:TextBox ID="txtSoDienThoai" runat="server" Width="138px"></asp:TextBox>
-                        &nbsp;<span class="step1_warning">(*) 
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
-        ErrorMessage="RequiredFieldValidator" ControlToValidate="txtSoDienThoai"
-        Text="Bạn phải nhập số điện thoại"></asp:RequiredFieldValidator>
-                        </span>
-                        </td>
-                </tr>
-                <tr>
-                    <td>
-                        Email:</td>
-                    <td>
-                        <asp:TextBox ID="txtEmail" runat="server" Width="250px"></asp:TextBox>
-                    &nbsp;<span class="step1_warning">(*) 
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" 
-        ErrorMessage="RequiredFieldValidator" ControlToValidate="txtEmail"
-        Text="Bạn phải nhập email"></asp:RequiredFieldValidator>
-                        </span>
-                    </td>
-                </tr>
-            </table>
-            </td>
-    </tr>
-</table>
 
+<br />
 <p style="text-align: center">
     <asp:Button ID="Button1" runat="server" Text="Tiếp tục" 
         onclick="Button1_Click1" />

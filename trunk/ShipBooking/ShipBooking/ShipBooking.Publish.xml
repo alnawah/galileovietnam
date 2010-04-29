@@ -1,0 +1,50 @@
+<publishData>
+  <publishTarget publishUrl="D:\Working\ShipBooking\">
+    <file relUrl="Admin.aspx" publishTime="04/28/2010 14:14:14" />
+    <file relUrl="App_Themes/MySkin/MyCss.css" publishTime="04/20/2010 09:24:09" />
+    <file relUrl="KetThucBooking.aspx" publishTime="04/20/2010 09:25:16" />
+    <file relUrl="bin/.svn/text-base/ShipBooking.pdb.svn-base" publishTime="04/28/2010 08:27:17" />
+    <file relUrl="Controls/Layer/LeftControl.ascx" publishTime="04/20/2010 09:24:30" />
+    <file relUrl="DatVe_Step2.aspx" publishTime="04/20/2010 09:25:16" />
+    <file relUrl="Images/banner1.png" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="Controls/AdminControl.aspx" publishTime="04/28/2010 11:23:17" />
+    <file relUrl="Controls/Layer/FooterControl.ascx" publishTime="04/20/2010 09:24:30" />
+    <file relUrl="Controls/DatVeReviewControl.ascx" publishTime="04/20/2010 15:42:53" />
+    <file relUrl="Controls/DatVeControl.ascx" publishTime="04/28/2010 08:27:24" />
+    <file relUrl="ThemHanhKhach.aspx" publishTime="04/20/2010 09:25:16" />
+    <file relUrl="Images/tinh_trang_cho.png" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="Controls/DatVe_Step2.ascx" publishTime="04/20/2010 15:26:32" />
+    <file relUrl="Images/text_banvetau.png" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="Images/Hinh-su.gif" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="Images/CalendarIcon.png" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="Controls/Layer/BannerControl.ascx" publishTime="04/28/2010 09:33:06" />
+    <file relUrl="bin/ShipBooking.pdb" publishTime="04/28/2010 14:14:17" />
+    <file relUrl="bin/.svn/prop-base/ShipBooking.pdb.svn-base" publishTime="04/28/2010 08:27:17" />
+    <file relUrl="Controls/LoginControl.ascx" publishTime="04/28/2010 11:22:36" />
+    <file relUrl="App_Data/ShipBooking_log.ldf" publishTime="04/28/2010 11:58:29" />
+    <file relUrl="Controls/Layer/RightControl.ascx" publishTime="04/20/2010 09:24:30" />
+    <file relUrl="MyMaster.Master" publishTime="04/20/2010 09:25:16" />
+    <file relUrl="Login.aspx" publishTime="04/28/2010 09:56:31" />
+    <file relUrl="bin/.svn/entries" publishTime="04/28/2010 08:27:18" />
+    <file relUrl="DatVe.aspx" publishTime="04/20/2010 09:25:16" />
+    <file relUrl="MenuScript.js" publishTime="04/20/2010 09:25:16" />
+    <file relUrl="Images/banner.png" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="App_Themes/MySkin/MySkin.skin" publishTime="04/20/2010 09:24:09" />
+    <file relUrl="Controls/ThemHanhKhachControl.ascx" publishTime="04/20/2010 09:24:30" />
+    <file relUrl="Images/banner_blue.png" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="bin/ShipBooking.dll" publishTime="04/28/2010 14:14:19" />
+    <file relUrl="bin/.svn/prop-base/ShipBooking.dll.svn-base" publishTime="04/28/2010 08:27:18" />
+    <file relUrl="Images/bang_gia_ve.png" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="Images/lich_chuyen.png" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="Images/galileo_logo.jpg" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="Web.config" publishTime="04/20/2010 09:25:16" />
+    <file relUrl="bin/.svn/all-wcprops" publishTime="04/28/2010 08:27:18" />
+    <file relUrl="Images/dat_ve.png" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="Images/menu_bar.gif" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="DatVe_Review.aspx" publishTime="04/20/2010 09:25:16" />
+    <file relUrl="App_Data/ShipBooking.mdf" publishTime="04/28/2010 11:58:29" />
+    <file relUrl="bin/.svn/text-base/ShipBooking.dll.svn-base" publishTime="04/28/2010 08:27:18" />
+    <file relUrl="Default.aspx" publishTime="04/20/2010 09:25:16" />
+    <file relUrl="Controls/Layer/ContenControl.ascx" publishTime="04/20/2010 09:24:30" />
+  </publishTarget>
+</publishData>

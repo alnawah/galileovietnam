@@ -45,7 +45,9 @@
            <asp:LinkButton ID="LinkButton3" runat="server" Font-Underline="False" 
                 Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Tình trạng chỗ </asp:LinkButton>|
            <asp:LinkButton ID="LinkButton4" runat="server" Font-Underline="False" 
-                Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Liên kết</asp:LinkButton>
+                Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Liên kết </asp:LinkButton>|
+            <asp:LinkButton ID="LinkButton5" PostBackUrl="~/Login.aspx" runat="server" Font-Underline="False" 
+                Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Đăng nhập</asp:LinkButton>
 		</td>
     </tr>
 </table>
