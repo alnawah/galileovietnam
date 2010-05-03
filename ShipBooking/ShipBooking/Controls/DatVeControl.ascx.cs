@@ -144,7 +144,14 @@ namespace ShipBooking.Controls
                 bf.OpenChecking = false;
             }
             bf.LoaiVe = ddlLoaiVe.SelectedItem.Text;
-            bf.SoGhe = "30";
+            if (rdbSoGhe.SelectedItem != null)
+            {
+                bf.SoGhe = rdbSoGhe.SelectedItem.Text;
+            }
+            else
+            {
+                bf.SoGhe = "";
+            }
             bf.GiaTien = "4500000";
         }
 

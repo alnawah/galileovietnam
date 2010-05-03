@@ -14,14 +14,6 @@
     {
         height: 80px;
     }
-    .banner_menu_style
-    {
-        background-image: url('../../../../Images/menu_bar.gif');
-        height: 21px;
-        color: #FFFFCC;
-        font-weight: normal;
-        font-family: Arial;
-    }
 </style>
 <table class="banner_style">
     <tr>
@@ -34,20 +26,5 @@
             <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/banner_blue.png" 
                 Width="495px" Height="62px" style="margin-left: 50px" />
         </td>
-    </tr>
-    <tr>
-        <td class="banner_menu_style" colspan="2" height="21px">
-		   &nbsp;&nbsp;
-		   <asp:LinkButton ID="LinkButton1" PostBackUrl="~/Default.aspx" runat="server" Font-Underline="False" 
-                Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Trang chủ </asp:LinkButton>|
-           <asp:LinkButton ID="LinkButton2" PostBackUrl="~/DatVe.aspx" runat="server" Font-Underline="False" 
-                Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Đặt vé </asp:LinkButton>|
-           <asp:LinkButton ID="LinkButton3" runat="server" Font-Underline="False" 
-                Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Tình trạng chỗ </asp:LinkButton>|
-           <asp:LinkButton ID="LinkButton4" runat="server" Font-Underline="False" 
-                Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Liên kết </asp:LinkButton>|
-            <asp:LinkButton ID="LinkButton5" PostBackUrl="~/Login.aspx" runat="server" Font-Underline="False" 
-                Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Đăng nhập</asp:LinkButton>
-		</td>
     </tr>
 </table>

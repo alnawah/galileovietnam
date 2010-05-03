@@ -11,6 +11,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using ShipBooking.Controls;
+using ShipBooking.Controls.Layer;
 
 namespace ShipBooking
 {
@@ -24,7 +25,8 @@ namespace ShipBooking
             }
             else
             {
-                //
+                LinkButton lbtnThoat = (LinkButton)Master.FindControl("lbtnDangNhap");
+                lbtnThoat.Text = "Thoát";
             }
         }
     }

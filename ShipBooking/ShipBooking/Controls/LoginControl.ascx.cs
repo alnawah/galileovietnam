@@ -15,12 +15,12 @@ namespace ShipBooking.Controls
 {
     public partial class LoginControl : System.Web.UI.UserControl
     {
+        public static bool bLogin = false;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            bLogin = false;
         }
-
-        public static bool bLogin = false;
 
         protected void Button1_Click(object sender, EventArgs e)
         {

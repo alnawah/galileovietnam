@@ -114,7 +114,7 @@
                         <asp:Label ID="lblThoiGian" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                     <td class="ThongTinDatCho_Title_2">
-                        Loại hành trình</td>
+                        Loại hành trình:</td>
                     <td>
                         <asp:Label ID="lblLoaiHanhTrinh" runat="server" Font-Bold="True" 
                             ForeColor="#0000CC"></asp:Label>
@@ -138,9 +138,11 @@
                     <td class="ThongTinDatCho_Detail">
                         &nbsp;</td>
                     <td class="ThongTinDatCho_Title_2">
-                        Giá cho vé:</td>
+                        Giá vé:</td>
                     <td>
                         <asp:Label ID="lblGiaVN" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="#990033" 
+                            Text=" (VNĐ)"></asp:Label>
                     </td>
                 </tr>
             </table>

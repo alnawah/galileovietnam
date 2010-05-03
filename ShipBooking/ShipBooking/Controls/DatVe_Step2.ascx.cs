@@ -94,16 +94,13 @@ namespace ShipBooking.Controls
         {
             lblNoiDen1.Text = DatVeControl.bf.NoiDen;
             lblNoiDi1.Text = DatVeControl.bf.NoiDi;
-            if (DatVeControl.bf.LoaiChuyen == "Khứ hồi")
-            {
-                lblNoiDi2.Text = DatVeControl.bf.NoiDen;
-                lblNoiDen2.Text = DatVeControl.bf.NoiDi;
-            }
             lblNgayDi.Text = DatVeControl.bf.NgayDi;
             lblNgayVe.Text = DatVeControl.bf.NgayVe;
+            lblThoiGian.Text = DatVeControl.bf.ThoiGian;
+            lblLoaiHanhTrinh.Text = DatVeControl.bf.LoaiChuyen;
             lblLoaiVe.Text = DatVeControl.bf.LoaiVe;
+            lblSoGhe.Text = DatVeControl.bf.SoGhe;
             lblGiaVN.Text = DatVeControl.bf.GiaTien;
-            lblGiaNN.Text = "";
         }
 
         protected void SetHanhKhachData()
