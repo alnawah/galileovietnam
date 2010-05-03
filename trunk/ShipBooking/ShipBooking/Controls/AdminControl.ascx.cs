@@ -13,7 +13,7 @@ using System.Xml.Linq;
 
 namespace ShipBooking.Controls
 {
-    public partial class AdminControl : System.Web.UI.Page
+    public partial class AdminControl : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

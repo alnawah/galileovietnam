@@ -44,6 +44,7 @@
     <asp:Image ID="Image1" runat="server" Height="59px" 
         ImageUrl="~/Images/text_banvetau.png" Width="600px" />
 </p>
+<p style="text-align: center">
 <table class="tblThongTinDatCho_Summary_Style">
     <tr>
         <td bgcolor="#006699" class="table_header_style">
@@ -66,22 +67,9 @@
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
-                        Từ:</td>
-                    <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="lblNoiDi2" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
-                    </td>
-                    <td class="ThongTinDatCho_Title_2">
-                        Đến:</td>
-                    <td>
-                        <asp:Label ID="lblNoiDen2" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="ThongTinDatCho_Title_1">
                         Ngày khởi hành:</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="lblNgayDi" runat="server" Font-Bold="True" 
-                            ForeColor="#0000CC"></asp:Label>
+                        <asp:Label ID="lblNgayDi" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                     <td class="ThongTinDatCho_Title_2">
                         Ngày về:</td>
@@ -91,35 +79,49 @@
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
+                        Thời gian</td>
+                    <td class="ThongTinDatCho_Detail">
+                        <asp:Label ID="lblThoiGian" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
+                    </td>
+                    <td class="ThongTinDatCho_Title_2">
+                        Loại hành trình:</td>
+                    <td>
+                        <asp:Label ID="lblLoaiHanhTrinh" runat="server" Font-Bold="True" 
+                            ForeColor="#0000CC"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ThongTinDatCho_Title_1">
                         Loại vé:</td>
                     <td class="ThongTinDatCho_Detail">
                         <asp:Label ID="lblLoaiVe" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                     <td class="ThongTinDatCho_Title_2">
-                        Giá cho người Việt Nam:</td>
+                        Số ghế:</td>
                     <td>
-                        <asp:Label ID="lblGiaVN" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
+                        <asp:Label ID="lblSoGhe" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
-                        </td>
+                        &nbsp;</td>
                     <td class="ThongTinDatCho_Detail">
-                    </td>
+                        &nbsp;</td>
                     <td class="ThongTinDatCho_Title_2">
-                        Giá cho người nước ngoài:</td>
+                        Giá vé:</td>
                     <td>
-                        <asp:Label ID="lblGiaNN" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
+                        <asp:Label ID="lblGiaVN" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="#990033" 
+                            Text=" (VNĐ)"></asp:Label>
                     </td>
                 </tr>
             </table>
             </td>
     </tr>
 </table>
-<p style="text-align: center">
-    <asp:Label ID="Label10" runat="server" 
-        Text="Ghi chú: Giá trên chưa bao gồm phí cảng"></asp:Label>
 </p>
+<p style="text-align: center">
+    &nbsp;</p>
 
 <center>
     <asp:GridView ID="grvHanhKhach" runat="server" Width="800px" 

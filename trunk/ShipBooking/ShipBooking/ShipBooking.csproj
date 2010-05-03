@@ -66,12 +66,12 @@
     </Compile>
     <Compile Include="App_Code\DataObjects\BookingFile.cs" />
     <Compile Include="App_Code\DataObjects\BookingFileDB.cs" />
-    <Compile Include="Controls\AdminControl.aspx.cs">
-      <DependentUpon>AdminControl.aspx</DependentUpon>
+    <Compile Include="Controls\AdminControl.ascx.cs">
+      <DependentUpon>AdminControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\AdminControl.aspx.designer.cs">
-      <DependentUpon>AdminControl.aspx</DependentUpon>
+    <Compile Include="Controls\AdminControl.ascx.designer.cs">
+      <DependentUpon>AdminControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\DatVeControl.ascx.cs">
       <DependentUpon>DatVeControl.ascx</DependentUpon>
@@ -232,7 +232,7 @@
     <Content Include="App_Data\ShipBooking_log.ldf">
       <DependentUpon>ShipBooking.mdf</DependentUpon>
     </Content>
-    <Content Include="Controls\AdminControl.aspx" />
+    <Content Include="Controls\AdminControl.ascx" />
     <Content Include="Controls\DatVeControl.ascx" />
     <Content Include="Controls\DatVeReviewControl.ascx" />
     <Content Include="Controls\DatVe_Step2.ascx" />
@@ -247,6 +247,7 @@
     <Content Include="DatVe.aspx" />
     <Content Include="DatVe_Review.aspx" />
     <Content Include="DatVe_Step2.aspx" />
+    <Content Include="Images\admin.jpg" />
     <Content Include="Images\bang_gia_ve.png" />
     <Content Include="Images\banner.png" />
     <Content Include="Images\banner1.png" />
