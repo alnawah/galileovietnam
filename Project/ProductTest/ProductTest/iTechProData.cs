@@ -61,9 +61,11 @@ namespace ProductTest.Library
                 sqlcom = new SqlCommand();
                 sqlcom.CommandText = store;
                 sqlcom.Connection = sqlconn;
+                sqlcom.CommandType = CommandType.StoredProcedure;
                 sqlcom.Parameters.AddWithValue(_thamso, _giatri);
                 try
                 {
+                    //sqlcom.ExecuteNonQuery();
                     sqladapter = new SqlDataAdapter(sqlcom);
                     sqladapter.Fill(datatable);
                     sqladapter.Dispose();
