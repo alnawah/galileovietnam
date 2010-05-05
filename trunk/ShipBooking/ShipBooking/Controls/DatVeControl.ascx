@@ -78,7 +78,8 @@
                     </td>
                     <td>
                         <asp:RadioButtonList ID="rblLoaiHanhTrinh" runat="server" Height="22px" 
-                            RepeatDirection="Horizontal" Width="364px">
+                            RepeatDirection="Horizontal" Width="364px" 
+                            onselectedindexchanged="rblLoaiHanhTrinh_SelectedIndexChanged" AutoPostBack="true">
                         </asp:RadioButtonList>
                     </td>
                 </tr>
@@ -86,10 +87,12 @@
                     <td>
                                                 Từ</td>
                     <td>
-                        <asp:DropDownList ID="ddlNoiDi" runat="server" Height="22px" Width="160px">
+                        <asp:DropDownList ID="ddlNoiDi" runat="server" Height="22px" Width="160px" 
+                            AutoPostBack="true" onselectedindexchanged="ddlNoiDi_SelectedIndexChanged">
                         </asp:DropDownList>
                         &nbsp;<span class="step1_warning">(*)</span>&nbsp;&nbsp;&nbsp;&nbsp; Đến&nbsp;
-                        <asp:DropDownList ID="ddlNoiDen" runat="server" Height="22px" Width="160px">
+                        <asp:DropDownList ID="ddlNoiDen" runat="server" Height="22px" Width="160px" 
+                            AutoPostBack="false" onselectedindexchanged="ddlNoiDen_SelectedIndexChanged">
                         </asp:DropDownList>
                         &nbsp;<span class="step1_warning">(*)</span></td>
                 </tr>
@@ -99,7 +102,7 @@
                     <td>
                         <asp:TextBox ID="txtNgayDi" runat="server" Width="138px"></asp:TextBox>
                         
-                        <img src="~/Images/CalendarIcon.png" alt="" runat="server" 
+                        <img id="imgCalendar1" src="~/Images/CalendarIcon.png" alt="" runat="server" 
                             onclick="displayCalendar1()" height="16" />
                         <div id="datePicker1">
                             <asp:Calendar id="calEventDate" 
@@ -124,11 +127,12 @@
                 </tr>
                 <tr>
                     <td>
-                        Ngày về</td>
+                        <asp:Label ID="lblNgayVe" runat="server" Text="Ngày về" Visible="False"></asp:Label>
+                    </td>
                     <td>
-                        <asp:TextBox ID="txtNgayVe" runat="server" Width="138px"></asp:TextBox>
-                        <img id="Img1" src="~/Images/CalendarIcon.png" alt="" runat="server" 
-                            onclick="displayCalendar2()" height="16"/>
+                        <asp:TextBox ID="txtNgayVe" runat="server" Width="138px" Visible="False"></asp:TextBox>
+                        <img id="imgCalendar2" src="~/Images/CalendarIcon.png" alt="" runat="server" 
+                            onclick="displayCalendar2()" height="16" visible="False"/>
                         <div id="datePicker2">
                             <asp:Calendar id="Calendar1" Runat="server" BackColor="#FFFFCC" 
                                 BorderColor="#FFCC66" BorderWidth="1px" DayNameFormat="Shortest" 
@@ -145,8 +149,10 @@
                                     ForeColor="#FFFFCC" />
                             </asp:Calendar>
                         </div>
-                    &nbsp;(dd/mm/yyyy)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:CheckBox ID="chkOpen" runat="server" Text="Open" />
+                        &nbsp;<asp:Label ID="lblDateFormat" runat="server" Text="(dd/mm/yyyy)" 
+                            Visible="False"></asp:Label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:CheckBox ID="chkOpen" runat="server" Text="Open" Visible="False" />
                     </td>
                 </tr>
                 <tr>

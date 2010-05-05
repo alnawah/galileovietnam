@@ -33,6 +33,7 @@ namespace ShipBooking.Controls
                 FillDataToRdbLoaiHanhTrinh();
                 FillDataToDdlLoaiVe();
                 FillDataToRdbSoGhe();
+                ListControlUtilities.FillCityData(ddlNoiDen, ddlNoiDi.SelectedValue);
             }
         }
 
@@ -92,22 +93,16 @@ namespace ShipBooking.Controls
         protected void FillDataToRdbLoaiHanhTrinh()
         {
             ListItem item;
-            
-            item = new ListItem();
-            item.Text = "Khứ hồi";
-            item.Value = "KhuHoi";
-            rblLoaiHanhTrinh.Items.Add(item);
-            item = null;
 
             item = new ListItem();
             item.Text = "Một lượt";
             item.Value = "MotLuot";
             rblLoaiHanhTrinh.Items.Add(item);
             item = null;
-
+            
             item = new ListItem();
-            item.Text = "Nhiều lượt";
-            item.Value = "NhieuLuot";
+            item.Text = "Khứ hồi";
+            item.Value = "KhuHoi";
             rblLoaiHanhTrinh.Items.Add(item);
             item = null;
 
@@ -117,7 +112,7 @@ namespace ShipBooking.Controls
         protected void FillDataToRdbSoGhe()
         {
             ListItem item;
-            for (int i = 1; i <= 10; i++)
+            for (int i = 1; i <= 50; i++)
             {
                 item = new ListItem();
                 item.Text = Convert.ToString(i);
@@ -152,7 +147,30 @@ namespace ShipBooking.Controls
             {
                 bf.SoGhe = "";
             }
-            bf.GiaTien = "4500000";
+
+            string strNoiDi = "";
+            string strNoiDen = "";
+            string strHanhTrinh = "";
+
+            strNoiDi = ddlNoiDi.SelectedValue.ToUpper();
+            strNoiDen = ddlNoiDen.SelectedValue.ToUpper();
+            strHanhTrinh = strNoiDi.Trim() + strNoiDen.Trim();
+
+            TinhTrangChuyen obj = new TinhTrangChuyen();
+            obj = TinhTrangChuyenDB.GetInfo(strHanhTrinh);
+
+            if (ddlLoaiVe.SelectedValue == "HangThuong")
+            {
+                bf.GiaTien = obj.GiaVe1;
+            }
+            else if (ddlLoaiVe.SelectedValue == "HangDoanhNhan")
+            {
+                bf.GiaTien = obj.GiaVe2;
+            }
+            else
+            {
+                bf.GiaTien = obj.GiaVe3;
+            }
         }
 
         protected void InitData()
@@ -177,6 +195,34 @@ namespace ShipBooking.Controls
             txtNgayVe.Text = Calendar1.SelectedDate.ToString("d");
         }
 
+        protected void rblLoaiHanhTrinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (rblLoaiHanhTrinh.SelectedValue == "KhuHoi")
+            {
+                lblNgayVe.Visible = true;
+                txtNgayVe.Visible = true;
+                lblDateFormat.Visible = true;
+                chkOpen.Visible = true;
+                imgCalendar2.Visible = true;
+            }
+            else
+            {
+                lblNgayVe.Visible = false;
+                txtNgayVe.Visible = false;
+                lblDateFormat.Visible = false;
+                chkOpen.Visible = false;
+                imgCalendar2.Visible = false;
+            }
+        }
 
+        protected void ddlNoiDi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListControlUtilities.FillCityData(ddlNoiDen, ddlNoiDi.SelectedValue);
+        }
+
+        protected void ddlNoiDen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

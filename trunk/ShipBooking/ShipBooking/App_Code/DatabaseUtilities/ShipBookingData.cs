@@ -63,6 +63,7 @@ namespace ShipBooking.Library
             cmd.CommandText = store;
             cmd.Connection = con;
             cmd.Parameters.AddWithValue(param, value);
+            cmd.CommandType = CommandType.StoredProcedure;
             try
             {
                 da = new SqlDataAdapter(cmd);
