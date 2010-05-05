@@ -9,6 +9,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using ProductTest.Library;
+using ProductTest.Modules.Introdure;
 
 
 namespace ProductTest
@@ -26,6 +27,11 @@ namespace ProductTest
 
                 setMenuTest();
             }
+            IntrodureInfo intro = new IntrodureInfo();
+            intro = IntrodureDB.getInfo("12");
+
+            //IntrodureDB.Delete("11");
+
         }
 
         protected void ddlCompany_SelectedIndexChanged(object sender, EventArgs e)

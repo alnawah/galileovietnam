@@ -18,3 +18,8 @@ D:\Projects\Galileo\Project\ProductTest\ProductTest\bin\ProductTest.pdb
 D:\Projects\Galileo\Project\ProductTest\ProductTest\obj\Debug\ResolveAssemblyReference.cache
 D:\Projects\Galileo\Project\ProductTest\ProductTest\obj\Debug\ProductTest.dll
 D:\Projects\Galileo\Project\ProductTest\ProductTest\obj\Debug\ProductTest.pdb
+D:\Working\GalileoData\Project\ProductTest\ProductTest\bin\ProductTest.dll
+D:\Working\GalileoData\Project\ProductTest\ProductTest\bin\ProductTest.pdb
+D:\Working\GalileoData\Project\ProductTest\ProductTest\obj\Debug\ResolveAssemblyReference.cache
+D:\Working\GalileoData\Project\ProductTest\ProductTest\obj\Debug\ProductTest.dll
+D:\Working\GalileoData\Project\ProductTest\ProductTest\obj\Debug\ProductTest.pdb
