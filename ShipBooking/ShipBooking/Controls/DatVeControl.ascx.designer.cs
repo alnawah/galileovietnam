@@ -59,6 +59,15 @@ namespace ShipBooking.Controls {
         protected global::System.Web.UI.WebControls.TextBox txtNgayDi;
         
         /// <summary>
+        /// imgCalendar1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage imgCalendar1;
+        
+        /// <summary>
         /// calEventDate control.
         /// </summary>
         /// <remarks>
@@ -77,6 +86,15 @@ namespace ShipBooking.Controls {
         protected global::System.Web.UI.WebControls.DropDownList ddlThoiGian;
         
         /// <summary>
+        /// lblNgayVe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNgayVe;
+        
+        /// <summary>
         /// txtNgayVe control.
         /// </summary>
         /// <remarks>
@@ -86,13 +104,13 @@ namespace ShipBooking.Controls {
         protected global::System.Web.UI.WebControls.TextBox txtNgayVe;
         
         /// <summary>
-        /// Img1 control.
+        /// imgCalendar2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage Img1;
+        protected global::System.Web.UI.HtmlControls.HtmlImage imgCalendar2;
         
         /// <summary>
         /// Calendar1 control.
@@ -102,6 +120,15 @@ namespace ShipBooking.Controls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Calendar Calendar1;
+        
+        /// <summary>
+        /// lblDateFormat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDateFormat;
         
         /// <summary>
         /// chkOpen control.

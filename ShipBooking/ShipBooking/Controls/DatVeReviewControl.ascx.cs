@@ -114,7 +114,7 @@ namespace ShipBooking.Controls
         {
             BookingFile bookingFile = new BookingFile();
             bookingFile = GetBookingFile();
-            BookingFileDB.Insert(bookingFile);   
+            BookingFileDB.Insert(bookingFile);
         }
 
         protected void SaveNguoiNhanVeData()

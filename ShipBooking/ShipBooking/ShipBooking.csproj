@@ -220,6 +220,8 @@
     <Compile Include="ThongTinKhach.aspx.designer.cs">
       <DependentUpon>ThongTinKhach.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\DataObjects\TinhTrangChuyen.cs" />
+    <Compile Include="App_Code\DataObjects\TinhTrangChuyenDB.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\MySkin\MyCss.css" />
