@@ -100,7 +100,7 @@ namespace ShipBooking.Controls
 
         protected void InitData()
         {
-            SetVisibleRequiredValidatorControl();
+            //SetVisibleRequiredValidatorControl();
             txtHoTen.Text = "";
             txtDiaChi.Text = "";
             txtSoDienThoai.Text = "";
