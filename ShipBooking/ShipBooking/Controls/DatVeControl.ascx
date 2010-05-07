@@ -171,7 +171,7 @@
                     <td>
                         Số ghế</td>
                     <td>
-                        <asp:RadioButtonList ID="rdbSoGhe" runat="server" RepeatColumns="5" 
+                        <asp:RadioButtonList ID="rdbSoGhe" runat="server" RepeatColumns="12" 
                             RepeatDirection="Horizontal">
                         </asp:RadioButtonList>
                     </td>

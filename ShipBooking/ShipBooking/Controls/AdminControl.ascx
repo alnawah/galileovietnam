@@ -181,7 +181,7 @@
                         </td>
                         <td>
                             <asp:Button ID="Button1" runat="server" Text="Xem thông tin tàu" 
-                                Width="134px" />
+                                Width="134px" onclick="Button1_Click" />
                         </td>
                     </tr>
                 </table>

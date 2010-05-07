@@ -64,6 +64,13 @@
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin_Tau.aspx.cs">
+      <DependentUpon>Admin_Tau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Tau.aspx.designer.cs">
+      <DependentUpon>Admin_Tau.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Code\DataObjects\BookingFile.cs" />
     <Compile Include="App_Code\DataObjects\BookingFileDB.cs" />
     <Compile Include="Controls\AdminControl.ascx.cs">
@@ -72,6 +79,13 @@
     </Compile>
     <Compile Include="Controls\AdminControl.ascx.designer.cs">
       <DependentUpon>AdminControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AdminTauControl.ascx.cs">
+      <DependentUpon>AdminTauControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdminTauControl.ascx.designer.cs">
+      <DependentUpon>AdminTauControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\DatVeControl.ascx.cs">
       <DependentUpon>DatVeControl.ascx</DependentUpon>
@@ -206,6 +220,8 @@
     <Compile Include="App_Code\DataObjects\NguoiNhanVeDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App_Code\DatabaseUtilities\ShipBookingData.cs" />
+    <Compile Include="App_Code\DataObjects\Tau.cs" />
+    <Compile Include="App_Code\DataObjects\TauDB.cs" />
     <Compile Include="ThemHanhKhach.aspx.cs">
       <DependentUpon>ThemHanhKhach.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -229,12 +245,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin.aspx" />
+    <Content Include="Admin_Tau.aspx" />
     <Content Include="App_Data\ShipBooking.mdf">
     </Content>
     <Content Include="App_Data\ShipBooking_log.ldf">
       <DependentUpon>ShipBooking.mdf</DependentUpon>
     </Content>
     <Content Include="Controls\AdminControl.ascx" />
+    <Content Include="Controls\AdminTauControl.ascx" />
     <Content Include="Controls\DatVeControl.ascx" />
     <Content Include="Controls\DatVeReviewControl.ascx" />
     <Content Include="Controls\DatVe_Step2.ascx" />

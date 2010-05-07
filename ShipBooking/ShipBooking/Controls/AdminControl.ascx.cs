@@ -185,6 +185,11 @@ namespace ShipBooking.Controls
             txtSoHieuTau.Text = ddlSoHieuTau.SelectedItem.Text.Trim();
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Admin_Tau.aspx");
+        }
+
 
     }
 }
