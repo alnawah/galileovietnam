@@ -77,5 +77,27 @@ namespace ShipBooking.Library
             return table;
         }
         #endregion
+
+        #region Phương thức điền dữ liệu vào DataSet
+        public static DataSet FillDataset(string ssql)
+        {
+            DataSet ds = new DataSet();
+            OpenData();
+            try
+            {
+                da = new SqlDataAdapter(ssql, con);
+                da.Fill(ds);
+                da.Dispose();
+            }
+            catch (Exception exp)
+            {
+                CloseData();
+                System.Web.HttpContext.Current.Response.Write(exp.ToString());
+            }
+            CloseData();
+            return ds;
+        }
+        #endregion
+
     }
 }
