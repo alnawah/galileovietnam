@@ -22,7 +22,7 @@ namespace ShipBooking.Controls
             if (!IsPostBack)
             {
                 FillData();
-                ListControlUtilities.FillDataToDropDownList(ddlSoHieuTau, "tblTau", "Ten", "MaSoTau");
+                ListControlUtilities.FillDataToDropDownList(ddlSoHieuTau, "tblTau", "MaSoTau", "MaSoTau");
                 ListControlUtilities.FillDataToDropDownList(ddlNoiDi, "tblThanhPho", "Ten", "MaThanhPho");
                 ListControlUtilities.FillDataToDropDownList(ddlNoiDen, "tblThanhPho", "Ten", "MaThanhPho");
             }
@@ -139,7 +139,7 @@ namespace ShipBooking.Controls
                 obj.GiaVe1 = txtGiaVeThuong.Text.ToLower().Trim();
                 obj.GiaVe2 = txtGiaVeDoanhNhan.Text.ToLower().Trim();
                 obj.GiaVe3 = txtGiaVeVIP.Text.ToLower().Trim();
-                obj.MaSoTau = txtSoHieuTau.Text.Trim();
+                obj.MaSoTau = ddlSoHieuTau.SelectedValue.Trim();
                 TinhTrangChuyenDB.Insert(obj);
             }
             else
@@ -158,7 +158,7 @@ namespace ShipBooking.Controls
                 obj.GiaVe1 = txtGiaVeThuong.Text.ToLower().Trim();
                 obj.GiaVe2 = txtGiaVeDoanhNhan.Text.ToLower().Trim();
                 obj.GiaVe3 = txtGiaVeVIP.Text.ToLower().Trim();
-                obj.MaSoTau = txtSoHieuTau.Text.Trim();
+                obj.MaSoTau = ddlSoHieuTau.SelectedValue.Trim();
                 TinhTrangChuyenDB.Update(obj);
             }
         }

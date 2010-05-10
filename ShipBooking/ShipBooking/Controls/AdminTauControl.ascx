@@ -41,6 +41,11 @@
         width: 249px;
         text-align: right;
     }
+    .style3
+    {
+        width: 398px;
+        text-align: left;
+    }
 </style>
 <p style="text-align: center">
     <asp:Image ID="Image1" runat="server" Height="55px" 
@@ -60,7 +65,7 @@
                 <tr>
                     <td class="style2">
                         Mã số tàu: </td>
-                    <td class="ThongTinDatCho_Detail">
+                    <td class="style3">
                         <asp:TextBox ID="txtMaSoTau" runat="server"></asp:TextBox>
                     </td>
                     <td class="ThongTinDatCho_Detail">
@@ -69,7 +74,7 @@
                 <tr>
                     <td class="style2">
                         Tên tàu: </td>
-                    <td class="ThongTinDatCho_Detail" align="right">
+                    <td class="style3" align="right">
                         <asp:TextBox ID="txtTenTau" runat="server"></asp:TextBox>
                     </td>
                     <td class="ThongTinDatCho_Detail" align="right">
@@ -78,7 +83,7 @@
                 <tr>
                     <td class="style2">
                         Số ghế: </td>
-                    <td class="ThongTinDatCho_Detail" align="right">
+                    <td class="style3" align="right">
                         <asp:TextBox ID="txtSoGhe" runat="server"></asp:TextBox>
                     </td>
                     <td class="ThongTinDatCho_Detail" align="right">
@@ -87,7 +92,7 @@
                 <tr>
                     <td class="style2">
                         Thông tin khác: </td>
-                    <td class="ThongTinDatCho_Detail" align="right">
+                    <td class="style3" align="right">
                         <asp:TextBox ID="txtThongTinKhac" runat="server" Height="62px" Width="337px" 
                             TextMode="MultiLine" Font-Names="Arial" Wrap="False"></asp:TextBox>
                     </td>

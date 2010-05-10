@@ -28,19 +28,29 @@ namespace ShipBooking.Controls
             {
                 InitData();
                 ListControlUtilities.FillDataToDropDownList(ddlNoiDi, "tblThanhPho", "Ten", "MaThanhPho");
-                ListControlUtilities.FillDataToDropDownList(ddlNoiDen, "tblThanhPho", "Ten", "MaThanhPho");
+                ListControlUtilities.FillCityData(ddlNoiDen, ddlNoiDi.SelectedValue);
                 FillDataToDdlThoiGian();
                 FillDataToRdbLoaiHanhTrinh();
                 FillDataToDdlLoaiVe();
                 FillDataToRdbSoGhe();
-                ListControlUtilities.FillCityData(ddlNoiDen, ddlNoiDi.SelectedValue);
             }
         }
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
-            GetBookingData();
-            Response.Redirect("ThongTinKhach.aspx");
+            bool isValidDate = false;
+            isValidDate = CheckDate();
+            if (isValidDate == false)
+            {
+                txtNgayDi.Text = "";
+                txtNgayDi.Focus();
+                return;
+            }
+            else
+            {
+                GetBookingData();
+                Response.Redirect("ThongTinKhach.aspx");
+            }
         }
 
         protected void FillDataToDdlThoiGian()
@@ -66,7 +76,6 @@ namespace ShipBooking.Controls
             item = null;
         }
 
-        
         protected void FillDataToDdlLoaiVe()
         {
             ListItem item;
@@ -109,15 +118,62 @@ namespace ShipBooking.Controls
             rblLoaiHanhTrinh.SelectedIndex = 0;
         }
 
+        protected string GetHanhTrinh()
+        {
+            string strNoiDi = "";
+            string strNoiDen = "";
+            string strHanhTrinh = "";
+
+            strNoiDi = ddlNoiDi.SelectedValue.ToUpper();
+            strNoiDen = ddlNoiDen.SelectedValue.ToUpper();
+            strHanhTrinh = strNoiDi.Trim() + strNoiDen.Trim();
+
+            return strHanhTrinh.Trim();
+        }
+
         protected void FillDataToRdbSoGhe()
         {
             ListItem item;
-            for (int i = 1; i <= 50; i++)
+            string strHanhTrinh = GetHanhTrinh();
+
+            TinhTrangChuyen HanhTrinhInfo = new TinhTrangChuyen();
+            HanhTrinhInfo = TinhTrangChuyenDB.GetInfo(strHanhTrinh);
+
+            //Điền tất cả các ghế trên chuyến tàu
+            Tau tau = new Tau();
+            tau = TauDB.GetInfo(HanhTrinhInfo.MaSoTau.Trim());
+            int SoGhe = 0;
+            if (tau != null)
+            {
+                SoGhe = Convert.ToInt16(tau.SoGhe);
+            }
+            for (int i = 1; i <= SoGhe; i++)
             {
                 item = new ListItem();
                 item.Text = Convert.ToString(i);
                 item.Value = Convert.ToString(i);
                 rdbSoGhe.Items.Add(item);
+                item = null;
+            }
+
+            //Remove những ghế đã được chọn trong ngày
+            List<BookingFile> BFList = new List<BookingFile>();
+            BFList = BookingFileDB.GetListBookingFileByDate(txtNgayDi.Text.Trim(), strHanhTrinh);
+            int SoGheDatDat = 0;
+            for (int i = 1; i <= SoGhe; i++)
+            {
+                item = new ListItem();
+                item.Text = Convert.ToString(i);
+                item.Value = Convert.ToString(i);
+
+                for (int j = 0; j < BFList.Count; j++)
+                {
+                    SoGheDatDat = Convert.ToInt16(BFList[j].SoGhe.Trim());
+                    if (i == SoGheDatDat)
+                    {
+                        rdbSoGhe.Items.Remove(item);
+                    }
+                }
                 item = null;
             }
         }
@@ -127,8 +183,16 @@ namespace ShipBooking.Controls
             bf.LoaiChuyen = rblLoaiHanhTrinh.SelectedItem.Text;
             bf.NoiDi = ddlNoiDi.SelectedItem.Text;
             bf.NoiDen = ddlNoiDen.SelectedItem.Text;
-            bf.NgayDi = txtNgayDi.Text;
-            bf.NgayVe = txtNgayVe.Text;
+            bf.NgayDi = DateTime.Parse(txtNgayDi.Text.Trim());
+            if (rblLoaiHanhTrinh.SelectedValue == "KhuHoi")
+            {
+                bf.NgayVe = DateTime.Parse(txtNgayVe.Text.Trim());
+            }
+            else
+            {
+                bf.NgayVe = DateTime.Parse(txtNgayDi.Text.Trim());
+            }
+            
             bf.ThoiGian = ddlThoiGian.SelectedItem.Text;
             if (chkOpen.Checked == true)
             {
@@ -148,13 +212,7 @@ namespace ShipBooking.Controls
                 bf.SoGhe = "";
             }
 
-            string strNoiDi = "";
-            string strNoiDen = "";
-            string strHanhTrinh = "";
-
-            strNoiDi = ddlNoiDi.SelectedValue.ToUpper();
-            strNoiDen = ddlNoiDen.SelectedValue.ToUpper();
-            strHanhTrinh = strNoiDi.Trim() + strNoiDen.Trim();
+            string strHanhTrinh = GetHanhTrinh();
 
             TinhTrangChuyen obj = new TinhTrangChuyen();
             obj = TinhTrangChuyenDB.GetInfo(strHanhTrinh);
@@ -171,6 +229,8 @@ namespace ShipBooking.Controls
             {
                 bf.GiaTien = obj.GiaVe3;
             }
+
+            bf.HanhTrinh = strHanhTrinh;
         }
 
         protected void InitData()
@@ -178,6 +238,7 @@ namespace ShipBooking.Controls
             rblLoaiHanhTrinh.SelectedIndex = 0;
             txtNgayDi.Text = "";
             txtNgayVe.Text = "";
+            lblMsg.Text = "";
         }
 
         protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
@@ -222,7 +283,39 @@ namespace ShipBooking.Controls
 
         protected void ddlNoiDen_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ResetRdbSoGhe();
+            FillDataToRdbSoGhe();
+        }
 
+        protected void ResetRdbSoGhe()
+        {
+            rdbSoGhe.Items.Clear();
+        }
+
+        protected bool CheckDate()
+        {
+            bool isValid = false;
+
+            string strDate = txtNgayDi.Text.Trim();
+            try
+            {
+                DateTime dt = DateTime.Parse(strDate);
+                if (dt < DateTime.Now.Date)
+                {
+                    lblMsg.Text = "Bạn không được nhập ngày trước ngày hiện tại";
+                }
+                else
+                {
+                    isValid = true;
+                }
+            }
+            catch
+            {
+                lblMsg.Text = "Ngày không hợp lệ";
+                isValid = false;
+            }
+
+            return isValid;
         }
     }
 }

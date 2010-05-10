@@ -38,8 +38,8 @@ namespace ShipBooking.Controls
         {
             lblNoiDen1.Text = DatVeControl.bf.NoiDen;
             lblNoiDi1.Text = DatVeControl.bf.NoiDi;
-            lblNgayDi.Text = DatVeControl.bf.NgayDi;
-            lblNgayVe.Text = DatVeControl.bf.NgayVe;
+            lblNgayDi.Text = DatVeControl.bf.NgayDi.Date.ToString();
+            lblNgayVe.Text = DatVeControl.bf.NgayVe.Date.ToString();
             lblThoiGian.Text = DatVeControl.bf.ThoiGian;
             lblLoaiHanhTrinh.Text = DatVeControl.bf.LoaiChuyen;
             lblLoaiVe.Text = DatVeControl.bf.LoaiVe;
@@ -102,10 +102,11 @@ namespace ShipBooking.Controls
             bookingFile.ThoiGian = DatVeControl.bf.ThoiGian;
             bookingFile.OpenChecking = DatVeControl.bf.OpenChecking;
             bookingFile.LoaiVe = DatVeControl.bf.LoaiVe;
-                bookingFile.SoGhe = DatVeControl.bf.SoGhe;
-                bookingFile.GiaTien = DatVeControl.bf.GiaTien;
+            bookingFile.SoGhe = DatVeControl.bf.SoGhe;
+            bookingFile.GiaTien = DatVeControl.bf.GiaTien;
             bookingFile.ThanhToan = DatVe_Step2.NguoiNhan.ThanhToan;
             bookingFile.MaNguoiNhan = DatVe_Step2.NguoiNhan.MaNguoiNhan;
+            bookingFile.HanhTrinh = DatVeControl.bf.HanhTrinh;
 
             return bookingFile;
         }

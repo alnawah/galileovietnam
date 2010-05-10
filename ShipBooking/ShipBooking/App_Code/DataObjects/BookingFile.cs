@@ -42,15 +42,15 @@ namespace ShipBooking.Module
             set { _NoiDen = value; }
         }
 
-        string _NgayDi;
-        public string NgayDi
+        DateTime _NgayDi;
+        public DateTime NgayDi
         {
             get { return _NgayDi; }
             set { _NgayDi = value; }
         }
 
-        string _NgayVe;
-        public string NgayVe
+        DateTime _NgayVe;
+        public DateTime NgayVe
         {
             get { return _NgayVe; }
             set { _NgayVe = value; }
@@ -103,6 +103,13 @@ namespace ShipBooking.Module
         {
             get { return _MaNguoiNhan; }
             set { _MaNguoiNhan = value; }
+        }
+
+        string _HanhTrinh;
+        public string HanhTrinh
+        {
+            get { return _HanhTrinh; }
+            set { _HanhTrinh = value; }
         }
     }
 }
