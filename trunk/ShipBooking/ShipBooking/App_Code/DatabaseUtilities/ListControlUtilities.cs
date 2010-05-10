@@ -47,7 +47,7 @@ namespace ShipBooking.Library
         }
         #endregion
 
-        #region Phương thức điền dữ liệu vào DropDownList
+        #region Phương thức điền dữ liệu vào DropDownList thành phố đến
         public static void FillCityData(DropDownList control, string MaTP)
         {
             OpenData();

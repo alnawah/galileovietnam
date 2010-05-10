@@ -78,6 +78,31 @@ namespace ShipBooking.Library
         }
         #endregion
 
+        #region Điền dữ liệu vào DataTable từ một thủ tục trong Database (overloading 2 params)
+        public static DataTable FillDataTable(string store, string param1, string param2, string value1, string value2)
+        {
+            OpenData();
+            DataTable table = new DataTable();
+            cmd = new SqlCommand();
+            cmd.CommandText = store;
+            cmd.Connection = con;
+            cmd.Parameters.AddWithValue(param1, value1);
+            cmd.Parameters.AddWithValue(param2, value2);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                da = new SqlDataAdapter(cmd);
+                da.Fill(table);
+                da.Dispose();
+            }
+            finally
+            {
+                CloseData();
+            }
+            return table;
+        }
+        #endregion
+
         #region Phương thức điền dữ liệu vào DataSet
         public static DataSet FillDataset(string ssql)
         {

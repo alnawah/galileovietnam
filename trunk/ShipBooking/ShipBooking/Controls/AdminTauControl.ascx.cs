@@ -57,6 +57,27 @@ namespace ShipBooking.Controls
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            if (txtMaSoTau.Text.Trim() == "")
+            {
+                lblMsg.Text = "Bạn hãy nhập mã số tàu";
+                txtMaSoTau.Focus();
+                return;
+            }
+
+            if (txtTenTau.Text.Trim() == "")
+            {
+                lblMsg.Text = "Bạn hãy nhập tên tàu";
+                txtTenTau.Focus();
+                return;
+            }
+
+            if (txtSoGhe.Text.Trim() == "")
+            {
+                lblMsg.Text = "Bạn hãy nhập số ghế";
+                txtSoGhe.Focus();
+                return;
+            }
+            
             string MaSoTau = txtMaSoTau.Text.Trim();
             Tau tau = new Tau();
 
@@ -150,7 +171,9 @@ namespace ShipBooking.Controls
 
         protected void grvTau_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            grvTau.DeleteRow(e.RowIndex);
+            string strMaso = "";
+            strMaso =  grvTau.Rows[e.RowIndex].Cells[0].Text.Trim();
+            TauDB.Delete(strMaso.Trim());
             FillDataGridView();
         }
     }

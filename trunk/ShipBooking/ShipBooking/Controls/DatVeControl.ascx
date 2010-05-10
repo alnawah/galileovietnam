@@ -64,7 +64,8 @@
         ImageUrl="~/Images/text_banvetau.png" Width="600px" />
 </p>
 <p style="text-align: center">
-    &nbsp;</p>
+    <asp:Label ID="lblMsg" runat="server"></asp:Label>
+</p>
 <table class="step1_tblThongTinDatCho_Summary_Style">
     <tr>
         <td bgcolor="#006699" class="step1_table_header_style">
@@ -92,7 +93,7 @@
                         </asp:DropDownList>
                         &nbsp;<span class="step1_warning">(*)</span>&nbsp;&nbsp;&nbsp;&nbsp; Đến&nbsp;
                         <asp:DropDownList ID="ddlNoiDen" runat="server" Height="22px" Width="160px" 
-                            AutoPostBack="false" onselectedindexchanged="ddlNoiDen_SelectedIndexChanged">
+                            AutoPostBack="true" onselectedindexchanged="ddlNoiDen_SelectedIndexChanged">
                         </asp:DropDownList>
                         &nbsp;<span class="step1_warning">(*)</span></td>
                 </tr>
@@ -120,7 +121,7 @@
                                     ForeColor="#FFFFCC" />
                             </asp:Calendar>
                         </div>
-                    &nbsp;(dd/mm/yyyy) &nbsp;
+                    &nbsp;(mm/dd/yyyy) &nbsp;
                         <asp:DropDownList ID="ddlThoiGian" runat="server" Height="21px" Width="136px">
                         </asp:DropDownList>
                     &nbsp;<span class="step1_warning">(*)</span></td>
@@ -149,7 +150,7 @@
                                     ForeColor="#FFFFCC" />
                             </asp:Calendar>
                         </div>
-                        &nbsp;<asp:Label ID="lblDateFormat" runat="server" Text="(dd/mm/yyyy)" 
+                        &nbsp;<asp:Label ID="lblDateFormat" runat="server" Text="(mm/dd/yyyy)" 
                             Visible="False"></asp:Label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:CheckBox ID="chkOpen" runat="server" Text="Open" Visible="False" />
