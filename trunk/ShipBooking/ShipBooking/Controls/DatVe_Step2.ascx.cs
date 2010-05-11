@@ -23,6 +23,7 @@ namespace ShipBooking.Controls
         {
             if (!IsPostBack)
             {
+                InitControl();
                 ListControlUtilities.FillDataToDropDownList(ddlThanhPho, "tblThanhPho", "Ten", "MaThanhPho");
                 FillDataToDdlThoiGian();
                 FillDataToRdbHinhThucThanhToan();
@@ -33,13 +34,15 @@ namespace ShipBooking.Controls
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            RequiredFieldValidator1.Visible = true;
-            RequiredFieldValidator2.Visible = true;
-            RequiredFieldValidator3.Visible = true;
-            RequiredFieldValidator4.Visible = true;
-
-            GetNguoiNhanVeData();
-            Response.Redirect("DatVe_Review.aspx");
+            if (CheckValidData() == false)
+            {
+                return;
+            }
+            else
+            {
+                GetNguoiNhanVeData();
+                Response.Redirect("DatVe_Review.aspx");
+            }
         }
 
         protected void FillDataToDdlThoiGian()
@@ -94,8 +97,8 @@ namespace ShipBooking.Controls
         {
             lblNoiDen1.Text = DatVeControl.bf.NoiDen;
             lblNoiDi1.Text = DatVeControl.bf.NoiDi;
-            lblNgayDi.Text = DatVeControl.bf.NgayDi.Date.ToString();
-            lblNgayVe.Text = DatVeControl.bf.NgayVe.Date.ToString();
+            lblNgayDi.Text = DatVeControl.bf.NgayDi.ToShortDateString();
+            lblNgayVe.Text = DatVeControl.bf.NgayVe.ToShortDateString();
             lblThoiGian.Text = DatVeControl.bf.ThoiGian;
             lblLoaiHanhTrinh.Text = DatVeControl.bf.LoaiChuyen;
             lblLoaiVe.Text = DatVeControl.bf.LoaiVe;
@@ -136,7 +139,6 @@ namespace ShipBooking.Controls
             Random rdm = new Random();
             strMaNN += rdm.Next(1000, 9999).ToString();
 
-
             NguoiNhan.MaNguoiNhan = strMaNN;
             NguoiNhan.Ten = txtTenNguoiNhan.Text;
             NguoiNhan.DiaChi = txtDiaChiNguoiNhan.Text;
@@ -144,9 +146,59 @@ namespace ShipBooking.Controls
             NguoiNhan.DienThoai = txtDienThoaiNguoiNhan.Text;
             NguoiNhan.Email = txtEmailNguoiNhan.Text;
             NguoiNhan.YeuCauKhac = txtYeuCauKhac.Text;
-            NguoiNhan.ThoiGianGiaoVe = ddlThoiGianGiaoVe.SelectedItem.Text;
-            
+            NguoiNhan.ThoiGianGiaoVe = ddlThoiGianGiaoVe.SelectedItem.Text;            
             NguoiNhan.ThanhToan = rblHinhThucThanhToan.SelectedItem.Text;
+        }
+
+        protected bool CheckValidData()
+        {
+            bool isValid = true;
+
+            if (txtTenNguoiNhan.Text.Trim() == "")
+            {
+                lblMsg.Text = "Bạn phải nhập tên người nhận vé";
+                txtTenNguoiNhan.Focus();
+                isValid = false;
+            }
+            else
+            {
+                if (txtDiaChiNguoiNhan.Text.Trim() == "")
+                {
+                    lblMsg.Text = "Bạn phải nhập địa chỉ người nhận";
+                    txtDiaChiNguoiNhan.Focus();
+                    isValid = false;
+                }
+                else
+                {
+                    if (txtDienThoaiNguoiNhan.Text.Trim() == "")
+                    {
+                        lblMsg.Text = "Bạn phải nhập số điện thoại người nhận";
+                        txtDienThoaiNguoiNhan.Focus();
+                        isValid = false;
+                    }
+                    else
+                    {
+                        if (txtEmailNguoiNhan.Text.Trim() == "")
+                        {
+                            lblMsg.Text = "Bạn phải nhập địa chỉ email người nhận";
+                            txtEmailNguoiNhan.Focus();
+                            isValid = false;
+                        }
+                    }
+                }
+            }
+
+            return isValid;
+        }
+
+        protected void InitControl()
+        {
+            lblMsg.Text = "";
+            txtTenNguoiNhan.Text = "";
+            txtDiaChiNguoiNhan.Text = "";
+            txtDienThoaiNguoiNhan.Text = "";
+            txtEmailNguoiNhan.Text = "";
+            txtYeuCauKhac.Text = "";
         }
     }
 }

@@ -21,7 +21,7 @@ namespace ShipBooking.Controls
         {
             if (!IsPostBack)
             {
-                InitData();
+                InitControl();
                 FillDataToDdlQuocTich();
                 FillDataToDdlDoTuoi();
                 SetBookingData();
@@ -72,8 +72,8 @@ namespace ShipBooking.Controls
         {
             lblNoiDen1.Text = DatVeControl.bf.NoiDen;
             lblNoiDi1.Text = DatVeControl.bf.NoiDi;
-            lblNgayDi.Text = DatVeControl.bf.NgayDi.Date.ToString();
-            lblNgayVe.Text = DatVeControl.bf.NgayVe.Date.ToString();
+            lblNgayDi.Text = DatVeControl.bf.NgayDi.ToShortDateString();
+            lblNgayVe.Text = DatVeControl.bf.NgayVe.ToShortDateString();
             lblThoiGian.Text = DatVeControl.bf.ThoiGian;
             lblLoaiHanhTrinh.Text = DatVeControl.bf.LoaiChuyen;
             lblLoaiVe.Text = DatVeControl.bf.LoaiVe;
@@ -98,31 +98,68 @@ namespace ShipBooking.Controls
             DatVeControl.listKhach.Add(khach);
         }
 
-        protected void InitData()
+        protected void InitControl()
         {
-            SetVisibleRequiredValidatorControl();
             txtHoTen.Text = "";
             txtDiaChi.Text = "";
             txtSoDienThoai.Text = "";
             txtEmail.Text = "";
             ddlDoTuoi.SelectedIndex = 2;
-        }
-
-        protected void SetVisibleRequiredValidatorControl()
-        {
-            RequiredFieldValidator1.Visible = false;
-            RequiredFieldValidator2.Visible = false;
-            RequiredFieldValidator3.Visible = false;
-            RequiredFieldValidator4.Visible = false;
-            RequiredFieldValidator5.Visible = false;
-            RequiredFieldValidator6.Visible = false;
+            lblMsg.Text = "";
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            GetHanhKhachData();
-            Response.Redirect("DatVe_Step2.aspx");
+            if (CheckValidData() == false)
+            {
+                return;
+            }
+            else
+            {
+                GetHanhKhachData();
+                Response.Redirect("DatVe_Step2.aspx");
+            }
         }
 
+        protected bool CheckValidData()
+        {
+            bool isValid = true;
+
+            if (txtHoTen.Text.Trim() == "")
+            {
+                lblMsg.Text = "Bạn phải nhập họ tên";
+                txtHoTen.Focus();
+                isValid = false;
+            }
+            else
+            {
+                if (txtDiaChi.Text.Trim() == "")
+                {
+                    lblMsg.Text = "Bạn phải nhập địa chỉ";
+                    txtDiaChi.Focus();
+                    isValid = false;
+                }
+                else
+                {
+                    if (txtSoDienThoai.Text.Trim() == "")
+                    {
+                        lblMsg.Text = "Bạn phải nhập số điện thoại";
+                        txtSoDienThoai.Focus();
+                        isValid = false;
+                    }
+                    else
+                    {
+                        if (txtEmail.Text.Trim() == "")
+                        {
+                            lblMsg.Text = "Bạn phải nhập địa chỉ email";
+                            txtEmail.Focus();
+                            isValid = false;
+                        }
+                    }
+                }
+            }
+
+            return isValid;
+        }
     }
 }
