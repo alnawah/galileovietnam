@@ -10,6 +10,9 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
+using System.Web.UI.MobileControls;
+using ShipBooking.Module;
+using System.Collections.Generic;
 
 namespace ShipBooking.Controls
 {
@@ -22,6 +25,19 @@ namespace ShipBooking.Controls
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+            if (rblTieuChiTimKiem.SelectedValue == "TenKhach")
+            {
+                string TenHK = "";
+                TenHK = txtKeyword.Text.Trim();
+                SearchBFByKhach(TenHK);
+            }
+            else if (rblTieuChiTimKiem.SelectedValue == "MaBF")
+            {
+
+            }
+            else
+            { 
+            }
 
         }
 
@@ -42,7 +58,8 @@ namespace ShipBooking.Controls
 
         protected void SearchBFByKhach(string keyword)
         {
- 
+            List<HanhKhach> HKList = new List<HanhKhach>();
+            HKList = HanhKhachDB.GetListHanhKhachByName(keyword);
         }
 
         protected void SearchBFByNguoiNhan(string keyword)

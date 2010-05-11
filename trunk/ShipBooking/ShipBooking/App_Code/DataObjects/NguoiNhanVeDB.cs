@@ -47,15 +47,20 @@ namespace ShipBooking
         {
             DataTable dt = ShipBookingData.FillDataTable("spNguoiNhan_SelectByID", "@MaNguoiNhan", MaNguoiNhan);
             NguoiNhanVe NguoiNhan = new NguoiNhanVe();
-
-            NguoiNhan.Ten = dt.Rows[0]["Ten"].ToString();
-            NguoiNhan.DiaChi = dt.Rows[0]["DiaChi"].ToString();
-            NguoiNhan.MaThanhPho = dt.Rows[0]["MaThanhPho"].ToString();
-            NguoiNhan.DienThoai = dt.Rows[0]["DienThoai"].ToString();
-            NguoiNhan.Email = dt.Rows[0]["Email"].ToString();
-            NguoiNhan.YeuCauKhac = dt.Rows[0]["YeuCauKhac"].ToString();
-            NguoiNhan.ThoiGianGiaoVe = dt.Rows[0]["ThoiGianGiaoVe"].ToString();
-           
+            if (dt.Rows.Count > 0)
+            {
+                NguoiNhan.Ten = dt.Rows[0]["Ten"].ToString();
+                NguoiNhan.DiaChi = dt.Rows[0]["DiaChi"].ToString();
+                NguoiNhan.MaThanhPho = dt.Rows[0]["MaThanhPho"].ToString();
+                NguoiNhan.DienThoai = dt.Rows[0]["DienThoai"].ToString();
+                NguoiNhan.Email = dt.Rows[0]["Email"].ToString();
+                NguoiNhan.YeuCauKhac = dt.Rows[0]["YeuCauKhac"].ToString();
+                NguoiNhan.ThoiGianGiaoVe = dt.Rows[0]["ThoiGianGiaoVe"].ToString();
+            }
+            else
+            {
+                NguoiNhan = null;
+            }
             return NguoiNhan;
         }
     }

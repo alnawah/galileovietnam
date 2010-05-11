@@ -41,7 +41,7 @@ namespace ShipBooking.Controls
             TinhTrangChuyen obj = new TinhTrangChuyen();
             obj = TinhTrangChuyenDB.GetInfo(strHanhTrinh);
 
-            if (obj.TinhTrang != null)
+            if (obj != null)
             {
                 if (obj.TinhTrang.Trim() == "yes")
                 {
