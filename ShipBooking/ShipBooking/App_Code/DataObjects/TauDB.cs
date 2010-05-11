@@ -45,7 +45,6 @@ namespace ShipBooking
         {
             DataTable dt = ShipBookingData.FillDataTable("spTau_SelectByID", "@MaSoTau", MaSoTau);
             Tau tau = new Tau();
-
             if (dt.Rows.Count > 0)
             {
                 tau.MaSoTau = dt.Rows[0]["MaSoTau"].ToString();

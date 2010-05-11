@@ -85,15 +85,18 @@ namespace ShipBooking.Controls
         {
             DatVeControl.listKhach.Clear();
             HanhKhach khach = new HanhKhach();
+            string maHK = "";
+            Random rdm = new Random();
+            maHK = "HK" + rdm.Next(10000, 99999).ToString().Trim();
 
-            khach.MaHK = "HK01";
+            khach.MaHK = maHK.Trim();
             khach.Ten = txtHoTen.Text;
             khach.DiaChi = txtDiaChi.Text;
             khach.QuocTich = ddlQuocTich.SelectedItem.Text;
             khach.DoTuoi = ddlDoTuoi.SelectedItem.Text;
             khach.DienThoai = txtSoDienThoai.Text;
             khach.Email = txtEmail.Text;
-            khach.MaBF = "BF01";
+            khach.MaBF = "";
 
             DatVeControl.listKhach.Add(khach);
         }

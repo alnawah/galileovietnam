@@ -48,19 +48,26 @@ namespace ShipBooking
         {
             DataTable dt = ShipBookingData.FillDataTable("spBookingFile_SelectByID", "@MaBF", MaBF);
             BookingFile bf = new BookingFile();
-            bf.LoaiChuyen = dt.Rows[0]["LoaiChuyen"].ToString();
-            bf.NoiDi = dt.Rows[0]["NoiDi"].ToString();
-            bf.NoiDen = dt.Rows[0]["NoiDen"].ToString();
-            bf.NgayDi = DateTime.Parse(dt.Rows[0]["NgayDi"].ToString());
-            bf.NgayVe = DateTime.Parse(dt.Rows[0]["NgayVe"].ToString());
-            bf.ThoiGian = dt.Rows[0]["ThoiGian"].ToString();
-            bf.OpenChecking = Convert.ToBoolean(dt.Rows[0]["OpenChecking"].ToString());
-            bf.LoaiVe = dt.Rows[0]["LoaiVe"].ToString();
-            bf.SoGhe = dt.Rows[0]["SoGhe"].ToString();
-            bf.GiaTien = dt.Rows[0]["GiaTien"].ToString();
-            bf.ThanhToan = dt.Rows[0]["ThanhToan"].ToString();
-            bf.MaNguoiNhan = dt.Rows[0]["MaNguoiNhan"].ToString();
-            bf.HanhTrinh = dt.Rows[0]["HanhTrinh"].ToString();
+            if (dt.Rows.Count > 0)
+            {
+                bf.LoaiChuyen = dt.Rows[0]["LoaiChuyen"].ToString();
+                bf.NoiDi = dt.Rows[0]["NoiDi"].ToString();
+                bf.NoiDen = dt.Rows[0]["NoiDen"].ToString();
+                bf.NgayDi = DateTime.Parse(dt.Rows[0]["NgayDi"].ToString());
+                bf.NgayVe = DateTime.Parse(dt.Rows[0]["NgayVe"].ToString());
+                bf.ThoiGian = dt.Rows[0]["ThoiGian"].ToString();
+                bf.OpenChecking = Convert.ToBoolean(dt.Rows[0]["OpenChecking"].ToString());
+                bf.LoaiVe = dt.Rows[0]["LoaiVe"].ToString();
+                bf.SoGhe = dt.Rows[0]["SoGhe"].ToString();
+                bf.GiaTien = dt.Rows[0]["GiaTien"].ToString();
+                bf.ThanhToan = dt.Rows[0]["ThanhToan"].ToString();
+                bf.MaNguoiNhan = dt.Rows[0]["MaNguoiNhan"].ToString();
+                bf.HanhTrinh = dt.Rows[0]["HanhTrinh"].ToString();
+            }
+            else
+            {
+                bf = null;
+            }
             return bf;
         }
 

@@ -57,6 +57,10 @@ namespace ShipBooking
                 obj.GiaVe3 = dt.Rows[0]["GiaVe3"].ToString();
                 obj.MaSoTau = dt.Rows[0]["MaSoTau"].ToString();
             }
+            else
+            {
+                obj = null;
+            }
             return obj;
         }
     }
