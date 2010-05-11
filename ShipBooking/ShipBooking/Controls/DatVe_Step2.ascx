@@ -151,6 +151,9 @@
 <p style="text-align: center">
     <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/ThemHanhKhach.aspx">Thêm hoặc sửa danh sách khách</asp:LinkButton>
 </p>
+<p style="text-align: center">
+    <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
+</p>
 <table class="tblThongTinDatCho_Summary_Style">
     <tr>
         <td bgcolor="#006699" class="table_header_style">
@@ -166,10 +169,6 @@
                         <asp:TextBox ID="txtTenNguoiNhan" runat="server" Width="279px"></asp:TextBox>
                         &nbsp;<span class="warning_text">(*)
                         </span>
-                        <asp:RequiredFieldValidator 
-                            ID="RequiredFieldValidator1" runat="server" 
-                            ErrorMessage="RequiredFieldValidator" Text="Bạn phải nhập tên người nhận"
-                            ControlToValidate="txtTenNguoiNhan" Visible="False"></asp:RequiredFieldValidator>
                         </td>
                 </tr>
                 <tr>
@@ -180,10 +179,6 @@
                             TextMode="MultiLine"></asp:TextBox>
                     &nbsp;<span class="warning_text">(*)
                         </span>
-                        <asp:RequiredFieldValidator 
-                            ID="RequiredFieldValidator2" runat="server" 
-                            ErrorMessage="RequiredFieldValidator" Text="Bạn phải nhập địa chỉ"
-                            ControlToValidate="txtDiaChiNguoiNhan" Visible="False"></asp:RequiredFieldValidator>
                         </td>
                 </tr>
                 <tr>
@@ -199,10 +194,6 @@
                         Điện thoại</td>
                     <td class="ThongTinDatCho_Detail">
                         <asp:TextBox ID="txtDienThoaiNguoiNhan" runat="server" Width="163px"></asp:TextBox>&nbsp;<span class="warning_text">(*)</span>
-                        <asp:RequiredFieldValidator 
-                            ID="RequiredFieldValidator3" runat="server" 
-                            ErrorMessage="RequiredFieldValidator" Text="Bạn phải nhập số điện thoại"
-                            ControlToValidate="txtDienThoaiNguoiNhan" Visible="False"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -210,10 +201,6 @@
                         Email</td>
                     <td class="ThongTinDatCho_Detail">
                         <asp:TextBox ID="txtEmailNguoiNhan" runat="server" Width="279px"></asp:TextBox>&nbsp;<span class="warning_text">(*)</span>
-                        <asp:RequiredFieldValidator 
-                            ID="RequiredFieldValidator4" runat="server" 
-                            ErrorMessage="RequiredFieldValidator" Text="Bạn phải nhập email"
-                            ControlToValidate="txtEmailNguoiNhan" Visible="False"></asp:RequiredFieldValidator>
                         </td>
                 </tr>
                 <tr>

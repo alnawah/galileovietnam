@@ -39,7 +39,7 @@ namespace ShipBooking.Controls
         protected void Button1_Click1(object sender, EventArgs e)
         {
             bool isValidDate = false;
-            isValidDate = CheckDate();
+            isValidDate = CheckDateNgayDi();
             if (isValidDate == false)
             {
                 txtNgayDi.Text = "";
@@ -48,8 +48,25 @@ namespace ShipBooking.Controls
             }
             else
             {
-                GetBookingData();
-                Response.Redirect("ThongTinKhach.aspx");
+                if (rblLoaiHanhTrinh.SelectedValue == "KhuHoi")
+                {
+                    if (CheckDateNgayVe() == false)
+                    {
+                        txtNgayVe.Text = "";
+                        txtNgayVe.Focus();
+                        return;
+                    }
+                    else
+                    {
+                        GetBookingData();
+                        Response.Redirect("ThongTinKhach.aspx");
+                    }
+                }
+                else 
+                {
+                    GetBookingData();
+                    Response.Redirect("ThongTinKhach.aspx");
+                }
             }
         }
 
@@ -186,7 +203,14 @@ namespace ShipBooking.Controls
             bf.NgayDi = DateTime.Parse(txtNgayDi.Text.Trim());
             if (rblLoaiHanhTrinh.SelectedValue == "KhuHoi")
             {
-                bf.NgayVe = DateTime.Parse(txtNgayVe.Text.Trim());
+                if (CheckDateNgayVe() == true)
+                {
+                    bf.NgayVe = DateTime.Parse(txtNgayVe.Text.Trim());
+                }
+                else
+                {
+                    return;
+                }
             }
             else
             {
@@ -292,7 +316,7 @@ namespace ShipBooking.Controls
             rdbSoGhe.Items.Clear();
         }
 
-        protected bool CheckDate()
+        protected bool CheckDateNgayDi()
         {
             bool isValid = false;
 
@@ -303,6 +327,32 @@ namespace ShipBooking.Controls
                 if (dt < DateTime.Now.Date)
                 {
                     lblMsg.Text = "Bạn không được nhập ngày trước ngày hiện tại";
+                }
+                else
+                {
+                    isValid = true;
+                }
+            }
+            catch
+            {
+                lblMsg.Text = "Ngày không hợp lệ";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        protected bool CheckDateNgayVe()
+        {
+            bool isValid = false;
+
+            string strDate = txtNgayVe.Text.Trim();
+            try
+            {
+                DateTime dt = DateTime.Parse(strDate);
+                if (dt < DateTime.Parse(txtNgayDi.Text.Trim()))
+                {
+                    lblMsg.Text = "Ngày về phải sau ngày đi";
                 }
                 else
                 {

@@ -27,7 +27,7 @@ namespace ShipBooking.Controls
             if (txtUserName.Text.ToLower().Trim() == "admin" && txtPassword.Text == "admin")
             {
                 bLogin = true;
-                Response.Redirect("Admin.aspx");
+                Response.Redirect("Admin_Functions.aspx");
             }
             else
             {

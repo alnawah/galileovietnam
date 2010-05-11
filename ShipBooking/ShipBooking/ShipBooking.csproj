@@ -64,6 +64,20 @@
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin_BookingFile.aspx.cs">
+      <DependentUpon>Admin_BookingFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_BookingFile.aspx.designer.cs">
+      <DependentUpon>Admin_BookingFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Functions.aspx.cs">
+      <DependentUpon>Admin_Functions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Functions.aspx.designer.cs">
+      <DependentUpon>Admin_Functions.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Tau.aspx.cs">
       <DependentUpon>Admin_Tau.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -73,6 +87,13 @@
     </Compile>
     <Compile Include="App_Code\DataObjects\BookingFile.cs" />
     <Compile Include="App_Code\DataObjects\BookingFileDB.cs" />
+    <Compile Include="Controls\AdminBookingFileControl.ascx.cs">
+      <DependentUpon>AdminBookingFileControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdminBookingFileControl.ascx.designer.cs">
+      <DependentUpon>AdminBookingFileControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\AdminControl.ascx.cs">
       <DependentUpon>AdminControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -194,6 +215,7 @@
     </Compile>
     <Compile Include="App_Code\DataObjects\HanhKhach.cs" />
     <Compile Include="App_Code\DatabaseUtilities\ExecuteDataUtilities.cs" />
+    <Compile Include="App_Code\DataObjects\HanhKhachDB.cs" />
     <Compile Include="KetThucBooking.aspx.cs">
       <DependentUpon>KetThucBooking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -245,12 +267,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin.aspx" />
+    <Content Include="Admin_BookingFile.aspx" />
+    <Content Include="Admin_Functions.aspx" />
     <Content Include="Admin_Tau.aspx" />
     <Content Include="App_Data\ShipBooking.mdf">
     </Content>
     <Content Include="App_Data\ShipBooking_log.ldf">
       <DependentUpon>ShipBooking.mdf</DependentUpon>
     </Content>
+    <Content Include="Controls\AdminBookingFileControl.ascx" />
     <Content Include="Controls\AdminControl.ascx" />
     <Content Include="Controls\AdminTauControl.ascx" />
     <Content Include="Controls\DatVeControl.ascx" />

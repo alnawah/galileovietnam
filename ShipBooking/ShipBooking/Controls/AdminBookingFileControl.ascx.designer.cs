@@ -11,61 +11,34 @@
 namespace ShipBooking.Controls {
     
     
-    public partial class DatVeControl {
+    public partial class AdminBookingFileControl {
         
         /// <summary>
-        /// Image1 control.
+        /// rblTieuChiTimKiem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.RadioButtonList rblTieuChiTimKiem;
         
         /// <summary>
-        /// lblMsg control.
+        /// txtKeyword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMsg;
+        protected global::System.Web.UI.WebControls.TextBox txtKeyword;
         
         /// <summary>
-        /// rblLoaiHanhTrinh control.
+        /// txtNgay1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblLoaiHanhTrinh;
-        
-        /// <summary>
-        /// ddlNoiDi control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlNoiDi;
-        
-        /// <summary>
-        /// ddlNoiDen control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlNoiDen;
-        
-        /// <summary>
-        /// txtNgayDi control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNgayDi;
+        protected global::System.Web.UI.WebControls.TextBox txtNgay1;
         
         /// <summary>
         /// imgCalendar1 control.
@@ -86,31 +59,22 @@ namespace ShipBooking.Controls {
         protected global::System.Web.UI.WebControls.Calendar calEventDate;
         
         /// <summary>
-        /// ddlThoiGian control.
+        /// lblDateFormat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlThoiGian;
+        protected global::System.Web.UI.WebControls.Label lblDateFormat;
         
         /// <summary>
-        /// lblNgayVe control.
+        /// txtNgay2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNgayVe;
-        
-        /// <summary>
-        /// txtNgayVe control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNgayVe;
+        protected global::System.Web.UI.WebControls.TextBox txtNgay2;
         
         /// <summary>
         /// imgCalendar2 control.
@@ -131,48 +95,30 @@ namespace ShipBooking.Controls {
         protected global::System.Web.UI.WebControls.Calendar Calendar1;
         
         /// <summary>
-        /// lblDateFormat control.
+        /// lblDateFormat0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDateFormat;
+        protected global::System.Web.UI.WebControls.Label lblDateFormat0;
         
         /// <summary>
-        /// chkOpen control.
+        /// btnSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkOpen;
+        protected global::System.Web.UI.WebControls.Button btnSearch;
         
         /// <summary>
-        /// ddlLoaiVe control.
+        /// grwResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlLoaiVe;
-        
-        /// <summary>
-        /// rdbSoGhe control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rdbSoGhe;
-        
-        /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.GridView grwResult;
     }
 }

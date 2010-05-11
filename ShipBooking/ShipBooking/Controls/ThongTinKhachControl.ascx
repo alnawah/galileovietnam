@@ -149,8 +149,9 @@
             </td>
     </tr>
 </table>
-<p>
-    &nbsp;</p>
+<p style="text-align: center">
+    <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
+</p>
 <table class="step1_tblThongTinDatCho_Summary_Style">
     <tr>
         <td bgcolor="#006699" class="step1_table_header_style">
@@ -165,9 +166,6 @@
                     <td>
                         <asp:TextBox ID="txtHoTen" runat="server" Width="250px"></asp:TextBox>
                     &nbsp;<span class="step1_warning">(*) </span>
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
-        ErrorMessage="RequiredFieldValidator" ControlToValidate="txtHoTen"
-        Text="Bạn phải nhập họ tên"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -177,9 +175,6 @@
                         <asp:TextBox ID="txtDiaChi" runat="server" Height="100px" TextMode="MultiLine" 
                             Width="250px"></asp:TextBox>
                         <span class="step1_warning">(*)
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-        ErrorMessage="RequiredFieldValidator" ControlToValidate="txtDiaChi"
-        Text="Bạn phải địa chỉ"></asp:RequiredFieldValidator>
                         </span>
                     </td>
                 </tr>
@@ -190,9 +185,6 @@
                         <asp:DropDownList ID="ddlQuocTich" runat="server" Height="22px" Width="160px">
                         </asp:DropDownList>
                     &nbsp;<span class="step1_warning">(*)
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
-        ErrorMessage="RequiredFieldValidator" ControlToValidate="ddlQuocTich"
-        Text="Bạn phải chọn quốc tịch"></asp:RequiredFieldValidator>
                         </span></td>
                 </tr>
                 <tr>
@@ -202,9 +194,6 @@
                         <asp:DropDownList ID="ddlDoTuoi" runat="server" Height="22px" Width="160px">
                         </asp:DropDownList>
                     &nbsp;<span class="step1_warning">(*)
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
-        ErrorMessage="RequiredFieldValidator" ControlToValidate="ddlDoTuoi"
-        Text="Bạn phải chọn độ tuổi"></asp:RequiredFieldValidator>
                         </span></td>
                 </tr>
                 <tr>
@@ -213,9 +202,6 @@
                     <td>
                         <asp:TextBox ID="txtSoDienThoai" runat="server" Width="138px"></asp:TextBox>
                         &nbsp;<span class="step1_warning">(*) 
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
-        ErrorMessage="RequiredFieldValidator" ControlToValidate="txtSoDienThoai"
-        Text="Bạn phải nhập số điện thoại"></asp:RequiredFieldValidator>
                         </span>
                         </td>
                 </tr>
@@ -225,9 +211,6 @@
                     <td>
                         <asp:TextBox ID="txtEmail" runat="server" Width="250px"></asp:TextBox>
                     &nbsp;<span class="step1_warning">(*) 
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" 
-        ErrorMessage="RequiredFieldValidator" ControlToValidate="txtEmail"
-        Text="Bạn phải nhập email"></asp:RequiredFieldValidator>
                         </span>
                     </td>
                 </tr>
