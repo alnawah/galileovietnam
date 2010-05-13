@@ -68,7 +68,7 @@
     </style>
 <p style="text-align: center">
     <asp:Image ID="Image1" runat="server" Height="55px" 
-        ImageUrl="~/Images/admin.jpg" Width="362px" />
+        ImageUrl="~/Images/quan_ly_hanh_trinh.png" Width="402px" />
     </p>
 <table class="tblThongTinDatCho_Summary_Style" align="center">
     <tr>
@@ -186,7 +186,7 @@
                     </tr>
                 </table>
                 <br />
-                <asp:Panel ID="panelLichTrinh" runat="server">
+                <asp:Panel ID="panelLichTrinh" runat="server" Visible="false">
                     <table ID="tblLichTrinh" border="1px" class="tblThongTinDatCho_Detail_Style" 
                         style="border: 1px solid #CCCCCC">
                         <tr>
@@ -274,16 +274,17 @@
                     </table>
                 </asp:Panel>
                 <br />
-                <br />
                 </td>
         </tr>
     </table>
 </asp:Panel>
 </center>
 <p style="text-align: center">
+    <asp:Button ID="Button2" runat="server" Text="Button" />
+&nbsp;&nbsp;
     <asp:Button ID="btnSave" runat="server" Text="Save" Width="60px" 
         onclick="btnSave_Click" />
-&nbsp;
+&nbsp;&nbsp;
     <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
 </p>
 

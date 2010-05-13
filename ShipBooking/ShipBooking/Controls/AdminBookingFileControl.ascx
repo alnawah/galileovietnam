@@ -58,11 +58,16 @@
     }
     .style1
     {
-        width: 220px;
+        width: 103px;
     }
 </style>
-<p>
-    &nbsp;</p>
+<p style="text-align: center">
+    <asp:Image ID="Image1" runat="server" Height="55px" 
+        ImageUrl="~/Images/quan_ly_booking.png" Width="362px" />
+</p>
+<p style="text-align: center">
+    <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
+</p>
 <table class="step1_tblThongTinDatCho_Summary_Style">
     <tr>
         <td bgcolor="#006699" class="step1_table_header_style">
@@ -76,10 +81,9 @@
                         Tìm kiếm theo:</td>
                     <td>
                         <asp:RadioButtonList ID="rblTieuChiTimKiem" runat="server" Height="22px" 
-                            RepeatDirection="Horizontal" Width="364px" AutoPostBack="true">
+                            RepeatDirection="Horizontal" Width="217px">
                             <asp:ListItem Value="MaBF">Mã booking file</asp:ListItem>
                             <asp:ListItem Value="TenKhach">Tên khách</asp:ListItem>
-                            <asp:ListItem Value="NguoiNhan">Người nhận vé</asp:ListItem>
                         </asp:RadioButtonList>
                     </td>
                 </tr>
@@ -98,7 +102,7 @@
                         <img id="imgCalendar1" src="~/Images/CalendarIcon.png" alt="" runat="server" 
                             onclick="displayCalendar1()" height="16" />
                         <div id="datePicker1">
-                            <asp:Calendar id="calEventDate" Runat="server" 
+                            <asp:Calendar id="calStartDate" Runat="server" 
                                 BackColor="#FFFFCC" BorderColor="#FFCC66" BorderWidth="1px" 
                                 DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" 
                                 ForeColor="#663399" Height="200px" ShowGridLines="True" Width="220px" 
@@ -125,7 +129,7 @@
                         <img id="imgCalendar2" src="~/Images/CalendarIcon.png" alt="" runat="server" 
                             onclick="displayCalendar2()" height="16"/>
                         <div id="datePicker2">
-                            <asp:Calendar id="Calendar1" Runat="server" BackColor="#FFFFCC" 
+                            <asp:Calendar id="calEndDate" Runat="server" BackColor="#FFFFCC" 
                                 BorderColor="#FFCC66" BorderWidth="1px" DayNameFormat="Shortest" 
                                 Font-Names="Verdana" Font-Size="8pt" ForeColor="#663399" Height="200px" 
                                 ShowGridLines="True" Width="220px" 
@@ -149,8 +153,14 @@
     </tr>
 </table>
 <p style="text-align: center">
+    <asp:Button ID="btnBack" runat="server" onclick="btnBack_Click" Text="Quay lại" 
+        Width="97px" />
+&nbsp;&nbsp;
     <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" Width="97px" 
         onclick="btnSearch_Click" />
+</p>
+<p style="text-align: center">
+    <asp:Label ID="lblResult" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
 </p>
 
 <center>
@@ -160,19 +170,30 @@
         <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
         <RowStyle BackColor="White" ForeColor="#003399" />
         <Columns>
-            <asp:BoundField DataField="MaBF" HeaderText="Mã booking file" />
+            <asp:BoundField DataField="MaBF" HeaderText="Booking ID" />
+            <asp:BoundField DataField="Ten" HeaderText="Khách" />
             <asp:BoundField DataField="LoaiChuyen" HeaderText="Loại chuyến" />
+            <asp:BoundField DataField="NoiDi" HeaderText="Nơi đi" />
             <asp:BoundField DataField="NoiDen" HeaderText="Nơi đến" />
-            <asp:BoundField DataField="NgayDi" HeaderText="Ngày khởi hành" />
-            <asp:BoundField DataField="NgayVe" HeaderText="Ngày về" />
-            <asp:BoundField DataField="ThoiGian" HeaderText="Thời gian" />
+            <asp:BoundField DataField="NgayDi" HeaderText="Ngày đi" >
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:BoundField>
+            <asp:BoundField DataField="NgayVe" HeaderText="Ngày về" >
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:BoundField>
+            <asp:BoundField DataField="ThoiGian" HeaderText="Thời gian" >
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:BoundField>
             <asp:BoundField DataField="LoaiVe" HeaderText="Loại vé" />
-            <asp:BoundField DataField="GiaTien" HeaderText="Giá tiền" />
+            <asp:BoundField DataField="GiaTien" HeaderText="Giá tiền" >
+                <ItemStyle HorizontalAlign="Right" />
+            </asp:BoundField>
         </Columns>
         <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
         <SelectedRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
         <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
     </asp:GridView>
+    <br />
 </center>
 
 

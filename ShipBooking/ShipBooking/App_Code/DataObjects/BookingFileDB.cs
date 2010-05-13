@@ -50,6 +50,7 @@ namespace ShipBooking
             BookingFile bf = new BookingFile();
             if (dt.Rows.Count > 0)
             {
+                bf.MaBF = dt.Rows[0]["MaBF"].ToString();
                 bf.LoaiChuyen = dt.Rows[0]["LoaiChuyen"].ToString();
                 bf.NoiDi = dt.Rows[0]["NoiDi"].ToString();
                 bf.NoiDen = dt.Rows[0]["NoiDen"].ToString();
@@ -98,6 +99,44 @@ namespace ShipBooking
             }
 
             return BFList;
+        }
+
+        public static List<BookingFile> GetListBookingFileByTenKhach(string tenkhach)
+        {
+            List<BookingFile> BFList = new List<BookingFile>();
+            BookingFile BF;
+            DataTable dt = ShipBookingData.FillDataTable("spHanhKhach_SelectBookingByKhach", "@Ten", tenkhach);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                BF = new BookingFile();
+                BF.LoaiChuyen = dt.Rows[i]["LoaiChuyen"].ToString();
+                BF.NoiDi = dt.Rows[i]["NoiDi"].ToString();
+                BF.NoiDen = dt.Rows[i]["NoiDen"].ToString();
+                BF.NgayDi = DateTime.Parse(dt.Rows[i]["NgayDi"].ToString());
+                BF.NgayVe = DateTime.Parse(dt.Rows[i]["NgayVe"].ToString());
+                BF.ThoiGian = dt.Rows[i]["ThoiGian"].ToString();
+                BF.OpenChecking = Convert.ToBoolean(dt.Rows[0]["OpenChecking"].ToString());
+                BF.LoaiVe = dt.Rows[i]["LoaiVe"].ToString();
+                BF.SoGhe = dt.Rows[i]["SoGhe"].ToString();
+                BF.GiaTien = dt.Rows[i]["GiaTien"].ToString();
+                BF.ThanhToan = dt.Rows[i]["ThanhToan"].ToString();
+                BF.MaNguoiNhan = dt.Rows[i]["MaNguoiNhan"].ToString();
+                BF.HanhTrinh = dt.Rows[i]["HanhTrinh"].ToString();
+
+                BFList.Add(BF);
+                BF = null;
+            }
+
+            return BFList;
+        }
+
+        public static DataSet GetDataSetBookingFileByTenKhach(string tenkhach, string stardate, string enddate)
+        {
+            DataSet ds = new DataSet();
+            string[] parameters = new string[] { "@Ten", "@StartDate", "@EndDate" };
+            string[] values = new string[] { tenkhach, stardate, enddate }; 
+            ds = ShipBookingData.FillDataset("spHanhKhach_SelectBookingByKhach", parameters, values);
+            return ds;
         }
     }
 }

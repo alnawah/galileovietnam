@@ -73,7 +73,7 @@
 </style>
 <p style="text-align: center">
     <asp:Image ID="Image1" runat="server" Height="59px" 
-        ImageUrl="~/Images/text_banvetau.png" Width="600px" />
+        ImageUrl="~/Images/dat_ve_tau.png" Width="253px" />
 </p>
 <table class="tblThongTinDatCho_Summary_Style">
     <tr>

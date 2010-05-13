@@ -86,7 +86,29 @@ namespace ShipBooking
                 HKList.Add(khach);
                 khach = null;
             }
+            return HKList;
+        }
 
+        public static List<HanhKhach> GetListHanhKhachByBookingID(string MaBF)
+        {
+            List<HanhKhach> HKList = new List<HanhKhach>();
+            HanhKhach khach;
+            DataTable dt = ShipBookingData.FillDataTable("spHanhKhach_SelectByBookingID", "@MaBF", MaBF);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                khach = new HanhKhach();
+                khach.MaHK = dt.Rows[i]["MaHK"].ToString();
+                khach.Ten = dt.Rows[i]["Ten"].ToString();
+                khach.DiaChi = dt.Rows[i]["DiaChi"].ToString();
+                khach.QuocTich = dt.Rows[i]["QuocTich"].ToString();
+                khach.DoTuoi = dt.Rows[i]["DoTuoi"].ToString();
+                khach.DienThoai = dt.Rows[i]["DienThoai"].ToString();
+                khach.Email = dt.Rows[i]["Email"].ToString();
+                khach.MaBF = dt.Rows[i]["MaBF"].ToString();
+
+                HKList.Add(khach);
+                khach = null;
+            }
             return HKList;
         }
     }

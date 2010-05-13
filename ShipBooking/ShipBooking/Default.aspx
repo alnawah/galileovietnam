@@ -13,14 +13,15 @@
         <tr>
             <td>
                 <asp:ImageButton ID="imgbtnXemLichChuyen" runat="server" ImageUrl="~/Images/lich_chuyen.png" 
-                    Width="492px" Height="65px" onclick="imgbtnXemLichChuyen_Click" />
+                    Width="492px" Height="65px" onclick="imgbtnXemLichChuyen_Click" 
+                    Visible="False" />
             </td>
         </tr>
         <tr>
             <td>
                 <asp:ImageButton ID="imgbtnTinhTrangCho" runat="server" ImageUrl="~/Images/tinh_trang_cho.png" 
                     Width="492px" Height="65px" style="text-align: center" 
-                    onclick="imgbtnTinhTrangCho_Click" />
+                    onclick="imgbtnTinhTrangCho_Click" Visible="False" />
             </td>
         </tr>
         <tr>

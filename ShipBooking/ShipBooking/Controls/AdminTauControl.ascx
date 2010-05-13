@@ -49,7 +49,7 @@
 </style>
 <p style="text-align: center">
     <asp:Image ID="Image1" runat="server" Height="55px" 
-        ImageUrl="~/Images/admin.jpg" Width="362px" />
+        ImageUrl="~/Images/quan_ly_tau_thuy.png" Width="362px" />
 </p>
 <p style="text-align: center">
     <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>

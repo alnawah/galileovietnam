@@ -46,7 +46,7 @@
 </style>
 <p style="text-align: center">
     <asp:Image ID="Image1" runat="server" Height="59px" 
-        ImageUrl="~/Images/text_banvetau.png" Width="600px" />
+        ImageUrl="~/Images/thong_tin_nguoi_nhan_ve.png" Width="600px" />
     <br />
 </p>
 <p style="text-align: center">
