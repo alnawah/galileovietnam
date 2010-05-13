@@ -111,5 +111,12 @@ namespace ShipBooking.Module
             get { return _HanhTrinh; }
             set { _HanhTrinh = value; }
         }
+
+        string _TenKhach;
+        public string TenKhach
+        {
+            get { return _TenKhach; }
+            set { _TenKhach = value; }
+        }
     }
 }

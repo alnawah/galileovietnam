@@ -61,7 +61,7 @@
 </style>
 <p style="text-align: center">
     <asp:Image ID="Image1" runat="server" Height="59px" 
-        ImageUrl="~/Images/text_banvetau.png" Width="600px" />
+        ImageUrl="~/Images/thong_tin_tinh_trang_chuyen.png" Width="621px" />
 </p>
 <p style="text-align: center">
     <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>

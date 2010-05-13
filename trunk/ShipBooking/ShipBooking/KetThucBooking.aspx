@@ -8,11 +8,14 @@
                 <td class="style1">
                     &nbsp;</td>
                 <td>
-        Chúc mừng quý khách đã hoàn tất việc đặt chỗ.<br />
-        Chúng tôi sẽ thông báo cho quý khách kết quả đặt chỗ trong thời gian ngắn nhất.<br />
-        Mọi thông tin xin quý khách liên hệ với chúng tôi qua địa chỉ email: quangminh_1203@yahoo.com<br />
+        Chúc mừng bạn đã hoàn tất việc đặt chỗ.<br />
+                    Mã số Booking File của bạn là:&nbsp;
+                    <asp:Label ID="lblMaBF" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
+                    <br />
+                    Chúng tôi sẽ thông báo cho bạn kết quả đặt chỗ trong thời gian ngắn nhất.<br />
+        Mọi thông tin xin liên hệ với chúng tôi qua địa chỉ email: quangminh_1203@yahoo.com<br />
         Hoặc số điện thoại 0975750080<br />
-        Xin chân thành cảm ơn quý khách đã sử dụng dịch vụ của chúng tôi.<br />
+        Xin chân thành cảm bạn đã sử dụng dịch vụ của chúng tôi.<br />
         <b>Galileo Vietnam</b></td>
             </tr>
             <tr>

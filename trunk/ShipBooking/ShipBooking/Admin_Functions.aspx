@@ -4,13 +4,21 @@
 
     <p style="text-align: center">
         <br />
-        <asp:Button ID="btnAdminBF" runat="server" Text="Quản lý thông tin đặt chỗ" 
-            onclick="btnAdminBF_Click" />
         &nbsp;&nbsp;
-        <asp:Button ID="btnAdminSegment" runat="server" 
-            Text="Quản lý thông tin hành trình" onclick="btnAdminSegment_Click" />
+        </p>
+    <p style="text-align: center">
+        <asp:ImageButton ID="imgbtnQLBooking" runat="server" 
+            ImageUrl="~/Images/admin_quan_ly_booking.png" style="text-align: center" 
+            Width="500px" onclick="imgbtnQLBooking_Click"/>
+    </p>
+    <p style="text-align: center">
+        <asp:ImageButton ID="imgbtnQLHanhtrinh" runat="server" 
+            ImageUrl="~/Images/admin_quan_ly_hanhtrinh.png" style="text-align: center" 
+            Width="500px" onclick="imgbtnQLHanhtrinh_Click"/>
     </p>
     <p style="text-align: center">
         &nbsp;</p>
-
+    <p style="text-align: center">
+        &nbsp;</p>
+    
 </asp:Content>

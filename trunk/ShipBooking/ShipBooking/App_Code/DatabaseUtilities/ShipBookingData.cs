@@ -103,7 +103,7 @@ namespace ShipBooking.Library
         }
         #endregion
 
-        #region Phương thức điền dữ liệu vào DataSet
+        #region Phương thức điền dữ liệu vào DataSet bằng lệnh truy vấn trực tiếp
         public static DataSet FillDataset(string ssql)
         {
             DataSet ds = new DataSet();
@@ -120,6 +120,33 @@ namespace ShipBooking.Library
                 System.Web.HttpContext.Current.Response.Write(exp.ToString());
             }
             CloseData();
+            return ds;
+        }
+        #endregion
+
+        #region Phương thức điền dữ liệu vào DataSet bằng thủ tục truy vấn với tham số
+        public static DataSet FillDataset(string store, string[] parameters, string[] values)
+        {
+            OpenData();
+            DataSet ds = new DataSet();
+            cmd = new SqlCommand();
+            cmd.CommandText = store;
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.StoredProcedure;
+            for (int i = 0; i < parameters.Length; i++)
+            {
+                cmd.Parameters.AddWithValue(parameters[i], values[i]);
+            }
+            try
+            {
+                da = new SqlDataAdapter(cmd);
+                da.Fill(ds);
+                da.Dispose();
+            }
+            finally
+            {
+                CloseData();
+            }
             return ds;
         }
         #endregion

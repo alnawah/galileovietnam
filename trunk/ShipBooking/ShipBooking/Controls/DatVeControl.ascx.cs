@@ -273,6 +273,8 @@ namespace ShipBooking.Controls
         protected void calEventDate_SelectionChanged(object sender, EventArgs e)
         {
             txtNgayDi.Text = calEventDate.SelectedDate.ToString("d");
+            ResetRdbSoGhe();
+            FillDataToRdbSoGhe();
         }
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)

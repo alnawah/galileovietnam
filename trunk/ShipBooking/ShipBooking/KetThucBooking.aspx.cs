@@ -10,6 +10,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
+using ShipBooking.Controls;
 
 namespace ShipBooking
 {
@@ -17,7 +18,10 @@ namespace ShipBooking
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                lblMaBF.Text = DatVeControl.bf.MaBF.ToUpper().Trim();
+            }
         }
     }
 }

@@ -190,6 +190,11 @@ namespace ShipBooking.Controls
             Response.Redirect("Admin_Tau.aspx");
         }
 
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Admin_Functions.aspx");
+        }
+
 
     }
 }

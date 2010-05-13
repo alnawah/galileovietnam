@@ -29,12 +29,12 @@ namespace ShipBooking
             }
         }
 
-        protected void btnAdminBF_Click(object sender, EventArgs e)
+        protected void imgbtnQLBooking_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("Admin_BookingFile.aspx");
         }
 
-        protected void btnAdminSegment_Click(object sender, EventArgs e)
+        protected void imgbtnQLHanhtrinh_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("Admin.aspx");
         }
