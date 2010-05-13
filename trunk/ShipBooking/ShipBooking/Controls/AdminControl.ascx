@@ -39,11 +39,6 @@
         width: 170px;
         text-align: left;
     }
-    .style1
-    {
-        width: 122px;
-        text-align: right;
-    }
     .ngay_style_column
     {
         width: 100px;
@@ -65,6 +60,14 @@
         width: 96px;
         text-align: right;
     }
+    .style6
+    {
+        width: 239px;
+    }
+    .style7
+    {
+        width: 263px;
+    }
     </style>
 <p style="text-align: center">
     <asp:Image ID="Image1" runat="server" Height="55px" 
@@ -81,25 +84,28 @@
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Từ: </td>
-                    <td class="ThongTinDatCho_Detail">
+                    <td class="style6">
                         <asp:DropDownList ID="ddlNoiDi" runat="server" Height="22px" Width="200px" 
                             AutoPostBack="true" onselectedindexchanged="ddlNoiDi_SelectedIndexChanged">
                         </asp:DropDownList>
                     </td>
-                    <td class="style1">
-                        Đến: </td>
-                    <td>
+                    <td class="style7">
+                        Đến:&nbsp;&nbsp; &nbsp;&nbsp;
                         <asp:DropDownList ID="ddlNoiDen" runat="server" Height="22px" Width="200px" 
                             AutoPostBack="true" onselectedindexchanged="ddlNoiDen_SelectedIndexChanged">
                         </asp:DropDownList>
+                    </td>
+                    <td>
+                        <asp:Button ID="btnDanhSachTP" runat="server" Height="26px" 
+                            Text="Danh sách thành phố" Width="139px" onclick="btnDanhSachTP_Click" />
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         &nbsp;</td>
-                    <td class="ThongTinDatCho_Detail" align="right">
+                    <td class="style6" align="right">
                         Có chuyến:</td>
-                    <td class="style1">
+                    <td class="style7">
                         <asp:RadioButtonList ID="rblTinhTrangChuyen" runat="server" 
                             RepeatDirection="Horizontal" AutoPostBack="true" 
                             onselectedindexchanged="rblTinhTrangChuyen_SelectedIndexChanged">
@@ -128,36 +134,51 @@
                 <br />
                 <table class="style2" style="border: 1px solid #006699" align="center">
                     <tr align="center">
-                        <td colspan="3" 
+                        <td colspan="2" 
                             style="background-color: #006699; color: #FFFFFF; font-weight: bold;" 
                             align="left">Giá vé</td>
+                        <td align="left" 
+                            style="background-color: #006699; color: #FFFFFF; font-weight: bold;">
+                            &nbsp;</td>
+                        <td align="left" 
+                            style="background-color: #006699; color: #FFFFFF; font-weight: bold;">
+                            &nbsp;</td>
                     </tr>
                     <tr>
-                        <td>
-                            &nbsp;</td>
                         <td align="left" class="style5">
                             Loại thường: </td>
                         <td>
                             <asp:TextBox ID="txtGiaVeThuong" runat="server" Width="176px"></asp:TextBox>
                             &nbsp;(VNĐ)</td>
+                        <td>
+                            Số lượng vé:</td>
+                        <td>
+                            <asp:TextBox ID="TextBox1" runat="server" Width="79px"></asp:TextBox>
+                        </td>
                     </tr>
                     <tr>
-                        <td>
-                        </td>
                         <td align="left" class="style5">
                             Loại doanh nhân:</td>
                         <td>
                             <asp:TextBox ID="txtGiaVeDoanhNhan" runat="server" Width="176px"></asp:TextBox>
                             &nbsp;(VNĐ)</td>
+                        <td>
+                            Số lượng vé:</td>
+                        <td>
+                            <asp:TextBox ID="TextBox4" runat="server" Width="79px"></asp:TextBox>
+                        </td>
                     </tr>
                     <tr>
-                        <td>
-                        </td>
                         <td align="left" class="style5">
                             Loại VIP:</td>
                         <td>
                             <asp:TextBox ID="txtGiaVeVIP" runat="server" Width="176px"></asp:TextBox>
                             &nbsp;(VNĐ)</td>
+                        <td>
+                            Số lượng vé:</td>
+                        <td>
+                            <asp:TextBox ID="TextBox5" runat="server" Width="79px"></asp:TextBox>
+                        </td>
                     </tr>
                 </table>
                 <br />
@@ -181,12 +202,12 @@
                         </td>
                         <td>
                             <asp:Button ID="Button1" runat="server" Text="Xem thông tin tàu" 
-                                Width="134px" onclick="Button1_Click" />
+                                Width="134px" onclick="Button1_Click" Height="26px" />
                         </td>
                     </tr>
                 </table>
                 <br />
-                <asp:Panel ID="panelLichTrinh" runat="server" Visible="false">
+                <asp:Panel ID="panelLichTrinh" runat="server" Visible="true">
                     <table ID="tblLichTrinh" border="1px" class="tblThongTinDatCho_Detail_Style" 
                         style="border: 1px solid #CCCCCC">
                         <tr>
@@ -209,33 +230,65 @@
                         </tr>
                         <tr>
                             <td class="ngay_style_column">
+                                Có chuyến</td>
+                            <td class="ngay_style_column">
+                                <asp:CheckBox ID="chkThu2" runat="server" Text="Có" AutoPostBack="true" 
+                                    oncheckedchanged="chkThu2_CheckedChanged" />
+                            </td>
+                            <td class="ngay_style_column">
+                                <asp:CheckBox ID="chkThu3" runat="server" AutoPostBack="true" Text="Có" 
+                                    oncheckedchanged="chkThu3_CheckedChanged" />
+                            </td>
+                            <td class="ngay_style_column">
+                                <asp:CheckBox ID="chkThu4" runat="server" AutoPostBack="true" Text="Có" 
+                                    oncheckedchanged="chkThu4_CheckedChanged" />
+                            </td>
+                            <td class="ngay_style_column">
+                                <asp:CheckBox ID="chkThu5" runat="server" AutoPostBack="true" Text="Có" 
+                                    oncheckedchanged="chkThu5_CheckedChanged" />
+                            </td>
+                            <td class="ngay_style_column">
+                                <asp:CheckBox ID="chkThu6" runat="server" AutoPostBack="true" Text="Có" 
+                                    oncheckedchanged="chkThu6_CheckedChanged" />
+                            </td>
+                            <td class="ngay_style_column">
+                                <asp:CheckBox ID="chkThu7" runat="server" AutoPostBack="true" Text="Có" 
+                                    oncheckedchanged="chkThu7_CheckedChanged" />
+                            </td>
+                            <td class="ngay_style_column">
+                                <asp:CheckBox ID="chkCN" runat="server" AutoPostBack="true" Text="Có" 
+                                    oncheckedchanged="chkCN_CheckedChanged" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ngay_style_column">
                                 Giờ khởi hành</td>
                             <td class="ngay_style_column">
-                                <asp:TextBox ID="TextBox3" runat="server" style="text-align: center" 
+                                <asp:TextBox ID="txtGioKhoiHanh_Thu2" runat="server" style="text-align: center" 
                                     Width="60px"></asp:TextBox>
                             </td>
                             <td class="ngay_style_column">
-                                <asp:TextBox ID="TextBox4" runat="server" style="text-align: center" 
+                                <asp:TextBox ID="txtGioKhoiHanh_Thu3" runat="server" style="text-align: center" 
                                     Width="60px"></asp:TextBox>
                             </td>
                             <td class="ngay_style_column">
-                                <asp:TextBox ID="TextBox5" runat="server" style="text-align: center" 
+                                <asp:TextBox ID="txtGioKhoiHanh_Thu4" runat="server" style="text-align: center" 
                                     Width="60px"></asp:TextBox>
                             </td>
                             <td class="ngay_style_column">
-                                <asp:TextBox ID="TextBox6" runat="server" style="text-align: center" 
+                                <asp:TextBox ID="txtGioKhoiHanh_Thu5" runat="server" style="text-align: center" 
                                     Width="60px"></asp:TextBox>
                             </td>
                             <td class="ngay_style_column">
-                                <asp:TextBox ID="TextBox7" runat="server" style="text-align: center" 
+                                <asp:TextBox ID="txtGioKhoiHanh_Thu6" runat="server" style="text-align: center" 
                                     Width="60px"></asp:TextBox>
                             </td>
                             <td class="ngay_style_column">
-                                <asp:TextBox ID="TextBox8" runat="server" style="text-align: center" 
+                                <asp:TextBox ID="txtGioKhoiHanh_Thu7" runat="server" style="text-align: center" 
                                     Width="60px"></asp:TextBox>
                             </td>
                             <td class="ngay_style_column">
-                                <asp:TextBox ID="TextBox9" runat="server" style="text-align: center" 
+                                <asp:TextBox ID="txtGioKhoiHanh_ChuNhat" runat="server" style="text-align: center" 
                                     Width="60px"></asp:TextBox>
                             </td>
                         </tr>
@@ -243,31 +296,31 @@
                             <td class="ngay_style_column">
                                 Giờ đến</td>
                             <td class="ngay_style_column">
-                                <asp:TextBox ID="TextBox10" runat="server" style="text-align: center" 
+                                <asp:TextBox ID="txtGioDen_Thu2" runat="server" style="text-align: center" 
                                     Width="60px"></asp:TextBox>
                             </td>
                             <td class="ngay_style_column">
-                                <asp:TextBox ID="TextBox11" runat="server" style="text-align: center" 
+                                <asp:TextBox ID="txtGioDen_Thu3" runat="server" style="text-align: center" 
                                     Width="60px"></asp:TextBox>
                             </td>
                             <td class="ngay_style_column">
-                                <asp:TextBox ID="TextBox12" runat="server" style="text-align: center" 
+                                <asp:TextBox ID="txtGioDen_Thu4" runat="server" style="text-align: center" 
                                     Width="60px"></asp:TextBox>
                             </td>
                             <td class="ngay_style_column">
-                                <asp:TextBox ID="TextBox13" runat="server" style="text-align: center" 
+                                <asp:TextBox ID="txtGioDen_Thu5" runat="server" style="text-align: center" 
                                     Width="60px"></asp:TextBox>
                             </td>
                             <td class="ngay_style_column">
-                                <asp:TextBox ID="TextBox14" runat="server" style="text-align: center" 
+                                <asp:TextBox ID="txtGioDen_Thu6" runat="server" style="text-align: center" 
                                     Width="60px"></asp:TextBox>
                             </td>
                             <td class="ngay_style_column">
-                                <asp:TextBox ID="TextBox15" runat="server" style="text-align: center" 
+                                <asp:TextBox ID="txtGioDen_Thu7" runat="server" style="text-align: center" 
                                     Width="60px"></asp:TextBox>
                             </td>
                             <td class="ngay_style_column">
-                                <asp:TextBox ID="TextBox16" runat="server" style="text-align: center" 
+                                <asp:TextBox ID="txtGioDen_ChuNhat" runat="server" style="text-align: center" 
                                     Width="60px"></asp:TextBox>
                             </td>
                         </tr>
@@ -280,11 +333,9 @@
 </asp:Panel>
 </center>
 <p style="text-align: center">
-    <asp:Button ID="Button2" runat="server" Text="Button" />
-&nbsp;&nbsp;
-    <asp:Button ID="btnSave" runat="server" Text="Save" Width="60px" 
-        onclick="btnSave_Click" />
-&nbsp;&nbsp;
-    <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
+    <asp:Button ID="btnSave" runat="server" Text="Save" Width="60px" Height="26px" onclick="btnSave_Click" />
+&nbsp;&nbsp;&nbsp;
+    <asp:Button ID="btnCancel" runat="server" Text="Cancel" Height="26px" />
 </p>
+
 

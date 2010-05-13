@@ -157,41 +157,44 @@ namespace ShipBooking.Controls
             HanhTrinhInfo = TinhTrangChuyenDB.GetInfo(strHanhTrinh);
 
             //Điền tất cả các ghế trên chuyến tàu
-            Tau tau = new Tau();
-            tau = TauDB.GetInfo(HanhTrinhInfo.MaSoTau.Trim());
-            int SoGhe = 0;
-            if (tau != null)
+            if (HanhTrinhInfo != null)
             {
-                SoGhe = Convert.ToInt16(tau.SoGhe);
-            }
-            for (int i = 1; i <= SoGhe; i++)
-            {
-                item = new ListItem();
-                item.Text = Convert.ToString(i);
-                item.Value = Convert.ToString(i);
-                rdbSoGhe.Items.Add(item);
-                item = null;
-            }
-
-            //Remove những ghế đã được chọn trong ngày
-            List<BookingFile> BFList = new List<BookingFile>();
-            BFList = BookingFileDB.GetListBookingFileByDate(txtNgayDi.Text.Trim(), strHanhTrinh);
-            int SoGheDatDat = 0;
-            for (int i = 1; i <= SoGhe; i++)
-            {
-                item = new ListItem();
-                item.Text = Convert.ToString(i);
-                item.Value = Convert.ToString(i);
-
-                for (int j = 0; j < BFList.Count; j++)
+                Tau tau = new Tau();
+                tau = TauDB.GetInfo(HanhTrinhInfo.MaSoTau.Trim());
+                int SoGhe = 0;
+                if (tau != null)
                 {
-                    SoGheDatDat = Convert.ToInt16(BFList[j].SoGhe.Trim());
-                    if (i == SoGheDatDat)
-                    {
-                        rdbSoGhe.Items.Remove(item);
-                    }
+                    SoGhe = Convert.ToInt16(tau.SoGhe);
                 }
-                item = null;
+                for (int i = 1; i <= SoGhe; i++)
+                {
+                    item = new ListItem();
+                    item.Text = Convert.ToString(i);
+                    item.Value = Convert.ToString(i);
+                    rdbSoGhe.Items.Add(item);
+                    item = null;
+                }
+
+                //Remove những ghế đã được chọn trong ngày
+                List<BookingFile> BFList = new List<BookingFile>();
+                BFList = BookingFileDB.GetListBookingFileByDate(txtNgayDi.Text.Trim(), strHanhTrinh);
+                int SoGheDatDat = 0;
+                for (int i = 1; i <= SoGhe; i++)
+                {
+                    item = new ListItem();
+                    item.Text = Convert.ToString(i);
+                    item.Value = Convert.ToString(i);
+
+                    for (int j = 0; j < BFList.Count; j++)
+                    {
+                        SoGheDatDat = Convert.ToInt16(BFList[j].SoGhe.Trim());
+                        if (i == SoGheDatDat)
+                        {
+                            rdbSoGhe.Items.Remove(item);
+                        }
+                    }
+                    item = null;
+                }
             }
         }
 

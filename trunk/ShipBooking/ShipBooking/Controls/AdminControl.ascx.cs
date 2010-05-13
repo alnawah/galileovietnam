@@ -21,6 +21,7 @@ namespace ShipBooking.Controls
         {
             if (!IsPostBack)
             {
+                InitControl();
                 FillData();
                 ListControlUtilities.FillDataToDropDownList(ddlSoHieuTau, "tblTau", "MaSoTau", "MaSoTau");
                 ListControlUtilities.FillDataToDropDownList(ddlNoiDi, "tblThanhPho", "Ten", "MaThanhPho");
@@ -91,7 +92,7 @@ namespace ShipBooking.Controls
             if (rblTinhTrangChuyen.SelectedValue == "Yes")
             {
                 Panel1.Visible = true;
-                if (obj.TinhTrang != null)
+                if (obj != null)
                 {
                     txtGiaVeThuong.Text = obj.GiaVe1.ToLower().Trim();
                     txtGiaVeDoanhNhan.Text = obj.GiaVe2.ToLower().Trim();
@@ -120,11 +121,12 @@ namespace ShipBooking.Controls
             strNoiDen = ddlNoiDen.SelectedValue.ToUpper();
             strHanhTrinh = strNoiDi.Trim() + strNoiDen.Trim();
 
-            TinhTrangChuyen obj = new TinhTrangChuyen();
+            TinhTrangChuyen obj;
             obj = TinhTrangChuyenDB.GetInfo(strHanhTrinh);
 
-            if (obj.HanhTrinh == null)
+            if (obj == null)
             {
+                obj = new TinhTrangChuyen();
                 obj.HanhTrinh = strHanhTrinh;
                 if (rblTinhTrangChuyen.SelectedValue == "Yes")
                 {
@@ -195,6 +197,194 @@ namespace ShipBooking.Controls
             Response.Redirect("Admin_Functions.aspx");
         }
 
+        protected void btnDanhSachTP_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Admin_ThanhPho.aspx");
+        }
 
+        protected void chkThu2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkThu2.Checked == true)
+            {
+                txtGioKhoiHanh_Thu2.Enabled = true;
+                txtGioDen_Thu2.Enabled = true;
+                txtGioKhoiHanh_Thu2.Focus();
+            }
+            else
+            {
+                txtGioKhoiHanh_Thu2.Enabled = false;
+                txtGioDen_Thu2.Enabled = false;
+            }
+        }
+
+        protected void chkThu3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkThu3.Checked == true)
+            {
+                txtGioKhoiHanh_Thu3.Enabled = true;
+                txtGioDen_Thu3.Enabled = true;
+                txtGioKhoiHanh_Thu3.Focus();
+            }
+            else
+            {
+                txtGioKhoiHanh_Thu3.Enabled = false;
+                txtGioDen_Thu3.Enabled = false;
+            }
+        }
+
+        protected void chkThu4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkThu4.Checked == true)
+            {
+                txtGioKhoiHanh_Thu4.Enabled = true;
+                txtGioDen_Thu4.Enabled = true;
+                txtGioKhoiHanh_Thu4.Focus();
+            }
+            else
+            {
+                txtGioKhoiHanh_Thu4.Enabled = false;
+                txtGioDen_Thu4.Enabled = false;
+            }
+        }
+
+        protected void chkThu5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkThu5.Checked == true)
+            {
+                txtGioKhoiHanh_Thu5.Enabled = true;
+                txtGioDen_Thu5.Enabled = true;
+                txtGioKhoiHanh_Thu5.Focus();
+            }
+            else
+            {
+                txtGioKhoiHanh_Thu5.Enabled = false;
+                txtGioDen_Thu5.Enabled = false;
+            }
+        }
+
+        protected void chkThu6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkThu6.Checked == true)
+            {
+                txtGioKhoiHanh_Thu6.Enabled = true;
+                txtGioDen_Thu6.Enabled = true;
+                txtGioKhoiHanh_Thu6.Focus();
+            }
+            else
+            {
+                txtGioKhoiHanh_Thu6.Enabled = false;
+                txtGioDen_Thu6.Enabled = false;
+            }
+        }
+
+        protected void chkThu7_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkThu7.Checked == true)
+            {
+                txtGioKhoiHanh_Thu7.Enabled = true;
+                txtGioDen_Thu7.Enabled = true;
+                txtGioKhoiHanh_Thu7.Focus();
+            }
+            else
+            {
+                txtGioKhoiHanh_Thu7.Enabled = false;
+                txtGioDen_Thu7.Enabled = false;
+            }
+        }
+
+        protected void chkCN_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkCN.Checked == true)
+            {
+                txtGioKhoiHanh_ChuNhat.Enabled = true;
+                txtGioDen_ChuNhat.Enabled = true;
+                txtGioKhoiHanh_ChuNhat.Focus();
+            }
+            else
+            {
+                txtGioKhoiHanh_ChuNhat.Enabled = false;
+                txtGioDen_ChuNhat.Enabled = false;
+            }
+        }
+
+        protected void InitControl()
+        {
+            if (chkThu2.Checked == true)
+            {
+                txtGioKhoiHanh_Thu2.Enabled = true;
+                txtGioDen_Thu2.Enabled = true;
+            }
+            else
+            {
+                txtGioKhoiHanh_Thu2.Enabled = false;
+                txtGioDen_Thu2.Enabled = false;
+            }
+
+            if (chkThu3.Checked == true)
+            {
+                txtGioKhoiHanh_Thu3.Enabled = true;
+                txtGioDen_Thu3.Enabled = true;
+            }
+            else
+            {
+                txtGioKhoiHanh_Thu3.Enabled = false;
+                txtGioDen_Thu3.Enabled = false;
+            }
+
+            if (chkThu4.Checked == true)
+            {
+                txtGioKhoiHanh_Thu4.Enabled = true;
+                txtGioDen_Thu4.Enabled = true;
+            }
+            else
+            {
+                txtGioKhoiHanh_Thu4.Enabled = false;
+                txtGioDen_Thu4.Enabled = false;
+            }
+
+            if (chkThu5.Checked == true)
+            {
+                txtGioKhoiHanh_Thu5.Enabled = true;
+                txtGioDen_Thu5.Enabled = true;
+            }
+            else
+            {
+                txtGioKhoiHanh_Thu5.Enabled = false;
+                txtGioDen_Thu5.Enabled = false;
+            }
+
+            if (chkThu6.Checked == true)
+            {
+                txtGioKhoiHanh_Thu6.Enabled = true;
+                txtGioDen_Thu6.Enabled = true;
+            }
+            else
+            {
+                txtGioKhoiHanh_Thu6.Enabled = false;
+                txtGioDen_Thu6.Enabled = false;
+            }
+
+            if (chkThu7.Checked == true)
+            {
+                txtGioKhoiHanh_Thu7.Enabled = true;
+                txtGioDen_Thu7.Enabled = true;
+            }
+            else
+            {
+                txtGioKhoiHanh_Thu7.Enabled = false;
+                txtGioDen_Thu7.Enabled = false;
+            }
+
+            if (chkCN.Checked == true)
+            {
+                txtGioKhoiHanh_ChuNhat.Enabled = true;
+                txtGioDen_ChuNhat.Enabled = true;
+            }
+            else
+            {
+                txtGioKhoiHanh_ChuNhat.Enabled = false;
+                txtGioDen_ChuNhat.Enabled = false;
+            }
+        }
     }
 }

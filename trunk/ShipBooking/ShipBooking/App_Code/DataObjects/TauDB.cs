@@ -34,6 +34,7 @@ namespace ShipBooking
             string[] values = new string[] { tau.MaSoTau, tau.Ten, tau.SoGhe, tau.ThongTin };
             ExecuteData("spTau_Insert", parameters, values);
         }
+        
         public static void Update(Tau tau)
         {
             string[] parameters = new string[] { "@MaSoTau", "@Ten", "@SoGhe", "@ThongTin" };

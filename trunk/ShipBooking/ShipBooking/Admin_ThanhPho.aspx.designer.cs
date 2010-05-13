@@ -11,24 +11,15 @@
 namespace ShipBooking {
     
     
-    public partial class Admin_Functions {
+    public partial class Admin_ThanhPho {
         
         /// <summary>
-        /// imgbtnQLBooking control.
+        /// Admin_TPControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgbtnQLBooking;
-        
-        /// <summary>
-        /// imgbtnQLHanhtrinh control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgbtnQLHanhtrinh;
+        protected global::ShipBooking.Controls.Admin_ThanhPhoControl Admin_TPControl;
     }
 }
