@@ -41,7 +41,7 @@ namespace ShipBooking.Module
             get { return _MaTPDen; }
             set { _MaTPDen = value; }
         }
-        //jkghdsjkfh
+        
         string _GiaVe1;
         public string GiaVe1
         {
@@ -70,5 +70,123 @@ namespace ShipBooking.Module
             set { _MaSoTau = value; }
         }
 
+        string _SoLuongVe1;
+        public string SoLuongVe1
+        {
+            get { return _SoLuongVe1; }
+            set { _SoLuongVe1 = value; }
+        }
+
+        string _SoLuongVe2;
+        public string SoLuongVe2
+        {
+            get { return _SoLuongVe2; }
+            set { _SoLuongVe2 = value; }
+        }
+
+        string _SoLuongVe3;
+        public string SoLuongVe3
+        {
+            get { return _SoLuongVe3; }
+            set { _SoLuongVe3 = value; }
+        }
+
+        DateTime _GioKhoiHanh_Thu2;
+        public DateTime GioKhoiHanh_Thu2
+        {
+            get { return _GioKhoiHanh_Thu2; }
+            set { _GioKhoiHanh_Thu2 = value; }
+        }
+
+        DateTime _GioKhoiHanh_Thu3;
+        public DateTime GioKhoiHanh_Thu3
+        {
+            get { return _GioKhoiHanh_Thu3; }
+            set { _GioKhoiHanh_Thu3 = value; }
+        }
+
+        DateTime _GioKhoiHanh_Thu4;
+        public DateTime GioKhoiHanh_Thu4
+        {
+            get { return _GioKhoiHanh_Thu4; }
+            set { _GioKhoiHanh_Thu4 = value; }
+        }
+
+        DateTime _GioKhoiHanh_Thu5;
+        public DateTime GioKhoiHanh_Thu5
+        {
+            get { return _GioKhoiHanh_Thu5; }
+            set { _GioKhoiHanh_Thu5 = value; }
+        }
+
+        DateTime _GioKhoiHanh_Thu6;
+        public DateTime GioKhoiHanh_Thu6
+        {
+            get { return _GioKhoiHanh_Thu6; }
+            set { _GioKhoiHanh_Thu6 = value; }
+        }
+
+        DateTime _GioKhoiHanh_Thu7;
+        public DateTime GioKhoiHanh_Thu7
+        {
+            get { return _GioKhoiHanh_Thu7; }
+            set { _GioKhoiHanh_Thu7 = value; }
+        }
+
+        DateTime _GioKhoiHanh_ChuNhat;
+        public DateTime GioKhoiHanh_ChuNhat
+        {
+            get { return _GioKhoiHanh_ChuNhat; }
+            set { _GioKhoiHanh_ChuNhat = value; }
+        }
+
+        DateTime _GioDen_Thu2;
+        public DateTime GioDen_Thu2
+        {
+            get { return _GioDen_Thu2; }
+            set { _GioDen_Thu2 = value; }
+        }
+
+        DateTime _GioDen_Thu3;
+        public DateTime GioDen_Thu3
+        {
+            get { return _GioDen_Thu3; }
+            set { _GioDen_Thu3 = value; }
+        }
+
+        DateTime _GioDen_Thu4;
+        public DateTime GioDen_Thu4
+        {
+            get { return _GioDen_Thu4; }
+            set { _GioDen_Thu4 = value; }
+        }
+
+        DateTime _GioDen_Thu5;
+        public DateTime GioDen_Thu5
+        {
+            get { return _GioDen_Thu5; }
+            set { _GioDen_Thu5 = value; }
+        }
+
+        DateTime _GioDen_Thu6;
+        public DateTime GioDen_Thu6
+        {
+            get { return _GioDen_Thu6; }
+            set { _GioDen_Thu6 = value; }
+        }
+
+        DateTime _GioDen_Thu7;
+        public DateTime GioDen_Thu7
+        {
+            get { return _GioDen_Thu7; }
+            set { _GioDen_Thu7 = value; }
+        }
+
+        DateTime _GioDen_ChuNhat;
+        public DateTime GioDen_ChuNhat
+        {
+            get { return _GioDen_ChuNhat; }
+            set { _GioDen_ChuNhat = value; }
+        }
     }
 }

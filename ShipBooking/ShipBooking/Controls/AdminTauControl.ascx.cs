@@ -23,18 +23,17 @@ namespace ShipBooking.Controls
             if (!IsPostBack)
             {
                 InitControl();
-                FillDataGridView();
+                FillDataToGridView();
             }
         }
 
-        protected void FillDataGridView()
+        protected void FillDataToGridView()
         {
             string cmd = "SELECT *FROM tblTau";
             DataSet ds = new DataSet();
             ds = ShipBookingData.FillDataset(cmd);
             grvTau.DataSource = ds.Tables[0];
             grvTau.DataBind();
-
         }
 
         protected void btnNew_Click(object sender, EventArgs e)
@@ -110,7 +109,7 @@ namespace ShipBooking.Controls
             }
 
             InitControl();
-            FillDataGridView();
+            FillDataToGridView();
             btnEdit.Enabled = true;
         }
 
@@ -120,10 +119,10 @@ namespace ShipBooking.Controls
             DataSet ds = new DataSet();
             ds = ShipBookingData.FillDataset(cmd);
 
-            txtMaSoTau.Text = ds.Tables[0].Rows[grvTau.SelectedIndex][0].ToString();
-            txtTenTau.Text = ds.Tables[0].Rows[grvTau.SelectedIndex][1].ToString();
-            txtSoGhe.Text = ds.Tables[0].Rows[grvTau.SelectedIndex][2].ToString();
-            txtThongTinKhac.Text = ds.Tables[0].Rows[grvTau.SelectedIndex][3].ToString();
+            txtMaSoTau.Text = ds.Tables[0].Rows[grvTau.SelectedIndex][0].ToString().Trim();
+            txtTenTau.Text = ds.Tables[0].Rows[grvTau.SelectedIndex][1].ToString().Trim();
+            txtSoGhe.Text = ds.Tables[0].Rows[grvTau.SelectedIndex][2].ToString().Trim();
+            txtThongTinKhac.Text = ds.Tables[0].Rows[grvTau.SelectedIndex][3].ToString().Trim();
 
             InitControl();
             btnSave.Enabled = false;
@@ -161,7 +160,7 @@ namespace ShipBooking.Controls
         protected void grvTau_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             grvTau.PageIndex = e.NewPageIndex;
-            FillDataGridView();
+            FillDataToGridView();
         }
 
         protected void grvTau_RowDeleted(object sender, GridViewDeletedEventArgs e)
@@ -174,7 +173,7 @@ namespace ShipBooking.Controls
             string strMaso = "";
             strMaso =  grvTau.Rows[e.RowIndex].Cells[0].Text.Trim();
             TauDB.Delete(strMaso.Trim());
-            FillDataGridView();
+            FillDataToGridView();
         }
     }
 }

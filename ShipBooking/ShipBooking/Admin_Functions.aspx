@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_Functions.aspx.cs" Inherits="ShipBooking.Admin_Functions" MasterPageFile="~/MyMaster.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin_Functions.aspx.cs" Inherits="ShipBooking.Admin_Functions" MasterPageFile="~/Admin_Master.Master" %>
 
 <asp:Content ContentPlaceHolderID="contentplaceCenter" ID="Admin_Functions" runat="server">
 

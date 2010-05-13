@@ -30,15 +30,15 @@ namespace ShipBooking
 
         public static void Insert(TinhTrangChuyen obj)
         {
-            string[] parameters = new string[] { "@HanhTrinh", "@TinhTrang", "@MaTPDi", "@MaTPDen", "@GiaVe1", "@GiaVe2", "@GiaVe3", "@MaSoTau" };
-            string[] values = new string[] { obj.HanhTrinh, obj.TinhTrang, obj.MaTPDi, obj.MaTPDen, obj.GiaVe1, obj.GiaVe2, obj.GiaVe3, obj.MaSoTau };
+            string[] parameters = new string[] { "@HanhTrinh", "@TinhTrang", "@MaTPDi", "@MaTPDen", "@GiaVe1", "@GiaVe2", "@GiaVe3", "@MaSoTau", "@SoLuongVe1", "@SoLuongVe2", "@SoLuongVe3", "@GioKhoiHanh_Thu2", "@GioKhoiHanh_Thu3", "@GioKhoiHanh_Thu4", "@GioKhoiHanh_Thu5", "@GioKhoiHanh_Thu6", "@GioKhoiHanh_Thu7", "@GioKhoiHanh_ChuNhat", "@GioDen_Thu2", "@GioDen_Thu3", "@GioDen_Thu4", "@GioDen_Thu5", "@GioDen_Thu6", "@GioDen_Thu7", "@GioDen_ChuNhat" };
+            string[] values = new string[] { obj.HanhTrinh, obj.TinhTrang, obj.MaTPDi, obj.MaTPDen, obj.GiaVe1, obj.GiaVe2, obj.GiaVe3, obj.MaSoTau, obj.SoLuongVe1, obj.SoLuongVe2, obj.SoLuongVe3, obj.GioKhoiHanh_Thu2.ToString(), obj.GioKhoiHanh_Thu3.ToString(), obj.GioKhoiHanh_Thu4.ToString(), obj.GioKhoiHanh_Thu5.ToString(), obj.GioKhoiHanh_Thu6.ToString(), obj.GioKhoiHanh_Thu7.ToString(), obj.GioKhoiHanh_ChuNhat.ToString(), obj.GioDen_Thu2.ToString(), obj.GioDen_Thu3.ToString(), obj.GioDen_Thu4.ToString(), obj.GioDen_Thu5.ToString(), obj.GioDen_Thu6.ToString(), obj.GioDen_Thu7.ToString(), obj.GioDen_ChuNhat.ToString() };
             ExecuteData("spTinhTrangChuyen_Insert", parameters, values);
         }
 
         public static void Update(TinhTrangChuyen obj)
         {
-            string[] parameters = new string[] { "@HanhTrinh", "@TinhTrang", "@MaTPDi", "@MaTPDen", "@GiaVe1", "@GiaVe2", "@GiaVe3", "@MaSoTau" };
-            string[] values = new string[] { obj.HanhTrinh, obj.TinhTrang, obj.MaTPDi, obj.MaTPDen, obj.GiaVe1, obj.GiaVe2, obj.GiaVe3, obj.MaSoTau };
+            string[] parameters = new string[] { "@HanhTrinh", "@TinhTrang", "@MaTPDi", "@MaTPDen", "@GiaVe1", "@GiaVe2", "@GiaVe3", "@MaSoTau", "@SoLuongVe1", "@SoLuongVe2", "@SoLuongVe3", "@GioKhoiHanh_Thu2", "@GioKhoiHanh_Thu3", "@GioKhoiHanh_Thu4", "@GioKhoiHanh_Thu5", "@GioKhoiHanh_Thu6", "@GioKhoiHanh_Thu7", "@GioKhoiHanh_ChuNhat", "@GioDen_Thu2", "@GioDen_Thu3", "@GioDen_Thu4", "@GioDen_Thu5", "@GioDen_Thu6", "@GioDen_Thu7", "@GioDen_ChuNhat" };
+            string[] values = new string[] { obj.HanhTrinh, obj.TinhTrang, obj.MaTPDi, obj.MaTPDen, obj.GiaVe1, obj.GiaVe2, obj.GiaVe3, obj.MaSoTau, obj.SoLuongVe1, obj.SoLuongVe2, obj.SoLuongVe3, obj.GioKhoiHanh_Thu2.ToString(), obj.GioKhoiHanh_Thu3.ToString(), obj.GioKhoiHanh_Thu4.ToString(), obj.GioKhoiHanh_Thu5.ToString(), obj.GioKhoiHanh_Thu6.ToString(), obj.GioKhoiHanh_Thu7.ToString(), obj.GioKhoiHanh_ChuNhat.ToString(), obj.GioDen_Thu2.ToString(), obj.GioDen_Thu3.ToString(), obj.GioDen_Thu4.ToString(), obj.GioDen_Thu5.ToString(), obj.GioDen_Thu6.ToString(), obj.GioDen_Thu7.ToString(), obj.GioDen_ChuNhat.ToString() };
             ExecuteData("spTinhTrangChuyen_UpdateByID", parameters, values);
         }
 
@@ -56,6 +56,23 @@ namespace ShipBooking
                 obj.GiaVe2 = dt.Rows[0]["GiaVe2"].ToString();
                 obj.GiaVe3 = dt.Rows[0]["GiaVe3"].ToString();
                 obj.MaSoTau = dt.Rows[0]["MaSoTau"].ToString();
+                obj.SoLuongVe1 = dt.Rows[0]["SoLuongVe1"].ToString();
+                obj.SoLuongVe2 = dt.Rows[0]["SoLuongVe2"].ToString();
+                obj.SoLuongVe3 = dt.Rows[0]["SoLuongVe3"].ToString();
+                obj.GioKhoiHanh_Thu2 = DateTime.Parse(dt.Rows[0]["GioKhoiHanh_Thu2"].ToString());
+                obj.GioKhoiHanh_Thu3 = DateTime.Parse(dt.Rows[0]["GioKhoiHanh_Thu3"].ToString());
+                obj.GioKhoiHanh_Thu4 = DateTime.Parse(dt.Rows[0]["GioKhoiHanh_Thu4"].ToString());
+                obj.GioKhoiHanh_Thu5 = DateTime.Parse(dt.Rows[0]["GioKhoiHanh_Thu5"].ToString());
+                obj.GioKhoiHanh_Thu6 = DateTime.Parse(dt.Rows[0]["GioKhoiHanh_Thu6"].ToString());
+                obj.GioKhoiHanh_Thu7 = DateTime.Parse(dt.Rows[0]["GioKhoiHanh_Thu7"].ToString());
+                obj.GioKhoiHanh_ChuNhat = DateTime.Parse(dt.Rows[0]["GioKhoiHanh_ChuNhat"].ToString());
+                obj.GioDen_Thu2 = DateTime.Parse(dt.Rows[0]["GioDen_Thu2"].ToString());
+                obj.GioDen_Thu3 = DateTime.Parse(dt.Rows[0]["GioDen_Thu3"].ToString());
+                obj.GioDen_Thu4 = DateTime.Parse(dt.Rows[0]["GioDen_Thu4"].ToString());
+                obj.GioDen_Thu5 = DateTime.Parse(dt.Rows[0]["GioDen_Thu5"].ToString());
+                obj.GioDen_Thu6 = DateTime.Parse(dt.Rows[0]["GioDen_Thu6"].ToString());
+                obj.GioDen_Thu7 = DateTime.Parse(dt.Rows[0]["GioDen_Thu7"].ToString());
+                obj.GioDen_ChuNhat = DateTime.Parse(dt.Rows[0]["GioDen_ChuNhat"].ToString());
             }
             else
             {

@@ -8,27 +8,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ShipBooking {
+namespace ShipBooking.Controls.Layer {
     
     
-    public partial class Admin_Functions {
+    public partial class Admin_BannerControl {
         
         /// <summary>
-        /// imgbtnQLBooking control.
+        /// Image2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgbtnQLBooking;
+        protected global::System.Web.UI.WebControls.Image Image2;
         
         /// <summary>
-        /// imgbtnQLHanhtrinh control.
+        /// Image1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgbtnQLHanhtrinh;
+        protected global::System.Web.UI.WebControls.Image Image1;
     }
 }
