@@ -131,12 +131,13 @@
         </tr>
         <tr align="center">
             <td class="table_contain_style" align="center">
+                <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
                 <br />
-                <table class="style2" style="border: 1px solid #006699" align="center">
+                <table align="center" class="style2" style="border: 1px solid #006699">
                     <tr align="center">
-                        <td colspan="2" 
-                            style="background-color: #006699; color: #FFFFFF; font-weight: bold;" 
-                            align="left">Giá vé</td>
+                        <td align="left" colspan="2" 
+                            style="background-color: #006699; color: #FFFFFF; font-weight: bold;">
+                            Giá vé</td>
                         <td align="left" 
                             style="background-color: #006699; color: #FFFFFF; font-weight: bold;">
                             &nbsp;</td>
@@ -145,15 +146,16 @@
                             &nbsp;</td>
                     </tr>
                     <tr>
-                        <td align="left" class="style5">
-                            Loại thường: </td>
+                        <td class="style5" align="left">
+                            Loại thường:
+                        </td>
                         <td>
                             <asp:TextBox ID="txtGiaVeThuong" runat="server" Width="176px"></asp:TextBox>
                             &nbsp;(VNĐ)</td>
                         <td>
                             Số lượng vé:</td>
                         <td>
-                            <asp:TextBox ID="TextBox1" runat="server" Width="79px"></asp:TextBox>
+                            <asp:TextBox ID="txtSoLuongVe1" runat="server" Width="79px"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -165,7 +167,7 @@
                         <td>
                             Số lượng vé:</td>
                         <td>
-                            <asp:TextBox ID="TextBox4" runat="server" Width="79px"></asp:TextBox>
+                            <asp:TextBox ID="txtSoLuongVe2" runat="server" Width="79px"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -177,7 +179,7 @@
                         <td>
                             Số lượng vé:</td>
                         <td>
-                            <asp:TextBox ID="TextBox5" runat="server" Width="79px"></asp:TextBox>
+                            <asp:TextBox ID="txtSoLuongVe3" runat="server" Width="79px"></asp:TextBox>
                         </td>
                     </tr>
                 </table>
@@ -193,19 +195,22 @@
                             Số hiệu tàu:
                         </td>
                         <td class="style3">
-                            <asp:DropDownList ID="ddlSoHieuTau" runat="server" Height="22px" Width="110px" 
-                                AutoPostBack="true" onselectedindexchanged="ddlSoHieuTau_SelectedIndexChanged">
+                            <asp:DropDownList ID="ddlSoHieuTau" runat="server" AutoPostBack="true" 
+                                Height="22px" onselectedindexchanged="ddlSoHieuTau_SelectedIndexChanged" 
+                                Width="110px">
                             </asp:DropDownList>
                         </td>
                         <td>
                             <asp:TextBox ID="txtSoHieuTau" runat="server" Width="140px"></asp:TextBox>
                         </td>
                         <td>
-                            <asp:Button ID="Button1" runat="server" Text="Xem thông tin tàu" 
-                                Width="134px" onclick="Button1_Click" Height="26px" />
+                            <asp:Button ID="Button1" runat="server" Height="26px" onclick="Button1_Click" 
+                                Text="Xem thông tin tàu" Width="134px" />
                         </td>
                     </tr>
                 </table>
+                <br />
+                <asp:Label ID="lblMsg2" runat="server" ForeColor="Red"></asp:Label>
                 <br />
                 <asp:Panel ID="panelLichTrinh" runat="server" Visible="true">
                     <table ID="tblLichTrinh" border="1px" class="tblThongTinDatCho_Detail_Style" 
@@ -232,32 +237,32 @@
                             <td class="ngay_style_column">
                                 Có chuyến</td>
                             <td class="ngay_style_column">
-                                <asp:CheckBox ID="chkThu2" runat="server" Text="Có" AutoPostBack="true" 
-                                    oncheckedchanged="chkThu2_CheckedChanged" />
+                                <asp:CheckBox ID="chkThu2" runat="server" AutoPostBack="true" 
+                                    oncheckedchanged="chkThu2_CheckedChanged" Text="Có" />
                             </td>
                             <td class="ngay_style_column">
-                                <asp:CheckBox ID="chkThu3" runat="server" AutoPostBack="true" Text="Có" 
-                                    oncheckedchanged="chkThu3_CheckedChanged" />
+                                <asp:CheckBox ID="chkThu3" runat="server" AutoPostBack="true" 
+                                    oncheckedchanged="chkThu3_CheckedChanged" Text="Có" />
                             </td>
                             <td class="ngay_style_column">
-                                <asp:CheckBox ID="chkThu4" runat="server" AutoPostBack="true" Text="Có" 
-                                    oncheckedchanged="chkThu4_CheckedChanged" />
+                                <asp:CheckBox ID="chkThu4" runat="server" AutoPostBack="true" 
+                                    oncheckedchanged="chkThu4_CheckedChanged" Text="Có" />
                             </td>
                             <td class="ngay_style_column">
-                                <asp:CheckBox ID="chkThu5" runat="server" AutoPostBack="true" Text="Có" 
-                                    oncheckedchanged="chkThu5_CheckedChanged" />
+                                <asp:CheckBox ID="chkThu5" runat="server" AutoPostBack="true" 
+                                    oncheckedchanged="chkThu5_CheckedChanged" Text="Có" />
                             </td>
                             <td class="ngay_style_column">
-                                <asp:CheckBox ID="chkThu6" runat="server" AutoPostBack="true" Text="Có" 
-                                    oncheckedchanged="chkThu6_CheckedChanged" />
+                                <asp:CheckBox ID="chkThu6" runat="server" AutoPostBack="true" 
+                                    oncheckedchanged="chkThu6_CheckedChanged" Text="Có" />
                             </td>
                             <td class="ngay_style_column">
-                                <asp:CheckBox ID="chkThu7" runat="server" AutoPostBack="true" Text="Có" 
-                                    oncheckedchanged="chkThu7_CheckedChanged" />
+                                <asp:CheckBox ID="chkThu7" runat="server" AutoPostBack="true" 
+                                    oncheckedchanged="chkThu7_CheckedChanged" Text="Có" />
                             </td>
                             <td class="ngay_style_column">
-                                <asp:CheckBox ID="chkCN" runat="server" AutoPostBack="true" Text="Có" 
-                                    oncheckedchanged="chkCN_CheckedChanged" />
+                                <asp:CheckBox ID="chkCN" runat="server" AutoPostBack="true" 
+                                    oncheckedchanged="chkCN_CheckedChanged" Text="Có" />
                             </td>
                         </tr>
                         <tr>
@@ -288,8 +293,8 @@
                                     Width="60px"></asp:TextBox>
                             </td>
                             <td class="ngay_style_column">
-                                <asp:TextBox ID="txtGioKhoiHanh_ChuNhat" runat="server" style="text-align: center" 
-                                    Width="60px"></asp:TextBox>
+                                <asp:TextBox ID="txtGioKhoiHanh_ChuNhat" runat="server" 
+                                    style="text-align: center" Width="60px"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>

@@ -166,7 +166,7 @@
 <center>
     <asp:GridView ID="grwResult" runat="server" AutoGenerateColumns="False" 
         BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" 
-        CellPadding="4" Width="800px">
+        CellPadding="4" Width="800px" onrowdeleting="grwResult_RowDeleting">
         <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
         <RowStyle BackColor="White" ForeColor="#003399" />
         <Columns>
@@ -188,6 +188,7 @@
             <asp:BoundField DataField="GiaTien" HeaderText="Giá tiền" >
                 <ItemStyle HorizontalAlign="Right" />
             </asp:BoundField>
+            <asp:CommandField ButtonType="Button" ShowDeleteButton="True" />
         </Columns>
         <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
         <SelectedRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
