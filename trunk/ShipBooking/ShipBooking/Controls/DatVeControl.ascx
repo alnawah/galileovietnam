@@ -58,6 +58,13 @@
         border:solid 2px black;
         background-color:white;
     }
+    .style1
+    {
+    }
+    .style2
+    {
+        width: 181px;
+    }
 </style>
 <p style="text-align: center">
     <asp:Image ID="Image1" runat="server" Height="59px" 
@@ -77,32 +84,39 @@
                 <tr>
                     <td>
                     </td>
-                    <td>
-                        <asp:RadioButtonList ID="rblLoaiHanhTrinh" runat="server" Height="22px" 
-                            RepeatDirection="Horizontal" Width="364px" 
-                            onselectedindexchanged="rblLoaiHanhTrinh_SelectedIndexChanged" AutoPostBack="true">
+                    <td class="style2">
+                        <asp:RadioButtonList ID="rblLoaiHanhTrinh" runat="server" Height="16px" 
+                            RepeatDirection="Horizontal" Width="208px" 
+                            onselectedindexchanged="rblLoaiHanhTrinh_SelectedIndexChanged" 
+                            AutoPostBack="true">
                         </asp:RadioButtonList>
                     </td>
+                    <td>
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td>
                                                 Từ</td>
-                    <td>
+                    <td class="style2">
                         <asp:DropDownList ID="ddlNoiDi" runat="server" Height="22px" Width="160px" 
                             AutoPostBack="true" onselectedindexchanged="ddlNoiDi_SelectedIndexChanged">
                         </asp:DropDownList>
-                        &nbsp;<span class="step1_warning">(*)</span>&nbsp;&nbsp;&nbsp;&nbsp; Đến&nbsp;
+                        </td>
+                    <td>
+                        Đến: </td>
+                    <td>
                         <asp:DropDownList ID="ddlNoiDen" runat="server" Height="22px" Width="160px" 
                             AutoPostBack="true" onselectedindexchanged="ddlNoiDen_SelectedIndexChanged">
                         </asp:DropDownList>
-                        &nbsp;<span class="step1_warning">(*)</span></td>
+                        </td>
                 </tr>
                 <tr>
                     <td>
                         Ngày đi</td>
-                    <td>
+                    <td class="style2">
                         <asp:TextBox ID="txtNgayDi" runat="server" Width="138px"></asp:TextBox>
-                        
                         <img id="imgCalendar1" src="~/Images/CalendarIcon.png" alt="" runat="server" 
                             onclick="displayCalendar1()" height="16" />
                         <div id="datePicker1">
@@ -121,14 +135,9 @@
                                     ForeColor="#FFFFCC" />
                             </asp:Calendar>
                         </div>
-                    &nbsp;(mm/dd/yyyy) &nbsp;
-                        <asp:DropDownList ID="ddlThoiGian" runat="server" Height="21px" Width="136px">
-                        </asp:DropDownList>
-                    &nbsp;<span class="step1_warning">(*)</span></td>
-                </tr>
-                <tr>
+                    </td>
                     <td>
-                        <asp:Label ID="lblNgayVe" runat="server" Text="Ngày về" Visible="False"></asp:Label>
+                        <asp:Label ID="lblNgayVe" runat="server"></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="txtNgayVe" runat="server" Width="138px" Visible="False"></asp:TextBox>
@@ -150,25 +159,37 @@
                                     ForeColor="#FFFFCC" />
                             </asp:Calendar>
                         </div>
-                        &nbsp;<asp:Label ID="lblDateFormat" runat="server" Text="(mm/dd/yyyy)" 
-                            Visible="False"></asp:Label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:CheckBox ID="chkOpen" runat="server" Text="Open" Visible="False" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                                                Loại vé</td>
+                        Giờ khởi hành:</td>
+                    <td class="style2">
+                        <asp:Label ID="lblGioKhoiHanh" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
+                    </td>
                     <td>
-                        <asp:DropDownList ID="ddlLoaiVe" runat="server" Height="22px" Width="160px">
-                        </asp:DropDownList>
-                    &nbsp;<span class="step1_warning">(*)
-                        </span></td>
+                        Giờ đến:&nbsp;</td>
+                    <td>
+                        <asp:Label ID="lblGioDen" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
+                    </td>
                 </tr>
                 <tr>
+                    <td>Loại vé</td>
+                    <td class="style2">
+                        <asp:DropDownList ID="ddlLoaiVe" runat="server" Height="22px" Width="160px">
+                        </asp:DropDownList>
+                    </td>
                     <td>
-                        Số ghế</td>
+                        </td>
                     <td>
+                        <asp:DropDownList ID="ddlThoiGian" runat="server" Height="21px" Width="136px" Visible="false">
+                        </asp:DropDownList>
+                        <asp:CheckBox ID="chkOpen" runat="server" Text="Open" Visible="False" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Số ghế</td>
+                    <td class="style1" colspan="3">
                         <asp:RadioButtonList ID="rdbSoGhe" runat="server" RepeatColumns="12" 
                             RepeatDirection="Horizontal">
                         </asp:RadioButtonList>

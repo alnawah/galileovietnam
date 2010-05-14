@@ -141,10 +141,10 @@ namespace ShipBooking.Controls
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 dt = DateTime.Parse(ds.Tables[0].Rows[i]["NgayDi"].ToString().Trim());
-                grwResult.Rows[i].Cells[4].Text = dt.Month + "/" + dt.Day + "/" + dt.Year;
+                grwResult.Rows[i].Cells[5].Text = dt.Month + "/" + dt.Day + "/" + dt.Year;
 
                 dt = DateTime.Parse(ds.Tables[0].Rows[i]["NgayVe"].ToString().Trim());
-                grwResult.Rows[i].Cells[5].Text = dt.Month + "/" + dt.Day + "/" + dt.Year;
+                grwResult.Rows[i].Cells[6].Text = dt.Month + "/" + dt.Day + "/" + dt.Year;
             }
             if (ds.Tables[0].Rows.Count == 0)
             {
@@ -190,6 +190,11 @@ namespace ShipBooking.Controls
         protected void btnBack_Click(object sender, EventArgs e)
         {
             Response.Redirect("Admin_Functions.aspx");
+        }
+
+        protected void grwResult_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
         }
     }
 }

@@ -32,7 +32,7 @@ namespace ShipBooking.Controls
                 FillDataToDdlThoiGian();
                 FillDataToRdbLoaiHanhTrinh();
                 FillDataToDdlLoaiVe();
-                FillDataToRdbSoGhe();
+                FillHanhTrinhInfoData();
             }
         }
 
@@ -148,7 +148,7 @@ namespace ShipBooking.Controls
             return strHanhTrinh.Trim();
         }
 
-        protected void FillDataToRdbSoGhe()
+        protected void FillHanhTrinhInfoData()
         {
             ListItem item;
             string strHanhTrinh = GetHanhTrinh();
@@ -159,6 +159,194 @@ namespace ShipBooking.Controls
             //Điền tất cả các ghế trên chuyến tàu
             if (HanhTrinhInfo != null)
             {
+                //Điền dữ liệu giờ khởi hành - giờ kết thúc
+                if (CheckDateNgayDi() == true)
+                {
+                    DateTime dt = DateTime.Parse(txtNgayDi.Text.Trim());
+                    switch (dt.DayOfWeek)
+                    {
+                        case DayOfWeek.Monday:
+                            {
+                                if (HanhTrinhInfo.GioKhoiHanh_Thu2 == DateTime.Parse("1/1/1900 12:00:00 AM"))
+                                {
+                                    lblGioKhoiHanh.Text = "";
+                                    ResetRdbSoGhe();
+                                }
+                                else
+                                {
+                                    lblGioKhoiHanh.Text = HanhTrinhInfo.GioKhoiHanh_Thu2.ToShortTimeString();
+                                }
+
+                                if (HanhTrinhInfo.GioDen_Thu2 == DateTime.Parse("1/1/1900 12:00:00 AM"))
+                                {
+                                    lblGioDen.Text = "";
+                                    ResetRdbSoGhe();
+                                    return;
+                                }
+                                else 
+                                {
+                                    lblGioDen.Text = HanhTrinhInfo.GioDen_Thu2.ToShortTimeString();
+                                }
+                            }
+                            break;
+                        case DayOfWeek.Tuesday:
+                            {
+                                if (HanhTrinhInfo.GioKhoiHanh_Thu3 == DateTime.Parse("1/1/1900 12:00:00 AM"))
+                                {
+                                    lblGioKhoiHanh.Text = "";
+                                    ResetRdbSoGhe();
+                                }
+                                else
+                                {
+                                    lblGioKhoiHanh.Text = HanhTrinhInfo.GioKhoiHanh_Thu3.ToShortTimeString();
+                                }
+
+                                if (HanhTrinhInfo.GioDen_Thu3 == DateTime.Parse("1/1/1900 12:00:00 AM"))
+                                {
+                                    lblGioDen.Text = "";
+                                    ResetRdbSoGhe();
+                                    return;
+                                }
+                                else
+                                {
+                                    lblGioDen.Text = HanhTrinhInfo.GioDen_Thu3.ToShortTimeString();
+                                }
+                            }
+                            break;
+                        case DayOfWeek.Wednesday:
+                            {
+                                if (HanhTrinhInfo.GioKhoiHanh_Thu4 == DateTime.Parse("1/1/1900 12:00:00 AM"))
+                                {
+                                    lblGioKhoiHanh.Text = "";
+                                    ResetRdbSoGhe();
+                                }
+                                else
+                                {
+                                    lblGioKhoiHanh.Text = HanhTrinhInfo.GioKhoiHanh_Thu4.ToShortTimeString();
+                                }
+
+                                if (HanhTrinhInfo.GioDen_Thu4 == DateTime.Parse("1/1/1900 12:00:00 AM"))
+                                {
+                                    lblGioDen.Text = "";
+                                    ResetRdbSoGhe();
+                                    return;
+                                }
+                                else
+                                {
+                                    lblGioDen.Text = HanhTrinhInfo.GioDen_Thu4.ToShortTimeString();
+                                }
+                            }
+                            break;
+                        case DayOfWeek.Thursday:
+                            {
+                                if (HanhTrinhInfo.GioKhoiHanh_Thu5 == DateTime.Parse("1/1/1900 12:00:00 AM"))
+                                {
+                                    lblGioKhoiHanh.Text = "";
+                                    ResetRdbSoGhe();
+                                }
+                                else
+                                {
+                                    lblGioKhoiHanh.Text = HanhTrinhInfo.GioKhoiHanh_Thu5.ToShortTimeString();
+                                }
+
+                                if (HanhTrinhInfo.GioDen_Thu5 == DateTime.Parse("1/1/1900 12:00:00 AM"))
+                                {
+                                    lblGioDen.Text = "";
+                                    ResetRdbSoGhe();
+                                    return;
+                                }
+                                else
+                                {
+                                    lblGioDen.Text = HanhTrinhInfo.GioDen_Thu5.ToShortTimeString();
+                                }
+                            }
+                            break;
+                        case DayOfWeek.Friday:
+                            {
+                                if (HanhTrinhInfo.GioKhoiHanh_Thu6 == DateTime.Parse("1/1/1900 12:00:00 AM"))
+                                {
+                                    lblGioKhoiHanh.Text = "";
+                                    ResetRdbSoGhe();
+                                }
+                                else
+                                {
+                                    lblGioKhoiHanh.Text = HanhTrinhInfo.GioKhoiHanh_Thu6.ToShortTimeString();
+                                }
+
+                                if (HanhTrinhInfo.GioDen_Thu6 == DateTime.Parse("1/1/1900 12:00:00 AM"))
+                                {
+                                    lblGioDen.Text = "";
+                                    ResetRdbSoGhe();
+                                    return;
+                                }
+                                else
+                                {
+                                    lblGioDen.Text = HanhTrinhInfo.GioDen_Thu6.ToShortTimeString();
+                                }
+                            }
+                            break;
+                        case DayOfWeek.Saturday:
+                            {
+                                if (HanhTrinhInfo.GioKhoiHanh_Thu7 == DateTime.Parse("1/1/1900 12:00:00 AM"))
+                                {
+                                    lblGioKhoiHanh.Text = "";
+                                    ResetRdbSoGhe();
+                                }
+                                else
+                                {
+                                    lblGioKhoiHanh.Text = HanhTrinhInfo.GioKhoiHanh_Thu7.ToShortTimeString();
+                                }
+
+                                if (HanhTrinhInfo.GioDen_Thu7 == DateTime.Parse("1/1/1900 12:00:00 AM"))
+                                {
+                                    lblGioDen.Text = "";
+                                    ResetRdbSoGhe();
+                                    return;
+                                }
+                                else
+                                {
+                                    lblGioDen.Text = HanhTrinhInfo.GioDen_Thu7.ToShortTimeString();
+                                }
+                            }
+                            break;
+                        case DayOfWeek.Sunday:
+                            {
+                                if (HanhTrinhInfo.GioKhoiHanh_ChuNhat == DateTime.Parse("1/1/1900 12:00:00 AM"))
+                                {
+                                    lblGioKhoiHanh.Text = "";
+                                    ResetRdbSoGhe();
+                                }
+                                else
+                                {
+                                    lblGioKhoiHanh.Text = HanhTrinhInfo.GioKhoiHanh_ChuNhat.ToShortTimeString();
+                                }
+
+                                if (HanhTrinhInfo.GioDen_ChuNhat == DateTime.Parse("1/1/1900 12:00:00 AM"))
+                                {
+                                    lblGioDen.Text = "";
+                                    ResetRdbSoGhe();
+                                    return;
+                                }
+                                else
+                                {
+                                    lblGioDen.Text = HanhTrinhInfo.GioDen_ChuNhat.ToShortTimeString();
+                                }
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                else
+                {
+                    ResetRdbSoGhe();
+                    lblGioKhoiHanh.Text = "";
+                    lblGioDen.Text = "";
+                    return;
+                }
+                
+
+
                 Tau tau = new Tau();
                 tau = TauDB.GetInfo(HanhTrinhInfo.MaSoTau.Trim());
                 int SoGhe = 0;
@@ -196,6 +384,7 @@ namespace ShipBooking.Controls
                     item = null;
                 }
             }
+            lblMsg.Text = "";
         }
 
         protected void GetBookingData()
@@ -277,7 +466,7 @@ namespace ShipBooking.Controls
         {
             txtNgayDi.Text = calEventDate.SelectedDate.ToString("d");
             ResetRdbSoGhe();
-            FillDataToRdbSoGhe();
+            FillHanhTrinhInfoData();
         }
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
@@ -291,7 +480,6 @@ namespace ShipBooking.Controls
             {
                 lblNgayVe.Visible = true;
                 txtNgayVe.Visible = true;
-                lblDateFormat.Visible = true;
                 chkOpen.Visible = true;
                 imgCalendar2.Visible = true;
             }
@@ -299,7 +487,6 @@ namespace ShipBooking.Controls
             {
                 lblNgayVe.Visible = false;
                 txtNgayVe.Visible = false;
-                lblDateFormat.Visible = false;
                 chkOpen.Visible = false;
                 imgCalendar2.Visible = false;
             }
@@ -313,11 +500,12 @@ namespace ShipBooking.Controls
         protected void ddlNoiDen_SelectedIndexChanged(object sender, EventArgs e)
         {
             ResetRdbSoGhe();
-            FillDataToRdbSoGhe();
+            FillHanhTrinhInfoData();
         }
 
         protected void ResetRdbSoGhe()
         {
+            lblMsg.Text = "";
             rdbSoGhe.Items.Clear();
         }
 
