@@ -73,12 +73,21 @@ namespace ShipBooking.Controls
             lblNoiDen1.Text = DatVeControl.bf.NoiDen;
             lblNoiDi1.Text = DatVeControl.bf.NoiDi;
             lblNgayDi.Text = DatVeControl.bf.NgayDi.ToShortDateString();
-            lblNgayVe.Text = DatVeControl.bf.NgayVe.ToShortDateString();
+            if (DatVeControl.bf.LoaiChuyen.Equals("Một lượt") == true)
+            {
+                lblNgayVe.Text = "";
+            }
+            else
+            {
+                lblNgayVe.Text = DatVeControl.bf.NgayVe.ToShortDateString();
+            }
             lblThoiGian.Text = DatVeControl.bf.ThoiGian;
             lblLoaiHanhTrinh.Text = DatVeControl.bf.LoaiChuyen;
             lblLoaiVe.Text = DatVeControl.bf.LoaiVe;
             lblSoGhe.Text = DatVeControl.bf.SoGhe;
             lblGiaVN.Text = DatVeControl.bf.GiaTien;
+            lblGioKhoiHanh.Text = DatVeControl.bf.GioKhoiHanh.ToShortTimeString();
+            lblGioDen.Text = DatVeControl.bf.GioDen.ToShortTimeString();
         }
 
         protected void GetHanhKhachData()

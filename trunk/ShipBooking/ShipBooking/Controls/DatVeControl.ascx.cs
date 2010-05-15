@@ -13,6 +13,7 @@ using System.Xml.Linq;
 using ShipBooking.Library;
 using ShipBooking.Module;   
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace ShipBooking.Controls
 {
@@ -33,40 +34,6 @@ namespace ShipBooking.Controls
                 FillDataToRdbLoaiHanhTrinh();
                 FillDataToDdlLoaiVe();
                 FillHanhTrinhInfoData();
-            }
-        }
-
-        protected void Button1_Click1(object sender, EventArgs e)
-        {
-            bool isValidDate = false;
-            isValidDate = CheckDateNgayDi();
-            if (isValidDate == false)
-            {
-                txtNgayDi.Text = "";
-                txtNgayDi.Focus();
-                return;
-            }
-            else
-            {
-                if (rblLoaiHanhTrinh.SelectedValue == "KhuHoi")
-                {
-                    if (CheckDateNgayVe() == false)
-                    {
-                        txtNgayVe.Text = "";
-                        txtNgayVe.Focus();
-                        return;
-                    }
-                    else
-                    {
-                        GetBookingData();
-                        Response.Redirect("ThongTinKhach.aspx");
-                    }
-                }
-                else 
-                {
-                    GetBookingData();
-                    Response.Redirect("ThongTinKhach.aspx");
-                }
             }
         }
 
@@ -156,10 +123,12 @@ namespace ShipBooking.Controls
             TinhTrangChuyen HanhTrinhInfo = new TinhTrangChuyen();
             HanhTrinhInfo = TinhTrangChuyenDB.GetInfo(strHanhTrinh);
 
-            //Điền tất cả các ghế trên chuyến tàu
+            List<BookingFile> BFList = new List<BookingFile>();
+            BFList = BookingFileDB.GetListBookingFileByDate(txtNgayDi.Text.Trim(), strHanhTrinh);
+
             if (HanhTrinhInfo != null)
             {
-                //Điền dữ liệu giờ khởi hành - giờ kết thúc
+                #region  Điền dữ liệu giờ khởi hành - giờ kết thúc
                 if (CheckDateNgayDi() == true)
                 {
                     DateTime dt = DateTime.Parse(txtNgayDi.Text.Trim());
@@ -344,9 +313,98 @@ namespace ShipBooking.Controls
                     lblGioDen.Text = "";
                     return;
                 }
-                
+                #endregion
 
+                #region Điền dữ liệu số lượng vé
+                switch (ddlLoaiVe.SelectedValue)
+                {
+                    case "HangThuong":
+                        {
+                            int count = 0;
+                            int SoLuongVeConLai = 0;
+                            lblGiaVe.Text = HanhTrinhInfo.GiaVe1.Trim() + " VNĐ";
+                            for (int i = 0; i < BFList.Count; i++)
+                            {
+                                if (BFList[i].LoaiVe.Equals("Hạng thường") == true)
+                                {
+                                    count += 1;
+                                }
+                            }
+                            SoLuongVeConLai = Convert.ToInt16(HanhTrinhInfo.SoLuongVe1);
+                            SoLuongVeConLai -= count;
+                            if (SoLuongVeConLai > 0)
+                            {
+                                lblSoLuongVe.Text = Convert.ToString(SoLuongVeConLai) + " vé";
+                                lblSoLuongVe.ForeColor = Color.Blue;
+                            }
+                            else
+                            {
+                                lblSoLuongVe.Text = "Đã hết vé";
+                                lblSoLuongVe.ForeColor = Color.Red;
+                                return;
+                            }
+                        }
+                        break;
+                    case "HangDoanhNhan":
+                        {
+                            int count = 0;
+                            int SoLuongVeConLai = 0;
+                            lblGiaVe.Text = HanhTrinhInfo.GiaVe2.Trim() + " VNĐ";
+                            for (int i = 0; i < BFList.Count; i++)
+                            {
+                                if (BFList[i].LoaiVe.Equals("Hạng doanh nhân") == true)
+                                {
+                                    count += 1;
+                                }
+                            }
+                            SoLuongVeConLai = Convert.ToInt16(HanhTrinhInfo.SoLuongVe2);
+                            SoLuongVeConLai -= count;
+                            if (SoLuongVeConLai > 0)
+                            {
+                                lblSoLuongVe.Text = Convert.ToString(SoLuongVeConLai) + " vé";
+                                lblSoLuongVe.ForeColor = Color.Blue;
+                            }
+                            else
+                            {
+                                lblSoLuongVe.Text = "Đã hết vé";
+                                lblSoLuongVe.ForeColor = Color.Red;
+                                return;
+                            }
+                        }
+                        break;
+                    case "HangVIP":
+                        {
+                            int count = 0;
+                            int SoLuongVeConLai = 0;
+                            lblGiaVe.Text = HanhTrinhInfo.GiaVe3.Trim() + " VNĐ";
+                            for (int i = 0; i < BFList.Count; i++)
+                            {
+                                if (BFList[i].LoaiVe.Equals("Hạng VIP") == true)
+                                {
+                                    count += 1;
+                                }
+                            }
+                            SoLuongVeConLai = Convert.ToInt16(HanhTrinhInfo.SoLuongVe3);
+                            SoLuongVeConLai -= count;
+                            if (SoLuongVeConLai > 0)
+                            {
+                                lblSoLuongVe.Text = Convert.ToString(SoLuongVeConLai) + " vé";
+                                lblSoLuongVe.ForeColor = Color.Blue;
+                            }
+                            else
+                            {
+                                lblSoLuongVe.Text = "Đã hết vé";
+                                lblSoLuongVe.ForeColor = Color.Red;
+                                return;
+                            }
+                        }
+                        break;
+                    default:
+                        break;
+                }
+                #endregion
 
+                #region Điền tất cả các ghế trên chuyến tàu
                 Tau tau = new Tau();
                 tau = TauDB.GetInfo(HanhTrinhInfo.MaSoTau.Trim());
                 int SoGhe = 0;
@@ -364,9 +422,7 @@ namespace ShipBooking.Controls
                 }
 
                 //Remove những ghế đã được chọn trong ngày
-                List<BookingFile> BFList = new List<BookingFile>();
-                BFList = BookingFileDB.GetListBookingFileByDate(txtNgayDi.Text.Trim(), strHanhTrinh);
-                int SoGheDatDat = 0;
+                int SoGheDaDat = 0;
                 for (int i = 1; i <= SoGhe; i++)
                 {
                     item = new ListItem();
@@ -375,23 +431,39 @@ namespace ShipBooking.Controls
 
                     for (int j = 0; j < BFList.Count; j++)
                     {
-                        SoGheDatDat = Convert.ToInt16(BFList[j].SoGhe.Trim());
-                        if (i == SoGheDatDat)
+                        SoGheDaDat = Convert.ToInt16(BFList[j].SoGhe.Trim());
+                        if (i == SoGheDaDat)
                         {
                             rdbSoGhe.Items.Remove(item);
                         }
                     }
                     item = null;
                 }
+                #endregion  
             }
+                
             lblMsg.Text = "";
         }
 
         protected void GetBookingData()
         {
             bf.LoaiChuyen = rblLoaiHanhTrinh.SelectedItem.Text;
-            bf.NoiDi = ddlNoiDi.SelectedItem.Text;
-            bf.NoiDen = ddlNoiDen.SelectedItem.Text;
+            if (ddlNoiDen.Items.Count > 0)
+            {
+                bf.NoiDi = ddlNoiDi.SelectedItem.Text;
+            }
+            else
+            {
+                return;
+            }
+            if (ddlNoiDi.Items.Count > 0)
+            {
+                bf.NoiDen = ddlNoiDen.SelectedItem.Text;
+            }
+            else
+            {
+                return;
+            }
             bf.NgayDi = DateTime.Parse(txtNgayDi.Text.Trim());
             if (rblLoaiHanhTrinh.SelectedValue == "KhuHoi")
             {
@@ -452,19 +524,17 @@ namespace ShipBooking.Controls
         protected void InitData()
         {
             rblLoaiHanhTrinh.SelectedIndex = 0;
-            txtNgayDi.Text = "";
-            txtNgayVe.Text = "";
             lblMsg.Text = "";
-        }
-
-        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
-        {
-
+            lblSoLuongVe.Text = "";
+            lblGioKhoiHanh.Text = "";
+            lblGioDen.Text = "";
+            lblGiaVe.Text = "";
         }
 
         protected void calEventDate_SelectionChanged(object sender, EventArgs e)
         {
             txtNgayDi.Text = calEventDate.SelectedDate.ToString("d");
+            InitData();
             ResetRdbSoGhe();
             FillHanhTrinhInfoData();
         }
@@ -480,14 +550,14 @@ namespace ShipBooking.Controls
             {
                 lblNgayVe.Visible = true;
                 txtNgayVe.Visible = true;
-                chkOpen.Visible = true;
+                //chkOpen.Visible = true;
                 imgCalendar2.Visible = true;
             }
             else
             {
                 lblNgayVe.Visible = false;
                 txtNgayVe.Visible = false;
-                chkOpen.Visible = false;
+                //chkOpen.Visible = false;
                 imgCalendar2.Visible = false;
             }
         }
@@ -495,10 +565,14 @@ namespace ShipBooking.Controls
         protected void ddlNoiDi_SelectedIndexChanged(object sender, EventArgs e)
         {
             ListControlUtilities.FillCityData(ddlNoiDen, ddlNoiDi.SelectedValue);
+            InitData();
+            ResetRdbSoGhe();
+            FillHanhTrinhInfoData();
         }
 
         protected void ddlNoiDen_SelectedIndexChanged(object sender, EventArgs e)
         {
+            InitData();
             ResetRdbSoGhe();
             FillHanhTrinhInfoData();
         }
@@ -559,6 +633,98 @@ namespace ShipBooking.Controls
             }
 
             return isValid;
+        }
+
+        protected void ddlLoaiVe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            InitData();
+            ResetRdbSoGhe();
+            FillHanhTrinhInfoData();
+        }
+
+        protected void btnContinue_Click(object sender, EventArgs e)
+        {
+            bool isValidDate = false;
+            isValidDate = CheckDateNgayDi();
+
+            if (isValidDate == false)
+            {
+                txtNgayDi.Text = "";
+                txtNgayDi.Focus();
+                return;
+            }
+            else
+            {
+                if (rblLoaiHanhTrinh.SelectedValue == "KhuHoi")
+                {
+                    if (CheckDateNgayVe() == false)
+                    {
+                        txtNgayVe.Text = "";
+                        txtNgayVe.Focus();
+                        return;
+                    }
+                    else
+                    {
+                        GetBookingData();
+                        if (rdbSoGhe.Items.Count > 0)
+                        {
+                            if (bf.SoGhe == "0" || bf.SoGhe == null || bf.SoGhe == "")
+                            {
+                                lblMsg.Text = "Bạn phải chọn số ghế";
+                            }
+                            else
+                            {
+                                bf.GioKhoiHanh = DateTime.Parse(lblGioKhoiHanh.Text.Trim());
+                                bf.GioDen = DateTime.Parse(lblGioDen.Text.Trim());
+                                Response.Redirect("ThongTinKhach.aspx");
+                            }
+                        }
+                        else
+                        {
+                            if (bf.SoGhe == "0" || bf.SoGhe == null || bf.SoGhe == "")
+                            {
+                                lblMsg.Text = "Không thể tạo hành trình";
+                            }
+                            else
+                            {
+                                bf.GioKhoiHanh = DateTime.Parse(lblGioKhoiHanh.Text.Trim());
+                                bf.GioDen = DateTime.Parse(lblGioDen.Text.Trim());
+                                Response.Redirect("ThongTinKhach.aspx");
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    GetBookingData();
+                    if (rdbSoGhe.Items.Count > 0)
+                    {
+                        if (bf.SoGhe == "0" || bf.SoGhe == null || bf.SoGhe == "")
+                        {
+                            lblMsg.Text = "Bạn phải chọn số ghế";
+                        }
+                        else
+                        {
+                            bf.GioKhoiHanh = DateTime.Parse(lblGioKhoiHanh.Text.Trim());
+                            bf.GioDen = DateTime.Parse(lblGioDen.Text.Trim());
+                            Response.Redirect("ThongTinKhach.aspx");
+                        }
+                    }
+                    else
+                    {
+                        if (bf.SoGhe == "0" || bf.SoGhe == null || bf.SoGhe == "")
+                        {
+                            lblMsg.Text = "Không thể tạo hành trình";
+                        }
+                        else
+                        {
+                            bf.GioKhoiHanh = DateTime.Parse(lblGioKhoiHanh.Text.Trim());
+                            bf.GioDen = DateTime.Parse(lblGioDen.Text.Trim());
+                            Response.Redirect("ThongTinKhach.aspx");
+                        }
+                    }
+                }
+            }
         }
     }
 }

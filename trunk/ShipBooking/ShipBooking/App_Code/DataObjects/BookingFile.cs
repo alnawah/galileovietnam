@@ -118,5 +118,19 @@ namespace ShipBooking.Module
             get { return _TenKhach; }
             set { _TenKhach = value; }
         }
+
+        DateTime _GioKhoiHanh;
+        public DateTime GioKhoiHanh
+        {
+            get { return _GioKhoiHanh; }
+            set { _GioKhoiHanh = value; }
+        }
+
+        DateTime _GioDen;
+        public DateTime GioDen
+        {
+            get { return _GioDen; }
+            set { _GioDen = value; }
+        }
     }
 }

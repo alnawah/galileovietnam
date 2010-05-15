@@ -49,82 +49,87 @@
         ImageUrl="~/Images/thong_tin_nguoi_nhan_ve.png" Width="600px" />
     <br />
 </p>
-<p style="text-align: center">
-<table class="tblThongTinDatCho_Summary_Style">
-    <tr>
-        <td bgcolor="#006699" class="table_header_style">
-            Thông tin đặt chỗ</td>
-    </tr>
-    <tr>
-        <td class="table_contain_style">
-            <table class="tblThongTinDatCho_Detail_Style">
-                <tr>
-                    <td class="ThongTinDatCho_Title_1">
-                        Từ:</td>
-                    <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="lblNoiDi1" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
-                    </td>
-                    <td class="ThongTinDatCho_Title_2">
-                        Đến:</td>
-                    <td>
-                        <asp:Label ID="lblNoiDen1" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="ThongTinDatCho_Title_1">
-                        Ngày khởi hành:</td>
-                    <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="lblNgayDi" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
-                    </td>
-                    <td class="ThongTinDatCho_Title_2">
-                        Ngày về:</td>
-                    <td>
-                        <asp:Label ID="lblNgayVe" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="ThongTinDatCho_Title_1">
-                        Thời gian</td>
-                    <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="lblThoiGian" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
-                    </td>
-                    <td class="ThongTinDatCho_Title_2">
-                        Loại hành trình:</td>
-                    <td>
-                        <asp:Label ID="lblLoaiHanhTrinh" runat="server" Font-Bold="True" 
-                            ForeColor="#0000CC"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="ThongTinDatCho_Title_1">
-                        Loại vé:</td>
-                    <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="lblLoaiVe" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
-                    </td>
-                    <td class="ThongTinDatCho_Title_2">
-                        Số ghế:</td>
-                    <td>
-                        <asp:Label ID="lblSoGhe" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="ThongTinDatCho_Title_1">
-                        &nbsp;</td>
-                    <td class="ThongTinDatCho_Detail">
-                        &nbsp;</td>
-                    <td class="ThongTinDatCho_Title_2">
-                        Giá vé:</td>
-                    <td>
-                        <asp:Label ID="lblGiaVN" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
-                        <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="#990033" 
-                            Text=" (VNĐ)"></asp:Label>
-                    </td>
-                </tr>
-            </table>
-            </td>
-    </tr>
-</table>
-</p>
+<center>
+    <table class="tblThongTinDatCho_Summary_Style">
+        <tr>
+            <td bgcolor="#006699" class="table_header_style">
+                Thông tin đặt chỗ</td>
+        </tr>
+        <tr>
+            <td class="table_contain_style">
+                <table class="tblThongTinDatCho_Detail_Style">
+                    <tr>
+                        <td class="ThongTinDatCho_Title_1">
+                            Từ:</td>
+                        <td class="ThongTinDatCho_Detail">
+                            <asp:Label ID="lblNoiDi1" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
+                        </td>
+                        <td class="ThongTinDatCho_Title_2">
+                            Đến:</td>
+                        <td>
+                            <asp:Label ID="lblNoiDen1" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ThongTinDatCho_Title_1">
+                            Ngày khởi hành:</td>
+                        <td class="ThongTinDatCho_Detail">
+                            <asp:Label ID="lblNgayDi" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
+                        </td>
+                        <td class="ThongTinDatCho_Title_2">
+                            Ngày về:</td>
+                        <td>
+                            <asp:Label ID="lblNgayVe" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ThongTinDatCho_Title_1">
+                            Giờ khởi hành:</td>
+                        <td class="ThongTinDatCho_Detail">
+                            <asp:Label ID="lblGioKhoiHanh" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
+                        </td>
+                        <td class="ThongTinDatCho_Title_2">
+                            Giờ đến:</td>
+                        <td>
+                            <asp:Label ID="lblGioDen" runat="server" Font-Bold="True" 
+                                ForeColor="#0000CC"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ThongTinDatCho_Title_1">
+                            Loại vé:</td>
+                        <td class="ThongTinDatCho_Detail">
+                            <asp:Label ID="lblLoaiVe" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
+                        </td>
+                        <td class="ThongTinDatCho_Title_2">
+                            Loại hành trình:</td>
+                        <td>
+                            <asp:Label ID="lblLoaiHanhTrinh" runat="server" Font-Bold="True" 
+                                ForeColor="#0000CC"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ThongTinDatCho_Title_1">
+                            Số ghế:</td>
+                        <td class="ThongTinDatCho_Detail">
+                            <asp:Label ID="lblSoGhe" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
+                            <asp:Label ID="lblThoiGian" runat="server" Font-Bold="True" ForeColor="#0000CC" 
+                                Visible="False"></asp:Label>
+                        </td>
+                        <td class="ThongTinDatCho_Title_2">
+                            Giá vé:</td>
+                        <td>
+                            <asp:Label ID="lblGiaVN" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
+                            &nbsp;<asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="#990033" 
+                                Text=" (VNĐ)"></asp:Label>
+                        </td>
+                    </tr>
+                    </table>
+                </td>
+        </tr>
+    </table>
+</center>
+
 <p style="text-align: center">
     &nbsp;</p>
 

@@ -32,15 +32,15 @@ namespace ShipBooking
 
         public static void Insert(BookingFile bf)
         {
-            string[] parameters = new string[] { "@MaBF", "@LoaiChuyen", "@NoiDi", "@NoiDen", "@NgayDi", "@NgayVe", "@ThoiGian", "@OpenChecking", "@LoaiVe", "@SoGhe", "@GiaTien", "@ThanhToan", "@MaNguoiNhan", "@HanhTrinh" };
-            string[] values = new string[] { bf.MaBF, bf.LoaiChuyen, bf.NoiDi, bf.NoiDen, bf.NgayDi.ToString(), bf.NgayVe.ToString(), bf.ThoiGian, bf.OpenChecking.ToString(), bf.LoaiVe, bf.SoGhe, bf.GiaTien, bf.ThanhToan, bf.MaNguoiNhan, bf.HanhTrinh };
+            string[] parameters = new string[] { "@MaBF", "@LoaiChuyen", "@NoiDi", "@NoiDen", "@NgayDi", "@NgayVe", "@ThoiGian", "@OpenChecking", "@LoaiVe", "@SoGhe", "@GiaTien", "@ThanhToan", "@MaNguoiNhan", "@HanhTrinh", "@GioKhoiHanh", "@GioDen" };
+            string[] values = new string[] { bf.MaBF, bf.LoaiChuyen, bf.NoiDi, bf.NoiDen, bf.NgayDi.ToString(), bf.NgayVe.ToString(), bf.ThoiGian, bf.OpenChecking.ToString(), bf.LoaiVe, bf.SoGhe, bf.GiaTien, bf.ThanhToan, bf.MaNguoiNhan, bf.HanhTrinh, bf.GioKhoiHanh.ToString(), bf.GioDen.ToString() };
             ExecuteData("spBookingFile_Insert", parameters, values);
         }
 
         public static void Update(BookingFile bf)
         {
-            string[] parameters = new string[] { "@MaBF", "@LoaiChuyen", "@NoiDi", "@NoiDen", "@NgayDi", "@NgayVe", "@ThoiGian", "@OpenChecking", "@LoaiVe", "@SoGhe", "@GiaTien", "@ThanhToan", "@MaNguoiNhan", "@HanhTrinh" };
-            string[] values = new string[] { bf.MaBF, bf.LoaiChuyen, bf.NoiDi, bf.NoiDen, bf.NgayDi.ToString(), bf.NgayVe.ToString(), bf.ThoiGian, bf.OpenChecking.ToString(), bf.LoaiVe, bf.SoGhe, bf.GiaTien, bf.ThanhToan, bf.MaNguoiNhan, bf.HanhTrinh };
+            string[] parameters = new string[] { "@MaBF", "@LoaiChuyen", "@NoiDi", "@NoiDen", "@NgayDi", "@NgayVe", "@ThoiGian", "@OpenChecking", "@LoaiVe", "@SoGhe", "@GiaTien", "@ThanhToan", "@MaNguoiNhan", "@HanhTrinh", "@GioKhoiHanh", "@GioDen" };
+            string[] values = new string[] { bf.MaBF, bf.LoaiChuyen, bf.NoiDi, bf.NoiDen, bf.NgayDi.ToString(), bf.NgayVe.ToString(), bf.ThoiGian, bf.OpenChecking.ToString(), bf.LoaiVe, bf.SoGhe, bf.GiaTien, bf.ThanhToan, bf.MaNguoiNhan, bf.HanhTrinh, bf.GioKhoiHanh.ToString(), bf.GioDen.ToString() };
             ExecuteData("spBookingFile_UpdateByID", parameters, values);
         }
 
@@ -64,6 +64,8 @@ namespace ShipBooking
                 bf.ThanhToan = dt.Rows[0]["ThanhToan"].ToString();
                 bf.MaNguoiNhan = dt.Rows[0]["MaNguoiNhan"].ToString();
                 bf.HanhTrinh = dt.Rows[0]["HanhTrinh"].ToString();
+                bf.GioKhoiHanh = DateTime.Parse(dt.Rows[0]["GioKhoiHanh"].ToString());
+                bf.GioDen = DateTime.Parse(dt.Rows[0]["GioDen"].ToString());
             }
             else
             {
@@ -93,6 +95,8 @@ namespace ShipBooking
                 BF.ThanhToan = dt.Rows[i]["ThanhToan"].ToString();
                 BF.MaNguoiNhan = dt.Rows[i]["MaNguoiNhan"].ToString();
                 BF.HanhTrinh = dt.Rows[i]["HanhTrinh"].ToString();
+                BF.GioKhoiHanh = DateTime.Parse(dt.Rows[0]["GioKhoiHanh"].ToString());
+                BF.GioDen = DateTime.Parse(dt.Rows[0]["GioDen"].ToString());
 
                 BFList.Add(BF);
                 BF = null;
@@ -122,6 +126,8 @@ namespace ShipBooking
                 BF.ThanhToan = dt.Rows[i]["ThanhToan"].ToString();
                 BF.MaNguoiNhan = dt.Rows[i]["MaNguoiNhan"].ToString();
                 BF.HanhTrinh = dt.Rows[i]["HanhTrinh"].ToString();
+                BF.GioKhoiHanh = DateTime.Parse(dt.Rows[0]["GioKhoiHanh"].ToString());
+                BF.GioDen = DateTime.Parse(dt.Rows[0]["GioDen"].ToString());
 
                 BFList.Add(BF);
                 BF = null;

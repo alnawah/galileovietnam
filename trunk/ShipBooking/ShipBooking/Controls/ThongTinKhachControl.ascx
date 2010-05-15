@@ -70,6 +70,12 @@
         text-align: left;
     }
     
+    .style1
+    {
+        width: 100px;
+        text-align: left;
+    }
+    
 </style>
 <p style="text-align: center">
     <asp:Image ID="Image1" runat="server" Height="59px" 
@@ -89,7 +95,7 @@
                     <td class="ThongTinDatCho_Detail">
                         <asp:Label ID="lblNoiDi1" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
-                    <td class="ThongTinDatCho_Title_2">
+                    <td class="style1">
                         Đến:</td>
                     <td>
                         <asp:Label ID="lblNoiDen1" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
@@ -101,7 +107,7 @@
                     <td class="ThongTinDatCho_Detail">
                         <asp:Label ID="lblNgayDi" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
-                    <td class="ThongTinDatCho_Title_2">
+                    <td class="style1">
                         Ngày về:</td>
                     <td>
                         <asp:Label ID="lblNgayVe" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
@@ -109,14 +115,14 @@
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
-                        Thời gian</td>
+                        Giờ khởi hành:</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:Label ID="lblThoiGian" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
+                        <asp:Label ID="lblGioKhoiHanh" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
-                    <td class="ThongTinDatCho_Title_2">
-                        Loại hành trình:</td>
+                    <td class="style1">
+                        Giờ đến:</td>
                     <td>
-                        <asp:Label ID="lblLoaiHanhTrinh" runat="server" Font-Bold="True" 
+                        <asp:Label ID="lblGioDen" runat="server" Font-Bold="True" 
                             ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
@@ -126,26 +132,30 @@
                     <td class="ThongTinDatCho_Detail">
                         <asp:Label ID="lblLoaiVe" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
-                    <td class="ThongTinDatCho_Title_2">
-                        Số ghế:</td>
+                    <td class="style1">
+                        Loại hành trình:</td>
                     <td>
-                        <asp:Label ID="lblSoGhe" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
+                        <asp:Label ID="lblLoaiHanhTrinh" runat="server" Font-Bold="True" 
+                            ForeColor="#0000CC"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
-                        &nbsp;</td>
+                        Số ghế:</td>
                     <td class="ThongTinDatCho_Detail">
-                        &nbsp;</td>
-                    <td class="ThongTinDatCho_Title_2">
+                        <asp:Label ID="lblSoGhe" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
+                        <asp:Label ID="lblThoiGian" runat="server" Font-Bold="True" ForeColor="#0000CC" 
+                            Visible="False"></asp:Label>
+                    </td>
+                    <td class="style1">
                         Giá vé:</td>
                     <td>
                         <asp:Label ID="lblGiaVN" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
-                        <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="#990033" 
+                        &nbsp;<asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="#990033" 
                             Text=" (VNĐ)"></asp:Label>
                     </td>
                 </tr>
-            </table>
+                </table>
             </td>
     </tr>
 </table>
