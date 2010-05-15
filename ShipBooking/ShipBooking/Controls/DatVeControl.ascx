@@ -94,7 +94,10 @@
                     <td>
                         &nbsp;</td>
                     <td>
-                        &nbsp;</td>
+                        <asp:DropDownList ID="ddlThoiGian" runat="server" Height="21px" Width="136px" Visible="false">
+                        </asp:DropDownList>
+                        <asp:CheckBox ID="chkOpen" runat="server" Text="Open" Visible="False" />
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -137,7 +140,7 @@
                         </div>
                     </td>
                     <td>
-                        <asp:Label ID="lblNgayVe" runat="server"></asp:Label>
+                        <asp:Label ID="lblNgayVe" runat="server" Visible="false" Text="Ngày về:"></asp:Label>
                     </td>
                     <td>
                         <asp:TextBox ID="txtNgayVe" runat="server" Width="138px" Visible="False"></asp:TextBox>
@@ -176,15 +179,15 @@
                 <tr>
                     <td>Loại vé</td>
                     <td class="style2">
-                        <asp:DropDownList ID="ddlLoaiVe" runat="server" Height="22px" Width="160px">
+                        <asp:DropDownList ID="ddlLoaiVe" runat="server" Height="22px" Width="160px" 
+                            AutoPostBack="true" onselectedindexchanged="ddlLoaiVe_SelectedIndexChanged">
                         </asp:DropDownList>
                     </td>
-                    <td>
-                        </td>
-                    <td>
-                        <asp:DropDownList ID="ddlThoiGian" runat="server" Height="21px" Width="136px" Visible="false">
-                        </asp:DropDownList>
-                        <asp:CheckBox ID="chkOpen" runat="server" Text="Open" Visible="False" />
+                    <td colspan="2">
+                        Số vé hiện có:
+                        <asp:Label ID="lblSoLuongVe" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
+                    &nbsp;&nbsp;&nbsp; Giá vé:
+                        <asp:Label ID="lblGiaVe" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -203,8 +206,8 @@
 
 <br />
 <p style="text-align: center">
-    <asp:Button ID="Button1" runat="server" Text="Tiếp tục" 
-        onclick="Button1_Click1" />
+    <asp:Button ID="btnContinue" runat="server" Text="Tiếp tục" 
+        onclick="btnContinue_Click" />
 </p>
 
 
