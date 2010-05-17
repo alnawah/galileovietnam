@@ -13,6 +13,7 @@ using System.Xml.Linq;
 using System.Web.UI.MobileControls;
 using ShipBooking.Module;
 using System.Collections.Generic;
+using ShipBooking.Library;
 
 namespace ShipBooking.Controls
 {
@@ -194,7 +195,45 @@ namespace ShipBooking.Controls
 
         protected void grwResult_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+            string MaBF = "";
+            MaBF = grwResult.Rows[e.RowIndex].Cells[0].Text.Trim();
+            HanhKhachDB.DeleteFromBookingFile(MaBF.Trim());
+            BookingFileDB.Delete(MaBF.Trim());
+            SelectAllBookingFile();
+        }
 
+        protected void SelectAllBookingFile()
+        {
+            DateTime dt;
+            string cmd = "SELECT *FROM tblHanhKhach INNER JOIN tblBookingFile ON tblHanhKhach.MaBF = tblBookingFile.MaBF";
+            DataSet ds = new DataSet();
+            ds = ShipBookingData.FillDataset(cmd);
+            grwResult.DataSource = ds.Tables[0];
+            grwResult.DataBind();
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                dt = DateTime.Parse(ds.Tables[0].Rows[i]["NgayDi"].ToString().Trim());
+                grwResult.Rows[i].Cells[5].Text = dt.Month + "/" + dt.Day + "/" + dt.Year;
+
+                dt = DateTime.Parse(ds.Tables[0].Rows[i]["NgayVe"].ToString().Trim());
+                grwResult.Rows[i].Cells[6].Text = dt.Month + "/" + dt.Day + "/" + dt.Year;
+            }
+            if (ds.Tables[0].Rows.Count == 0)
+            {
+                lblResult.Text = "Rất tiếc! Không tìm thấy kết quả nào.";
+            }
+            else
+            {
+                lblResult.Text = "Có " + ds.Tables[0].Rows.Count.ToString() + " kết quả tìm được:";
+            }
+        }
+
+        protected void rblTieuChiTimKiem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (rblTieuChiTimKiem.SelectedValue == "AllBooking")
+            {
+                SelectAllBookingFile();
+            }
         }
     }
 }
