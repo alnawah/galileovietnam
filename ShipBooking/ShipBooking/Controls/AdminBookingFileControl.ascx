@@ -81,9 +81,11 @@
                         Tìm kiếm theo:</td>
                     <td>
                         <asp:RadioButtonList ID="rblTieuChiTimKiem" runat="server" Height="22px" 
-                            RepeatDirection="Horizontal" Width="217px">
+                            RepeatDirection="Horizontal" Width="357px" AutoPostBack="true" 
+                            onselectedindexchanged="rblTieuChiTimKiem_SelectedIndexChanged">
                             <asp:ListItem Value="MaBF">Mã booking file</asp:ListItem>
                             <asp:ListItem Value="TenKhach">Tên khách</asp:ListItem>
+                            <asp:ListItem Value="AllBooking">Tất cả các Booking</asp:ListItem>
                         </asp:RadioButtonList>
                     </td>
                 </tr>
@@ -166,7 +168,8 @@
 <center>
     <asp:GridView ID="grwResult" runat="server" AutoGenerateColumns="False" 
         BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" 
-        CellPadding="4" Width="800px" onrowdeleting="grwResult_RowDeleting">
+        CellPadding="4" Width="800px" onrowdeleting="grwResult_RowDeleting"
+        EmptyDataText="Chưa có dữ liệu nào" AllowPaging="True">
         <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
         <RowStyle BackColor="White" ForeColor="#003399" />
         <Columns>

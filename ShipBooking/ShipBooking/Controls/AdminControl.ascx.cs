@@ -255,14 +255,174 @@ namespace ShipBooking.Controls
 
             if (rblTinhTrangChuyen.SelectedValue == "Yes")
             {
+                rblTinhTrangChuyen.SelectedIndex = 0;
                 Panel1.Visible = true;
-                if (obj != null)
+                txtGiaVeThuong.Text = obj.GiaVe1.ToLower().Trim();
+                txtGiaVeDoanhNhan.Text = obj.GiaVe2.ToLower().Trim();
+                txtGiaVeVIP.Text = obj.GiaVe3.ToLower().Trim();
+                txtSoHieuTau.Text = obj.MaSoTau.Trim();
+
+                txtSoLuongVe1.Text = obj.SoLuongVe1.Trim();
+                txtSoLuongVe2.Text = obj.SoLuongVe2.Trim();
+                txtSoLuongVe3.Text = obj.SoLuongVe3.Trim();
+
+                #region Điền dữ liệu giờ khởi hành
+                if (obj.GioKhoiHanh_Thu2.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
                 {
-                    txtGiaVeThuong.Text = obj.GiaVe1.ToLower().Trim();
-                    txtGiaVeDoanhNhan.Text = obj.GiaVe2.ToLower().Trim();
-                    txtGiaVeVIP.Text = obj.GiaVe3.ToLower().Trim();
-                    txtSoHieuTau.Text = obj.MaSoTau.Trim();
+                    txtGioKhoiHanh_Thu2.Text = obj.GioKhoiHanh_Thu2.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu2.Minute.ToString();
+                    chkThu2.Checked = true;
                 }
+                else
+                {
+                    txtGioKhoiHanh_Thu2.Text = "";
+                    chkThu2.Checked = false;
+                }
+
+                if (obj.GioKhoiHanh_Thu3.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                {
+                    txtGioKhoiHanh_Thu3.Text = obj.GioKhoiHanh_Thu3.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu3.Minute.ToString();
+                    chkThu3.Checked = true;
+                }
+                else
+                {
+                    txtGioKhoiHanh_Thu3.Text = "";
+                    chkThu3.Checked = false;
+                }
+
+                if (obj.GioKhoiHanh_Thu4.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                {
+                    txtGioKhoiHanh_Thu4.Text = obj.GioKhoiHanh_Thu4.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu4.Minute.ToString();
+                    chkThu4.Checked = true;
+                }
+                else
+                {
+                    txtGioKhoiHanh_Thu4.Text = "";
+                    chkThu4.Checked = false;
+                }
+
+                if (obj.GioKhoiHanh_Thu5.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                {
+                    txtGioKhoiHanh_Thu5.Text = obj.GioKhoiHanh_Thu5.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu5.Minute.ToString();
+                    chkThu5.Checked = true;
+                }
+                else
+                {
+                    txtGioKhoiHanh_Thu5.Text = "";
+                    chkThu5.Checked = false;
+                }
+
+                if (obj.GioKhoiHanh_Thu6.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                {
+                    txtGioKhoiHanh_Thu6.Text = obj.GioKhoiHanh_Thu6.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu6.Minute.ToString();
+                    chkThu6.Checked = true;
+                }
+                else
+                {
+                    txtGioKhoiHanh_Thu6.Text = "";
+                    chkThu6.Checked = false;
+                }
+
+                if (obj.GioKhoiHanh_Thu7.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                {
+                    txtGioKhoiHanh_Thu7.Text = obj.GioKhoiHanh_Thu7.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu7.Minute.ToString();
+                    chkThu7.Checked = true;
+                }
+                else
+                {
+                    txtGioKhoiHanh_Thu7.Text = "";
+                    chkThu7.Checked = false;
+                }
+
+                if (obj.GioKhoiHanh_ChuNhat.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                {
+                    txtGioKhoiHanh_ChuNhat.Text = obj.GioKhoiHanh_ChuNhat.Hour.ToString() + ":" + obj.GioKhoiHanh_ChuNhat.Minute.ToString();
+                    chkCN.Checked = true;
+                }
+                else
+                {
+                    txtGioKhoiHanh_ChuNhat.Text = "";
+                    chkCN.Checked = false;
+                }
+                #endregion
+
+                #region Điền dữ liệu giờ khởi hành
+                if (obj.GioDen_Thu2.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                {
+                    txtGioDen_Thu2.Text = obj.GioDen_Thu2.Hour.ToString() + ":" + obj.GioDen_Thu2.Minute.ToString();
+                    chkThu2.Checked = true;
+                }
+                else
+                {
+                    txtGioDen_Thu2.Text = "";
+                    chkThu2.Checked = false;
+                }
+
+                if (obj.GioDen_Thu3.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                {
+                    txtGioDen_Thu3.Text = obj.GioDen_Thu3.Hour.ToString() + ":" + obj.GioDen_Thu3.Minute.ToString();
+                    chkThu3.Checked = true;
+                }
+                else
+                {
+                    txtGioDen_Thu3.Text = "";
+                    chkThu3.Checked = false;
+                }
+
+                if (obj.GioDen_Thu4.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                {
+                    txtGioDen_Thu4.Text = obj.GioDen_Thu4.Hour.ToString() + ":" + obj.GioDen_Thu4.Minute.ToString();
+                    chkThu4.Checked = true;
+                }
+                else
+                {
+                    txtGioDen_Thu4.Text = "";
+                    chkThu4.Checked = false;
+                }
+
+                if (obj.GioDen_Thu5.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                {
+                    txtGioDen_Thu5.Text = obj.GioDen_Thu5.Hour.ToString() + ":" + obj.GioDen_Thu5.Minute.ToString();
+                    chkThu5.Checked = true;
+                }
+                else
+                {
+                    txtGioDen_Thu5.Text = "";
+                    chkThu5.Checked = false;
+                }
+
+                if (obj.GioDen_Thu6.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                {
+                    txtGioDen_Thu6.Text = obj.GioDen_Thu6.Hour.ToString() + ":" + obj.GioDen_Thu6.Minute.ToString();
+                    chkThu6.Checked = true;
+                }
+                else
+                {
+                    txtGioDen_Thu6.Text = "";
+                    chkThu6.Checked = false;
+                }
+
+                if (obj.GioDen_Thu7.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                {
+                    txtGioDen_Thu7.Text = obj.GioDen_Thu7.Hour.ToString() + ":" + obj.GioDen_Thu7.Minute.ToString();
+                    chkThu7.Checked = true;
+                }
+                else
+                {
+                    txtGioDen_Thu7.Text = "";
+                    chkThu7.Checked = false;
+                }
+
+                if (obj.GioDen_ChuNhat.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                {
+                    txtGioDen_ChuNhat.Text = obj.GioDen_ChuNhat.Hour.ToString() + ":" + obj.GioDen_ChuNhat.Minute.ToString();
+                    chkCN.Checked = true;
+                }
+                else
+                {
+                    txtGioDen_ChuNhat.Text = "";
+                    chkCN.Checked = false;
+                }
+                #endregion
             }
             else
             {

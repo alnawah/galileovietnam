@@ -29,6 +29,13 @@ namespace ShipBooking
             ExecuteData("spHanhKhach_DeleteByID", parameters, values);
         }
 
+        public static void DeleteFromBookingFile(string MaBF)
+        {
+            string[] parameters = new string[] { "@MaBF" };
+            string[] values = new string[] { MaBF };
+            ExecuteData("spHanhKhach_DeleteFromBookingFile", parameters, values);
+        }
+
         public static void Insert(HanhKhach khach)
         {
             string[] parameters = new string[] { "@MaHK", "@Ten", "@DiaChi", "@QuocTich", "@DoTuoi", "@DienThoai", "@Email", "@MaBF" };
