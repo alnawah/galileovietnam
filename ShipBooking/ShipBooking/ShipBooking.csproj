@@ -115,6 +115,13 @@
     <Compile Include="Controls\AdminControl.ascx.designer.cs">
       <DependentUpon>AdminControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\AdminDetailBookingControl.ascx.cs">
+      <DependentUpon>AdminDetailBookingControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdminDetailBookingControl.ascx.designer.cs">
+      <DependentUpon>AdminDetailBookingControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\AdminTauControl.ascx.cs">
       <DependentUpon>AdminTauControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -244,6 +251,13 @@
     <Compile Include="App_Code\DataObjects\HanhKhach.cs" />
     <Compile Include="App_Code\DatabaseUtilities\ExecuteDataUtilities.cs" />
     <Compile Include="App_Code\DataObjects\HanhKhachDB.cs" />
+    <Compile Include="DetailBooking.aspx.cs">
+      <DependentUpon>DetailBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailBooking.aspx.designer.cs">
+      <DependentUpon>DetailBooking.aspx</DependentUpon>
+    </Compile>
     <Compile Include="KetThucBooking.aspx.cs">
       <DependentUpon>KetThucBooking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -354,7 +368,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin_Master.Master" />
+    <Content Include="Controls\AdminDetailBookingControl.ascx" />
     <Content Include="Controls\Layer\Admin_BannerControl.ascx" />
+    <Content Include="DetailBooking.aspx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />

@@ -405,13 +405,8 @@ namespace ShipBooking.Controls
                 #endregion
 
                 #region Điền tất cả các ghế trên chuyến tàu
-                Tau tau = new Tau();
-                tau = TauDB.GetInfo(HanhTrinhInfo.MaSoTau.Trim());
                 int SoGhe = 0;
-                if (tau != null)
-                {
-                    SoGhe = Convert.ToInt16(tau.SoGhe);
-                }
+                SoGhe = Convert.ToInt16(HanhTrinhInfo.SoGhe.Trim());
                 for (int i = 1; i <= SoGhe; i++)
                 {
                     item = new ListItem();

@@ -129,6 +129,43 @@ namespace ShipBooking.Controls
             else
             {
                 GetHanhKhachData();
+
+                TinhTrangChuyen obj = new TinhTrangChuyen();
+                obj = TinhTrangChuyenDB.GetInfo(DatVeControl.bf.HanhTrinh);
+
+                if (obj != null)
+                {
+                    if (ddlDoTuoi.SelectedValue == "NguoiLon" || ddlDoTuoi.SelectedValue == "TreEm")
+                    {
+                        if (DatVeControl.bf.LoaiVe == "Hạng thường")
+                        {
+                            DatVeControl.bf.GiaTien = obj.GiaVe1.Trim();
+                        }
+                        else if (DatVeControl.bf.LoaiVe == "Hạng doanh nhân")
+                        {
+                            DatVeControl.bf.GiaTien = obj.GiaVe2.Trim();
+                        }
+                        else
+                        {
+                            DatVeControl.bf.GiaTien = obj.GiaVe3.Trim();
+                        }
+                    }
+                    else
+                    {
+                        if (DatVeControl.bf.LoaiVe == "Hạng thường")
+                        {
+                            DatVeControl.bf.GiaTien = obj.GiaVe1_TreEm.Trim();
+                        }
+                        else if (DatVeControl.bf.LoaiVe == "Hạng doanh nhân")
+                        {
+                            DatVeControl.bf.GiaTien = obj.GiaVe2_TreEm.Trim();
+                        }
+                        else
+                        {
+                            DatVeControl.bf.GiaTien = obj.GiaVe3_TreEm.Trim();
+                        }
+                    }
+                }
                 Response.Redirect("DatVe_Step2.aspx");
             }
         }
@@ -145,30 +182,7 @@ namespace ShipBooking.Controls
             }
             else
             {
-                if (txtDiaChi.Text.Trim() == "")
-                {
-                    lblMsg.Text = "Bạn phải nhập địa chỉ";
-                    txtDiaChi.Focus();
-                    isValid = false;
-                }
-                else
-                {
-                    if (txtSoDienThoai.Text.Trim() == "")
-                    {
-                        lblMsg.Text = "Bạn phải nhập số điện thoại";
-                        txtSoDienThoai.Focus();
-                        isValid = false;
-                    }
-                    else
-                    {
-                        if (txtEmail.Text.Trim() == "")
-                        {
-                            lblMsg.Text = "Bạn phải nhập địa chỉ email";
-                            txtEmail.Focus();
-                            isValid = false;
-                        }
-                    }
-                }
+                isValid = true;
             }
 
             return isValid;

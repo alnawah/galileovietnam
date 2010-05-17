@@ -23,6 +23,8 @@ namespace ShipBooking.Controls
             {
                 InitControl();
                 FillData();
+                FillDataToDdlSoGhe();
+                FillDataToDdlSoLuongVe();
                 ListControlUtilities.FillDataToDropDownList(ddlSoHieuTau, "tblTau", "MaSoTau", "MaSoTau");
                 ListControlUtilities.FillDataToDropDownList(ddlNoiDi, "tblThanhPho", "Ten", "MaThanhPho");
                 ListControlUtilities.FillDataToDropDownList(ddlNoiDen, "tblThanhPho", "Ten", "MaThanhPho");
@@ -48,14 +50,303 @@ namespace ShipBooking.Controls
                 {
                     rblTinhTrangChuyen.SelectedIndex = 0;
                     Panel1.Visible = true;
-                    txtGiaVeThuong.Text = obj.GiaVe1.ToLower().Trim();
-                    txtGiaVeDoanhNhan.Text = obj.GiaVe2.ToLower().Trim();
-                    txtGiaVeVIP.Text = obj.GiaVe3.ToLower().Trim();
+                    txtGiaVe1_NguoiLon.Text = obj.GiaVe1.ToLower().Trim();
+                    txtGiaVe2_NguoiLon.Text = obj.GiaVe2.ToLower().Trim();
+                    txtGiaVe3_NguoiLon.Text = obj.GiaVe3.ToLower().Trim();
+                    txtGiaVe1_TreEm.Text = obj.GiaVe1_TreEm.ToLower().Trim();
+                    txtGiaVe2_TreEm.Text = obj.GiaVe2_TreEm.ToLower().Trim();
+                    txtGiaVe3_TreEm.Text = obj.GiaVe3_TreEm.ToLower().Trim();
                     txtSoHieuTau.Text = obj.MaSoTau.Trim();
 
-                    txtSoLuongVe1.Text = obj.SoLuongVe1.Trim();
-                    txtSoLuongVe2.Text = obj.SoLuongVe2.Trim();
-                    txtSoLuongVe3.Text = obj.SoLuongVe3.Trim();
+                    #region Điền dữ liệu số lượng vé
+                    if (obj.SoLuongVe1 == "" || obj.SoLuongVe1 == null)
+                    {
+                        ddlSoLuongVe1.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        ddlSoLuongVe1.SelectedIndex = Convert.ToInt16(obj.SoLuongVe1.Trim());
+                    }
+
+                    if (obj.SoLuongVe2 == "" || obj.SoLuongVe2 == null)
+                    {
+                        ddlSoLuongVe2.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        ddlSoLuongVe2.SelectedIndex = Convert.ToInt16(obj.SoLuongVe2.Trim());
+                    }
+
+                    if (obj.SoLuongVe3 == "" || obj.SoLuongVe3 == null)
+                    {
+                        ddlSoLuongVe3.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        ddlSoLuongVe3.SelectedIndex = Convert.ToInt16(obj.SoLuongVe3.Trim());
+                    }
+                    #endregion
+
+                    #region Điền dữ liệu số ghế
+                    if (obj.SoGhe == "" || obj.SoGhe == null)
+                    {
+                        ddlSoGhe.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        ddlSoGhe.SelectedIndex = Convert.ToInt16(obj.SoGhe.Trim());
+                    }
+                    #endregion
+
+                    #region Điền dữ liệu giờ khởi hành
+                    if (obj.GioKhoiHanh_Thu2.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                    {
+                        txtGioKhoiHanh_Thu2.Text = obj.GioKhoiHanh_Thu2.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu2.Minute.ToString();
+                        chkThu2.Checked = true;
+                    }
+                    else
+                    {
+                        txtGioKhoiHanh_Thu2.Text = "";
+                        chkThu2.Checked = false;
+                    }
+
+                    if (obj.GioKhoiHanh_Thu3.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                    {
+                        txtGioKhoiHanh_Thu3.Text = obj.GioKhoiHanh_Thu3.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu3.Minute.ToString();
+                        chkThu3.Checked = true;
+                    }
+                    else
+                    {
+                        txtGioKhoiHanh_Thu3.Text = "";
+                        chkThu3.Checked = false;
+                    }
+
+                    if (obj.GioKhoiHanh_Thu4.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                    {
+                        txtGioKhoiHanh_Thu4.Text = obj.GioKhoiHanh_Thu4.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu4.Minute.ToString();
+                        chkThu4.Checked = true;
+                    }
+                    else
+                    {
+                        txtGioKhoiHanh_Thu4.Text = "";
+                        chkThu4.Checked = false;
+                    }
+
+                    if (obj.GioKhoiHanh_Thu5.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                    {
+                        txtGioKhoiHanh_Thu5.Text = obj.GioKhoiHanh_Thu5.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu5.Minute.ToString();
+                        chkThu5.Checked = true;
+                    }
+                    else
+                    {
+                        txtGioKhoiHanh_Thu5.Text = "";
+                        chkThu5.Checked = false;
+                    }
+
+                    if (obj.GioKhoiHanh_Thu6.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                    {
+                        txtGioKhoiHanh_Thu6.Text = obj.GioKhoiHanh_Thu6.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu6.Minute.ToString();
+                        chkThu6.Checked = true;
+                    }
+                    else
+                    {
+                        txtGioKhoiHanh_Thu6.Text = "";
+                        chkThu6.Checked = false;
+                    }
+
+                    if (obj.GioKhoiHanh_Thu7.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                    {
+                        txtGioKhoiHanh_Thu7.Text = obj.GioKhoiHanh_Thu7.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu7.Minute.ToString();
+                        chkThu7.Checked = true;
+                    }
+                    else
+                    {
+                        txtGioKhoiHanh_Thu7.Text = "";
+                        chkThu7.Checked = false;
+                    }
+
+                    if (obj.GioKhoiHanh_ChuNhat.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                    {
+                        txtGioKhoiHanh_ChuNhat.Text = obj.GioKhoiHanh_ChuNhat.Hour.ToString() + ":" + obj.GioKhoiHanh_ChuNhat.Minute.ToString();
+                        chkCN.Checked = true;
+                    }
+                    else
+                    {
+                        txtGioKhoiHanh_ChuNhat.Text = "";
+                        chkCN.Checked = false;
+                    }
+                    #endregion
+
+                    #region Điền dữ liệu giờ đến
+                    if (obj.GioDen_Thu2.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                    {
+                        txtGioDen_Thu2.Text = obj.GioDen_Thu2.Hour.ToString() + ":" + obj.GioDen_Thu2.Minute.ToString();
+                        chkThu2.Checked = true;
+                    }
+                    else
+                    {
+                        txtGioDen_Thu2.Text = "";
+                        chkThu2.Checked = false;
+                    }
+
+                    if (obj.GioDen_Thu3.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                    {
+                        txtGioDen_Thu3.Text = obj.GioDen_Thu3.Hour.ToString() + ":" + obj.GioDen_Thu3.Minute.ToString();
+                        chkThu3.Checked = true;
+                    }
+                    else
+                    {
+                        txtGioDen_Thu3.Text = "";
+                        chkThu3.Checked = false;
+                    }
+
+                    if (obj.GioDen_Thu4.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                    {
+                        txtGioDen_Thu4.Text = obj.GioDen_Thu4.Hour.ToString() + ":" + obj.GioDen_Thu4.Minute.ToString();
+                        chkThu4.Checked = true;
+                    }
+                    else
+                    {
+                        txtGioDen_Thu4.Text = "";
+                        chkThu4.Checked = false;
+                    }
+
+                    if (obj.GioDen_Thu5.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                    {
+                        txtGioDen_Thu5.Text = obj.GioDen_Thu5.Hour.ToString() + ":" + obj.GioDen_Thu5.Minute.ToString();
+                        chkThu5.Checked = true;
+                    }
+                    else
+                    {
+                        txtGioDen_Thu5.Text = "";
+                        chkThu5.Checked = false;
+                    }
+
+                    if (obj.GioDen_Thu6.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                    {
+                        txtGioDen_Thu6.Text = obj.GioDen_Thu6.Hour.ToString() + ":" + obj.GioDen_Thu6.Minute.ToString();
+                        chkThu6.Checked = true;
+                    }
+                    else
+                    {
+                        txtGioDen_Thu6.Text = "";
+                        chkThu6.Checked = false;
+                    }
+
+                    if (obj.GioDen_Thu7.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                    {
+                        txtGioDen_Thu7.Text = obj.GioDen_Thu7.Hour.ToString() + ":" + obj.GioDen_Thu7.Minute.ToString();
+                        chkThu7.Checked = true;
+                    }
+                    else
+                    {
+                        txtGioDen_Thu7.Text = "";
+                        chkThu7.Checked = false;
+                    }
+
+                    if (obj.GioDen_ChuNhat.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
+                    {
+                        txtGioDen_ChuNhat.Text = obj.GioDen_ChuNhat.Hour.ToString() + ":" + obj.GioDen_ChuNhat.Minute.ToString();
+                        chkCN.Checked = true;
+                    }
+                    else
+                    {
+                        txtGioDen_ChuNhat.Text = "";
+                        chkCN.Checked = false;
+                    }
+                    #endregion
+
+                }
+                else
+                {
+                    rblTinhTrangChuyen.SelectedIndex = 1;
+                    Panel1.Visible = false;
+                }
+            }
+            else
+            {
+                rblTinhTrangChuyen.SelectedIndex = 1;
+                Panel1.Visible = false;
+            }
+            InitControl();
+        }
+
+        protected void ddlNoiDi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillData();
+        }
+
+        protected void ddlNoiDen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillData();
+        }
+
+        protected void rblTinhTrangChuyen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string strNoiDi = "";
+            string strNoiDen = "";
+            string strHanhTrinh = "";
+
+            strNoiDi = ddlNoiDi.SelectedValue.ToUpper();
+            strNoiDen = ddlNoiDen.SelectedValue.ToUpper();
+            strHanhTrinh = strNoiDi.Trim() + strNoiDen.Trim();
+
+            TinhTrangChuyen obj = new TinhTrangChuyen();
+            obj = TinhTrangChuyenDB.GetInfo(strHanhTrinh);
+
+            if (rblTinhTrangChuyen.SelectedValue == "Yes")
+            {
+                rblTinhTrangChuyen.SelectedIndex = 0;
+                Panel1.Visible = true;
+                if (obj != null)
+                {
+                    txtGiaVe1_NguoiLon.Text = obj.GiaVe1.ToLower().Trim();
+                    txtGiaVe2_NguoiLon.Text = obj.GiaVe2.ToLower().Trim();
+                    txtGiaVe3_NguoiLon.Text = obj.GiaVe3.ToLower().Trim();
+                    txtGiaVe1_TreEm.Text = obj.GiaVe1_TreEm.ToLower().Trim();
+                    txtGiaVe2_TreEm.Text = obj.GiaVe2_TreEm.ToLower().Trim();
+                    txtGiaVe3_TreEm.Text = obj.GiaVe3_TreEm.ToLower().Trim();
+                    txtSoHieuTau.Text = obj.MaSoTau.Trim();
+
+                    #region Điền dữ liệu số lượng vé
+                    if (obj.SoLuongVe1 == "" || obj.SoLuongVe1 == null)
+                    {
+                        ddlSoLuongVe1.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        ddlSoLuongVe1.SelectedIndex = Convert.ToInt16(obj.SoLuongVe1.Trim());
+                    }
+
+                    if (obj.SoLuongVe2 == "" || obj.SoLuongVe2 == null)
+                    {
+                        ddlSoLuongVe2.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        ddlSoLuongVe2.SelectedIndex = Convert.ToInt16(obj.SoLuongVe2.Trim());
+                    }
+
+                    if (obj.SoLuongVe3 == "" || obj.SoLuongVe3 == null)
+                    {
+                        ddlSoLuongVe3.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        ddlSoLuongVe3.SelectedIndex = Convert.ToInt16(obj.SoLuongVe3.Trim());
+                    }
+                    #endregion
+
+                    #region Điền dữ liệu số ghế
+                    if (obj.SoGhe == "" || obj.SoGhe == null)
+                    {
+                        ddlSoGhe.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        ddlSoGhe.SelectedIndex = Convert.ToInt16(obj.SoGhe.Trim());
+                    }
+                    #endregion
 
                     #region Điền dữ liệu giờ khởi hành
                     if (obj.GioKhoiHanh_Thu2.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
@@ -214,215 +505,8 @@ namespace ShipBooking.Controls
                         chkCN.Checked = false;
                     }
                     #endregion
-
                 }
-                else
-                {
-                    rblTinhTrangChuyen.SelectedIndex = 1;
-                    Panel1.Visible = false;
-                }
-            }
-            else
-            {
-                rblTinhTrangChuyen.SelectedIndex = 1;
-                Panel1.Visible = false;
-            }
-            InitControl();
-        }
-
-        protected void ddlNoiDi_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FillData();
-        }
-
-        protected void ddlNoiDen_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FillData();
-        }
-
-        protected void rblTinhTrangChuyen_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string strNoiDi = "";
-            string strNoiDen = "";
-            string strHanhTrinh = "";
-
-            strNoiDi = ddlNoiDi.SelectedValue.ToUpper();
-            strNoiDen = ddlNoiDen.SelectedValue.ToUpper();
-            strHanhTrinh = strNoiDi.Trim() + strNoiDen.Trim();
-
-            TinhTrangChuyen obj = new TinhTrangChuyen();
-            obj = TinhTrangChuyenDB.GetInfo(strHanhTrinh);
-
-            if (rblTinhTrangChuyen.SelectedValue == "Yes")
-            {
-                rblTinhTrangChuyen.SelectedIndex = 0;
-                Panel1.Visible = true;
-                txtGiaVeThuong.Text = obj.GiaVe1.ToLower().Trim();
-                txtGiaVeDoanhNhan.Text = obj.GiaVe2.ToLower().Trim();
-                txtGiaVeVIP.Text = obj.GiaVe3.ToLower().Trim();
-                txtSoHieuTau.Text = obj.MaSoTau.Trim();
-
-                txtSoLuongVe1.Text = obj.SoLuongVe1.Trim();
-                txtSoLuongVe2.Text = obj.SoLuongVe2.Trim();
-                txtSoLuongVe3.Text = obj.SoLuongVe3.Trim();
-
-                #region Điền dữ liệu giờ khởi hành
-                if (obj.GioKhoiHanh_Thu2.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
-                {
-                    txtGioKhoiHanh_Thu2.Text = obj.GioKhoiHanh_Thu2.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu2.Minute.ToString();
-                    chkThu2.Checked = true;
-                }
-                else
-                {
-                    txtGioKhoiHanh_Thu2.Text = "";
-                    chkThu2.Checked = false;
-                }
-
-                if (obj.GioKhoiHanh_Thu3.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
-                {
-                    txtGioKhoiHanh_Thu3.Text = obj.GioKhoiHanh_Thu3.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu3.Minute.ToString();
-                    chkThu3.Checked = true;
-                }
-                else
-                {
-                    txtGioKhoiHanh_Thu3.Text = "";
-                    chkThu3.Checked = false;
-                }
-
-                if (obj.GioKhoiHanh_Thu4.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
-                {
-                    txtGioKhoiHanh_Thu4.Text = obj.GioKhoiHanh_Thu4.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu4.Minute.ToString();
-                    chkThu4.Checked = true;
-                }
-                else
-                {
-                    txtGioKhoiHanh_Thu4.Text = "";
-                    chkThu4.Checked = false;
-                }
-
-                if (obj.GioKhoiHanh_Thu5.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
-                {
-                    txtGioKhoiHanh_Thu5.Text = obj.GioKhoiHanh_Thu5.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu5.Minute.ToString();
-                    chkThu5.Checked = true;
-                }
-                else
-                {
-                    txtGioKhoiHanh_Thu5.Text = "";
-                    chkThu5.Checked = false;
-                }
-
-                if (obj.GioKhoiHanh_Thu6.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
-                {
-                    txtGioKhoiHanh_Thu6.Text = obj.GioKhoiHanh_Thu6.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu6.Minute.ToString();
-                    chkThu6.Checked = true;
-                }
-                else
-                {
-                    txtGioKhoiHanh_Thu6.Text = "";
-                    chkThu6.Checked = false;
-                }
-
-                if (obj.GioKhoiHanh_Thu7.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
-                {
-                    txtGioKhoiHanh_Thu7.Text = obj.GioKhoiHanh_Thu7.Hour.ToString() + ":" + obj.GioKhoiHanh_Thu7.Minute.ToString();
-                    chkThu7.Checked = true;
-                }
-                else
-                {
-                    txtGioKhoiHanh_Thu7.Text = "";
-                    chkThu7.Checked = false;
-                }
-
-                if (obj.GioKhoiHanh_ChuNhat.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
-                {
-                    txtGioKhoiHanh_ChuNhat.Text = obj.GioKhoiHanh_ChuNhat.Hour.ToString() + ":" + obj.GioKhoiHanh_ChuNhat.Minute.ToString();
-                    chkCN.Checked = true;
-                }
-                else
-                {
-                    txtGioKhoiHanh_ChuNhat.Text = "";
-                    chkCN.Checked = false;
-                }
-                #endregion
-
-                #region Điền dữ liệu giờ khởi hành
-                if (obj.GioDen_Thu2.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
-                {
-                    txtGioDen_Thu2.Text = obj.GioDen_Thu2.Hour.ToString() + ":" + obj.GioDen_Thu2.Minute.ToString();
-                    chkThu2.Checked = true;
-                }
-                else
-                {
-                    txtGioDen_Thu2.Text = "";
-                    chkThu2.Checked = false;
-                }
-
-                if (obj.GioDen_Thu3.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
-                {
-                    txtGioDen_Thu3.Text = obj.GioDen_Thu3.Hour.ToString() + ":" + obj.GioDen_Thu3.Minute.ToString();
-                    chkThu3.Checked = true;
-                }
-                else
-                {
-                    txtGioDen_Thu3.Text = "";
-                    chkThu3.Checked = false;
-                }
-
-                if (obj.GioDen_Thu4.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
-                {
-                    txtGioDen_Thu4.Text = obj.GioDen_Thu4.Hour.ToString() + ":" + obj.GioDen_Thu4.Minute.ToString();
-                    chkThu4.Checked = true;
-                }
-                else
-                {
-                    txtGioDen_Thu4.Text = "";
-                    chkThu4.Checked = false;
-                }
-
-                if (obj.GioDen_Thu5.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
-                {
-                    txtGioDen_Thu5.Text = obj.GioDen_Thu5.Hour.ToString() + ":" + obj.GioDen_Thu5.Minute.ToString();
-                    chkThu5.Checked = true;
-                }
-                else
-                {
-                    txtGioDen_Thu5.Text = "";
-                    chkThu5.Checked = false;
-                }
-
-                if (obj.GioDen_Thu6.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
-                {
-                    txtGioDen_Thu6.Text = obj.GioDen_Thu6.Hour.ToString() + ":" + obj.GioDen_Thu6.Minute.ToString();
-                    chkThu6.Checked = true;
-                }
-                else
-                {
-                    txtGioDen_Thu6.Text = "";
-                    chkThu6.Checked = false;
-                }
-
-                if (obj.GioDen_Thu7.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
-                {
-                    txtGioDen_Thu7.Text = obj.GioDen_Thu7.Hour.ToString() + ":" + obj.GioDen_Thu7.Minute.ToString();
-                    chkThu7.Checked = true;
-                }
-                else
-                {
-                    txtGioDen_Thu7.Text = "";
-                    chkThu7.Checked = false;
-                }
-
-                if (obj.GioDen_ChuNhat.Date != DateTime.Parse("1/1/1900 12:00:00 AM"))
-                {
-                    txtGioDen_ChuNhat.Text = obj.GioDen_ChuNhat.Hour.ToString() + ":" + obj.GioDen_ChuNhat.Minute.ToString();
-                    chkCN.Checked = true;
-                }
-                else
-                {
-                    txtGioDen_ChuNhat.Text = "";
-                    chkCN.Checked = false;
-                }
-                #endregion
+                InitControl();
             }
             else
             {
@@ -498,14 +582,17 @@ namespace ShipBooking.Controls
                 }
                 obj.MaTPDi = ddlNoiDi.SelectedValue.ToUpper().Trim();
                 obj.MaTPDen = ddlNoiDen.SelectedValue.ToUpper().Trim();
-                obj.GiaVe1 = txtGiaVeThuong.Text.ToLower().Trim();
-                obj.GiaVe2 = txtGiaVeDoanhNhan.Text.ToLower().Trim();
-                obj.GiaVe3 = txtGiaVeVIP.Text.ToLower().Trim();
-                obj.MaSoTau = ddlSoHieuTau.SelectedValue.Trim();
-
-                obj.SoLuongVe1 = txtSoLuongVe1.Text.Trim();
-                obj.SoLuongVe2 = txtSoLuongVe2.Text.Trim();
-                obj.SoLuongVe3 = txtSoLuongVe3.Text.Trim();
+                obj.GiaVe1 = txtGiaVe1_NguoiLon.Text.ToLower().Trim();
+                obj.GiaVe2 = txtGiaVe2_NguoiLon.Text.ToLower().Trim();
+                obj.GiaVe3 = txtGiaVe3_NguoiLon.Text.ToLower().Trim();
+                obj.GiaVe1_TreEm = txtGiaVe1_TreEm.Text.ToLower().Trim();
+                obj.GiaVe2_TreEm = txtGiaVe2_TreEm.Text.ToLower().Trim();
+                obj.GiaVe3_TreEm = txtGiaVe3_TreEm.Text.ToLower().Trim();
+                obj.MaSoTau = txtSoHieuTau.Text.Trim();
+                obj.SoLuongVe1 = ddlSoLuongVe1.SelectedValue.Trim();
+                obj.SoLuongVe2 = ddlSoLuongVe2.SelectedValue.Trim();
+                obj.SoLuongVe3 = ddlSoLuongVe3.SelectedValue.Trim();
+                obj.SoGhe = ddlSoGhe.SelectedValue.Trim();
 
                 #region Check & get giờ khởi hành
                 if (CheckValidTime(txtGioKhoiHanh_Thu2) == true)
@@ -752,14 +839,17 @@ namespace ShipBooking.Controls
                 }
                 obj.MaTPDi = ddlNoiDi.SelectedValue.ToUpper().Trim();
                 obj.MaTPDen = ddlNoiDen.SelectedValue.ToUpper().Trim();
-                obj.GiaVe1 = txtGiaVeThuong.Text.ToLower().Trim();
-                obj.GiaVe2 = txtGiaVeDoanhNhan.Text.ToLower().Trim();
-                obj.GiaVe3 = txtGiaVeVIP.Text.ToLower().Trim();
-                obj.MaSoTau = ddlSoHieuTau.SelectedValue.Trim();
-
-                obj.SoLuongVe1 = txtSoLuongVe1.Text.Trim();
-                obj.SoLuongVe2 = txtSoLuongVe2.Text.Trim();
-                obj.SoLuongVe3 = txtSoLuongVe3.Text.Trim();
+                obj.GiaVe1 = txtGiaVe1_NguoiLon.Text.ToLower().Trim();
+                obj.GiaVe2 = txtGiaVe2_NguoiLon.Text.ToLower().Trim();
+                obj.GiaVe3 = txtGiaVe3_NguoiLon.Text.ToLower().Trim();
+                obj.GiaVe1_TreEm = txtGiaVe1_TreEm.Text.ToLower().Trim();
+                obj.GiaVe2_TreEm = txtGiaVe2_TreEm.Text.ToLower().Trim();
+                obj.GiaVe3_TreEm = txtGiaVe3_TreEm.Text.ToLower().Trim();
+                obj.MaSoTau = txtSoHieuTau.Text.Trim();
+                obj.SoLuongVe1 = ddlSoLuongVe1.SelectedValue.Trim();
+                obj.SoLuongVe2 = ddlSoLuongVe2.SelectedValue.Trim();
+                obj.SoLuongVe3 = ddlSoLuongVe3.SelectedValue.Trim();
+                obj.SoGhe = ddlSoGhe.SelectedValue.Trim();
 
                 #region Check & get giờ khởi hành
                 if (CheckValidTime(txtGioKhoiHanh_Thu2) == true)
@@ -1012,9 +1102,37 @@ namespace ShipBooking.Controls
             ddlSoHieuTau.DataValueField = obj.MaSoTau;
         }
 
+        protected void FillDataToDdlSoLuongVe()
+        {
+            ListItem item;
+            for (int i = 0; i <= 500; i++)
+            {
+                item = new ListItem();
+                item.Text = Convert.ToString(i);
+                item.Value = Convert.ToString(i);
+                ddlSoLuongVe1.Items.Add(item);
+                ddlSoLuongVe2.Items.Add(item);
+                ddlSoLuongVe3.Items.Add(item);
+                item = null;
+            }
+        }
+
+        protected void FillDataToDdlSoGhe()
+        {
+            ListItem item;
+            for (int i = 0; i <= 500; i++)
+            {
+                item = new ListItem();
+                item.Text = Convert.ToString(i);
+                item.Value = Convert.ToString(i);
+                ddlSoGhe.Items.Add(item);
+                item = null;
+            }
+        }
+
         protected void ddlSoHieuTau_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtSoHieuTau.Text = ddlSoHieuTau.SelectedItem.Text.Trim();
+            //txtSoHieuTau.Text = ddlSoHieuTau.SelectedItem.Text.Trim();
         }
 
         protected void Button1_Click(object sender, EventArgs e)

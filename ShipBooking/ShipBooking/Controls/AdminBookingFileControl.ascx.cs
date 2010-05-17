@@ -19,6 +19,7 @@ namespace ShipBooking.Controls
 {
     public partial class AdminBookingFileControl : System.Web.UI.UserControl
     {
+        public static string BookingID;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -123,12 +124,14 @@ namespace ShipBooking.Controls
 
                 grwResult.DataSource = ds.Tables[0];
                 grwResult.DataBind();
+                lblMsg.Text = "";
             }
             else
             {
                 grwResult.DataSource = null;
                 grwResult.DataBind();
                 lblResult.Text = "Rất tiếc! Không tìm thấy kết quả nào.";
+                lblMsg.Text = "";
             }
         }
 
@@ -154,6 +157,7 @@ namespace ShipBooking.Controls
             else
             {
                 lblResult.Text = "Có " + ds.Tables[0].Rows.Count.ToString() + " kết quả tìm được:";
+                lblMsg.Text = "";
             }
         }
 
@@ -213,10 +217,10 @@ namespace ShipBooking.Controls
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 dt = DateTime.Parse(ds.Tables[0].Rows[i]["NgayDi"].ToString().Trim());
-                grwResult.Rows[i].Cells[5].Text = dt.Month + "/" + dt.Day + "/" + dt.Year;
+                grwResult.Rows[i].Cells[4].Text = dt.Month + "/" + dt.Day + "/" + dt.Year;
 
                 dt = DateTime.Parse(ds.Tables[0].Rows[i]["NgayVe"].ToString().Trim());
-                grwResult.Rows[i].Cells[6].Text = dt.Month + "/" + dt.Day + "/" + dt.Year;
+                grwResult.Rows[i].Cells[5].Text = dt.Month + "/" + dt.Day + "/" + dt.Year;
             }
             if (ds.Tables[0].Rows.Count == 0)
             {
@@ -225,6 +229,7 @@ namespace ShipBooking.Controls
             else
             {
                 lblResult.Text = "Có " + ds.Tables[0].Rows.Count.ToString() + " kết quả tìm được:";
+                lblMsg.Text = "";
             }
         }
 
@@ -234,6 +239,18 @@ namespace ShipBooking.Controls
             {
                 SelectAllBookingFile();
             }
+        }
+
+        protected void grwResult_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grwResult.PageIndex = e.NewPageIndex;
+            SelectAllBookingFile();
+        }
+
+        protected void grwResult_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BookingID = grwResult.Rows[grwResult.SelectedIndex].Cells[0].Text.Trim();
+            Response.Redirect("DetailBooking.aspx");
         }
     }
 }

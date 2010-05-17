@@ -148,11 +148,12 @@
                             Visible="False"></asp:Label>
                     </td>
                     <td class="style1">
-                        Giá vé:</td>
+                        &nbsp;</td>
                     <td>
-                        <asp:Label ID="lblGiaVN" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
+                        <asp:Label ID="lblGiaVN" runat="server" Font-Bold="True" ForeColor="#0000CC" 
+                            Visible="False"></asp:Label>
                         &nbsp;<asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="#990033" 
-                            Text=" (VNĐ)"></asp:Label>
+                            Text=" (VNĐ)" Visible="False"></asp:Label>
                     </td>
                 </tr>
                 </table>
@@ -184,8 +185,6 @@
                     <td>
                         <asp:TextBox ID="txtDiaChi" runat="server" Height="100px" TextMode="MultiLine" 
                             Width="250px"></asp:TextBox>
-                        <span class="step1_warning">(*)
-                        </span>
                     </td>
                 </tr>
                 <tr>
@@ -194,8 +193,7 @@
                     <td>
                         <asp:DropDownList ID="ddlQuocTich" runat="server" Height="22px" Width="160px">
                         </asp:DropDownList>
-                    &nbsp;<span class="step1_warning">(*)
-                        </span></td>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -203,16 +201,13 @@
                     <td>
                         <asp:DropDownList ID="ddlDoTuoi" runat="server" Height="22px" Width="160px">
                         </asp:DropDownList>
-                    &nbsp;<span class="step1_warning">(*)
-                        </span></td>
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         Số điện thoại:</td>
                     <td>
                         <asp:TextBox ID="txtSoDienThoai" runat="server" Width="138px"></asp:TextBox>
-                        &nbsp;<span class="step1_warning">(*) 
-                        </span>
                         </td>
                 </tr>
                 <tr>
@@ -220,8 +215,6 @@
                         Email:</td>
                     <td>
                         <asp:TextBox ID="txtEmail" runat="server" Width="250px"></asp:TextBox>
-                    &nbsp;<span class="step1_warning">(*) 
-                        </span>
                     </td>
                 </tr>
             </table>

@@ -19,5 +19,10 @@ namespace ShipBooking.Controls.Layer
         {
 
         }
+
+        protected void imgHome_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+        }
     }
 }

@@ -186,8 +186,9 @@
                     <td colspan="2">
                         Số vé hiện có:
                         <asp:Label ID="lblSoLuongVe" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
-                    &nbsp;&nbsp;&nbsp; Giá vé:
-                        <asp:Label ID="lblGiaVe" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
+                    &nbsp;&nbsp;&nbsp; 
+                        <asp:Label ID="lblGiaVe" runat="server" Font-Bold="True" ForeColor="Blue" 
+                            Visible="False"></asp:Label>
                     </td>
                 </tr>
                 <tr>

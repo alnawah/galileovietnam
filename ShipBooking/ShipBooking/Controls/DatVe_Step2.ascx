@@ -154,7 +154,8 @@
 </center>
 
 <p style="text-align: center">
-    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/ThemHanhKhach.aspx">Thêm hoặc sửa danh sách khách</asp:LinkButton>
+    <asp:LinkButton ID="LinkButton1" runat="server" 
+        PostBackUrl="~/ThemHanhKhach.aspx" Visible="False">Thêm hoặc sửa danh sách khách</asp:LinkButton>
 </p>
 <p style="text-align: center">
     <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
@@ -192,20 +193,20 @@
                     <td class="ThongTinDatCho_Detail">
                         <asp:DropDownList ID="ddlThanhPho" runat="server" Height="22px" Width="166px">
                         </asp:DropDownList>
-                    &nbsp;<span class="warning_text">(*)</span></td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Điện thoại</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:TextBox ID="txtDienThoaiNguoiNhan" runat="server" Width="163px"></asp:TextBox>&nbsp;<span class="warning_text">(*)</span>
+                        <asp:TextBox ID="txtDienThoaiNguoiNhan" runat="server" Width="163px"></asp:TextBox>
+                        &nbsp;<span class="warning_text">(*)</span>
                     </td>
                 </tr>
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Email</td>
                     <td class="ThongTinDatCho_Detail">
-                        <asp:TextBox ID="txtEmailNguoiNhan" runat="server" Width="279px"></asp:TextBox>&nbsp;<span class="warning_text">(*)</span>
+                        <asp:TextBox ID="txtEmailNguoiNhan" runat="server" Width="279px"></asp:TextBox>
                         </td>
                 </tr>
                 <tr>
