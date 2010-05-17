@@ -169,13 +169,14 @@
     <asp:GridView ID="grwResult" runat="server" AutoGenerateColumns="False" 
         BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" 
         CellPadding="4" Width="800px" onrowdeleting="grwResult_RowDeleting"
-        EmptyDataText="Chưa có dữ liệu nào" AllowPaging="True">
+        EmptyDataText="Chưa có dữ liệu nào" AllowPaging="True" 
+        onpageindexchanging="grwResult_PageIndexChanging" 
+        onselectedindexchanged="grwResult_SelectedIndexChanged">
         <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
         <RowStyle BackColor="White" ForeColor="#003399" />
         <Columns>
             <asp:BoundField DataField="MaBF" HeaderText="Booking ID" />
             <asp:BoundField DataField="Ten" HeaderText="Khách" />
-            <asp:BoundField DataField="LoaiChuyen" HeaderText="Loại chuyến" />
             <asp:BoundField DataField="NoiDi" HeaderText="Nơi đi" />
             <asp:BoundField DataField="NoiDen" HeaderText="Nơi đến" />
             <asp:BoundField DataField="NgayDi" HeaderText="Ngày đi" >
@@ -184,14 +185,10 @@
             <asp:BoundField DataField="NgayVe" HeaderText="Ngày về" >
                 <ItemStyle HorizontalAlign="Center" />
             </asp:BoundField>
-            <asp:BoundField DataField="ThoiGian" HeaderText="Thời gian" >
-                <ItemStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="LoaiVe" HeaderText="Loại vé" />
-            <asp:BoundField DataField="GiaTien" HeaderText="Giá tiền" >
-                <ItemStyle HorizontalAlign="Right" />
-            </asp:BoundField>
-            <asp:CommandField ButtonType="Button" ShowDeleteButton="True" />
+            <asp:CommandField ButtonType="Button" ShowDeleteButton="True" 
+                DeleteText="Hủy Booking" />
+            <asp:CommandField ButtonType="Button" SelectText="Chi tiết" 
+                ShowSelectButton="True" />
         </Columns>
         <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
         <SelectedRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />

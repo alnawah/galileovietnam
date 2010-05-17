@@ -63,6 +63,27 @@ namespace ShipBooking.Module
             set { _GiaVe3 = value; }
         }
 
+        string _GiaVe1_TreEm;
+        public string GiaVe1_TreEm
+        {
+            get { return _GiaVe1_TreEm; }
+            set { _GiaVe1_TreEm = value; }
+        }
+
+        string _GiaVe2_TreEm;
+        public string GiaVe2_TreEm
+        {
+            get { return _GiaVe2_TreEm; }
+            set { _GiaVe2_TreEm = value; }
+        }
+
+        string _GiaVe3_TreEm;
+        public string GiaVe3_TreEm
+        {
+            get { return _GiaVe3_TreEm; }
+            set { _GiaVe3_TreEm = value; }
+        }
+
         string _MaSoTau;
         public string MaSoTau
         {
@@ -187,6 +208,13 @@ namespace ShipBooking.Module
         {
             get { return _GioDen_ChuNhat; }
             set { _GioDen_ChuNhat = value; }
+        }
+
+        string _SoGhe;
+        public string SoGhe
+        {
+            get { return _SoGhe; }
+            set { _SoGhe = value; }
         }
     }
 }

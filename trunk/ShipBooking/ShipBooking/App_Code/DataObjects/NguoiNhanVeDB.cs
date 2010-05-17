@@ -49,6 +49,7 @@ namespace ShipBooking
             NguoiNhanVe NguoiNhan = new NguoiNhanVe();
             if (dt.Rows.Count > 0)
             {
+                NguoiNhan.MaNguoiNhan = dt.Rows[0]["MaNguoiNhan"].ToString();
                 NguoiNhan.Ten = dt.Rows[0]["Ten"].ToString();
                 NguoiNhan.DiaChi = dt.Rows[0]["DiaChi"].ToString();
                 NguoiNhan.MaThanhPho = dt.Rows[0]["MaThanhPho"].ToString();

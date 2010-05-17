@@ -50,14 +50,15 @@
     .style3
     {
         width: 122px;
+        text-align: left;
     }
     .style4
     {
         width: 95px;
+        text-align: left;
     }
     .style5
     {
-        width: 96px;
         text-align: right;
     }
     .style6
@@ -135,58 +136,117 @@
                 <br />
                 <table align="center" class="style2" style="border: 1px solid #006699">
                     <tr align="center">
-                        <td align="left" colspan="2" 
+                        <td align="left" 
                             style="background-color: #006699; color: #FFFFFF; font-weight: bold;">
                             Giá vé</td>
-                        <td align="left" 
-                            style="background-color: #006699; color: #FFFFFF; font-weight: bold;">
-                            &nbsp;</td>
-                        <td align="left" 
-                            style="background-color: #006699; color: #FFFFFF; font-weight: bold;">
-                            &nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td class="style5" align="left">
-                            Loại thường:
-                        </td>
-                        <td>
-                            <asp:TextBox ID="txtGiaVeThuong" runat="server" Width="176px"></asp:TextBox>
-                            &nbsp;(VNĐ)</td>
-                        <td>
-                            Số lượng vé:</td>
-                        <td>
-                            <asp:TextBox ID="txtSoLuongVe1" runat="server" Width="79px"></asp:TextBox>
-                        </td>
                     </tr>
                     <tr>
                         <td align="left" class="style5">
-                            Loại doanh nhân:</td>
-                        <td>
-                            <asp:TextBox ID="txtGiaVeDoanhNhan" runat="server" Width="176px"></asp:TextBox>
-                            &nbsp;(VNĐ)</td>
-                        <td>
-                            Số lượng vé:</td>
-                        <td>
-                            <asp:TextBox ID="txtSoLuongVe2" runat="server" Width="79px"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left" class="style5">
-                            Loại VIP:</td>
-                        <td>
-                            <asp:TextBox ID="txtGiaVeVIP" runat="server" Width="176px"></asp:TextBox>
-                            &nbsp;(VNĐ)</td>
-                        <td>
-                            Số lượng vé:</td>
-                        <td>
-                            <asp:TextBox ID="txtSoLuongVe3" runat="server" Width="79px"></asp:TextBox>
+                            <br />
+                            <table align="center" class="style2" style="border: 1px solid #006699">
+                                <tr align="center">
+                                    <td align="left" colspan="2" 
+                                        style="background-color: #006699; color: #FFFFFF; font-weight: bold;">
+                                        Loại thường</td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="style5">
+                                        Người lớn:</td>
+                                    <td style="text-align: left">
+                                        <asp:TextBox ID="txtGiaVe1_NguoiLon" runat="server" Width="176px" 
+                                            style="text-align: right"></asp:TextBox>
+                                        &nbsp;(VNĐ)</td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="style5">
+                                        Trẻ em:</td>
+                                    <td style="text-align: left">
+                                        <asp:TextBox ID="txtGiaVe1_TreEm" runat="server" Width="176px" 
+                                            style="text-align: right"></asp:TextBox>
+                                        &nbsp;(VNĐ)</td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="style5">
+                                        Số lượng:</td>
+                                    <td style="text-align: left">
+                                        <asp:DropDownList ID="ddlSoLuongVe1" runat="server">
+                                        </asp:DropDownList>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br />
+                            <table align="center" class="style2" style="border: 1px solid #006699">
+                                <tr align="center">
+                                    <td align="left" colspan="2" 
+                                        style="background-color: #006699; color: #FFFFFF; font-weight: bold;">
+                                        Loại doanh nhân</td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="style5">
+                                        Người lớn:</td>
+                                    <td style="text-align: left">
+                                        <asp:TextBox ID="txtGiaVe2_NguoiLon" runat="server" Width="176px" 
+                                            style="text-align: right"></asp:TextBox>
+                                        &nbsp;(VNĐ)</td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="style5">
+                                        Trẻ em:</td>
+                                    <td style="text-align: left">
+                                        <asp:TextBox ID="txtGiaVe2_TreEm" runat="server" Width="176px" 
+                                            style="text-align: right"></asp:TextBox>
+                                        &nbsp;(VNĐ)</td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="style5">
+                                        Số lượng:</td>
+                                    <td style="text-align: left">
+                                        <asp:DropDownList ID="ddlSoLuongVe2" runat="server">
+                                        </asp:DropDownList>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br />
+                            <table align="center" class="style2" style="border: 1px solid #006699">
+                                <tr align="center">
+                                    <td align="left" colspan="2" 
+                                        style="background-color: #006699; color: #FFFFFF; font-weight: bold;">
+                                        Loại VIP</td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="style5">
+                                        Người lớn:</td>
+                                    <td style="text-align: left">
+                                        <asp:TextBox ID="txtGiaVe3_NguoiLon" runat="server" Width="176px" 
+                                            style="text-align: right"></asp:TextBox>
+                                        &nbsp;(VNĐ)</td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="style5">
+                                        Trẻ em:</td>
+                                    <td style="text-align: left">
+                                        <asp:TextBox ID="txtGiaVe3_TreEm" runat="server" Width="176px" 
+                                            style="text-align: right"></asp:TextBox>
+                                        &nbsp;(VNĐ)</td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="style5">
+                                        Số lượng:</td>
+                                    <td style="text-align: left">
+                                        <asp:DropDownList ID="ddlSoLuongVe3" runat="server">
+                                        </asp:DropDownList>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br />
                         </td>
                     </tr>
                 </table>
                 <br />
+                <br />
                 <table align="center" class="style2" style="border: 1px solid #006699">
                     <tr align="center">
-                        <td align="left" colspan="4" 
+                        <td align="left" colspan="3" 
                             style="background-color: #006699; color: #FFFFFF; font-weight: bold;">
                             Số hiệu chuyến tàu</td>
                     </tr>
@@ -195,17 +255,25 @@
                             Số hiệu tàu:
                         </td>
                         <td class="style3">
-                            <asp:DropDownList ID="ddlSoHieuTau" runat="server" AutoPostBack="true" 
-                                Height="22px" onselectedindexchanged="ddlSoHieuTau_SelectedIndexChanged" 
-                                Width="110px">
-                            </asp:DropDownList>
-                        </td>
-                        <td>
                             <asp:TextBox ID="txtSoHieuTau" runat="server" Width="140px"></asp:TextBox>
                         </td>
                         <td>
                             <asp:Button ID="Button1" runat="server" Height="26px" onclick="Button1_Click" 
                                 Text="Xem thông tin tàu" Width="134px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style4">
+                            Số ghế:</td>
+                        <td class="style3">
+                            <asp:DropDownList ID="ddlSoGhe" runat="server" Height="22px" Width="66px">
+                            </asp:DropDownList>
+                        </td>
+                        <td>
+                            <asp:DropDownList ID="ddlSoHieuTau" runat="server" AutoPostBack="true" 
+                                Height="22px" onselectedindexchanged="ddlSoHieuTau_SelectedIndexChanged" 
+                                Visible="False" Width="110px">
+                            </asp:DropDownList>
                         </td>
                     </tr>
                 </table>

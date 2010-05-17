@@ -18,7 +18,6 @@ namespace ShipBooking.Controls
     public partial class Admin_ThanhPhoControl : System.Web.UI.UserControl
     {
         static bool CheckStatus = false;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

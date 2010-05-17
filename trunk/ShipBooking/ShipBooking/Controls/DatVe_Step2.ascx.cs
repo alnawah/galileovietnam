@@ -185,15 +185,6 @@ namespace ShipBooking.Controls
                         txtDienThoaiNguoiNhan.Focus();
                         isValid = false;
                     }
-                    else
-                    {
-                        if (txtEmailNguoiNhan.Text.Trim() == "")
-                        {
-                            lblMsg.Text = "Bạn phải nhập địa chỉ email người nhận";
-                            txtEmailNguoiNhan.Focus();
-                            isValid = false;
-                        }
-                    }
                 }
             }
 

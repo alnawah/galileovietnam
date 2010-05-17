@@ -77,67 +77,85 @@ namespace ShipBooking.Controls {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// txtGiaVeThuong control.
+        /// txtGiaVe1_NguoiLon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGiaVeThuong;
+        protected global::System.Web.UI.WebControls.TextBox txtGiaVe1_NguoiLon;
         
         /// <summary>
-        /// txtSoLuongVe1 control.
+        /// txtGiaVe1_TreEm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSoLuongVe1;
+        protected global::System.Web.UI.WebControls.TextBox txtGiaVe1_TreEm;
         
         /// <summary>
-        /// txtGiaVeDoanhNhan control.
+        /// ddlSoLuongVe1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGiaVeDoanhNhan;
+        protected global::System.Web.UI.WebControls.DropDownList ddlSoLuongVe1;
         
         /// <summary>
-        /// txtSoLuongVe2 control.
+        /// txtGiaVe2_NguoiLon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSoLuongVe2;
+        protected global::System.Web.UI.WebControls.TextBox txtGiaVe2_NguoiLon;
         
         /// <summary>
-        /// txtGiaVeVIP control.
+        /// txtGiaVe2_TreEm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGiaVeVIP;
+        protected global::System.Web.UI.WebControls.TextBox txtGiaVe2_TreEm;
         
         /// <summary>
-        /// txtSoLuongVe3 control.
+        /// ddlSoLuongVe2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSoLuongVe3;
+        protected global::System.Web.UI.WebControls.DropDownList ddlSoLuongVe2;
         
         /// <summary>
-        /// ddlSoHieuTau control.
+        /// txtGiaVe3_NguoiLon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSoHieuTau;
+        protected global::System.Web.UI.WebControls.TextBox txtGiaVe3_NguoiLon;
+        
+        /// <summary>
+        /// txtGiaVe3_TreEm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtGiaVe3_TreEm;
+        
+        /// <summary>
+        /// ddlSoLuongVe3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSoLuongVe3;
         
         /// <summary>
         /// txtSoHieuTau control.
@@ -156,6 +174,24 @@ namespace ShipBooking.Controls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// ddlSoGhe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSoGhe;
+        
+        /// <summary>
+        /// ddlSoHieuTau control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSoHieuTau;
         
         /// <summary>
         /// lblMsg2 control.
