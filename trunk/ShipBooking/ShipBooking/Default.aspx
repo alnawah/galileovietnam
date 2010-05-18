@@ -10,11 +10,12 @@
                 <asp:ImageButton ID="imgbtnDatve" runat="server" ImageUrl="~/Images/dat_ve.png" 
                     Width="492px" Height="65px" style="text-align: center" 
                     onclick="Image3_Click" />
+            </td>
+        </tr>
         <tr>
             <td>
                 <asp:ImageButton ID="imgbtnXemLichChuyen" runat="server" ImageUrl="~/Images/lich_chuyen.png" 
-                    Width="492px" Height="65px" onclick="imgbtnXemLichChuyen_Click" 
-                    Visible="False" />
+                    Width="492px" Height="65px" onclick="imgbtnXemLichChuyen_Click" />
             </td>
         </tr>
         <tr>

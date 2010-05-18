@@ -10,7 +10,7 @@
           <NativeDebugging>False</NativeDebugging>
           <SQLDebugging>False</SQLDebugging>
           <PublishCopyOption>RunFiles</PublishCopyOption>
-          <PublishTargetLocation>D:\Working\ShipBooking\</PublishTargetLocation>
+          <PublishTargetLocation>F:\Working\ShipBooking\</PublishTargetLocation>
           <PublishDeleteAllFiles>False</PublishDeleteAllFiles>
           <PublishCopyAppData>True</PublishCopyAppData>
           <ExternalProgram>

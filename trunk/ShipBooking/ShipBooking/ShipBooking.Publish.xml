@@ -1,28 +1,99 @@
 <publishData>
+  <publishTarget publishUrl="F:\Working\ShipBooking\">
+    <file relUrl="bin/.svn/prop-base/ShipBooking.pdb.svn-base" publishTime="05/18/2010 13:46:26" />
+    <file relUrl="Admin.aspx" publishTime="05/14/2010 23:21:26" />
+    <file relUrl="App_Themes/MySkin/MyCss.css" publishTime="05/12/2010 09:06:22" />
+    <file relUrl="Controls/AdminTauControl.ascx" publishTime="05/12/2010 15:21:32" />
+    <file relUrl="Controls/AdminControl.ascx" publishTime="05/18/2010 13:46:43" />
+    <file relUrl="bin/.svn/text-base/ShipBooking.pdb.svn-base" publishTime="05/18/2010 13:46:25" />
+    <file relUrl="Images/admin_quan_ly_booking.png" publishTime="05/12/2010 15:12:36" />
+    <file relUrl="Controls/Layer/LeftControl.ascx" publishTime="05/12/2010 09:13:49" />
+    <file relUrl="Controls/AdminDetailBookingControl.ascx" publishTime="05/18/2010 13:46:43" />
+    <file relUrl="DatVe_Step2.aspx" publishTime="05/12/2010 09:15:04" />
+    <file relUrl="Images/admin_quan_ly_hanhtrinh.png" publishTime="05/12/2010 15:13:32" />
+    <file relUrl="Images/banner1.png" publishTime="05/12/2010 09:15:00" />
+    <file relUrl="Images/thong_tin_nguoi_nhan_ve.png" publishTime="05/12/2010 15:49:07" />
+    <file relUrl="Controls/ThongTinKhachControl.ascx" publishTime="05/18/2010 13:46:43" />
+    <file relUrl="Controls/Layer/FooterControl.ascx" publishTime="05/12/2010 09:13:49" />
+    <file relUrl="Controls/DatVeReviewControl.ascx" publishTime="05/16/2010 20:22:02" />
+    <file relUrl="bin/ShipBooking.dll" publishTime="05/18/2010 14:51:48" />
+    <file relUrl="Controls/DatVeControl.ascx" publishTime="05/18/2010 14:53:10" />
+    <file relUrl="Images/quan_ly_tau_thuy.png" publishTime="05/12/2010 14:54:42" />
+    <file relUrl="ThemHanhKhach.aspx" publishTime="05/12/2010 09:15:04" />
+    <file relUrl="Images/tinh_trang_cho.png" publishTime="05/12/2010 09:15:00" />
+    <file relUrl="Controls/DatVe_Step2.ascx" publishTime="05/18/2010 13:46:43" />
+    <file relUrl="Images/text_banvetau.png" publishTime="05/12/2010 09:15:00" />
+    <file relUrl="Admin_Tau.aspx" publishTime="05/14/2010 23:21:26" />
+    <file relUrl="Images/CalendarIcon.png" publishTime="05/12/2010 09:15:00" />
+    <file relUrl="Images/quan_ly_booking.png" publishTime="05/12/2010 14:56:52" />
+    <file relUrl="Admin_Functions.aspx" publishTime="05/14/2010 23:21:26" />
+    <file relUrl="Controls/Layer/BannerControl.ascx" publishTime="05/18/2010 13:46:42" />
+    <file relUrl="bin/ShipBooking.pdb" publishTime="05/18/2010 14:51:48" />
+    <file relUrl="Images/quan_ly_hanh_trinh.png" publishTime="05/12/2010 14:55:51" />
+    <file relUrl="Controls/LoginControl.ascx" publishTime="05/12/2010 09:13:49" />
+    <file relUrl="DetailBooking.aspx" publishTime="05/18/2010 13:47:04" />
+    <file relUrl="Images/dat_ve_tau.png" publishTime="05/12/2010 15:47:07" />
+    <file relUrl="App_Data/ShipBooking_log.ldf" publishTime="05/18/2010 14:53:34" />
+    <file relUrl="Controls/ThongTinHanhTrinhControl.ascx" publishTime="05/18/2010 14:45:46" />
+    <file relUrl="Images/banner.png" publishTime="05/12/2010 09:15:00" />
+    <file relUrl="Controls/Layer/Admin_BannerControl.ascx" publishTime="05/14/2010 23:21:24" />
+    <file relUrl="Controls/Layer/RightControl.ascx" publishTime="05/12/2010 09:13:49" />
+    <file relUrl="MyMaster.Master" publishTime="05/12/2010 09:15:04" />
+    <file relUrl="Login.aspx" publishTime="05/12/2010 09:15:04" />
+    <file relUrl="bin/.svn/entries" publishTime="05/18/2010 13:46:28" />
+    <file relUrl="DatVe.aspx" publishTime="05/12/2010 09:15:04" />
+    <file relUrl="MenuScript.js" publishTime="05/12/2010 09:15:04" />
+    <file relUrl="Controls/Admin_ThanhPhoControl.ascx" publishTime="05/14/2010 23:21:24" />
+    <file relUrl="App_Themes/MySkin/MySkin.skin" publishTime="05/12/2010 09:06:22" />
+    <file relUrl="Controls/ThemHanhKhachControl.ascx" publishTime="05/12/2010 09:13:49" />
+    <file relUrl="Images/Hinh-su.gif" publishTime="05/12/2010 09:15:00" />
+    <file relUrl="Images/banner_blue.png" publishTime="05/12/2010 09:15:00" />
+    <file relUrl="Controls/AdminBookingFileControl.ascx" publishTime="05/18/2010 13:46:43" />
+    <file relUrl="Admin_Master.Master" publishTime="05/14/2010 23:21:26" />
+    <file relUrl="Images/thong_tin_tinh_trang_chuyen.png" publishTime="05/12/2010 15:44:59" />
+    <file relUrl="bin/.svn/prop-base/ShipBooking.dll.svn-base" publishTime="05/18/2010 13:46:28" />
+    <file relUrl="Images/bang_gia_ve.png" publishTime="05/12/2010 09:15:00" />
+    <file relUrl="Images/lich_chuyen.png" publishTime="05/12/2010 09:15:00" />
+    <file relUrl="KetThucBooking.aspx" publishTime="05/12/2010 15:38:21" />
+    <file relUrl="Images/admin.jpg" publishTime="05/12/2010 09:15:00" />
+    <file relUrl="Images/galileo_logo.jpg" publishTime="05/12/2010 09:15:00" />
+    <file relUrl="Web.config" publishTime="05/12/2010 09:15:04" />
+    <file relUrl="Admin_BookingFile.aspx" publishTime="05/14/2010 23:21:26" />
+    <file relUrl="bin/.svn/all-wcprops" publishTime="05/18/2010 13:46:28" />
+    <file relUrl="Controls/Layer/ContenControl.ascx" publishTime="05/12/2010 09:13:49" />
+    <file relUrl="Admin_ThanhPho.aspx" publishTime="05/14/2010 23:21:26" />
+    <file relUrl="Images/dat_ve.png" publishTime="05/12/2010 09:15:00" />
+    <file relUrl="Images/menu_bar.gif" publishTime="05/12/2010 09:15:00" />
+    <file relUrl="DatVe_Review.aspx" publishTime="05/12/2010 09:15:04" />
+    <file relUrl="App_Data/ShipBooking.mdf" publishTime="05/18/2010 13:46:40" />
+    <file relUrl="ThongTinKhach.aspx" publishTime="05/12/2010 09:15:04" />
+    <file relUrl="bin/.svn/text-base/ShipBooking.dll.svn-base" publishTime="05/18/2010 13:46:28" />
+    <file relUrl="Default.aspx" publishTime="05/18/2010 14:51:41" />
+    <file relUrl="ThongTinHanhTrinh.aspx" publishTime="05/18/2010 14:43:39" />
+  </publishTarget>
   <publishTarget publishUrl="D:\Working\ShipBooking\">
-    <file relUrl="Web.config" publishTime="04/20/2010 06:55:16" />
     <file relUrl="Admin.aspx" publishTime="05/14/2010 05:50:09" />
     <file relUrl="App_Themes/MySkin/MyCss.css" publishTime="04/20/2010 06:54:09" />
-    <file relUrl="KetThucBooking.aspx" publishTime="05/13/2010 11:59:55" />
+    <file relUrl="Images/thong_tin_tinh_trang_chuyen.png" publishTime="05/13/2010 11:59:54" />
+    <file relUrl="Controls/AdminTauControl.ascx" publishTime="05/13/2010 11:58:47" />
     <file relUrl="Controls/AdminControl.ascx" publishTime="05/17/2010 13:20:20" />
     <file relUrl="bin/.svn/text-base/ShipBooking.pdb.svn-base" publishTime="05/17/2010 06:57:31" />
     <file relUrl="Images/admin_quan_ly_booking.png" publishTime="05/13/2010 11:59:54" />
     <file relUrl="Controls/Layer/LeftControl.ascx" publishTime="04/20/2010 06:54:30" />
     <file relUrl="Controls/AdminDetailBookingControl.ascx" publishTime="05/17/2010 11:48:55" />
+    <file relUrl="Images/text_banvetau.png" publishTime="04/20/2010 06:55:14" />
     <file relUrl="Images/admin_quan_ly_hanhtrinh.png" publishTime="05/13/2010 11:59:54" />
     <file relUrl="Images/banner1.png" publishTime="04/20/2010 06:55:14" />
-    <file relUrl="Controls/AdminTauControl.ascx" publishTime="05/13/2010 11:58:47" />
     <file relUrl="Images/thong_tin_nguoi_nhan_ve.png" publishTime="05/13/2010 11:59:54" />
     <file relUrl="Images/Hinh-su.gif" publishTime="04/20/2010 06:55:14" />
     <file relUrl="Controls/Layer/FooterControl.ascx" publishTime="04/20/2010 06:54:30" />
     <file relUrl="Controls/DatVeReviewControl.ascx" publishTime="05/17/2010 05:42:31" />
     <file relUrl="Controls/DatVeControl.ascx" publishTime="05/17/2010 13:00:15" />
-    <file relUrl="Admin_Tau.aspx" publishTime="05/14/2010 05:50:09" />
+    <file relUrl="Images/quan_ly_tau_thuy.png" publishTime="05/13/2010 11:59:54" />
     <file relUrl="ThemHanhKhach.aspx" publishTime="04/20/2010 06:55:16" />
     <file relUrl="Images/tinh_trang_cho.png" publishTime="04/20/2010 06:55:14" />
     <file relUrl="Controls/DatVe_Step2.ascx" publishTime="05/17/2010 13:31:37" />
-    <file relUrl="Images/text_banvetau.png" publishTime="04/20/2010 06:55:14" />
-    <file relUrl="bin/ShipBooking.dll" publishTime="05/17/2010 13:41:11" />
+    <file relUrl="Admin_Tau.aspx" publishTime="05/14/2010 05:50:09" />
     <file relUrl="Images/CalendarIcon.png" publishTime="04/20/2010 06:55:14" />
     <file relUrl="Images/quan_ly_booking.png" publishTime="05/13/2010 11:59:54" />
     <file relUrl="Admin_Functions.aspx" publishTime="05/14/2010 05:50:09" />
@@ -30,38 +101,39 @@
     <file relUrl="bin/ShipBooking.pdb" publishTime="05/17/2010 13:41:11" />
     <file relUrl="bin/.svn/prop-base/ShipBooking.pdb.svn-base" publishTime="05/17/2010 06:57:31" />
     <file relUrl="Controls/LoginControl.ascx" publishTime="04/28/2010 08:52:36" />
+    <file relUrl="DatVe_Step2.aspx" publishTime="04/20/2010 06:55:16" />
     <file relUrl="DetailBooking.aspx" publishTime="05/17/2010 11:42:07" />
     <file relUrl="Images/dat_ve_tau.png" publishTime="05/13/2010 11:59:54" />
     <file relUrl="App_Data/ShipBooking_log.ldf" publishTime="05/17/2010 13:41:13" />
-    <file relUrl="Controls/Layer/Admin_BannerControl.ascx" publishTime="05/14/2010 05:50:05" />
+    <file relUrl="Images/banner.png" publishTime="04/20/2010 06:55:14" />
+    <file relUrl="Controls/Admin_ThanhPhoControl.ascx" publishTime="05/14/2010 05:50:05" />
     <file relUrl="Controls/Layer/RightControl.ascx" publishTime="04/20/2010 06:54:30" />
     <file relUrl="Images/quan_ly_hanh_trinh.png" publishTime="05/13/2010 11:59:54" />
     <file relUrl="MyMaster.Master" publishTime="05/11/2010 08:18:28" />
-    <file relUrl="Admin_Master.Master" publishTime="05/14/2010 05:50:09" />
     <file relUrl="Login.aspx" publishTime="04/28/2010 07:26:31" />
     <file relUrl="bin/.svn/entries" publishTime="05/17/2010 06:57:31" />
     <file relUrl="DatVe.aspx" publishTime="04/20/2010 06:55:16" />
     <file relUrl="MenuScript.js" publishTime="04/20/2010 06:55:16" />
-    <file relUrl="Images/banner.png" publishTime="04/20/2010 06:55:14" />
+    <file relUrl="Controls/Layer/Admin_BannerControl.ascx" publishTime="05/14/2010 05:50:05" />
     <file relUrl="App_Themes/MySkin/MySkin.skin" publishTime="04/20/2010 06:54:09" />
     <file relUrl="Controls/ThemHanhKhachControl.ascx" publishTime="04/20/2010 06:54:30" />
-    <file relUrl="Controls/ThongTinKhachControl.ascx" publishTime="05/17/2010 13:01:06" />
+    <file relUrl="Images/lich_chuyen.png" publishTime="04/20/2010 06:55:14" />
     <file relUrl="Images/banner_blue.png" publishTime="04/20/2010 06:55:14" />
     <file relUrl="Controls/AdminBookingFileControl.ascx" publishTime="05/17/2010 11:57:42" />
-    <file relUrl="DatVe_Step2.aspx" publishTime="04/20/2010 06:55:16" />
-    <file relUrl="Images/thong_tin_tinh_trang_chuyen.png" publishTime="05/13/2010 11:59:54" />
+    <file relUrl="Admin_Master.Master" publishTime="05/14/2010 05:50:09" />
+    <file relUrl="bin/ShipBooking.dll" publishTime="05/17/2010 13:41:11" />
     <file relUrl="bin/.svn/prop-base/ShipBooking.dll.svn-base" publishTime="05/17/2010 06:57:31" />
     <file relUrl="Images/bang_gia_ve.png" publishTime="04/20/2010 06:55:14" />
     <file relUrl="Images/menu_bar.gif" publishTime="04/20/2010 06:55:14" />
-    <file relUrl="Images/quan_ly_tau_thuy.png" publishTime="05/13/2010 11:59:54" />
+    <file relUrl="KetThucBooking.aspx" publishTime="05/13/2010 11:59:55" />
     <file relUrl="Images/admin.jpg" publishTime="05/04/2010 05:40:56" />
     <file relUrl="Images/galileo_logo.jpg" publishTime="04/20/2010 06:55:14" />
-    <file relUrl="Images/lich_chuyen.png" publishTime="04/20/2010 06:55:14" />
+    <file relUrl="Web.config" publishTime="04/20/2010 06:55:16" />
     <file relUrl="Admin_BookingFile.aspx" publishTime="05/14/2010 05:50:09" />
     <file relUrl="bin/.svn/all-wcprops" publishTime="05/17/2010 06:57:31" />
     <file relUrl="Admin_ThanhPho.aspx" publishTime="05/14/2010 05:50:09" />
     <file relUrl="Images/dat_ve.png" publishTime="04/20/2010 06:55:14" />
-    <file relUrl="Controls/Admin_ThanhPhoControl.ascx" publishTime="05/14/2010 05:50:05" />
+    <file relUrl="Controls/ThongTinKhachControl.ascx" publishTime="05/17/2010 13:01:06" />
     <file relUrl="bin/.svn/text-base/ShipBooking.dll.svn-base" publishTime="05/17/2010 06:57:31" />
     <file relUrl="DatVe_Review.aspx" publishTime="04/20/2010 06:55:16" />
     <file relUrl="App_Data/ShipBooking.mdf" publishTime="05/17/2010 13:09:54" />
