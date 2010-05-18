@@ -213,6 +213,13 @@
     <Compile Include="Controls\ThemHanhKhachControl.ascx.designer.cs">
       <DependentUpon>ThemHanhKhachControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ThongTinHanhTrinhControl.ascx.cs">
+      <DependentUpon>ThongTinHanhTrinhControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ThongTinHanhTrinhControl.ascx.designer.cs">
+      <DependentUpon>ThongTinHanhTrinhControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ThongTinKhachControl.ascx.cs">
       <DependentUpon>ThongTinKhachControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -295,6 +302,13 @@
     <Compile Include="ThemHanhKhach.aspx.designer.cs">
       <DependentUpon>ThemHanhKhach.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinHanhTrinh.aspx.cs">
+      <DependentUpon>ThongTinHanhTrinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongTinHanhTrinh.aspx.designer.cs">
+      <DependentUpon>ThongTinHanhTrinh.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ThongTinKhach.aspx.cs">
       <DependentUpon>ThongTinKhach.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -370,7 +384,9 @@
     <Content Include="Admin_Master.Master" />
     <Content Include="Controls\AdminDetailBookingControl.ascx" />
     <Content Include="Controls\Layer\Admin_BannerControl.ascx" />
+    <Content Include="Controls\ThongTinHanhTrinhControl.ascx" />
     <Content Include="DetailBooking.aspx" />
+    <Content Include="ThongTinHanhTrinh.aspx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
@@ -387,7 +403,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1091</DevelopmentServerPort>
+          <DevelopmentServerPort>50988</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

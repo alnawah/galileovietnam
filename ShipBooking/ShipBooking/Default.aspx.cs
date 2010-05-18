@@ -27,7 +27,7 @@ namespace ShipBooking
 
         protected void imgbtnXemLichChuyen_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("http://www.tinhte.com/home/");
+            Response.Redirect("ThongTinHanhTrinh.aspx");
         }
 
         protected void imgbtnTinhTrangCho_Click(object sender, ImageClickEventArgs e)

@@ -1,0 +1,5 @@
+C:\Users\Quang Minh\Desktop\GalileoData\ShipBooking\ShipBooking\bin\ShipBooking.dll
+C:\Users\Quang Minh\Desktop\GalileoData\ShipBooking\ShipBooking\bin\ShipBooking.pdb
+C:\Users\Quang Minh\Desktop\GalileoData\ShipBooking\ShipBooking\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Quang Minh\Desktop\GalileoData\ShipBooking\ShipBooking\obj\Release\ShipBooking.dll
+C:\Users\Quang Minh\Desktop\GalileoData\ShipBooking\ShipBooking\obj\Release\ShipBooking.pdb

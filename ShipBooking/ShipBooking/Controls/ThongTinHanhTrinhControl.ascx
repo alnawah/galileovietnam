@@ -1,4 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DatVeControl.ascx.cs" Inherits="ShipBooking.Controls.DatVeControl" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ThongTinHanhTrinhControl.ascx.cs" Inherits="ShipBooking.Controls.ThongTinHanhTrinhControl" %>
+
 <script type="text/javascript">
     function displayCalendar1()
     {
@@ -11,10 +12,7 @@
         var datePicker = document.getElementById('datePicker2');
         datePicker.style.display = 'block';
     }
-</script>
-
-<style type="text/css">
-
+</script><style type="text/css">
     .step1_tblThongTinDatCho_Summary_Style
     {
         margin: auto;
@@ -39,9 +37,9 @@
         width: 600px;
         height: auto;
     }
-    .step1_warning
+    .style2
     {
-        color: #FF0000;
+        width: 181px;
     }
     
     #datePicker1
@@ -58,75 +56,49 @@
         border:solid 2px black;
         background-color:white;
     }
-    .style1
-    {
-    }
-    .style2
-    {
-        width: 181px;
-    }
     #imgCalendar2
     {
-        width: 14px;
+        height: 16px;
     }
-    #imgCalendar1
-    {}
-</style>
-<p style="text-align: center">
-    <asp:Image ID="Image1" runat="server" Height="59px" 
-        ImageUrl="~/Images/thong_tin_tinh_trang_chuyen.png" Width="621px" />
-</p>
-<p style="text-align: center">
-    <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
+    </style>
+<p>
+    <br />
 </p>
 <table class="step1_tblThongTinDatCho_Summary_Style">
     <tr>
         <td bgcolor="#006699" class="step1_table_header_style">
-            Đặt chỗ vé tàu</td>
+            Tìm kiếm hành trình</td>
     </tr>
     <tr>
         <td class="step1_table_contain_style">
             <table class="step1_tblThongTinDatCho_Detail_Style">
                 <tr>
                     <td>
-                    </td>
+                                                &nbsp;</td>
                     <td class="style2">
-                        <asp:RadioButtonList ID="rblLoaiHanhTrinh" runat="server" Height="16px" 
-                            RepeatDirection="Horizontal" Width="208px" 
-                            onselectedindexchanged="rblLoaiHanhTrinh_SelectedIndexChanged" 
-                            AutoPostBack="true">
+                        <asp:RadioButtonList ID="RadioButtonList1" runat="server" Height="25px" 
+                            RepeatDirection="Horizontal" Width="199px">
+                            <asp:ListItem Value="MotLuot">Một lượt</asp:ListItem>
+                            <asp:ListItem Value="KhuHoi">Khứ hồi</asp:ListItem>
                         </asp:RadioButtonList>
-                    </td>
+                        </td>
                     <td>
                         &nbsp;</td>
                     <td>
-                        <asp:DropDownList ID="ddlThoiGian" runat="server" Height="21px" Width="136px" Visible="false">
-                        </asp:DropDownList>
-                        <asp:CheckBox ID="chkOpen" runat="server" Text="Open" Visible="False" />
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td>
                                                 Từ:</td>
                     <td class="style2">
                         <asp:DropDownList ID="ddlNoiDi" runat="server" Height="22px" Width="160px" 
-                            AutoPostBack="true" onselectedindexchanged="ddlNoiDi_SelectedIndexChanged">
+                            AutoPostBack="true">
                         </asp:DropDownList>
                         </td>
                     <td>
-                        Đến: </td>
+                        Ngày khởi hành:</td>
                     <td>
-                        <asp:DropDownList ID="ddlNoiDen" runat="server" Height="22px" Width="160px" 
-                            AutoPostBack="true" onselectedindexchanged="ddlNoiDen_SelectedIndexChanged">
-                        </asp:DropDownList>
-                        </td>
-                </tr>
-                <tr>
-                    <td>
-                        Ngày đi:</td>
-                    <td class="style2">
-                        <asp:TextBox ID="txtNgayDi" runat="server" Width="79px" 
-                            style="text-align: right"></asp:TextBox>
+                        <asp:TextBox ID="txtNgayDi" runat="server" Width="138px"></asp:TextBox>
                         <img id="imgCalendar1" src="~/Images/CalendarIcon.png" alt="" runat="server" 
                             onclick="displayCalendar1()" height="16" />
                         <div id="datePicker1">
@@ -146,12 +118,21 @@
                             </asp:Calendar>
                         </div>
                     </td>
+                </tr>
+                <tr>
+                    <td>
+                        Đến:</td>
+                    <td class="style2">
+                        
+                        <asp:DropDownList ID="ddlNoiDen" runat="server" Height="22px" Width="160px" 
+                            AutoPostBack="true">
+                        </asp:DropDownList>
+                    </td>
                     <td>
                         <asp:Label ID="lblNgayVe" runat="server" Visible="false" Text="Ngày về:"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtNgayVe" runat="server" Width="79px" Visible="False" 
-                            style="text-align: right"></asp:TextBox>
+                        <asp:TextBox ID="txtNgayVe" runat="server" Width="138px" Visible="False"></asp:TextBox>
                         <img id="imgCalendar2" src="~/Images/CalendarIcon.png" alt="" runat="server" 
                             onclick="displayCalendar2()" height="16" visible="False"/>
                         <div id="datePicker2">
@@ -172,51 +153,31 @@
                         </div>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        Giờ khởi hành:</td>
-                    <td class="style2">
-                        <asp:Label ID="lblGioKhoiHanh" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
-                    </td>
-                    <td>
-                        Giờ đến:&nbsp;</td>
-                    <td>
-                        <asp:Label ID="lblGioDen" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Loại vé:</td>
-                    <td class="style2">
-                        <asp:DropDownList ID="ddlLoaiVe" runat="server" Height="22px" Width="160px" 
-                            AutoPostBack="true" onselectedindexchanged="ddlLoaiVe_SelectedIndexChanged">
-                        </asp:DropDownList>
-                    </td>
-                    <td colspan="2">
-                        Số vé hiện có:
-                        <asp:Label ID="lblSoLuongVe" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
-                    &nbsp;&nbsp;&nbsp; 
-                        <asp:Label ID="lblGiaVe" runat="server" Font-Bold="True" ForeColor="Blue" 
-                            Visible="False"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Số ghế:</td>
-                    <td class="style1" colspan="3">
-                        <asp:RadioButtonList ID="rdbSoGhe" runat="server" RepeatColumns="12" 
-                            RepeatDirection="Horizontal">
-                        </asp:RadioButtonList>
-                    </td>
-                </tr>
                 </table>
             </td>
     </tr>
 </table>
-<br />
-
-<br />
 <p style="text-align: center">
-    <asp:Button ID="btnContinue" runat="server" Text="Tiếp tục" 
-        onclick="btnContinue_Click" />
+    <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" Width="100px" />
 </p>
 
-
+<center>
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+        BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" 
+        CellPadding="3">
+        <RowStyle ForeColor="#000066" />
+        <Columns>
+            <asp:BoundField DataField="NoiDi" HeaderText="Nơi khởi hành" />
+            <asp:BoundField DataField="NoiDen" HeaderText="Nơi đến" />
+            <asp:BoundField DataField="MaSoTau" HeaderText="Chuyến tàu" />
+            <asp:BoundField DataField="SoGhe" HeaderText="Số ghế còn trống" />
+            <asp:BoundField DataField="GioKhoiHanh" HeaderText="Giờ khởi hành" />
+            <asp:BoundField DataField="GioDen" HeaderText="Giờ đến" />
+        </Columns>
+        <FooterStyle BackColor="White" ForeColor="#000066" />
+        <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+        <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+    </asp:GridView>
+    <br />
+</center>
