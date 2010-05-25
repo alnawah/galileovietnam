@@ -25,6 +25,47 @@ namespace SearchHotelPrice.Controls
 
         }
 
+        private string DownloadRoomTypeXml()
+        {
+            string xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Request>"
+                         + "<Source> "
+                         + "  <RequestorID Client=\"73\" EMailAddress=\"XML@GALILEOVIETNAM.COM\" Password=\"PASS\"/>"
+                         + "  <RequestorPreferences Language=\"en\">"
+                         + "      <RequestMode>SYNCHRONOUS</RequestMode>"
+                         + "  </RequestorPreferences>"
+                         + "</Source>"
+                         + "<RequestDetails>"
+                         + "    <SearchRoomTypeRequest />"
+                         + "</RequestDetails>"
+                         + "</Request>";
+            return xml;
+        }
+
+        protected void btnSearch1_Click(object sender, EventArgs e)
+        {
+            string XMLReqest = DownloadRoomTypeXml();
+            string InterfaceURL = "https://interface.demo.gta-travel.com/rbsthapi/RequestListenerServlet";// "https://interface.demo.gta-travel.com/gtaapi/hInfo";
+
+            // Get request XML
+            byte[] requestXML = new UTF8Encoding().GetBytes(XMLReqest);
+
+            // Set Request Headers to specify the content type and allow the response to be gzip compressed
+            HttpWebRequest HttpWReq = (HttpWebRequest)HttpWebRequest.Create(InterfaceURL);
+            HttpWReq.ContentType = "text/xml";
+            //HttpWReq.Headers["Accept-Encoding"] = "gzip";
+            HttpWReq.Method = "POST";
+
+
+            // Sending the request to the server
+            HttpWReq.Timeout = 600000;
+            Stream StreamData = HttpWReq.GetRequestStream();
+            StreamData.Write(requestXML, 0, requestXML.Length);
+            StreamData.Close();
+
+            // Process the response from the server
+            HttpWebResponse HttpWRes = (HttpWebResponse)HttpWReq.GetResponse();
+        }
+
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             XmlDocument XMLDoc = new XmlDocument();
@@ -38,7 +79,8 @@ namespace SearchHotelPrice.Controls
             String Language = txtClientLanguage.Text;
             String EmailAddress = txtClientEmail.Text;
             String ClientPassword = txtClientPassword.Text;
-            String InterfaceURL = "https://interface.demo.gta-travel.com/gtaapi/RequestListenerServlet";
+            //String InterfaceURL = "https://interface.demo.gta-travel.com/gtaapi/RequestListenerServlet";
+            String InterfaceURL = "https://interface.demo.gta-travel.com/rbsthapi/RequestListenerServlet";
             String ResponseURL = "https://10.100.21.131/receiveRequest.asp";
 
             //Create XML
@@ -87,20 +129,28 @@ namespace SearchHotelPrice.Controls
             //Post document 
             ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
             Byte[] byte1 = encoding.GetBytes(XMLDoc.OuterXml);
-            WebRequest HttpWReq = WebRequest.Create(InterfaceURL);
+            HttpWebRequest HttpWReq = (HttpWebRequest)HttpWebRequest.Create(InterfaceURL);
 
             HttpWReq.ContentType = "text/xml";
             HttpWReq.ContentLength = XMLDoc.OuterXml.Length;
             HttpWReq.Method = "POST";
 
+            HttpWReq.Timeout = 600000;
             Stream StreamData = HttpWReq.GetRequestStream();
             StreamData.Write(byte1, 0, byte1.Length);
+            StreamData.Close();
 
             //XMLDoc.Save("F:\\request.xml");
 
             //Get response
-            WebResponse HttpWRes = HttpWReq.GetResponse();
+            HttpWebResponse HttpWRes = (HttpWebResponse)HttpWReq.GetResponse();
             Stream receiveStream = HttpWRes.GetResponseStream();
+
+            StreamReader reader = new StreamReader(receiveStream);
+            // Read the content.
+            //reader.en
+            string responseFromServer = reader.ReadToEnd();
+
         }
     }
 }
