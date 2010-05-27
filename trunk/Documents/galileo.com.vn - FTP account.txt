@@ -1,0 +1,6 @@
+Site: www.galileo.com.vn
+IP Address: 69.49.230.165
+Port: 21
+Username: galileov
+Password: Roma26
+Mode: Normal (No anonymous)

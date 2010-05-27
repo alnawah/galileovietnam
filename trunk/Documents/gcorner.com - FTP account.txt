@@ -1,0 +1,6 @@
+Site: www.gcornerclub.com
+IP Address: 69.49.230.165
+Port: 21
+Username: gcorner
+Password: anchoi
+Mode: Normal (No anonymous)
