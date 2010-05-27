@@ -140,7 +140,7 @@ namespace SearchHotelPrice.Controls
             StreamData.Write(byte1, 0, byte1.Length);
             StreamData.Close();
 
-            //XMLDoc.Save("F:\\request.xml");
+            XMLDoc.Save("D:\\request.xml");
 
             //Get response
             HttpWebResponse HttpWRes = (HttpWebResponse)HttpWReq.GetResponse();
@@ -150,7 +150,8 @@ namespace SearchHotelPrice.Controls
             // Read the content.
             //reader.en
             string responseFromServer = reader.ReadToEnd();
-
+            //XmlDocument xml = new XmlDocument();
+            //xml.
         }
     }
 }
