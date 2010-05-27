@@ -61,7 +61,8 @@
         height: 16px;
     }
     </style>
-<p>
+<p style="text-align: center">
+    <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
     <br />
 </p>
 <table class="step1_tblThongTinDatCho_Summary_Style">
@@ -92,13 +93,14 @@
                                                 Từ:</td>
                     <td class="style2">
                         <asp:DropDownList ID="ddlNoiDi" runat="server" Height="22px" Width="160px" 
-                            AutoPostBack="true">
+                            AutoPostBack="true" onselectedindexchanged="ddlNoiDi_SelectedIndexChanged">
                         </asp:DropDownList>
                         </td>
                     <td>
                         Ngày khởi hành:</td>
                     <td>
-                        <asp:TextBox ID="txtNgayDi" runat="server" Width="138px"></asp:TextBox>
+                        <asp:TextBox ID="txtNgayDi" runat="server" Width="79px" 
+                            style="text-align: right"></asp:TextBox>
                         <img id="imgCalendar1" src="~/Images/CalendarIcon.png" alt="" runat="server" 
                             onclick="displayCalendar1()" height="16" />
                         <div id="datePicker1">
@@ -132,7 +134,8 @@
                         <asp:Label ID="lblNgayVe" runat="server" Visible="false" Text="Ngày về:"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtNgayVe" runat="server" Width="138px" Visible="False"></asp:TextBox>
+                        <asp:TextBox ID="txtNgayVe" runat="server" Width="79px" Visible="False" 
+                            style="text-align: right"></asp:TextBox>
                         <img id="imgCalendar2" src="~/Images/CalendarIcon.png" alt="" runat="server" 
                             onclick="displayCalendar2()" height="16" visible="False"/>
                         <div id="datePicker2">
@@ -158,7 +161,8 @@
     </tr>
 </table>
 <p style="text-align: center">
-    <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" Width="100px" />
+    <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" Width="100px" 
+        onclick="btnSearch_Click" style="height: 26px" />
 </p>
 
 <center>

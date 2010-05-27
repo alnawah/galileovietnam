@@ -10,6 +10,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
+using ShipBooking.Library;
 
 namespace ShipBooking.Controls
 {
@@ -17,7 +18,11 @@ namespace ShipBooking.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                ListControlUtilities.FillDataToDropDownList(ddlNoiDi, "tblThanhPho", "Ten", "MaThanhPho");
+                ListControlUtilities.FillCityData(ddlNoiDen, ddlNoiDi.SelectedValue);
+            }
         }
 
         protected void calEventDate_SelectionChanged(object sender, EventArgs e)
@@ -28,6 +33,56 @@ namespace ShipBooking.Controls
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
         {
             txtNgayVe.Text = Calendar1.SelectedDate.ToString("d");
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (CheckDateNgayDi() == false)
+            {
+                txtNgayDi.Text = "";
+                txtNgayDi.Focus();
+                return;
+            }
+            else
+            {
+                lblMsg.Text = "";
+            }
+        }
+
+        protected void ddlNoiDi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListControlUtilities.FillCityData(ddlNoiDen, ddlNoiDi.SelectedValue);
+        }
+
+        protected bool CheckDateNgayDi()
+        {
+            bool isValid = false;
+
+            string strDate = txtNgayDi.Text.Trim();
+            try
+            {
+                DateTime dt = DateTime.Parse(strDate);
+                if (dt < DateTime.Now.Date)
+                {
+                    lblMsg.Text = "Bạn không được nhập ngày trước ngày hiện tại";
+                }
+                else
+                {
+                    isValid = true;
+                }
+            }
+            catch
+            {
+                lblMsg.Text = "Ngày không hợp lệ";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        protected void SearchHanhTrinh()
+        {
+ 
         }
     }
 }
