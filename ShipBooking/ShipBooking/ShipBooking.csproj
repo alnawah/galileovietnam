@@ -78,6 +78,13 @@
     <Compile Include="Admin_Functions.aspx.designer.cs">
       <DependentUpon>Admin_Functions.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin_HanhTrinh.aspx.cs">
+      <DependentUpon>Admin_HanhTrinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_HanhTrinh.aspx.designer.cs">
+      <DependentUpon>Admin_HanhTrinh.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Master.Master.cs">
       <DependentUpon>Admin_Master.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -121,6 +128,13 @@
     </Compile>
     <Compile Include="Controls\AdminDetailBookingControl.ascx.designer.cs">
       <DependentUpon>AdminDetailBookingControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AdminHanhTrinhControl.ascx.cs">
+      <DependentUpon>AdminHanhTrinhControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdminHanhTrinhControl.ascx.designer.cs">
+      <DependentUpon>AdminHanhTrinhControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\AdminTauControl.ascx.cs">
       <DependentUpon>AdminTauControl.ascx</DependentUpon>
@@ -381,8 +395,10 @@
     <Content Include="ThongTinKhach.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin_HanhTrinh.aspx" />
     <Content Include="Admin_Master.Master" />
     <Content Include="Controls\AdminDetailBookingControl.ascx" />
+    <Content Include="Controls\AdminHanhTrinhControl.ascx" />
     <Content Include="Controls\Layer\Admin_BannerControl.ascx" />
     <Content Include="Controls\ThongTinHanhTrinhControl.ascx" />
     <Content Include="DetailBooking.aspx" />
