@@ -80,7 +80,7 @@ namespace ShipBooking.Controls
             return isValid;
         }
 
-        protected void SearchHanhTrinh()
+        protected void SearchHanhTrinh(string MaTPDi, string MaTPDen, string ngay)
         {
  
         }

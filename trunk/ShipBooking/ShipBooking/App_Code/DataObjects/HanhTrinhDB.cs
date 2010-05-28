@@ -31,15 +31,15 @@ namespace ShipBooking
 
         public static void Insert(HanhTrinh hanhtrinh)
         {
-            string[] parameters = new string[] { "@MaHanhTrinh", "@MaChang", "@SoHieuChuyenTau", "@GioKhoiHanh", "@GioDen", "@NgayDen", "@NgayTrongTuan", "@SoGhe", "@GiaVeNguoiLon1", "@GiaVeNguoiLon2", "@GiaVeNguoiLon3", "@GiaVeTreEm1", "@GiaVeTreEm2", "@GiaVeTreEm3", "@SoLuongVe1", "@SoLuongVe2", "@SoLuongVe3" };
-            string[] values = new string[] { hanhtrinh.MaHanhTrinh, hanhtrinh.MaChang, hanhtrinh.SoHieuChuyenTau, hanhtrinh.GioKhoiHanh.ToString(), hanhtrinh.GioDen.ToString(), hanhtrinh.NgayDen, hanhtrinh.NgayTrongTuan, hanhtrinh.SoGhe.ToString(), hanhtrinh.GiaVeNguoiLon1.ToString(), hanhtrinh.GiaVeNguoiLon2.ToString(), hanhtrinh.GiaVeNguoiLon3.ToString(), hanhtrinh.GiaVeTreEm1.ToString(), hanhtrinh.GiaVeTreEm2.ToString(), hanhtrinh.GiaVeTreEm3.ToString(), hanhtrinh.SoLuongVe1.ToString(), hanhtrinh.SoLuongVe2.ToString(), hanhtrinh.SoLuongVe3.ToString() };
+            string[] parameters = new string[] { "@MaHanhTrinh", "@MaChang", "@SoHieuChuyenTau", "@GioKhoiHanh", "@GioDen", "@NgayDen", "@TongThoiGian", "@NgayTrongTuan", "@SoGhe", "@GiaVeNguoiLon1", "@GiaVeNguoiLon2", "@GiaVeNguoiLon3", "@GiaVeTreEm1", "@GiaVeTreEm2", "@GiaVeTreEm3", "@SoLuongVe1", "@SoLuongVe2", "@SoLuongVe3" };
+            string[] values = new string[] { hanhtrinh.MaHanhTrinh, hanhtrinh.MaChang, hanhtrinh.SoHieuChuyenTau, hanhtrinh.GioKhoiHanh.ToString(), hanhtrinh.GioDen.ToString(), hanhtrinh.NgayDen, hanhtrinh.TongThoiGian, hanhtrinh.NgayTrongTuan, hanhtrinh.SoGhe, hanhtrinh.GiaVeNguoiLon1, hanhtrinh.GiaVeNguoiLon2, hanhtrinh.GiaVeNguoiLon3, hanhtrinh.GiaVeTreEm1, hanhtrinh.GiaVeTreEm2, hanhtrinh.GiaVeTreEm3, hanhtrinh.SoLuongVe1, hanhtrinh.SoLuongVe2, hanhtrinh.SoLuongVe3 };
             ExecuteData("spHanhTrinh_Insert", parameters, values);
         }
 
         public static void Update(HanhTrinh hanhtrinh)
         {
-            string[] parameters = new string[] { "@MaHanhTrinh", "@MaChang", "@SoHieuChuyenTau", "@GioKhoiHanh", "@GioDen", "@NgayDen", "@NgayTrongTuan", "@SoGhe", "@GiaVeNguoiLon1", "@GiaVeNguoiLon2", "@GiaVeNguoiLon3", "@GiaVeTreEm1", "@GiaVeTreEm2", "@GiaVeTreEm3", "@SoLuongVe1", "@SoLuongVe2", "@SoLuongVe3" };
-            string[] values = new string[] { hanhtrinh.MaHanhTrinh, hanhtrinh.MaChang, hanhtrinh.SoHieuChuyenTau, hanhtrinh.GioKhoiHanh.ToString(), hanhtrinh.GioDen.ToString(), hanhtrinh.NgayDen, hanhtrinh.NgayTrongTuan, hanhtrinh.SoGhe.ToString(), hanhtrinh.GiaVeNguoiLon1.ToString(), hanhtrinh.GiaVeNguoiLon2.ToString(), hanhtrinh.GiaVeNguoiLon3.ToString(), hanhtrinh.GiaVeTreEm1.ToString(), hanhtrinh.GiaVeTreEm2.ToString(), hanhtrinh.GiaVeTreEm3.ToString(), hanhtrinh.SoLuongVe1.ToString(), hanhtrinh.SoLuongVe2.ToString(), hanhtrinh.SoLuongVe3.ToString() };
+            string[] parameters = new string[] { "@MaHanhTrinh", "@MaChang", "@SoHieuChuyenTau", "@GioKhoiHanh", "@GioDen", "@NgayDen", "@TongThoiGian", "@NgayTrongTuan", "@SoGhe", "@GiaVeNguoiLon1", "@GiaVeNguoiLon2", "@GiaVeNguoiLon3", "@GiaVeTreEm1", "@GiaVeTreEm2", "@GiaVeTreEm3", "@SoLuongVe1", "@SoLuongVe2", "@SoLuongVe3" };
+            string[] values = new string[] { hanhtrinh.MaHanhTrinh, hanhtrinh.MaChang, hanhtrinh.SoHieuChuyenTau, hanhtrinh.GioKhoiHanh.ToString(), hanhtrinh.GioDen.ToString(), hanhtrinh.NgayDen, hanhtrinh.TongThoiGian, hanhtrinh.NgayTrongTuan, hanhtrinh.SoGhe, hanhtrinh.GiaVeNguoiLon1, hanhtrinh.GiaVeNguoiLon2, hanhtrinh.GiaVeNguoiLon3, hanhtrinh.GiaVeTreEm1, hanhtrinh.GiaVeTreEm2, hanhtrinh.GiaVeTreEm3, hanhtrinh.SoLuongVe1, hanhtrinh.SoLuongVe2, hanhtrinh.SoLuongVe3 };
             ExecuteData("spHanhTrinh_UpdateByID", parameters, values);
         }
 
@@ -56,17 +56,18 @@ namespace ShipBooking
                 hanhtrinh.GioKhoiHanh = DateTime.Parse(dt.Rows[0]["GioKhoiHanh"].ToString());
                 hanhtrinh.GioDen = DateTime.Parse(dt.Rows[0]["GioDen"].ToString());
                 hanhtrinh.NgayDen = dt.Rows[0]["NgayDen"].ToString();
+                hanhtrinh.TongThoiGian = dt.Rows[0]["TongThoiGian"].ToString();
                 hanhtrinh.NgayTrongTuan = dt.Rows[0]["NgayTrongTuan"].ToString();
-                hanhtrinh.SoGhe = Convert.ToInt16(dt.Rows[0]["SoGhe"].ToString());
-                hanhtrinh.GiaVeNguoiLon1 = Convert.ToInt16(dt.Rows[0]["GiaVeNguoiLon1"].ToString());
-                hanhtrinh.GiaVeNguoiLon2 = Convert.ToInt16(dt.Rows[0]["GiaVeNguoiLon2"].ToString());
-                hanhtrinh.GiaVeNguoiLon3 = Convert.ToInt16(dt.Rows[0]["GiaVeNguoiLon3"].ToString());
-                hanhtrinh.GiaVeTreEm1 = Convert.ToInt16(dt.Rows[0]["GiaVeTreEm1"].ToString());
-                hanhtrinh.GiaVeTreEm2 = Convert.ToInt16(dt.Rows[0]["GiaVeTreEm2"].ToString());
-                hanhtrinh.GiaVeTreEm3 = Convert.ToInt16(dt.Rows[0]["GiaVeTreEm3"].ToString());
-                hanhtrinh.SoLuongVe1 = Convert.ToInt16(dt.Rows[0]["SoLuongVe1"].ToString());
-                hanhtrinh.SoLuongVe2 = Convert.ToInt16(dt.Rows[0]["SoLuongVe2"].ToString());
-                hanhtrinh.SoLuongVe3 = Convert.ToInt16(dt.Rows[0]["SoLuongVe3"].ToString());
+                hanhtrinh.SoGhe = dt.Rows[0]["SoGhe"].ToString();
+                hanhtrinh.GiaVeNguoiLon1 = dt.Rows[0]["GiaVeNguoiLon1"].ToString();
+                hanhtrinh.GiaVeNguoiLon2 = dt.Rows[0]["GiaVeNguoiLon2"].ToString();
+                hanhtrinh.GiaVeNguoiLon3 = dt.Rows[0]["GiaVeNguoiLon3"].ToString();
+                hanhtrinh.GiaVeTreEm1 = dt.Rows[0]["GiaVeTreEm1"].ToString();
+                hanhtrinh.GiaVeTreEm2 = dt.Rows[0]["GiaVeTreEm2"].ToString();
+                hanhtrinh.GiaVeTreEm3 = dt.Rows[0]["GiaVeTreEm3"].ToString();
+                hanhtrinh.SoLuongVe1 = dt.Rows[0]["SoLuongVe1"].ToString();
+                hanhtrinh.SoLuongVe2 = dt.Rows[0]["SoLuongVe2"].ToString();
+                hanhtrinh.SoLuongVe3 = dt.Rows[0]["SoLuongVe3"].ToString();
             }
             else
             {
@@ -89,17 +90,18 @@ namespace ShipBooking
                 hanhtrinh.GioKhoiHanh = DateTime.Parse(dt.Rows[0]["GioKhoiHanh"].ToString());
                 hanhtrinh.GioDen = DateTime.Parse(dt.Rows[0]["GioDen"].ToString());
                 hanhtrinh.NgayDen = dt.Rows[0]["NgayDen"].ToString();
+                hanhtrinh.TongThoiGian = dt.Rows[0]["TongThoiGian"].ToString();
                 hanhtrinh.NgayTrongTuan = dt.Rows[0]["NgayTrongTuan"].ToString();
-                hanhtrinh.SoGhe = Convert.ToInt16(dt.Rows[0]["SoGhe"].ToString());
-                hanhtrinh.GiaVeNguoiLon1 = Convert.ToInt16(dt.Rows[0]["GiaVeNguoiLon1"].ToString());
-                hanhtrinh.GiaVeNguoiLon2 = Convert.ToInt16(dt.Rows[0]["GiaVeNguoiLon2"].ToString());
-                hanhtrinh.GiaVeNguoiLon3 = Convert.ToInt16(dt.Rows[0]["GiaVeNguoiLon3"].ToString());
-                hanhtrinh.GiaVeTreEm1 = Convert.ToInt16(dt.Rows[0]["GiaVeTreEm1"].ToString());
-                hanhtrinh.GiaVeTreEm2 = Convert.ToInt16(dt.Rows[0]["GiaVeTreEm2"].ToString());
-                hanhtrinh.GiaVeTreEm3 = Convert.ToInt16(dt.Rows[0]["GiaVeTreEm3"].ToString());
-                hanhtrinh.SoLuongVe1 = Convert.ToInt16(dt.Rows[0]["SoLuongVe1"].ToString());
-                hanhtrinh.SoLuongVe2 = Convert.ToInt16(dt.Rows[0]["SoLuongVe2"].ToString());
-                hanhtrinh.SoLuongVe3 = Convert.ToInt16(dt.Rows[0]["SoLuongVe3"].ToString());
+                hanhtrinh.SoGhe = dt.Rows[0]["SoGhe"].ToString();
+                hanhtrinh.GiaVeNguoiLon1 = dt.Rows[0]["GiaVeNguoiLon1"].ToString();
+                hanhtrinh.GiaVeNguoiLon2 = dt.Rows[0]["GiaVeNguoiLon2"].ToString();
+                hanhtrinh.GiaVeNguoiLon3 = dt.Rows[0]["GiaVeNguoiLon3"].ToString();
+                hanhtrinh.GiaVeTreEm1 = dt.Rows[0]["GiaVeTreEm1"].ToString();
+                hanhtrinh.GiaVeTreEm2 = dt.Rows[0]["GiaVeTreEm2"].ToString();
+                hanhtrinh.GiaVeTreEm3 = dt.Rows[0]["GiaVeTreEm3"].ToString();
+                hanhtrinh.SoLuongVe1 = dt.Rows[0]["SoLuongVe1"].ToString();
+                hanhtrinh.SoLuongVe2 = dt.Rows[0]["SoLuongVe2"].ToString();
+                hanhtrinh.SoLuongVe3 = dt.Rows[0]["SoLuongVe3"].ToString();
 
                 ListHanhTrinh.Add(hanhtrinh);
                 hanhtrinh = null;
