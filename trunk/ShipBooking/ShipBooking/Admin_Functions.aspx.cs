@@ -36,7 +36,7 @@ namespace ShipBooking
 
         protected void imgbtnQLHanhtrinh_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("Admin.aspx");
+            Response.Redirect("Admin_HanhTrinh.aspx");
         }
     }
 }

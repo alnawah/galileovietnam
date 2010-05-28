@@ -108,6 +108,8 @@
     </Compile>
     <Compile Include="App_Code\DataObjects\BookingFile.cs" />
     <Compile Include="App_Code\DataObjects\BookingFileDB.cs" />
+    <Compile Include="App_Code\DataObjects\Chang.cs" />
+    <Compile Include="App_Code\DataObjects\ChangDB.cs" />
     <Compile Include="Controls\AdminBookingFileControl.ascx.cs">
       <DependentUpon>AdminBookingFileControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -279,6 +281,8 @@
     <Compile Include="DetailBooking.aspx.designer.cs">
       <DependentUpon>DetailBooking.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\DataObjects\HanhTrinh.cs" />
+    <Compile Include="App_Code\DataObjects\HanhTrinhDB.cs" />
     <Compile Include="KetThucBooking.aspx.cs">
       <DependentUpon>KetThucBooking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
