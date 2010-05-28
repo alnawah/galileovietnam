@@ -56,6 +56,13 @@ namespace ShipBooking
             set { _NgayDen = value; }
         }
 
+        string _TongThoiGian;
+        public string TongThoiGian
+        {
+            get { return _TongThoiGian; }
+            set { _TongThoiGian = value; }
+        }
+
         string _NgayTrongTuan;
         public string NgayTrongTuan
         {
@@ -63,71 +70,71 @@ namespace ShipBooking
             set { _NgayTrongTuan = value; }
         }
 
-        int _SoGhe;
-        public int SoGhe
+        string _SoGhe;
+        public string SoGhe
         {
             get { return _SoGhe; }
             set { _SoGhe = value; }
         }
 
-        int _GiaVeNguoiLon1;
-        public int GiaVeNguoiLon1
+        string _GiaVeNguoiLon1;
+        public string GiaVeNguoiLon1
         {
             get { return _GiaVeNguoiLon1; }
             set { _GiaVeNguoiLon1 = value; }
         }
 
-        int _GiaVeNguoiLon2;
-        public int GiaVeNguoiLon2
+        string _GiaVeNguoiLon2;
+        public string GiaVeNguoiLon2
         {
             get { return _GiaVeNguoiLon2; }
             set { _GiaVeNguoiLon2 = value; }
         }
 
-        int _GiaVeNguoiLon3;
-        public int GiaVeNguoiLon3
+        string _GiaVeNguoiLon3;
+        public string GiaVeNguoiLon3
         {
             get { return _GiaVeNguoiLon3; }
             set { _GiaVeNguoiLon3 = value; }
         }
 
-        int _GiaVeTreEm1;
-        public int GiaVeTreEm1
+        string _GiaVeTreEm1;
+        public string GiaVeTreEm1
         {
             get { return _GiaVeTreEm1; }
             set { _GiaVeTreEm1 = value; }
         }
 
-        int _GiaVeTreEm2;
-        public int GiaVeTreEm2
+        string _GiaVeTreEm2;
+        public string GiaVeTreEm2
         {
             get { return _GiaVeTreEm2; }
             set { _GiaVeTreEm2 = value; }
         }
 
-        int _GiaVeTreEm3;
-        public int GiaVeTreEm3
+        string _GiaVeTreEm3;
+        public string GiaVeTreEm3
         {
             get { return _GiaVeTreEm3; }
             set { _GiaVeTreEm3 = value; }
         }
 
-        int _SoLuongVe1;
-        public int SoLuongVe1
+        string _SoLuongVe1;
+        public string SoLuongVe1
         {
             get { return _SoLuongVe1; }
             set { _SoLuongVe1 = value; }
         }
 
-        int _SoLuongVe2;
-        public int SoLuongVe2
+        string _SoLuongVe2;
+        public string SoLuongVe2
         {
             get { return _SoLuongVe2; }
             set { _SoLuongVe2 = value; }
         }
 
-        int _SoLuongVe3;
-        public int SoLuongVe3
+        string _SoLuongVe3;
+        public string SoLuongVe3
         {
             get { return _SoLuongVe3; }
             set { _SoLuongVe3 = value; }

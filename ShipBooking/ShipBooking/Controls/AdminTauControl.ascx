@@ -122,7 +122,8 @@
         onselectedindexchanged="grvTau_SelectedIndexChanged" 
         onpageindexchanged="grvTau_PageIndexChanged" 
         onpageindexchanging="grvTau_PageIndexChanging" 
-        onrowdeleted="grvTau_RowDeleted" onrowdeleting="grvTau_RowDeleting">
+        onrowdeleted="grvTau_RowDeleted" 
+        onrowdeleting="grvTau_RowDeleting">
         <FooterStyle BackColor="White" ForeColor="#000066" />
         <RowStyle ForeColor="#000066" />
         <Columns>

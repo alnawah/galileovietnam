@@ -166,17 +166,19 @@
 </p>
 
 <center>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+    <asp:GridView ID="grvTinhTrangCho" runat="server" AutoGenerateColumns="False" 
         BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" 
         CellPadding="3">
         <RowStyle ForeColor="#000066" />
         <Columns>
             <asp:BoundField DataField="NoiDi" HeaderText="Nơi khởi hành" />
             <asp:BoundField DataField="NoiDen" HeaderText="Nơi đến" />
-            <asp:BoundField DataField="MaSoTau" HeaderText="Chuyến tàu" />
-            <asp:BoundField DataField="SoGhe" HeaderText="Số ghế còn trống" />
             <asp:BoundField DataField="GioKhoiHanh" HeaderText="Giờ khởi hành" />
             <asp:BoundField DataField="GioDen" HeaderText="Giờ đến" />
+            <asp:BoundField DataField="MaHanhTrinh" HeaderText="Số hiệu chuyến" />
+            <asp:BoundField DataField="SoGhe" HeaderText="Số ghế còn trống" />
+            <asp:CommandField ButtonType="Button" SelectText="Đặt chỗ" 
+                ShowSelectButton="True" />
         </Columns>
         <FooterStyle BackColor="White" ForeColor="#000066" />
         <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />

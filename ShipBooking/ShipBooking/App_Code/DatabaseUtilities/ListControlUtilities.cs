@@ -51,7 +51,7 @@ namespace ShipBooking.Library
         public static void FillCityData(DropDownList control, string MaTP)
         {
             OpenData();
-            string strCommand = "SELECT tblThanhPho.Ten, tblThanhPho.MaThanhPho FROM tblTinhTrangChuyen CROSS JOIN tblThanhPho WHERE (tblThanhPho.MaThanhPho IN (SELECT tblTinhTrangChuyen.MaTPDen WHERE (tblTinhTrangChuyen.MaTPDi = '" + MaTP.ToUpper().Trim() + "') AND (tblTinhTrangChuyen.TinhTrang = 'yes')))";
+            string strCommand = "SELECT tblThanhPho.Ten, tblThanhPho.MaThanhPho FROM tblChang CROSS JOIN tblThanhPho WHERE (tblThanhPho.MaThanhPho IN (SELECT tblChang.MaTPDen WHERE (tblChang.MaTPDi = '" + MaTP.ToUpper().Trim() + "') AND (tblChang.TinhTrang = 'yes')))";
             da = new SqlDataAdapter(strCommand, con);
             ds = new DataSet();
             da.Fill(ds, strCommand);

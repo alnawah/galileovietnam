@@ -110,7 +110,8 @@
             </tr>
             <tr align="center">
                 <td class="table_contain_style" align="center">
-                    <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
+                    <asp:Label ID="lblMsg" runat="server" ForeColor="Red" Font-Bold="True"></asp:Label>
+                    <br />
                     <br />
                     <table align="center" class="style2" 
                         style="border: 1px solid #006699; width: 517px;">
@@ -121,13 +122,21 @@
                         </tr>
                         <tr>
                             <td class="style4">
-                                Số hiệu chuyến tàu:</td>
+                                Số hiệu chuyến:</td>
+                            <td class="style3" colspan="2">
+                                <asp:TextBox ID="txtMaHanhTrinh" runat="server" Width="140px" 
+                                    style="text-align: center"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="style4">
+                                Số hiệu tàu:</td>
                             <td class="style3" colspan="2">
                                 <asp:TextBox ID="txtSoHieuTau" runat="server" style="text-align: center" 
                                     Width="140px"></asp:TextBox>
                                 &nbsp;&nbsp;
                                 <asp:Button ID="btnXemTTTau" runat="server" Height="26px" 
-                                    Text="Xem thông tin tàu" Width="134px" onclick="btnXemTTTau_Click" />
+                                    onclick="btnXemTTTau_Click" Text="Xem thông tin tàu" Width="134px" />
                             </td>
                         </tr>
                         <tr>
@@ -146,7 +155,8 @@
                             <td class="style4">
                                 Giờ đến:</td>
                             <td class="style3">
-                                <asp:DropDownList ID="ddlGioDen" runat="server" Height="22px" Width="50px">
+                                <asp:DropDownList ID="ddlGioDen" runat="server" Height="22px" 
+                                    Width="50px">
                                 </asp:DropDownList>
                                 &nbsp;giờ
                                 <asp:DropDownList ID="ddlPhutDen" runat="server" Height="22px" Width="50px">
@@ -290,18 +300,25 @@
                         </tr>
                     </table>
                     <br />
-                    <asp:Button ID="btnAdd" runat="server" Text="Thêm" Width="60px" />
+                    <asp:Button ID="btnAdd" runat="server" Text="Thêm" Width="60px" 
+                        onclick="btnAdd_Click" />
                     &nbsp;
                     <asp:Button ID="btnSaveHanhTrinh" runat="server" Text="Lưu" Width="60px" 
                         onclick="btnSaveHanhTrinh_Click" />
                     <br />
                     <br />
-                    <asp:GridView ID="grwHanhTrinh" runat="server" AutoGenerateColumns="False" 
+                    <asp:GridView ID="grwHanhTrinh" runat="server" AutoGenerateColumns="False"
+                        EmptyDataText="Chưa có dữ liệu nào"
                         BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" 
-                        CellPadding="3" Width="779px">
+                        CellPadding="3" Width="779px" 
+                        onpageindexchanged="grwHanhTrinh_PageIndexChanged" 
+                        onpageindexchanging="grwHanhTrinh_PageIndexChanging" 
+                        onrowdeleted="grwHanhTrinh_RowDeleted" 
+                        onrowdeleting="grwHanhTrinh_RowDeleting" 
+                        onselectedindexchanged="grwHanhTrinh_SelectedIndexChanged" PageSize="50">
                         <RowStyle ForeColor="#000066" />
                         <Columns>
-                            <asp:BoundField HeaderText="Số hiệu chuyến" DataField="SoHieuChuyenTau" />
+                            <asp:BoundField HeaderText="Số hiệu chuyến" DataField="MaHanhTrinh" />
                             <asp:BoundField HeaderText="Giờ khởi hành" DataField="GioKhoiHanh" />
                             <asp:BoundField HeaderText="Giờ đến" DataField="GioDen" />
                             <asp:BoundField HeaderText="Tổng thời gian" DataField="TongThoiGian" />
@@ -327,8 +344,6 @@
     </asp:Panel>
 </center>
 <p style="text-align: center">
-                    <asp:Button ID="btnSave" runat="server" Text="Lưu toàn bộ" 
-        Width="123px" />
-                    </p>
+                    &nbsp;</p>
 <p style="text-align: center">
     &nbsp;</p>
