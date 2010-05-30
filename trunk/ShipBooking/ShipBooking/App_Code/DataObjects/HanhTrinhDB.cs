@@ -118,5 +118,14 @@ namespace ShipBooking
             ds = ShipBookingData.FillDataset("spHanhTrinh_SelectByChang", parameters, values);
             return ds;
         }
+
+        public static DataSet GetDataSetHanhTrinhByChangAndNgayTrongTuan(string MaChang, string ngaytrongtuan)
+        {
+            DataSet ds = new DataSet();
+            string[] parameters = new string[] { "@MaChang", "@NgayTrongTuan" };
+            string[] values = new string[] { MaChang, ngaytrongtuan };
+            ds = ShipBookingData.FillDataset("spHanhTrinh_SelectByChangAndNgayTrongTuan", parameters, values);
+            return ds;
+        }
     }
 }

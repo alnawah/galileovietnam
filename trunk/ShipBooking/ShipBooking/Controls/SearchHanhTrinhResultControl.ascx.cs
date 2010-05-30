@@ -1,0 +1,65 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+
+namespace ShipBooking.Controls
+{
+    public partial class SearchHanhTrinhResultControl : System.Web.UI.UserControl
+    {
+        public static HanhTrinh hanhtrinh = new HanhTrinh();
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                FillSearchResult();
+                FillSearchResultToGridView();
+            }
+        }
+
+        protected void FillSearchResult()
+        {
+            lblLoaiChuyen.Text = ThongTinHanhTrinhControl.bf.LoaiChuyen.Trim();
+            lblNoiDi.Text = ThongTinHanhTrinhControl.bf.NoiDi.Trim();
+            lblNoiDen.Text = ThongTinHanhTrinhControl.bf.NoiDen.Trim();
+            lblNgayDi.Text = ThongTinHanhTrinhControl.bf.NgayDi.ToShortDateString();
+            lblNgayDen.Text = ThongTinHanhTrinhControl.bf.NgayVe.ToShortDateString();
+        }
+
+        protected void FillSearchResultToGridView()
+        {
+            DataSet ds = new DataSet();
+            ds = HanhTrinhDB.GetDataSetHanhTrinhByChangAndNgayTrongTuan(ThongTinHanhTrinhControl.gMachang, ThongTinHanhTrinhControl.gNgaytrongtuan);
+            grvTinhTrangCho.DataSource = ds;
+            grvTinhTrangCho.DataBind();
+            DateTime dt;
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                dt = DateTime.Parse(ds.Tables[0].Rows[i]["GioKhoiHanh"].ToString().Trim());
+                grvTinhTrangCho.Rows[i].Cells[2].Text = dt.TimeOfDay.ToString();
+
+                dt = DateTime.Parse(ds.Tables[0].Rows[i]["GioDen"].ToString().Trim());
+                grvTinhTrangCho.Rows[i].Cells[3].Text = dt.TimeOfDay.ToString();
+            }
+        }
+
+        protected void grvTinhTrangCho_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string mahanhtrinh = "";
+            mahanhtrinh = grvTinhTrangCho.Rows[grvTinhTrangCho.SelectedIndex].Cells[4].Text.Trim();
+            hanhtrinh = HanhTrinhDB.GetInfo(mahanhtrinh);
+            if (hanhtrinh != null)
+            {
+                Response.Redirect("BookingSep1.aspx");
+            }
+        }
+    }
+}
