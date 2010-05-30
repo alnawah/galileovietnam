@@ -41,5 +41,19 @@ namespace ShipBooking
             get { return _MaTPDen; }
             set { _MaTPDen = value; }
         }
+
+        string _TenTPDi;
+        public string TenTPDi
+        {
+            get { return _TenTPDi; }
+            set { _TenTPDi = value; }
+        }
+
+        string _TenTPDen;
+        public string TenTPDen
+        {
+            get { return _TenTPDen; }
+            set { _TenTPDen = value; }
+        }
     }
 }

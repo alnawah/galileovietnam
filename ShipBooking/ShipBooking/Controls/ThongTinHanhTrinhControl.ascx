@@ -77,7 +77,7 @@
                     <td>
                                                 &nbsp;</td>
                     <td class="style2">
-                        <asp:RadioButtonList ID="RadioButtonList1" runat="server" Height="25px" 
+                        <asp:RadioButtonList ID="rblLoaiHanhTrinh" runat="server" Height="25px" 
                             RepeatDirection="Horizontal" Width="199px">
                             <asp:ListItem Value="MotLuot">Một lượt</asp:ListItem>
                             <asp:ListItem Value="KhuHoi">Khứ hồi</asp:ListItem>
@@ -126,8 +126,7 @@
                         Đến:</td>
                     <td class="style2">
                         
-                        <asp:DropDownList ID="ddlNoiDen" runat="server" Height="22px" Width="160px" 
-                            AutoPostBack="true">
+                        <asp:DropDownList ID="ddlNoiDen" runat="server" Height="22px" Width="160px" >
                         </asp:DropDownList>
                     </td>
                     <td>
@@ -156,6 +155,17 @@
                         </div>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        &nbsp;</td>
+                    <td class="style2">
+                        
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
                 </table>
             </td>
     </tr>
@@ -164,26 +174,6 @@
     <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" Width="100px" 
         onclick="btnSearch_Click" style="height: 26px" />
 </p>
+<p style="text-align: center">
+    &nbsp;</p>
 
-<center>
-    <asp:GridView ID="grvTinhTrangCho" runat="server" AutoGenerateColumns="False" 
-        BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" 
-        CellPadding="3">
-        <RowStyle ForeColor="#000066" />
-        <Columns>
-            <asp:BoundField DataField="NoiDi" HeaderText="Nơi khởi hành" />
-            <asp:BoundField DataField="NoiDen" HeaderText="Nơi đến" />
-            <asp:BoundField DataField="GioKhoiHanh" HeaderText="Giờ khởi hành" />
-            <asp:BoundField DataField="GioDen" HeaderText="Giờ đến" />
-            <asp:BoundField DataField="MaHanhTrinh" HeaderText="Số hiệu chuyến" />
-            <asp:BoundField DataField="SoGhe" HeaderText="Số ghế còn trống" />
-            <asp:CommandField ButtonType="Button" SelectText="Đặt chỗ" 
-                ShowSelectButton="True" />
-        </Columns>
-        <FooterStyle BackColor="White" ForeColor="#000066" />
-        <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-        <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-    </asp:GridView>
-    <br />
-</center>

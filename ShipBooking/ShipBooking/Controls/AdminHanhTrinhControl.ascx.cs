@@ -406,6 +406,8 @@ namespace ShipBooking.Controls
                 }
                 chang.MaTPDi = ddlNoiDi.SelectedValue.ToUpper().Trim();
                 chang.MaTPDen = ddlNoiDen.SelectedValue.ToUpper().Trim();
+                chang.TenTPDi = ddlNoiDi.SelectedItem.Text.Trim();
+                chang.TenTPDen = ddlNoiDen.SelectedItem.Text.Trim();
                 ChangDB.Insert(chang);
             }
             else
@@ -422,6 +424,8 @@ namespace ShipBooking.Controls
                 }
                 chang.MaTPDi = ddlNoiDi.SelectedValue.ToUpper().Trim();
                 chang.MaTPDen = ddlNoiDen.SelectedValue.ToUpper().Trim();
+                chang.TenTPDi = ddlNoiDi.SelectedItem.Text.Trim();
+                chang.TenTPDen = ddlNoiDen.SelectedItem.Text.Trim();
                 ChangDB.Update(chang);
             }
             InitData();

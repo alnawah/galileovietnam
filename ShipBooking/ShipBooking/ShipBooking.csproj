@@ -110,6 +110,13 @@
     <Compile Include="App_Code\DataObjects\BookingFileDB.cs" />
     <Compile Include="App_Code\DataObjects\Chang.cs" />
     <Compile Include="App_Code\DataObjects\ChangDB.cs" />
+    <Compile Include="BookingSep1.aspx.cs">
+      <DependentUpon>BookingSep1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookingSep1.aspx.designer.cs">
+      <DependentUpon>BookingSep1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\AdminBookingFileControl.ascx.cs">
       <DependentUpon>AdminBookingFileControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -151,6 +158,13 @@
     </Compile>
     <Compile Include="Controls\Admin_ThanhPhoControl.ascx.designer.cs">
       <DependentUpon>Admin_ThanhPhoControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BookingStep1Control.ascx.cs">
+      <DependentUpon>BookingStep1Control.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BookingStep1Control.ascx.designer.cs">
+      <DependentUpon>BookingStep1Control.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\DatVeControl.ascx.cs">
       <DependentUpon>DatVeControl.ascx</DependentUpon>
@@ -221,6 +235,13 @@
     </Compile>
     <Compile Include="Controls\LoginControl.ascx.designer.cs">
       <DependentUpon>LoginControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchHanhTrinhResultControl.ascx.cs">
+      <DependentUpon>SearchHanhTrinhResultControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchHanhTrinhResultControl.ascx.designer.cs">
+      <DependentUpon>SearchHanhTrinhResultControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\ThemHanhKhachControl.ascx.cs">
       <DependentUpon>ThemHanhKhachControl.ascx</DependentUpon>
@@ -313,6 +334,13 @@
     <Compile Include="App_Code\DataObjects\TauDB.cs" />
     <Compile Include="App_Code\DataObjects\ThanhPho.cs" />
     <Compile Include="App_Code\DataObjects\ThanhPhoDB.cs" />
+    <Compile Include="SearchHanhTrinhResult.aspx.cs">
+      <DependentUpon>SearchHanhTrinhResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchHanhTrinhResult.aspx.designer.cs">
+      <DependentUpon>SearchHanhTrinhResult.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ThemHanhKhach.aspx.cs">
       <DependentUpon>ThemHanhKhach.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -401,11 +429,15 @@
   <ItemGroup>
     <Content Include="Admin_HanhTrinh.aspx" />
     <Content Include="Admin_Master.Master" />
+    <Content Include="BookingSep1.aspx" />
     <Content Include="Controls\AdminDetailBookingControl.ascx" />
     <Content Include="Controls\AdminHanhTrinhControl.ascx" />
+    <Content Include="Controls\BookingStep1Control.ascx" />
     <Content Include="Controls\Layer\Admin_BannerControl.ascx" />
+    <Content Include="Controls\SearchHanhTrinhResultControl.ascx" />
     <Content Include="Controls\ThongTinHanhTrinhControl.ascx" />
     <Content Include="DetailBooking.aspx" />
+    <Content Include="SearchHanhTrinhResult.aspx" />
     <Content Include="ThongTinHanhTrinh.aspx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
