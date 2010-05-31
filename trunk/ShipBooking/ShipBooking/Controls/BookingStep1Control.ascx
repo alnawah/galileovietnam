@@ -23,15 +23,10 @@
     {
         margin: auto;
         border-style: none;
-        width: 518px;
+        width: 489px;
         height: auto;
     }
-    .style2
-    {
-        border: 1px solid #0000FF;
-        width: 600px;
-    }
-        
+            
     #datePicker1
     {
         display:none;
@@ -50,49 +45,52 @@
         border:solid 2px black;
         background-color:white;
     }
-    .style4
-    {
-        width: 123px;
-    }
-    .style7
-    {
-        width: 119px;
-    }
-    .style8
-    {
-    }
-    .style9
-    {
-        width: 155px;
-    }
     .style12
     {
         width: 100px;
         text-align: right;
     }
-    .style13
+    .style20
+    {
+    }
+    .style21
+    {
+        width: 114px;
+    }
+    .style22
+    {
+        text-align: left;
+        height: 23px;
+    }
+    .style28
     {
         width: 100px;
-        font-weight: bold;
-        text-align: center;
+        text-align: right;
+        height: 23px;
     }
-    .style14
+    .style29
     {
-        font-weight: bold;
-        text-align: center;
+        height: 23px;
     }
-    .style15
+    .style30
     {
-        text-align: center;
+        width: 55px;
+        text-align: right;
     }
-    .style16
+    .style31
     {
-        width: 100px;
-        text-align: center;
+    }
+    .style32
+    {
+        width: 68px;
     }
     </style>
-<p>
-    &nbsp;</p>
+<p style="text-align: center">
+    <asp:Image ID="Image1" runat="server" Height="59px" 
+        ImageUrl="~/Images/tao_booking_step.png" Width="312px" />
+        <br />
+    <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
+    </p>
 <table class="step1_tblThongTinDatCho_Summary_Style">
     <tr>
         <td bgcolor="#006699" class="step1_table_header_style">
@@ -102,142 +100,84 @@
         <td class="step1_table_contain_style">
             <table class="step1_tblThongTinDatCho_Detail_Style">
                 <tr>
-                    <td class="style8">
+                    <td class="style12">
                                                 Loại hành trình:</td>
-                    <td class="style7">
+                    <td class="style20" colspan="3">
                         <asp:Label ID="lblLoaiHanhTrinh" runat="server" Font-Bold="True" 
                             ForeColor="Blue"></asp:Label>
                         </td>
-                    <td class="style4">
-                        &nbsp;</td>
-                    <td>
-                        &nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="style8">
+                    <td class="style12">
                                                 Nơi khởi hành:</td>
-                    <td class="style7">
+                    <td class="style32">
                         <asp:Label ID="lblNoiDi" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
                         </td>
-                    <td class="style4">
+                    <td class="style30">
                         Nơi đến:</td>
-                    <td>
+                    <td class="style21">
                         <asp:Label ID="lblNoiDen" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
                         </td>
                 </tr>
                 <tr>
-                    <td class="style8">
+                    <td class="style12">
                         Ngày đi:</td>
-                    <td class="style7">
+                    <td class="style32">
                         <asp:Label ID="lblNgayKhoiHanh" runat="server" Font-Bold="True" 
                             ForeColor="Blue"></asp:Label>
                     </td>
-                    <td class="style4">
-                        <asp:Label ID="lblNgayVe" runat="server" Visible="false" Text="Ngày về:"></asp:Label>
+                    <td class="style30">
+                        <asp:Label ID="lblNgayVeLabel" runat="server" Text="Ngày về:"></asp:Label>
                     </td>
-                    <td>
-                        <asp:Label ID="lblNgayDen" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
+                    <td class="style21">
+                        <asp:Label ID="lblNgayVe" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
                     </td>
                 </tr>
                 <tr>
-                    <td class="style8">
+                    <td class="style12">
                         Giờ khởi hành:</td>
-                    <td class="style7">
+                    <td class="style32">
                         <asp:Label ID="lblGioKhoiHanh" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
                     </td>
-                    <td class="style4">
-                        Giờ đến:&nbsp;</td>
-                    <td>
+                    <td class="style30">
+                        Giờ đến:</td>
+                    <td class="style21">
                         <asp:Label ID="lblGioDen" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
                     </td>
                 </tr>
                 <tr>
-                    <td class="style8">Số ghế:</td>
-                    <td class="style1" colspan="3" style="margin-left: 40px">
+                    <td class="style12">
+                        Hạng vé:</td>
+                    <td class="style31" colspan="3">
+                        <asp:DropDownList ID="ddlLoaiVe" runat="server" Height="22px" Width="159px" 
+                            AutoPostBack="true" 
+                            onselectedindexchanged="ddlLoaiVe_SelectedIndexChanged" 
+                            style="margin-right: 0px">
+                        </asp:DropDownList>
+                    &nbsp;&nbsp; Giá:                         <asp:Label ID="lblGiaVe" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style28">
+                        Số vé:</td>
+                    <td class="style29" colspan="3">
+                        <asp:DropDownList ID="ddlSLVe" runat="server" Height="22px" Width="75px">
+                        </asp:DropDownList>
+&nbsp;&nbsp; Số lượng còn:
+                        <asp:Label ID="lblSoLuongVe" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style28">Số ghế:</td>
+                    <td class="style22" colspan="3" style="margin-left: 40px">
                         <asp:RadioButtonList ID="rdbSoGhe" runat="server" RepeatColumns="12" 
-                            RepeatDirection="Horizontal">
+                            RepeatDirection="Horizontal" Height="22px" style="text-align: left" 
+                            Width="126px">
                         </asp:RadioButtonList>
                     </td>
                 </tr>
                 </table>
             </td>
-    </tr>
-</table>
-<p>
-    &nbsp;</p>
-<table align="center" class="style2" style="border: 1px solid #006699">
-    <tr bgcolor="#006699">
-        <td style="text-align: center; font-weight: 700; color: #FFFFFF;" 
-            class="style9">
-            Loại vé</td>
-        <td style="color: #FFFFFF; text-align: center;" class="style12">
-            <b style="text-align: center">Số vé còn lại</b></td>
-        <td style="color: #FFFFFF;" class="style16">
-            <b style="text-align: center">Giá người lớn</b></td>
-        <td style="color: #FFFFFF" class="style13">
-            Giá trẻ em</td>
-        <td style="color: #FFFFFF" class="style14">
-            Số vé</td>
-    </tr>
-    <tr>
-        <td align="left" class="style9">
-            <asp:CheckBox ID="chkHangThuong" runat="server" Text="Hạng thường" 
-                AutoPostBack="true" oncheckedchanged="chkHangThuong_CheckedChanged" />
-        </td>
-        <td class="style12">
-        <asp:Label ID="lblSLVe1" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
-                </td>
-                <td class="style12">
-        <asp:Label ID="lblGiaNL1" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
-                </td>
-                <td class="style12">
-        <asp:Label ID="lblGiaTE1" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
-                </td>
-                <td class="style15">
-                    <asp:DropDownList ID="ddlSLVe1" runat="server" Enabled="False" Height="22px" 
-                        Width="70px">
-                    </asp:DropDownList>
-        </td>
-            </tr>
-            <tr>
-                <td align="left" class="style9">
-                    <asp:CheckBox ID="chkHangDoanhNhan" runat="server" Text="Hạng doanh nhân" 
-                        AutoPostBack="true" oncheckedchanged="chkHangDoanhNhan_CheckedChanged" />
-                </td>
-                <td class="style12">
-        <asp:Label ID="lblSLVe2" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
-                </td>
-                <td class="style12">
-        <asp:Label ID="lblGiaNL2" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
-                </td>
-                <td class="style12">
-        <asp:Label ID="lblGiaTE2" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
-                </td>
-                <td class="style15">
-                    <asp:DropDownList ID="ddlSLVe2" runat="server" Enabled="False" Height="22px" 
-                        Width="70px">
-                    </asp:DropDownList>
-                </td>
-            </tr>
-            <tr>
-                <td align="left" class="style9">
-                    <asp:CheckBox ID="chkHangVIP" runat="server" Text="Hạng VIP" 
-                        AutoPostBack="true" oncheckedchanged="chkHangVIP_CheckedChanged" />
-                </td>
-                <td class="style12">
-        <asp:Label ID="lblSLVe3" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
-                </td>
-                <td class="style12">
-        <asp:Label ID="lblGiaNL3" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
-                </td>
-                <td class="style12">
-        <asp:Label ID="lblGiaTE3" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
-                </td>
-                <td class="style15">
-                    <asp:DropDownList ID="ddlSLVe3" runat="server" Enabled="False" Height="22px" 
-                        Width="70px">
-                    </asp:DropDownList>
-                </td>
     </tr>
 </table>
                             

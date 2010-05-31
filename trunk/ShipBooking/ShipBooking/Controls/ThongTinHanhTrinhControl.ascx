@@ -34,7 +34,7 @@
     {
         margin: auto;
         border-style: none;
-        width: 600px;
+        width: 475px;
         height: auto;
     }
     .style2
@@ -60,7 +60,21 @@
     {
         height: 16px;
     }
+             .style3
+             {
+                 text-align: right;
+                 width: 51px;
+             }
+             .style4
+             {
+                 text-align: right;
+                 width: 109px;
+             }
     </style>
+<p style="text-align: center">
+    <asp:Image ID="Image1" runat="server" Height="59px" 
+        ImageUrl="~/Images/tim_kiem_hanh_trinh.png" Width="515px" />
+</p>
 <p style="text-align: center">
     <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
     <br />
@@ -68,35 +82,34 @@
 <table class="step1_tblThongTinDatCho_Summary_Style">
     <tr>
         <td bgcolor="#006699" class="step1_table_header_style">
-            Tìm kiếm hành trình</td>
+            Thông tin tìm kiếm</td>
     </tr>
     <tr>
         <td class="step1_table_contain_style">
             <table class="step1_tblThongTinDatCho_Detail_Style">
                 <tr>
-                    <td>
+                    <td class="style3">
                                                 &nbsp;</td>
                     <td class="style2">
-                        <asp:RadioButtonList ID="rblLoaiHanhTrinh" runat="server" Height="25px" 
-                            RepeatDirection="Horizontal" Width="199px">
-                            <asp:ListItem Value="MotLuot">Một lượt</asp:ListItem>
-                            <asp:ListItem Value="KhuHoi">Khứ hồi</asp:ListItem>
+                        <asp:RadioButtonList ID="rblLoaiHanhTrinh" runat="server" Height="22px" 
+                            Width="162px" AutoPostBack="true" 
+                            onselectedindexchanged="rblLoaiHanhTrinh_SelectedIndexChanged">
                         </asp:RadioButtonList>
                         </td>
-                    <td>
+                    <td class="style4">
                         &nbsp;</td>
                     <td>
                         &nbsp;</td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="style3">
                                                 Từ:</td>
                     <td class="style2">
                         <asp:DropDownList ID="ddlNoiDi" runat="server" Height="22px" Width="160px" 
                             AutoPostBack="true" onselectedindexchanged="ddlNoiDi_SelectedIndexChanged">
                         </asp:DropDownList>
                         </td>
-                    <td>
+                    <td class="style4">
                         Ngày khởi hành:</td>
                     <td>
                         <asp:TextBox ID="txtNgayDi" runat="server" Width="79px" 
@@ -122,14 +135,14 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="style3">
                         Đến:</td>
                     <td class="style2">
                         
                         <asp:DropDownList ID="ddlNoiDen" runat="server" Height="22px" Width="160px" >
                         </asp:DropDownList>
                     </td>
-                    <td>
+                    <td class="style4">
                         <asp:Label ID="lblNgayVe" runat="server" Visible="false" Text="Ngày về:"></asp:Label>
                     </td>
                     <td>
@@ -156,12 +169,12 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="style3">
                         &nbsp;</td>
                     <td class="style2">
                         
                         &nbsp;</td>
-                    <td>
+                    <td class="style4">
                         &nbsp;</td>
                     <td>
                         &nbsp;</td>

@@ -133,25 +133,11 @@ namespace ShipBooking.Module
             set { _GioDen = value; }
         }
 
-        string _SoVe1;
-        public string SoVe1
+        string _SoVe;
+        public string SoVe
         {
-            get { return _SoVe1; }
-            set { _SoVe1 = value; }
-        }
-
-        string _SoVe2;
-        public string SoVe2
-        {
-            get { return _SoVe2; }
-            set { _SoVe2 = value; }
-        }
-
-        string _SoVe3;
-        public string SoVe3
-        {
-            get { return _SoVe3; }
-            set { _SoVe3 = value; }
+            get { return _SoVe; }
+            set { _SoVe = value; }
         }
     }
 }

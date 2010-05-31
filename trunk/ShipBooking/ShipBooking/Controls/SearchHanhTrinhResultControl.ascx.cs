@@ -20,18 +20,28 @@ namespace ShipBooking.Controls
         {
             if (!IsPostBack)
             {
-                FillSearchResult();
+                FillSearchCondition();
                 FillSearchResultToGridView();
             }
         }
 
-        protected void FillSearchResult()
+        protected void FillSearchCondition()
         {
             lblLoaiChuyen.Text = ThongTinHanhTrinhControl.bf.LoaiChuyen.Trim();
             lblNoiDi.Text = ThongTinHanhTrinhControl.bf.NoiDi.Trim();
             lblNoiDen.Text = ThongTinHanhTrinhControl.bf.NoiDen.Trim();
             lblNgayDi.Text = ThongTinHanhTrinhControl.bf.NgayDi.ToShortDateString();
-            lblNgayDen.Text = ThongTinHanhTrinhControl.bf.NgayVe.ToShortDateString();
+            if (ThongTinHanhTrinhControl.bf.LoaiChuyen == "Khứ hồi")
+            {
+                lblNgayVeLabel.Visible = true;
+                lblNgayVe.Visible = true;
+                lblNgayVe.Text = ThongTinHanhTrinhControl.bf.NgayVe.ToShortDateString();
+            }
+            else
+            {
+                lblNgayVeLabel.Visible = false;
+                lblNgayVe.Visible = false;
+            }
         }
 
         protected void FillSearchResultToGridView()
@@ -49,6 +59,15 @@ namespace ShipBooking.Controls
                 dt = DateTime.Parse(ds.Tables[0].Rows[i]["GioDen"].ToString().Trim());
                 grvTinhTrangCho.Rows[i].Cells[3].Text = dt.TimeOfDay.ToString();
             }
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                lblMsg.Text = "Tìm được: " + ds.Tables[0].Rows.Count.ToString() + " kết quả";
+            }
+            else
+            {
+                lblMsg.Text = "Rất tiếc, không tìm thấy hành trình nào";
+            }
         }
 
         protected void grvTinhTrangCho_SelectedIndexChanged(object sender, EventArgs e)
@@ -60,6 +79,11 @@ namespace ShipBooking.Controls
             {
                 Response.Redirect("BookingSep1.aspx");
             }
+        }
+
+        protected void btnBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ThongTinHanhTrinh.aspx");
         }
     }
 }

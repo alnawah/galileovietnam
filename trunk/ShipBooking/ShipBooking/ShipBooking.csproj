@@ -166,13 +166,6 @@
     <Compile Include="Controls\BookingStep1Control.ascx.designer.cs">
       <DependentUpon>BookingStep1Control.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\DatVeControl.ascx.cs">
-      <DependentUpon>DatVeControl.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Controls\DatVeControl.ascx.designer.cs">
-      <DependentUpon>DatVeControl.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Controls\DatVeReviewControl.ascx.cs">
       <DependentUpon>DatVeReviewControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -243,13 +236,6 @@
     <Compile Include="Controls\SearchHanhTrinhResultControl.ascx.designer.cs">
       <DependentUpon>SearchHanhTrinhResultControl.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ThemHanhKhachControl.ascx.cs">
-      <DependentUpon>ThemHanhKhachControl.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Controls\ThemHanhKhachControl.ascx.designer.cs">
-      <DependentUpon>ThemHanhKhachControl.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Controls\ThongTinHanhTrinhControl.ascx.cs">
       <DependentUpon>ThongTinHanhTrinhControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -263,13 +249,6 @@
     </Compile>
     <Compile Include="Controls\ThongTinKhachControl.ascx.designer.cs">
       <DependentUpon>ThongTinKhachControl.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="DatVe.aspx.cs">
-      <DependentUpon>DatVe.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DatVe.aspx.designer.cs">
-      <DependentUpon>DatVe.aspx</DependentUpon>
     </Compile>
     <Compile Include="DatVe_Review.aspx.cs">
       <DependentUpon>DatVe_Review.aspx</DependentUpon>
@@ -341,13 +320,6 @@
     <Compile Include="SearchHanhTrinhResult.aspx.designer.cs">
       <DependentUpon>SearchHanhTrinhResult.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ThemHanhKhach.aspx.cs">
-      <DependentUpon>ThemHanhKhach.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ThemHanhKhach.aspx.designer.cs">
-      <DependentUpon>ThemHanhKhach.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ThongTinHanhTrinh.aspx.cs">
       <DependentUpon>ThongTinHanhTrinh.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -384,7 +356,6 @@
     <Content Include="Controls\AdminControl.ascx" />
     <Content Include="Controls\AdminTauControl.ascx" />
     <Content Include="Controls\Admin_ThanhPhoControl.ascx" />
-    <Content Include="Controls\DatVeControl.ascx" />
     <Content Include="Controls\DatVeReviewControl.ascx" />
     <Content Include="Controls\DatVe_Step2.ascx" />
     <Content Include="Controls\Layer\BannerControl.ascx" />
@@ -393,9 +364,7 @@
     <Content Include="Controls\Layer\LeftControl.ascx" />
     <Content Include="Controls\Layer\RightControl.ascx" />
     <Content Include="Controls\LoginControl.ascx" />
-    <Content Include="Controls\ThemHanhKhachControl.ascx" />
     <Content Include="Controls\ThongTinKhachControl.ascx" />
-    <Content Include="DatVe.aspx" />
     <Content Include="DatVe_Review.aspx" />
     <Content Include="DatVe_Step2.aspx" />
     <Content Include="Images\admin.jpg" />
@@ -423,7 +392,6 @@
     <Content Include="Login.aspx" />
     <Content Include="MenuScript.js" />
     <Content Include="MyMaster.Master" />
-    <Content Include="ThemHanhKhach.aspx" />
     <Content Include="ThongTinKhach.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -437,6 +405,11 @@
     <Content Include="Controls\SearchHanhTrinhResultControl.ascx" />
     <Content Include="Controls\ThongTinHanhTrinhControl.ascx" />
     <Content Include="DetailBooking.aspx" />
+    <Content Include="Images\ket_qua_tim_kiem_hanhtrinh.png" />
+    <Content Include="Images\ket_thuc_booking.png" />
+    <Content Include="Images\tao_booking_step.png" />
+    <Content Include="Images\thong_tin_khach.png" />
+    <Content Include="Images\tim_kiem_hanh_trinh.png" />
     <Content Include="SearchHanhTrinhResult.aspx" />
     <Content Include="ThongTinHanhTrinh.aspx" />
   </ItemGroup>
