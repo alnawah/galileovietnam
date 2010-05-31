@@ -18,7 +18,7 @@ namespace ShipBooking.Controls
 {
     public partial class ThongTinHanhTrinhControl : System.Web.UI.UserControl
     {
-        public static BookingFile bf = new BookingFile();
+        public static BookingFile bf;
         public static List<HanhKhach> listKhach = new List<HanhKhach>();
         public static string gMachang = "";
         public static string gNgaytrongtuan = "";
@@ -27,10 +27,30 @@ namespace ShipBooking.Controls
         {
             if (!IsPostBack)
             {
-                rblLoaiHanhTrinh.SelectedIndex = 0;
+                lblMsg.Text = "";
+                FillDataToDdlLoaiChuyen();
                 ListControlUtilities.FillDataToDropDownList(ddlNoiDi, "tblThanhPho", "Ten", "MaThanhPho");
                 ListControlUtilities.FillCityData(ddlNoiDen, ddlNoiDi.SelectedValue);
             }
+        }
+
+        protected void FillDataToDdlLoaiChuyen()
+        {
+            ListItem item;
+
+            item = new ListItem();
+            item.Text = "Một lượt";
+            item.Value = "MotLuot";
+            rblLoaiHanhTrinh.Items.Add(item);
+            item = null;
+
+            item = new ListItem();
+            item.Text = "Khứ hồi";
+            item.Value = "KhuHoi";
+            rblLoaiHanhTrinh.Items.Add(item);
+            item = null;
+
+            rblLoaiHanhTrinh.SelectedIndex = 0;
         }
 
         protected void calEventDate_SelectionChanged(object sender, EventArgs e)
@@ -53,9 +73,27 @@ namespace ShipBooking.Controls
             }
             else
             {
-                lblMsg.Text = "";
-                GetBookingFile();
-                SearchHanhTrinh();
+                if (rblLoaiHanhTrinh.SelectedIndex == 1)
+                {
+                    if (CheckDateNgayVe() == false)
+                    {
+                        txtNgayVe.Text = "";
+                        txtNgayVe.Focus();
+                        return;
+                    }
+                    else
+                    {
+                        lblMsg.Text = "";
+                        GetBookingFile();
+                        SearchHanhTrinh();
+                    }
+                }
+                else
+                {
+                    lblMsg.Text = "";
+                    GetBookingFile();
+                    SearchHanhTrinh();
+                }
             }
         }
 
@@ -75,6 +113,32 @@ namespace ShipBooking.Controls
                 if (dt < DateTime.Now.Date)
                 {
                     lblMsg.Text = "Bạn không được nhập ngày trước ngày hiện tại";
+                }
+                else
+                {
+                    isValid = true;
+                }
+            }
+            catch
+            {
+                lblMsg.Text = "Ngày không hợp lệ";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        protected bool CheckDateNgayVe()
+        {
+            bool isValid = false;
+
+            string strDate = txtNgayVe.Text.Trim();
+            try
+            {
+                DateTime dt = DateTime.Parse(strDate);
+                if (dt < DateTime.Parse(txtNgayDi.Text.Trim()))
+                {
+                    lblMsg.Text = "Ngày về phải sau ngày đi";
                 }
                 else
                 {
@@ -162,14 +226,22 @@ namespace ShipBooking.Controls
 
         protected void GetBookingFile()
         {
-            //bf.MaBF = "";
+            bf = new BookingFile();
+            bf.MaBF = "";
             bf.LoaiChuyen = rblLoaiHanhTrinh.SelectedItem.Text;
             bf.NoiDi = ddlNoiDi.SelectedItem.Text.Trim();
             bf.NoiDen = ddlNoiDen.SelectedItem.Text.Trim();
             bf.NgayDi = DateTime.Parse(txtNgayDi.Text.Trim());
-            //bf.NgayVe = DateTime.Parse(txtNgayVe.Text.Trim());
-            //bf.ThoiGian = "";
-            //bf.OpenChecking = true;
+            if (rblLoaiHanhTrinh.SelectedIndex == 0)
+            {
+                bf.NgayVe = bf.NgayDi;
+            }
+            else
+            {
+                bf.NgayVe = DateTime.Parse(txtNgayVe.Text.Trim());
+            }
+            bf.ThoiGian = "Buổi sáng";
+            bf.OpenChecking = true;
             bf.LoaiVe = "";
             bf.SoGhe = "";
             bf.GiaTien = "";
@@ -178,6 +250,22 @@ namespace ShipBooking.Controls
             bf.HanhTrinh = GetMaChang();
             //bf.GioKhoiHanh = "";
             //bf.GioDen = "";
+        }
+
+        protected void rblLoaiHanhTrinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (rblLoaiHanhTrinh.SelectedIndex == 0)
+            {
+                txtNgayVe.Visible = false;
+                imgCalendar2.Visible = false;
+                lblNgayVe.Visible = false;
+            }
+            else 
+            {
+                lblNgayVe.Visible = true;
+                txtNgayVe.Visible = true;
+                imgCalendar2.Visible = true;
+            }
         }
     }
 }

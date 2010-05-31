@@ -70,6 +70,11 @@ namespace ShipBooking.Module
             set { _MaBF = value; }
         }
 
-
+        string _GiaTien;
+        public string GiaTien
+        {
+            get { return _GiaTien; }
+            set { _GiaTien = value; }
+        }
     }
 }

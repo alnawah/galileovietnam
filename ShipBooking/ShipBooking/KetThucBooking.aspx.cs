@@ -20,8 +20,18 @@ namespace ShipBooking
         {
             if (!IsPostBack)
             {
-                lblMaBF.Text = DatVeControl.bf.MaBF.ToUpper().Trim();
+                lblMaBF.Text = ThongTinHanhTrinhControl.bf.MaBF.ToUpper().Trim();
+                ReleaseData();
             }
+        }
+
+        protected void ReleaseData()
+        {
+            ThongTinHanhTrinhControl.bf = null;
+            ThongTinHanhTrinhControl.gMachang = null;
+            ThongTinHanhTrinhControl.gNgaytrongtuan = null;
+            ThongTinHanhTrinhControl.listKhach = null;
+            SearchHanhTrinhResultControl.hanhtrinh = null;
         }
     }
 }

@@ -27,7 +27,7 @@ namespace ShipBooking.Controls
                 ListControlUtilities.FillDataToDropDownList(ddlThanhPho, "tblThanhPho", "Ten", "MaThanhPho");
                 FillDataToDdlThoiGian();
                 FillDataToRdbHinhThucThanhToan();
-                SetBookingData();
+                FillBookingData();
                 SetHanhKhachData();
             }
         }
@@ -93,26 +93,29 @@ namespace ShipBooking.Controls
             rblHinhThucThanhToan.SelectedIndex = 0;
         }
 
-        protected void SetBookingData()
+        protected void FillBookingData()
         {
-            lblNoiDen1.Text = DatVeControl.bf.NoiDen;
-            lblNoiDi1.Text = DatVeControl.bf.NoiDi;
-            lblNgayDi.Text = DatVeControl.bf.NgayDi.ToShortDateString();
-            if (DatVeControl.bf.LoaiChuyen.Equals("Một lượt") == true)
+            lblLoaiHanhTrinh.Text = ThongTinHanhTrinhControl.bf.LoaiChuyen;
+            lblNoiDi.Text = ThongTinHanhTrinhControl.bf.NoiDi;
+            lblNoiDen.Text = ThongTinHanhTrinhControl.bf.NoiDen;
+            lblNgayDi.Text = ThongTinHanhTrinhControl.bf.NgayDi.ToShortDateString();
+            if (ThongTinHanhTrinhControl.bf.LoaiChuyen == "Khứ hồi")
             {
-                lblNgayVe.Text = "";
+                lblNgayVeLabel.Visible = true;
+                lblNgayVe.Visible = true;
+                lblNgayVe.Text = ThongTinHanhTrinhControl.bf.NgayVe.ToShortDateString();
             }
             else
             {
-                lblNgayVe.Text = DatVeControl.bf.NgayVe.ToShortDateString();
+                lblNgayVeLabel.Visible = false;
+                lblNgayVe.Visible = false;
             }
-            lblThoiGian.Text = DatVeControl.bf.ThoiGian;
-            lblLoaiHanhTrinh.Text = DatVeControl.bf.LoaiChuyen;
-            lblLoaiVe.Text = DatVeControl.bf.LoaiVe;
-            lblSoGhe.Text = DatVeControl.bf.SoGhe;
-            lblGiaVN.Text = DatVeControl.bf.GiaTien;
-            lblGioKhoiHanh.Text = DatVeControl.bf.GioKhoiHanh.ToShortTimeString();
-            lblGioDen.Text = DatVeControl.bf.GioDen.ToShortTimeString();
+            lblGioKhoiHanh.Text = ThongTinHanhTrinhControl.bf.GioKhoiHanh.ToShortTimeString();
+            lblGioDen.Text = ThongTinHanhTrinhControl.bf.GioDen.ToShortTimeString();
+            lblLoaiVe.Text = ThongTinHanhTrinhControl.bf.LoaiVe;
+            lblSLVe.Text = ThongTinHanhTrinhControl.bf.SoVe;
+            lblSoGhe.Text = ThongTinHanhTrinhControl.bf.SoGhe;
+            lblTongGiaVe.Text = ThongTinHanhTrinhControl.bf.GiaTien;
         }
 
         protected void SetHanhKhachData()
@@ -120,23 +123,18 @@ namespace ShipBooking.Controls
             DataTable dt = new DataTable("HanhKhach");
             dt.Columns.Add("Stt");
             dt.Columns.Add("TenKhach");
-            dt.Columns.Add("DiaChi");
-            dt.Columns.Add("LoaiQuocTich");
             dt.Columns.Add("LoaiTuoi");
             dt.Columns.Add("GiaVe");
-
+            
             DataSet ds = new DataSet();
             ds.Tables.Add(dt);
-
-            for (int i = 0; i < DatVeControl.listKhach.Count(); i++)
+            for (int i = 0; i < ThongTinHanhTrinhControl.listKhach.Count(); i++)
             {
                 ds.Tables[0].Rows.Add();
                 ds.Tables[0].Rows[i].SetField("Stt", i + 1);
-                ds.Tables[0].Rows[i].SetField("TenKhach", DatVeControl.listKhach[i].Ten);
-                ds.Tables[0].Rows[i].SetField("DiaChi", DatVeControl.listKhach[i].DiaChi);
-                ds.Tables[0].Rows[i].SetField("LoaiQuocTich", DatVeControl.listKhach[i].QuocTich);
-                ds.Tables[0].Rows[i].SetField("LoaiTuoi", DatVeControl.listKhach[i].DoTuoi);
-                ds.Tables[0].Rows[i].SetField("GiaVe", DatVeControl.bf.GiaTien.Trim());
+                ds.Tables[0].Rows[i].SetField("TenKhach", ThongTinHanhTrinhControl.listKhach[i].Ten);
+                ds.Tables[0].Rows[i].SetField("LoaiTuoi", ThongTinHanhTrinhControl.listKhach[i].DoTuoi);
+                ds.Tables[0].Rows[i].SetField("GiaVe", ThongTinHanhTrinhControl.listKhach[i].GiaTien.Trim() + " VNĐ");
             }
             grvHanhKhach.DataSource = ds.Tables[0];
             grvHanhKhach.DataBind();

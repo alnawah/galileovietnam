@@ -22,101 +22,88 @@ namespace ShipBooking.Controls
             if (!IsPostBack)
             {
                 InitControl();
-                FillDataToDdlQuocTich();
-                FillDataToDdlDoTuoi();
-                SetBookingData();
+                FillBookingData();
+                SetVisibleHanhKhachDataControl();
             }
         }
 
-        protected void FillDataToDdlQuocTich()
+        protected void FillBookingData()
         {
-            ListItem item;
-
-            item = new ListItem();
-            item.Text = "Việt Nam";
-            item.Value = "VietNam";
-            ddlQuocTich.Items.Add(item);
-            item = null;
-
-            item = new ListItem();
-            item.Text = "Nước ngoài";
-            item.Value = "NuocNgoai";
-            ddlQuocTich.Items.Add(item);
-            item = null;
-        }
-
-        protected void FillDataToDdlDoTuoi()
-        {
-            ListItem item;
-
-            item = new ListItem();
-            item.Text = "Trẻ sơ sinh";
-            item.Value = "TreSoSinh";
-            ddlDoTuoi.Items.Add(item);
-            item = null;
-
-            item = new ListItem();
-            item.Text = "Trẻ em";
-            item.Value = "TreEm";
-            ddlDoTuoi.Items.Add(item);
-            item = null;
-
-            item = new ListItem();
-            item.Text = "Người lớn";
-            item.Value = "NguoiLon";
-            ddlDoTuoi.Items.Add(item);
-            item = null;
-        }
-
-        protected void SetBookingData()
-        {
-            lblNoiDen1.Text = ThongTinHanhTrinhControl.bf.NoiDen;
-            lblNoiDi1.Text = ThongTinHanhTrinhControl.bf.NoiDi;
+            lblLoaiHanhTrinh.Text = ThongTinHanhTrinhControl.bf.LoaiChuyen;
+            lblNoiDi.Text = ThongTinHanhTrinhControl.bf.NoiDi;
+            lblNoiDen.Text = ThongTinHanhTrinhControl.bf.NoiDen;
             lblNgayDi.Text = ThongTinHanhTrinhControl.bf.NgayDi.ToShortDateString();
-            if (ThongTinHanhTrinhControl.bf.LoaiChuyen.Equals("Một lượt") == true)
+            if (ThongTinHanhTrinhControl.bf.LoaiChuyen == "Khứ hồi")
             {
-                lblNgayVe.Text = "";
+                lblNgayVeLabel.Visible = true;
+                lblNgayVe.Visible = true;
+                lblNgayVe.Text = ThongTinHanhTrinhControl.bf.NgayVe.ToShortDateString();
             }
             else
             {
-                lblNgayVe.Text = ThongTinHanhTrinhControl.bf.NgayVe.ToShortDateString();
+                lblNgayVeLabel.Visible = false;
+                lblNgayVe.Visible = false;
             }
-            lblThoiGian.Text = ThongTinHanhTrinhControl.bf.ThoiGian;
-            lblLoaiHanhTrinh.Text = ThongTinHanhTrinhControl.bf.LoaiChuyen;
-            lblLoaiVe.Text = ThongTinHanhTrinhControl.bf.LoaiVe;
-            lblSoGhe.Text = ThongTinHanhTrinhControl.bf.SoGhe;
-            lblGiaVN.Text = ThongTinHanhTrinhControl.bf.GiaTien;
             lblGioKhoiHanh.Text = ThongTinHanhTrinhControl.bf.GioKhoiHanh.ToShortTimeString();
             lblGioDen.Text = ThongTinHanhTrinhControl.bf.GioDen.ToShortTimeString();
+            lblLoaiVe.Text = ThongTinHanhTrinhControl.bf.LoaiVe;
+            lblSLVe.Text = ThongTinHanhTrinhControl.bf.SoVe;
+            lblSoGhe.Text = ThongTinHanhTrinhControl.bf.SoGhe;
+            
         }
 
         protected void GetHanhKhachData()
         {
-            ThongTinHanhTrinhControl.listKhach.Clear();
-            HanhKhach khach = new HanhKhach();
+            int slKhach = 0;
             string maHK = "";
-            Random rdm = new Random();
-            maHK = "HK" + rdm.Next(10000, 99999).ToString().Trim();
+            string strTextBoxID = "";
+            string strDdlID = "";
+            TextBox[] textBox = new TextBox[100];
+            DropDownList[] ddl = new DropDownList[100];
+            HanhKhach khach;
+            
+            slKhach = Convert.ToInt16(ThongTinHanhTrinhControl.bf.SoVe);
+            ThongTinHanhTrinhControl.listKhach.Clear();
+            for (int i = 1; i <= slKhach; i++)
+            {
+                strTextBoxID = "txtHoTen" + i.ToString();
+                strDdlID = "ddlDoTuoi" + i.ToString();
+                textBox[i] = (TextBox)this.FindControl(strTextBoxID);
+                ddl[i] = (DropDownList)this.FindControl(strDdlID);
+                if (textBox[i] != null && ddl[i] != null)
+                {
+                    khach = new HanhKhach();
+                    Random rdm = new Random();
+                    maHK = "HK" + rdm.Next(10000, 99999).ToString().Trim();
 
-            khach.MaHK = maHK.Trim();
-            khach.Ten = txtHoTen.Text;
-            khach.DiaChi = txtDiaChi.Text;
-            khach.QuocTich = ddlQuocTich.SelectedItem.Text;
-            khach.DoTuoi = ddlDoTuoi.SelectedItem.Text;
-            khach.DienThoai = txtSoDienThoai.Text;
-            khach.Email = txtEmail.Text;
-            khach.MaBF = "";
-
-            ThongTinHanhTrinhControl.listKhach.Add(khach);
+                    khach.MaHK = maHK.Trim();
+                    khach.Ten = textBox[i].Text.Trim();
+                    khach.DiaChi = "";
+                    khach.QuocTich = "";
+                    khach.DoTuoi = ddl[i].SelectedItem.Text.Trim();
+                    khach.DienThoai = "";
+                    khach.Email = "";
+                    khach.MaBF = "";
+                    khach.GiaTien = TinhGiaVe(ddl[i].SelectedValue.Trim());
+                    ThongTinHanhTrinhControl.listKhach.Add(khach);
+                    khach = null;
+                }
+            }
         }
 
         protected void InitControl()
         {
-            txtHoTen.Text = "";
-            txtDiaChi.Text = "";
-            txtSoDienThoai.Text = "";
-            txtEmail.Text = "";
-            ddlDoTuoi.SelectedIndex = 2;
+            Panel [] panel = new Panel[15];
+            string control = "";
+            for (int i = 1; i <= 12; i++)
+            {
+                control = "Panel" + i.ToString();
+                panel[i] = (Panel)this.FindControl(control);
+                if (panel[i] != null)
+                {
+                    panel[i].Visible = false;
+                }
+            }
             lblMsg.Text = "";
         }
 
@@ -129,63 +116,102 @@ namespace ShipBooking.Controls
             else
             {
                 GetHanhKhachData();
-
-                TinhTrangChuyen obj = new TinhTrangChuyen();
-                obj = TinhTrangChuyenDB.GetInfo(ThongTinHanhTrinhControl.bf.HanhTrinh);
-
-                if (obj != null)
-                {
-                    if (ddlDoTuoi.SelectedValue == "NguoiLon" || ddlDoTuoi.SelectedValue == "TreEm")
-                    {
-                        if (ThongTinHanhTrinhControl.bf.LoaiVe == "Hạng thường")
-                        {
-                            ThongTinHanhTrinhControl.bf.GiaTien = obj.GiaVe1.Trim();
-                        }
-                        else if (ThongTinHanhTrinhControl.bf.LoaiVe == "Hạng doanh nhân")
-                        {
-                            ThongTinHanhTrinhControl.bf.GiaTien = obj.GiaVe2.Trim();
-                        }
-                        else
-                        {
-                            ThongTinHanhTrinhControl.bf.GiaTien = obj.GiaVe3.Trim();
-                        }
-                    }
-                    else
-                    {
-                        if (ThongTinHanhTrinhControl.bf.LoaiVe == "Hạng thường")
-                        {
-                            ThongTinHanhTrinhControl.bf.GiaTien = obj.GiaVe1_TreEm.Trim();
-                        }
-                        else if (ThongTinHanhTrinhControl.bf.LoaiVe == "Hạng doanh nhân")
-                        {
-                            ThongTinHanhTrinhControl.bf.GiaTien = obj.GiaVe2_TreEm.Trim();
-                        }
-                        else
-                        {
-                            ThongTinHanhTrinhControl.bf.GiaTien = obj.GiaVe3_TreEm.Trim();
-                        }
-                    }
-                }
+                TinhTongTien();
                 Response.Redirect("DatVe_Step2.aspx");
             }
         }
 
         protected bool CheckValidData()
         {
-            bool isValid = true;
-
-            if (txtHoTen.Text.Trim() == "")
+            bool isValid = false;
+            int slKhach = Convert.ToInt16(ThongTinHanhTrinhControl.bf.SoVe);
+            TextBox[] textBox = new TextBox[15];
+            string control = "";
+            for (int i = 1; i <= slKhach; i++)
             {
-                lblMsg.Text = "Bạn phải nhập họ tên";
-                txtHoTen.Focus();
-                isValid = false;
+                control = "txtHoTen" + i.ToString();
+                textBox[i] = (TextBox)this.FindControl(control);
+                if (textBox[i] != null)
+                {
+                    if (textBox[i].Text.Trim() == "")
+                    {
+                        lblMsg.Text = "Bạn phải nhập họ tên";
+                        textBox[i].Focus();
+                        isValid = false;
+                        return isValid;
+                    }
+                    else
+                    {
+                        isValid = true;
+                    }
+                }
+            }   
+            return isValid;
+        }
+
+        protected void SetVisibleHanhKhachDataControl()
+        {
+            int slKhach = Convert.ToInt16(ThongTinHanhTrinhControl.bf.SoVe);
+            Panel[] panel = new Panel[100];
+            string control = "";
+            for (int i = 1; i <= slKhach; i++)
+            {
+                control = "Panel" + i.ToString();
+                panel[i] = (Panel)this.FindControl(control);
+                if (panel[i] != null)
+                {
+                    panel[i].Visible = true;
+                }
+            }
+        }
+
+        protected string TinhGiaVe(string dotuoikhach)
+        {
+            string giave = "";
+            if (ThongTinHanhTrinhControl.bf.LoaiVe == "Hạng thường")
+            {
+                if (dotuoikhach == "TreSoSinh")
+                {
+                    giave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm1;
+                }
+                else
+                {
+                    giave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon1;
+                }
+            }
+            else if (ThongTinHanhTrinhControl.bf.LoaiVe == "Hạng doanh nhân")
+            {
+                if (dotuoikhach == "TreSoSinh")
+                {
+                    giave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm2;
+                }
+                else
+                {
+                    giave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon2;
+                }
             }
             else
             {
-                isValid = true;
+                if (dotuoikhach == "TreSoSinh")
+                {
+                    giave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm3;
+                }
+                else
+                {
+                    giave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon3;
+                }
             }
+            return giave.Trim();
+        }
 
-            return isValid;
+        protected void TinhTongTien()
+        {
+            long sum = 0;
+            for (int i = 0; i < ThongTinHanhTrinhControl.listKhach.Count; i++)
+            {
+                sum += Convert.ToInt64(ThongTinHanhTrinhControl.listKhach[i].GiaTien);
+            }
+            ThongTinHanhTrinhControl.bf.GiaTien = sum.ToString();
         }
     }
 }

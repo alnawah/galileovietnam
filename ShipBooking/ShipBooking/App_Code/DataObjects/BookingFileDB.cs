@@ -32,15 +32,15 @@ namespace ShipBooking
 
         public static void Insert(BookingFile bf)
         {
-            string[] parameters = new string[] { "@MaBF", "@LoaiChuyen", "@NoiDi", "@NoiDen", "@NgayDi", "@NgayVe", "@ThoiGian", "@OpenChecking", "@LoaiVe", "@SoGhe", "@GiaTien", "@ThanhToan", "@MaNguoiNhan", "@HanhTrinh", "@GioKhoiHanh", "@GioDen", "@SoVe1", "@SoVe2", "@SoVe3" };
-            string[] values = new string[] { bf.MaBF, bf.LoaiChuyen, bf.NoiDi, bf.NoiDen, bf.NgayDi.ToString(), bf.NgayVe.ToString(), bf.ThoiGian, bf.OpenChecking.ToString(), bf.LoaiVe, bf.SoGhe, bf.GiaTien, bf.ThanhToan, bf.MaNguoiNhan, bf.HanhTrinh, bf.GioKhoiHanh.ToString(), bf.GioDen.ToString(), bf.SoVe1, bf.SoVe2, bf.SoVe3 };
+            string[] parameters = new string[] { "@MaBF", "@LoaiChuyen", "@NoiDi", "@NoiDen", "@NgayDi", "@NgayVe", "@ThoiGian", "@OpenChecking", "@LoaiVe", "@SoGhe", "@GiaTien", "@ThanhToan", "@MaNguoiNhan", "@HanhTrinh", "@GioKhoiHanh", "@GioDen", "@SoVe" };
+            string[] values = new string[] { bf.MaBF, bf.LoaiChuyen, bf.NoiDi, bf.NoiDen, bf.NgayDi.ToString(), bf.NgayVe.ToString(), bf.ThoiGian, bf.OpenChecking.ToString(), bf.LoaiVe, bf.SoGhe, bf.GiaTien, bf.ThanhToan, bf.MaNguoiNhan, bf.HanhTrinh, bf.GioKhoiHanh.ToString(), bf.GioDen.ToString(), bf.SoVe };
             ExecuteData("spBookingFile_Insert", parameters, values);
         }
 
         public static void Update(BookingFile bf)
         {
-            string[] parameters = new string[] { "@MaBF", "@LoaiChuyen", "@NoiDi", "@NoiDen", "@NgayDi", "@NgayVe", "@ThoiGian", "@OpenChecking", "@LoaiVe", "@SoGhe", "@GiaTien", "@ThanhToan", "@MaNguoiNhan", "@HanhTrinh", "@GioKhoiHanh", "@GioDen", "@SoVe1", "@SoVe2", "@SoVe3" };
-            string[] values = new string[] { bf.MaBF, bf.LoaiChuyen, bf.NoiDi, bf.NoiDen, bf.NgayDi.ToString(), bf.NgayVe.ToString(), bf.ThoiGian, bf.OpenChecking.ToString(), bf.LoaiVe, bf.SoGhe, bf.GiaTien, bf.ThanhToan, bf.MaNguoiNhan, bf.HanhTrinh, bf.GioKhoiHanh.ToString(), bf.GioDen.ToString(), bf.SoVe1, bf.SoVe2, bf.SoVe3 };
+            string[] parameters = new string[] { "@MaBF", "@LoaiChuyen", "@NoiDi", "@NoiDen", "@NgayDi", "@NgayVe", "@ThoiGian", "@OpenChecking", "@LoaiVe", "@SoGhe", "@GiaTien", "@ThanhToan", "@MaNguoiNhan", "@HanhTrinh", "@GioKhoiHanh", "@GioDen", "@SoVe" };
+            string[] values = new string[] { bf.MaBF, bf.LoaiChuyen, bf.NoiDi, bf.NoiDen, bf.NgayDi.ToString(), bf.NgayVe.ToString(), bf.ThoiGian, bf.OpenChecking.ToString(), bf.LoaiVe, bf.SoGhe, bf.GiaTien, bf.ThanhToan, bf.MaNguoiNhan, bf.HanhTrinh, bf.GioKhoiHanh.ToString(), bf.GioDen.ToString(), bf.SoVe };
             ExecuteData("spBookingFile_UpdateByID", parameters, values);
         }
 
@@ -66,9 +66,7 @@ namespace ShipBooking
                 bf.HanhTrinh = dt.Rows[0]["HanhTrinh"].ToString();
                 bf.GioKhoiHanh = DateTime.Parse(dt.Rows[0]["GioKhoiHanh"].ToString());
                 bf.GioDen = DateTime.Parse(dt.Rows[0]["GioDen"].ToString());
-                bf.SoVe1 = dt.Rows[0]["SoVe1"].ToString();
-                bf.SoVe2 = dt.Rows[0]["SoVe2"].ToString();
-                bf.SoVe3 = dt.Rows[0]["SoVe3"].ToString();
+                bf.SoVe = dt.Rows[0]["SoVe"].ToString();
             }
             else
             {
@@ -100,9 +98,7 @@ namespace ShipBooking
                 BF.HanhTrinh = dt.Rows[i]["HanhTrinh"].ToString();
                 BF.GioKhoiHanh = DateTime.Parse(dt.Rows[0]["GioKhoiHanh"].ToString());
                 BF.GioDen = DateTime.Parse(dt.Rows[0]["GioDen"].ToString());
-                BF.SoVe1 = dt.Rows[0]["SoVe1"].ToString();
-                BF.SoVe2 = dt.Rows[0]["SoVe2"].ToString();
-                BF.SoVe3 = dt.Rows[0]["SoVe3"].ToString();
+                BF.SoVe = dt.Rows[0]["SoVe"].ToString();
 
                 BFList.Add(BF);
                 BF = null;
@@ -134,9 +130,7 @@ namespace ShipBooking
                 BF.HanhTrinh = dt.Rows[i]["HanhTrinh"].ToString();
                 BF.GioKhoiHanh = DateTime.Parse(dt.Rows[0]["GioKhoiHanh"].ToString());
                 BF.GioDen = DateTime.Parse(dt.Rows[0]["GioDen"].ToString());
-                BF.SoVe1 = dt.Rows[0]["SoVe1"].ToString();
-                BF.SoVe2 = dt.Rows[0]["SoVe2"].ToString();
-                BF.SoVe3 = dt.Rows[0]["SoVe3"].ToString();
+                BF.SoVe = dt.Rows[0]["SoVe"].ToString();
 
                 BFList.Add(BF);
                 BF = null;
