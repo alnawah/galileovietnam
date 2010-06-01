@@ -34,7 +34,8 @@ namespace ShipBooking.Controls
             string enddate = "";
             startdate = txtNgay1.Text.Trim();
             enddate = txtNgay2.Text.Trim();
-
+            grwResult.Visible = true;
+            grwResultAllBF.Visible = false;
             if (rblTieuChiTimKiem.SelectedValue == "TenKhach")
             {
                 if (CheckValidDate(startdate) == true && CheckValidDate(enddate) == true)
@@ -125,6 +126,7 @@ namespace ShipBooking.Controls
                 grwResult.DataSource = ds.Tables[0];
                 grwResult.DataBind();
                 lblMsg.Text = "";
+                lblResult.Text = "Có 1 kết quả tìm được:";
             }
             else
             {
@@ -145,10 +147,10 @@ namespace ShipBooking.Controls
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 dt = DateTime.Parse(ds.Tables[0].Rows[i]["NgayDi"].ToString().Trim());
-                grwResult.Rows[i].Cells[5].Text = dt.Month + "/" + dt.Day + "/" + dt.Year;
+                grwResult.Rows[i].Cells[4].Text = dt.ToShortDateString();
 
                 dt = DateTime.Parse(ds.Tables[0].Rows[i]["NgayVe"].ToString().Trim());
-                grwResult.Rows[i].Cells[6].Text = dt.Month + "/" + dt.Day + "/" + dt.Year;
+                grwResult.Rows[i].Cells[5].Text = dt.ToShortDateString();
             }
             if (ds.Tables[0].Rows.Count == 0)
             {
@@ -190,6 +192,7 @@ namespace ShipBooking.Controls
             txtKeyword.Text = "";
             txtNgay1.Text = "";
             txtKeyword.Text = "";
+            grwResultAllBF.Visible = false;
         }
 
         protected void btnBack_Click(object sender, EventArgs e)
@@ -209,19 +212,23 @@ namespace ShipBooking.Controls
         protected void SelectAllBookingFile()
         {
             DateTime dt;
-            string cmd = "SELECT *FROM tblHanhKhach INNER JOIN tblBookingFile ON tblHanhKhach.MaBF = tblBookingFile.MaBF";
+            string cmd = "SELECT *FROM tblBookingFile";
             DataSet ds = new DataSet();
+            DataControlField field;
+            
             ds = ShipBookingData.FillDataset(cmd);
-            grwResult.DataSource = ds.Tables[0];
-            grwResult.DataBind();
+            grwResultAllBF.DataSource = ds.Tables[0];
+            grwResultAllBF.DataBind();
+            
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 dt = DateTime.Parse(ds.Tables[0].Rows[i]["NgayDi"].ToString().Trim());
-                grwResult.Rows[i].Cells[4].Text = dt.Month + "/" + dt.Day + "/" + dt.Year;
+                grwResultAllBF.Rows[i].Cells[3].Text = dt.ToShortDateString();
 
                 dt = DateTime.Parse(ds.Tables[0].Rows[i]["NgayVe"].ToString().Trim());
-                grwResult.Rows[i].Cells[5].Text = dt.Month + "/" + dt.Day + "/" + dt.Year;
+                grwResultAllBF.Rows[i].Cells[4].Text = dt.ToShortDateString();
             }
+            
             if (ds.Tables[0].Rows.Count == 0)
             {
                 lblResult.Text = "Rất tiếc! Không tìm thấy kết quả nào.";
@@ -235,9 +242,19 @@ namespace ShipBooking.Controls
 
         protected void rblTieuChiTimKiem_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (rblTieuChiTimKiem.SelectedValue == "AllBooking")
+            if (rblTieuChiTimKiem.SelectedValue == "TenKhach")
             {
-                SelectAllBookingFile();
+                txtNgay1.Enabled = true;
+                txtNgay2.Enabled = true;
+                imgCalendar1.Visible = true;
+                imgCalendar2.Visible = true;
+            }
+            else
+            {
+                txtNgay1.Enabled = false;
+                txtNgay2.Enabled = false;
+                imgCalendar1.Visible = false;
+                imgCalendar2.Visible = false;
             }
         }
 
@@ -251,6 +268,13 @@ namespace ShipBooking.Controls
         {
             BookingID = grwResult.Rows[grwResult.SelectedIndex].Cells[0].Text.Trim();
             Response.Redirect("DetailBooking.aspx");
+        }
+
+        protected void btnAllBooking_Click(object sender, EventArgs e)
+        {
+            grwResult.Visible = false;
+            grwResultAllBF.Visible = true;
+            SelectAllBookingFile();
         }
     }
 }

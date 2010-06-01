@@ -121,5 +121,14 @@ namespace ShipBooking
             }
             return HKList;
         }
+
+        public static DataSet GetDataSetHanhKhachByBF(string MaBF)
+        {
+            DataSet ds = new DataSet();
+            string[] parameters = new string[] { "@MaBF" };
+            string[] values = new string[] { MaBF };
+            ds = ShipBookingData.FillDataset("spHanhKhach_SelectByBookingID", parameters, values);
+            return ds;
+        }
     }
 }

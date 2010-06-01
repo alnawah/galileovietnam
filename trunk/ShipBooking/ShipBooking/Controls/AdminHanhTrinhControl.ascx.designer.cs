@@ -248,6 +248,15 @@ namespace ShipBooking.Controls {
         protected global::System.Web.UI.WebControls.DropDownList ddlSoLuongVe3;
         
         /// <summary>
+        /// txtGiamGiaVeKhuHoi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtGiamGiaVeKhuHoi;
+        
+        /// <summary>
         /// btnAdd control.
         /// </summary>
         /// <remarks>

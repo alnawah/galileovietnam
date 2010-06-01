@@ -131,67 +131,13 @@ namespace ShipBooking.Controls {
         protected global::System.Web.UI.WebControls.Label lblDonViTien;
         
         /// <summary>
-        /// lblMaHK control.
+        /// grvHanhKhach control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMaHK;
-        
-        /// <summary>
-        /// lblTenHK control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTenHK;
-        
-        /// <summary>
-        /// lblDiaChiHK control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDiaChiHK;
-        
-        /// <summary>
-        /// lblQuocTichHK control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblQuocTichHK;
-        
-        /// <summary>
-        /// lblDoTuoiHK control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDoTuoiHK;
-        
-        /// <summary>
-        /// lblSoDienThoaiHK control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSoDienThoaiHK;
-        
-        /// <summary>
-        /// lblEmailHK control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmailHK;
+        protected global::System.Web.UI.WebControls.GridView grvHanhKhach;
         
         /// <summary>
         /// lblMaNN control.

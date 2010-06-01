@@ -39,11 +39,11 @@
                     <td class="banner_menu_style" colspan="2" height="21px">
 		               &nbsp;<asp:LinkButton ID="LinkButton1" PostBackUrl="~/Default.aspx" runat="server" Font-Underline="False" 
                             Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Trang chủ</asp:LinkButton>&nbsp;|
-                       <asp:LinkButton ID="LinkButton2" PostBackUrl="~/DatVe.aspx" runat="server" Font-Underline="False" 
+                       <asp:LinkButton ID="LinkButton2" PostBackUrl="~/ThongTinHanhTrinh.aspx" runat="server" Font-Underline="False" 
                             Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Đặt vé</asp:LinkButton>&nbsp;|
                        <asp:LinkButton ID="LinkButton3" runat="server" Font-Underline="False" 
                             Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Tình trạng chỗ</asp:LinkButton>&nbsp;|
-                       <asp:LinkButton ID="LinkButton4" runat="server" Font-Underline="False" 
+                       <asp:LinkButton ID="LinkButton4" PostBackUrl="http://galileo.com.vn/" runat="server" Font-Underline="False" 
                             Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Liên kết</asp:LinkButton>&nbsp;|
                         <asp:LinkButton ID="lbtnDangNhap" PostBackUrl="~/Login.aspx" runat="server" Font-Underline="False" 
                             Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Quản lý thông tin</asp:LinkButton>

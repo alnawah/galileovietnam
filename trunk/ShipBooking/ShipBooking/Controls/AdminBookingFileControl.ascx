@@ -81,11 +81,10 @@
                         Tìm kiếm theo:</td>
                     <td>
                         <asp:RadioButtonList ID="rblTieuChiTimKiem" runat="server" Height="22px" 
-                            RepeatDirection="Horizontal" Width="357px" AutoPostBack="true" 
+                            RepeatDirection="Horizontal" Width="283px" AutoPostBack="true" 
                             onselectedindexchanged="rblTieuChiTimKiem_SelectedIndexChanged">
                             <asp:ListItem Value="MaBF">Mã booking file</asp:ListItem>
                             <asp:ListItem Value="TenKhach">Tên khách</asp:ListItem>
-                            <asp:ListItem Value="AllBooking">Tất cả các Booking</asp:ListItem>
                         </asp:RadioButtonList>
                     </td>
                 </tr>
@@ -100,7 +99,7 @@
                     <td class="style1">
                                                 Từ ngày:</td>
                     <td>
-                        <asp:TextBox ID="txtNgay1" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtNgay1" runat="server" Width="79px"></asp:TextBox>
                         <img id="imgCalendar1" src="~/Images/CalendarIcon.png" alt="" runat="server" 
                             onclick="displayCalendar1()" height="16" />
                         <div id="datePicker1">
@@ -127,7 +126,7 @@
                     <td class="style1">
                         Đến ngày:</td>
                     <td>
-                        <asp:TextBox ID="txtNgay2" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtNgay2" runat="server" Width="79px"></asp:TextBox>
                         <img id="imgCalendar2" src="~/Images/CalendarIcon.png" alt="" runat="server" 
                             onclick="displayCalendar2()" height="16"/>
                         <div id="datePicker2">
@@ -156,10 +155,13 @@
 </table>
 <p style="text-align: center">
     <asp:Button ID="btnBack" runat="server" onclick="btnBack_Click" Text="Quay lại" 
-        Width="97px" />
+        Width="97px" Height="28px" />
 &nbsp;&nbsp;
     <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" Width="97px" 
-        onclick="btnSearch_Click" />
+        onclick="btnSearch_Click" Height="28px" />
+&nbsp;&nbsp;
+    <asp:Button ID="btnAllBooking" runat="server" Text="Tất cả các Booking" 
+        Width="128px" Height="28px" onclick="btnAllBooking_Click" />
 </p>
 <p style="text-align: center">
     <asp:Label ID="lblResult" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
@@ -169,9 +171,9 @@
     <asp:GridView ID="grwResult" runat="server" AutoGenerateColumns="False" 
         BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" 
         CellPadding="4" Width="800px" onrowdeleting="grwResult_RowDeleting"
-        EmptyDataText="Chưa có dữ liệu nào" AllowPaging="True" 
+        EmptyDataText="Chưa có dữ liệu nào"
         onpageindexchanging="grwResult_PageIndexChanging" 
-        onselectedindexchanged="grwResult_SelectedIndexChanged">
+        onselectedindexchanged="grwResult_SelectedIndexChanged" PageSize="100">
         <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
         <RowStyle BackColor="White" ForeColor="#003399" />
         <Columns>
@@ -186,9 +188,44 @@
                 <ItemStyle HorizontalAlign="Center" />
             </asp:BoundField>
             <asp:CommandField ButtonType="Button" ShowDeleteButton="True" 
-                DeleteText="Hủy Booking" />
+                DeleteText="Hủy Booking" >
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:CommandField>
             <asp:CommandField ButtonType="Button" SelectText="Chi tiết" 
-                ShowSelectButton="True" />
+                ShowSelectButton="True" >
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:CommandField>
+        </Columns>
+        <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
+        <SelectedRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+        <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
+    </asp:GridView>
+    <asp:GridView ID="grwResultAllBF" runat="server" AutoGenerateColumns="False" 
+        BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" 
+        CellPadding="4" Width="800px" onrowdeleting="grwResult_RowDeleting"
+        EmptyDataText="Chưa có dữ liệu nào"
+        onpageindexchanging="grwResult_PageIndexChanging" 
+        onselectedindexchanged="grwResult_SelectedIndexChanged" PageSize="100">
+        <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
+        <RowStyle BackColor="White" ForeColor="#003399" />
+        <Columns>
+            <asp:BoundField DataField="MaBF" HeaderText="Booking ID" />
+            <asp:BoundField DataField="NoiDi" HeaderText="Nơi đi" />
+            <asp:BoundField DataField="NoiDen" HeaderText="Nơi đến" />
+            <asp:BoundField DataField="NgayDi" HeaderText="Ngày đi" >
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:BoundField>
+            <asp:BoundField DataField="NgayVe" HeaderText="Ngày về" >
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:BoundField>
+            <asp:CommandField ButtonType="Button" ShowDeleteButton="True" 
+                DeleteText="Hủy Booking" >
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:CommandField>
+            <asp:CommandField ButtonType="Button" SelectText="Chi tiết" 
+                ShowSelectButton="True" >
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:CommandField>
         </Columns>
         <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
         <SelectedRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
@@ -196,6 +233,12 @@
     </asp:GridView>
     <br />
 </center>
+
+
+
+
+    
+    
 
 
 
