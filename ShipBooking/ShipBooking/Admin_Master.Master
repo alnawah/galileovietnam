@@ -41,7 +41,7 @@
                             Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Trang chủ</asp:LinkButton>&nbsp;|
                        <asp:LinkButton ID="LinkButton2" PostBackUrl="~/Admin_BookingFile.aspx" runat="server" Font-Underline="False" 
                             Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Quản lý booking</asp:LinkButton>&nbsp;|
-                       <asp:LinkButton ID="LinkButton3" PostBackUrl="~/Admin.aspx" runat="server" Font-Underline="False" 
+                       <asp:LinkButton ID="LinkButton3" PostBackUrl="~/Admin_HanhTrinh.aspx" runat="server" Font-Underline="False" 
                             Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Quản lý hành trình</asp:LinkButton>&nbsp;|
                        <asp:LinkButton ID="LinkButton4" PostBackUrl="~/Admin_ThanhPho.aspx" runat="server" Font-Underline="False" 
                             Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Quản lý thành phố</asp:LinkButton>&nbsp;|

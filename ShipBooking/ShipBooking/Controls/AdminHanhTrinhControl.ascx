@@ -210,7 +210,7 @@
                                             Người lớn:</td>
                                         <td style="text-align: left">
                                             <asp:TextBox ID="txtGiaVe1_NguoiLon" runat="server" style="text-align: right" 
-                                                Width="100px"></asp:TextBox>
+                                                Width="100px">0</asp:TextBox>
                                             &nbsp;(VNĐ)</td>
                                     </tr>
                                     <tr>
@@ -218,7 +218,7 @@
                                             Trẻ em:</td>
                                         <td style="text-align: left">
                                             <asp:TextBox ID="txtGiaVe1_TreEm" runat="server" style="text-align: right" 
-                                                Width="100px"></asp:TextBox>
+                                                Width="100px">0</asp:TextBox>
                                             &nbsp;(VNĐ)</td>
                                     </tr>
                                     <tr>
@@ -243,7 +243,7 @@
                                             Người lớn:</td>
                                         <td style="text-align: left">
                                             <asp:TextBox ID="txtGiaVe2_NguoiLon" runat="server" style="text-align: right" 
-                                                Width="100px"></asp:TextBox>
+                                                Width="100px">0</asp:TextBox>
                                             &nbsp;(VNĐ)</td>
                                     </tr>
                                     <tr>
@@ -251,7 +251,7 @@
                                             Trẻ em:</td>
                                         <td style="text-align: left">
                                             <asp:TextBox ID="txtGiaVe2_TreEm" runat="server" style="text-align: right" 
-                                                Width="100px"></asp:TextBox>
+                                                Width="100px">0</asp:TextBox>
                                             &nbsp;(VNĐ)</td>
                                     </tr>
                                     <tr>
@@ -276,7 +276,7 @@
                                             Người lớn:</td>
                                         <td style="text-align: left">
                                             <asp:TextBox ID="txtGiaVe3_NguoiLon" runat="server" style="text-align: right" 
-                                                Width="100px"></asp:TextBox>
+                                                Width="100px">0</asp:TextBox>
                                             &nbsp;(VNĐ)</td>
                                     </tr>
                                     <tr>
@@ -284,7 +284,7 @@
                                             Trẻ em:</td>
                                         <td style="text-align: left">
                                             <asp:TextBox ID="txtGiaVe3_TreEm" runat="server" style="text-align: right" 
-                                                Width="100px"></asp:TextBox>
+                                                Width="100px">0</asp:TextBox>
                                             &nbsp;(VNĐ)</td>
                                     </tr>
                                     <tr>
@@ -297,6 +297,12 @@
                                     </tr>
                                 </table>
                             </td>
+                        </tr>
+                        <tr>
+                            <td align="left" class="style5" colspan="3">
+                                Giảm giá vé khứ hồi:
+                                <asp:TextBox ID="txtGiamGiaVeKhuHoi" runat="server" Width="119px">0</asp:TextBox>
+                                &nbsp;(VNĐ)</td>
                         </tr>
                     </table>
                     <br />

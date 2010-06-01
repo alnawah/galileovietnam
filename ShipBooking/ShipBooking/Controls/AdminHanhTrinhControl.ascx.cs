@@ -273,6 +273,7 @@ namespace ShipBooking.Controls
                 ddlSoLuongVe1.SelectedIndex = Convert.ToInt16(hanhtrinh.SoLuongVe1.Trim());
                 ddlSoLuongVe2.SelectedIndex = Convert.ToInt16(hanhtrinh.SoLuongVe2.Trim());
                 ddlSoLuongVe3.SelectedIndex = Convert.ToInt16(hanhtrinh.SoLuongVe3.Trim());
+                txtGiamGiaVeKhuHoi.Text = hanhtrinh.GiamGiaKhuHoi.Trim();
             }
         }
 
@@ -404,11 +405,20 @@ namespace ShipBooking.Controls
                 {
                     chang.TinhTrang = "no";
                 }
-                chang.MaTPDi = ddlNoiDi.SelectedValue.ToUpper().Trim();
-                chang.MaTPDen = ddlNoiDen.SelectedValue.ToUpper().Trim();
-                chang.TenTPDi = ddlNoiDi.SelectedItem.Text.Trim();
-                chang.TenTPDen = ddlNoiDen.SelectedItem.Text.Trim();
-                ChangDB.Insert(chang);
+                if (ddlNoiDi.SelectedValue == "" || ddlNoiDen.SelectedValue == "")
+                {
+                    lblMsg.Text = "Chưa có dữ liệu thành phố";
+                    rblTinhTrangChuyen.SelectedIndex = 1;
+                    return;
+                }
+                else
+                {
+                    chang.MaTPDi = ddlNoiDi.SelectedValue.ToUpper().Trim();
+                    chang.MaTPDen = ddlNoiDen.SelectedValue.ToUpper().Trim();
+                    chang.TenTPDi = ddlNoiDi.SelectedItem.Text.Trim();
+                    chang.TenTPDen = ddlNoiDen.SelectedItem.Text.Trim();
+                    ChangDB.Insert(chang);
+                }
             }
             else
             {
@@ -422,11 +432,20 @@ namespace ShipBooking.Controls
                 {
                     chang.TinhTrang = "no";
                 }
-                chang.MaTPDi = ddlNoiDi.SelectedValue.ToUpper().Trim();
-                chang.MaTPDen = ddlNoiDen.SelectedValue.ToUpper().Trim();
-                chang.TenTPDi = ddlNoiDi.SelectedItem.Text.Trim();
-                chang.TenTPDen = ddlNoiDen.SelectedItem.Text.Trim();
-                ChangDB.Update(chang);
+                if (ddlNoiDi.SelectedValue == "" || ddlNoiDen.SelectedValue == "")
+                {
+                    lblMsg.Text = "Chưa có dữ liệu thành phố";
+                    rblTinhTrangChuyen.SelectedIndex = 1;
+                    return;
+                }
+                else
+                {
+                    chang.MaTPDi = ddlNoiDi.SelectedValue.ToUpper().Trim();
+                    chang.MaTPDen = ddlNoiDen.SelectedValue.ToUpper().Trim();
+                    chang.TenTPDi = ddlNoiDi.SelectedItem.Text.Trim();
+                    chang.TenTPDen = ddlNoiDen.SelectedItem.Text.Trim();
+                    ChangDB.Update(chang);
+                }
             }
             InitData();
         }
@@ -482,6 +501,7 @@ namespace ShipBooking.Controls
                 hanhtrinh.SoLuongVe1 = ddlSoLuongVe1.SelectedValue;
                 hanhtrinh.SoLuongVe2 = ddlSoLuongVe2.SelectedValue;
                 hanhtrinh.SoLuongVe3 = ddlSoLuongVe3.SelectedValue;
+                hanhtrinh.GiamGiaKhuHoi = txtGiamGiaVeKhuHoi.Text.Trim();
 
                 HanhTrinhDB.Insert(hanhtrinh);
             }
@@ -505,6 +525,7 @@ namespace ShipBooking.Controls
                 hanhtrinh.SoLuongVe1 = ddlSoLuongVe1.SelectedValue;
                 hanhtrinh.SoLuongVe2 = ddlSoLuongVe2.SelectedValue;
                 hanhtrinh.SoLuongVe3 = ddlSoLuongVe3.SelectedValue;
+                hanhtrinh.GiamGiaKhuHoi = txtGiamGiaVeKhuHoi.Text.Trim();
 
                 HanhTrinhDB.Update(hanhtrinh);
             }
@@ -582,6 +603,7 @@ namespace ShipBooking.Controls
             ddlSoLuongVe1.SelectedIndex = 0;
             ddlSoLuongVe2.SelectedIndex = 0;
             ddlSoLuongVe3.SelectedIndex = 0;
+            txtGiamGiaVeKhuHoi.Text = "";
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)

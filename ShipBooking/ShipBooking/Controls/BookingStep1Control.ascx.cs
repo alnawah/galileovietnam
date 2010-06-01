@@ -125,7 +125,26 @@ namespace ShipBooking.Controls
             {
                 case "HangThuong":
                     {
-                        lblGiaVe.Text = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon1.Trim() + " VNĐ";
+                        if (ThongTinHanhTrinhControl.bf.LoaiChuyen == "Khứ hồi")
+                        {
+                            long giamgia = 0;
+                            long giave = 0;
+                            try
+                            {
+                                giave = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon1.Trim());
+                                giamgia = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiamGiaKhuHoi.Trim());
+                            }
+                            catch
+                            {
+                                giamgia = 0;
+                            }
+                            giave = 2 * giave - giamgia;
+                            lblGiaVe.Text = giave.ToString();
+                        }
+                        else
+                        {
+                            lblGiaVe.Text = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon1.Trim() + " VNĐ";
+                        }
                         for (int i = 0; i < BFList.Count; i++)
                         {
                             if (BFList[i].LoaiVe.Equals("Hạng thường") == true)
@@ -144,13 +163,31 @@ namespace ShipBooking.Controls
                         {
                             lblSoLuongVe.Text = "Đã hết vé";
                             lblSoLuongVe.ForeColor = Color.Red;
-                            return;
                         }
                     }
                     break;
                 case "HangDoanhNhan":
                     {
-                        lblGiaVe.Text = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon2.Trim() + " VNĐ";
+                        if (ThongTinHanhTrinhControl.bf.LoaiChuyen == "Khứ hồi")
+                        {
+                            long giamgia = 0;
+                            long giave = 0;
+                            try
+                            {
+                                giave = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon1.Trim());
+                                giamgia = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiamGiaKhuHoi.Trim());
+                            }
+                            catch
+                            {
+                                giamgia = 0;
+                            }
+                            giave = 2 * giave - giamgia;
+                            lblGiaVe.Text = giave.ToString();
+                        }
+                        else
+                        {
+                            lblGiaVe.Text = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon2.Trim() + " VNĐ";
+                        }
                         for (int i = 0; i < BFList.Count; i++)
                         {
                             if (BFList[i].LoaiVe.Equals("Hạng doanh nhân") == true)
@@ -169,13 +206,31 @@ namespace ShipBooking.Controls
                         {
                             lblSoLuongVe.Text = "Đã hết vé";
                             lblSoLuongVe.ForeColor = Color.Red;
-                            return;
                         }
                     }
                     break;
                 case "HangVIP":
                     {
-                        lblGiaVe.Text = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon3.Trim() + " VNĐ";
+                        if (ThongTinHanhTrinhControl.bf.LoaiChuyen == "Khứ hồi")
+                        {
+                            long giamgia = 0;
+                            long giave = 0;
+                            try
+                            {
+                                giave = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon1.Trim());
+                                giamgia = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiamGiaKhuHoi.Trim());
+                            }
+                            catch
+                            {
+                                giamgia = 0;
+                            }
+                            giave = 2 * giave - giamgia;
+                            lblGiaVe.Text = giave.ToString();
+                        }
+                        else
+                        {
+                            lblGiaVe.Text = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon3.Trim() + " VNĐ";
+                        }
                         for (int i = 0; i < BFList.Count; i++)
                         {
                             if (BFList[i].LoaiVe.Equals("Hạng VIP") == true)
@@ -194,7 +249,6 @@ namespace ShipBooking.Controls
                         {
                             lblSoLuongVe.Text = "Đã hết vé";
                             lblSoLuongVe.ForeColor = Color.Red;
-                            return;
                         }
                     }
                     break;
@@ -228,15 +282,23 @@ namespace ShipBooking.Controls
 
         protected void btnContinue_Click(object sender, EventArgs e)
         {
-            if (rdbSoGhe.SelectedValue == "")
+            if (ddlSLVe.SelectedValue == "")
             {
-                lblMsg.Text = "Bạn hãy chọn số ghế";
+                lblMsg.Text = "Bạn hãy chọn số lượng vé lớn hơn không";
                 return;
             }
             else
             {
-                GetBookingFileData();
-                Response.Redirect("ThongTinKhach.aspx");
+                if (rdbSoGhe.SelectedValue == "")
+                {
+                    lblMsg.Text = "Bạn hãy chọn số ghế";
+                    return;
+                }
+                else
+                {
+                    GetBookingFileData();
+                    Response.Redirect("ThongTinKhach.aspx");
+                }
             }
         }
 

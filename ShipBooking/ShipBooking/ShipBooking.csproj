@@ -57,13 +57,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.aspx.cs">
-      <DependentUpon>Admin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin.aspx.designer.cs">
-      <DependentUpon>Admin.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin_BookingFile.aspx.cs">
       <DependentUpon>Admin_BookingFile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -123,13 +116,6 @@
     </Compile>
     <Compile Include="Controls\AdminBookingFileControl.ascx.designer.cs">
       <DependentUpon>AdminBookingFileControl.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\AdminControl.ascx.cs">
-      <DependentUpon>AdminControl.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Controls\AdminControl.ascx.designer.cs">
-      <DependentUpon>AdminControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\AdminDetailBookingControl.ascx.cs">
       <DependentUpon>AdminDetailBookingControl.ascx</DependentUpon>
@@ -342,7 +328,6 @@
     <Content Include="App_Themes\MySkin\MySkin.skin" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin.aspx" />
     <Content Include="Admin_BookingFile.aspx" />
     <Content Include="Admin_Functions.aspx" />
     <Content Include="Admin_Tau.aspx" />
@@ -353,7 +338,6 @@
       <DependentUpon>ShipBooking.mdf</DependentUpon>
     </Content>
     <Content Include="Controls\AdminBookingFileControl.ascx" />
-    <Content Include="Controls\AdminControl.ascx" />
     <Content Include="Controls\AdminTauControl.ascx" />
     <Content Include="Controls\Admin_ThanhPhoControl.ascx" />
     <Content Include="Controls\DatVeReviewControl.ascx" />

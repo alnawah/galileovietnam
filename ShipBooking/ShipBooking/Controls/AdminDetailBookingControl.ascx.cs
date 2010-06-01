@@ -56,19 +56,10 @@ namespace ShipBooking.Controls
 
         protected void FillHanhKhachData(string MaBF)
         {
-            List<HanhKhach> khach = new List<HanhKhach>();
-            khach = HanhKhachDB.GetListHanhKhachByBookingID(MaBF);
-
-            if (khach.Count > 0)
-            {
-                lblMaHK.Text = khach[0].MaHK.Trim();
-                lblTenHK.Text = khach[0].Ten.Trim();
-                lblDiaChiHK.Text = khach[0].DiaChi.Trim();
-                lblQuocTichHK.Text = khach[0].QuocTich.Trim();
-                lblDoTuoiHK.Text = khach[0].DoTuoi.Trim();
-                lblSoDienThoaiHK.Text = khach[0].DienThoai.Trim();
-                lblEmailHK.Text = khach[0].Email.Trim();
-            }
+            DataSet ds = new DataSet();
+            ds = HanhKhachDB.GetDataSetHanhKhachByBF(MaBF);
+            grvHanhKhach.DataSource = ds;
+            grvHanhKhach.DataBind();
         }
 
         protected void FillNguoiNhanVeData(string MaBF)
@@ -109,14 +100,6 @@ namespace ShipBooking.Controls
             lblLoaiVe.Text = "";
             lblSoGhe.Text = "";
             lblGiaTien.Text = "";
-
-            lblMaHK.Text = "";
-            lblTenHK.Text = "";
-            lblDiaChiHK.Text = "";
-            lblQuocTichHK.Text = "";
-            lblDoTuoiHK.Text = "";
-            lblSoDienThoaiHK.Text = "";
-            lblEmailHK.Text = "";
 
             lblMaNN.Text = "";
             lblTenNN.Text = "";

@@ -63,7 +63,7 @@ namespace ShipBooking.Controls
             HanhKhach khach;
             
             slKhach = Convert.ToInt16(ThongTinHanhTrinhControl.bf.SoVe);
-            ThongTinHanhTrinhControl.listKhach.Clear();
+            ThongTinHanhTrinhControl.listKhach = new List<HanhKhach>();
             for (int i = 1; i <= slKhach; i++)
             {
                 strTextBoxID = "txtHoTen" + i.ToString();
@@ -167,41 +167,142 @@ namespace ShipBooking.Controls
 
         protected string TinhGiaVe(string dotuoikhach)
         {
-            string giave = "";
-            if (ThongTinHanhTrinhControl.bf.LoaiVe == "Hạng thường")
+            string strGiave = "";
+            if (ThongTinHanhTrinhControl.bf.LoaiChuyen == "Khứ hồi")
             {
-                if (dotuoikhach == "TreSoSinh")
+                long giamgia = 0;
+                long giave = 0;
+                if (ThongTinHanhTrinhControl.bf.LoaiVe == "Hạng thường")
                 {
-                    giave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm1;
+                    if (dotuoikhach == "TreSoSinh")
+                    {
+                        try
+                        {
+                            giave = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm1.Trim());
+                            giamgia = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiamGiaKhuHoi.Trim());
+                        }
+                        catch
+                        {
+                            giamgia = 0;
+                        }
+                        giave = 2 * giave - giamgia;
+                        strGiave = giave.ToString();
+                    }
+                    else
+                    {
+                        try
+                        {
+                            giave = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon1.Trim());
+                            giamgia = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiamGiaKhuHoi.Trim());
+                        }
+                        catch
+                        {
+                            giamgia = 0;
+                        }
+                        giave = 2 * giave - giamgia;
+                        strGiave = giave.ToString();
+                    }
+                }
+                else if (ThongTinHanhTrinhControl.bf.LoaiVe == "Hạng doanh nhân")
+                {
+                    if (dotuoikhach == "TreSoSinh")
+                    {
+                        try
+                        {
+                            giave = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm2.Trim());
+                            giamgia = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiamGiaKhuHoi.Trim());
+                        }
+                        catch
+                        {
+                            giamgia = 0;
+                        }
+                        giave = 2 * giave - giamgia;
+                        strGiave = giave.ToString();
+                    }
+                    else
+                    {
+                        try
+                        {
+                            giave = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon2.Trim());
+                            giamgia = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiamGiaKhuHoi.Trim());
+                        }
+                        catch
+                        {
+                            giamgia = 0;
+                        }
+                        giave = 2 * giave - giamgia;
+                        strGiave = giave.ToString();
+                    }
                 }
                 else
                 {
-                    giave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon1;
-                }
-            }
-            else if (ThongTinHanhTrinhControl.bf.LoaiVe == "Hạng doanh nhân")
-            {
-                if (dotuoikhach == "TreSoSinh")
-                {
-                    giave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm2;
-                }
-                else
-                {
-                    giave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon2;
+                    if (dotuoikhach == "TreSoSinh")
+                    {
+                        try
+                        {
+                            giave = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm3.Trim());
+                            giamgia = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiamGiaKhuHoi.Trim());
+                        }
+                        catch
+                        {
+                            giamgia = 0;
+                        }
+                        giave = 2 * giave - giamgia;
+                        strGiave = giave.ToString();
+                    }
+                    else
+                    {
+                        try
+                        {
+                            giave = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon3.Trim());
+                            giamgia = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiamGiaKhuHoi.Trim());
+                        }
+                        catch
+                        {
+                            giamgia = 0;
+                        }
+                        giave = 2 * giave - giamgia;
+                        strGiave = giave.ToString();
+                    }
                 }
             }
             else
             {
-                if (dotuoikhach == "TreSoSinh")
+                if (ThongTinHanhTrinhControl.bf.LoaiVe == "Hạng thường")
                 {
-                    giave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm3;
+                    if (dotuoikhach == "TreSoSinh")
+                    {
+                        strGiave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm1;
+                    }
+                    else
+                    {
+                        strGiave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon1;
+                    }
+                }
+                else if (ThongTinHanhTrinhControl.bf.LoaiVe == "Hạng doanh nhân")
+                {
+                    if (dotuoikhach == "TreSoSinh")
+                    {
+                        strGiave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm2;
+                    }
+                    else
+                    {
+                        strGiave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon2;
+                    }
                 }
                 else
                 {
-                    giave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon3;
+                    if (dotuoikhach == "TreSoSinh")
+                    {
+                        strGiave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm3;
+                    }
+                    else
+                    {
+                        strGiave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon3;
+                    }
                 }
             }
-            return giave.Trim();
+            return strGiave.Trim();
         }
 
         protected void TinhTongTien()

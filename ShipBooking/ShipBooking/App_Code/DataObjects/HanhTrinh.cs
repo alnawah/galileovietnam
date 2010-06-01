@@ -139,6 +139,12 @@ namespace ShipBooking
             get { return _SoLuongVe3; }
             set { _SoLuongVe3 = value; }
         }
-        
+
+        string _GiamGiaKhuHoi;
+        public string GiamGiaKhuHoi
+        {
+            get { return _GiamGiaKhuHoi; }
+            set { _GiamGiaKhuHoi = value; }
+        }
     }
 }

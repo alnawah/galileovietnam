@@ -27,7 +27,7 @@ namespace ShipBooking.Controls
         {
             if (!IsPostBack)
             {
-                lblMsg.Text = "";
+                InitData();
                 FillDataToDdlLoaiChuyen();
                 ListControlUtilities.FillDataToDropDownList(ddlNoiDi, "tblThanhPho", "Ten", "MaThanhPho");
                 ListControlUtilities.FillCityData(ddlNoiDen, ddlNoiDi.SelectedValue);
@@ -65,21 +65,35 @@ namespace ShipBooking.Controls
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            if (CheckDateNgayDi() == false)
+            if (ddlNoiDi.SelectedValue == "" || ddlNoiDen.SelectedValue == "")
             {
-                txtNgayDi.Text = "";
-                txtNgayDi.Focus();
+                lblMsg.Text = "Chưa có dữ liệu thành phố đi và đến";
                 return;
             }
             else
             {
-                if (rblLoaiHanhTrinh.SelectedIndex == 1)
+                if (CheckDateNgayDi() == false)
                 {
-                    if (CheckDateNgayVe() == false)
+                    txtNgayDi.Text = "";
+                    txtNgayDi.Focus();
+                    return;
+                }
+                else
+                {
+                    if (rblLoaiHanhTrinh.SelectedIndex == 1)
                     {
-                        txtNgayVe.Text = "";
-                        txtNgayVe.Focus();
-                        return;
+                        if (CheckDateNgayVe() == false)
+                        {
+                            txtNgayVe.Text = "";
+                            txtNgayVe.Focus();
+                            return;
+                        }
+                        else
+                        {
+                            lblMsg.Text = "";
+                            GetBookingFile();
+                            SearchHanhTrinh();
+                        }
                     }
                     else
                     {
@@ -87,12 +101,6 @@ namespace ShipBooking.Controls
                         GetBookingFile();
                         SearchHanhTrinh();
                     }
-                }
-                else
-                {
-                    lblMsg.Text = "";
-                    GetBookingFile();
-                    SearchHanhTrinh();
                 }
             }
         }
@@ -254,6 +262,7 @@ namespace ShipBooking.Controls
 
         protected void rblLoaiHanhTrinh_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lblMsg.Text = "";
             if (rblLoaiHanhTrinh.SelectedIndex == 0)
             {
                 txtNgayVe.Visible = false;
@@ -262,10 +271,23 @@ namespace ShipBooking.Controls
             }
             else 
             {
-                lblNgayVe.Visible = true;
-                txtNgayVe.Visible = true;
-                imgCalendar2.Visible = true;
+                if (CheckDateNgayDi() == true)
+                {
+                    lblNgayVe.Visible = true;
+                    txtNgayVe.Visible = true;
+                    imgCalendar2.Visible = true;
+                    DateTime dt = DateTime.Parse(txtNgayDi.Text.Trim());
+                    DateTime dt2;
+                    dt2 = dt.AddDays(7);
+                    txtNgayVe.Text = dt2.ToShortDateString();
+                }
             }
+        }
+
+        protected void InitData()
+        {
+            lblMsg.Text = "";
+            txtNgayDi.Text = DateTime.Today.ToShortDateString();
         }
     }
 }

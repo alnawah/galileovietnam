@@ -31,15 +31,15 @@ namespace ShipBooking
 
         public static void Insert(HanhTrinh hanhtrinh)
         {
-            string[] parameters = new string[] { "@MaHanhTrinh", "@MaChang", "@SoHieuChuyenTau", "@GioKhoiHanh", "@GioDen", "@NgayDen", "@TongThoiGian", "@NgayTrongTuan", "@SoGhe", "@GiaVeNguoiLon1", "@GiaVeNguoiLon2", "@GiaVeNguoiLon3", "@GiaVeTreEm1", "@GiaVeTreEm2", "@GiaVeTreEm3", "@SoLuongVe1", "@SoLuongVe2", "@SoLuongVe3" };
-            string[] values = new string[] { hanhtrinh.MaHanhTrinh, hanhtrinh.MaChang, hanhtrinh.SoHieuChuyenTau, hanhtrinh.GioKhoiHanh.ToString(), hanhtrinh.GioDen.ToString(), hanhtrinh.NgayDen, hanhtrinh.TongThoiGian, hanhtrinh.NgayTrongTuan, hanhtrinh.SoGhe, hanhtrinh.GiaVeNguoiLon1, hanhtrinh.GiaVeNguoiLon2, hanhtrinh.GiaVeNguoiLon3, hanhtrinh.GiaVeTreEm1, hanhtrinh.GiaVeTreEm2, hanhtrinh.GiaVeTreEm3, hanhtrinh.SoLuongVe1, hanhtrinh.SoLuongVe2, hanhtrinh.SoLuongVe3 };
+            string[] parameters = new string[] { "@MaHanhTrinh", "@MaChang", "@SoHieuChuyenTau", "@GioKhoiHanh", "@GioDen", "@NgayDen", "@TongThoiGian", "@NgayTrongTuan", "@SoGhe", "@GiaVeNguoiLon1", "@GiaVeNguoiLon2", "@GiaVeNguoiLon3", "@GiaVeTreEm1", "@GiaVeTreEm2", "@GiaVeTreEm3", "@SoLuongVe1", "@SoLuongVe2", "@SoLuongVe3", "@GiamGiaKhuHoi" };
+            string[] values = new string[] { hanhtrinh.MaHanhTrinh, hanhtrinh.MaChang, hanhtrinh.SoHieuChuyenTau, hanhtrinh.GioKhoiHanh.ToString(), hanhtrinh.GioDen.ToString(), hanhtrinh.NgayDen, hanhtrinh.TongThoiGian, hanhtrinh.NgayTrongTuan, hanhtrinh.SoGhe, hanhtrinh.GiaVeNguoiLon1, hanhtrinh.GiaVeNguoiLon2, hanhtrinh.GiaVeNguoiLon3, hanhtrinh.GiaVeTreEm1, hanhtrinh.GiaVeTreEm2, hanhtrinh.GiaVeTreEm3, hanhtrinh.SoLuongVe1, hanhtrinh.SoLuongVe2, hanhtrinh.SoLuongVe3, hanhtrinh.GiamGiaKhuHoi };
             ExecuteData("spHanhTrinh_Insert", parameters, values);
         }
 
         public static void Update(HanhTrinh hanhtrinh)
         {
-            string[] parameters = new string[] { "@MaHanhTrinh", "@MaChang", "@SoHieuChuyenTau", "@GioKhoiHanh", "@GioDen", "@NgayDen", "@TongThoiGian", "@NgayTrongTuan", "@SoGhe", "@GiaVeNguoiLon1", "@GiaVeNguoiLon2", "@GiaVeNguoiLon3", "@GiaVeTreEm1", "@GiaVeTreEm2", "@GiaVeTreEm3", "@SoLuongVe1", "@SoLuongVe2", "@SoLuongVe3" };
-            string[] values = new string[] { hanhtrinh.MaHanhTrinh, hanhtrinh.MaChang, hanhtrinh.SoHieuChuyenTau, hanhtrinh.GioKhoiHanh.ToString(), hanhtrinh.GioDen.ToString(), hanhtrinh.NgayDen, hanhtrinh.TongThoiGian, hanhtrinh.NgayTrongTuan, hanhtrinh.SoGhe, hanhtrinh.GiaVeNguoiLon1, hanhtrinh.GiaVeNguoiLon2, hanhtrinh.GiaVeNguoiLon3, hanhtrinh.GiaVeTreEm1, hanhtrinh.GiaVeTreEm2, hanhtrinh.GiaVeTreEm3, hanhtrinh.SoLuongVe1, hanhtrinh.SoLuongVe2, hanhtrinh.SoLuongVe3 };
+            string[] parameters = new string[] { "@MaHanhTrinh", "@MaChang", "@SoHieuChuyenTau", "@GioKhoiHanh", "@GioDen", "@NgayDen", "@TongThoiGian", "@NgayTrongTuan", "@SoGhe", "@GiaVeNguoiLon1", "@GiaVeNguoiLon2", "@GiaVeNguoiLon3", "@GiaVeTreEm1", "@GiaVeTreEm2", "@GiaVeTreEm3", "@SoLuongVe1", "@SoLuongVe2", "@SoLuongVe3", "@GiamGiaKhuHoi" };
+            string[] values = new string[] { hanhtrinh.MaHanhTrinh, hanhtrinh.MaChang, hanhtrinh.SoHieuChuyenTau, hanhtrinh.GioKhoiHanh.ToString(), hanhtrinh.GioDen.ToString(), hanhtrinh.NgayDen, hanhtrinh.TongThoiGian, hanhtrinh.NgayTrongTuan, hanhtrinh.SoGhe, hanhtrinh.GiaVeNguoiLon1, hanhtrinh.GiaVeNguoiLon2, hanhtrinh.GiaVeNguoiLon3, hanhtrinh.GiaVeTreEm1, hanhtrinh.GiaVeTreEm2, hanhtrinh.GiaVeTreEm3, hanhtrinh.SoLuongVe1, hanhtrinh.SoLuongVe2, hanhtrinh.SoLuongVe3, hanhtrinh.GiamGiaKhuHoi };
             ExecuteData("spHanhTrinh_UpdateByID", parameters, values);
         }
 
@@ -68,6 +68,7 @@ namespace ShipBooking
                 hanhtrinh.SoLuongVe1 = dt.Rows[0]["SoLuongVe1"].ToString();
                 hanhtrinh.SoLuongVe2 = dt.Rows[0]["SoLuongVe2"].ToString();
                 hanhtrinh.SoLuongVe3 = dt.Rows[0]["SoLuongVe3"].ToString();
+                hanhtrinh.GiamGiaKhuHoi = dt.Rows[0]["GiamGiaKhuHoi"].ToString();
             }
             else
             {
@@ -102,6 +103,7 @@ namespace ShipBooking
                 hanhtrinh.SoLuongVe1 = dt.Rows[0]["SoLuongVe1"].ToString();
                 hanhtrinh.SoLuongVe2 = dt.Rows[0]["SoLuongVe2"].ToString();
                 hanhtrinh.SoLuongVe3 = dt.Rows[0]["SoLuongVe3"].ToString();
+                hanhtrinh.GiamGiaKhuHoi = dt.Rows[0]["GiamGiaKhuHoi"].ToString();
 
                 ListHanhTrinh.Add(hanhtrinh);
                 hanhtrinh = null;
