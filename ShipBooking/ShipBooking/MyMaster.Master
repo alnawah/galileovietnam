@@ -41,8 +41,8 @@
                             Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Trang chủ</asp:LinkButton>&nbsp;|
                        <asp:LinkButton ID="LinkButton2" PostBackUrl="~/ThongTinHanhTrinh.aspx" runat="server" Font-Underline="False" 
                             Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Đặt vé</asp:LinkButton>&nbsp;|
-                       <asp:LinkButton ID="LinkButton3" runat="server" Font-Underline="False" 
-                            Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Tình trạng chỗ</asp:LinkButton>&nbsp;|
+                       <asp:LinkButton ID="LinkButton3" PostBackUrl="~/XemLichChuyen.aspx" runat="server" Font-Underline="False" 
+                            Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Xem lịch chuyến</asp:LinkButton>&nbsp;|
                        <asp:LinkButton ID="LinkButton4" PostBackUrl="http://galileo.com.vn/" runat="server" Font-Underline="False" 
                             Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Liên kết</asp:LinkButton>&nbsp;|
                         <asp:LinkButton ID="lbtnDangNhap" PostBackUrl="~/Login.aspx" runat="server" Font-Underline="False" 

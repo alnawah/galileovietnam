@@ -28,12 +28,63 @@ namespace ShipBooking.Controls
             }
         }
 
+        protected void Search()
+        {
+            string startdate = "";
+            string enddate = "";
+            startdate = txtNgay1.Text.Trim();
+            enddate = txtNgay2.Text.Trim();
+            lblResult.Text = "";
+            grwResult.Visible = true;
+            grwResultAllBF.Visible = false;
+            if (rblTieuChiTimKiem.SelectedValue == "TenKhach")
+            {
+                if (CheckValidDate(startdate) == true && CheckValidDate(enddate) == true)
+                {
+                    DateTime dt = DateTime.Parse(enddate);
+                    if (dt < DateTime.Parse(startdate))
+                    {
+                        lblMsg.Text = "Lỗi nhập liệu: Ngày kết thúc phải sau ngày bắt đầu";
+                        return;
+                    }
+                    else
+                    {
+                        SearchBFByKhach(txtKeyword.Text.Trim(), startdate, enddate);
+                    }
+                }
+                else if (CheckValidDate(startdate) == false && CheckValidDate(enddate) == true)
+                {
+                    txtNgay1.Text = "";
+                    txtNgay1.Focus();
+                }
+                else if (CheckValidDate(startdate) == true && CheckValidDate(enddate) == false)
+                {
+                    txtNgay2.Text = "";
+                    txtNgay2.Focus();
+                }
+                else
+                {
+                    txtNgay1.Text = "";
+                    txtNgay1.Focus();
+                }
+            }
+            else if (rblTieuChiTimKiem.SelectedValue == "MaBF")
+            {
+                SearchBFByID(txtKeyword.Text.Trim());
+            }
+            else
+            {
+                //Search by nguoi nhan ve
+            }
+        }
+
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             string startdate = "";
             string enddate = "";
             startdate = txtNgay1.Text.Trim();
             enddate = txtNgay2.Text.Trim();
+            lblResult.Text = "";
             grwResult.Visible = true;
             grwResultAllBF.Visible = false;
             if (rblTieuChiTimKiem.SelectedValue == "TenKhach")
@@ -206,7 +257,7 @@ namespace ShipBooking.Controls
             MaBF = grwResult.Rows[e.RowIndex].Cells[0].Text.Trim();
             HanhKhachDB.DeleteFromBookingFile(MaBF.Trim());
             BookingFileDB.Delete(MaBF.Trim());
-            SelectAllBookingFile();
+            Search();
         }
 
         protected void SelectAllBookingFile()
@@ -274,6 +325,21 @@ namespace ShipBooking.Controls
         {
             grwResult.Visible = false;
             grwResultAllBF.Visible = true;
+            SelectAllBookingFile();
+        }
+
+        protected void grwResultAllBF_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BookingID = grwResultAllBF.Rows[grwResultAllBF.SelectedIndex].Cells[0].Text.Trim();
+            Response.Redirect("DetailBooking.aspx");
+        }
+
+        protected void grwResultAllBF_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            string MaBF = "";
+            MaBF = grwResultAllBF.Rows[e.RowIndex].Cells[0].Text.Trim();
+            HanhKhachDB.DeleteFromBookingFile(MaBF.Trim());
+            BookingFileDB.Delete(MaBF.Trim());
             SelectAllBookingFile();
         }
     }

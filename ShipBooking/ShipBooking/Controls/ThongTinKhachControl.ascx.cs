@@ -73,10 +73,7 @@ namespace ShipBooking.Controls
                 if (textBox[i] != null && ddl[i] != null)
                 {
                     khach = new HanhKhach();
-                    Random rdm = new Random();
-                    maHK = "HK" + rdm.Next(10000, 99999).ToString().Trim();
-
-                    khach.MaHK = maHK.Trim();
+                    khach.MaHK = TaoMaHK(textBox[i].Text.Trim());
                     khach.Ten = textBox[i].Text.Trim();
                     khach.DiaChi = "";
                     khach.QuocTich = "";
@@ -313,6 +310,15 @@ namespace ShipBooking.Controls
                 sum += Convert.ToInt64(ThongTinHanhTrinhControl.listKhach[i].GiaTien);
             }
             ThongTinHanhTrinhControl.bf.GiaTien = sum.ToString();
+        }
+
+        protected string TaoMaHK(string ten)
+        {
+            string mahk = "";
+            Random rdm = new Random();
+
+            mahk = ten.Substring(0, 2) + ten.Length.ToString() + rdm.Next(100, 999).ToString().Trim();
+            return mahk;
         }
     }
 }

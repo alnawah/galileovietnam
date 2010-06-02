@@ -544,7 +544,12 @@ namespace ShipBooking.Controls
         protected void grwHanhTrinh_SelectedIndexChanged(object sender, EventArgs e)
         {
             string mahanhtrinh = "";
-            mahanhtrinh = grwHanhTrinh.Rows[grwHanhTrinh.SelectedIndex].Cells[0].Text.Trim();
+            string MaChang = "";
+            
+            MaChang = GetMaChang().Trim();
+            DataSet ds = new DataSet();
+            ds = HanhTrinhDB.GetDataSetHanhTrinhByChang(MaChang);
+            mahanhtrinh = ds.Tables[0].Rows[grwHanhTrinh.SelectedIndex]["MaHanhTrinh"].ToString().Trim();
             FillDetailHanhTrinh(mahanhtrinh);
             lblMsg.Text = "";
         }
@@ -568,7 +573,12 @@ namespace ShipBooking.Controls
         protected void grwHanhTrinh_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             string mahanhtrinh = "";
-            mahanhtrinh = grwHanhTrinh.Rows[e.RowIndex].Cells[0].Text.Trim();
+            string MaChang = "";
+
+            MaChang = GetMaChang().Trim();
+            DataSet ds = new DataSet();
+            ds = HanhTrinhDB.GetDataSetHanhTrinhByChang(MaChang);
+            mahanhtrinh = ds.Tables[0].Rows[e.RowIndex]["MaHanhTrinh"].ToString().Trim();
             HanhTrinhDB.Delete(mahanhtrinh);
             FillDataToGrvHanhTrinh();
         }

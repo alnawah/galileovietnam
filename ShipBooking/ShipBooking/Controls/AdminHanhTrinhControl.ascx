@@ -122,7 +122,7 @@
                         </tr>
                         <tr>
                             <td class="style4">
-                                Số hiệu chuyến:</td>
+                                Mã chuyến:</td>
                             <td class="style3" colspan="2">
                                 <asp:TextBox ID="txtMaHanhTrinh" runat="server" Width="140px" 
                                     style="text-align: center"></asp:TextBox>
@@ -130,7 +130,7 @@
                         </tr>
                         <tr>
                             <td class="style4">
-                                Số hiệu tàu:</td>
+                                Số hiệu chuyến tàu:</td>
                             <td class="style3" colspan="2">
                                 <asp:TextBox ID="txtSoHieuTau" runat="server" style="text-align: center" 
                                     Width="140px"></asp:TextBox>
@@ -301,7 +301,8 @@
                         <tr>
                             <td align="left" class="style5" colspan="3">
                                 Giảm giá vé khứ hồi:
-                                <asp:TextBox ID="txtGiamGiaVeKhuHoi" runat="server" Width="119px">0</asp:TextBox>
+                                <asp:TextBox ID="txtGiamGiaVeKhuHoi" runat="server" Width="119px" 
+                                    style="text-align: right">0</asp:TextBox>
                                 &nbsp;(VNĐ)</td>
                         </tr>
                     </table>
@@ -324,7 +325,7 @@
                         onselectedindexchanged="grwHanhTrinh_SelectedIndexChanged" PageSize="50">
                         <RowStyle ForeColor="#000066" />
                         <Columns>
-                            <asp:BoundField HeaderText="Số hiệu chuyến" DataField="MaHanhTrinh" />
+                            <asp:BoundField HeaderText="Số hiệu chuyến" DataField="SoHieuChuyenTau" />
                             <asp:BoundField HeaderText="Giờ khởi hành" DataField="GioKhoiHanh" />
                             <asp:BoundField HeaderText="Giờ đến" DataField="GioDen" />
                             <asp:BoundField HeaderText="Tổng thời gian" DataField="TongThoiGian" />

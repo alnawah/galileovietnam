@@ -8,45 +8,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ShipBooking {
+namespace ShipBooking.Controls {
     
     
-    public partial class _Default {
+    public partial class XemLichChuyenControl {
         
         /// <summary>
-        /// imgbtnDatve control.
+        /// Image1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgbtnDatve;
+        protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
-        /// imgbtnXemLichChuyen control.
+        /// lblMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgbtnXemLichChuyen;
+        protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// imgbtnTinhTrangCho control.
+        /// ddlNoiDi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgbtnTinhTrangCho;
+        protected global::System.Web.UI.WebControls.DropDownList ddlNoiDi;
         
         /// <summary>
-        /// imgbtnBangGiaVe control.
+        /// ddlNoiDen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgbtnBangGiaVe;
+        protected global::System.Web.UI.WebControls.DropDownList ddlNoiDen;
+        
+        /// <summary>
+        /// btnSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSearch;
     }
 }

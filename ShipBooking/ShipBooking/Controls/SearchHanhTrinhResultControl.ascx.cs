@@ -73,7 +73,12 @@ namespace ShipBooking.Controls
         protected void grvTinhTrangCho_SelectedIndexChanged(object sender, EventArgs e)
         {
             string mahanhtrinh = "";
-            mahanhtrinh = grvTinhTrangCho.Rows[grvTinhTrangCho.SelectedIndex].Cells[4].Text.Trim();
+            string MaChang = "";
+
+            MaChang = ThongTinHanhTrinhControl.bf.HanhTrinh.Trim();
+            DataSet ds = new DataSet();
+            ds = HanhTrinhDB.GetDataSetHanhTrinhByChang(MaChang);
+            mahanhtrinh = ds.Tables[0].Rows[grvTinhTrangCho.SelectedIndex]["MaHanhTrinh"].ToString().Trim();
             hanhtrinh = HanhTrinhDB.GetInfo(mahanhtrinh);
             if (hanhtrinh != null)
             {
