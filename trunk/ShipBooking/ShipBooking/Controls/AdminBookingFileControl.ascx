@@ -202,10 +202,9 @@
     </asp:GridView>
     <asp:GridView ID="grwResultAllBF" runat="server" AutoGenerateColumns="False" 
         BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" 
-        CellPadding="4" Width="800px" onrowdeleting="grwResult_RowDeleting"
-        EmptyDataText="Chưa có dữ liệu nào"
-        onpageindexchanging="grwResult_PageIndexChanging" 
-        onselectedindexchanged="grwResult_SelectedIndexChanged" PageSize="100">
+        CellPadding="4" Width="800px" EmptyDataText="Chưa có dữ liệu nào"
+        PageSize="100" onrowdeleting="grwResultAllBF_RowDeleting" 
+        onselectedindexchanged="grwResultAllBF_SelectedIndexChanged">
         <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
         <RowStyle BackColor="White" ForeColor="#003399" />
         <Columns>

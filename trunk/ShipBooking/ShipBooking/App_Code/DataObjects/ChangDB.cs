@@ -30,15 +30,15 @@ namespace ShipBooking
 
         public static void Insert(Chang chang)
         {
-            string[] parameters = new string[] { "@MaChang", "@TinhTrang", "@MaTPDi", "@MaTPDen" };
-            string[] values = new string[] { chang.MaChang, chang.TinhTrang, chang.MaTPDi, chang.MaTPDen };
+            string[] parameters = new string[] { "@MaChang", "@TinhTrang", "@MaTPDi", "@MaTPDen", "@TenTPDi", "@TenTPDen" };
+            string[] values = new string[] { chang.MaChang, chang.TinhTrang, chang.MaTPDi, chang.MaTPDen, chang.TenTPDi, chang.TenTPDen };
             ExecuteData("spChang_Insert", parameters, values);
         }
 
         public static void Update(Chang chang)
         {
-            string[] parameters = new string[] { "@MaChang", "@TinhTrang", "@MaTPDi", "@MaTPDen" };
-            string[] values = new string[] { chang.MaChang, chang.TinhTrang, chang.MaTPDi, chang.MaTPDen };
+            string[] parameters = new string[] { "@MaChang", "@TinhTrang", "@MaTPDi", "@MaTPDen", "@TenTPDi", "@TenTPDen" };
+            string[] values = new string[] { chang.MaChang, chang.TinhTrang, chang.MaTPDi, chang.MaTPDen, chang.TenTPDi, chang.TenTPDen };
             ExecuteData("spChang_UpdateByID", parameters, values);
         }
 
@@ -52,6 +52,8 @@ namespace ShipBooking
                 chang.TinhTrang = dt.Rows[0]["TinhTrang"].ToString();
                 chang.MaTPDi = dt.Rows[0]["MaTPDi"].ToString();
                 chang.MaTPDen = dt.Rows[0]["MaTPDen"].ToString();
+                chang.TenTPDi = dt.Rows[0]["TenTPDi"].ToString();
+                chang.TenTPDen = dt.Rows[0]["TenTPDen"].ToString();
             }
             else
             {

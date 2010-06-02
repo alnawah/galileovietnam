@@ -96,9 +96,9 @@ namespace ShipBooking
                 BF.ThanhToan = dt.Rows[i]["ThanhToan"].ToString();
                 BF.MaNguoiNhan = dt.Rows[i]["MaNguoiNhan"].ToString();
                 BF.HanhTrinh = dt.Rows[i]["HanhTrinh"].ToString();
-                BF.GioKhoiHanh = DateTime.Parse(dt.Rows[0]["GioKhoiHanh"].ToString());
-                BF.GioDen = DateTime.Parse(dt.Rows[0]["GioDen"].ToString());
-                BF.SoVe = dt.Rows[0]["SoVe"].ToString();
+                BF.GioKhoiHanh = DateTime.Parse(dt.Rows[i]["GioKhoiHanh"].ToString());
+                BF.GioDen = DateTime.Parse(dt.Rows[i]["GioDen"].ToString());
+                BF.SoVe = dt.Rows[i]["SoVe"].ToString();
 
                 BFList.Add(BF);
                 BF = null;
@@ -128,9 +128,9 @@ namespace ShipBooking
                 BF.ThanhToan = dt.Rows[i]["ThanhToan"].ToString();
                 BF.MaNguoiNhan = dt.Rows[i]["MaNguoiNhan"].ToString();
                 BF.HanhTrinh = dt.Rows[i]["HanhTrinh"].ToString();
-                BF.GioKhoiHanh = DateTime.Parse(dt.Rows[0]["GioKhoiHanh"].ToString());
-                BF.GioDen = DateTime.Parse(dt.Rows[0]["GioDen"].ToString());
-                BF.SoVe = dt.Rows[0]["SoVe"].ToString();
+                BF.GioKhoiHanh = DateTime.Parse(dt.Rows[i]["GioKhoiHanh"].ToString());
+                BF.GioDen = DateTime.Parse(dt.Rows[i]["GioDen"].ToString());
+                BF.SoVe = dt.Rows[i]["SoVe"].ToString();
 
                 BFList.Add(BF);
                 BF = null;

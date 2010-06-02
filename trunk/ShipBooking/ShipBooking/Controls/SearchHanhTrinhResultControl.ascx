@@ -152,7 +152,7 @@
             <asp:BoundField DataField="GioDen" HeaderText="Giờ đến" >
                 <ItemStyle HorizontalAlign="Center" Width="100px" />
             </asp:BoundField>
-            <asp:BoundField DataField="MaHanhTrinh" HeaderText="Số hiệu chuyến" >
+            <asp:BoundField DataField="SoHieuChuyenTau" HeaderText="Số hiệu chuyến tàu" >
                 <ItemStyle HorizontalAlign="Center" />
             </asp:BoundField>
             <asp:BoundField DataField="SoGhe" HeaderText="Số ghế còn trống" >

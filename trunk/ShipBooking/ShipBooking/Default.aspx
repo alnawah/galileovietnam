@@ -29,7 +29,7 @@
             <td>
                 <asp:ImageButton ID="imgbtnBangGiaVe" runat="server" ImageUrl="~/Images/bang_gia_ve.png" 
                     Width="492px" Height="65px" style="text-align: center" 
-                    onclick="imgbtnBangGiaVe_Click" />
+                    onclick="imgbtnBangGiaVe_Click" Visible="False" />
                 <br />
                 <br />
                 <br />
