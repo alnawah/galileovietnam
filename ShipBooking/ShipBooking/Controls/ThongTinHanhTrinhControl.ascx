@@ -1,18 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ThongTinHanhTrinhControl.ascx.cs" Inherits="ShipBooking.Controls.ThongTinHanhTrinhControl" %>
-
-<script type="text/javascript">
-    function displayCalendar1()
-    {
-        var datePicker = document.getElementById('datePicker1');
-        datePicker.style.display = 'block';
-    }
-    
-    function displayCalendar2()
-    {
-        var datePicker = document.getElementById('datePicker2');
-        datePicker.style.display = 'block';
-    }
-</script><style type="text/css">
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<style type="text/css">
     .step1_tblThongTinDatCho_Summary_Style
     {
         margin: auto;
@@ -109,29 +97,35 @@
                             AutoPostBack="true" onselectedindexchanged="ddlNoiDi_SelectedIndexChanged">
                         </asp:DropDownList>
                         </td>
+                    <ajaxToolkit:ToolkitScriptManager runat="server" ID="ScriptManager1"  EnableScriptGlobalization="true" EnableScriptLocalization="true" />
                     <td class="style4">
                         Ngày khởi hành:</td>
                     <td>
-                        <asp:TextBox ID="txtNgayDi" runat="server" Width="79px" 
-                            style="text-align: right"></asp:TextBox>
-                        <img id="imgCalendar1" src="~/Images/CalendarIcon.png" alt="" runat="server" 
-                            onclick="displayCalendar1()" height="16" />
-                        <div id="datePicker1">
-                            <asp:Calendar id="calEventDate" 
-                                OnSelectionChanged="calEventDate_SelectionChanged" Runat="server" 
-                                BackColor="#FFFFCC" BorderColor="#FFCC66" BorderWidth="1px" 
-                                DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" 
-                                ForeColor="#663399" Height="200px" ShowGridLines="True" Width="220px" >
-                                <SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />
-                                <SelectorStyle BackColor="#FFCC66" />
-                                <TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
-                                <OtherMonthDayStyle ForeColor="#CC9966" />
-                                <NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />
-                                <DayHeaderStyle BackColor="#FFCC66" Font-Bold="True" Height="1px" />
-                                <TitleStyle BackColor="#990000" Font-Bold="True" Font-Size="9pt" 
-                                    ForeColor="#FFFFCC" />
-                            </asp:Calendar>
-                        </div>
+                        <asp:TextBox ID="txtNgayDi" runat="server" Width="79px" MaxLength="1" 
+                            style="text-align:justify" ValidationGroup="MKE" />
+                        <asp:ImageButton ID="imgCalendar1" runat="server" ImageUrl="~/Images/CalendarIcon.png" CausesValidation="False" />
+                        <ajaxtoolkit:maskededitextender ID="MaskedEditExtender1" runat="server"
+                            TargetControlID="txtNgayDi"
+                            Mask="99/99/9999"
+                            MessageValidatorTip="true"
+                            OnFocusCssClass="MaskedEditFocus"
+                            OnInvalidCssClass="MaskedEditError"
+                            MaskType="Date"
+                            DisplayMoney="Left"
+                            AcceptNegative="Left"
+                            ErrorTooltipEnabled="True" />
+                        <ajaxtoolkit:maskededitvalidator ID="MaskedEditValidator1" runat="server"
+                            ControlExtender="MaskedEditExtender1"
+                            ControlToValidate="txtNgayDi"
+                            EmptyValueMessage="Date is required"
+                            InvalidValueMessage="Date is invalid"
+                            Display="Dynamic"
+                            TooltipMessage="Input a date"
+                            EmptyValueBlurredText="*"
+                            InvalidValueBlurredMessage="*"
+                            ValidationGroup="MKE" />
+                         <ajaxtoolkit:calendarextender ID="CalendarExtender1" runat="server" 
+                            TargetControlID="txtNgayDi" PopupButtonID="imgCalendar1" />
                     </td>
                 </tr>
                 <tr>
@@ -146,26 +140,31 @@
                         <asp:Label ID="lblNgayVe" runat="server" Visible="false" Text="Ngày về:"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtNgayVe" runat="server" Width="79px" Visible="False" 
-                            style="text-align: right"></asp:TextBox>
-                        <img id="imgCalendar2" src="~/Images/CalendarIcon.png" alt="" runat="server" 
-                            onclick="displayCalendar2()" height="16" visible="False"/>
-                        <div id="datePicker2">
-                            <asp:Calendar id="Calendar1" Runat="server" BackColor="#FFFFCC" 
-                                BorderColor="#FFCC66" BorderWidth="1px" DayNameFormat="Shortest" 
-                                Font-Names="Verdana" Font-Size="8pt" ForeColor="#663399" Height="200px" 
-                                ShowGridLines="True" Width="220px" 
-                                onselectionchanged="Calendar1_SelectionChanged" >
-                                <SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />
-                                <SelectorStyle BackColor="#FFCC66" />
-                                <TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
-                                <OtherMonthDayStyle ForeColor="#CC9966" />
-                                <NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />
-                                <DayHeaderStyle BackColor="#FFCC66" Font-Bold="True" Height="1px" />
-                                <TitleStyle BackColor="#990000" Font-Bold="True" Font-Size="9pt" 
-                                    ForeColor="#FFFFCC" />
-                            </asp:Calendar>
-                        </div>
+                        <asp:TextBox ID="txtNgayVe" runat="server" Width="79px" MaxLength="1" 
+                            style="text-align:justify" ValidationGroup="MKE" Visible="False" />
+                        <asp:ImageButton ID="imgCalendar2" runat="server" 
+                            ImageUrl="~/Images/CalendarIcon.png" CausesValidation="False" Visible="False" />
+                        <ajaxToolkit:MaskedEditExtender ID="MaskedEditExtender2" runat="server"
+                            TargetControlID="txtNgayVe"
+                            Mask="99/99/9999"
+                            MessageValidatorTip="true"
+                            OnFocusCssClass="MaskedEditFocus"
+                            OnInvalidCssClass="MaskedEditError"
+                            MaskType="Date"
+                            DisplayMoney="Left"
+                            AcceptNegative="Left"
+                            ErrorTooltipEnabled="True" />
+                        <ajaxToolkit:MaskedEditValidator ID="MaskedEditValidator2" runat="server"
+                            ControlExtender="MaskedEditExtender2"
+                            ControlToValidate="txtNgayDi"
+                            EmptyValueMessage="Date is required"
+                            InvalidValueMessage="Date is invalid"
+                            Display="Dynamic"
+                            TooltipMessage="Input a date"
+                            EmptyValueBlurredText="*"
+                            InvalidValueBlurredMessage="*"
+                            ValidationGroup="MKE" />
+                         <ajaxToolkit:CalendarExtender ID="CalendarExtender2" runat="server" TargetControlID="txtNgayVe" PopupButtonID="imgCalendar2" />
                     </td>
                 </tr>
                 <tr>

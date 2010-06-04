@@ -128,16 +128,6 @@ namespace ShipBooking.Controls
             }
         }
 
-        protected void calEventDate_SelectionChanged(object sender, EventArgs e)
-        {
-            txtNgay1.Text = calStartDate.SelectedDate.ToString("d");
-        }
-
-        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
-        {
-            txtNgay2.Text = calEndDate.SelectedDate.ToString("d");
-        }
-
         protected void SearchBFByID(string keyword)
         {
             BookingFile bf = new BookingFile();
@@ -297,15 +287,15 @@ namespace ShipBooking.Controls
             {
                 txtNgay1.Enabled = true;
                 txtNgay2.Enabled = true;
-                imgCalendar1.Visible = true;
-                imgCalendar2.Visible = true;
+                btnImgCal1.Visible = true;
+                btnImgCal2.Visible = true;
             }
             else
             {
                 txtNgay1.Enabled = false;
                 txtNgay2.Enabled = false;
-                imgCalendar1.Visible = false;
-                imgCalendar2.Visible = false;
+                btnImgCal1.Visible = false;
+                btnImgCal2.Visible = false;
             }
         }
 

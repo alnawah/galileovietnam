@@ -59,31 +59,13 @@ namespace ShipBooking.Controls {
         protected global::System.Web.UI.WebControls.TextBox txtNgay1;
         
         /// <summary>
-        /// imgCalendar1 control.
+        /// btnImgCal1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage imgCalendar1;
-        
-        /// <summary>
-        /// calStartDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calStartDate;
-        
-        /// <summary>
-        /// lblDateFormat control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDateFormat;
+        protected global::System.Web.UI.WebControls.ImageButton btnImgCal1;
         
         /// <summary>
         /// txtNgay2 control.
@@ -95,31 +77,13 @@ namespace ShipBooking.Controls {
         protected global::System.Web.UI.WebControls.TextBox txtNgay2;
         
         /// <summary>
-        /// imgCalendar2 control.
+        /// btnImgCal2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage imgCalendar2;
-        
-        /// <summary>
-        /// calEndDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calEndDate;
-        
-        /// <summary>
-        /// lblDateFormat0 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDateFormat0;
+        protected global::System.Web.UI.WebControls.ImageButton btnImgCal2;
         
         /// <summary>
         /// btnBack control.

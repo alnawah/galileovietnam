@@ -53,16 +53,6 @@ namespace ShipBooking.Controls
             rblLoaiHanhTrinh.SelectedIndex = 0;
         }
 
-        protected void calEventDate_SelectionChanged(object sender, EventArgs e)
-        {
-            txtNgayDi.Text = calEventDate.SelectedDate.ToString("d");
-        }
-
-        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
-        {
-            txtNgayVe.Text = Calendar1.SelectedDate.ToString("d");
-        }
-
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             if (ddlNoiDi.SelectedValue == "" || ddlNoiDen.SelectedValue == "")
