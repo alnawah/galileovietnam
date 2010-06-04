@@ -117,6 +117,39 @@
         </tr>
     </table>
     <br />
-    <asp:Button ID="btnSearch" runat="server" Text="Xem" Width="97px" />
+    <asp:Button ID="btnSearch" runat="server" Text="Xem" Width="96px" 
+        onclick="btnSearch_Click" Height="30px" />
+    <br />
+    <br />
+                    <asp:GridView ID="grwHanhTrinh" runat="server" AutoGenerateColumns="False"
+                        EmptyDataText="Chưa có dữ liệu nào"
+                        BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" 
+                        CellPadding="3" Width="636px" 
+                        onselectedindexchanged="grwHanhTrinh_SelectedIndexChanged" 
+                    PageSize="50">
+                        <RowStyle ForeColor="#000066" />
+                        <Columns>
+                            <asp:BoundField HeaderText="Số hiệu chuyến" DataField="SoHieuChuyenTau" >
+                                <ItemStyle HorizontalAlign="Center" Width="100px" />
+                            </asp:BoundField>
+                            <asp:BoundField HeaderText="Giờ khởi hành" DataField="GioKhoiHanh" >
+                                <ItemStyle HorizontalAlign="Center" Width="150px" />
+                            </asp:BoundField>
+                            <asp:BoundField HeaderText="Giờ đến" DataField="GioDen" >
+                                <ItemStyle HorizontalAlign="Center" Width="150px" />
+                            </asp:BoundField>
+                            <asp:BoundField HeaderText="Ngày trong tuần" DataField="NgayTrongTuan" >
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                            <asp:CommandField ButtonType="Button" SelectText="Chọn" ShowSelectButton="True">
+                                <ControlStyle Width="50px" />
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:CommandField>
+                        </Columns>
+                        <FooterStyle BackColor="White" ForeColor="#000066" />
+                        <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                        <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                        <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                    </asp:GridView>
     <br />
 </center>

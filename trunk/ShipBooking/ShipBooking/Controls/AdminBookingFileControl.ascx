@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AdminBookingFileControl.ascx.cs" Inherits="ShipBooking.Controls.AdminBookingFileControl" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <script type="text/javascript">
     function displayCalendar1()
     {
@@ -96,30 +97,34 @@
                     </td>
                 </tr>
                 <tr>
+                    <ajaxToolkit:ToolkitScriptManager runat="server" ID="ScriptManager1"  EnableScriptGlobalization="true" EnableScriptLocalization="true" />
                     <td class="style1">
                                                 Từ ngày:</td>
                     <td>
                         <asp:TextBox ID="txtNgay1" runat="server" Width="79px"></asp:TextBox>
-                        <img id="imgCalendar1" src="~/Images/CalendarIcon.png" alt="" runat="server" 
-                            onclick="displayCalendar1()" height="16" />
-                        <div id="datePicker1">
-                            <asp:Calendar id="calStartDate" Runat="server" 
-                                BackColor="#FFFFCC" BorderColor="#FFCC66" BorderWidth="1px" 
-                                DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" 
-                                ForeColor="#663399" Height="200px" ShowGridLines="True" Width="220px" 
-                                onselectionchanged="calEventDate_SelectionChanged" >
-                                <SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />
-                                <SelectorStyle BackColor="#FFCC66" />
-                                <TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
-                                <OtherMonthDayStyle ForeColor="#CC9966" />
-                                <NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />
-                                <DayHeaderStyle BackColor="#FFCC66" Font-Bold="True" Height="1px" />
-                                <TitleStyle BackColor="#990000" Font-Bold="True" Font-Size="9pt" 
-                                    ForeColor="#FFFFCC" />
-                            </asp:Calendar>
-                        </div>
-                        <asp:Label ID="lblDateFormat" runat="server" Text="(mm/dd/yyyy)" 
-                            Visible="False"></asp:Label>
+                        <asp:ImageButton ID="btnImgCal1" runat="server" ImageUrl="~/Images/CalendarIcon.png" CausesValidation="false" />
+                         <ajaxtoolkit:maskededitextender ID="MaskedEditExtender1" runat="server"
+                            TargetControlID="txtNgay1"
+                            Mask="99/99/9999"
+                            MessageValidatorTip="true"
+                            OnFocusCssClass="MaskedEditFocus"
+                            OnInvalidCssClass="MaskedEditError"
+                            MaskType="Date"
+                            DisplayMoney="Left"
+                            AcceptNegative="Left"
+                            ErrorTooltipEnabled="True" />
+                        <ajaxtoolkit:maskededitvalidator ID="MaskedEditValidator1" runat="server"
+                            ControlExtender="MaskedEditExtender1"
+                            ControlToValidate="txtNgay1"
+                            EmptyValueMessage="Date is required"
+                            InvalidValueMessage="Date is invalid"
+                            Display="Dynamic"
+                            TooltipMessage="Input a date"
+                            EmptyValueBlurredText="*"
+                            InvalidValueBlurredMessage="*"
+                            ValidationGroup="MKE" />
+                         <ajaxtoolkit:calendarextender ID="CalendarExtender1" runat="server" 
+                            TargetControlID="txtNgay1" PopupButtonID="btnImgCal1" />
                     </td>
                 </tr>
                 <tr>
@@ -127,26 +132,28 @@
                         Đến ngày:</td>
                     <td>
                         <asp:TextBox ID="txtNgay2" runat="server" Width="79px"></asp:TextBox>
-                        <img id="imgCalendar2" src="~/Images/CalendarIcon.png" alt="" runat="server" 
-                            onclick="displayCalendar2()" height="16"/>
-                        <div id="datePicker2">
-                            <asp:Calendar id="calEndDate" Runat="server" BackColor="#FFFFCC" 
-                                BorderColor="#FFCC66" BorderWidth="1px" DayNameFormat="Shortest" 
-                                Font-Names="Verdana" Font-Size="8pt" ForeColor="#663399" Height="200px" 
-                                ShowGridLines="True" Width="220px" 
-                                onselectionchanged="Calendar1_SelectionChanged" >
-                                <SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />
-                                <SelectorStyle BackColor="#FFCC66" />
-                                <TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
-                                <OtherMonthDayStyle ForeColor="#CC9966" />
-                                <NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />
-                                <DayHeaderStyle BackColor="#FFCC66" Font-Bold="True" Height="1px" />
-                                <TitleStyle BackColor="#990000" Font-Bold="True" Font-Size="9pt" 
-                                    ForeColor="#FFFFCC" />
-                            </asp:Calendar>
-                        </div>
-                        <asp:Label ID="lblDateFormat0" runat="server" Text="(mm/dd/yyyy)" 
-                            Visible="False"></asp:Label>
+                        <asp:ImageButton ID="btnImgCal2" runat="server" ImageUrl="~/Images/CalendarIcon.png" CausesValidation="false" />
+                         <ajaxToolkit:MaskedEditExtender ID="MaskedEditExtender2" runat="server"
+                            TargetControlID="txtNgay2"
+                            Mask="99/99/9999"
+                            MessageValidatorTip="true"
+                            OnFocusCssClass="MaskedEditFocus"
+                            OnInvalidCssClass="MaskedEditError"
+                            MaskType="Date"
+                            DisplayMoney="Left"
+                            AcceptNegative="Left"
+                            ErrorTooltipEnabled="True" />
+                        <ajaxToolkit:MaskedEditValidator ID="MaskedEditValidator2" runat="server"
+                            ControlExtender="MaskedEditExtender2"
+                            ControlToValidate="txtNgay2"
+                            EmptyValueMessage="Date is required"
+                            InvalidValueMessage="Date is invalid"
+                            Display="Dynamic"
+                            TooltipMessage="Input a date"
+                            EmptyValueBlurredText="*"
+                            InvalidValueBlurredMessage="*"
+                            ValidationGroup="MKE" />
+                         <ajaxToolkit:CalendarExtender ID="CalendarExtender2" runat="server" TargetControlID="txtNgay2" PopupButtonID="btnImgCal2" />
                     </td>
                 </tr>
                 </table>

@@ -65,16 +65,7 @@ namespace ShipBooking.Controls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage imgCalendar1;
-        
-        /// <summary>
-        /// calEventDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calEventDate;
+        protected global::System.Web.UI.WebControls.ImageButton imgCalendar1;
         
         /// <summary>
         /// ddlNoiDen control.
@@ -110,16 +101,7 @@ namespace ShipBooking.Controls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage imgCalendar2;
-        
-        /// <summary>
-        /// Calendar1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar1;
+        protected global::System.Web.UI.WebControls.ImageButton imgCalendar2;
         
         /// <summary>
         /// btnSearch control.
