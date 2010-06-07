@@ -155,8 +155,7 @@
             <asp:BoundField DataField="SoHieuChuyenTau" HeaderText="Số hiệu chuyến tàu" >
                 <ItemStyle HorizontalAlign="Center" />
             </asp:BoundField>
-            <asp:BoundField DataField="SoGhe" HeaderText="Số ghế còn trống" >
-                <ItemStyle HorizontalAlign="Center" />
+            <asp:BoundField DataField="MaHanhTrinh" HeaderText="Mã hành trình" >
             </asp:BoundField>
             <asp:CommandField ButtonType="Button" SelectText="Đặt chỗ" 
                 ShowSelectButton="True" >
