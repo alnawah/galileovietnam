@@ -1,3 +1,5 @@
 http://112.78.2.84:8787/
 User name: smartgate
 Pass word: qwertyuiop
+
+<add name="sShop" connectionString="Data Source=112.78.2.84,1455;Initial Catalog=smartgate_vn_sb;Persist Security Info=True;User ID=smartgate_vn_sb;Password=123456" providerName="System.Data.SqlClient"/>
