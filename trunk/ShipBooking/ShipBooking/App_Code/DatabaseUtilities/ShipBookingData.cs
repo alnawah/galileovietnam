@@ -27,7 +27,7 @@ namespace ShipBooking.Library
         #region Mở dữ liệu
         public static void OpenData()
         {
-            string stringConnection = "Data Source=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\ShipBooking.mdf;Integrated Security=True;User Instance=True";
+            string stringConnection = "Data Source=112.78.2.84,1455;Initial Catalog=smartgate_vn_sb;Persist Security Info=True;User ID=smartgate_vn_sb;Password=MKfb8h5?lH9g";
             try
             {
                 con = new SqlConnection(stringConnection);
