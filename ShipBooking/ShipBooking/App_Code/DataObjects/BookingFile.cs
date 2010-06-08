@@ -105,11 +105,11 @@ namespace ShipBooking.Module
             set { _MaNguoiNhan = value; }
         }
 
-        string _HanhTrinh;
-        public string HanhTrinh
+        string _MaHanhTrinh;
+        public string MaHanhTrinh
         {
-            get { return _HanhTrinh; }
-            set { _HanhTrinh = value; }
+            get { return _MaHanhTrinh; }
+            set { _MaHanhTrinh = value; }
         }
 
         string _TenKhach;
