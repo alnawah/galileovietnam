@@ -39,14 +39,14 @@ namespace ShipBooking
         public static void Insert(HanhKhach khach)
         {
             string[] parameters = new string[] { "@MaHK", "@Ten", "@DiaChi", "@QuocTich", "@DoTuoi", "@DienThoai", "@Email", "@MaBF", "@GiaTien" };
-            string[] values = new string[] { khach.MaHK, khach.Ten, khach.DiaChi, khach.QuocTich, khach.DoTuoi, khach.DienThoai, khach.Email, khach.MaBF, khach.GiaTien };
+            string[] values = new string[] { khach.MaHK, khach.Ten, khach.DiaChi, khach.QuocTich, khach.DoTuoi, khach.SoGhe, khach.Email, khach.MaBF, khach.GiaTien };
             ExecuteData("spHanhKhach_Insert", parameters, values);
         }
 
         public static void Update(HanhKhach khach)
         {
             string[] parameters = new string[] { "@MaHK", "@Ten", "@DiaChi", "@QuocTich", "@DoTuoi", "@DienThoai", "@Email", "@MaBF", "@GiaTien" };
-            string[] values = new string[] { khach.MaHK, khach.Ten, khach.DiaChi, khach.QuocTich, khach.DoTuoi, khach.DienThoai, khach.Email, khach.MaBF, khach.GiaTien };
+            string[] values = new string[] { khach.MaHK, khach.Ten, khach.DiaChi, khach.QuocTich, khach.DoTuoi, khach.SoGhe, khach.Email, khach.MaBF, khach.GiaTien };
             ExecuteData("spHanhKhach_UpdateByID", parameters, values);
         }
 
@@ -62,7 +62,7 @@ namespace ShipBooking
                 khach.DiaChi = dt.Rows[0]["DiaChi"].ToString();
                 khach.QuocTich = dt.Rows[0]["QuocTich"].ToString();
                 khach.DoTuoi = dt.Rows[0]["DoTuoi"].ToString();
-                khach.DienThoai = dt.Rows[0]["DienThoai"].ToString();
+                khach.SoGhe = dt.Rows[0]["DienThoai"].ToString();
                 khach.Email = dt.Rows[0]["Email"].ToString();
                 khach.MaBF = dt.Rows[0]["MaBF"].ToString();
                 khach.GiaTien = dt.Rows[0]["GiaTien"].ToString();
@@ -87,7 +87,7 @@ namespace ShipBooking
                 khach.DiaChi = dt.Rows[i]["DiaChi"].ToString();
                 khach.QuocTich = dt.Rows[i]["QuocTich"].ToString();
                 khach.DoTuoi = dt.Rows[i]["DoTuoi"].ToString();
-                khach.DienThoai = dt.Rows[i]["DienThoai"].ToString();
+                khach.SoGhe = dt.Rows[i]["DienThoai"].ToString();
                 khach.Email = dt.Rows[i]["Email"].ToString();
                 khach.MaBF = dt.Rows[i]["MaBF"].ToString();
                 khach.GiaTien = dt.Rows[0]["GiaTien"].ToString();
@@ -111,7 +111,7 @@ namespace ShipBooking
                 khach.DiaChi = dt.Rows[i]["DiaChi"].ToString();
                 khach.QuocTich = dt.Rows[i]["QuocTich"].ToString();
                 khach.DoTuoi = dt.Rows[i]["DoTuoi"].ToString();
-                khach.DienThoai = dt.Rows[i]["DienThoai"].ToString();
+                khach.SoGhe = dt.Rows[i]["DienThoai"].ToString();
                 khach.Email = dt.Rows[i]["Email"].ToString();
                 khach.MaBF = dt.Rows[i]["MaBF"].ToString();
                 khach.GiaTien = dt.Rows[0]["GiaTien"].ToString();
