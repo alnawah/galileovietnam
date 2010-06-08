@@ -49,11 +49,11 @@ namespace ShipBooking.Module
             set { _DoTuoi = value; }
         }
 
-        string _DienThoai;
-        public string DienThoai
+        string _SoGhe;
+        public string SoGhe
         {
-            get { return _DienThoai; }
-            set { _DienThoai = value; }
+            get { return _SoGhe; }
+            set { _SoGhe = value; }
         }
 
         string _Email;
