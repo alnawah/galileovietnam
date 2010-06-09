@@ -75,6 +75,7 @@ namespace ShipBooking.Controls
             string mahanhtrinh = "";
             mahanhtrinh = grvTinhTrangCho.Rows[grvTinhTrangCho.SelectedIndex].Cells[5].Text.Trim();
             hanhtrinh = HanhTrinhDB.GetInfo(mahanhtrinh);
+            ThongTinHanhTrinhControl.bf.MaHanhTrinh = mahanhtrinh;
             if (hanhtrinh != null)
             {
                 Response.Redirect("BookingSep1.aspx");

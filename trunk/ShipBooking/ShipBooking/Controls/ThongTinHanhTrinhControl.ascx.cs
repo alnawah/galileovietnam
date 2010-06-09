@@ -245,7 +245,7 @@ namespace ShipBooking.Controls
             bf.GiaTien = "";
             bf.ThanhToan = "";
             bf.MaNguoiNhan = "";
-            bf.HanhTrinh = GetMaChang();
+            bf.MaHanhTrinh = "";
             //bf.GioKhoiHanh = "";
             //bf.GioDen = "";
         }

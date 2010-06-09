@@ -57,11 +57,6 @@
     {
         width: 114px;
     }
-    .style22
-    {
-        text-align: left;
-        height: 23px;
-    }
     .style28
     {
         width: 100px;
@@ -159,7 +154,7 @@
                 </tr>
                 <tr>
                     <td class="style28">
-                        Số vé:</td>
+                        Số lượng vé:</td>
                     <td class="style29" colspan="3">
                         <asp:DropDownList ID="ddlSLVe" runat="server" Height="22px" Width="75px">
                         </asp:DropDownList>
@@ -168,12 +163,12 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style28">Số ghế:</td>
-                    <td class="style22" colspan="3" style="margin-left: 40px">
-                        <asp:RadioButtonList ID="rdbSoGhe" runat="server" RepeatColumns="12" 
-                            RepeatDirection="Horizontal" Height="22px" style="text-align: left" 
-                            Width="126px">
-                        </asp:RadioButtonList>
+                    <td class="style28">
+                        Số ghế:</td>
+                    <td class="style29" colspan="3">
+                        <asp:CheckBoxList ID="CheckBoxListSoGhe" runat="server" Height="30px" 
+                            RepeatColumns="10" RepeatDirection="Horizontal" Width="340px">
+                        </asp:CheckBoxList>
                     </td>
                 </tr>
                 </table>

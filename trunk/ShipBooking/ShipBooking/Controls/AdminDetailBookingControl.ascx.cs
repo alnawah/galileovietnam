@@ -49,7 +49,22 @@ namespace ShipBooking.Controls
                 lblGioKhoiHanh.Text = booking.GioKhoiHanh.ToShortTimeString();
                 lblGioDen.Text = booking.GioDen.ToShortTimeString();
                 lblLoaiVe.Text = booking.LoaiVe.Trim();
-                lblSoGhe.Text = booking.SoGhe.Trim();
+
+                List<HanhKhach> HKList = new List<HanhKhach>();
+                HKList = HanhKhachDB.GetListHanhKhachByBookingID(booking.MaBF.Trim());
+                string soghe = "";
+                for (int i = 0; i < HKList.Count; i++)
+                {
+                    if (HKList[i].SoGhe.Trim() != "")
+                    {
+                        soghe = soghe + HKList[i].SoGhe.Trim();
+                        if ((i + 1) < HKList.Count)
+                        {
+                            soghe = soghe + ", ";
+                        }
+                    }
+                }
+                lblSoGhe.Text = soghe;
                 lblGiaTien.Text = booking.GiaTien.Trim();
             }
         }
