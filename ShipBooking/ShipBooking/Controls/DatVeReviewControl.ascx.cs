@@ -55,7 +55,19 @@ namespace ShipBooking.Controls
             lblGioDen.Text = ThongTinHanhTrinhControl.bf.GioDen.ToShortTimeString();
             lblLoaiVe.Text = ThongTinHanhTrinhControl.bf.LoaiVe;
             lblSLVe.Text = ThongTinHanhTrinhControl.bf.SoVe;
-            lblSoGhe.Text = ThongTinHanhTrinhControl.bf.SoGhe;
+            string soghe = "";
+            for (int i = 0; i < Convert.ToInt16(ThongTinHanhTrinhControl.bf.SoVe); i++)
+            {
+                if (BookingStep1Control.ListSoGhe[i].Trim() != "")
+                {
+                    soghe = soghe + BookingStep1Control.ListSoGhe[i].Trim();
+                    if ((i + 1) < Convert.ToInt16(ThongTinHanhTrinhControl.bf.SoVe))
+                    {
+                        soghe = soghe + ", ";
+                    }
+                }
+            }
+            lblSoGhe.Text = soghe;
             lblTongGiaVe.Text = ThongTinHanhTrinhControl.bf.GiaTien;
         }
 

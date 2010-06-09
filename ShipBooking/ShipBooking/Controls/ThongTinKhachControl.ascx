@@ -85,6 +85,11 @@
         text-align: right;
     }
     
+    .style5
+    {
+        text-align: right;
+    }
+    
 </style>
 <p style="text-align: center">
     <asp:Image ID="Image1" runat="server" Height="59px" 
@@ -167,9 +172,9 @@
                         <asp:Label ID="lblSoGhe" runat="server" Font-Bold="True" ForeColor="#0000CC"></asp:Label>
                     </td>
                     <td class="style4">
-                        </td>
+                        &nbsp;</td>
                     <td>
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 </table>
             </td>
@@ -188,7 +193,7 @@
             <td class="step1_table_contain_style">
                 <table class="step1_tblThongTinDatCho_Detail_Style">
                     <tr>
-                        <td>
+                        <td style="text-align: right">
                             Họ và tên:</td>
                         <td>
                             <asp:TextBox ID="txtHoTen1" runat="server" Width="250px"></asp:TextBox>
@@ -196,10 +201,10 @@
                         </td>
                     </tr>
                     <tr>
+                        <td style="text-align: right">
+                            Độ tuổi:</td>
                         <td>
-                            Độ tuổi</td>
-                        <td>
-                            <asp:DropDownList ID="ddlDoTuoi1" runat="server" Height="22px" Width="160px">
+                            <asp:DropDownList ID="ddlDoTuoi1" runat="server" Height="22px" Width="160px" >
                                 <asp:ListItem Value="NguoiLon">Người lớn</asp:ListItem>
                                 <asp:ListItem Value="TreSoSinh">Trẻ sơ sinh</asp:ListItem>
                                 <asp:ListItem Value="TreEm">Trẻ em</asp:ListItem>
@@ -221,7 +226,7 @@
             <td class="step1_table_contain_style">
                 <table class="step1_tblThongTinDatCho_Detail_Style">
                     <tr>
-                        <td>
+                        <td class="style5">
                             Họ và tên:</td>
                         <td>
                             <asp:TextBox ID="txtHoTen2" runat="server" Width="250px"></asp:TextBox>
@@ -229,7 +234,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="style5">
                             Độ tuổi</td>
                         <td>
                             <asp:DropDownList ID="ddlDoTuoi2" runat="server" Height="22px" Width="160px">
@@ -254,7 +259,7 @@
             <td class="step1_table_contain_style">
                 <table class="step1_tblThongTinDatCho_Detail_Style">
                     <tr>
-                        <td>
+                        <td class="style5">
                             Họ và tên:</td>
                         <td>
                             <asp:TextBox ID="txtHoTen3" runat="server" Width="250px"></asp:TextBox>
@@ -262,7 +267,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="style5">
                             Độ tuổi</td>
                         <td>
                             <asp:DropDownList ID="ddlDoTuoi3" runat="server" Height="22px" Width="160px">
@@ -287,7 +292,7 @@
             <td class="step1_table_contain_style">
                 <table class="step1_tblThongTinDatCho_Detail_Style">
                     <tr>
-                        <td>
+                        <td class="style5">
                             Họ và tên:</td>
                         <td>
                             <asp:TextBox ID="txtHoTen4" runat="server" Width="250px"></asp:TextBox>
@@ -295,7 +300,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="style5">
                             Độ tuổi</td>
                         <td>
                             <asp:DropDownList ID="ddlDoTuoi4" runat="server" Height="22px" Width="160px">
@@ -320,7 +325,7 @@
             <td class="step1_table_contain_style">
                 <table class="step1_tblThongTinDatCho_Detail_Style">
                     <tr>
-                        <td>
+                        <td class="style5">
                             Họ và tên:</td>
                         <td>
                             <asp:TextBox ID="txtHoTen5" runat="server" Width="250px"></asp:TextBox>
@@ -328,7 +333,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="style5">
                             Độ tuổi</td>
                         <td>
                             <asp:DropDownList ID="ddlDoTuoi5" runat="server" Height="22px" Width="160px">
@@ -353,7 +358,7 @@
             <td class="step1_table_contain_style">
                 <table class="step1_tblThongTinDatCho_Detail_Style">
                     <tr>
-                        <td>
+                        <td class="style5">
                             Họ và tên:</td>
                         <td>
                             <asp:TextBox ID="txtHoTen6" runat="server" Width="250px"></asp:TextBox>
@@ -361,7 +366,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="style5">
                             Độ tuổi</td>
                         <td>
                             <asp:DropDownList ID="ddlDoTuoi6" runat="server" Height="22px" Width="160px">
@@ -386,7 +391,7 @@
             <td class="step1_table_contain_style">
                 <table class="step1_tblThongTinDatCho_Detail_Style">
                     <tr>
-                        <td>
+                        <td class="style5">
                             Họ và tên:</td>
                         <td>
                             <asp:TextBox ID="txtHoTen7" runat="server" Width="250px"></asp:TextBox>
@@ -394,7 +399,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="style5">
                             Độ tuổi</td>
                         <td>
                             <asp:DropDownList ID="ddlDoTuoi7" runat="server" Height="22px" Width="160px">
@@ -419,7 +424,7 @@
             <td class="step1_table_contain_style">
                 <table class="step1_tblThongTinDatCho_Detail_Style">
                     <tr>
-                        <td>
+                        <td class="style5">
                             Họ và tên:</td>
                         <td>
                             <asp:TextBox ID="txtHoTen8" runat="server" Width="250px"></asp:TextBox>
@@ -427,7 +432,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="style5">
                             Độ tuổi</td>
                         <td>
                             <asp:DropDownList ID="ddlDoTuoi8" runat="server" Height="22px" Width="160px">
@@ -452,7 +457,7 @@
             <td class="step1_table_contain_style">
                 <table class="step1_tblThongTinDatCho_Detail_Style">
                     <tr>
-                        <td>
+                        <td class="style5">
                             Họ và tên:</td>
                         <td>
                             <asp:TextBox ID="txtHoTen9" runat="server" Width="250px"></asp:TextBox>
@@ -460,109 +465,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="style5">
                             Độ tuổi</td>
                         <td>
                             <asp:DropDownList ID="ddlDoTuoi9" runat="server" Height="22px" Width="160px">
-                                <asp:ListItem Value="NguoiLon">Người lớn</asp:ListItem>
-                                <asp:ListItem Value="TreSoSinh">Trẻ sơ sinh</asp:ListItem>
-                                <asp:ListItem Value="TreEm">Trẻ em</asp:ListItem>
-                            </asp:DropDownList>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-</asp:Panel>
-<asp:Panel ID="Panel10" runat="server" Visible="False">
-    <table class="step1_tblThongTinDatCho_Summary_Style">
-        <tr>
-            <td bgcolor="#006699" class="step1_table_header_style">
-                Thông tin về hành khách số 10</td>
-        </tr>
-        <tr>
-            <td class="step1_table_contain_style">
-                <table class="step1_tblThongTinDatCho_Detail_Style">
-                    <tr>
-                        <td>
-                            Họ và tên:</td>
-                        <td>
-                            <asp:TextBox ID="txtHoTen10" runat="server" Width="250px"></asp:TextBox>
-                            &nbsp;<span class="step1_warning">(*) </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Độ tuổi</td>
-                        <td>
-                            <asp:DropDownList ID="ddlDoTuoi10" runat="server" Height="22px" Width="160px">
-                                <asp:ListItem Value="NguoiLon">Người lớn</asp:ListItem>
-                                <asp:ListItem Value="TreSoSinh">Trẻ sơ sinh</asp:ListItem>
-                                <asp:ListItem Value="TreEm">Trẻ em</asp:ListItem>
-                            </asp:DropDownList>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-</asp:Panel>
-<asp:Panel ID="Panel11" runat="server" Visible="False">
-    <table class="step1_tblThongTinDatCho_Summary_Style">
-        <tr>
-            <td bgcolor="#006699" class="step1_table_header_style">
-                Thông tin về hành khách số 11</td>
-        </tr>
-        <tr>
-            <td class="step1_table_contain_style">
-                <table class="step1_tblThongTinDatCho_Detail_Style">
-                    <tr>
-                        <td>
-                            Họ và tên:</td>
-                        <td>
-                            <asp:TextBox ID="txtHoTen11" runat="server" Width="250px"></asp:TextBox>
-                            &nbsp;<span class="step1_warning">(*) </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Độ tuổi</td>
-                        <td>
-                            <asp:DropDownList ID="ddlDoTuoi11" runat="server" Height="22px" Width="160px">
-                                <asp:ListItem Value="NguoiLon">Người lớn</asp:ListItem>
-                                <asp:ListItem Value="TreSoSinh">Trẻ sơ sinh</asp:ListItem>
-                                <asp:ListItem Value="TreEm">Trẻ em</asp:ListItem>
-                            </asp:DropDownList>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-</asp:Panel>
-<asp:Panel ID="Panel12" runat="server" Visible="False">
-    <table class="step1_tblThongTinDatCho_Summary_Style">
-        <tr>
-            <td bgcolor="#006699" class="step1_table_header_style">
-                Thông tin về hành khách số 12</td>
-        </tr>
-        <tr>
-            <td class="step1_table_contain_style">
-                <table class="step1_tblThongTinDatCho_Detail_Style">
-                    <tr>
-                        <td>
-                            Họ và tên:</td>
-                        <td>
-                            <asp:TextBox ID="txtHoTen12" runat="server" Width="250px"></asp:TextBox>
-                            &nbsp;<span class="step1_warning">(*) </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Độ tuổi</td>
-                        <td>
-                            <asp:DropDownList ID="ddlDoTuoi12" runat="server" Height="22px" Width="160px">
                                 <asp:ListItem Value="NguoiLon">Người lớn</asp:ListItem>
                                 <asp:ListItem Value="TreSoSinh">Trẻ sơ sinh</asp:ListItem>
                                 <asp:ListItem Value="TreEm">Trẻ em</asp:ListItem>

@@ -12,6 +12,7 @@ using System.Xml.Linq;
 using System.Collections.Generic;
 using ShipBooking.Library;
 using ShipBooking.Module;
+using System.Data.SqlClient;
 
 namespace ShipBooking
 {
@@ -129,6 +130,47 @@ namespace ShipBooking
             string[] values = new string[] { MaBF };
             ds = ShipBookingData.FillDataset("spHanhKhach_SelectByBookingID", parameters, values);
             return ds;
+        }
+
+        public static List<HanhKhach> GetListHangKhachByHanhTrinhAndDate(string ngaydi, string mahanhtrinh)
+        {
+            string strCommand = "SELECT *FROM tblHanhKhach WHERE tblHanhKhach.MaBF IN (SELECT MaBF FROM tblBookingFile WHERE tblBookingFile.NgayDi = '" + ngaydi + "' AND tblBookingFile.HanhTrinh = '" + mahanhtrinh + "')";
+            OpenData();
+            DataTable dt = new DataTable();
+            cmd = new SqlCommand();
+            cmd.CommandText = strCommand;
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.Text;
+            try
+            {
+                da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                da.Dispose();
+            }
+            finally
+            {
+                CloseData();
+            }
+
+            List<HanhKhach> HKList = new List<HanhKhach>();
+            HanhKhach khach;
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                khach = new HanhKhach();
+                khach.MaHK = dt.Rows[i]["MaHK"].ToString();
+                khach.Ten = dt.Rows[i]["Ten"].ToString();
+                khach.DiaChi = dt.Rows[i]["DiaChi"].ToString();
+                khach.QuocTich = dt.Rows[i]["QuocTich"].ToString();
+                khach.DoTuoi = dt.Rows[i]["DoTuoi"].ToString();
+                khach.SoGhe = dt.Rows[i]["DienThoai"].ToString();
+                khach.Email = dt.Rows[i]["Email"].ToString();
+                khach.MaBF = dt.Rows[i]["MaBF"].ToString();
+                khach.GiaTien = dt.Rows[0]["GiaTien"].ToString();
+
+                HKList.Add(khach);
+                khach = null;
+            }
+            return HKList;
         }
     }
 }

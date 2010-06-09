@@ -48,14 +48,25 @@ namespace ShipBooking.Controls
             lblGioDen.Text = ThongTinHanhTrinhControl.bf.GioDen.ToShortTimeString();
             lblLoaiVe.Text = ThongTinHanhTrinhControl.bf.LoaiVe;
             lblSLVe.Text = ThongTinHanhTrinhControl.bf.SoVe;
-            lblSoGhe.Text = ThongTinHanhTrinhControl.bf.SoGhe;
-            
+
+            string soghe = "";
+            for (int i = 0; i < Convert.ToInt16(ThongTinHanhTrinhControl.bf.SoVe); i++)
+            {
+                if (BookingStep1Control.ListSoGhe[i].Trim() != "")
+                {
+                    soghe = soghe + BookingStep1Control.ListSoGhe[i].Trim();
+                    if ((i + 1) < Convert.ToInt16(ThongTinHanhTrinhControl.bf.SoVe))
+                    {
+                        soghe = soghe + ", ";
+                    }
+                }
+            }
+            lblSoGhe.Text = soghe;
         }
 
         protected void GetHanhKhachData()
         {
             int slKhach = 0;
-            string maHK = "";
             string strTextBoxID = "";
             string strDdlID = "";
             TextBox[] textBox = new TextBox[100];
@@ -78,10 +89,11 @@ namespace ShipBooking.Controls
                     khach.DiaChi = "";
                     khach.QuocTich = "";
                     khach.DoTuoi = ddl[i].SelectedItem.Text.Trim();
-                    khach.DienThoai = "";
+                    khach.SoGhe = BookingStep1Control.ListSoGhe[i - 1].Trim(); //Trường số điện thoại giờ dùng để lưu trữ số ghế của khách
                     khach.Email = "";
                     khach.MaBF = "";
                     khach.GiaTien = TinhGiaVe(ddl[i].SelectedValue.Trim());
+
                     ThongTinHanhTrinhControl.listKhach.Add(khach);
                     khach = null;
                 }
@@ -92,7 +104,7 @@ namespace ShipBooking.Controls
         {
             Panel [] panel = new Panel[15];
             string control = "";
-            for (int i = 1; i <= 12; i++)
+            for (int i = 1; i <= 9; i++)
             {
                 control = "Panel" + i.ToString();
                 panel[i] = (Panel)this.FindControl(control);
@@ -320,5 +332,6 @@ namespace ShipBooking.Controls
             mahk = ten.Substring(0, 2) + ten.Length.ToString() + rdm.Next(100, 999).ToString().Trim();
             return mahk;
         }
+
     }
 }

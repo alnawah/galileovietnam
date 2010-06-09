@@ -18,16 +18,17 @@ namespace ShipBooking.Controls
 {
     public partial class BookingStep1Control : System.Web.UI.UserControl
     {
+        public static string[] ListSoGhe = new string[9];
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 lblMsg.Text = "";
                 FillDataToDdlLoaiVe();
-                ResetRdbSoGhe();
+                ResetCheckBoxListSoGhe();
                 FillBookingData();
                 FillTinhTrangVe();
-                FillRdbSoGhe();
+                FillCheckBoxListSoGhe();
             }
         }
 
@@ -75,22 +76,22 @@ namespace ShipBooking.Controls
             lblGioDen.Text = SearchHanhTrinhResultControl.hanhtrinh.GioDen.ToShortTimeString();
         }
 
-        protected void FillRdbSoGhe()
+        protected void FillCheckBoxListSoGhe()
         {
             int SoGhe = 0;
             ListItem item;
-            List<BookingFile> BFList = new List<BookingFile>();
-            BFList = BookingFileDB.GetListBookingFileByDate(ThongTinHanhTrinhControl.bf.NgayDi.ToShortDateString(), ThongTinHanhTrinhControl.bf.HanhTrinh.Trim());
-
+            List<HanhKhach> HKList = new List<HanhKhach>();
+            HKList = HanhKhachDB.GetListHangKhachByHanhTrinhAndDate(ThongTinHanhTrinhControl.bf.NgayDi.ToShortDateString(), SearchHanhTrinhResultControl.hanhtrinh.MaHanhTrinh.Trim());
             SoGhe = Convert.ToInt16(SearchHanhTrinhResultControl.hanhtrinh.SoGhe.Trim());
             for (int i = 1; i <= SoGhe; i++)
             {
                 item = new ListItem();
                 item.Text = Convert.ToString(i);
                 item.Value = Convert.ToString(i);
-                rdbSoGhe.Items.Add(item);
+                CheckBoxListSoGhe.Items.Add(item);
                 item = null;
             }
+
 
             //Remove những ghế đã được chọn trong ngày
             int SoGheDaDat = 0;
@@ -100,12 +101,12 @@ namespace ShipBooking.Controls
                 item.Text = Convert.ToString(i);
                 item.Value = Convert.ToString(i);
 
-                for (int j = 0; j < BFList.Count; j++)
+                for (int j = 0; j < HKList.Count; j++)
                 {
-                    SoGheDaDat = Convert.ToInt16(BFList[j].SoGhe.Trim());
+                    SoGheDaDat = Convert.ToInt16(HKList[j].SoGhe.Trim());
                     if (i == SoGheDaDat)
                     {
-                        rdbSoGhe.Items.Remove(item);
+                        CheckBoxListSoGhe.Items.Remove(item);
                     }
                 }
                 item = null;
@@ -115,7 +116,7 @@ namespace ShipBooking.Controls
         protected void FillTinhTrangVe()
         {
             List<BookingFile> BFList = new List<BookingFile>();
-            BFList = BookingFileDB.GetListBookingFileByDate(ThongTinHanhTrinhControl.bf.NgayDi.ToShortDateString(), ThongTinHanhTrinhControl.bf.HanhTrinh.Trim());
+            BFList = BookingFileDB.GetListBookingFileByDate(ThongTinHanhTrinhControl.bf.NgayDi.ToShortDateString(), ThongTinHanhTrinhControl.bf.MaHanhTrinh.Trim());
             ListItem item;
 
             int count = 0;
@@ -270,14 +271,12 @@ namespace ShipBooking.Controls
         protected void ddlLoaiVe_SelectedIndexChanged(object sender, EventArgs e)
         {
             lblMsg.Text = "";
-            ResetRdbSoGhe();
             FillTinhTrangVe();
-            FillRdbSoGhe();
         }
 
-        protected void ResetRdbSoGhe()
+        protected void ResetCheckBoxListSoGhe()
         {
-            rdbSoGhe.Items.Clear();
+            CheckBoxListSoGhe.Items.Clear();
         }
 
         protected void btnContinue_Click(object sender, EventArgs e)
@@ -289,15 +288,15 @@ namespace ShipBooking.Controls
             }
             else
             {
-                if (rdbSoGhe.SelectedValue == "")
+                if (CheckSoGhe() == true)
                 {
-                    lblMsg.Text = "Bạn hãy chọn số ghế";
-                    return;
+                    GetBookingFileData();
+                    GetListSoGhe();
+                    Response.Redirect("ThongTinKhach.aspx");
                 }
                 else
                 {
-                    GetBookingFileData();
-                    Response.Redirect("ThongTinKhach.aspx");
+                    return;
                 }
             }
         }
@@ -308,13 +307,56 @@ namespace ShipBooking.Controls
             ThongTinHanhTrinhControl.bf.ThoiGian = "Buổi sáng";
             ThongTinHanhTrinhControl.bf.OpenChecking = true;
             ThongTinHanhTrinhControl.bf.LoaiVe = ddlLoaiVe.SelectedItem.Text.Trim();
-            ThongTinHanhTrinhControl.bf.SoGhe = rdbSoGhe.SelectedValue;
+            ThongTinHanhTrinhControl.bf.SoGhe = "";
             ThongTinHanhTrinhControl.bf.GiaTien = "";
             ThongTinHanhTrinhControl.bf.ThanhToan = "";
             ThongTinHanhTrinhControl.bf.MaNguoiNhan = "";
             ThongTinHanhTrinhControl.bf.GioKhoiHanh = SearchHanhTrinhResultControl.hanhtrinh.GioKhoiHanh;
             ThongTinHanhTrinhControl.bf.GioDen = SearchHanhTrinhResultControl.hanhtrinh.GioDen;
             ThongTinHanhTrinhControl.bf.SoVe = ddlSLVe.SelectedValue;
+        }
+
+        protected bool CheckSoGhe()
+        {
+            bool isValid = false;
+            int sove = 0;
+            int soghe = 0;
+
+            if (ddlSLVe.SelectedValue.Trim() != "")
+            {
+                sove = Convert.ToInt16(ddlSLVe.SelectedValue.Trim());
+            }
+            for (int i = 0; i < CheckBoxListSoGhe.Items.Count; i++)
+            {
+                if (CheckBoxListSoGhe.Items[i].Selected == true)
+                {
+                    soghe += 1;
+                }
+            }
+
+            if (sove != soghe)
+            {
+                lblMsg.Text = "Chú ý: Số lượng ghế được chọn phải bằng số lượng vé";
+                isValid = false;
+            }
+            else
+            {
+                isValid = true;
+            }
+            return isValid;
+        }
+
+        protected void GetListSoGhe()
+        {
+            int j = 0;
+            for (int i = 0; i < CheckBoxListSoGhe.Items.Count; i++)
+            {
+                if (CheckBoxListSoGhe.Items[i].Selected == true)
+                {
+                    ListSoGhe[j] = CheckBoxListSoGhe.Items[i].Text.Trim();
+                    j++;
+                }
+            }
         }
     }
 }
