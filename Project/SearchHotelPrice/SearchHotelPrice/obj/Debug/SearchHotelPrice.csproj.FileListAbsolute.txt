@@ -8,3 +8,8 @@ D:\Working\GalileoData\Project\SearchHotelPrice\SearchHotelPrice\bin\SearchHotel
 D:\Working\GalileoData\Project\SearchHotelPrice\SearchHotelPrice\obj\Debug\ResolveAssemblyReference.cache
 D:\Working\GalileoData\Project\SearchHotelPrice\SearchHotelPrice\obj\Debug\SearchHotelPrice.dll
 D:\Working\GalileoData\Project\SearchHotelPrice\SearchHotelPrice\obj\Debug\SearchHotelPrice.pdb
+D:\Projects\Galileo\Project\SearchHotelPrice\SearchHotelPrice\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Galileo\Project\SearchHotelPrice\SearchHotelPrice\obj\Debug\SearchHotelPrice.dll
+D:\Projects\Galileo\Project\SearchHotelPrice\SearchHotelPrice\bin\SearchHotelPrice.dll
+D:\Projects\Galileo\Project\SearchHotelPrice\SearchHotelPrice\bin\SearchHotelPrice.pdb
+D:\Projects\Galileo\Project\SearchHotelPrice\SearchHotelPrice\obj\Debug\SearchHotelPrice.pdb
