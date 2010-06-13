@@ -68,6 +68,7 @@ namespace SearchHotelPrice.Controls
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+            /*
             XmlDocument XMLDoc = new XmlDocument();
             XmlElement XMLRequest;
             XmlElement XMLHeader;
@@ -129,8 +130,50 @@ namespace SearchHotelPrice.Controls
             //Post document 
             ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
             Byte[] byte1 = encoding.GetBytes(XMLDoc.OuterXml);
-            HttpWebRequest HttpWReq = (HttpWebRequest)HttpWebRequest.Create(InterfaceURL);
+             * */
+            string xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+                + "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">"
+                + "<soap:Body>"
+               + "<Register xmlns=\"http://tempuri.org/\">"
+                  + "<user>"
+                   + " <UserName>phamhai</UserName>"
+                    + "<Password>3456732</Password>"
+                    + "<FirstName>Pham</FirstName>"
+                    + "<LastName>Hong Hai</LastName>"
+                    + "<Address>Viet Tri</Address>"
+                    + "<Email>test@yahoo.com</Email>"
+                    + "<TotalScore>4587</TotalScore>"
+                    + "<Credit>77777</Credit>"
+                    + "<Turn>79</Turn>"
+                    + "<Turned>79</Turned>"
+                    + "<Status>OK</Status>"
+                  + "</user>"
+                + "</Register>"
+                + "</soap:Body>"
+                + " </soap:Envelope>";
 
+
+            byte[] requestXML = new UTF8Encoding().GetBytes(xml);
+
+
+
+
+
+
+            String InterfaceURL = "http://localhost:1847/SanFoxServices.asmx?op=Register";
+            HttpWebRequest HttpWReq = (HttpWebRequest)HttpWebRequest.Create(InterfaceURL);
+            
+            HttpWReq.ContentType = "text/xml";
+            HttpWReq.Headers["Accept-Encoding"] = "gzip";
+            HttpWReq.Method = "POST";
+
+
+            // Sending the request to the server
+            HttpWReq.Timeout = 600000;
+            Stream StreamData = HttpWReq.GetRequestStream();
+            StreamData.Write(requestXML, 0, requestXML.Length);
+            StreamData.Close();
+            /*
             HttpWReq.ContentType = "text/xml";
             HttpWReq.ContentLength = XMLDoc.OuterXml.Length;
             HttpWReq.Method = "POST";
@@ -141,7 +184,7 @@ namespace SearchHotelPrice.Controls
             StreamData.Close();
 
             XMLDoc.Save("D:\\request.xml");
-
+            */
             //Get response
             HttpWebResponse HttpWRes = (HttpWebResponse)HttpWReq.GetResponse();
             Stream receiveStream = HttpWRes.GetResponseStream();
