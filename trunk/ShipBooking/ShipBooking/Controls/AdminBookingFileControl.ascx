@@ -93,7 +93,7 @@
                     <td class="style1">
                                                 Từ khóa:</td>
                     <td>
-                        &nbsp;<asp:TextBox ID="txtKeyword" runat="server" Width="240px"></asp:TextBox>
+                        <asp:TextBox ID="txtKeyword" runat="server" Width="240px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>

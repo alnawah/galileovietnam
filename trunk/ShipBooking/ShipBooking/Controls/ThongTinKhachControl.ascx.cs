@@ -26,7 +26,7 @@ namespace ShipBooking.Controls
         string MaHanhTrinh;
         string LoaiVe;
         string SoVe;
-        public static List<HanhKhach> listKhach = new List<HanhKhach>();
+        List<HanhKhach> listKhach = new List<HanhKhach>();
         HanhTrinh hanhtrinh = new HanhTrinh();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -152,6 +152,19 @@ namespace ShipBooking.Controls
                 TinhTongTien();
 
                 string urlValue = "";
+                string urlListMaKhach = "";
+                string urlListTenKhach = "";
+                string urlListTuoiKhach = "";
+                string urlListSoGheKhach = "";
+                string urlListGiaTienKhach = "";
+                for (int i = 0; i < listKhach.Count; i++)
+                {
+                    urlListMaKhach += "MaKhach" + i.ToString() + "=" + listKhach[i].MaHK + "&";
+                    urlListTenKhach += "TenKhach" + i.ToString() + "=" + listKhach[i].Ten + "&";
+                    urlListTuoiKhach += "DoTuoiKhach" + i.ToString() + "=" + listKhach[i].DoTuoi + "&";
+                    urlListSoGheKhach += "SoGheKhach" + i.ToString() + "=" + listKhach[i].SoGhe + "&";
+                    urlListGiaTienKhach += "GiaTienKhach" + i.ToString() + "=" + listKhach[i].GiaTien + "&";
+                }
                 urlValue = "LoaiChuyen=" + loaichuyen + "&"
                         + "NoiDi=" + noidi + "&"
                         + "NoiDen=" + noiden + "&"
@@ -161,7 +174,13 @@ namespace ShipBooking.Controls
                         + "MaHanhTrinh=" + MaHanhTrinh + "&"
                         + "LoaiVe=" + LoaiVe + "&"
                         + "SoVe=" + SoVe + "&"
+                        + urlListMaKhach
+                        + urlListTenKhach
+                        + urlListTuoiKhach
+                        + urlListSoGheKhach
+                        + urlListGiaTienKhach
                         + "GiaTien=" + TinhTongTien();
+               
                 Response.Redirect("DatVe_Step2.aspx?" + urlValue);
             }
         }
@@ -181,6 +200,13 @@ namespace ShipBooking.Controls
                     if (textBox[i].Text.Trim() == "")
                     {
                         lblMsg.Text = "Bạn phải nhập họ tên";
+                        textBox[i].Focus();
+                        isValid = false;
+                        return isValid;
+                    }
+                    else if (textBox[i].Text.Trim().Length < 2)
+                    {
+                        lblMsg.Text = "Tên hành khách phải tối thiểu 2 ký tự";
                         textBox[i].Focus();
                         isValid = false;
                         return isValid;
@@ -368,7 +394,8 @@ namespace ShipBooking.Controls
             string mahk = "";
             Random rdm = new Random();
 
-            mahk = ten.Substring(0, 2) + ten.Length.ToString() + rdm.Next(100, 999).ToString().Trim();
+            //mahk = ten.Substring(0, 1).ToUpper() + ten.Substring(ten.Length - 1, ten.Length) + ten.Length.ToString() + rdm.Next(100, 999).ToString().Trim();
+            mahk = ten[0].ToString().ToUpper() + ten[ten.Length - 1].ToString().ToUpper() + ten.Length.ToString() + rdm.Next(100, 999).ToString().Trim();
             return mahk;
         }
 

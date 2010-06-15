@@ -11,6 +11,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using ShipBooking.Module;
+using System.Collections.Generic;
 
 namespace ShipBooking.Controls
 {
@@ -26,9 +27,21 @@ namespace ShipBooking.Controls
         string LoaiVe;
         string SoVe;
         string GiaTien;
+        string DiaChi;
+        string DienThoai;
+        string Email;
+        string MaNguoiNhan;
+        string MaThanhPho;
+        string Ten;
+        string ThanhToan;
+        string ThoiGianGiaoVe;
+        string YeuCauKhac;
+
+        List<HanhKhach> listKhach = new List<HanhKhach>();
 
         BookingFile booking = new BookingFile();
         HanhTrinh hanhtrinh = new HanhTrinh();
+        NguoiNhanVe NguoiNhan = new NguoiNhanVe();
         protected void Page_Load(object sender, EventArgs e)
         {
             loaichuyen = Request.QueryString["LoaiChuyen"];
@@ -41,6 +54,34 @@ namespace ShipBooking.Controls
             LoaiVe = Request.QueryString["LoaiVe"];
             SoVe = Request.QueryString["SoVe"];
             GiaTien = Request.QueryString["GiaTien"];
+            DiaChi = Request.QueryString["DiaChi"];
+            DienThoai = Request.QueryString["DienThoai"];
+            Email = Request.QueryString["Email"];
+            MaNguoiNhan = Request.QueryString["MaNguoiNhan"];
+            MaThanhPho = Request.QueryString["MaThanhPho"];
+            Ten = Request.QueryString["Ten"];
+            ThanhToan = Request.QueryString["ThanhToan"];
+            ThoiGianGiaoVe = Request.QueryString["ThoiGianGiaoVe"];
+            YeuCauKhac = Request.QueryString["YeuCauKhac"];
+
+            HanhKhach khach = null;
+            for (int i = 0; i < Convert.ToInt16(SoVe); i++)
+            {
+                khach = new HanhKhach();
+
+                khach.MaHK = Request.QueryString["MaKhach" + i.ToString()];
+                khach.Ten = Request.QueryString["TenKhach" + i.ToString()];
+                khach.DoTuoi = Request.QueryString["DoTuoiKhach" + i.ToString()];
+                khach.SoGhe = Request.QueryString["SoGheKhach" + i.ToString()];
+                khach.GiaTien = Request.QueryString["GiaTienKhach" + i.ToString()];
+                khach.DiaChi = "";
+                khach.Email = "";
+                khach.MaBF = "";
+                khach.QuocTich = "";
+
+                listKhach.Add(khach);
+            }
+
             hanhtrinh = HanhTrinhDB.GetInfo(MaHanhTrinh);
             if (!IsPostBack)
             {
@@ -108,13 +149,13 @@ namespace ShipBooking.Controls
 
             DataSet ds = new DataSet();
             ds.Tables.Add(dt);
-            for (int i = 0; i < ThongTinKhachControl.listKhach.Count(); i++)
+            for (int i = 0; i < listKhach.Count(); i++)
             {
                 ds.Tables[0].Rows.Add();
                 ds.Tables[0].Rows[i].SetField("Stt", i + 1);
-                ds.Tables[0].Rows[i].SetField("TenKhach", ThongTinKhachControl.listKhach[i].Ten);
-                ds.Tables[0].Rows[i].SetField("LoaiTuoi", ThongTinKhachControl.listKhach[i].DoTuoi);
-                ds.Tables[0].Rows[i].SetField("GiaVe", ThongTinKhachControl.listKhach[i].GiaTien.Trim() + " VNĐ");
+                ds.Tables[0].Rows[i].SetField("TenKhach", listKhach[i].Ten);
+                ds.Tables[0].Rows[i].SetField("LoaiTuoi", listKhach[i].DoTuoi);
+                ds.Tables[0].Rows[i].SetField("GiaVe", listKhach[i].GiaTien.Trim() + " VNĐ");
             }
             grvHanhKhach.DataSource = ds.Tables[0];
             grvHanhKhach.DataBind();
@@ -122,14 +163,14 @@ namespace ShipBooking.Controls
 
         protected void SetNguoiNhanVeData()
         {
-            lblTenNguoiNhan.Text = DatVe_Step2.NguoiNhan.Ten;
-            lblDiaChiNguoiNhan.Text = DatVe_Step2.NguoiNhan.DiaChi;
-            lblThanhPho.Text = DatVe_Step2.NguoiNhan.MaThanhPho;
-            lblSoDienThoai.Text = DatVe_Step2.NguoiNhan.DienThoai;
-            lblEmail.Text = DatVe_Step2.NguoiNhan.Email;
-            lblYeuCauKhac.Text = DatVe_Step2.NguoiNhan.YeuCauKhac;
-            lblThoiGianGiaoVe.Text = DatVe_Step2.NguoiNhan.ThoiGianGiaoVe;
-            lblThanhToan.Text = DatVe_Step2.NguoiNhan.ThanhToan;
+            lblTenNguoiNhan.Text = Ten;
+            lblDiaChiNguoiNhan.Text = DiaChi;
+            lblThanhPho.Text = MaThanhPho;
+            lblSoDienThoai.Text = DienThoai;
+            lblEmail.Text = Email;
+            lblYeuCauKhac.Text = YeuCauKhac;
+            lblThoiGianGiaoVe.Text = ThoiGianGiaoVe;
+            lblThanhToan.Text = ThanhToan;
         }
 
         protected void GetBookingFile()
@@ -145,7 +186,7 @@ namespace ShipBooking.Controls
             booking.LoaiVe = LoaiVe;
             booking.MaBF = bfID.Trim();
             booking.MaHanhTrinh = MaHanhTrinh;
-            booking.MaNguoiNhan = DatVe_Step2.NguoiNhan.MaNguoiNhan.Trim();
+            booking.MaNguoiNhan = MaNguoiNhan.Trim();
             booking.NgayDi = DateTime.Parse(ngaydi);
             if (loaichuyen == "Khứ hồi")
             {
@@ -161,8 +202,21 @@ namespace ShipBooking.Controls
             booking.SoGhe = "0";
             booking.SoVe = SoVe;
             booking.TenKhach = "";
-            booking.ThanhToan = DatVe_Step2.NguoiNhan.ThanhToan.Trim();
+            booking.ThanhToan = ThanhToan.Trim();
             booking.ThoiGian = "Buổi sáng";
+        }
+
+        protected void GetNguoiNhanVeData()
+        {
+            NguoiNhan.DiaChi = DiaChi;
+            NguoiNhan.DienThoai = DienThoai;
+            NguoiNhan.Email = Email;
+            NguoiNhan.MaNguoiNhan = MaNguoiNhan;
+            NguoiNhan.MaThanhPho = MaThanhPho;
+            NguoiNhan.Ten = Ten;
+            NguoiNhan.ThanhToan = ThanhToan;
+            NguoiNhan.ThoiGianGiaoVe = ThoiGianGiaoVe;
+            NguoiNhan.YeuCauKhac = YeuCauKhac;
         }
 
         protected void SaveBookingFileData()
@@ -173,15 +227,16 @@ namespace ShipBooking.Controls
 
         protected void SaveNguoiNhanVeData()
         {
-            NguoiNhanVeDB.Insert(DatVe_Step2.NguoiNhan);
+            GetNguoiNhanVeData();
+            NguoiNhanVeDB.Insert(NguoiNhan);
         }
 
         protected void SaveHanhKhachData()
         {
-            for (int i = 0; i < ThongTinKhachControl.listKhach.Count(); i++)
+            for (int i = 0; i < listKhach.Count(); i++)
             {
-                ThongTinKhachControl.listKhach[i].MaBF = booking.MaBF.ToUpper().Trim();
-                HanhKhachDB.Insert(ThongTinKhachControl.listKhach[i]);
+                listKhach[i].MaBF = booking.MaBF.ToUpper().Trim();
+                HanhKhachDB.Insert(listKhach[i]);
             }
         }
     }

@@ -12,6 +12,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using ShipBooking.Library;
 using ShipBooking.Module;
+using System.Collections.Generic;
 
 namespace ShipBooking.Controls
 {
@@ -27,8 +28,9 @@ namespace ShipBooking.Controls
         string LoaiVe;
         string SoVe;
         string GiaTien;
+        List<HanhKhach> listKhach = new List<HanhKhach>();
 
-        public static NguoiNhanVe NguoiNhan = new NguoiNhanVe();
+        NguoiNhanVe NguoiNhan = new NguoiNhanVe();
         HanhTrinh hanhtrinh = new HanhTrinh();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -42,6 +44,20 @@ namespace ShipBooking.Controls
             LoaiVe = Request.QueryString["LoaiVe"];
             SoVe = Request.QueryString["SoVe"];
             GiaTien = Request.QueryString["GiaTien"];
+            HanhKhach khach = null;
+            for (int i = 0; i < Convert.ToInt16(SoVe); i++)
+            {
+                khach = new HanhKhach();
+
+                khach.MaHK = Request.QueryString["MaKhach" + i.ToString()];
+                khach.Ten = Request.QueryString["TenKhach" + i.ToString()];
+                khach.DoTuoi = Request.QueryString["DoTuoiKhach" + i.ToString()];
+                khach.SoGhe = Request.QueryString["SoGheKhach" + i.ToString()];
+                khach.GiaTien = Request.QueryString["GiaTienKhach" + i.ToString()];
+
+                listKhach.Add(khach);
+            }
+
             hanhtrinh = HanhTrinhDB.GetInfo(MaHanhTrinh);
             if (!IsPostBack)
             {
@@ -65,6 +81,19 @@ namespace ShipBooking.Controls
                 GetNguoiNhanVeData();
 
                 string urlValue = "";
+                string urlListMaKhach = "";
+                string urlListTenKhach = "";
+                string urlListTuoiKhach = "";
+                string urlListSoGheKhach = "";
+                string urlListGiaTienKhach = "";
+                for (int i = 0; i < listKhach.Count; i++)
+                {
+                    urlListMaKhach += "MaKhach" + i.ToString() + "=" + listKhach[i].MaHK + "&";
+                    urlListTenKhach += "TenKhach" + i.ToString() + "=" + listKhach[i].Ten + "&";
+                    urlListTuoiKhach += "DoTuoiKhach" + i.ToString() + "=" + listKhach[i].DoTuoi + "&";
+                    urlListSoGheKhach += "SoGheKhach" + i.ToString() + "=" + listKhach[i].SoGhe + "&";
+                    urlListGiaTienKhach += "GiaTienKhach" + i.ToString() + "=" + listKhach[i].GiaTien + "&";
+                }
                 urlValue = "LoaiChuyen=" + loaichuyen + "&"
                         + "NoiDi=" + noidi + "&"
                         + "NoiDen=" + noiden + "&"
@@ -74,7 +103,21 @@ namespace ShipBooking.Controls
                         + "MaHanhTrinh=" + MaHanhTrinh + "&"
                         + "LoaiVe=" + LoaiVe + "&"
                         + "SoVe=" + SoVe + "&"
-                        + "GiaTien=" + GiaTien;
+                        + urlListMaKhach
+                        + urlListTenKhach
+                        + urlListTuoiKhach
+                        + urlListSoGheKhach
+                        + urlListGiaTienKhach
+                        + "GiaTien=" + GiaTien + "&"
+                        + "DiaChi=" + NguoiNhan.DiaChi + "&"
+                        + "DienThoai=" + NguoiNhan.DienThoai + "&"
+                        + "Email=" + NguoiNhan.Email + "&"
+                        + "MaNguoiNhan=" + NguoiNhan.MaNguoiNhan + "&"
+                        + "MaThanhPho=" + NguoiNhan.MaThanhPho + "&"
+                        + "Ten=" + NguoiNhan.Ten + "&"
+                        + "ThanhToan=" + NguoiNhan.ThanhToan + "&"
+                        + "ThoiGianGiaoVe=" + NguoiNhan.ThoiGianGiaoVe + "&"
+                        + "YeuCauKhac=" + NguoiNhan.YeuCauKhac;
 
                 Response.Redirect("DatVe_Review.aspx?" + urlValue);
             }
@@ -178,13 +221,13 @@ namespace ShipBooking.Controls
             
             DataSet ds = new DataSet();
             ds.Tables.Add(dt);
-            for (int i = 0; i < ThongTinKhachControl.listKhach.Count(); i++)
+            for (int i = 0; i < listKhach.Count(); i++)
             {
                 ds.Tables[0].Rows.Add();
                 ds.Tables[0].Rows[i].SetField("Stt", i + 1);
-                ds.Tables[0].Rows[i].SetField("TenKhach", ThongTinKhachControl.listKhach[i].Ten);
-                ds.Tables[0].Rows[i].SetField("LoaiTuoi", ThongTinKhachControl.listKhach[i].DoTuoi);
-                ds.Tables[0].Rows[i].SetField("GiaVe", ThongTinKhachControl.listKhach[i].GiaTien.Trim() + " VNĐ");
+                ds.Tables[0].Rows[i].SetField("TenKhach", listKhach[i].Ten);
+                ds.Tables[0].Rows[i].SetField("LoaiTuoi", listKhach[i].DoTuoi);
+                ds.Tables[0].Rows[i].SetField("GiaVe", listKhach[i].GiaTien.Trim() + " VNĐ");
             }
             grvHanhKhach.DataSource = ds.Tables[0];
             grvHanhKhach.DataBind();
@@ -192,19 +235,24 @@ namespace ShipBooking.Controls
 
         protected void GetNguoiNhanVeData()
         {
-            string strMaNN = "NN";
-            Random rdm = new Random();
-            strMaNN += rdm.Next(1000, 9999).ToString();
+            NguoiNhan.MaNguoiNhan = TaoMaNguoiNhanVe(txtTenNguoiNhan.Text.Trim());
+            NguoiNhan.Ten = txtTenNguoiNhan.Text.Trim();
+            NguoiNhan.DiaChi = txtDiaChiNguoiNhan.Text.Trim();
+            NguoiNhan.MaThanhPho = ddlThanhPho.SelectedItem.Text.Trim();
+            NguoiNhan.DienThoai = txtDienThoaiNguoiNhan.Text.Trim();
+            NguoiNhan.Email = txtEmailNguoiNhan.Text.Trim();
+            NguoiNhan.YeuCauKhac = txtYeuCauKhac.Text.Trim();
+            NguoiNhan.ThoiGianGiaoVe = ddlThoiGianGiaoVe.SelectedItem.Text.Trim();
+            NguoiNhan.ThanhToan = rblHinhThucThanhToan.SelectedItem.Text.Trim();
+        }
 
-            NguoiNhan.MaNguoiNhan = strMaNN;
-            NguoiNhan.Ten = txtTenNguoiNhan.Text;
-            NguoiNhan.DiaChi = txtDiaChiNguoiNhan.Text;
-            NguoiNhan.MaThanhPho = ddlThanhPho.SelectedItem.Text ;
-            NguoiNhan.DienThoai = txtDienThoaiNguoiNhan.Text;
-            NguoiNhan.Email = txtEmailNguoiNhan.Text;
-            NguoiNhan.YeuCauKhac = txtYeuCauKhac.Text;
-            NguoiNhan.ThoiGianGiaoVe = ddlThoiGianGiaoVe.SelectedItem.Text;            
-            NguoiNhan.ThanhToan = rblHinhThucThanhToan.SelectedItem.Text;
+        protected string TaoMaNguoiNhanVe(string ten)
+        {
+            string manguoinhan = "";
+            Random rdm = new Random();
+
+            manguoinhan = ten[0].ToString().ToUpper() + ten[ten.Length - 1].ToString().ToUpper() + ten.Length.ToString() + rdm.Next(100, 999).ToString().Trim();
+            return manguoinhan;
         }
 
         protected bool CheckValidData()
@@ -216,6 +264,13 @@ namespace ShipBooking.Controls
                 lblMsg.Text = "Bạn phải nhập tên người nhận vé";
                 txtTenNguoiNhan.Focus();
                 isValid = false;
+            }
+            else if (txtTenNguoiNhan.Text.Trim().Length < 2)
+            {
+                lblMsg.Text = "Tên người nhận phải tối thiểu 2 ký tự";
+                txtTenNguoiNhan.Focus();
+                isValid = false;
+                return isValid;
             }
             else
             {
