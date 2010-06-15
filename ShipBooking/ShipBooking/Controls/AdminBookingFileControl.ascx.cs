@@ -155,7 +155,10 @@ namespace ShipBooking.Controls
 
                 ds.Tables[0].Rows.Add();
                 ds.Tables[0].Rows[0].SetField("MaBF", bf.MaBF.Trim());
-                ds.Tables[0].Rows[0].SetField("Ten", khach[0].Ten.Trim());
+                if (khach.Count > 0)
+                {
+                    ds.Tables[0].Rows[0].SetField("Ten", khach[0].Ten.Trim());
+                }
                 ds.Tables[0].Rows[0].SetField("LoaiChuyen", bf.LoaiChuyen.Trim());
                 ds.Tables[0].Rows[0].SetField("NoiDi", bf.NoiDi.Trim());
                 ds.Tables[0].Rows[0].SetField("NoiDen", bf.NoiDen.Trim());
