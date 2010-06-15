@@ -152,13 +152,7 @@ namespace SearchHotelPrice.Controls
                 + "</soap:Body>"
                 + " </soap:Envelope>";
 
-
             byte[] requestXML = new UTF8Encoding().GetBytes(xml);
-
-
-
-
-
 
             String InterfaceURL = "http://localhost:1847/SanFoxServices.asmx?op=Register";
             HttpWebRequest HttpWReq = (HttpWebRequest)HttpWebRequest.Create(InterfaceURL);
@@ -167,12 +161,12 @@ namespace SearchHotelPrice.Controls
             HttpWReq.Headers["Accept-Encoding"] = "gzip";
             HttpWReq.Method = "POST";
 
-
             // Sending the request to the server
             HttpWReq.Timeout = 600000;
             Stream StreamData = HttpWReq.GetRequestStream();
             StreamData.Write(requestXML, 0, requestXML.Length);
             StreamData.Close();
+            
             /*
             HttpWReq.ContentType = "text/xml";
             HttpWReq.ContentLength = XMLDoc.OuterXml.Length;
@@ -185,16 +179,17 @@ namespace SearchHotelPrice.Controls
 
             XMLDoc.Save("D:\\request.xml");
             */
+
+
+
             //Get response
             HttpWebResponse HttpWRes = (HttpWebResponse)HttpWReq.GetResponse();
             Stream receiveStream = HttpWRes.GetResponseStream();
 
             StreamReader reader = new StreamReader(receiveStream);
             // Read the content.
-            //reader.en
+
             string responseFromServer = reader.ReadToEnd();
-            //XmlDocument xml = new XmlDocument();
-            //xml.
         }
     }
 }
