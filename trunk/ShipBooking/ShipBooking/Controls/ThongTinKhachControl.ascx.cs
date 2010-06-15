@@ -17,8 +17,29 @@ namespace ShipBooking.Controls
 {
     public partial class ThongTinKhachControl : System.Web.UI.UserControl
     {
+        string loaichuyen;
+        string noidi;
+        string noiden;
+        string ngaydi;
+        string ngayve;
+        string machang;
+        string MaHanhTrinh;
+        string LoaiVe;
+        string SoVe;
+        public static List<HanhKhach> listKhach = new List<HanhKhach>();
+        HanhTrinh hanhtrinh = new HanhTrinh();
         protected void Page_Load(object sender, EventArgs e)
         {
+            loaichuyen = Request.QueryString["LoaiChuyen"];
+            noidi = Request.QueryString["NoiDi"];
+            noiden = Request.QueryString["NoiDen"];
+            ngaydi = Request.QueryString["NgayDi"];
+            ngayve = Request.QueryString["NgayVe"];
+            machang = Request.QueryString["MaChang"];
+            MaHanhTrinh = Request.QueryString["MaHanhTrinh"];
+            LoaiVe = Request.QueryString["LoaiVe"];
+            SoVe = Request.QueryString["SoVe"];
+            hanhtrinh = HanhTrinhDB.GetInfo(MaHanhTrinh);
             if (!IsPostBack)
             {
                 InitControl();
@@ -29,33 +50,36 @@ namespace ShipBooking.Controls
 
         protected void FillBookingData()
         {
-            lblLoaiHanhTrinh.Text = ThongTinHanhTrinhControl.bf.LoaiChuyen;
-            lblNoiDi.Text = ThongTinHanhTrinhControl.bf.NoiDi;
-            lblNoiDen.Text = ThongTinHanhTrinhControl.bf.NoiDen;
-            lblNgayDi.Text = ThongTinHanhTrinhControl.bf.NgayDi.ToShortDateString();
-            if (ThongTinHanhTrinhControl.bf.LoaiChuyen == "Khứ hồi")
+            lblLoaiHanhTrinh.Text = loaichuyen;
+            lblNoiDi.Text = noidi;
+            lblNoiDen.Text = noiden;
+            lblNgayDi.Text = ngaydi;
+            if (loaichuyen == "Khứ hồi")
             {
                 lblNgayVeLabel.Visible = true;
                 lblNgayVe.Visible = true;
-                lblNgayVe.Text = ThongTinHanhTrinhControl.bf.NgayVe.ToShortDateString();
+                lblNgayVe.Text = ngayve;
             }
             else
             {
                 lblNgayVeLabel.Visible = false;
                 lblNgayVe.Visible = false;
             }
-            lblGioKhoiHanh.Text = ThongTinHanhTrinhControl.bf.GioKhoiHanh.ToShortTimeString();
-            lblGioDen.Text = ThongTinHanhTrinhControl.bf.GioDen.ToShortTimeString();
-            lblLoaiVe.Text = ThongTinHanhTrinhControl.bf.LoaiVe;
-            lblSLVe.Text = ThongTinHanhTrinhControl.bf.SoVe;
+            if (hanhtrinh != null)
+            {
+                lblGioKhoiHanh.Text = hanhtrinh.GioKhoiHanh.ToShortTimeString();
+                lblGioDen.Text = hanhtrinh.GioDen.ToShortTimeString();
+            }
+            lblLoaiVe.Text = LoaiVe;
+            lblSLVe.Text = SoVe;
 
             string soghe = "";
-            for (int i = 0; i < Convert.ToInt16(ThongTinHanhTrinhControl.bf.SoVe); i++)
+            for (int i = 0; i < Convert.ToInt16(SoVe); i++)
             {
                 if (BookingStep1Control.ListSoGhe[i].Trim() != "")
                 {
                     soghe = soghe + BookingStep1Control.ListSoGhe[i].Trim();
-                    if ((i + 1) < Convert.ToInt16(ThongTinHanhTrinhControl.bf.SoVe))
+                    if ((i + 1) < Convert.ToInt16(SoVe))
                     {
                         soghe = soghe + ", ";
                     }
@@ -73,8 +97,8 @@ namespace ShipBooking.Controls
             DropDownList[] ddl = new DropDownList[100];
             HanhKhach khach;
             
-            slKhach = Convert.ToInt16(ThongTinHanhTrinhControl.bf.SoVe);
-            ThongTinHanhTrinhControl.listKhach = new List<HanhKhach>();
+            slKhach = Convert.ToInt16(SoVe);
+            listKhach = new List<HanhKhach>();
             for (int i = 1; i <= slKhach; i++)
             {
                 strTextBoxID = "txtHoTen" + i.ToString();
@@ -94,7 +118,7 @@ namespace ShipBooking.Controls
                     khach.MaBF = "";
                     khach.GiaTien = TinhGiaVe(ddl[i].SelectedValue.Trim());
 
-                    ThongTinHanhTrinhControl.listKhach.Add(khach);
+                    listKhach.Add(khach);
                     khach = null;
                 }
             }
@@ -126,14 +150,26 @@ namespace ShipBooking.Controls
             {
                 GetHanhKhachData();
                 TinhTongTien();
-                Response.Redirect("DatVe_Step2.aspx");
+
+                string urlValue = "";
+                urlValue = "LoaiChuyen=" + loaichuyen + "&"
+                        + "NoiDi=" + noidi + "&"
+                        + "NoiDen=" + noiden + "&"
+                        + "NgayDi=" + ngaydi + "&"
+                        + "NgayVe=" + ngayve + "&"
+                        + "MaChang=" + machang + "&"
+                        + "MaHanhTrinh=" + MaHanhTrinh + "&"
+                        + "LoaiVe=" + LoaiVe + "&"
+                        + "SoVe=" + SoVe + "&"
+                        + "GiaTien=" + TinhTongTien();
+                Response.Redirect("DatVe_Step2.aspx?" + urlValue);
             }
         }
 
         protected bool CheckValidData()
         {
             bool isValid = false;
-            int slKhach = Convert.ToInt16(ThongTinHanhTrinhControl.bf.SoVe);
+            int slKhach = Convert.ToInt16(SoVe);
             TextBox[] textBox = new TextBox[15];
             string control = "";
             for (int i = 1; i <= slKhach; i++)
@@ -160,7 +196,7 @@ namespace ShipBooking.Controls
 
         protected void SetVisibleHanhKhachDataControl()
         {
-            int slKhach = Convert.ToInt16(ThongTinHanhTrinhControl.bf.SoVe);
+            int slKhach = Convert.ToInt16(SoVe);
             Panel[] panel = new Panel[100];
             string control = "";
             for (int i = 1; i <= slKhach; i++)
@@ -177,18 +213,18 @@ namespace ShipBooking.Controls
         protected string TinhGiaVe(string dotuoikhach)
         {
             string strGiave = "";
-            if (ThongTinHanhTrinhControl.bf.LoaiChuyen == "Khứ hồi")
+            if (loaichuyen == "Khứ hồi")
             {
                 long giamgia = 0;
                 long giave = 0;
-                if (ThongTinHanhTrinhControl.bf.LoaiVe == "Hạng thường")
+                if (LoaiVe == "Hạng thường")
                 {
                     if (dotuoikhach == "TreSoSinh")
                     {
                         try
                         {
-                            giave = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm1.Trim());
-                            giamgia = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiamGiaKhuHoi.Trim());
+                            giave = Convert.ToInt64(hanhtrinh.GiaVeTreEm1);
+                            giamgia = Convert.ToInt64(hanhtrinh.GiamGiaKhuHoi);
                         }
                         catch
                         {
@@ -201,8 +237,8 @@ namespace ShipBooking.Controls
                     {
                         try
                         {
-                            giave = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon1.Trim());
-                            giamgia = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiamGiaKhuHoi.Trim());
+                            giave = Convert.ToInt64(hanhtrinh.GiaVeNguoiLon1);
+                            giamgia = Convert.ToInt64(hanhtrinh.GiamGiaKhuHoi);
                         }
                         catch
                         {
@@ -212,14 +248,14 @@ namespace ShipBooking.Controls
                         strGiave = giave.ToString();
                     }
                 }
-                else if (ThongTinHanhTrinhControl.bf.LoaiVe == "Hạng doanh nhân")
+                else if (LoaiVe == "Hạng doanh nhân")
                 {
                     if (dotuoikhach == "TreSoSinh")
                     {
                         try
                         {
-                            giave = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm2.Trim());
-                            giamgia = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiamGiaKhuHoi.Trim());
+                            giave = Convert.ToInt64(hanhtrinh.GiaVeTreEm2);
+                            giamgia = Convert.ToInt64(hanhtrinh.GiamGiaKhuHoi);
                         }
                         catch
                         {
@@ -232,8 +268,8 @@ namespace ShipBooking.Controls
                     {
                         try
                         {
-                            giave = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon2.Trim());
-                            giamgia = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiamGiaKhuHoi.Trim());
+                            giave = Convert.ToInt64(hanhtrinh.GiaVeNguoiLon2);
+                            giamgia = Convert.ToInt64(hanhtrinh.GiamGiaKhuHoi);
                         }
                         catch
                         {
@@ -249,8 +285,8 @@ namespace ShipBooking.Controls
                     {
                         try
                         {
-                            giave = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm3.Trim());
-                            giamgia = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiamGiaKhuHoi.Trim());
+                            giave = Convert.ToInt64(hanhtrinh.GiaVeTreEm3);
+                            giamgia = Convert.ToInt64(hanhtrinh.GiamGiaKhuHoi);
                         }
                         catch
                         {
@@ -263,8 +299,8 @@ namespace ShipBooking.Controls
                     {
                         try
                         {
-                            giave = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon3.Trim());
-                            giamgia = Convert.ToInt64(SearchHanhTrinhResultControl.hanhtrinh.GiamGiaKhuHoi.Trim());
+                            giave = Convert.ToInt64(hanhtrinh.GiaVeNguoiLon3);
+                            giamgia = Convert.ToInt64(hanhtrinh.GiamGiaKhuHoi);
                         }
                         catch
                         {
@@ -277,51 +313,54 @@ namespace ShipBooking.Controls
             }
             else
             {
-                if (ThongTinHanhTrinhControl.bf.LoaiVe == "Hạng thường")
+                if (LoaiVe == "Hạng thường")
                 {
                     if (dotuoikhach == "TreSoSinh")
                     {
-                        strGiave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm1;
+                        strGiave = hanhtrinh.GiaVeTreEm1;
                     }
                     else
                     {
-                        strGiave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon1;
+                        strGiave = hanhtrinh.GiaVeNguoiLon1;
                     }
                 }
-                else if (ThongTinHanhTrinhControl.bf.LoaiVe == "Hạng doanh nhân")
+                else if (LoaiVe == "Hạng doanh nhân")
                 {
                     if (dotuoikhach == "TreSoSinh")
                     {
-                        strGiave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm2;
+                        strGiave = hanhtrinh.GiaVeTreEm2;
                     }
                     else
                     {
-                        strGiave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon2;
+                        strGiave = hanhtrinh.GiaVeNguoiLon2;
                     }
                 }
                 else
                 {
                     if (dotuoikhach == "TreSoSinh")
                     {
-                        strGiave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeTreEm3;
+                        strGiave = hanhtrinh.GiaVeTreEm3;
                     }
                     else
                     {
-                        strGiave = SearchHanhTrinhResultControl.hanhtrinh.GiaVeNguoiLon3;
+                        strGiave = hanhtrinh.GiaVeNguoiLon3;
                     }
                 }
             }
             return strGiave.Trim();
         }
 
-        protected void TinhTongTien()
+        protected string TinhTongTien()
         {
+            string tongtien;
             long sum = 0;
-            for (int i = 0; i < ThongTinHanhTrinhControl.listKhach.Count; i++)
+            for (int i = 0; i < listKhach.Count; i++)
             {
-                sum += Convert.ToInt64(ThongTinHanhTrinhControl.listKhach[i].GiaTien);
+                sum += Convert.ToInt64(listKhach[i].GiaTien);
             }
-            ThongTinHanhTrinhControl.bf.GiaTien = sum.ToString();
+            tongtien = sum.ToString();
+            //ThongTinHanhTrinhControl.bf.GiaTien = sum.ToString();
+            return tongtien;
         }
 
         protected string TaoMaHK(string ten)

@@ -25,6 +25,7 @@ namespace ShipBooking.Controls
             if (!IsPostBack)
             {
                 InitControl();
+                InitTieuChiTimKiemControl();
             }
         }
 
@@ -233,6 +234,7 @@ namespace ShipBooking.Controls
             txtKeyword.Text = "";
             txtNgay1.Text = "";
             txtKeyword.Text = "";
+            rblTieuChiTimKiem.SelectedIndex = 0;
             grwResultAllBF.Visible = false;
         }
 
@@ -255,7 +257,6 @@ namespace ShipBooking.Controls
             DateTime dt;
             string cmd = "SELECT *FROM tblBookingFile";
             DataSet ds = new DataSet();
-            DataControlField field;
             
             ds = ShipBookingData.FillDataset(cmd);
             grwResultAllBF.DataSource = ds.Tables[0];
@@ -282,6 +283,11 @@ namespace ShipBooking.Controls
         }
 
         protected void rblTieuChiTimKiem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            InitTieuChiTimKiemControl();
+        }
+
+        protected void InitTieuChiTimKiemControl()
         {
             if (rblTieuChiTimKiem.SelectedValue == "TenKhach")
             {

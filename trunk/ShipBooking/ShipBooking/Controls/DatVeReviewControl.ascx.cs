@@ -16,8 +16,32 @@ namespace ShipBooking.Controls
 {
     public partial class DatVeReviewControl : System.Web.UI.UserControl
     {
+        string loaichuyen;
+        string noidi;
+        string noiden;
+        string ngaydi;
+        string ngayve;
+        string machang;
+        string MaHanhTrinh;
+        string LoaiVe;
+        string SoVe;
+        string GiaTien;
+
+        BookingFile booking = new BookingFile();
+        HanhTrinh hanhtrinh = new HanhTrinh();
         protected void Page_Load(object sender, EventArgs e)
         {
+            loaichuyen = Request.QueryString["LoaiChuyen"];
+            noidi = Request.QueryString["NoiDi"];
+            noiden = Request.QueryString["NoiDen"];
+            ngaydi = Request.QueryString["NgayDi"];
+            ngayve = Request.QueryString["NgayVe"];
+            machang = Request.QueryString["MaChang"];
+            MaHanhTrinh = Request.QueryString["MaHanhTrinh"];
+            LoaiVe = Request.QueryString["LoaiVe"];
+            SoVe = Request.QueryString["SoVe"];
+            GiaTien = Request.QueryString["GiaTien"];
+            hanhtrinh = HanhTrinhDB.GetInfo(MaHanhTrinh);
             if (!IsPostBack)
             {
                 FillBookingData();
@@ -31,44 +55,47 @@ namespace ShipBooking.Controls
             SaveNguoiNhanVeData();
             SaveBookingFileData();
             SaveHanhKhachData();
-            Response.Redirect("KetThucBooking.aspx");
+            Response.Redirect("KetThucBooking.aspx?MaBF=" + booking.MaBF);
         }
 
         protected void FillBookingData()
         {
-            lblLoaiHanhTrinh.Text = ThongTinHanhTrinhControl.bf.LoaiChuyen;
-            lblNoiDi.Text = ThongTinHanhTrinhControl.bf.NoiDi;
-            lblNoiDen.Text = ThongTinHanhTrinhControl.bf.NoiDen;
-            lblNgayDi.Text = ThongTinHanhTrinhControl.bf.NgayDi.ToShortDateString();
-            if (ThongTinHanhTrinhControl.bf.LoaiChuyen == "Khứ hồi")
+            lblLoaiHanhTrinh.Text = loaichuyen;
+            lblNoiDi.Text = noidi;
+            lblNoiDen.Text = noiden;
+            lblNgayDi.Text = ngaydi;
+            if (loaichuyen == "Khứ hồi")
             {
                 lblNgayVeLabel.Visible = true;
                 lblNgayVe.Visible = true;
-                lblNgayVe.Text = ThongTinHanhTrinhControl.bf.NgayVe.ToShortDateString();
+                lblNgayVe.Text = ngayve;
             }
             else
             {
                 lblNgayVeLabel.Visible = false;
                 lblNgayVe.Visible = false;
             }
-            lblGioKhoiHanh.Text = ThongTinHanhTrinhControl.bf.GioKhoiHanh.ToShortTimeString();
-            lblGioDen.Text = ThongTinHanhTrinhControl.bf.GioDen.ToShortTimeString();
-            lblLoaiVe.Text = ThongTinHanhTrinhControl.bf.LoaiVe;
-            lblSLVe.Text = ThongTinHanhTrinhControl.bf.SoVe;
+            if (hanhtrinh != null)
+            {
+                lblGioKhoiHanh.Text = hanhtrinh.GioKhoiHanh.ToShortTimeString();
+                lblGioDen.Text = hanhtrinh.GioDen.ToShortTimeString();
+            }
+            lblLoaiVe.Text = LoaiVe;
+            lblSLVe.Text = SoVe;
             string soghe = "";
-            for (int i = 0; i < Convert.ToInt16(ThongTinHanhTrinhControl.bf.SoVe); i++)
+            for (int i = 0; i < Convert.ToInt16(SoVe); i++)
             {
                 if (BookingStep1Control.ListSoGhe[i].Trim() != "")
                 {
                     soghe = soghe + BookingStep1Control.ListSoGhe[i].Trim();
-                    if ((i + 1) < Convert.ToInt16(ThongTinHanhTrinhControl.bf.SoVe))
+                    if ((i + 1) < Convert.ToInt16(SoVe))
                     {
                         soghe = soghe + ", ";
                     }
                 }
             }
             lblSoGhe.Text = soghe;
-            lblTongGiaVe.Text = ThongTinHanhTrinhControl.bf.GiaTien;
+            lblTongGiaVe.Text = GiaTien;
         }
 
         protected void SetHanhKhachData()
@@ -81,13 +108,13 @@ namespace ShipBooking.Controls
 
             DataSet ds = new DataSet();
             ds.Tables.Add(dt);
-            for (int i = 0; i < ThongTinHanhTrinhControl.listKhach.Count(); i++)
+            for (int i = 0; i < ThongTinKhachControl.listKhach.Count(); i++)
             {
                 ds.Tables[0].Rows.Add();
                 ds.Tables[0].Rows[i].SetField("Stt", i + 1);
-                ds.Tables[0].Rows[i].SetField("TenKhach", ThongTinHanhTrinhControl.listKhach[i].Ten);
-                ds.Tables[0].Rows[i].SetField("LoaiTuoi", ThongTinHanhTrinhControl.listKhach[i].DoTuoi);
-                ds.Tables[0].Rows[i].SetField("GiaVe", ThongTinHanhTrinhControl.listKhach[i].GiaTien.Trim() + " VNĐ");
+                ds.Tables[0].Rows[i].SetField("TenKhach", ThongTinKhachControl.listKhach[i].Ten);
+                ds.Tables[0].Rows[i].SetField("LoaiTuoi", ThongTinKhachControl.listKhach[i].DoTuoi);
+                ds.Tables[0].Rows[i].SetField("GiaVe", ThongTinKhachControl.listKhach[i].GiaTien.Trim() + " VNĐ");
             }
             grvHanhKhach.DataSource = ds.Tables[0];
             grvHanhKhach.DataBind();
@@ -111,15 +138,37 @@ namespace ShipBooking.Controls
             Random rdm = new Random();
             bfID = "BF" + rdm.Next(10000, 99999).ToString().Trim();
 
-            ThongTinHanhTrinhControl.bf.MaBF = bfID.Trim();
-            ThongTinHanhTrinhControl.bf.ThanhToan = DatVe_Step2.NguoiNhan.ThanhToan.Trim();
-            ThongTinHanhTrinhControl.bf.MaNguoiNhan = DatVe_Step2.NguoiNhan.MaNguoiNhan.Trim();
+            booking.GiaTien = GiaTien;
+            booking.GioDen = hanhtrinh.GioDen;
+            booking.GioKhoiHanh = hanhtrinh.GioKhoiHanh;
+            booking.LoaiChuyen = loaichuyen;
+            booking.LoaiVe = LoaiVe;
+            booking.MaBF = bfID.Trim();
+            booking.MaHanhTrinh = MaHanhTrinh;
+            booking.MaNguoiNhan = DatVe_Step2.NguoiNhan.MaNguoiNhan.Trim();
+            booking.NgayDi = DateTime.Parse(ngaydi);
+            if (loaichuyen == "Khứ hồi")
+            {
+                booking.NgayVe = DateTime.Parse(ngayve);
+            }
+            else
+            {
+                booking.NgayVe = DateTime.Parse(ngaydi);
+            }
+            booking.NoiDen = noiden;
+            booking.NoiDi = noidi;
+            booking.OpenChecking = false;
+            booking.SoGhe = "0";
+            booking.SoVe = SoVe;
+            booking.TenKhach = "";
+            booking.ThanhToan = DatVe_Step2.NguoiNhan.ThanhToan.Trim();
+            booking.ThoiGian = "Buổi sáng";
         }
 
         protected void SaveBookingFileData()
         {
             GetBookingFile();
-            BookingFileDB.Insert(ThongTinHanhTrinhControl.bf);
+            BookingFileDB.Insert(booking);
         }
 
         protected void SaveNguoiNhanVeData()
@@ -129,10 +178,10 @@ namespace ShipBooking.Controls
 
         protected void SaveHanhKhachData()
         {
-            for (int i = 0; i < ThongTinHanhTrinhControl.listKhach.Count(); i++)
+            for (int i = 0; i < ThongTinKhachControl.listKhach.Count(); i++)
             {
-                ThongTinHanhTrinhControl.listKhach[i].MaBF = ThongTinHanhTrinhControl.bf.MaBF.ToUpper().Trim(); 
-                HanhKhachDB.Insert(ThongTinHanhTrinhControl.listKhach[i]);
+                ThongTinKhachControl.listKhach[i].MaBF = booking.MaBF.ToUpper().Trim();
+                HanhKhachDB.Insert(ThongTinKhachControl.listKhach[i]);
             }
         }
     }

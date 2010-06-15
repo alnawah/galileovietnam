@@ -19,9 +19,7 @@
     <tr>
         <td class="banner_logo_style">
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:ImageButton ID="imgHome" runat="server" 
-            ImageUrl="~/Images/galileo_logo.jpg" style="text-align: center" 
-            Width="179px" Height="50px" onclick="imgHome_Click"/>
+            <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/galileo_logo.jpg" Width="179px" Height="50px" />
         </td>
         <td class="banner_headpicture_style">
             <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/banner_blue.png" 

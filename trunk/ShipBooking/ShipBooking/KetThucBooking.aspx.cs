@@ -16,22 +16,20 @@ namespace ShipBooking
 {
     public partial class KetThucBooking : System.Web.UI.Page
     {
+        string MaBF;
         protected void Page_Load(object sender, EventArgs e)
         {
+            MaBF = Request.QueryString["MaBF"];
             if (!IsPostBack)
             {
-                lblMaBF.Text = ThongTinHanhTrinhControl.bf.MaBF.ToUpper().Trim();
+                lblMaBF.Text = MaBF;
                 ReleaseData();
             }
         }
 
         protected void ReleaseData()
         {
-            ThongTinHanhTrinhControl.bf = null;
-            ThongTinHanhTrinhControl.gMachang = null;
-            ThongTinHanhTrinhControl.gNgaytrongtuan = null;
-            ThongTinHanhTrinhControl.listKhach = null;
-            SearchHanhTrinhResultControl.hanhtrinh = null;
+           
         }
     }
 }
