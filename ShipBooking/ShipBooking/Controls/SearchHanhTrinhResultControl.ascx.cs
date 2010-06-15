@@ -15,9 +15,22 @@ namespace ShipBooking.Controls
 {
     public partial class SearchHanhTrinhResultControl : System.Web.UI.UserControl
     {
-        public static HanhTrinh hanhtrinh = new HanhTrinh();
+        string loaichuyen;
+        string noidi;
+        string noiden;
+        string ngaydi;
+        string ngayve;
+        string machang;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            loaichuyen = Request.QueryString["LoaiChuyen"];
+            noidi = Request.QueryString["NoiDi"];
+            noiden = Request.QueryString["NoiDen"];
+            ngaydi = Request.QueryString["NgayDi"];
+            ngayve = Request.QueryString["NgayVe"];
+            machang = Request.QueryString["MaChang"];
+
             if (!IsPostBack)
             {
                 FillSearchCondition();
@@ -27,15 +40,15 @@ namespace ShipBooking.Controls
 
         protected void FillSearchCondition()
         {
-            lblLoaiChuyen.Text = ThongTinHanhTrinhControl.bf.LoaiChuyen.Trim();
-            lblNoiDi.Text = ThongTinHanhTrinhControl.bf.NoiDi.Trim();
-            lblNoiDen.Text = ThongTinHanhTrinhControl.bf.NoiDen.Trim();
-            lblNgayDi.Text = ThongTinHanhTrinhControl.bf.NgayDi.ToShortDateString();
-            if (ThongTinHanhTrinhControl.bf.LoaiChuyen == "Khứ hồi")
+            lblLoaiChuyen.Text = loaichuyen;
+            lblNoiDi.Text = noidi;
+            lblNoiDen.Text = noiden;
+            lblNgayDi.Text = ngaydi;
+            if (loaichuyen == "Khứ hồi")
             {
                 lblNgayVeLabel.Visible = true;
                 lblNgayVe.Visible = true;
-                lblNgayVe.Text = ThongTinHanhTrinhControl.bf.NgayVe.ToShortDateString();
+                lblNgayVe.Text = ngayve;
             }
             else
             {
@@ -46,8 +59,9 @@ namespace ShipBooking.Controls
 
         protected void FillSearchResultToGridView()
         {
+            string ngaytrongtuan = GetNgayTrongTuan(DateTime.Parse(ngaydi));
             DataSet ds = new DataSet();
-            ds = HanhTrinhDB.GetDataSetHanhTrinhByChangAndNgayTrongTuan(ThongTinHanhTrinhControl.gMachang, ThongTinHanhTrinhControl.gNgaytrongtuan);
+            ds = HanhTrinhDB.GetDataSetHanhTrinhByChangAndNgayTrongTuan(machang, ngaytrongtuan);
             grvTinhTrangCho.DataSource = ds;
             grvTinhTrangCho.DataBind();
             DateTime dt;
@@ -70,16 +84,65 @@ namespace ShipBooking.Controls
             }
         }
 
+        protected string GetNgayTrongTuan(DateTime dt)
+        {
+            string ngaytrongtuan = "";
+
+            switch (dt.DayOfWeek)
+            {
+                case DayOfWeek.Monday:
+                    {
+                        ngaytrongtuan = "Thứ hai";
+                    }
+                    break;
+                case DayOfWeek.Tuesday:
+                    {
+                        ngaytrongtuan = "Thứ ba";
+                    }
+                    break;
+                case DayOfWeek.Wednesday:
+                    {
+                        ngaytrongtuan = "Thứ tư";
+                    }
+                    break;
+                case DayOfWeek.Thursday:
+                    {
+                        ngaytrongtuan = "Thứ năm";
+                    }
+                    break;
+                case DayOfWeek.Friday:
+                    {
+                        ngaytrongtuan = "Thứ sáu";
+                    }
+                    break;
+                case DayOfWeek.Saturday:
+                    {
+                        ngaytrongtuan = "Thứ bảy";
+                    }
+                    break;
+                case DayOfWeek.Sunday:
+                    {
+                        ngaytrongtuan = "Chủ nhật";
+                    }
+                    break;
+                default:
+                    break;
+            }
+            return ngaytrongtuan;
+        }
+
         protected void grvTinhTrangCho_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string mahanhtrinh = "";
-            mahanhtrinh = grvTinhTrangCho.Rows[grvTinhTrangCho.SelectedIndex].Cells[5].Text.Trim();
-            hanhtrinh = HanhTrinhDB.GetInfo(mahanhtrinh);
-            ThongTinHanhTrinhControl.bf.MaHanhTrinh = mahanhtrinh;
-            if (hanhtrinh != null)
-            {
-                Response.Redirect("BookingSep1.aspx");
-            }
+            string urlValue = "";
+            urlValue = "LoaiChuyen=" + loaichuyen + "&"
+                    + "NoiDi=" + noidi + "&"
+                    + "NoiDen=" + noiden + "&"
+                    + "NgayDi=" + ngaydi + "&"
+                    + "NgayVe=" + ngayve + "&"
+                    + "MaChang=" + machang + "&"
+                    + "MaHanhTrinh=" + grvTinhTrangCho.Rows[grvTinhTrangCho.SelectedIndex].Cells[5].Text.Trim();
+
+            Response.Redirect("BookingSep1.aspx?" + urlValue);
         }
 
         protected void btnBack_Click(object sender, EventArgs e)

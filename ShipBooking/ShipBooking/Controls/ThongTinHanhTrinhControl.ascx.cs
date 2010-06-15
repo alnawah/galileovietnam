@@ -18,11 +18,6 @@ namespace ShipBooking.Controls
 {
     public partial class ThongTinHanhTrinhControl : System.Web.UI.UserControl
     {
-        public static BookingFile bf;
-        public static List<HanhKhach> listKhach = new List<HanhKhach>();
-        public static string gMachang = "";
-        public static string gNgaytrongtuan = "";
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -81,14 +76,12 @@ namespace ShipBooking.Controls
                         else
                         {
                             lblMsg.Text = "";
-                            GetBookingFile();
                             SearchHanhTrinh();
                         }
                     }
                     else
                     {
                         lblMsg.Text = "";
-                        GetBookingFile();
                         SearchHanhTrinh();
                     }
                 }
@@ -154,11 +147,16 @@ namespace ShipBooking.Controls
 
         protected void SearchHanhTrinh()
         {
-            gMachang = GetMaChang();
-            gNgaytrongtuan = GetNgayTrongTuan(DateTime.Parse(txtNgayDi.Text.Trim()));
-            if (gMachang != "")
+            if (GetMaChang() != "")
             {
-                Response.Redirect("SearchHanhTrinhResult.aspx");
+                string urlValue = "";
+                urlValue = "LoaiChuyen=" + rblLoaiHanhTrinh.SelectedItem.Text.Trim() + "&"
+                        + "NoiDi=" + ddlNoiDi.SelectedItem.Text.Trim() + "&"
+                        + "NoiDen=" + ddlNoiDen.SelectedItem.Text.Trim() + "&"
+                        + "NgayDi=" + txtNgayDi.Text.Trim() + "&"
+                        + "NgayVe=" + txtNgayVe.Text.Trim() + "&"
+                        + "MaChang=" + GetMaChang();
+                Response.Redirect("SearchHanhTrinhResult.aspx?" + urlValue);
             }
         }
 
@@ -173,81 +171,6 @@ namespace ShipBooking.Controls
             strHanhTrinh = strNoiDi.Trim() + strNoiDen.Trim();
 
             return strHanhTrinh;
-        }
-
-        protected string GetNgayTrongTuan(DateTime dt)
-        {
-            string ngaytrongtuan = "";
-
-            switch (dt.DayOfWeek)
-            {
-                case DayOfWeek.Monday:
-                    {
-                        ngaytrongtuan = "Thứ hai";
-                    }
-                    break;
-                case DayOfWeek.Tuesday:
-                    {
-                        ngaytrongtuan = "Thứ ba";
-                    }
-                    break;
-                case DayOfWeek.Wednesday:
-                    {
-                        ngaytrongtuan = "Thứ tư";
-                    }
-                    break;
-                case DayOfWeek.Thursday:
-                    {
-                        ngaytrongtuan = "Thứ năm";
-                    }
-                    break;
-                case DayOfWeek.Friday:
-                    {
-                        ngaytrongtuan = "Thứ sáu";
-                    }
-                    break;
-                case DayOfWeek.Saturday:
-                    {
-                        ngaytrongtuan = "Thứ bảy";
-                    }
-                    break;
-                case DayOfWeek.Sunday:
-                    {
-                        ngaytrongtuan = "Chủ nhật";
-                    }
-                    break;
-                default:
-                    break;
-            }
-            return ngaytrongtuan;
-        }
-
-        protected void GetBookingFile()
-        {
-            bf = new BookingFile();
-            bf.MaBF = "";
-            bf.LoaiChuyen = rblLoaiHanhTrinh.SelectedItem.Text;
-            bf.NoiDi = ddlNoiDi.SelectedItem.Text.Trim();
-            bf.NoiDen = ddlNoiDen.SelectedItem.Text.Trim();
-            bf.NgayDi = DateTime.Parse(txtNgayDi.Text.Trim());
-            if (rblLoaiHanhTrinh.SelectedIndex == 0)
-            {
-                bf.NgayVe = bf.NgayDi;
-            }
-            else
-            {
-                bf.NgayVe = DateTime.Parse(txtNgayVe.Text.Trim());
-            }
-            bf.ThoiGian = "Buổi sáng";
-            bf.OpenChecking = true;
-            bf.LoaiVe = "";
-            bf.SoGhe = "";
-            bf.GiaTien = "";
-            bf.ThanhToan = "";
-            bf.MaNguoiNhan = "";
-            bf.MaHanhTrinh = "";
-            //bf.GioKhoiHanh = "";
-            //bf.GioDen = "";
         }
 
         protected void rblLoaiHanhTrinh_SelectedIndexChanged(object sender, EventArgs e)
