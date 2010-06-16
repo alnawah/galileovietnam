@@ -37,7 +37,7 @@
             <table class="banner_style_master">
                 <tr>
                     <td class="banner_menu_style" colspan="2" height="21px">
-		               &nbsp;<asp:LinkButton ID="LinkButton1" PostBackUrl="~/Default.aspx" runat="server" Font-Underline="False" 
+		               &nbsp;<asp:LinkButton ID="LinkButton1" PostBackUrl="~/Admin_Functions.aspx" runat="server" Font-Underline="False" 
                             Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Trang chủ</asp:LinkButton>&nbsp;|
                        <asp:LinkButton ID="LinkButton2" PostBackUrl="~/Admin_BookingFile.aspx" runat="server" Font-Underline="False" 
                             Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Quản lý booking</asp:LinkButton>&nbsp;|

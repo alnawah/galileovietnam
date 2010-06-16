@@ -482,7 +482,7 @@
 </asp:Panel>
 <p style="text-align: center">
     <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
-        style="text-align: center" Text="Tiếp tục" />
+        style="text-align: center" Text="Tiếp tục" Height="26px" />
 </p>
 <p style="text-align: center">
     &nbsp;</p>

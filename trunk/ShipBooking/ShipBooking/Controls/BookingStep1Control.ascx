@@ -178,7 +178,7 @@
                             
 <p style="text-align: center">
     <asp:Button ID="btnContinue" runat="server" Text="Tiếp tục" Width="84px" 
-        onclick="btnContinue_Click" />
+        onclick="btnContinue_Click" Height="26px" />
 </p>
 
                             

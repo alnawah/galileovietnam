@@ -219,6 +219,6 @@
 
     <p style="text-align: center">
         <asp:Button ID="btnBack" runat="server" Text="Quay lại" 
-            onclick="btnBack_Click" />
+            onclick="btnBack_Click" Height="26px" />
     </p>
 </center>
