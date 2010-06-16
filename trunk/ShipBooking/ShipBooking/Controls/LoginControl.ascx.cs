@@ -10,6 +10,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
+using ShipBooking.Library;
 
 namespace ShipBooking.Controls
 {
@@ -24,7 +25,7 @@ namespace ShipBooking.Controls
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text.ToLower().Trim() == "admin" && txtPassword.Text == "admin")
+            if (CheckPassword() == true)
             {
                 bLogin = true;
                 Response.Redirect("Admin_Functions.aspx");
@@ -35,6 +36,24 @@ namespace ShipBooking.Controls
                 bLogin = false;
             }
         }
+
+        protected bool CheckPassword()
+        {
+            bool isValid = false;
+            string cmd = "SELECT *FROM tblUser WHERE UserName='" + txtUserName.Text.Trim() + "' AND Password='" + txtPassword.Text.Trim() + "'";
+            DataSet ds = new DataSet();
+            ds = ExecuteDataUtilities.FillDataset(cmd);
+            if (ds.Tables[0].Rows.Count == 0)
+            {
+                isValid = false;
+            }
+            else
+            {
+                isValid = true;
+            }
+            return isValid;
+        }
+
 
         protected void InitData()
         {
