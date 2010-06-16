@@ -28,6 +28,7 @@ namespace ShipBooking.Library
         public static void OpenData()
         {
             string stringConnection = "Data Source=112.78.2.84,1455;Initial Catalog=smartgate_vn_sb;Persist Security Info=True;User ID=smartgate_vn_sb;Password=MKfb8h5?lH9g";
+            //string stringConnection = "Data Source=.\\SQLEXPRESS;AttachDbFilename=D:\\Working\\GalileoData\\ShipBooking\\ShipBooking\\App_Data\\ShipBooking.mdf;Integrated Security=True;User Instance=True";
             try
             {
                 con = new SqlConnection(stringConnection);

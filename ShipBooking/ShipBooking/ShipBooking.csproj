@@ -110,6 +110,13 @@
     <Compile Include="BookingSep1.aspx.designer.cs">
       <DependentUpon>BookingSep1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\AdminBookingFileControl.ascx.cs">
       <DependentUpon>AdminBookingFileControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -366,8 +373,6 @@
     <Content Include="DatVe_Review.aspx" />
     <Content Include="DatVe_Step2.aspx" />
     <Content Include="Images\admin.jpg" />
-    <Content Include="Images\admin_quan_ly_booking.png" />
-    <Content Include="Images\admin_quan_ly_hanhtrinh.png" />
     <Content Include="Images\bang_gia_ve.png" />
     <Content Include="Images\banner.png" />
     <Content Include="Images\banner1.png" />
@@ -396,6 +401,7 @@
     <Content Include="Admin_HanhTrinh.aspx" />
     <Content Include="Admin_Master.Master" />
     <Content Include="BookingSep1.aspx" />
+    <Content Include="ChangePassword.aspx" />
     <Content Include="Controls\AdminDetailBookingControl.ascx" />
     <Content Include="Controls\AdminHanhTrinhControl.ascx" />
     <Content Include="Controls\BookingStep1Control.ascx" />
@@ -404,12 +410,18 @@
     <Content Include="Controls\ThongTinHanhTrinhControl.ascx" />
     <Content Include="Controls\XemLichChuyenControl.ascx" />
     <Content Include="DetailBooking.aspx" />
+    <Content Include="Images\dat_ve_button.png" />
     <Content Include="Images\ket_qua_tim_kiem_hanhtrinh.png" />
     <Content Include="Images\ket_thuc_booking.png" />
+    <Content Include="Images\quan_ly_booking_button.png" />
+    <Content Include="Images\quan_ly_hanh_trinh_button.png" />
+    <Content Include="Images\quan_ly_tau_thuy_button.png" />
+    <Content Include="Images\quan_ly_thanh_pho_button.png" />
     <Content Include="Images\tao_booking_step.png" />
     <Content Include="Images\thong_tin_khach.png" />
     <Content Include="Images\tim_kiem_hanh_trinh.png" />
     <Content Include="Images\xem_lich_chuyen.png" />
+    <Content Include="Images\xem_lich_chuyen_button.png" />
     <Content Include="SearchHanhTrinhResult.aspx" />
     <Content Include="ThongTinHanhTrinh.aspx" />
     <Content Include="XemLichChuyen.aspx" />

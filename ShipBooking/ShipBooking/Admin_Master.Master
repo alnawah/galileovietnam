@@ -47,6 +47,8 @@
                             Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Quản lý thành phố</asp:LinkButton>&nbsp;|
                        <asp:LinkButton ID="LinkButton5" PostBackUrl="~/Admin_Tau.aspx" runat="server" Font-Underline="False" 
                             Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Quản lý tàu thủy</asp:LinkButton>&nbsp;|     
+                        <asp:LinkButton ID="LinkButton6" PostBackUrl="~/ChangePassword.aspx" runat="server" Font-Underline="False" 
+                            Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Đổi mật khẩu</asp:LinkButton>&nbsp;|     
                        <asp:LinkButton ID="lbtnDangNhap" PostBackUrl="~/Login.aspx" runat="server" Font-Underline="False" 
                             Font-Bold="True" Font-Names="Arial" Font-Size="Small" ForeColor="#FFFFCC">Quản lý thông tin</asp:LinkButton>
 		            </td>

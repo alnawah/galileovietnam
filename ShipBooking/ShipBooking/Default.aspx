@@ -7,15 +7,15 @@
             <td>
                 <br />
                 <br />
-                <asp:ImageButton ID="imgbtnDatve" runat="server" ImageUrl="~/Images/dat_ve.png" 
-                    Width="492px" Height="65px" style="text-align: center" 
+                <asp:ImageButton ID="imgbtnDatve" runat="server" ImageUrl="~/Images/dat_ve_button.png" 
+                    Width="492px" style="text-align: center" 
                     onclick="Image3_Click" />
             </td>
         </tr>
         <tr>
             <td>
-                <asp:ImageButton ID="imgbtnXemLichChuyen" runat="server" ImageUrl="~/Images/lich_chuyen.png" 
-                    Width="492px" Height="65px" onclick="imgbtnXemLichChuyen_Click" />
+                <asp:ImageButton ID="imgbtnXemLichChuyen" runat="server" ImageUrl="~/Images/xem_lich_chuyen_button.png" 
+                    Width="492px" onclick="imgbtnXemLichChuyen_Click" />
             </td>
         </tr>
         <tr>

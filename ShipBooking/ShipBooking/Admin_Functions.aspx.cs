@@ -38,5 +38,15 @@ namespace ShipBooking
         {
             Response.Redirect("Admin_HanhTrinh.aspx");
         }
+
+        protected void imgbtnQLThanhPho_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("Admin_ThanhPho.aspx");
+        }
+
+        protected void imgbtnQLTauThuy_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("Admin_Tau.aspx");
+        }
     }
 }
