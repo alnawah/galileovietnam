@@ -27,7 +27,7 @@ namespace ShipBooking.Controls
         string MaHanhTrinh;
         HanhTrinh hanhtrinh = new HanhTrinh();
 
-        public static string[] ListSoGhe = new string[9];
+        string[] ListSoGhe = new string[9];
         protected void Page_Load(object sender, EventArgs e)
         {
             loaichuyen = Request.QueryString["LoaiChuyen"];
@@ -314,6 +314,12 @@ namespace ShipBooking.Controls
                     GetListSoGhe();
 
                     string urlValue = "";
+                    string urlListSoGhe = "";
+                    for (int i = 0; i < Convert.ToInt16(ddlSLVe.SelectedValue); i++)
+                    {
+                        urlListSoGhe += "SoGhe" + i.ToString() + "=" + ListSoGhe[i] + "&";
+                    }
+
                     urlValue = "LoaiChuyen=" + loaichuyen + "&"
                          + "NoiDi=" + noidi + "&"
                          + "NoiDen=" + noiden + "&"
@@ -322,6 +328,7 @@ namespace ShipBooking.Controls
                          + "MaChang=" + machang + "&"
                          + "MaHanhTrinh=" + MaHanhTrinh + "&"
                          + "LoaiVe=" + ddlLoaiVe.SelectedItem.Text.Trim() + "&"
+                         + urlListSoGhe
                          + "SoVe=" + ddlSLVe.SelectedValue;
                     Response.Redirect("ThongTinKhach.aspx?" + urlValue);
                 }

@@ -40,42 +40,34 @@ namespace ShipBooking.Controls
             grwResultAllBF.Visible = false;
             if (rblTieuChiTimKiem.SelectedValue == "TenKhach")
             {
-                if (CheckValidDate(startdate) == true && CheckValidDate(enddate) == true)
+                if (CheckValidDateControl(txtNgay1) == true)
                 {
-                    DateTime dt = DateTime.Parse(enddate);
-                    if (dt < DateTime.Parse(startdate))
+                    if (CheckValidDateControl(txtNgay2) == true)
                     {
-                        lblMsg.Text = "Lỗi nhập liệu: Ngày kết thúc phải sau ngày bắt đầu";
-                        return;
+                        DateTime dt = DateTime.Parse(enddate);
+                        if (dt < DateTime.Parse(startdate))
+                        {
+                            lblMsg.Text = "Lỗi nhập liệu: Ngày kết thúc phải sau ngày bắt đầu";
+                            return;
+                        }
+                        else
+                        {
+                            SearchBFByKhach(txtKeyword.Text.Trim(), startdate, enddate);
+                        }
                     }
                     else
                     {
-                        SearchBFByKhach(txtKeyword.Text.Trim(), startdate, enddate);
+                        return;
                     }
-                }
-                else if (CheckValidDate(startdate) == false && CheckValidDate(enddate) == true)
-                {
-                    txtNgay1.Text = "";
-                    txtNgay1.Focus();
-                }
-                else if (CheckValidDate(startdate) == true && CheckValidDate(enddate) == false)
-                {
-                    txtNgay2.Text = "";
-                    txtNgay2.Focus();
                 }
                 else
                 {
-                    txtNgay1.Text = "";
-                    txtNgay1.Focus();
+                    return;
                 }
             }
             else if (rblTieuChiTimKiem.SelectedValue == "MaBF")
             {
                 SearchBFByID(txtKeyword.Text.Trim());
-            }
-            else
-            {
-                //Search by nguoi nhan ve
             }
         }
 
@@ -90,42 +82,34 @@ namespace ShipBooking.Controls
             grwResultAllBF.Visible = false;
             if (rblTieuChiTimKiem.SelectedValue == "TenKhach")
             {
-                if (CheckValidDate(startdate) == true && CheckValidDate(enddate) == true)
+                if (CheckValidDateControl(txtNgay1) == true)
                 {
-                    DateTime dt = DateTime.Parse(enddate);
-                    if (dt < DateTime.Parse(startdate))
+                    if (CheckValidDateControl(txtNgay2) == true)
                     {
-                        lblMsg.Text = "Lỗi nhập liệu: Ngày kết thúc phải sau ngày bắt đầu";
-                        return;
+                        DateTime dt = DateTime.Parse(enddate);
+                        if (dt < DateTime.Parse(startdate))
+                        {
+                            lblMsg.Text = "Lỗi nhập liệu: Ngày kết thúc phải sau ngày bắt đầu";
+                            return;
+                        }
+                        else
+                        {
+                            SearchBFByKhach(txtKeyword.Text.Trim(), startdate, enddate);
+                        }
                     }
                     else
                     {
-                        SearchBFByKhach(txtKeyword.Text.Trim(), startdate, enddate);
+                        return;
                     }
-                }
-                else if (CheckValidDate(startdate) == false && CheckValidDate(enddate) == true)
-                {
-                    txtNgay1.Text = "";
-                    txtNgay1.Focus();
-                }
-                else if (CheckValidDate(startdate) == true && CheckValidDate(enddate) == false)
-                {
-                    txtNgay2.Text = "";
-                    txtNgay2.Focus();
                 }
                 else
                 {
-                    txtNgay1.Text = "";
-                    txtNgay1.Focus();
+                    return;
                 }
             }
             else if (rblTieuChiTimKiem.SelectedValue == "MaBF")
             {
                 SearchBFByID(txtKeyword.Text.Trim());
-            }
-            else
-            {
-                //Search by nguoi nhan ve
             }
         }
 
@@ -213,17 +197,18 @@ namespace ShipBooking.Controls
  
         }
 
-        protected bool CheckValidDate(string strDate)
+        protected bool CheckValidDateControl(System.Web.UI.WebControls.TextBox control)
         {
             bool isValid = false;
             try
             {
-                DateTime dt = DateTime.Parse(strDate);
+                DateTime dt = DateTime.Parse(control.Text.Trim());
                 isValid = true;
             }
             catch
             {
                 lblMsg.Text = "Ngày không hợp lệ";
+                control.Focus();
                 isValid = false;
             }
 

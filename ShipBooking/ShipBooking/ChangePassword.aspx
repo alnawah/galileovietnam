@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChangePassword.aspx.cs" Inherits="ShipBooking.ChangePassword" MasterPageFile="~/Admin_Master.Master" %>
 <asp:Content ContentPlaceHolderID="contentplaceCenter" ID="ChangePasswordContent" runat="server">
     <center>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
         <br />
         <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
         <br />
@@ -59,24 +58,15 @@
                                     </td>
                                 </tr>
                                 
-                                <tr>
-                                    <td align="right">
-                                        <asp:Button ID="ChangePasswordPushButton" runat="server" 
-                                            CommandName="ChangePassword" Height="26px" Text="Đổi mật khẩu" 
-                                            ValidationGroup="ChangePassword1" 
-                                            onclick="ChangePasswordPushButton_Click" />
-                                    </td>
-                                    <td>
-                                        <asp:Button ID="CancelPushButton" runat="server" CausesValidation="False" 
-                                            CommandName="Cancel" Text="Hủy" Width="91px" Height="26px" />
-                                    </td>
-                                </tr>
                             </table>
                         </td>
                     </tr>
                 </table>
             </ChangePasswordTemplate>
         </asp:ChangePassword>
+        <asp:Button ID="Button1" runat="server" Height="26px" onclick="Button1_Click" 
+            Text="Đổi mật khẩu" Width="112px" ValidationGroup="ChangePassword1" />
+        <br />
         <br />
     </center>
 </asp:Content>

@@ -22,6 +22,9 @@
 
 <center>
     <br />
+    <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
+    <br />
+    <br />
 <table class="login_style">
     <tr>
         <td bgcolor="Blue" class="style1" colspan="2">
@@ -45,11 +48,11 @@
 </center>
 <p style="text-align: center">
     <asp:Button ID="Button1" runat="server" Text="Login" Width="84px" 
-        onclick="Button1_Click" />
+        onclick="Button1_Click" Height="26px" />
 </p>
 <p style="text-align: center">
-    <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
-</p>
+    &nbsp;</p>
+
     
 
 

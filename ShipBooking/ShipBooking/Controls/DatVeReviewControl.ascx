@@ -251,9 +251,7 @@
     </tr>
 </table>
 <p style="text-align: center">
-    <asp:Button ID="Button1" runat="server" Text="Hiệu chỉnh" Width="90px" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Button ID="Button2" runat="server" onclick="Button2_Click" Text="Hoàn tất" 
-        Width="90px" />
+    &nbsp;<asp:Button ID="Button2" runat="server" onclick="Button2_Click" Text="Hoàn tất" 
+        Width="104px" Height="26px" />
 </p>
 

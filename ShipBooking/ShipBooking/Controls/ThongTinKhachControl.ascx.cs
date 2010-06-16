@@ -26,6 +26,7 @@ namespace ShipBooking.Controls
         string MaHanhTrinh;
         string LoaiVe;
         string SoVe;
+        string[] ListSoGhe = new string[9];
         List<HanhKhach> listKhach = new List<HanhKhach>();
         HanhTrinh hanhtrinh = new HanhTrinh();
         protected void Page_Load(object sender, EventArgs e)
@@ -39,6 +40,10 @@ namespace ShipBooking.Controls
             MaHanhTrinh = Request.QueryString["MaHanhTrinh"];
             LoaiVe = Request.QueryString["LoaiVe"];
             SoVe = Request.QueryString["SoVe"];
+            for (int i = 0; i < Convert.ToInt16(SoVe); i++)
+            {
+                ListSoGhe[i] = Request.QueryString["SoGhe" + i.ToString()];
+            }
             hanhtrinh = HanhTrinhDB.GetInfo(MaHanhTrinh);
             if (!IsPostBack)
             {
@@ -76,9 +81,9 @@ namespace ShipBooking.Controls
             string soghe = "";
             for (int i = 0; i < Convert.ToInt16(SoVe); i++)
             {
-                if (BookingStep1Control.ListSoGhe[i].Trim() != "")
+                if (ListSoGhe[i].Trim() != "")
                 {
-                    soghe = soghe + BookingStep1Control.ListSoGhe[i].Trim();
+                    soghe = soghe + ListSoGhe[i].Trim();
                     if ((i + 1) < Convert.ToInt16(SoVe))
                     {
                         soghe = soghe + ", ";
@@ -113,7 +118,7 @@ namespace ShipBooking.Controls
                     khach.DiaChi = "";
                     khach.QuocTich = "";
                     khach.DoTuoi = ddl[i].SelectedItem.Text.Trim();
-                    khach.SoGhe = BookingStep1Control.ListSoGhe[i - 1].Trim(); //Trường số điện thoại giờ dùng để lưu trữ số ghế của khách
+                    khach.SoGhe = ListSoGhe[i - 1].Trim(); //Trường số điện thoại giờ dùng để lưu trữ số ghế của khách
                     khach.Email = "";
                     khach.MaBF = "";
                     khach.GiaTien = TinhGiaVe(ddl[i].SelectedValue.Trim());

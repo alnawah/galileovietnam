@@ -33,24 +33,6 @@ namespace ShipBooking
             }
         }
 
-        protected void ChangePasswordPushButton_Click(object sender, EventArgs e)
-        {
-            lblMsg.Text = "";
-            lblMsg.ForeColor = Color.Red;
-            if (CheckPassword() == false)
-            {
-                lblMsg.Text = "Mật khẩu không đúng!";
-                return;
-            }
-            else
-            {
-                string cmd = "UPDATE tblUser SET UserName = 'Admin', Password ='" + ChangePassword1.NewPassword + "' WHERE UserName = 'Admin'";
-                ExecuteDataUtilities.ExecuteData(cmd);
-                lblMsg.Text = "Bạn đã thay đổi mật khẩu thành công!";
-                lblMsg.ForeColor = Color.Green;
-            }
-        }
-
         protected bool CheckPassword()
         {
             bool isValid = false;
@@ -66,6 +48,25 @@ namespace ShipBooking
                 isValid = true;
             }
             return isValid;
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            lblMsg.Text = "";
+            lblMsg.ForeColor = Color.Red;
+            
+            if (CheckPassword() == false)
+            {
+                lblMsg.Text = "Mật khẩu không đúng!";
+                return;
+            }
+            else
+            {
+                string cmd = "UPDATE tblUser SET UserName = 'Admin', Password ='" + ChangePassword1.NewPassword + "' WHERE UserName = 'Admin'";
+                ExecuteDataUtilities.ExecuteData(cmd);
+                lblMsg.Text = "Bạn đã thay đổi mật khẩu thành công!";
+                lblMsg.ForeColor = Color.Green;
+            }
         }
     }
 }

@@ -198,9 +198,9 @@ namespace ShipBooking.Controls
             string soghe = "";
             for (int i = 0; i < Convert.ToInt16(SoVe); i++)
             {
-                if (BookingStep1Control.ListSoGhe[i].Trim() != "")
+                if (listKhach[i].SoGhe.Trim() != "")
                 {
-                    soghe = soghe + BookingStep1Control.ListSoGhe[i].Trim();
+                    soghe = soghe + listKhach[i].SoGhe.Trim();
                     if ((i + 1) < Convert.ToInt16(SoVe))
                     {
                         soghe = soghe + ", ";

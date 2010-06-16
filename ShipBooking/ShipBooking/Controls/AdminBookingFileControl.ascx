@@ -162,7 +162,7 @@
 </table>
 <p style="text-align: center">
     <asp:Button ID="btnBack" runat="server" onclick="btnBack_Click" Text="Quay lại" 
-        Width="97px" Height="28px" />
+        Width="97px" Height="28px" Visible="false" />
 &nbsp;&nbsp;
     <asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" Width="97px" 
         onclick="btnSearch_Click" Height="28px" />
