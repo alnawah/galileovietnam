@@ -85,25 +85,25 @@ namespace ShipBooking
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 hanhtrinh = new HanhTrinh();
-                hanhtrinh.MaHanhTrinh = dt.Rows[0]["MaHanhTrinh"].ToString();
-                hanhtrinh.MaChang = dt.Rows[0]["MaChang"].ToString();
-                hanhtrinh.SoHieuChuyenTau = dt.Rows[0]["SoHieuChuyenTau"].ToString();
-                hanhtrinh.GioKhoiHanh = DateTime.Parse(dt.Rows[0]["GioKhoiHanh"].ToString());
-                hanhtrinh.GioDen = DateTime.Parse(dt.Rows[0]["GioDen"].ToString());
-                hanhtrinh.NgayDen = dt.Rows[0]["NgayDen"].ToString();
-                hanhtrinh.TongThoiGian = dt.Rows[0]["TongThoiGian"].ToString();
-                hanhtrinh.NgayTrongTuan = dt.Rows[0]["NgayTrongTuan"].ToString();
-                hanhtrinh.SoGhe = dt.Rows[0]["SoGhe"].ToString();
-                hanhtrinh.GiaVeNguoiLon1 = dt.Rows[0]["GiaVeNguoiLon1"].ToString();
-                hanhtrinh.GiaVeNguoiLon2 = dt.Rows[0]["GiaVeNguoiLon2"].ToString();
-                hanhtrinh.GiaVeNguoiLon3 = dt.Rows[0]["GiaVeNguoiLon3"].ToString();
-                hanhtrinh.GiaVeTreEm1 = dt.Rows[0]["GiaVeTreEm1"].ToString();
-                hanhtrinh.GiaVeTreEm2 = dt.Rows[0]["GiaVeTreEm2"].ToString();
-                hanhtrinh.GiaVeTreEm3 = dt.Rows[0]["GiaVeTreEm3"].ToString();
-                hanhtrinh.SoLuongVe1 = dt.Rows[0]["SoLuongVe1"].ToString();
-                hanhtrinh.SoLuongVe2 = dt.Rows[0]["SoLuongVe2"].ToString();
-                hanhtrinh.SoLuongVe3 = dt.Rows[0]["SoLuongVe3"].ToString();
-                hanhtrinh.GiamGiaKhuHoi = dt.Rows[0]["GiamGiaKhuHoi"].ToString();
+                hanhtrinh.MaHanhTrinh = dt.Rows[i]["MaHanhTrinh"].ToString();
+                hanhtrinh.MaChang = dt.Rows[i]["MaChang"].ToString();
+                hanhtrinh.SoHieuChuyenTau = dt.Rows[i]["SoHieuChuyenTau"].ToString();
+                hanhtrinh.GioKhoiHanh = DateTime.Parse(dt.Rows[i]["GioKhoiHanh"].ToString());
+                hanhtrinh.GioDen = DateTime.Parse(dt.Rows[i]["GioDen"].ToString());
+                hanhtrinh.NgayDen = dt.Rows[i]["NgayDen"].ToString();
+                hanhtrinh.TongThoiGian = dt.Rows[i]["TongThoiGian"].ToString();
+                hanhtrinh.NgayTrongTuan = dt.Rows[i]["NgayTrongTuan"].ToString();
+                hanhtrinh.SoGhe = dt.Rows[i]["SoGhe"].ToString();
+                hanhtrinh.GiaVeNguoiLon1 = dt.Rows[i]["GiaVeNguoiLon1"].ToString();
+                hanhtrinh.GiaVeNguoiLon2 = dt.Rows[i]["GiaVeNguoiLon2"].ToString();
+                hanhtrinh.GiaVeNguoiLon3 = dt.Rows[i]["GiaVeNguoiLon3"].ToString();
+                hanhtrinh.GiaVeTreEm1 = dt.Rows[i]["GiaVeTreEm1"].ToString();
+                hanhtrinh.GiaVeTreEm2 = dt.Rows[i]["GiaVeTreEm2"].ToString();
+                hanhtrinh.GiaVeTreEm3 = dt.Rows[i]["GiaVeTreEm3"].ToString();
+                hanhtrinh.SoLuongVe1 = dt.Rows[i]["SoLuongVe1"].ToString();
+                hanhtrinh.SoLuongVe2 = dt.Rows[i]["SoLuongVe2"].ToString();
+                hanhtrinh.SoLuongVe3 = dt.Rows[i]["SoLuongVe3"].ToString();
+                hanhtrinh.GiamGiaKhuHoi = dt.Rows[i]["GiamGiaKhuHoi"].ToString();
 
                 ListHanhTrinh.Add(hanhtrinh);
                 hanhtrinh = null;

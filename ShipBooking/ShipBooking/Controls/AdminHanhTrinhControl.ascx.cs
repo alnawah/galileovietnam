@@ -17,6 +17,8 @@ namespace ShipBooking.Controls
 {
     public partial class AdminHanhTrinhControl : System.Web.UI.UserControl
     {
+        static bool updateStatus;
+        static string mahanhtrinhSelected;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -452,63 +454,60 @@ namespace ShipBooking.Controls
 
         protected void btnSaveHanhTrinh_Click(object sender, EventArgs e)
         {
-            if (txtMaHanhTrinh.Text.Trim() == "")
+            if (CheckValidTime() == false)
             {
-                lblMsg.Text = "Bạn phải nhập số hiệu chuyến tàu";
                 return;
             }
             else
             {
-                if (CheckValidTime() == false)
-                {
-                    return;
-                }
-                else
-                {
-                    SavaHanhTrinhData();
-                    FillData();
-                }
+                SaveHanhTrinhData();
+                FillData();
             }
         }
 
-        protected void SavaHanhTrinhData()
+        protected void SaveHanhTrinhData()
         {
-            string machang = "";
-            string mahanhtrinh = "";
-            machang = GetMaChang().Trim();
-            mahanhtrinh = machang + txtMaHanhTrinh.Text.Trim();
-            HanhTrinh hanhtrinh;
-            hanhtrinh = HanhTrinhDB.GetInfo(mahanhtrinh.Trim());
-            if (hanhtrinh == null)
+            if (updateStatus == false)
             {
-                hanhtrinh = new HanhTrinh();
-                
-                hanhtrinh.MaHanhTrinh = mahanhtrinh;
-                hanhtrinh.MaChang = machang;
-                hanhtrinh.SoHieuChuyenTau = txtSoHieuTau.Text.Trim();
-                hanhtrinh.GioKhoiHanh = GetTime(ddlGioKhoiHanh, ddlPhutKhoiHanh);
-                hanhtrinh.GioDen = GetTime(ddlGioDen, ddlPhutDen);
-                hanhtrinh.NgayDen = ddlNgayDen.SelectedItem.Text.Trim();
-                hanhtrinh.TongThoiGian = TongThoiGian(hanhtrinh.GioKhoiHanh, hanhtrinh.GioDen, 1);
-                hanhtrinh.NgayTrongTuan = ddlNgayTrongTuan.SelectedItem.Text.Trim();
-                hanhtrinh.SoGhe = ddlSoGhe.SelectedValue;
-                hanhtrinh.GiaVeNguoiLon1 = txtGiaVe1_NguoiLon.Text.Trim();
-                hanhtrinh.GiaVeNguoiLon2 = txtGiaVe2_NguoiLon.Text.Trim();
-                hanhtrinh.GiaVeNguoiLon3 = txtGiaVe3_NguoiLon.Text.Trim();
-                hanhtrinh.GiaVeTreEm1 = txtGiaVe1_TreEm.Text.Trim();
-                hanhtrinh.GiaVeTreEm2 = txtGiaVe2_TreEm.Text.Trim();
-                hanhtrinh.GiaVeTreEm3 = txtGiaVe3_TreEm.Text.Trim();
-                hanhtrinh.SoLuongVe1 = ddlSoLuongVe1.SelectedValue;
-                hanhtrinh.SoLuongVe2 = ddlSoLuongVe2.SelectedValue;
-                hanhtrinh.SoLuongVe3 = ddlSoLuongVe3.SelectedValue;
-                hanhtrinh.GiamGiaKhuHoi = txtGiamGiaVeKhuHoi.Text.Trim();
+                string mahanhtrinh = GenerateMaHanhTrinh();
+                HanhTrinh hanhtrinh = null;
+                hanhtrinh = HanhTrinhDB.GetInfo(mahanhtrinh);
+                if (hanhtrinh == null)
+                {
+                    hanhtrinh = new HanhTrinh();
+                    hanhtrinh.MaHanhTrinh = mahanhtrinh;
+                    hanhtrinh.MaChang = GetMaChang();
+                    hanhtrinh.SoHieuChuyenTau = txtSoHieuTau.Text.Trim();
+                    hanhtrinh.GioKhoiHanh = GetTime(ddlGioKhoiHanh, ddlPhutKhoiHanh);
+                    hanhtrinh.GioDen = GetTime(ddlGioDen, ddlPhutDen);
+                    hanhtrinh.NgayDen = ddlNgayDen.SelectedItem.Text.Trim();
+                    hanhtrinh.TongThoiGian = TongThoiGian(hanhtrinh.GioKhoiHanh, hanhtrinh.GioDen, 1);
+                    hanhtrinh.NgayTrongTuan = ddlNgayTrongTuan.SelectedItem.Text.Trim();
+                    hanhtrinh.SoGhe = ddlSoGhe.SelectedValue;
+                    hanhtrinh.GiaVeNguoiLon1 = txtGiaVe1_NguoiLon.Text.Trim();
+                    hanhtrinh.GiaVeNguoiLon2 = txtGiaVe2_NguoiLon.Text.Trim();
+                    hanhtrinh.GiaVeNguoiLon3 = txtGiaVe3_NguoiLon.Text.Trim();
+                    hanhtrinh.GiaVeTreEm1 = txtGiaVe1_TreEm.Text.Trim();
+                    hanhtrinh.GiaVeTreEm2 = txtGiaVe2_TreEm.Text.Trim();
+                    hanhtrinh.GiaVeTreEm3 = txtGiaVe3_TreEm.Text.Trim();
+                    hanhtrinh.SoLuongVe1 = ddlSoLuongVe1.SelectedValue;
+                    hanhtrinh.SoLuongVe2 = ddlSoLuongVe2.SelectedValue;
+                    hanhtrinh.SoLuongVe3 = ddlSoLuongVe3.SelectedValue;
+                    hanhtrinh.GiamGiaKhuHoi = txtGiamGiaVeKhuHoi.Text.Trim();
 
-                HanhTrinhDB.Insert(hanhtrinh);
+                    HanhTrinhDB.Insert(hanhtrinh);
+                }
+                else
+                {
+                    HanhTrinhDB.Update(hanhtrinh);
+                }
             }
             else
             {
-                hanhtrinh.MaHanhTrinh = mahanhtrinh;
-                hanhtrinh.MaChang = machang;
+                HanhTrinh hanhtrinh = new HanhTrinh();
+
+                hanhtrinh.MaHanhTrinh = mahanhtrinhSelected;
+                hanhtrinh.MaChang = GetMaChang();
                 hanhtrinh.SoHieuChuyenTau = txtSoHieuTau.Text.Trim();
                 hanhtrinh.GioKhoiHanh = GetTime(ddlGioKhoiHanh, ddlPhutKhoiHanh);
                 hanhtrinh.GioDen = GetTime(ddlGioDen, ddlPhutDen);
@@ -529,7 +528,30 @@ namespace ShipBooking.Controls
 
                 HanhTrinhDB.Update(hanhtrinh);
             }
+            updateStatus = false;
             InitData();
+        }
+
+        protected string GenerateMaHanhTrinh()
+        {
+            string mahanhtrinh = "";
+            string strNumberLast = "";
+            int last = 0;
+            List<HanhTrinh> ListHanhTrinh = new List<HanhTrinh>();
+
+            ListHanhTrinh = HanhTrinhDB.GetListHanhTrinhByChang(GetMaChang());
+            if (ListHanhTrinh.Count == 0)
+            {
+                last = 1;
+            }
+            else
+            {
+                strNumberLast = ListHanhTrinh[ListHanhTrinh.Count - 1].MaHanhTrinh.Trim().Substring(6);
+                last = Convert.ToInt16(strNumberLast) + 1;
+            }
+            mahanhtrinh = GetMaChang() + last.ToString();
+
+            return mahanhtrinh;
         }
 
         protected string TongThoiGian(DateTime giokhoihanh, DateTime gioden, int songay)
@@ -543,15 +565,15 @@ namespace ShipBooking.Controls
 
         protected void grwHanhTrinh_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string mahanhtrinh = "";
             string MaChang = "";
             
             MaChang = GetMaChang().Trim();
             DataSet ds = new DataSet();
             ds = HanhTrinhDB.GetDataSetHanhTrinhByChang(MaChang);
-            mahanhtrinh = ds.Tables[0].Rows[grwHanhTrinh.SelectedIndex]["MaHanhTrinh"].ToString().Trim();
-            FillDetailHanhTrinh(mahanhtrinh);
+            mahanhtrinhSelected = ds.Tables[0].Rows[grwHanhTrinh.SelectedIndex]["MaHanhTrinh"].ToString().Trim();
+            FillDetailHanhTrinh(mahanhtrinhSelected);
             lblMsg.Text = "";
+            updateStatus = true;
         }
 
         protected void grwHanhTrinh_PageIndexChanged(object sender, EventArgs e)
@@ -618,8 +640,9 @@ namespace ShipBooking.Controls
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
+            updateStatus = false;
             InitData();
-            txtMaHanhTrinh.Focus();
+            txtSoHieuTau.Focus();
         }
 
         protected bool CheckValidTime()

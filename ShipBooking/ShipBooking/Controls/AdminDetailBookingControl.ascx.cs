@@ -45,7 +45,17 @@ namespace ShipBooking.Controls
                 lblNoiDi.Text = booking.NoiDi.Trim();
                 lblNoiDen.Text = booking.NoiDen.Trim();
                 lblNgayDi.Text = booking.NgayDi.ToShortDateString();
-                lblNgayVe.Text = booking.NgayVe.ToShortDateString();
+                if (booking.LoaiChuyen.Equals("Khứ hồi") == true)
+                {
+                    lblNgayVeText.Visible = true;
+                    lblNgayVe.Visible = true;
+                    lblNgayVe.Text = booking.NgayVe.ToShortDateString();
+                }
+                else
+                {
+                    lblNgayVeText.Visible = false;
+                    lblNgayVe.Visible = false;
+                }
                 lblGioKhoiHanh.Text = booking.GioKhoiHanh.ToShortTimeString();
                 lblGioDen.Text = booking.GioDen.ToShortTimeString();
                 lblLoaiVe.Text = booking.LoaiVe.Trim();

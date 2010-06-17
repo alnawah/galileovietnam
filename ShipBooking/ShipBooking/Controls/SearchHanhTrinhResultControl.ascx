@@ -156,6 +156,7 @@
                 <ItemStyle HorizontalAlign="Center" />
             </asp:BoundField>
             <asp:BoundField DataField="MaHanhTrinh" HeaderText="Mã hành trình" >
+                <ItemStyle HorizontalAlign="Center" />
             </asp:BoundField>
             <asp:CommandField ButtonType="Button" SelectText="Đặt chỗ" 
                 ShowSelectButton="True" >

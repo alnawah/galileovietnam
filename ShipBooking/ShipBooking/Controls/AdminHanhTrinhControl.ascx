@@ -39,7 +39,7 @@
     }
     .style4
     {
-        text-align: left;
+        text-align: right;
     }
     .style3
     {
@@ -122,14 +122,6 @@
                         </tr>
                         <tr>
                             <td class="style4">
-                                Mã chuyến:</td>
-                            <td class="style3" colspan="2">
-                                <asp:TextBox ID="txtMaHanhTrinh" runat="server" Width="140px" 
-                                    style="text-align: center"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="style4">
                                 Số hiệu chuyến tàu:</td>
                             <td class="style3" colspan="2">
                                 <asp:TextBox ID="txtSoHieuTau" runat="server" style="text-align: center" 
@@ -149,7 +141,10 @@
                                 <asp:DropDownList ID="ddlPhutKhoiHanh" runat="server" Height="22px" 
                                     Width="50px">
                                 </asp:DropDownList>
-                                &nbsp;phút</td>
+                                &nbsp;phút&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <asp:TextBox ID="txtMaHanhTrinh" runat="server" style="text-align: center" 
+                                    Visible="False" Width="140px"></asp:TextBox>
+                            </td>
                         </tr>
                         <tr>
                             <td class="style4">
@@ -307,11 +302,11 @@
                         </tr>
                     </table>
                     <br />
-                    <asp:Button ID="btnAdd" runat="server" Text="Thêm" Width="60px" 
-                        onclick="btnAdd_Click" />
+                    <asp:Button ID="btnAdd" runat="server" Text="Tạo mới" Width="79px" 
+                        onclick="btnAdd_Click" Height="26px" />
                     &nbsp;
-                    <asp:Button ID="btnSaveHanhTrinh" runat="server" Text="Lưu" Width="60px" 
-                        onclick="btnSaveHanhTrinh_Click" />
+                    <asp:Button ID="btnSaveHanhTrinh" runat="server" Text="Lưu lại" Width="79px" 
+                        onclick="btnSaveHanhTrinh_Click" Height="26px" />
                     <br />
                     <br />
                     <asp:GridView ID="grwHanhTrinh" runat="server" AutoGenerateColumns="False"
