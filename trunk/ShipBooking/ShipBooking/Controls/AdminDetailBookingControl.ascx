@@ -85,14 +85,16 @@
                     </tr>
                     <tr>
                         <td class="style1">
-                            Ngày đi:</td>
+                            Ngày khởi hành:</td>
                         <td>
                             <asp:Label ID="lblNgayDi" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
                         </td>
                         <td>
-                            Ngày về:</td>
+                            <asp:Label ID="lblNgayVeText" runat="server" Text="Ngày về:" Visible="False"></asp:Label>
+                        </td>
                         <td>
-                            <asp:Label ID="lblNgayVe" runat="server" Font-Bold="True" ForeColor="Blue"></asp:Label>
+                            <asp:Label ID="lblNgayVe" runat="server" Font-Bold="True" ForeColor="Blue" 
+                                Visible="False"></asp:Label>
                         </td>
                     </tr>
                     <tr>
