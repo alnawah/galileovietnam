@@ -1,0 +1,2907 @@
+/* RBA Added */
+
+/* NOTES 
+All styles have been added to dftStyle.css for easier management.
+
+.pagetitle, #pagetitle and .sectiontitle need to be put into each resource/style.css in order that page titles work 
+in the new style for pages which have not been changed in the POS project. This is because not all pages include dftStyle.css
+*/
+
+#sideBarExtraInfo {
+ padding-left: 0px;
+ font-size: 11px;
+}
+ 
+#sideBarExtraInfo td{
+ font-size: 11px;
+}
+
+
+.spcCndCell{
+	margin-left: 10px;
+}
+
+
+#leftArrow {
+ background-image:url(../images/leftImageArrow.jpg);
+ background-repeat:no-repeat;
+ height:60px;
+ width:17px;
+ cursor: hand;
+}
+ 
+#rightArrow {
+ background-image:url(../images/rightImageArrow.jpg);
+ background-repeat:no-repeat;
+ height:60px;
+ width:17px;
+ cursor: hand;
+}
+
+
+#talogo {
+	padding-top: 10px;
+}
+
+.alignBackToTop {
+	text-align: right;
+}
+
+.alignLeft {
+	text-align: left;
+}
+.alignRight {
+	text-align: right;
+}
+
+#FullItinerary .floatLeft {
+    float: left;
+}
+#FullItinerary .floatRight {
+    float: right;
+}
+
+.basketChargePrice, .basketFeePrice, .basketInsurPrice {
+	white-space: nowrap;
+}
+
+
+
+
+#TransactionDetails .col1 {
+	width: 150px;
+}
+
+#TransactionDetails .basketComplete {
+	width: auto;
+}
+
+
+#SearchHotels .refineTitle {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#SearchHotels .col1{
+	width:140px;
+}
+
+
+#SearchHotels .listWidth{
+	width:240px;
+}
+
+
+#SearchHotels .insetTable{
+	margin-top:20px;
+}
+
+
+.compareBox {
+	float: right;
+}
+
+
+.bookButton {
+	float: right;
+}
+
+
+.ui-datepicker table {
+font-size:10px;
+border: 1px solid #666666;
+border-collapse:separate;
+}
+
+.ui-datepicker-multi-2 .ui-datepicker-group {
+width:48%;
+}
+
+
+table.hotelCatTable .smbold {
+	color: black;
+}
+
+
+#AddTransaction .col1 {
+	width: 30%;
+}
+
+#ChgNames #names #emptyTD {
+	width:25px; 
+}
+
+.floatPosition {
+    float: left;
+}
+
+
+
+
+
+#QuickEntryHH .tableInput {font-size: 8pt;} 
+#DeptAgent .tableInput {font-size: 8pt;} 
+
+
+
+
+.wasPriceTxt { 
+font-size: 8pt; 
+font-weight: normal;
+color: #999999; 
+text-decoration: none;
+} 
+
+.wasPriceAmt, .wasPriceAmt span{ 
+font-size: 8pt; 
+color: #999999; 
+text-decoration: line-through;
+font-weight: normal;
+} 
+
+.nowPriceTxt { 
+color:black; 
+font-weight: normal;
+font-size: 8pt;
+} 
+
+table.hotelCatTable .smbold {
+ color: black;
+ font-size: 8pt;
+
+}
+
+
+table.hotelCatTable {
+ color: red;
+ font-weight: bold;
+}
+
+
+
+a.aidMore{
+ color: black;
+ text-decoration: underline;
+ font-weight: normal;
+ font-size: 8pt;
+}
+
+#agentRefInput {font-size: 10pt;}
+ 
+#CheckOut2 #billingAddressTable .showMe { 
+display:table-row;
+visibility:visible;
+}
+ 
+ 
+.SmIcon {
+ color: #999999;
+ font-size: 11px;
+}
+ 
+.printSectionHeader {
+ FONT-WEIGHT: bold;
+ FONT-SIZE: 10pt;
+ FONT-FAMILY: sans-serif, Arial, Helvetica;
+ padding: 3px;
+}
+.printTitle {
+    font-weight: bold;
+ font-size: 11pt !important;
+ color: #209bbb;
+ FONT-FAMILY: Arial;
+ font-size: 10pt;
+ padding-top: 3px;
+ padding-bottom: 3px;
+ text-transform: capitalize;
+}
+ 
+.printsubheading {
+  FONT-WEIGHT: bold;
+  FONT-SIZE: 9pt;
+  FONT-FAMILY: sans-serif, Arial, Helvetica;
+}
+ 
+ 
+ 
+.cv2Info {
+ color: #209BBB;
+ font-weight: bold;
+}
+ 
+#CheckOut2 .bkgId {
+ color: red;
+ font-weight: bold;
+}
+ 
+#CheckOut2 .terms {
+ color: red;
+ font-weight: bold;
+ 
+}
+ 
+
+ 
+
+#freeFormatCityEntry {
+font-size:8pt;
+width:230px;
+}
+ 
+.prtBasketBkgSummaryTable {
+ width: 600px;
+ border: 0px;
+}
+ 
+.prtInvCurrencyTable {
+ width: 750px;
+ border: 0px;
+}
+
+
+
+
+
+
+.currencyText
+{		text-align: right;
+		direction: ltr;
+		COLOR: red;
+		text-decoration: none;
+}
+
+
+#freeFormatCityEntry{
+width: 230px;
+FONT-SIZE: 8pt;
+	
+}
+
+#PrtBasketBkgSummary hr {
+margin-bottom: 3px;
+margin-top: 3px;
+size:1px;
+}
+ 
+#hotelResultMessage {
+margin-top: 20px;
+display: block;
+}
+
+.roomInfo, .mealInfo { 
+padding-right: 3px; 
+font-weight: normal;
+}
+
+.basketPaxName, .basketTotalHdg {
+	padding-left: 3px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+}
+.basketPaxLinks, .basketTotalLinks {
+	padding-right: 3px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.basketPaxNameHdr, .basketPaxPriceHdr {
+	padding-left: 3px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.basketTotalPrice {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.standOut
+{
+	font-weight: bold;
+
+}
+
+.buttonImage {
+	padding: 0px 0px 0px 2px;
+}
+
+a.edit {
+	color: #209bbb;
+}
+
+
+.roomtypes {
+width:10em;
+}
+
+#upsellTable {
+	width: 100%;
+}
+
+
+#upsellContainer {
+	margin-top: 10px;
+}
+
+.itinRowSpace {height: 5px;}
+
+.basketRowSpace {height: 8px;}
+
+#basketItinerary hr  {
+	margin-bottom: 3px;
+	margin-top: 3px;}
+
+
+a.hotelname {
+	text-decoration: none;
+}
+
+
+#tabs-1 td.col1 {
+	width: 15px;
+}
+
+#tabs-1 td.col2 {
+	width: 850px;
+}
+
+#tabs-1 td.col3 {
+	width: 15px;
+}
+
+
+#PaxRemarksInc .sectiontitle {
+	margin-bottom: 7px;
+}
+
+#PaxRemarksInc #precodedRemarks {
+	margin-bottom: 5px;
+}
+
+#PaxRemarksInc #remarksMessage {
+	padding-bottom: 5px;
+}
+
+
+#roomInfoDetail {
+	display: block;
+	margin-top: 0px;
+}
+
+
+#ChgNames #names TD {
+	padding-right: 25px;
+}
+
+
+#SearchHotels #lastResults {
+	height:30px;
+	padding-left:3px;
+	padding-top: 10px;
+}
+
+
+#promoBanner {
+	margin-top: 10px;
+	background-image:url(../images/basketImg.gif);
+	background-repeat:no-repeat;
+	height:392px;
+	width:230px;
+}
+
+#basketButtons {
+	margin-top: 6px;
+}
+
+
+.noMap {
+	background:url(../images/noMaps.gif) center no-repeat;
+	width:250px;
+	height:150px;
+	color:gray;
+	font-size:medium;
+	font-weight:bold;
+	margin:4em;
+	text-align:center;
+	vertical-align:middle;
+}
+
+#HotelPriceList .tableInput {
+	width: 95%;
+}
+
+.navPrevious {
+	padding-right: 5px;
+}
+
+.navNext {
+	padding-left: 5px;
+}
+
+
+.ui-tabs .ui-tabs-panel { padding: 0px 0px; display: block; border-width: 0; background: none; }
+
+.calendarIcon {
+	cursor: hand;
+}
+
+#SearchHotels .col1, #changeHHTable .col1 {
+	width: 150px;
+}
+
+.paxRoom {
+	width: 22%;
+}
+
+.stayForSubheading {font-weight: bold;}
+
+#quickEntryHHImg {
+	margin-top: 0px;
+	background-image:url(../images/banner.gif);
+	background-repeat:no-repeat;
+	height:392px;
+	width:230px;
+}
+
+#pagetitle {
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+HR {
+	background-color: #209bbb;
+	height: 1px;
+	width: 100%;
+	margin-bottom: 10px;
+	border: none;
+}
+
+#alreadyRegistered, #userTable, #userEmailTable, #billingAddressTable, #lastCCTable, #runningTotalTable, #runningTotalTable2 {
+	padding: 3px;
+}
+
+#CheckOut2 #userTable .col1 {
+	width: 208px;
+}
+
+#CheckOut2 #userEmailTable .col1 {
+	width: 140px;
+}
+
+#CheckOut2 #alreadyRegistered .col1 {
+	width: 208px;
+}
+
+#CheckOut2 #billingAddressTable .col1 {
+	width: 140px;
+}
+
+#sideItem {
+	left: 0px;
+	display: block;
+}
+
+#sideItemCity {
+	display: block;
+}
+
+#FullItineraryCheckoutTotal .col1 {
+	width: 50%;
+}
+
+.searchText	{
+		font-size:12pt;
+		color: #209bbb;  
+		}
+.searchTextBold	{
+		font-weight:bold;  
+		}
+.searchMsg	{
+		font-size:18pt;
+		font-weight:bold;
+		color: #209bbb;  
+		}
+
+#SearchHotels #sideImg {
+	background-image:url(../images/banner.gif);
+	background-repeat:no-repeat;
+	height:392px;
+	width:230px;
+}
+
+.checkOutInputbox {
+	padding-bottom:5px;
+}
+.cardTable1 {
+}
+.cardAddr1 {
+}
+.tblerow {
+	display: table-row;
+}
+
+
+/* added extra width to make it look prettier this "outlinemenu ul li a" is repeated twice more below this definition - it needs to be consolidated*/
+.outlinemenu ul li a{
+width: 13.5em;
+}
+
+.sidetext td {vertical-align: top;}
+.itinName {
+text-transform: capitalize;
+vertical-align:text-top;
+}
+.itinDesc {
+font-weight: bold;
+vertical-align:text-top;
+}
+.itinStatus {
+text-align: center;
+vertical-align:text-top;
+
+}
+.itinPrice {
+text-align: right;
+vertical-align:text-top;
+white-space: nowrap;
+}
+.expandable {font-weight :normal;}
+.basketChargeHdg {font-weight: bold; text-transform: capitalize;}
+#basketItinerary td {vertical-align: top;}
+
+
+.upsellImage {
+	height: 54px;
+	width: 80px;
+}
+
+#upsell	{
+	margin-top:3px;
+	width: 100%;
+	border-collapse:collapse;
+	display: none;
+	background-color:#F4F4F4;
+	border:1px solid #209BBB;
+}
+
+.upsellHdr, .upsellHdr a {
+	background-color:#209BBB;
+	color:white;
+	font-size:14pt;
+	padding: 3px;
+}
+.genTemplate{
+	border-top: 1px solid #209BBB;
+	background:	#F4F4F4;
+	width: 100%;
+}
+
+.upsellItemSpc{
+	width: 100%; 
+	background:	#F4F4F4;
+	padding: 0px;
+	margin: 0px;
+	border-width: 0px;
+}
+
+.upsellItemSpc td{
+	padding: 0px;
+	margin: 0px;
+	border-width: 0px;
+}
+
+.upsellHdr td{
+	vertical-align: middle;
+}
+
+#upsellHdrRight {
+	background-color: #B4C3F4;
+	font-weight: bold;
+	color: black;
+	text-align: right;
+}
+
+.upsellItem {
+	color:#209BBB;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:11pt;
+	font-weight:bold;
+	border-collapse:collapse;
+}
+.upsellItem td{
+	padding: 5px;
+}
+
+
+.upsellCityHdr { // delete 
+	border: solid #B4C3F4;
+	border-width: 1px 0 1px 1px;
+	width: 100%;
+}
+.upsellCityHdrRight { //delete 
+	border: solid #B4C3F4;
+	border-width: 1px 1px 1px 0;
+	width: 100%;
+}
+
+#PrtInvCurrency body, #PrtInvCurrency main	{
+		background:white;   
+		font-weight:normal;
+		font-style:normal;
+		font-size:8pt;
+		color:black;  
+		}
+#PrtInvCurrency table.details	{
+		font-size:8pt; 
+		padding-top:15pt;
+		padding-left:10pt;
+		padding-right:15pt;
+		padding-bottom:10pt;
+		}
+#PrtInvCurrency td.address	{
+		padding-left:10pt;
+		font-weight: bold;
+		text-transform: capitalize;
+		}
+
+#PrtInvoice body, #PrtInvoice main	{
+		background:white;  
+		font-weight:normal;
+		font-style:normal;
+		font-size:8pt;
+		color:black;  
+		}
+#PrtInvoice table.details	{
+		font-size:8pt; 
+		padding-top:15pt;
+		padding-left:10pt;
+		padding-right:15pt;
+		padding-bottom:10pt;
+		}
+#PrtInvoice td.address	{
+		padding-left:10pt;
+		font-weight: bold;
+		}
+
+
+
+/* in style.css this is named with lowercase buttontext that is wrong... correct below... 
+I think that adding the dtd to the pages for lightboxes means that the browser is strict
+when it comes to style names in mixed case, so the case must be correct in the css.
+*/
+.buttonText {
+	background-color : #e1f1fe;
+	color: #000000;
+	font-weight : bold;
+	font-family : Arial;
+	FONT-SIZE: 11px;
+	height : 22px;
+}
+
+
+.serviceDesc {
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+
+#PrtBasketBkgSummary #tableMain .col1 {
+	width: 30%;
+	vertical-align: top;
+}
+
+#PrtBasketBkgSummary #tableMain .col2 {
+	width: 40%;
+	vertical-align: top;
+}
+
+#PrtBasketBkgSummary #tableMain .col3 {
+	width: 17%;
+	vertical-align: top;
+	text-align: right;
+}
+
+#PrtBasketBkgSummary #tableMain .col4 {
+	width: 40%;
+	vertical-align: top;
+	text-align: right;
+}
+
+.selectProductTable {
+	width: 600px;
+}
+
+.titlecaps {
+	text-transform: capitalize;
+}
+
+#navTop, #navBottom {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#emailLink, #printLink {
+	position: relative;
+}
+
+#sideBox {
+	width : 230px;
+	vertical-align : top;
+}
+
+
+/* example of changing specific sideBoxContent */
+#CfmCxlBkg #sideBoxContent {
+	padding-left : 27px;
+	width : 645px;
+	vertical-align : top;
+	
+}
+
+#sideBoxContent {
+	padding-left : 12px;
+	width : 645px;
+	vertical-align : top;
+}
+
+#sideBoxTable {
+	width: 100%;
+	padding: 2px;
+}
+
+
+#PrtBasketBkgSummary #tableMain, #PrtBasketBkgSummary #tableFooter
+{
+width: 100%;
+}
+
+#sideBoxTable .sideBoxCol1 {
+	width: 50%;
+}
+
+#sideBoxTable .sideBoxCol2 {
+	width: 50%;
+}
+
+#CheckOut2 #sideImg {
+	background-image:url(../images/payImg.gif);
+	background-repeat:no-repeat;
+	height:117px;
+	width:100%;
+	padding-right: 3px;
+	margin-top: 10px;
+}
+
+#CheckOut2 #terms {
+	padding-top: 10px;
+}
+
+#CfmCxlBkg #sideImg, #CxlBkgResult #sideImg {
+	background-image:url(../images/thankImg.gif);
+	background-repeat:no-repeat;
+	height:230px;
+	width:100%;
+	padding-right: 3px;
+}
+
+
+#Thanks #sideImg, #ThanksGalileo #sideImg {
+	background-image:url(../images/thankImg.gif);
+	background-repeat:no-repeat;
+	height:230px;
+	width:100%;
+}
+
+#ChangeHH #sideImg {
+	margin-top: 20px;
+	background-image:url(../images/amendImg.gif);
+	background-repeat:no-repeat;
+	height:230px;
+	width:100%;
+}
+
+#ChangeHHPaxRmks #sideImg, #QuickEntryItemHH #sideImg {
+	margin-top: 20px;
+	background-image:url(../images/paxImg.gif);
+	background-repeat:no-repeat;
+	height:230px;
+	width:100%;
+}
+
+#copyrightContainer {
+	padding-top: 10px;
+}
+
+#buttonSeparator {
+}
+
+#buttons {
+}
+
+#thanksAllatContent {
+	width : 100%;
+	padding: 3px;
+	
+}
+
+.thanksAllatTitles {
+	width : 19%;
+}
+
+.thanksAllatValues {
+	width : 81%;
+}
+
+
+.insetTablePop {
+width: 95%;
+border: 0px;
+}
+
+
+/* THICKBOX */
+#TB_title {
+	background-color: white;
+	border-bottom: none;
+}
+
+rtl_swapper {
+float:left;
+margin-bottom:1px;
+padding:7px 10px 5px 0pt;
+text-align:right;
+}
+
+#navTop {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+#navBottom {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+#emptyList {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/* for the credit card details popup, transaction details popup */
+.ccDetailTitle, .transDetailTitle, .agentInfoTitle {
+	font-weight: bold;
+}
+
+.numberFormat {
+	direction: ltr;
+}
+
+/*
+.moveWindowCursor {
+cursor: move;
+}
+*/
+
+.leadTime{
+	vertical-align: middle; 
+	background-color: transparent; 
+	color: #FF9900;
+}
+
+/* for calendar */
+
+.ui-datepicker table {
+font-size:10px;
+border: 1px solid #666666;
+}
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+width:auto;
+}
+
+.ui-widget {
+font-family: Arial,sans-serif;
+font-size: 9pt;
+}
+
+
+.hideMe {
+	visibility: hidden;
+	display: none;
+}
+
+.showMe {
+	visibility: visible;
+	display: inline;
+}
+
+#CheckOut2 .showMe {
+	visibility: visible;
+	display: block;
+}
+
+
+
+.newreqbarLink {
+	/*background-image:url(images/close.gif);*/
+	border-bottom:1px dashed #ffffff;
+	color:#ffffff;
+}
+
+
+.ui-datepicker-trigger {
+	vertical-align:top;
+}
+
+
+/*---------------------------------------------------------------------------*/
+/* From here onwards is the dftstyle from the demo site                      */
+/*---------------------------------------------------------------------------*/
+
+/* set the size of the inset tables, can now easily be changed to width 100% if needed */
+.insetTable {
+width: 880px;
+border: 0px;
+
+}u.itemAddrSpace {
+ padding-top:3px;
+ width:100%;
+}
+
+table.hotelCatTable a.aid b{
+	color: red;
+	text-decoration: underline;
+}
+label.loginHdrHS{
+ margin-top:2px;
+ margin-bottom:1px;
+ display:block;
+width:100%;
+COLOR: #FFFFFF;
+}
+#loginButtonHS{
+ display:block;
+ clear:left;
+ margin-top:4px;
+COLOR: #000000;
+}
+a.loginLinkHS{
+ display:block;
+ clear:left;
+ margin-top:4px;
+COLOR: #FFF;
+}
+#clientIdHS {
+    width:6em;
+}
+#licenceTypeHS {
+    width:10em;
+}
+#licenceNumberHS {
+    width:15em;
+}
+#emailHS {
+    width:15em;
+}
+#passwordHS {
+    width:10em;
+}
+
+
+.summary_head
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 14pt;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: sans-serif, Arial, Helvetica;
+	padding-left: 10px;
+}
+
+.header_white {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.frame{
+     border: 1px solid #209BBB;
+}
+
+
+.tourCode { 
+color: #cc6600; 
+font-size:8pt; 
+} 
+
+#divOptionText p:first-child{
+margin-bottom:10px;
+}
+
+.noResults {
+     border: 2px solid #999999;
+     margin:60px;
+     padding:10px;
+}
+.altSelHeader
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 8pt;
+	COLOR: #FFFFFF;
+	height: 20px;
+	FONT-FAMILY: sans-serif, Arial, Helvetica;
+	BACKGROUND-COLOR: #CE6500;
+	padding: 2;
+}
+
+.altSelFrame
+{
+border : 1px solid #CE6500;
+}
+.basketComplete {
+	background-color : #ff7800;
+	color: #FFFFFF;
+	font-weight : bold;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 22px;
+	width: 125px;
+		}
+
+.completeNoPay {
+	background-color : Red;
+	color: #FFFFFF;
+	font-weight : bold;
+	FONT-FAMILY: sans-serif, Arial, Helvetica;
+	FONT-SIZE: 11px;
+	height : 22px;
+		}
+		
+BODY	{
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 10pt;
+	COLOR: black;
+	FONT-FAMILY: sans-serif, Arial, Helvetica;
+	BACKGROUND-COLOR: white;
+}
+A	 {
+	FONT-FAMILY: sans-serif, Arial, Helvetica;
+	font-weight: normal; 
+	color:#000000; 
+	}
+A:link 	{
+	/* text-decoration: none; */
+	}
+A:visited {}
+A:hover {
+	/* text-decoration: none; */
+}
+A:active {}
+A.copyright
+{
+    FONT-SIZE: 10pt;
+	color:#000000; 
+    FONT-FAMILY: arial
+}
+
+TABLE
+{
+    FONT-SIZE: 10pt;
+    FONT-FAMILY: sans-serif, Arial, Helvetica;
+}
+.tableinput
+{
+    FONT-SIZE: 8px;
+    COLOR: black;
+    FONT-FAMILY: sans-serif, Arial, Helvetica;
+}
+.tableSelect
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: sans-serif, Arial, Helvetica;
+}
+table Select
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: sans-serif, Arial, Helvetica;
+}
+.Copyright
+{
+    	FONT-SIZE: 8pt;
+    	color: black;
+	FONT-FAMILY: sans-serif, Arial, Helvetica;
+}
+.smbold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: sans-serif, Arial, Helvetica;}
+SELECT
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: arial
+}
+
+.itemSubHead 	{  
+		FONT-FAMILY: sans-serif, Arial, Helvetica;
+		font-size: 8pt; 
+		font-weight: bold; 
+		color: #000000;
+		}
+
+.smaller	{
+		font-size:8pt;
+		}
+
+.smallerTitleCaps	{
+		font-size: 8pt;
+		text-transform:capitalize;
+		color: black;
+		}
+.stayForHilite {
+            font-weight: normal;
+            font-size: 8pt;
+            color:#009933;
+            FONT-FAMILY: sans-serif, Arial, Helvetica;
+			        }
+					  
+A.stayForHilite {
+            font-weight: normal;
+            font-size: 8pt;
+            color:#009933;
+            FONT-FAMILY: sans-serif, Arial, Helvetica;
+				text-decoration: underline;
+			        }
+        .stayForHdr {
+            font-weight: bold;
+            font-size: 8pt;
+            text-transform:capitalize;
+            color: #009933;
+            FONT-FAMILY: sans-serif, Arial, Helvetica;
+        }
+        .stayForTitle {
+            font-weight: bold;
+            font-size: 11pt;
+            color: #009933;
+            FONT-FAMILY: sans-serif, Arial, Helvetica;
+        }
+
+.altSelHeader{
+		FONT-WEIGHT: bold;
+		FONT-SIZE: 8pt;
+		COLOR: #FFFFFF;
+		FONT-FAMILY: sans-serif, Arial, Helvetica;
+		BACKGROUND-COLOR: red
+}
+ 
+.altSelFrame{
+		border : 1px solid red;
+}
+
+.bookingRmks {
+	background-color : red;
+	color: #ffffff;
+	font-weight : bold;
+	font-family : sans-serif, Arial, Helvetica;
+	FONT-SIZE: 11px;
+	height : 22px;
+}
+.mdbold {FONT-WEIGHT: bold;
+		 FONT-SIZE: 10pt;
+		 FONT-STYLE: normal;
+		 FONT-FAMILY: sans-serif, Arial, Helvetica		}
+
+
+.tdfillbg {
+background-color: #8FCDDD;
+	   border-top: 0px #8FCDDD solid;
+	   height: 24px;
+	  }
+.tdfillbg A	{FONT-FAMILY: sans-serif, Arial, Helvetica; 
+		 font-weight: bold; 
+		 color:#000000; 
+		 text-decoration: none;
+		}
+.tdfillbg A:hover {color: #000000; 
+		   text-decoration: none;
+		  }
+
+.sortBar TD {background-color:#8FCDDD;}
+.sortBar IMG {border:none;}
+.sortBar A	 {
+	FONT-FAMILY: sans-serif, Arial, Helvetica; 
+	font-weight: normal; 
+	color:#000000; 
+	text-decoration: none;
+	}
+.sortBar A:hover {color:#000000;text-decoration:none;font-weight:bold;}
+
+.sortSelected {
+font-weight: normal;
+font-size: 8pt;
+}
+
+
+
+
+.freeFormatCitySelectionClass { 
+	VISIBILITY:hidden;
+	POSITION: absolute;
+	OVERFLOW: block;
+	z-index:10;
+}
+.valueHolderCitySelectionClass { 
+	VISIBILITY:hidden;
+	POSITION: absolute;
+	OVERFLOW: block;
+	z-index:10;
+}
+#settingsPanel
+{
+	padding:20px;
+	background-color : #EAF7FD
+}
+
+.sectionContainer {width:95%;
+				   background-color:#EFEFEF;
+				   border: 1px #999999 solid;
+				   padding:10px;
+				   padding-left:20px;
+				   padding-right:20px;
+}
+
+
+.buttonAlt1 {
+	background-color : #7bc618;
+	color: #ffffff;
+	font-weight : bold;
+	font-family : sans-serif, Arial, Helvetica;
+	FONT-SIZE: 11px;
+	height : 22px;
+}
+.languageBox
+{
+	background-color: white;
+	border: 1px solid #209BBB;
+	padding:5px;
+}
+.availImmed {
+FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: sans-serif, Arial, Helvetica;
+	 color: black;
+}
+
+.radiocity {
+width:40em;
+}
+
+.packageSearchContainer {
+	background-color:#c5edf7;
+	border: 1px #209BBB solid;
+}
+
+.packageSearchContainerHeader {	
+ background: #209BBB;
+ background-repeat: repeat-x;
+ background-position: left;
+	vertical-align:middle;
+	font-weight: bold;
+	color:white;
+}
+
+.packageSearchResultContainer {
+	background-color:#c5edf7;
+	padding: 4px;
+}
+
+.packageSearchResultHeading {
+	background-color:#209BBB;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+
+
+.reportText_ST {
+	font-weight: bold;
+}
+
+.reportText_US {
+	text-decoration: underline;
+}
+
+.reportText_HI {
+	font-style: italic;
+}
+
+.reportText_Includes {
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+.reportText_ItineraryHeading {
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+.reportText_ItineraryData {
+	font-size: 8pt;
+}
+
+.reportText_TimetableHeading {
+	font-size: 8pt;
+	font-weight: bold;	
+}
+
+.reportText_ItineraryData {
+	font-size: 8pt;
+}
+
+.packageBorder {
+	border : 1px solid #8FCDDD;
+}
+
+.packageBorderLeft {border-left: 1px solid #8FCDDD;}
+.packageBorderRight {border-right: 1px solid #8FCDDD;}
+.packageBorderTop {border-top: 1px solid #8FCDDD;}
+.packageBorderBottom {border-bottom: 1px solid #8FCDDD;}
+
+.itinSubHead {
+	FONT-FAMILY: sans-serif, Arial, Helvetica; 
+	font-weight: bold; 
+	font-size: 8pt;
+	color:#000000;
+}
+
+.selectedItemHeader {
+	font-weight: bold;
+	font-size: 8pt;
+	color: #FFFFFF;
+	FONT-FAMILY: sans-serif, Arial, Helvetica;
+	background-color: red
+}
+.selectedItemBorder {
+ border : 1px solid red;
+}
+.packageThemeText{
+ color:white;
+}
+.packageItemHeader {
+ background-color: #8FCDDD;
+}
+.packageRecommendation {
+background-color: #F3F3F3;
+}
+.packageSearchResultSortBar TD{
+ background-color: #f3f3f3;
+}
+ 
+.packageSearchResultSortBar A  {
+ FONT-FAMILY: sans-serif, Arial, Helvetica; 
+ font-weight: normal;
+ font-size: larger;
+ color :#000000; 
+ text-decoration: none;
+ }
+ 
+.packageSearchResultSortBar A:hover {
+ color: #000000;
+ text-decoration: none;
+}
+
+
+
+
+
+
+
+/* added for upsell 15.05.08 */
+
+#basketPaxContainer{
+	border:1px solid #8FCDDD;
+	margin:10px 0;
+}
+.basketTotal{
+	background-color:#e0f0ff;
+	border:1px solid #209bbc;
+}
+
+
+#basketContainer {
+	border:1px solid #8FCDDD;
+}
+
+#basketBookingLayout {
+	border-collapse:collapse;
+	width:100%;
+}
+
+#basketTxtSection td{
+	padding: 5px;
+}
+
+#basketPaxLayout {
+	border-collapse:collapse;
+	width:100%;
+}
+
+#basketPaxLayout td{
+	margin-bottom:2px;
+	padding:3px;
+}
+#basketTitle {
+	width:100%;
+	margin-bottom:2px;
+	margin-top:5px;
+	padding:3px;
+}
+#basketBkgHdr{
+	background-color: #FBF3E0;
+	margin:5px;
+	color:#C7C5C5;
+	font-weight: bold;
+}
+
+#basketBkgHdr td{
+	border-bottom:1px solid #209BBB;
+}
+
+#basketBkgHdr table td{
+	border: 0;
+	padding:0;
+}
+
+#basketTotal {
+	background-color:#8FCDDD;
+	font-weight:bold;
+}
+.basketSectionHdr {
+	background-color:#8FCDDD;
+	font-weight:bold;
+	
+}
+.basketDateHdr {
+	background-color:#8FCDDD;
+	font-weight:bold;
+	
+}
+.basketDateHdr td{
+	padding:5px;
+	border-bottom: 1px solid white;
+}
+
+.basketItemRow td{
+	padding: 5px;
+	vertical-align:top;
+	border-bottom: 1px solid white;
+}
+
+.basketItemRow table td{
+	border: 0;
+	padding:0;
+}
+
+.basketItemRow0 {
+	background-color:#F3F3F3;
+}
+
+.basketItemRow1 {
+	background-color: #FBF3E0;
+}
+ 
+.basketItemBordered {
+	border-right: 1px solid white;
+}
+
+#basketButtons {
+	width:100%;
+	border-collapse:collapse;
+	margin-top: 6px;
+}
+
+#basketButtons .basketButtonsLeft {
+	padding-left: 0px;
+}
+#basketButtons .basketButtonsRight {
+	text-align:right;
+	padding-right: 0px;
+}
+
+
+#upsell	{
+	margin-top:3px;
+	width: 100%;
+	border-collapse:collapse;
+	display: none;
+}
+
+.upsellHdr {
+	color: white;
+	background-color: #209BBB;
+	font-size:14pt;
+	
+}
+A.upsellHdr {
+	color: white;
+	background-color: #209BBB;
+	font-size:14pt;
+	
+}
+
+#upsellHdrRight {
+	background-color: #209BBB;
+	font-weight: bold;
+	color: black;
+	text-align: right;
+}
+
+/* RBA these need to be deleted 20/01/10!!! 
+.upsellItem {
+	border: 1px solid #8FCDDD;
+	border-collapse:collapse;
+}
+
+.upsellItem td{
+	padding: 5px;
+}
+*/
+
+.upsellCityHdr {
+	border: solid #8FCDDD;
+	border-width: 1px 0 1px 1px;
+	width: 100%;
+	font-size : 12px;
+	padding : 2px;
+	font-weight : bold;
+}
+.upsellCityHdrRight {
+	border: solid #8FCDDD;
+	border-width: 1px 1px 1px 0;
+	width: 100%;
+		font-size : 12px;
+	padding : 2px;
+	font-weight : bold;
+
+}
+
+.upsellSearchLink {
+	font-weight:bold;
+}
+
+.upsellHeaderBar td{
+	padding: 2px;
+}
+
+
+
+
+table.seeDoItem {
+	border: solid thin #000000;
+	width:100%;
+	border-collapse:collapse;
+	background-color: white;
+	border-width: 1px
+}
+
+table.seeDoTopPick{
+	border: solid thin #000000;
+	width:100%;
+	border-collapse:collapse;
+	border-width: 1px
+}
+
+table.seeDoPriceRows{
+	border: solid thin #999999;
+	width:100%;
+		border-width: 1px
+}
+table .seeDoPriceHdr {
+	font-weight: bold;
+	background-color: white;
+}
+table .seeDoPriceRow0 {
+	background-color:#F3F3F3;
+}
+
+table .seeDoPriceRow1 {
+	background-color: #FBF3E0;
+}
+
+#seeDoCrossSellImg {
+	float:right;
+	width:25%;
+}
+#upsellForceLink {
+	color: White;
+	font-weight: normal;
+}
+
+
+
+.earlyBird {
+	font-size: 11px;
+	font-weight: normal;
+	color: #FF9900;
+	text-decoration: underline;
+}
+
+A.earlyBird {
+	font-size: 11px;
+	font-weight: normal;
+	color: #FF9900;
+	text-decoration: underline;
+}
+.sectionHeader {
+	background-color: #89D8EB;
+	border: 1px #89D8EB solid;	
+	width: 100%;
+	padding: 3px;
+	font-weight: bold;
+}
+
+
+.subSectionHeader {
+	border: 1px #EFEFEF solid;	
+	width: 100%;
+	padding: 3px;
+	margin-top: 15px;
+}
+
+.subSectionDetail {
+	border: 1px #EFEFEF solid;		
+	width: 100%;
+	padding: 3px;	
+	FONT-FAMILY: sans-serif, Arial, Helvetica;
+}
+
+.textHeading {
+	font-weight: bold;
+}
+
+.detailsHeader {
+	background-color: #EFEFEF;
+	font-weight: bold;
+}
+
+.sideBarHeading {
+	color: white;
+	font-weight: bold;
+	font-size: 10pt;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-transform: capitalize;
+}
+
+.sideBarCategory {		
+	font-weight: bold;
+}
+
+.bigImageBackground {
+	background-color: #ffffff;
+}
+
+@media print {
+	.topLink {
+		width: 100%;
+		text-align: right;
+		margin-bottom: 15px;
+		page-break-after: always;
+	}
+}
+
+@media screen {
+	.topLink {
+		width: 100%;
+		text-align: right;
+		margin-bottom: 15px;
+                                     page-break-after: always;
+	}
+}
+.sortUnselected {
+	font-weight: normal;
+	text-decoration : none;
+	font-size: 8pt;
+}
+
+.sortDisabled {
+	font-weight: normal;
+	text-decoration : none;
+	color:RGB(150,150,150); 	
+}
+
+.hotelGroupTable {
+/* RBA removed this to make hotel price list style like demo pages (21/01/10)
+	
+		border-top: 1px #000000 solid;
+	border-left: 1px #000000 solid;
+	border-right: 1px #000000 solid;
+	border-bottom: 1px #000000 solid;
+	margin-top: 8px;
+	*/
+	font-size: 8pt;
+	padding: 2 2 2 2;
+}
+
+.hotelGroupAltTable {
+	border-top: 1px red solid;
+	border-left: 1px red solid;
+	border-right: 1px red solid;
+	border-bottom: 1px red solid;
+	font-size:9pt;
+	margin-top:8px;
+}
+
+.hotelCatTable {
+/* RBA removed this to make hotel price list style like demo pages (21/01/10)
+		border-top: 1px black solid;
+*/
+		font-size:9pt;
+	margin-top:0px;
+	
+}
+
+.noBorder TR TD {
+	border: 0px;
+}
+
+.hotelHotPick {
+	background-color: #e0f0ff;
+	border: 0px;
+	padding: 0px 0px 5px 0px;
+}
+
+.hotelSimple {
+	border: 0px;
+	padding: 0px 0px 5px 0px;
+}
+
+.hotelNameTD {
+	background-color: #dedede;
+	margin: 10px;
+
+}
+
+.hotelName {
+	font-size: 12px;
+	font-weight : bold;
+	font-family : sans-serif, Arial, Helvetica;
+	
+}
+
+.hotelNameTD A {
+	text-decoration: none;
+		font-weight: bold;
+}
+
+.altTextHeader {
+	background-color: #66CCFF;
+	font-size: 8pt;
+	font-weight : bold;
+	color: white;
+	padding: 4px;
+	height: 20px;
+}
+
+.listCatColor1	{
+	background-color: #FFFFFF;
+
+}
+.listCatColor0	{
+	background-color: #efedee;
+}
+
+
+/*
+ * New Special Room additions
+ */
+
+
+
+.priceBreakdownHdg
+{
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    text-transform:capitalize;
+    background-color:#c5edf7;;
+    padding: 5px;
+    border-right: thin white solid;
+    border-left: thin white solid;
+    width: 100%;
+}
+
+.priceBreakdownTable
+{
+    border-collapse:collapse;
+}
+
+.priceBreakdownDate
+{
+    font-weight: bold;
+    font-size: 8pt;
+    font-style: normal;
+    font-family: arial, arial, helvetica, sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.priceBreakdownColHdg
+{
+    font-weight: bold;
+    font-size: 8pt;
+    font-style: normal;
+    font-family: arial, arial, helvetica, sans-serif;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.priceBreakdownRow0 td
+{
+    padding: 5px;
+    vertical-align:top;
+    border-bottom: 1px solid white;
+    background-color: #f3f3f3;
+    border: thin white solid;
+}
+.priceBreakdownRow1 td
+{
+    padding: 5px;
+    vertical-align:top;
+    border-bottom: 1px solid white;
+    background-color: #fbf3e0;
+    border: thin white solid;
+}
+
+.priceBreakdownTotals td
+{
+    font-weight: bold;
+    padding: 5px;
+    background-color:#c5edf7;
+    text-align:right;
+    border-right: thin white solid;
+    border-left: thin white solid;
+}
+
+
+
+.itemDesc
+{
+	
+   text-transform:capitalize;
+	background-color: #c5edf7;
+	width: 100%;
+	padding: 3px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.essentialInfo
+{
+    	FONT-SIZE: 10pt;
+		color:red;
+
+}
+A.essentialInfo
+{
+    	FONT-SIZE: 8pt;
+		color:red;
+
+}
+.stayOffer
+{
+    	FONT-SIZE: 11px;
+		color:#1fba52;
+      FONT-WEIGHT: normal;
+}
+a.stayOffer
+{
+    	FONT-SIZE: 11px;
+		color:#1fba52;
+      FONT-WEIGHT: normal;
+}
+.lgbold {
+       FONT-WEIGHT: bold;
+		 FONT-SIZE: 14px;
+		 FONT-STYLE: normal;
+		 FONT-FAMILY: arial, Arial, Helvetica, sans-serif
+		}
+.topPick
+
+{
+	FONT-WEIGHT: normal;
+	font-size: 8pt;
+	FONT-STYLE: normal;
+	FONT-FAMILY: arial;
+	COLOR: red;
+}
+
+A.hotDeal
+
+{
+	FONT-WEIGHT: normal;
+	font-size: 8pt;
+	FONT-STYLE: normal;
+	color:#cc6600;
+}
+
+.totalprice
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9pt;
+    COLOR: #000000;
+    FONT-FAMILY: arial
+
+}	
+A.totalprice:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9pt;
+    COLOR: #cc6600;
+    FONT-FAMILY: arial
+
+}
+/*
+ * New Packages additions 30.09.08
+ */
+
+#themeKeyID{
+	background: no-repeat Black;
+	padding: 2%;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+	width:100%; /* Required for IE filter */
+	-moz-opacity: 0.8; /* Mozilla extension */
+	
+	position: absolute;
+	width: 27em; height: 20em;
+	top: 20%; left: 40%;
+}
+.themeKeyID_Header{
+	color: white;
+	font-weight: bold;
+	font-size: small;
+}
+A.themeKeyID_Close{
+	color: white;
+	background: #666666;
+	font-weight: bold;
+	font-size: small;
+	text-decoration: none;
+}
+
+A.themeKeyID_Close:hover{
+	text-decoration: none;
+	color:white; 
+}
+
+
+#themeKeyID_Detail{
+	height: 17em; 
+	overflow: auto;
+}
+
+A.themeKeyID_Dtl_Link {
+	color:white;
+	text-decoration: none;
+}
+
+A.themeKeyID_Dtl_Link:hover{
+	text-decoration: underline;
+}
+.themeKeyID_Dtl_Region {
+	display:block;
+	text-indent: 4em;
+}
+
+.themeKeyID_Dtl_Country {
+	display:block;
+	text-indent: 2em;
+}
+
+.themeKeyID_Dtl_Zone {
+	display: block;
+	text-indent: 0em;
+	font-weight: bold;
+	padding-top: 2%;
+}
+
+/*
+09/10/08 other basket style rules 
+*/
+
+#basketTxtSection td{
+	padding: 5px;
+	border-top:1px solid #209BBB;
+}
+
+
+.basketChargeItemRow td{
+	padding: 5px;
+	vertical-align: top;
+}
+.basketSectionSubHdr {
+	background-color: #FBF3E0;
+	margin: 5px;
+	padding: 3px;
+}
+.basketSectionHdr td{
+	padding: 3px;
+	font-size : 10pt;
+}
+.altconf, .altconf a {
+	color: #ff6600;
+	font-weight: bold;
+}
+#basketBkgFeeContainer{
+	margin: 10px 0;
+
+}
+
+#basketBkgFeeLinks {
+	border-collapse:collapse;
+	width:100%;
+}
+
+.basketBkgFeeHdr {
+	background-color: #209BBB;
+	font-weight: bold;
+}
+
+#basketBkgFeeHdrRight {
+	background-color: #209BBB;
+	color: #FFFFFF;
+	font-size : 12px;
+	font-weight: bold;
+	text-align: right;
+	padding: 5px;	
+}
+/*
+15/06/09 Booking Summary classes 
+*/
+.sectionBox
+{
+	border: 1px solid #999999;
+}
+
+.panelHeader 
+{
+	background-color: #999999;
+	height: 19px;
+	vertical-align:middle;
+	padding-top:2px;
+	padding-left:15px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.panelfooter  
+{
+	background-color: #999999;
+	height: 19px;
+
+}
+.hsBgColor3{
+	background : #999999;
+}
+.summary_head
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 14pt;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: arial,Helvetica;
+	font-style: italic;
+	padding-left: 10px;
+}
+.prominent
+{
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 8pt;
+	COLOR: Red;
+	FONT-FAMILY: arial;
+}
+.header_white 
+{
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.frame
+{
+     border: 1px solid #999999;
+}
+.basketTotal
+{
+	background-color:#CCCCCC;
+	font-weight:bold;
+}
+.tdfillbg 
+{
+   background-color: #CCCCCC;
+	border-top: 0px #CCCCCC solid;
+	height: 24px;
+}
+
+.linkTableBorder {
+	border : 0px solid #F3F3F3;
+}
+
+/* ***************************************** */
+/*                                           */
+/* Dropdown list styling - not to be changed */
+/*                                           */
+/* ***************************************** */
+
+
+a.itmMenuHeader {
+display: block;
+width: 10em;
+padding: 0.5em 0.75em;
+text-decoration: none;
+border: 1px solid;
+}
+
+a.bkgMenuHeader {
+width: 14em;
+}
+
+.outlinemenu{
+position: absolute; /*leave this alone*/
+display: none; /*leave this alone*/
+width: 11.5em; /*default width of menu*/
+overflow-x: hidden;
+border: 1px solid;
+}
+
+.bkgoutlinemenu {
+width: 15.5em;
+}
+
+.outlinemenu ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+.outlinemenu ul li a{
+display: block;
+width: 11.5em;
+padding: 0.5em 0.75em;
+text-decoration: none;
+border: 1px solid;
+width: 13.5em;
+}
+
+.bkgoutlinemenu ul li a{
+width: 15.5em;
+}
+
+/* Holly Hack for IE \*/
+* html .outlinemenu li {height: 1%; }
+* html .outlinemenu li a { height: 1%; }
+/* End */
+
+a.itmMenuHeader {
+background: #e0f0ff;
+font: bold 8pt sans-serif, Arial, Helvetica;
+color: #000;
+border-color: #CCC;
+}
+
+a.itmMenuHeader:hover{
+color: #000;
+background: #e0f0ff;
+text-decoration: none;
+}
+
+.outlinemenu{
+border-color: #CCC;
+}
+
+.outlinemenu ul li a{
+background: #e0f0ff;
+font: bold 8pt sans-serif, Arial, Helvetica;
+color: #000;
+border-color: #CCC;
+width: 13.5em;
+
+}
+
+.outlinemenu ul li a:visited, .outlinemenu ul li a:active{
+color: #000;
+}
+
+.outlinemenu ul li a:hover{
+color: #000;
+background: #e0f0ff;
+text-decoration: none;
+}
+
+
+
+/* *********************************************************** */
+/* new styles */
+/* ********************************************************** */
+
+/* removed #padding
+#padding
+{
+	padding: 3px 3px 3px 3px;
+}
+/*
+ * indexpage layout
+ */
+.index_wrapper{
+   position: relative;
+   float: left;
+}
+.index_col1{
+   position: relative;
+   float: left;
+   width: 200px;
+}
+.index_col2{
+   position: relative;
+   float: left;
+   width: 12px;
+}
+.index_col3{
+   position: relative;
+   float: left;
+   width: 200px;
+}
+.index_col4{
+   position: relative;
+   float: left;
+   width: 12px;
+}
+.index_col5{
+   position: relative;
+   float: left;
+   width: 200px;
+}
+/*
+ * new styles
+ */
+.sectiontitle
+{
+	font-family: Arial;
+	font-style: normal;
+	font-size: 14pt;
+	color: #209bbb;
+	border-bottom: 2px solid #209bbb;
+	padding-bottom: 5px;
+}
+
+
+.pagetitle
+{
+	font-family: Arial;
+	font-style: normal;
+	font-size: 14pt;
+	color: #209bbb;
+	border-bottom: 2px solid #209bbb;
+	padding-bottom: 5px;
+}
+
+.searchingBox
+{
+	border: 1px solid #CCC;
+}
+.popBox
+{
+	border: 0px solid #CCC;
+	padding: 10px 10px 10px 10px;
+}
+.detailsHeader
+{
+		FONT-WEIGHT: bold;
+		FONT-SIZE: 10pt;
+		COLOR: #FFFFFF;
+		FONT-FAMILY: Arial, Helvetica, sans-serif;
+		BACKGROUND-COLOR: #CCCCCC;
+		padding: 2px 2px 2px 5px;
+}
+.detailsFrame
+{
+	border : 1px solid #CCCCCC;
+}
+
+/* align prices right so that they line up correctly, ltr because it should never reverse */
+.price
+{		text-align: right;
+		direction: ltr;
+		FONT-WEIGHT: bold;
+		COLOR: red;
+}
+a.price
+{
+		FONT-WEIGHT: bold;
+		COLOR: red;
+		text-decoration: underline;
+		
+}
+.priceTBA
+{		text-align: right;
+		direction: ltr;
+		FONT-WEIGHT: bold;
+}
+.subheading
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10pt;
+	COLOR: #209bbb;
+	FONT-FAMILY: sans-serif, Arial, Helvetica;
+}
+a.subheading
+{
+		COLOR: #209bbb;
+}
+
+
+.subheadingsm
+{
+		FONT-WEIGHT: bold;
+		FONT-SIZE: 11px;
+		COLOR: #209BBB;
+		FONT-FAMILY: Arial, Helvetica, sans-serif;
+}
+
+
+.sideBox {
+	border: 1px solid #209bbb;
+	padding: 5px 5px 5px 5px;
+	background-color: #e0f0ff;
+	width: 218px;
+}
+.sidetitle 
+{
+   FONT-WEIGHT: bold;
+	font-size: 11pt !important;
+	color: #209bbb;
+	border-bottom: 1px solid #209bbb;
+	padding-bottom: 4px;
+	FONT-FAMILY: Arial;
+}
+.sidetext
+{
+	font-size: 11px;
+
+}
+.sm
+{
+	font-size: 11px;
+
+}
+
+.boldsm
+{
+	font-size: 11px;
+	font-weight: bold;
+
+}
+.smlink A
+{
+	font-size: 11px;
+	FONT-WEIGHT: normal;
+	text-decoration: underline;
+
+}
+.smlinkbold A
+{
+	font-size: 11px;
+	FONT-WEIGHT: BOLD;
+	text-decoration: underline;
+
+}
+
+a.sidetextemphasis
+{
+	font-size: 11px;
+	color: #209bbb;
+	FONT-WEIGHT: bold;
+	text-transform: capitalize; //RBA Added
+}
+hr
+{
+	border: 1px solid #209bbb;
+}
+.SmIcon a:link
+{
+	font-size: 11px;
+	color: #999999;
+
+}
+
+.usefultitle
+{
+	font-family: Arial;
+   FONT-WEIGHT: bold;
+	font-size: 11pt;
+	color: #622a57;
+	border-bottom: 1px solid #622a57;
+	padding-bottom: 4px;
+}
+
+
+.usefulbarLink 
+{
+	color: #622a57;
+	font-family: Arial;
+	FONT-WEIGHT: bold;
+	font-size: 11px;
+	padding-bottom: 3px;
+	border-bottom: 1px dashed #622a57;
+	background-image: url(images/useLinkArrow.gif);
+	background-repeat: no-repeat;
+}
+.usefulbarLink A	 
+{
+	font-family: Arial;
+	font-weight: bold; 
+	color:#622a57; 
+	font-size: 11px;
+	text-decoration: none;
+	background-image: url(images/useLinkArrow.gif);
+	background-repeat: no-repeat;
+}
+.welcometitle
+{
+	font-family: Arial;
+   FONT-WEIGHT: bold;
+	font-size: 11pt;
+	color: #b60004;
+	border-bottom: 1px solid #b60004;
+	padding-bottom: 1px;
+}
+.newreqtitle
+{
+	font-family: Arial;
+   FONT-WEIGHT: bold;
+	font-size: 11pt;
+	color: #3399cc;
+	border-bottom: 1px solid #3399cc;
+	padding-bottom: 4px;
+}
+
+.newreqbarLink 
+{
+	color: #3399cc;
+	font-family: Arial;
+	FONT-WEIGHT: bold;
+	font-size: 11px;
+	padding-bottom: 3px;
+	border-bottom: 1px dashed #3399cc;
+	background-image: url(images/newreqLinkArrow.gif);
+	background-repeat: no-repeat;
+}
+.newreqbarLink A	 
+{
+	font-family: Arial;
+	font-weight: bold; 
+	color:#3399cc; 
+	font-size: 11px;
+	text-decoration: none;
+	background-image: url(images/newreqLinkArrow.gif);
+	background-repeat: no-repeat;
+}
+
+.mantitle
+{
+	font-family: Arial;
+   FONT-WEIGHT: bold;
+	font-size: 11pt;
+	color: #f85729;
+	border-bottom: 1px solid #f85729;
+	padding-bottom: 4px;
+}
+
+.manbarLink 
+{
+	color: #f85729;
+	font-family: Arial;
+	FONT-WEIGHT: bold;
+	font-size: 11px;
+	padding-bottom: 3px;
+	border-bottom: 1px dashed #f85729;
+	background-image: url(images/manLinkArrow.gif);
+	background-repeat: no-repeat;
+}
+.manbarLink A	 
+{
+	font-family: Arial;
+	font-weight: bold; 
+	color:#f85729; 
+	font-size: 11px;
+	text-decoration: none;
+	background-image: url(images/manLinkArrow.gif);
+	background-repeat: no-repeat;
+}
+
+.sideboxLink 
+{
+	color: #209bbb;
+	font-family: Arial;
+	FONT-WEIGHT: bold;
+	font-size: 11px;
+	padding-bottom: 3px;
+	border-bottom: 1px dashed #209bbb;
+	background-image: url(../images/sideLinkArrow.gif);
+	background-repeat: no-repeat;
+}
+.sideboxLink A	 
+{
+	font-family: Arial;
+	font-weight: bold; 
+	color:#209bbb; 
+	font-size: 11px;
+	text-decoration: none;
+	background-image: url(../images/sideLinkArrow.gif);
+	background-repeat: no-repeat;
+}
+
+/*
+ * tabs on hotel search page
+ */
+.htltabsLine
+{
+	border-bottom: 2px solid #209bbb;
+	padding: 3px 3px 3px 3px;
+}
+
+#htltabs {
+font-family: Arial;
+font-size: 11px;
+list-style-type: none;
+list-style-position:outside;
+padding:0;
+margin:0;
+display:inline;
+}
+
+ul#htltabs li {
+display:inline;
+margin-left:0px;
+}
+
+.htltabOn A
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10pt;
+	COLOR: #FFF;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	BACKGROUND-COLOR: #209bbb;
+	border-bottom: 1px solid #209bbb;
+	padding: 2px 10px 2px 10px;
+	text-decoration: none;
+}
+.htltabOff A
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10pt;
+	COLOR: #209bbb;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	BACKGROUND-COLOR: #e0f0ff;
+	border-bottom: 1px solid #FFF;
+	padding: 2px 10px 1px 10px;
+	text-decoration: none;
+}
+.sortbarbg
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	BACKGROUND-COLOR: #209bbb;
+	padding: 5px 5px 5px 5px;
+	text-decoration: none;
+}
+.sortbarbg a
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	BACKGROUND-COLOR: #209bbb;
+	padding: 5px 5px 5px 5px;
+	text-decoration: none;
+}
+.sortbarbg a:hover {color:#FFFFFF;text-decoration:none;font-weight:bold;}
+
+.ItemsShowing 
+{
+	font-size: 11px;
+	color: #999999;
+	visibility: hidden;
+	display: none;
+
+}
+.ItemsShowing A
+{
+	font-size: 11px;
+	color: #999999;
+
+}
+.bgOn
+{
+	BACKGROUND-COLOR: #efedee;
+}
+.upsellBorder {
+	border: 1px solid #209BBB;
+	background-color: #f4f4f4
+}
+.upsellBrdrBot {
+	border-bottom: 1px solid #209BBB;
+}
+.basketTotalFrame{
+	background-color:#e0f0ff;
+	border:1px solid #209bbc;
+}
+.upsellitem
+{
+		FONT-WEIGHT: bold;
+		FONT-SIZE: 11pt;
+		COLOR: #209bbb;
+		FONT-FAMILY: Arial, Helvetica, sans-serif;
+}
+.currentselctionhdr {
+	font-family: Arial;
+	font-style: normal;
+	font-size: 14pt;
+	color: red;
+	border-bottom: 2px solid red;
+	padding-bottom: 5px;
+}
+.currentselctionFrame
+{
+	background-color: #fff8f8;
+}
+
+.summarysideBox
+{
+	border: 1px solid #209bbb;
+	padding: 5px 5px 5px 5px;
+	background-color: #ffffff;
+	width: 218px;
+}
+A.servicename
+{
+	font-size: 13px;
+	font-weight: bold;
+	color: #209bbb;
+	text-decoration: underline;
+}
+
+.facilityImage, .sortImage {
+height: 16px;
+width: 16px;
+}
+
+#sideBoxMapImage {
+padding: 0px 0px 0px 0px !important; 
+}
+
+#sideBox  div{
+	padding: 3px 3px 3px 3px;
+	font-size: 11px;
+}
+
+#sideBox  table, #sideBox  a, #sideBox select{
+	font-size: 11px;
+}
+
+#results  select{
+	font-size: 11px;
+}
+
+/* example of using an id to style something unique */
+#sidebarsearchtitle {
+	font-family: Arial;
+   FONT-WEIGHT: bold;
+	font-size: 11pt;
+	color: #209bbb;
+	border-bottom: 1px solid #209bbb;
+	padding-bottom: 4px;
+}
+.compare
+{
+	font-size: 11px;
+	color: #000000;
+	font-weight: bold;
+}
+
+#summarysideBox div{
+	padding: 3px 3px 3px 3px;
+	font-size: 11px;
+}
+#summarysideBox  table, #summarysideBox  a, #summarysideBox select{
+	font-size: 11px;
+}
+.stayOfferFree
+{
+    	FONT-SIZE: 13px;
+		color:#1fba52;
+FONT-WEIGHT: normal;
+}
+.reminderemailFrame
+{
+	border : 1px solid #209bbb;
+}
+/* Added for hotel price list pages */
+
+.hideDiv {
+      display: none;
+
+}
+
+.loadingDiv {
+      padding: 20px 20px;
+      width: 100%;
+      height: 1450px;
+
+}
+
+.navLink {
+      font-size: 11px;
+      color: #999999;
+
+}
+
+.floatLeft {
+    float: left;
+    padding: 2px;
+
+}
+
+.floatRight {
+    float: right;
+    padding: 2px;
+
+}
+
+.clearfloat {
+    clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+
+}
+
+.sideBoxWidth {
+      width: 218px;
+
+}
+
+.sideBoxSpacer {
+      background-color: #e0f0ff;
+      height: 8px;
+      width: 200px;
+
+}
+#hotelResultsDiv .listCatColor1 {
+
+background-color: #ffffff;
+
+}
+
+#hotelResultsDiv .listCatColor0 {
+
+background-color: #efedee;
+
+}
+.reconfirm {
+	background-color : #e1f1fe;
+	color: #000000;
+	font-weight : bold;
+	font-family : arial, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 22px;
+		}
+
+/* Updated styles */
+
+#CheckOut2 .sidetext {
+	width: 100%;
+}
+
+
+/* #ChgNames #names TD { 
+padding-right: 30px; 
+} */
+
+#ChangeHHPaxRmks #sideBox .price {
+	font-size: 10pt;
+}
+
+#QuickEntryItemHH #sideBox .price { 
+font-size: 10pt; 
+}
+.innerSpcDtls .price {
+color: black;
+font-weight: normal;
+} 
+#sideItemCity {
+ display: inline;
+}
+#DeptAgent .insetTablePop {
+ width: 100%;
+}
+
+.arrivalFieldInput
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: sans-serif, Arial, Helvetica;
+}
+
+.departureFieldInput
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: sans-serif, Arial, Helvetica;
+}
+
+.deptDateFieldInput
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: sans-serif, Arial, Helvetica;
+}
+
+.hotDeal
+{
+	FONT-WEIGHT: normal;
+	font-size: 8pt;
+	FONT-STYLE: normal;
+	color: #cc6600;
+	padding: 0px 10px 0px 0px;
+} 
+.SmIcon a { 
+color:#999999; 
+font-size:11px; 
+text-decoration: none; 
+} 
+
+a.edit {
+	color: #209bbb;
+	font-weight: bold;
+}
+
+/* Calendar Icons */
+
+.ui-datepicker-header .ui-state-hover, .ui-datepicker-header .ui-widget-content .ui-state-hover, .ui-datepicker-header .ui-state-focus, .ui-datepicker-header .ui-widget-content .ui-state-focus 
+{
+border: none;
+background-color: white
+}
+
+.ui-dialog-titlebar .ui-state-hover, .ui-dialog-titlebar .ui-widget-content .ui-state-hover, .ui-dialog-titlebar .ui-state-focus, .ui-dialog-titlebar .ui-widget-content .ui-state-focus {
+
+	border: none;
+	background-color: white; 
+
+}
+.calendarContainer {
+	padding-top: 0px;
+}
+
