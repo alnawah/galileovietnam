@@ -1,0 +1,385 @@
+#newrqsts {
+	visibility: visible !important;
+}
+#newrqstscc {
+	visibility: hidden !important;
+}
+#newrqstswbs {
+	visibility: hidden !important;
+}
+#mbkgs {
+	visibility: visible !important;
+}
+#mbkgscc {
+	visibility: hidden !important;
+}
+#mbkgswbs {
+	visibility: hidden !important;
+}
+#manage {
+visibility: hidden !important;
+}
+#admin {
+	visibility: hidden !important;
+}
+#rpt {
+	visibility: visible !important;
+}
+#rptcc {
+	visibility: hidden !important;
+}
+#rptwbs {
+	visibility: hidden !important;
+}
+#gen {
+	visibility: hidden !important;
+}
+#ulinks {
+	visibility: visible !important;
+}
+#promo1 {
+visibility: visible !important;
+}
+#promoA {
+visibility: visible !important;
+}
+#promo1 {
+visibility: visible !important;
+}
+#promoB {
+visibility: visible !important;
+}
+#promoC {
+visibility: visible !important;
+}
+#promoD {
+visibility: visible !important;
+}
+
+/* PROMOs CALLCENTRE */
+
+#promoBcc {
+visibility: hidden !important;
+}
+#promoCcc {
+visibility: hidden !important;
+}
+#promoDcc {
+visibility: hidden !important;
+}
+
+/* PROMOs WBS */
+
+#promoBwbs {
+visibility: hidden !important;
+}
+#promoCwbs {
+visibility: hidden !important;
+}
+#promoDwbs {
+visibility: hidden !important;
+}
+
+#mainpage {
+	padding: 20px;
+	height: auto;
+}
+#sidebar {
+	border-style: solid;
+	border-color: inherit;
+	border-width: 1px;
+	float:left;
+	width:300px;
+		padding: 1em;
+		height: auto;
+		top: 12px;
+}
+#content {
+	float: left;
+	right: -20px;
+	position: relative;
+	top: 12px; 
+	height: 600px;
+	width: 200px;
+}
+#footer {
+	bottom: 1em;
+	width: 100%;
+	clear: both;
+	float: left;
+	margin-top: 130px;
+}
+#newrqsts {
+	left:0px;
+	position:relative;
+}
+#mbkgs {
+	left:225px;
+}
+#mbkgscc {
+	left:225px;
+}
+#mbkgswbs {
+	left:225px;
+}
+#manage {
+	left:225px;
+}
+#admin {
+	left:450px;
+}
+#rpt {
+	left:450px;
+}
+#rptcc {
+	left:450px;
+}
+#rptwbs {
+	left:450px;
+}
+#gen {
+	left:225px;
+	top:auto;
+}
+#promoA {
+	left:450px;
+}
+
+
+#promoB,  #promoBwbs {
+	left:0px;
+	top:auto;
+}
+#promoC,  #promoCwbs {
+	left:225px;
+	top:auto;
+}
+#promoD,  #promoDwbs {
+	left:450px;
+	top:auto;
+}
+
+
+
+#promoBcc {
+	left:0px;
+	top:370px;
+}
+#promoCcc {
+	left:225px;
+	top:370px;
+}
+#promoDcc {
+	left:450px;
+	top:370px;
+}
+
+#ulinks {
+	left:0px;
+	margin-top: 20px;
+	top:auto;
+	position: relative;
+}
+.ulinks {
+	width:240px !important;
+}
+#hotelcnty {
+	margin-top: -20px;
+	width:240px !important;
+}
+#hotelcity {
+	margin-top: -5px;
+	width:240px !important;
+}
+#fromDate {
+/*margin-top: -10px; */
+}
+#advLink {
+	position: relative;
+	width: 10em;
+}
+#srchButton {
+	margin: -18px 0px 0px 170px;
+}
+.headings{
+	font-family: Arial;
+	font-size: 11px;
+	position: relative;
+}
+.tbleposition {
+	margin-left: -4px;
+	margin-top: 0px;
+}
+.linkSection {
+	position:absolute;
+	top:0pt;
+	width:210px;
+}
+.sidetext {
+	font-family: Arial;
+	position: relative; 
+	font-size:11px;
+	width: 200px;
+	height: 5em;
+}
+.imagesize {
+	width: 200px;
+	height: 102px;
+	max-height: 102px;
+}
+.imagenewreq {
+	background-image:url(../images/newReqImg.gif);
+}
+.imagemanbkg {
+	background-image:url(../images/manImg.gif);
+}
+.imagemanage {
+	background-image:url(../images/manageImg.gif);
+}
+.imageadmin {
+	background-image:url(../images/adminImg.gif);
+}
+.imagerpt {
+	background-image:url(../images/rptImg.gif);
+}
+.imagegen {
+	background-image:url(../images/generalImg.gif);
+}
+.imageuseful {
+	background-image:url(../images/usefulImg.gif);
+}
+.newreqbarLink {
+	background-image:url(../images/newReqLinkArrow.gif);
+}
+.manbkgbarLink {
+	background-image:url(../images/manLinkArrow.gif);
+}
+.adminbarLink {
+	background-image:url(../images/adminLinkArrow.gif);
+}
+.rptbarLink {
+	background-image:url(../images/rptLinkArrow.gif);
+}
+.genbarLink {
+	background-image:url(../images/generalLinkArrow.gif);
+}
+.usefulbarLink {
+	background-image:url(../images/useLinkArrow.gif);
+}
+.newreqbarLink a {
+	background-image:url(../images/newReqLinkArrow.gif);
+	background-repeat:no-repeat;
+}
+.manbkgbarLink a {
+	background-image:url(../images/manLinkArrow.gif);
+	background-repeat:no-repeat;
+}
+.adminbarLink a {
+	background-image:url(../images/adminLinkArrow.gif);
+	background-repeat:no-repeat;
+}
+.rptbarLink a {
+	background-image:url(../images/rptLinkArrow.gif);
+	background-repeat:no-repeat;
+}
+.genbarLink a {
+	background-image:url(../images/generalLinkArrow.gif);
+	background-repeat:no-repeat;
+}
+.usefulbarLink a {
+	background-image:url(../images/useLinkArrow.gif);
+	background-repeat:no-repeat;
+}
+.sectionTitle {
+	padding-bottom:4px;
+	width: 200px; 
+	font-family:Arial;
+	font-size:11pt;
+	font-weight:bold;
+}
+.sectionLink {
+	padding:3px;
+	width: 200px; 
+	font-family:Arial;
+	font-size:11px;
+	font-weight:bold;
+} 
+
+a.sectionsLink {
+	font-family:Arial;
+	font-size:11px;
+	font-weight:bold;
+	text-decoration:none;
+}
+.movetoside {
+	float: left;
+}
+.sideBox {
+	padding:5px;
+	width:203px;
+}
+.welcometitle {
+	padding-bottom:1px; 
+	font-family:Arial;
+	font-size:11pt;
+	font-weight:bold;
+}
+.sidetitle {
+	padding-bottom:4px; 
+	font-family:Arial;
+	font-size:11pt;
+	font-weight:bold;
+}
+.hide {
+	visibility: hidden;
+}
+.norepeat {
+	background-repeat: no-repeat;
+}
+.toppad {
+	padding-top: 5px;
+}
+.spacing {
+	margin: 5px 0px;
+}
+.headinggap {
+	margin-top: 2px;
+}
+.listWidth {
+	width: 245px;
+	font-size: 10px;
+	font-family: arial
+}
+
+.sectionSpacer {
+height: 60px;
+}
+
+#indexlinks {
+	visibility: hidden !important;
+	margin-top:300px;
+	width:450px;
+}
+
+.freeFormatCitySelectionClass { 
+visibility: hidden;
+position: absolute;
+overflow: block;
+z-index:10;
+}
+
+#freeFormatCityEntry{
+}
+
+	
+}
+.roomtypes{
+width: 170px;
+font-size: 10px;
+	
+}
+#subAgentList select {
+width: 15em;
+}
+
+

@@ -1,0 +1,627 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+    <link rel="stylesheet" href="Content/Styles/thickbox.css" />
+    <link rel="stylesheet" href="Content/Styles/ui.css" />
+    <link rel="stylesheet" href="Content/Styles/dftStyle.css" />
+    <link rel="stylesheet" href="Content/Styles/style.css" />
+    <link rel="stylesheet" href="Content/Styles/indexDftStyle.css" />
+    <link href="Content/Styles/ui.tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="Content/Scripts/jquery-1.3.2.js" type="text/javascript"></script>
+
+    <script src="Content/ui/ui.core.js" type="text/javascript"></script>
+
+    <script src="Content/Scripts/ui.tabs.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function() {
+            $('#tabHeader').tabs();
+        });
+
+    </script>
+
+    <div id="sidebar" class="sideBox">
+        <div class="sidetitle">
+            Hotel Quick Search
+        </div>
+        <ul id="tabHeader">
+            <li><a href="#TypingSearch"><span>New Search</span></a></li>
+            <li><a href="#hhQuickSearch"><span>Classic Search</span></a></li>
+        </ul>
+        <div id="TypingSearch">
+            <div id="Div1" class="spacing">
+                <div class="headings smbold">
+                    <input id="rd1" name ="rdOptionsSearch" type="radio" value = "1" />Destination
+                    <input id="rd2" name ="rdOptionsSearch" type="radio" value ="2" />Hotel name
+                </div>
+                <input name="freeFormatCityEntry" id="Text1" maxlength="100" size="45"
+                    type="text" />
+                <br>
+                <div id="Div2" class="freeFormatCitySelectionClass">
+                    <select class="tableSelect" name="freeFormatCitySelection">
+                        <option selected="selected" value=""></option>
+                    </select>
+                </div>
+            </div>
+            <hr />
+            <div id="Div6">
+                <div class="headings toppad smbold">
+                    <span style="vertical-align: top">Check in date:&nbsp;&nbsp; </span>&nbsp;<select
+                        id="Select5" name="frmDate">
+                        <option value="">Day</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>&nbsp;&nbsp;&nbsp;
+                    <select id="Select6" name="D1">
+                        <option value="">Month</option>
+                        <option value="6,2010">Jun, 2010</option>
+                        <option value="7,2010">Jul, 2010</option>
+                        <option value="8,2010">Aug, 2010</option>
+                        <option value="9,2010">Sep, 2010</option>
+                        <option value="10,2010">Oct, 2010</option>
+                        <option value="11,2010">Nov, 2010</option>
+                        <option value="12,2010">Dec, 2010</option>
+                        <option value="1,2011">Jan, 2011</option>
+                        <option value="2,2011">Feb, 2011</option>
+                        <option value="3,2011">Mar, 2011</option>
+                        <option value="4,2011">Apr, 2011</option>
+                        <option value="5,2011">May, 2011</option>
+                        <option value="6,2011">Jun, 2011</option>
+                    </select>&nbsp;
+                    <img title="Calendar" alt="Calendar" src="Content/Images/calendarIcon.gif" class="ui-datepicker-trigger"
+                        align="absmiddle" />
+                </div>
+            </div>
+            <br />
+            <div id="Div7">
+                <div class="headings toppad smbold">
+                    <span style="vertical-align: top">Check out date:</span>
+                    <select id="Select7" name="frmDate">
+                        <option value="">Day</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>&nbsp;&nbsp;&nbsp;
+                    <select id="Select8" name="D1">
+                        <option value="">Month</option>
+                        <option value="6,2010">Jun, 2010</option>
+                        <option value="7,2010">Jul, 2010</option>
+                        <option value="8,2010">Aug, 2010</option>
+                        <option value="9,2010">Sep, 2010</option>
+                        <option value="10,2010">Oct, 2010</option>
+                        <option value="11,2010">Nov, 2010</option>
+                        <option value="12,2010">Dec, 2010</option>
+                        <option value="1,2011">Jan, 2011</option>
+                        <option value="2,2011">Feb, 2011</option>
+                        <option value="3,2011">Mar, 2011</option>
+                        <option value="4,2011">Apr, 2011</option>
+                        <option value="5,2011">May, 2011</option>
+                        <option value="6,2011">Jun, 2011</option>
+                    </select>&nbsp;
+                    <img title="Calendar" alt="Calendar" src="Content/Images/calendarIcon.gif" class="ui-datepicker-trigger"
+                        align="absmiddle" />
+                </div>
+            </div>
+            <div class="spacing">
+                <div id="Div8" class="spacing">
+                    <table class="tbleposition">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a id="A1" href="#" class="headings smbold">Room type</a>
+                                    <br>
+                                    <select name="Room0" class="headinggap roomtypes">
+                                        <option value=" "></option>
+                                        <option selected="selected" value="0">Twin</option>
+                                        <option value="1">Twin + 1 Child</option>
+                                        <option value="2">Twin + 2 Children</option>
+                                        <option value="3">Double</option>
+                                        <option value="4">Double + 1 child</option>
+                                        <option value="5">Double + 2 children</option>
+                                        <option value="6">Single</option>
+                                        <option value="7">Triple</option>
+                                        <option value="8">Twin for sole use</option>
+                                        <option value="9">Quad</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <span class="headings smbold">No.</span><br>
+                                    <select name="Room0Count" class="headinggap">
+                                        <option value="0"></option>
+                                        <option selected="selected" value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <span class="headings smbold">Cot</span><br>
+                                    <select name="Room0Cots" class="headinggap">
+                                        <option selected="selected" value="0"></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <a href="#" style="vertical-align: top">+Add more room</a>
+            </div>
+            <br />
+            <div>
+                <span style="vertical-align: top">Star rating: </span>&nbsp;
+                <select id="Select9">
+                    <option selected="selected" value="-1">All start</option>
+                    <option value="-1">All start</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="3"><3</option>
+                </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" name="search" class="buttonText" style="vertical-align: top" onclick = "window.location.href = 'HotelSearchResult.htm'">
+                    Search
+                 </button>
+            </div>
+            <br />
+        </div>
+        <div id="hhQuickSearch">
+            <div id="normalmode" style="display: table-row; visibility: visible;" class="spacing">
+                <br />
+                <div id="hotelcnty">
+                    <select class="tableSelect headinggap listWidth" name="cntySelection">
+                        <option selected="selected" value="">Select Country</option>
+                        <option value="AL">Albania</option>
+                        <option value="DZ">Algeria</option>
+                        <option value="AD">Andorra</option>
+                        <option value="AG">Antigua</option>
+                        <option value="AR">Argentina</option>
+                        <option value="AM">Armenia</option>
+                        <option value="AU">Aruba</option>
+                        <option value="AA">Australia</option>
+                        <option value="A ">Austria</option>
+                        <option value="AZ">Azerbaijan</option>
+                        <option value="BS">Bahamas</option>
+                        <option value="BN">Bahrain</option>
+                        <option value="WB">Barbados</option>
+                        <option value="BY">Belarus</option>
+                        <option value="B ">Belgium</option>
+                        <option value="BZ">Belize</option>
+                        <option value="BJ">Benin</option>
+                        <option value="BA">Bermuda</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="BH">Bosnia Herzegovina</option>
+                        <option value="BW">Botswana</option>
+                        <option value="BR">Brazil</option>
+                        <option value="VG">British Virgin Islands</option>
+                        <option value="BU">Brunei Darussalam</option>
+                        <option value="BG">Bulgaria</option>
+                        <option value="BF">Burkina Faso</option>
+                        <option value="BI">Burundi</option>
+                        <option value="KH">Cambodia</option>
+                        <option value="CM">Cameroon</option>
+                        <option value="CA">Canada</option>
+                        <option value="CP">Cayman Islands</option>
+                        <option value="TD">Chad</option>
+                        <option value="CL">Chile</option>
+                        <option value="CN">China</option>
+                        <option value="CO">Colombia</option>
+                        <option value="CK">Cook Islands</option>
+                        <option value="CS">Costa Rica</option>
+                        <option value="CR">Croatia</option>
+                        <option value="CU">Cuba</option>
+                        <option value="CY">Cyprus</option>
+                        <option value="C ">Czech Republic</option>
+                        <option value="DK">Denmark</option>
+                        <option value="DJ">Djibouti</option>
+                        <option value="DR">Dominican Republic</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="UN">Egypt</option>
+                        <option value="SV">El Salvador</option>
+                        <option value="ES">Estonia</option>
+                        <option value="ET">Ethiopia</option>
+                        <option value="FK">Falklands Islands</option>
+                        <option value="FI">Fiji</option>
+                        <option value="SF">Finland</option>
+                        <option value="F ">France</option>
+                        <option value="GF">French Guiana</option>
+                        <option value="PF">French Polynesia</option>
+                        <option value="GA">Gabon</option>
+                        <option value="GE">Georgia</option>
+                        <option value="D ">Germany</option>
+                        <option value="GH">Ghana</option>
+                        <option value="GK">Gibraltar</option>
+                        <option value="GR">Greece</option>
+                        <option value="GZ">Greenland</option>
+                        <option value="GD">Grenada</option>
+                        <option value="GP">Guadeloupe</option>
+                        <option value="GU">Guam</option>
+                        <option value="GT">Guatemala</option>
+                        <option value="GN">Guinea</option>
+                        <option value="GY">Guyana</option>
+                        <option value="HN">Honduras</option>
+                        <option value="HX">Hong Kong</option>
+                        <option value="H ">Hungary</option>
+                        <option value="IS">Iceland</option>
+                        <option value="IN">India</option>
+                        <option value="IA">Indonesia</option>
+                        <option value="IR">Iran</option>
+                        <option value="EI">Ireland(Republic of)</option>
+                        <option value="IL">Israel</option>
+                        <option value="I ">Italy</option>
+                        <option value="CI">Ivory Coast</option>
+                        <option value="JA">Jamaica</option>
+                        <option value="J ">Japan</option>
+                        <option value="JO">Jordan</option>
+                        <option value="KA">Kazakhstan</option>
+                        <option value="KE">Kenya</option>
+                        <option value="KV">Kosovo</option>
+                        <option value="KT">Kuwait</option>
+                        <option value="LA">Laos</option>
+                        <option value="LV">Latvia</option>
+                        <option value="LE">Lebanon</option>
+                        <option value="LY">Libya</option>
+                        <option value="FL">Liechtenstein</option>
+                        <option value="LI">Lithuania</option>
+                        <option value="LU">Luxembourg</option>
+                        <option value="MO">Macau</option>
+                        <option value="MK">Macedonia</option>
+                        <option value="MA">Malaysia</option>
+                        <option value="MV">Maldives</option>
+                        <option value="MW">Malta</option>
+                        <option value="MQ">Martinique</option>
+                        <option value="MR">Mauritania</option>
+                        <option value="IW">Mauritius</option>
+                        <option value="ME">Mexico</option>
+                        <option value="FM">Micronesia</option>
+                        <option value="MD">Moldova</option>
+                        <option value="MC">Monaco</option>
+                        <option value="MN">Mongolia</option>
+                        <option value="MJ">Montenegro</option>
+                        <option value="M ">Morocco</option>
+                        <option value="MZ">Mozambique</option>
+                        <option value="MM">Myanmar</option>
+                        <option value="NA">Namibia</option>
+                        <option value="NP">Nepal</option>
+                        <option value="NL">Netherlands</option>
+                        <option value="AN">Netherlands Antilles</option>
+                        <option value="NC">New Caledonia</option>
+                        <option value="NZ">New Zealand</option>
+                        <option value="NI">Nicaragua</option>
+                        <option value="NG">Nigeria</option>
+                        <option value="NU">Niue</option>
+                        <option value="NF">Norfolk Island</option>
+                        <option value="NS">North Cyprus</option>
+                        <option value="MP">Northern Mariana Island</option>
+                        <option value="N ">Norway</option>
+                        <option value="OM">Oman</option>
+                        <option value="PK">Pakistan</option>
+                        <option value="PW">Palau</option>
+                        <option value="PG">Panama</option>
+                        <option value="PA">Papua New Guinea</option>
+                        <option value="PY">Paraguay</option>
+                        <option value="PE">Peru</option>
+                        <option value="PH">Philippines</option>
+                        <option value="PL">Poland</option>
+                        <option value="P ">Portugal</option>
+                        <option value="PT">Puerto Rico</option>
+                        <option value="DH">Qatar</option>
+                        <option value="RE">Reunion</option>
+                        <option value="R ">Romania</option>
+                        <option value="RU">Russia</option>
+                        <option value="RW">Rwanda</option>
+                        <option value="WS">Samoa</option>
+                        <option value="SM">San Marino (Republic of)</option>
+                        <option value="GL">San Martin (F)</option>
+                        <option value="SJ">Saudi Arabia</option>
+                        <option value="SN">Senegal</option>
+                        <option value="YU">Serbia</option>
+                        <option value="FZ">Seychelles</option>
+                        <option value="RS">Singapore</option>
+                        <option value="SR">Slovakia</option>
+                        <option value="SL">Slovenia</option>
+                        <option value="SA">South Africa</option>
+                        <option value="K ">South Korea</option>
+                        <option value="E ">Spain</option>
+                        <option value="CE">Sri Lanka</option>
+                        <option value="KC">St Kitts and Nevis</option>
+                        <option value="LC">St Lucia</option>
+                        <option value="VE">St Vincent &amp; Grenadines</option>
+                        <option value="SD">Sudan</option>
+                        <option value="SK">Suriname</option>
+                        <option value="SZ">Swaziland</option>
+                        <option value="S ">Sweden</option>
+                        <option value="CH">Switzerland</option>
+                        <option value="SY">Syria</option>
+                        <option value="TW">Taiwan</option>
+                        <option value="TZ">Tanzania</option>
+                        <option value="TH">Thailand</option>
+                        <option value="TG">Togo</option>
+                        <option value="TO">Tonga</option>
+                        <option value="TT">Trinidad &amp; Tobago</option>
+                        <option value="TN">Tunisia</option>
+                        <option value="TR">Turkey</option>
+                        <option value="TC">Turks &amp; Caicos Island</option>
+                        <option value="UK">Ukraine</option>
+                        <option value="EM">United Arab Emirates</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="US">United States</option>
+                        <option value="UY">Uruguay</option>
+                        <option value="UZ">Uzbekistan</option>
+                        <option value="VU">Vanuatu</option>
+                        <option value="VA">Vatican City</option>
+                        <option value="VC">Venezuela</option>
+                        <option value="VI">Vietnam</option>
+                        <option value="VN">Virgin Islands (USA)</option>
+                        <option value="YE">Yemen Republic</option>
+                        <option value="ZA">Zambia</option>
+                        <option value="ZW">Zimbabwe</option>
+                    </select>
+                </div>
+                <br />
+                <div id="hotelcity">
+                    <select name="cityCode" class="tableSelect headinggap listWidth">
+                        <option selected="selected" value="">Select Destination</option>
+                        <option value="CT1">City1</option>
+                        <option value="CT2">City2</option>
+                        <option value="CT3">City3</option>
+                    </select>
+                </div>
+            </div>
+            <hr />
+            <div id="fromDate">
+                <div class="headings toppad smbold">
+                    <span style="vertical-align: top">Check in date:&nbsp;&nbsp; </span>&nbsp;<select
+                        id="frmDate" name="frmDate">
+                        <option value="">Day</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>&nbsp;&nbsp;&nbsp;
+                    <select id="Select1" name="D1">
+                        <option value="">Month</option>
+                        <option value="6,2010">Jun, 2010</option>
+                        <option value="7,2010">Jul, 2010</option>
+                        <option value="8,2010">Aug, 2010</option>
+                        <option value="9,2010">Sep, 2010</option>
+                        <option value="10,2010">Oct, 2010</option>
+                        <option value="11,2010">Nov, 2010</option>
+                        <option value="12,2010">Dec, 2010</option>
+                        <option value="1,2011">Jan, 2011</option>
+                        <option value="2,2011">Feb, 2011</option>
+                        <option value="3,2011">Mar, 2011</option>
+                        <option value="4,2011">Apr, 2011</option>
+                        <option value="5,2011">May, 2011</option>
+                        <option value="6,2011">Jun, 2011</option>
+                    </select>&nbsp;
+                    <img title="Calendar" alt="Calendar" src="Content/Images/calendarIcon.gif" class="ui-datepicker-trigger"
+                        align="absmiddle" />
+                </div>
+            </div>
+            <br />
+            <div id="toDate">
+                <div class="headings toppad smbold">
+                    <span style="vertical-align: top">Check out date:</span>
+                    <select id="Select2" name="frmDate">
+                        <option value="">Day</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>&nbsp;&nbsp;&nbsp;
+                    <select id="Select3" name="D1">
+                        <option value="">Month</option>
+                        <option value="6,2010">Jun, 2010</option>
+                        <option value="7,2010">Jul, 2010</option>
+                        <option value="8,2010">Aug, 2010</option>
+                        <option value="9,2010">Sep, 2010</option>
+                        <option value="10,2010">Oct, 2010</option>
+                        <option value="11,2010">Nov, 2010</option>
+                        <option value="12,2010">Dec, 2010</option>
+                        <option value="1,2011">Jan, 2011</option>
+                        <option value="2,2011">Feb, 2011</option>
+                        <option value="3,2011">Mar, 2011</option>
+                        <option value="4,2011">Apr, 2011</option>
+                        <option value="5,2011">May, 2011</option>
+                        <option value="6,2011">Jun, 2011</option>
+                    </select>&nbsp;
+                    <img title="Calendar" alt="Calendar" src="Content/Images/calendarIcon.gif" class="ui-datepicker-trigger"
+                        align="absmiddle" />
+                </div>
+            </div>
+            <div class="spacing">
+                <div id="RoomRow0" class="spacing">
+                    <table class="tbleposition">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a id="roomtypelink" href="#" class="headings smbold">Room type</a>
+                                    <br>
+                                    <select name="Room0" class="headinggap roomtypes">
+                                        <option value=" "></option>
+                                        <option selected="selected" value="0">Twin</option>
+                                        <option value="1">Twin + 1 Child</option>
+                                        <option value="2">Twin + 2 Children</option>
+                                        <option value="3">Double</option>
+                                        <option value="4">Double + 1 child</option>
+                                        <option value="5">Double + 2 children</option>
+                                        <option value="6">Single</option>
+                                        <option value="7">Triple</option>
+                                        <option value="8">Twin for sole use</option>
+                                        <option value="9">Quad</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <span class="headings smbold">No.</span><br>
+                                    <select name="Room0Count" class="headinggap">
+                                        <option value="0"></option>
+                                        <option selected="selected" value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <span class="headings smbold">Cot</span><br>
+                                    <select name="Room0Cots" class="headinggap">
+                                        <option selected="selected" value="0"></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <a href="#" style="vertical-align: top">+Add more room</a>
+            </div>
+            <br />
+            <div>
+                <span style="vertical-align: top">Star rating: </span>&nbsp;
+                <select id="Select4">
+                    <option selected="selected" value="-1">All start</option>
+                    <option value="-1">All start</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="3"><3</option>
+                </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" name="search" class="buttonText" style="vertical-align: top" onclick = "window.location.href = 'HotelSearchResult.htm'">
+                    Search</button>
+            </div>
+            <br />
+        </div>
+    </div>
+</body>
+</html>

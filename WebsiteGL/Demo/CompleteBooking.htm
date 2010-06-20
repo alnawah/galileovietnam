@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="Content/Styles/thickbox.css" />
+    <link rel="stylesheet" href="Content/Styles/ui.css" />
+    <link rel="stylesheet" href="Content/Styles/dftStyle.css" />
+    <link rel="stylesheet" href="Content/Styles/style.css" />
+    <link rel="stylesheet" href="Content/Styles/indexDftStyle.css" />
+    <link href="Content/Styles/ui.tabs.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <table width="100%" border="0" id="basketItinerary">
+        <!-- Basket itinerary header -->
+        <thead>
+            <tr style="display: none">
+                <th width="24%">
+                </th>
+                <th width="2%" align="center">
+                    <img align="absmiddle" onclick="openCloseAll();" id="imgOpenCloseAll" src="Content/images/closed.gif">
+                </th>
+                <th width="25%" class="subheadingsm alignLeft" id="openCloseAll">
+                    Hide All
+                </th>
+                <th width="17%">
+                </th>
+                <th width="12%">
+                </th>
+                <th width="1%">
+                </th>
+                <th width="19%">
+                    &nbsp;
+                </th>
+            </tr>
+        </thead>
+        <!-- Basket itinerary content -->
+        <tbody>
+            <tr class="itinDateHdr">
+                <td class="subheadingsm" colspan="7">
+                    09 Jun 2010
+                </td>
+            </tr>
+            <tr class="itinItemRow" id="itinItemRow1">
+                <td class="itinName sm" id="itinName1">
+                    <span class="smlinkbold"><a href="#">bro &amp; sis 2 </a></span>&nbsp;- 2 Nights<br>
+                    <span class="expandable showMe" id="itinCity1">hanoi</span>
+                </td>
+                <td align="center">
+                    <img align="absmiddle" class="imgOpenCloseItem" id="imgOpenCloseItem1" src="Content/images/closed.gif" />
+                </td>
+                <td class="itinDesc sm" id="itinDesc1">
+                    <div class="hideable hideMe" id="itinSpcHdr1">
+                        1 x Superior Twin<br>
+                    </div>
+                    <div class="expandable showMe" id="itinSpcDtls1">
+                        <span class="itinDesc sm">1 x Superior Twin</span><br>
+                        American Breakfast<br>
+                        <table width="100%" border="0" style="border-collapse: collapse;" class="sm innerSpcDtls"
+                            id="innerSpcDtls1">
+                            <tbody>
+                                <tr>
+                                    <td width="50%" valign="top">
+                                        <a class="" href="#">Conditions</a>
+                                    </td>
+                                    <td width="1%" valign="top">
+                                        &nbsp;
+                                    </td>
+                                    <td valign="top">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+                <td class="itinStatus subheadingsm" id="itinStatus1">
+                    Quote
+                </td>
+                <td class="itinPrice alignRight" id="itinPrice1">
+                    <!-- Price breakdown link -->
+                    <a title="Click for Price Breakdown" class="price" href="#"><span class="price">USD&nbsp;112.00</span></a>
+                </td>
+                <!-- Invoice Currency link -->
+                <td width="1%">
+                    &nbsp;
+                </td>
+                <td class="itinOptions" id="itinOptions1">
+                    <a class="itmMenuHeader" id="mnuAnchor1" href="#">Remove this item</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="itinRowSpace" colspan="7">
+                </td>
+            </tr>
+            <tr class="itinItemRow" id="itinItemRow2">
+                <td class="itinName sm" id="itinName2">
+                    <span class="smlinkbold"><a href="#">splendid star 2 </a></span>&nbsp;- 2 Nights<br>
+                    <span class="expandable showMe" id="itinCity2">hanoi</span>
+                </td>
+                <td align="center">
+                    <img align="absmiddle" class="imgOpenCloseItem" id="imgOpenCloseItem2" src="Content/images/closed.gif">
+                </td>
+                <td class="itinDesc sm" id="itinDesc2">
+                    <div class="hideable hideMe" id="itinSpcHdr2">
+                        1 x Deluxe Twin<br>
+                    </div>
+                    <div class="expandable showMe" id="itinSpcDtls2">
+                        <span class="itinDesc sm">1 x Deluxe Twin</span><br>
+                        1 x Child<br>
+                        American Breakfast<br>
+                        <table width="100%" border="0" style="border-collapse: collapse;" class="sm innerSpcDtls"
+                            id="innerSpcDtls2">
+                            <tbody>
+                                <tr>
+                                    <td width="50%" valign="top">
+                                        <a class="" href="#">Conditions</a>
+                                    </td>
+                                    <td width="1%" valign="top">
+                                        &nbsp;
+                                    </td>
+                                    <td valign="top">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+                <td class="itinStatus subheadingsm" id="itinStatus2">
+                    Quote
+                </td>
+                <td class="itinPrice alignRight" id="itinPrice2">
+                    <!-- Price breakdown link -->
+                    <a title="Click for Price Breakdown" class="price" href="#"><span class="price">USD&nbsp;110.00</span></a>
+                </td>
+                <!-- Invoice Currency link -->
+                <td width="1%">
+                    &nbsp;
+                </td>
+                <td class="itinOptions" id="itinOptions2">
+                    <a class="itmMenuHeader" id="mnuAnchor2" href="#">Remove this item</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="itinRowSpace" colspan="7">
+                </td>
+            </tr>
+            <tr class="basketTotalRow">
+                <td colspan="4" class="subheading basketTotalHdg">
+                    Total
+                </td>
+                <td width="34%" class="basketTotalPrice alignRight">
+                    <span class="price">USD&nbsp;222.00</span>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <a class="itmMenuHeader" id="mnuAnchor3" href="#">Add other item</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="basketRowSpace" colspan="7">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;"
+                        class="detailsFrame" id="basketPaxBreakdown">
+                        <tbody>
+                            <tr class="detailsHeader basketPaxRowHdr">
+                                <td width="44%" class="basketPaxNameHdr">
+                                    Passenger Details
+                                </td>
+                                <td width="34%" class="basketPaxPriceHdr alignRight">
+                                    Price per person
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr class="basketPaxRow">
+                                <td width="44%" class="sm basketPaxName">
+                                    Nguyen Van Duyet (Lead Name) (Age 3)
+                                </td>
+                                <td width="34%" class="basketPaxPrice alignRight">
+                                    <span class="price">USD&nbsp;55.00</span>
+                                </td>
+                                <td class="sm basketPaxLinks alignRight">
+                                </td>
+                            </tr>
+                            <tr class="basketPaxRow">
+                                <td width="44%" class="sm basketPaxName">
+                                    Bui Van Nam
+                                </td>
+                                <td width="34%" class="basketPaxPrice alignRight">
+                                    <span class="price">USD&nbsp;111.00</span>
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr class="basketPaxRow">
+                                <td width="44%" class="sm basketPaxName">
+                                    Nguyen Van Duyet (Lead Name) (Age 5)
+                                </td>
+                                <td width="34%" class="basketPaxPrice alignRight">
+                                    <span class="price">USD&nbsp;56.00</span>
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr class="detailsHeader basketPaxRowHdr">
+                <td colspan="7" class="basketPaxNameHdr">
+                    Payment information
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;"
+                        class="detailsFrame">
+                        <tr>
+                            <td width="200px" valign="top">
+                                <input id="rdCredit" checked="checked" name="R1" type="radio" value="V1" />
+                                <span>Payment with CreditCard</span>
+                            </td>
+                            <td>
+                                <div>
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;">
+                                        <tr height="30px">
+                                            <td width="100px">
+                                            </td>
+                                            <td colspan="3">
+                                                <select id="Select1">
+                                                    <option>Visa card</option>
+                                                    <option>Smart Link Card</option>
+                                                    <option>Debit Card</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr height="30px">
+                                            <td>
+                                                Card Number
+                                            </td>
+                                            <td width="200px">
+                                                <input id="Text1" type="text" />
+                                            </td>
+                                            <td width="80px">
+                                                Expire Date
+                                            </td>
+                                            <td>
+                                                <select id="Select2" name="D1">
+                                                    <option>01</option>
+                                                    <option>02</option>
+                                                    <option>03</option>
+                                                    <option>04</option>
+                                                    <option>05</option>
+                                                    <option>06</option>
+                                                    <option>07</option>
+                                                    <option>08</option>
+                                                    <option>09</option>
+                                                    <option>10</option>
+                                                    <option>11</option>
+                                                    <option>12</option>
+                                                </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <select id="Select3" name="D2">
+                                                    <option>2010</option>
+                                                    <option>2011</option>
+                                                    <option>2012</option>
+                                                    <option>2013</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr height="30px">
+                                            <td>
+                                                Card Holder
+                                            </td>
+                                            <td width="200px">
+                                                <input id="Text2" type="text" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr height="30px">
+                            <td width="200px" valign="top">
+                                <input id="rdCashing"  name="R1" type="radio" value="V1" />
+                                <span>Payment later</span>
+                            </td>
+                            <td>
+                                <span style="padding-left: 15px">You can hold booking and do payment within 2hours by
+                                    cashing</span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button class="basketComplete" name="proceedTop0" type="button" onclick = "Payment()">
+                        Complete Booking</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+<script language = "javascript" type = "text/javascript">
+    function Payment() {
+        var rdCredit = document.getElementById("rdCredit");
+        if (rdCredit.checked) window.location.href = 'Payment.htm';
+        else window.location.href = 'LaterPayment.htm';
+    }
+</script>

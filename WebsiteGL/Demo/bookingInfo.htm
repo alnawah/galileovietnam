@@ -1,0 +1,773 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Content/Styles/dftStyle.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Styles/thickbox.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Styles/ui.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="sectiontitle">
+        Contact Information:
+     </div>
+    <br />
+    <div id="contactInfo">
+        <span style="vertical-align: top">Email:</span><input id="txtEmail" type="text" size="25" />
+        <span style="vertical-align: top">Mobile:</span><input id="Text1" type="text" size="25" />
+        <span style="vertical-align: top">Phone:</span><input id="Text2" type="text" size="25" />
+    </div>
+    <br />
+    <div class="sectiontitle">
+        Please enter passenger Information:</div>
+    <table cellspacing="0" cellpadding="3">
+        <tbody>
+            <tr>
+                <td colspan="5">
+                    To secure your room, enter the names of all guests and indicate whether adult or
+                    child.
+                </td>
+            </tr>
+            <tr class="subheading">
+                <td class="paxRoom">
+                    Room
+                </td>
+                <td width="5">
+                    &nbsp;
+                </td>
+                <td width="200">
+                    First Name and Surname
+                </td>
+                <td width="10%" align="center">
+                    Lead Name
+                </td>
+                <td width="150">
+                    &nbsp;
+                </td>
+                <td align="center" style="visibility: visible;" name="ageLabel" id="ageLabel">
+                    Age
+                </td>
+                >
+            </tr>
+            <tr>
+                <td>
+                    Twin (sleeps 2)
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td width="200">
+                    <input type="text" onkeypress="return editKey(event,gMask1);" size="25" maxlength="50"
+                        name="newName0" class="tableInput" />
+                </td>
+                <td nowrap="" align="center">
+                    <input type="radio" tabindex="100" value="0" name="lead" />
+                </td>
+                <td nowrap="" align="justify">
+                    <div id="adultChildRadio0">
+                        <input type="radio" tabindex="100" checked="" value="A" name="adult0">Adult&nbsp;&nbsp;&nbsp;<input
+                            type="radio" tabindex="101" value="C" name="adult0">Child</div>
+                </td>
+                <td width="10%" align="center">
+                    <select id="ages0" name="ages0">
+                        <option value="00"></option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    &nbsp;
+                </td>
+                <td width="200">
+                    <input type="TEXT" onkeypress="return editKey(event,gMask1);" size="25" maxlength="50"
+                        name="newName1" class="tableInput">
+                </td>
+                <td nowrap="" align="center">
+                    <input type="radio" tabindex="102" value="1" name="lead">
+                </td>
+                <td nowrap="" align="justify">
+                    <div id="adultChildRadio1">
+                        <input type="radio" tabindex="102" checked="" value="A" name="adult1">Adult&nbsp;&nbsp;&nbsp;<input
+                            type="radio" tabindex="103" value="C" name="adult1">Child</div>
+                </td>
+                <td width="10%" align="center">
+                    <select id="ages1" name="ages1">
+                        <option value="00"></option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <div>
+        <a href="#" onclick="SpecialConditionClick()">+Special Conditions</a>
+    </div>
+    <div id="SpecialConditions" style="display: none">
+        <table width="100%" cellspacing="0" cellpadding="4">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="sectiontitle">
+                            Special Conditions For Arrival On 08 Jun 2010</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="justify" colspan="2">
+                        Please note that this item has special booking conditions which are applicable to
+                        any reductions or cancellations made within the deadlines, prior to start date,
+                        listed below:
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="100%" cellspacing="0" cellpadding="3" class="detailsFrame">
+                            <tbody>
+                                <tr>
+                                    <td class="detailsHeader" colspan="2">
+                                        Cancellation Charge:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="40%" align="left">
+                                        03 Jun 2010&nbsp;or earlier
+                                    </td>
+                                    <td align="justify" class="spcCndCell">
+                                        No Charge
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="40%" align="left">
+                                        04 Jun 2010 onwards
+                                    </td>
+                                    <td align="justify" class="spcCndCell">
+                                        You will be charged <span class="price">USD&nbsp;56.00</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table width="100%" cellspacing="0" cellpadding="3" class="detailsFrame">
+                            <tbody>
+                                <tr>
+                                    <td class="detailsHeader" colspan="2">
+                                        Amendment Charge:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="40%" align="left">
+                                        05 Jun 2010&nbsp;or earlier
+                                    </td>
+                                    <td align="justify" class="spcCndCell">
+                                        No Charge
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="40%" align="left">
+                                        06 Jun 2010 -&nbsp;07 Jun 2010
+                                    </td>
+                                    <td align="justify" class="spcCndCell">
+                                        You will be charged up to <span class="price">USD&nbsp;4.02</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="40%" align="left">
+                                        08 Jun 2010 onwards
+                                    </td>
+                                    <td align="justify" class="spcCndCell">
+                                        You will be charged up to <span class="price">USD&nbsp;56.00</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        All dates of special conditions are based on GMT. Please consider local time difference
+                        and allow extra time where applicable.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        To see our booking terms and conditions in full, please click <a href="#" onclick=""
+                            href="#">here.</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br />
+    <div>
+        <a href="#" onclick="SpecialRequestClick()">+Special Request</a>
+    </div>
+    <br />
+    <div id="SpecialRequest" style="display: none">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="NSR" name="rmkCode0">If possible please provide non-smoking
+                        rooms
+                    </td>
+                    <td>
+                        <input type="hidden" name="sndToRes0">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="EA " name="rmkCode1">Please note early arrival
+                    </td>
+                    <td>
+                        <input type="hidden" name="sndToRes1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="LA " name="rmkCode2">Please note late arrival (after
+                        7 pm)
+                    </td>
+                    <td>
+                        <input type="hidden" name="sndToRes2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="LD " name="rmkCode3">Please note late check out
+                    </td>
+                    <td>
+                        <input type="hidden" name="sndToRes3">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="RA " name="rmkCode4">If possible, please provide adjoining
+                        rooms
+                    </td>
+                    <td>
+                        <input type="hidden" name="sndToRes4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="RC " name="rmkCode5">Please provide inter-connecting
+                        rooms
+                    </td>
+                    <td>
+                        <input type="hidden" name="sndToRes5">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="HM " name="rmkCode6">Please note passengers are honeymooners
+                    </td>
+                    <td>
+                        <input type="hidden" name="sndToRes6">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="SAF" name="rmkCode7">Please note arrival flight number
+                        <input type="text" onkeypress="return editKey(event,gMask1);" size="8" maxlength="10"
+                            name="rmkCode7text0" class="tableSelect">
+                        at <span class="tableSelect">
+                            <select name="rmkCode7hours0">
+                                <option value="  "></option>
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                            </select>
+                            Hours&nbsp;<select name="rmkCode7mins0"><option value="  "></option>
+                                <option value="00">00</option>
+                                <option value="05">05</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                                <option value="40">40</option>
+                                <option value="45">45</option>
+                                <option value="50">50</option>
+                                <option value="55">55</option>
+                            </select>
+                            Minutes&nbsp;<span class="hilite">(24hr
+                                <img align="middle" alt="Twenty-four hour clock" src="Content/images/schedule.gif">)</span></span>
+                    </td>
+                    <td>
+                        <input type="hidden" name="sndToRes7">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="SL1" name="rmkCode8">Please note previous night is
+                        booked for early morning arrival.
+                    </td>
+                    <td>
+                        <input type="hidden" name="sndToRes8">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="SLD" name="rmkCode9">Flight number
+                        <input type="text" onkeypress="return editKey(event,gMask1);" size="8" maxlength="10"
+                            name="rmkCode9text0" class="tableSelect">
+                        Arrival Time <span class="tableSelect">
+                            <select name="rmkCode9hours0">
+                                <option value="  "></option>
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                            </select>
+                            Hours&nbsp;<select name="rmkCode9mins0"><option value="  "></option>
+                                <option value="00">00</option>
+                                <option value="05">05</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                                <option value="40">40</option>
+                                <option value="45">45</option>
+                                <option value="50">50</option>
+                                <option value="55">55</option>
+                            </select>
+                            Minutes&nbsp;<span class="hilite">(24hr
+                                <img align="middle" alt="Twenty-four hour clock" src="Content/images/schedule.gif">)</span></span>
+                        on
+                        <select name="rmkCode9day0">
+                            <option value="00" selected=""></option>
+                            <option value="01">1</option>
+                            <option value="02">2</option>
+                            <option value="03">3</option>
+                            <option value="04">4</option>
+                            <option value="05">5</option>
+                            <option value="06">6</option>
+                            <option value="07">7</option>
+                            <option value="08">8</option>
+                            <option value="09">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select><select name="rmkCode9mthYr0"><option value="" selected=""></option>
+                            <option value="2010-06">Jun 2010</option>
+                            <option value="2010-07">Jul 2010</option>
+                            <option value="2010-08">Aug 2010</option>
+                            <option value="2010-09">Sep 2010</option>
+                            <option value="2010-10">Oct 2010</option>
+                            <option value="2010-11">Nov 2010</option>
+                            <option value="2010-12">Dec 2010</option>
+                            <option value="2011-01">Jan 2011</option>
+                            <option value="2011-02">Feb 2011</option>
+                            <option value="2011-03">Mar 2011</option>
+                            <option value="2011-04">Apr 2011</option>
+                            <option value="2011-05">May 2011</option>
+                            <option value="2011-06">Jun 2011</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="hidden" name="sndToRes9">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="SLF" name="rmkCode10">Please note late arrival by
+                        flight number
+                        <input type="text" onkeypress="return editKey(event,gMask1);" size="8" maxlength="10"
+                            name="rmkCode10text0" class="tableSelect">
+                        at <span class="tableSelect">
+                            <select name="rmkCode10hours0">
+                                <option value="  "></option>
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                            </select>
+                            Hours&nbsp;<select name="rmkCode10mins0"><option value="  "></option>
+                                <option value="00">00</option>
+                                <option value="05">05</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                                <option value="40">40</option>
+                                <option value="45">45</option>
+                                <option value="50">50</option>
+                                <option value="55">55</option>
+                            </select>
+                            Minutes&nbsp;<span class="hilite">(24hr
+                                <img align="middle" alt="Twenty-four hour clock" src="Content/images/schedule.gif">)</span></span>
+                    </td>
+                    <td>
+                        <input type="hidden" name="sndToRes10">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="SLT" name="rmkCode11">Please note late arrival at
+                        <span class="tableSelect">
+                            <select name="rmkCode11hours0">
+                                <option value="  "></option>
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                            </select>
+                            Hours&nbsp;<select name="rmkCode11mins0"><option value="  "></option>
+                                <option value="00">00</option>
+                                <option value="05">05</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                                <option value="40">40</option>
+                                <option value="45">45</option>
+                                <option value="50">50</option>
+                                <option value="55">55</option>
+                            </select>
+                            Minutes&nbsp;<span class="hilite">(24hr
+                                <img align="middle" alt="Twenty-four hour clock" src="Content/images/schedule.gif">)</span></span>
+                    </td>
+                    <td>
+                        <input type="hidden" name="sndToRes11">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="SEF" name="rmkCode12">Please note early arrival by
+                        flight number
+                        <input type="text" onkeypress="return editKey(event,gMask1);" size="8" maxlength="10"
+                            name="rmkCode12text0" class="tableSelect">
+                        at <span class="tableSelect">
+                            <select name="rmkCode12hours0">
+                                <option value="  "></option>
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                            </select>
+                            Hours&nbsp;<select name="rmkCode12mins0"><option value="  "></option>
+                                <option value="00">00</option>
+                                <option value="05">05</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                                <option value="40">40</option>
+                                <option value="45">45</option>
+                                <option value="50">50</option>
+                                <option value="55">55</option>
+                            </select>
+                            Minutes&nbsp;<span class="hilite">(24hr
+                                <img align="middle" alt="Twenty-four hour clock" src="Content/images/schedule.gif">)</span></span>
+                    </td>
+                    <td>
+                        <input type="hidden" name="sndToRes12">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="SET" name="rmkCode13">Please note early arrival at
+                        <span class="tableSelect">
+                            <select name="rmkCode13hours0">
+                                <option value="  "></option>
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                            </select>
+                            Hours&nbsp;<select name="rmkCode13mins0"><option value="  "></option>
+                                <option value="00">00</option>
+                                <option value="05">05</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                                <option value="40">40</option>
+                                <option value="45">45</option>
+                                <option value="50">50</option>
+                                <option value="55">55</option>
+                            </select>
+                            Minutes&nbsp;<span class="hilite">(24hr
+                                <img align="middle" alt="Twenty-four hour clock" src="Content/images/schedule.gif">)</span></span>
+                    </td>
+                    <td>
+                        <input type="hidden" name="sndToRes13">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="SDF" name="rmkCode14">Please note departure flight
+                        number
+                        <input type="text" onkeypress="return editKey(event,gMask1);" size="8" maxlength="10"
+                            name="rmkCode14text0" class="tableSelect">
+                        at <span class="tableSelect">
+                            <select name="rmkCode14hours0">
+                                <option value="  "></option>
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                            </select>
+                            Hours&nbsp;<select name="rmkCode14mins0">
+                                <option value="  "></option>
+                                <option value="00">00</option>
+                                <option value="05">05</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                                <option value="40">40</option>
+                                <option value="45">45</option>
+                                <option value="50">50</option>
+                                <option value="55">55</option>
+                            </select>
+                            Minutes&nbsp;<span class="hilite">(24hr
+                                <img align="middle" alt="Twenty-four hour clock" src="Content/images/schedule.gif">)</span></span>
+                    </td>
+                    <td>
+                        <input type="hidden" name="sndToRes14">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br />
+    <div>
+        <input type="checkbox" name="conditionConfirmed">
+        <span class="price">Please tick box to confirm the booking conditions.</span>&nbsp;
+        (You will not be allowed to proceed unless box is ticked.).
+    </div>
+    <hr size="1/">
+    <div>
+        <button class="buttonText" name="book" type="button" onclick = "window.location.href = 'CompleteBooking.htm'">
+            ContinueBooking</button>
+    </div>
+</body>
+</html>
+
+<script language="javascript" type="text/javascript">
+    function SpecialConditionClick() {
+        var d = document.getElementById("SpecialConditions");
+        if (d.style.display == 'none') d.style.display = 'block';
+        else d.style.display = 'none';
+    }
+    function SpecialRequestClick() {
+        var d = document.getElementById("SpecialRequest");
+        if (d.style.display == 'none') d.style.display = 'block';
+        else d.style.display = 'none';
+    }
+</script>
+

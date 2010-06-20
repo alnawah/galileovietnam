@@ -1,0 +1,484 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <link href="Content/Styles/thickbox.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Styles/ui.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Styles/dftStyle.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="cursor: default;" onunload="closeWindows();" class="hasSmallMap" id="HotelPriceList">
+    <table>
+        <tbody>
+            <tr>
+                <td id="sideBoxContent" class="sideBoxContent" valign="top">
+                    <div style="display: block;" id="hotelMessageDiv" class="subheading newHotelSearch hideDiv">
+                        <span class="lgbold" id="hotelMessage">You searched for a Twin room in Hanoi, Vietnam
+                            on Tue, 08 Jun 2010 for 2 nights. We have found <span id="noOfHotels">16</span>
+                            hotels that meet your requirements. </span>
+                    </div>
+                    <br>
+                    <div class="topBarFilter newHotelSearch hideDiv" id="filterBar" style="display: block;">
+                        Filter Results by: <span>
+                            <select onchange="return filterRefresh()" name="filterStarRating" id="filterStarRating">
+                                <option value="0">All Stars</option>
+                                <option selected="selected" value="1-2">1-2</option>
+                                <option value="2-3">2-3</option>
+                                <option value="3-4">3-4</option>
+                                <option value="4-5">4-5</option>
+                            </select>
+                        </span>&nbsp; <span>
+                            <select onchange="return filterRefresh()" name="filterLocation" id="filterLocation">
+                                <option value="  ">All Locations</option>
+                                <option value="G1">City</option>
+                                <option selected="selected" value="G2">Airport</option>
+                                <option value="G8">Suburbs</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div style="display: block;" id="hotelResultsDiv" class="newHotelSearch hideDiv">
+                        <div id="navTop" class="navLink floatLeft">
+                            <span class="navLink">&nbsp;Showing Hotels 1 - 16 of 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        </div>
+                        <br class="clearfloat">
+                        <div id="sortbarbg" class="sortbarbg">
+                            Sort by:&nbsp; <a style="display: none;" id="sortTopPick" href="#">
+                                <img id="sortbar0" src="Content/Images/sortDefault.gif" align="absmiddle" border="0">
+                                <span id="sortbarSpan0" class="sortUnselected">Top Picks</span> </a><span style="display: inline;"
+                                    id="sortTopPickDisabled" class="sortDisabled hideDiv">Top Picks</span>&nbsp;
+                            &nbsp; &nbsp; <a href="#" onclick="return 
+doSort('PR')">
+                                <img id="sortbar2" src="Content/Images/sortAscending.gif" align="absmiddle" border="0">
+                                <span id="sortbarSpan2" class="sortSelected">Price</span> </a>&nbsp; <a href="#"
+                                    onclick="return doSort('NM')">
+                                    <img id="sortbar3" src="Content/Images/sortDefault.gif" align="absmiddle" border="0">
+                                    <span id="sortbarSpan3" class="sortUnselected">Name</span> </a>&nbsp; <a href="#"
+                                        onclick="return doSort('SR')">
+                                        <img id="sortbar4" src="Content/Images/sortDefault.gif" align="absmiddle" border="0">
+                                        <span id="sortbarSpan4" class="sortUnselected">Star Rating</span> </a>
+                        </div>
+                        <!-- the tabs -->
+                        <div style="display: block;" class="tabs hideDiv 
+ui-tabs ui-widget ui-widget-content ui-corner-all" id="tabs">
+                            <div class="ui-tabs-panel ui-widget-content 
+ui-corner-bottom" id="tabs-0">
+                                <div id="FullDetails">
+                                    <div style="display: block;" id="FullDetails1" class="page1 hideDiv">
+                                        <div class="ItemsShowing floatLeft">
+                                            &nbsp;&nbsp;Page&nbsp;1</div>
+                                        <br class="clearfloat">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <table class="hotelGroupTable" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                                <tr class="hotelSimple">
+                                                                    <td rowspan="1" colspan="5" valign="top">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="hotelSimple">
+                                                                    <td rowspan="1" colspan="1" valign="top" width="10%">
+                                                                        <a href="#" class="buttonImage">
+                                                                            <img src="Content/Images/HAN-BRO-1.jpg" alt="More Photos" title="More Photos" border="0">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td rowspan="1" colspan="2" valign="top" width="65%">
+                                                                        <div>
+                                                                            <a href="#" class="hotelname"><span class="hotelname">bro &amp; sis</span> </a>&nbsp;
+                                                                            <img src="Content/Images/3star.gif" alt="3 Star" align="absmiddle"><br>
+                                                                            <span class="boldsm" style="text-transform: capitalize;">hanoi</span><br>
+                                                                            <span class="smItemCode">Location: Central</span><br>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td valign="top">
+                                                                        &nbsp;
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="5">
+                                                                        <table class="hotelCatTable" cellpadding="0" cellspacing="0" width="100%">
+                                                                            <tbody>
+                                                                                <tr class="listCatColor0">
+                                                                                    <td class="roomInfo" valign="middle" width="18%">
+                                                                                        <a href="#" class="aid">Classic </a>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="20%">
+                                                                                        <span class="smallerTitleCaps mealInfo"><a href="#">american Breakfast</a> </span>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="8%">
+                                                                                        <span class="smallerTitleCaps"><a href="#">Conditions</a> </span>
+                                                                                    </td>
+                                                                                    <td align="center" valign="middle" width="20%">
+                                                                                        <span class="smbold">On Request</span>
+                                                                                    </td>
+                                                                                    <td class="alignRight" valign="middle" width="21%">
+                                                                                        <span style="font-size: larger;">
+                                                                                            <table class="noborder" width="100%">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td class="alignRight" valign="middle">
+                                                                                                            <span class="currencyText">USD</span>&nbsp;&nbsp; <a href="#" class="price">130.00</a>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </span>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="13%">
+                                                                                        <div class="bookButton">
+                                                                                            <button type="button" name="book" class="buttonText" onclick ="booking()">Book</button>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <hr size="1">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table class="hotelGroupTable" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                                <tr class="hotelSimple">
+                                                                    <td rowspan="1" colspan="5" valign="top">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="hotelSimple">
+                                                                    <td rowspan="1" colspan="1" valign="top" width="5%">
+                                                                        <a href="#" class="buttonImage">
+                                                                            <img src="Content/Images/HAN-SUN-1.jpg" alt="More Photos" title="More Photos" border="0">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td rowspan="1" colspan="2" valign="top" width="65%">
+                                                                        <div>
+                                                                            <a href="#" class="hotelname"><span class="hotelname">sunway</span> </a>&nbsp;
+                                                                            <img src="Content/Images/4star.gif" alt="4 Star" align="absmiddle"><br>
+                                                                            <span class="boldsm" style="text-transform: capitalize;">hanoi</span><br>
+                                                                            <span class="smItemCode">Location: Central</span><br>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td rowspan="1" valign="top">
+                                                                        &nbsp;
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="5">
+                                                                        <table class="hotelCatTable" cellpadding="0" cellspacing="0" width="100%">
+                                                                            <tbody>
+                                                                                <tr class="listCatColor0">
+                                                                                    <td class="roomInfo" valign="middle" width="18%">
+                                                                                        <a href="#" class="aid">Superior </a>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="20%">
+                                                                                        <span class="smallerTitleCaps mealInfo"><a href="#">american Breakfast</a> </span>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="8%">
+                                                                                        <span class="smallerTitleCaps"><a href="#">Conditions</a> </span>
+                                                                                    </td>
+                                                                                    <td align="center" valign="middle" width="20%">
+                                                                                        <span class="smbold">On Request</span>
+                                                                                    </td>
+                                                                                    <td class="alignRight" valign="middle" width="21%">
+                                                                                        <span style="font-size: larger;">
+                                                                                            <table class="noborder" width="100%">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td class="alignRight" valign="middle">
+                                                                                                            <span class="currencyText">USD</span>&nbsp;&nbsp; <a href="#" class="price">244.00</a>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </span>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="13%">
+                                                                                        <div class="bookButton">
+                                                                                            <button type="button" name="book" class="buttonText" onclick ="booking()">
+                                                                                                Book
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="listCatColor1">
+                                                                                    <td class="roomInfo" valign="middle" width="18%">
+                                                                                        <a href="#" class="aid">Club Classic </a>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="20%">
+                                                                                        <span class="smallerTitleCaps mealInfo"><a href="#">american Breakfast</a> </span>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="8%">
+                                                                                        <span class="smallerTitleCaps"><a href="#">Conditions</a> </span>
+                                                                                    </td>
+                                                                                    <td align="center" valign="middle" width="20%">
+                                                                                        <span class="smbold">On Request</span>
+                                                                                    </td>
+                                                                                    <td class="alignRight" valign="middle" width="21%">
+                                                                                        <span style="font-size: larger;">
+                                                                                            <table class="noborder" width="100%">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td class="alignRight" valign="middle">
+                                                                                                            <span class="currencyText">USD</span>&nbsp;&nbsp; <a href="#" class="price">284.00</a>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </span>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="13%">
+                                                                                        <div class="bookButton">
+                                                                                            <button type="button" name="book" class="buttonText" onclick ="booking()">
+                                                                                                Book
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <hr size="1">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table class="hotelGroupTable" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                                <tr class="hotelSimple">
+                                                                    <td rowspan="1" colspan="5" valign="top">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="hotelSimple">
+                                                                    <td rowspan="1" colspan="1" valign="top" width="5%">
+                                                                        <a href="#" class="buttonImage">
+                                                                            <img src="Content/Images/HAN-MER1-1.jpg" alt="More Photos" title="More 
+Photos" border="0">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td rowspan="1" colspan="2" valign="top" width="65%">
+                                                                        <div>
+                                                                            <a href="#" class="hotelname"><span class="hotelname">mercure hanoi la gare</span></a>
+                                                                            <img src="Content/Images/4star.gif" alt="4 Star" align="absmiddle"><br>
+                                                                            <span class="boldsm" style="text-transform: capitalize;">hanoi</span><br>
+                                                                            <span class="smItemCode">Location: Central</span><br>
+                                                                            <br>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td rowspan="1" valign="top">
+                                                                        &nbsp;
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="5">
+                                                                        <table class="hotelCatTable" cellpadding="0" cellspacing="0" width="100%">
+                                                                            <tbody>
+                                                                                <tr class="listCatColor0">
+                                                                                    <td class="roomInfo" valign="middle" width="18%">
+                                                                                        <a href="#" class="aid">Standard </a>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="20%">
+                                                                                        <span class="smallerTitleCaps mealInfo"><a href="#">american Breakfast</a> </span>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="8%">
+                                                                                        <span class="smallerTitleCaps"><a href="#">Conditions</a> </span>
+                                                                                    </td>
+                                                                                    <td align="center" valign="middle" width="20%">
+                                                                                        <span class="smbold">On Request</span>
+                                                                                    </td>
+                                                                                    <td class="alignRight" valign="middle" width="21%">
+                                                                                        <span style="font-size: larger;">
+                                                                                            <table class="noborder" width="100%">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td class="alignRight" valign="middle">
+                                                                                                            <span class="currencyText">USD</span>&nbsp;&nbsp; <a href="#" class="price">252.00</a>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </span>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="13%">
+                                                                                        <div class="bookButton">
+                                                                                            <button type="button" name="book" class="buttonText" onclick ="booking()">
+                                                                                                Book</button>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <hr size="1">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table class="hotelGroupTable" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                                <tr class="hotelSimple">
+                                                                    <td rowspan="1" colspan="5" valign="top">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="hotelSimple">
+                                                                    <td rowspan="1" colspan="1" valign="top" width="5%">
+                                                                        <a href="#" class="buttonImage">
+                                                                            <img src="Content/Images/HANINT14.jpg" alt="More Photos" title="More Photos" border="0">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td rowspan="1" colspan="2" valign="top" width="65%">
+                                                                        <div>
+                                                                            <a href="#" class="hotelname"><span class="hotelname">intercontinental westlake</span>
+                                                                            </a>&nbsp;
+                                                                            <img src="Content/Images/5star.gif" alt="5 Star" align="absmiddle"><br>
+                                                                            <span class="boldsm" style="text-transform: capitalize;">hanoi</span><br>
+                                                                            <span class="smItemCode">Location: Central</span><br>
+                                                                            <br>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td rowspan="1" valign="top">
+                                                                        &nbsp;
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="5">
+                                                                        <table class="hotelCatTable" cellpadding="0" cellspacing="0" width="100%">
+                                                                            <tbody>
+                                                                                <tr class="listCatColor0">
+                                                                                    <td class="roomInfo" valign="middle" width="18%">
+                                                                                        <a href="#" class="aid">Deluxe Hanoi View </a>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="20%">
+                                                                                        <span class="smallerTitleCaps mealInfo"><a href="#">american Breakfast</a> </span>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="8%">
+                                                                                        <span class="smallerTitleCaps"><a href="#">Conditions</a> </span>
+                                                                                    </td>
+                                                                                    <td align="center" valign="middle" width="20%">
+                                                                                        <span class="smbold">On Request</span>
+                                                                                    </td>
+                                                                                    <td class="alignRight" valign="middle" width="21%">
+                                                                                        <span style="font-size: larger;">
+                                                                                            <table class="noborder" width="100%">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td class="alignRight" valign="middle">
+                                                                                                            <span class="currencyText">USD</span>&nbsp;&nbsp; <a href="#">338.00</a>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </span>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="13%">
+                                                                                        <div class="bookButton">
+                                                                                            <button type="BUTTON" name="book" class="buttonText">
+                                                                                                Book</button>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="listCatColor1">
+                                                                                    <td class="roomInfo" valign="middle" width="18%">
+                                                                                        <a href="#" class="aid">Deluxe Pool View </a>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="20%">
+                                                                                        <span class="smallerTitleCaps mealInfo"><a href="#">american Breakfast</a> </span>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="8%">
+                                                                                        <span class="smallerTitleCaps"><a href="#">Conditions</a> </span>
+                                                                                    </td>
+                                                                                    <td align="center" valign="middle" width="20%">
+                                                                                        <span class="smbold">On Request</span>
+                                                                                    </td>
+                                                                                    <td class="alignRight" valign="middle" width="21%">
+                                                                                        <span style="font-size: larger;">
+                                                                                            <table class="noborder" width="100%">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td class="alignRight" valign="middle">
+                                                                                                            <span class="currencyText">USD</span>&nbsp;&nbsp; <a href="#" class="price">416.00</a>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </span>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="13%">
+                                                                                        <div class="bookButton">
+                                                                                            <button type="button" name="book" class="buttonText" onclick ="booking()">
+                                                                                                Book</button>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="listCatColor0">
+                                                                                    <td class="roomInfo" valign="middle" width="18%">
+                                                                                        <a href="#" class="aid">Deluxe Westlake View </a>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="20%">
+                                                                                        <span class="smallerTitleCaps mealInfo"><a href="#">american Breakfast</a> </span>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="8%">
+                                                                                        <span class="smallerTitleCaps"><a href="#">Conditions</a> </span>
+                                                                                    </td>
+                                                                                    <td align="center" valign="middle" width="20%">
+                                                                                        <span class="smbold">On Request</span>
+                                                                                    </td>
+                                                                                    <td class="alignRight" valign="middle" width="21%">
+                                                                                        <span style="font-size: larger;">
+                                                                                            <table class="noborder" width="100%">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td class="alignRight" valign="middle">
+                                                                                                            <span class="currencyText">USD</span>&nbsp;&nbsp; <a href="#" class="price">494.00</a>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </span>
+                                                                                    </td>
+                                                                                    <td valign="middle" width="13%">
+                                                                                        <div class="bookButton">
+                                                                                            <button type="button" name="book" class="buttonText" onclick ="booking()">
+                                                                                                Book</button>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <hr size="1">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="navBottom" class="navLink floatLeft">
+                            <span class="navLink">&nbsp;Showing Hotels 1 - 16 of 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+                        <br class="clearfloat">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+<script language = "javascript" type ="text/javascript">
+    function booking() {
+        window.location.href = "bookingInfo.htm";
+    }
+</script>

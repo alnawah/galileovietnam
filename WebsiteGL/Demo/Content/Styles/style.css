@@ -1,0 +1,1839 @@
+.linkbg {
+background-color: #0071AD;
+}
+.tdfillbg {
+background-color: #DEEFFF;
+	   border-top: 1px #DEEFFF solid;
+	   height: 24px;
+	  }
+
+
+.sectionHeader {
+	background-color: #0071AD;
+	color: #FFFFFF;
+	border: 1px #0071AD solid;	
+	width: 100%;
+	padding: 3px;
+	font-weight: bold;
+}
+div.subsetBar{
+	background-color: #ccccff;
+}
+.railCat0
+{
+    FONT-WEIGHT: bold;
+    COLOR: #9966cc;
+    FONT-STYLE: normal;
+	FONT-SIZE: 10pt;          
+    FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif
+}
+
+.railCat1	{
+	FONT-WEIGHT: bold;
+	COLOR: #9999ff;
+	FONT-SIZE: 10pt;
+	FONT-FAMILY: font-size: 8pt;;
+}
+
+.railCat2
+{
+    FONT-WEIGHT: bold;
+    COLOR: black;
+    FONT-STYLE: normal;
+	FONT-SIZE: 8pt;          
+    FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif
+}
+
+.railCat3
+{
+    FONT-WEIGHT: bold;
+    COLOR: black;
+    FONT-STYLE: normal;
+	FONT-SIZE: 8pt;          
+    FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif
+}
+
+.railCat4
+{
+    FONT-WEIGHT: bold;
+    COLOR: black;
+    FONT-STYLE: normal;
+	FONT-SIZE: 8pt;          
+    FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif
+}
+
+.railCat5
+{
+    FONT-WEIGHT: bold;
+    COLOR: black;
+    FONT-STYLE: normal;
+	FONT-SIZE: 8pt;          
+    FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif
+}
+div.subsetBar{background-color:#CCCCFF;}
+.buttonText {
+	background-color : #5F7CBE;
+	color: #ffffff;
+	font-weight : bold;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 20px;
+	width: 106px;
+}	
+.mapshighlight	{
+	font-family: font-size: 8pt;, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 8pt;
+	color: #FF9900;
+}
+.standOut       {
+		color: red;
+		}
+BODY	{
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 10pt;
+	COLOR: #000000;
+	FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+	BACKGROUND-COLOR: #FFFFFF;
+}
+.smnormal	{
+	font-weight: normal;
+	font-size: 8pt;
+}
+.intro	{
+	font-family: font-size: 8pt;, Arial, Helvetica, sans-serif; 
+	font-weight: bold; 
+	font-size: 12pt;
+	color:#005BAA;
+	}
+.introSm	{
+	font-family: font-size: 8pt;, Arial, Helvetica, sans-serif; 
+	font-weight: normal; 
+	font-size: 8pt;
+	color:#000000;
+	}
+.faq
+	{
+	font-weight: bold;
+	}
+.aid	{
+	color:#5F7CBE; 
+	font-weight: bold;
+	FONT-SIZE: 8pt;
+	}
+A.aid	{
+	color:#0871E7; 
+	font-weight: bold;
+	FONT-SIZE: 8pt;
+	}
+.header	{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10pt;
+	COLOR: #5F7CBE;
+	FONT-FAMILY: font-size: 8pt;;
+}
+.subHeader {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10pt;
+	COLOR: #005BAA;
+	FONT-FAMILY: font-size: 8pt;;
+}
+.subnavBold {
+	FONT-WEIGHT: bolder;
+	FONT-SIZE: 16pt;
+	COLOR: #000000;
+	FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+	font-style : normal;
+	font-variant : normal;
+	text-transform : lowercase;
+}
+
+.subnav {
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 15pt;
+	COLOR: #000000;
+	FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+	font-style : normal;
+	font-variant : normal;
+	text-transform : lowercase;
+}
+}
+.sublink {
+	FONT-WEIGHT: bolder;
+	FONT-SIZE: 10pt;
+	COLOR: #005BAA;
+	FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+	font-style : normal;
+	font-variant : normal;
+	text-transform : lowercase;
+}
+
+.products {
+	FONT-WEIGHT: bolder;
+	FONT-SIZE: 13pt;
+	COLOR: #005BAA;
+	FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+	font-style : normal;
+	font-variant : normal;
+	text-transform : lowercase;
+}
+.prominent
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: Red;
+    FONT-FAMILY: font-size: 8pt;
+}
+	
+A	 {
+	font-family: font-size: 8pt;, Arial, Helvetica, sans-serif; 
+	font-weight: bold; 
+	color:#0871E7; 
+	/* text-decoration: none */
+	}
+A:link 	{
+	/* text-decoration: none; */
+	}
+A:visited {}
+
+A:hover {
+	color: #000000; 
+	text-decoration: underline;
+}
+A.products:hover {
+	color: #000000; 
+	text-decoration: underline;
+}
+A:active {}
+
+A.copyright
+{
+    FONT-SIZE: 8pt;
+	color:#0871E7; 
+    FONT-FAMILY: font-size: 8pt;
+}
+
+A.languages
+{
+    FONT-SIZE:8pt;
+	font-weight: boldl;
+	color:#FFFFFF; 
+    FONT-FAMILY: font-size: 8pt;
+}
+
+.roomDesc {
+	color:#9999ff; 
+	font-size:10pt;
+	font-weight:bold;
+}
+.pgtitles
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11pt;
+    FONT-FAMILY: font-size: 8pt;
+}
+H1
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11pt;
+    FONT-FAMILY: font-size: 8pt;
+}
+TABLE
+{
+    FONT-SIZE: 10pt;
+    FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+}
+.tableinput
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+}
+.tableSelect
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+}
+table Select
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+}
+.sidebar
+{
+    FONT-SIZE: 8pt;
+    background-color : #ffff99;
+	FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+    
+}
+.Copyright
+{
+    	FONT-SIZE: 8pt;
+    	color: black;
+	FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+    
+}
+
+.emphasis
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #666699;
+    FONT-STYLE: normal;
+    FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif
+}
+.hilite
+{
+    FONT-WEIGHT: bold;
+    COLOR: red;
+    FONT-STYLE: normal;
+    FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif
+}
+.availImmed {	
+	color:red;
+	FONT-WEIGHT: bold;
+}
+.availRqst {	
+	FONT-WEIGHT: bold;
+}
+.emphasisLG
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 13pt;
+    FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+}
+.emphasisamount
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    FONT-STYLE: normal;
+    FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif
+}
+.smbold
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+}
+.jumpto
+{
+    BORDER-RIGHT: #9999ff;
+    BORDER-TOP: #9999ff;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 9pt;
+    BORDER-LEFT: #9999ff;
+    BORDER-BOTTOM: #9999ff;
+    FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+}
+
+A.sidebar:active
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: #1fa44c;
+    FONT-FAMILY: font-size: 8pt;;
+    TEXT-DECORATION: none
+}
+A.sidebar:link
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: #1fa44c;
+    FONT-FAMILY: font-size: 8pt;;
+    TEXT-DECORATION: none
+}
+A.sidebar:visited
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: #1fa44c;
+    FONT-FAMILY: font-size: 8pt;;
+    TEXT-DECORATION: none
+}
+A.sidebar:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: #ccccff;
+    FONT-FAMILY: font-size: 8pt;;
+    TEXT-DECORATION: none
+}
+.titlerow
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 15pt;
+    COLOR: #5F7CBE;
+    FONT-FAMILY: font-size: 8pt;,Helvetica;
+}
+.listPrice
+{
+    COLOR: black;
+}
+A.hotelname
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 8pt;
+	COLOR: black;
+	FONT-FAMILY: font-size: 8pt;;
+}
+.conftextgreen
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9pt;
+    COLOR: #009900;
+    FONT-FAMILY: font-size: 8pt;
+}
+.totalprice
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR: red;
+    FONT-FAMILY: font-size: 8pt;
+}
+A.Headerlink:active
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR: #666699;
+    FONT-FAMILY: font-size: 8pt;;
+    TEXT-DECORATION: none
+}
+A.Headerlink:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR: #333366;
+    FONT-FAMILY: font-size: 8pt;;
+    TEXT-DECORATION: none
+}
+A.Headerlink:link
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR: #666699;
+    FONT-FAMILY: font-size: 8pt;;
+    TEXT-DECORATION: none
+}
+A.Headerlink:visited
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR: #666699;
+    FONT-FAMILY: font-size: 8pt;;
+    TEXT-DECORATION: none
+}
+.hotelnameheader
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12pt;
+    COLOR: #666699;
+    FONT-FAMILY: font-size: 8pt;
+}
+.redtext
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: red;
+    FONT-FAMILY: font-size: 8pt;
+}
+.totalpricesm
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: red;
+    FONT-FAMILY: font-size: 8pt;
+}
+.region
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: #666699;
+    FONT-FAMILY: font-size: 8pt;;
+	text-transform:capitalize;
+}
+.currencylink
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 7pt;
+    COLOR: Red;
+    FONT-FAMILY: font-size: 8pt;
+}
+SELECT
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: font-size: 8pt;
+}
+.cityname
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR: black;
+    text-transform:capitalize;
+    FONT-FAMILY: font-size: 8pt;
+}
+
+.dueDate	{
+		font-style:italic;
+		color:red;
+		}
+
+.example 	{
+		font-style:italic;
+		font-weight:bold;
+		font-size:8pt;
+		}
+
+.fieldName 	{
+		font-family:font-size: 8pt;,Arial,Helvetica, sans-serif;
+		font-weight:bold;
+		}
+.maxSize	{
+		font-size:10pt;
+		font-weight:bold;
+		color:red;
+		}
+.navRange	{
+		font-size:7pt;
+		}
+/*
+A.navLink:link {}
+A.navLink:visited {}
+A.navLink:hover {}
+*/
+.navLink	{
+		font-size:8pt;
+		color: 005BAA;  
+		}
+.navCurrent	{
+		color:black;
+		font-weight:bold;
+		}
+.itinHead	{
+		font-size:8pt;
+		}
+
+.itinBody	{
+		background:#DCE6F0;
+		}
+
+.itinDate	{
+		font-size:8pt;
+		font-weight:bold;
+		background:#B6C0CA;
+		}
+
+.itinCity	{
+		font-size:8pt;
+		font-weight:bold;
+		font-style:italic;
+		background:#B6C0CA;
+		}
+
+.itinItem	{
+		font-size:8pt;
+		}
+
+.itemSubHead {  font-family: font-size: 8pt;, Arial, Helvetica, sans-serif; font-size: 8pt; font-weight: bold; color: #005BAA}
+.calBack	{
+		font-family:Arial,Courier;
+		font-size:8pt;
+		font-weight:bold;
+		text-align:right;
+		background:#5F7CBE; 
+		}
+
+A.calHeadMth:hover {
+		font-family:Arial,Courier;
+		font-size:8pt;
+		font-weight:bold;
+		text-align:center;
+		text-decoration: underline;
+}
+
+.calHeadMth	{
+		font-family:Arial,Courier;
+		font-size:8pt;
+		font-weight:bold;
+		text-align:center;
+		color:black;
+		background:#cccccc; 
+		}
+.calHeadDay	{
+		font-family:Arial,Courier;
+		font-size:8pt;
+		font-weight:bold;
+		text-align:center;
+		color:white;
+		background:#5F7CBE; 
+		}
+.calMonth	{
+		font-family:Arial,Courier;
+		font-size:8pt;
+		font-weight:bold;
+		color:white;
+		background:#5F7CBE; 
+		}
+
+.calDay 	{
+		font-family:Arial,Courier;
+		font-size:8pt;
+		font-weight:bold;
+		text-align:right;
+		background:#cccccc; 
+		cursor:hand;
+		color:black;
+		}
+
+.calDayBad 	{
+		font-family:Arial,Courier;
+		font-size:8pt;
+		background:#cccccc;
+		text-align:right;
+		font-weight:bold;
+		color:gray;
+		}
+.calFocus 	{
+		font-family:Arial,Courier;
+		font-size:8pt;
+		font-weight:bold;
+		text-align:right;
+		background:#eaff34;
+		cursor:hand;
+		color:black;
+		}
+.calEmpty	{
+		font-family:Arial,Courier;
+		font-size:8pt;
+		font-weight:bold;
+		text-align:center;
+		background:white;
+		}
+H1.help		{
+		font-family:Tahoma,font-size: 8pt;,Arial,Helvetica, sans-serif;
+		font-size:12pt;
+		font-weight:bold;
+		color:#006363;
+		}
+
+.helpTopic	{
+		font-family:Tahoma,font-size: 8pt;,Arial,Helvetica, sans-serif;
+		font-size:9pt;
+		font-weight:bold;
+		color:#006363;
+		} 
+
+.help		{
+		font-family:Tahoma,font-size: 8pt;,Arial,Helvetica, sans-serif;
+		font-size:9pt;
+		background:#DCE6F0;
+		} 
+
+.listColor1	{
+		/* border-bottom:thin solid black; */
+		}
+
+.listColor0	{
+		/* border-bottom:thin solid black; */
+		}
+
+.errorMsg	{
+		font-size:10pt;
+		font-weight:bold;
+		color:red;
+		}
+
+.smaller	{
+		font-size:8pt;
+		}
+
+.smallerTitleCaps	{
+		font-size:8pt;
+		text-transform:capitalize;
+		color: black;
+		}
+
+.uppercase	{
+		text-transform:uppercase;
+		}
+		 
+.titleCaps	{
+		text-transform:capitalize;
+		}
+
+.smItemCode	{
+		font-weight:bold;
+		font-style:normal;
+		font-size:8pt;
+		color:black;
+}
+
+.hotelname
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: #1fa44c;
+    text-transform:capitalize;
+    FONT-FAMILY: font-size: 8pt;;
+}
+
+.infoTitle
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10pt;
+    COLOR:#94d639;
+}
+.infoHeader
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 14pt;
+    COLOR:#94d639;
+}
+.city		{
+		font-weight:bold;
+		color:#089494;
+		font-size:12pt;
+		white-space:nowrap;
+		text-transform:capitalize;
+		}
+
+.hotel		{
+		font-weight:bold;
+		font-size:10pt;
+		color:#006363;
+		text-transform:capitalize;
+		}
+
+.text		{
+		font-size:10pt;
+		}
+.hotelInfTitle	{
+		font-weight: bold;
+		}
+.imgAdr		{
+		font-weight:bold;
+		font-size:8pt;
+		font-style:normal;
+		font-family:font-size: 8pt;,Arial,Helvetica,sans-serif;
+		text-align:center;
+		}
+.SectionHead	{
+		FONT-WEIGHT: bold;
+		FONT-SIZE: 10pt;
+		COLOR: #005BAA;
+		FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+		BACKGROUND-COLOR: #cccccc
+		}
+
+.itemHeader	{
+		FONT-WEIGHT: bold;
+		FONT-SIZE: 10pt;
+		COLOR: #005BAA;
+		BORDER-TOP-STYLE: none;
+		FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+		BORDER-RIGHT-STYLE: none;
+		BORDER-LEFT-STYLE: none;
+		BORDER-BOTTOM-STYLE: none
+		}
+
+.CtyCtryNames	{
+		FONT-WEIGHT: bold;
+		FONT-SIZE: 20pt;
+		COLOR: #5F7CBE;
+		FONT-FAMILY: font-size: 8pt;, Arial,  Helvetica, sans-serif
+		}
+
+.discountpercent	{
+			FONT-WEIGHT: bold;
+			FONT-SIZE: 12pt;
+			COLOR: red;
+			FONT-FAMILY: font-size: 8pt;
+			}
+.otherdest     {
+	FONT-WEIGHT: normal;
+	FONT-FAMILY: font-size: 8pt;;
+	FONT-SIZE: 8pt;
+	COLOR: #5F7CBE;
+}		
+.vchGridHead	{
+	FONT-SIZE: 8pt;
+	COLOR: #5F7CBE;
+		}
+
+.seeDoGridHead	{
+	FONT-SIZE: 8pt;
+	background-color: #5F7CBE;
+	color:white;
+		}
+
+.weatherBox	{
+	background-color: #ffffff;
+	}
+.invoiceLogo	{
+		page-break-before:always;
+		}
+.invoiceHeader	{
+		font-weight:bold;
+		font-size: 15pt;
+		color: #5F7CBE;
+		}
+.creditRow	{
+		font-style:italic;
+		}
+.reportEnd	{
+		page-break-after:always;
+		}
+.unescorted	{
+		font-weight:bold;
+		font-size:8pt;
+		color:red;
+		}
+.noLanguage	{
+		color:green;
+		}
+.HotDealHeader	{
+		color:red;
+		}
+.DateRange	{
+		color:#005BAA;
+		font-weight:bold;
+		}
+.DaysOfWeek	{
+		color:black;
+		font-weight:bold;
+		}
+.lowLite	{
+		font-weight: bold;
+   		color: black;
+		}
+.cityNameHD     {
+                FONT-WEIGHT: bold;
+                FONT-SIZE: 10pt;
+                COLOR: black;
+                text-transform:capitalize;
+                FONT-FAMILY: font-size: 8pt;
+                }
+
+.titlerowHD     {
+                FONT-WEIGHT: bold;
+                FONT-SIZE: 15pt;
+                COLOR: red;
+                FONT-FAMILY: font-size: 8pt;,Helvetica;
+                }
+                .newstxt     {
+	FONT-WEIGHT: bold;
+	FONT-FAMILY: font-size: 8pt;;
+	FONT-SIZE: 8pt;
+	COLOR: #005BAA;
+}		
+.standout
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 7pt;
+    COLOR: Red;
+    FONT-FAMILY: font-size: 8pt;
+}
+A.Homelang
+{
+    FONT-SIZE:8pt;
+	font-weight: boldl;
+	color:#FFFFFF; 
+    FONT-FAMILY: font-size: 8pt;
+}
+.homepageheader	{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10pt;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: font-size: 8pt;;
+}
+A.homelinks:active
+{
+	font-weight: bold;
+	color:#005BAA;
+     FONT-FAMILY: font-size: 8pt;;
+    text-decoration:none;
+                text-transform: uppercase;
+        font-style : normal;
+}
+A.homelinks:link
+{
+	font-weight: bold;
+	color:#005BAA;
+     FONT-FAMILY: font-size: 8pt;;
+    	text-decoration: none;
+                    text-transform: uppercase;
+        font-style : normal;
+}
+A.homelinks:visited
+{
+	font-weight: bold;
+	color:#005BAA;
+     FONT-FAMILY: font-size: 8pt;;
+    	text-decoration: none;
+                    text-transform: uppercase;
+        font-style : normal;
+}
+A.homelinks:hover
+{
+	font-weight: bold;
+	color:#000000;
+     FONT-FAMILY: font-size: 8pt;;
+    text-decoration: none;
+                text-transform: uppercase;
+        font-style : normal;
+}
+A.homelinksMain:active
+{
+	font-weight: bold;
+    	FONT-SIZE: 10pt;
+	color:#005BAA;
+     FONT-FAMILY: font-size: 8pt;;
+    text-decoration:none;
+                text-transform: uppercase;
+        font-style : normal;
+}
+A.homelinksMain:link
+{
+	font-weight: bold;
+    	FONT-SIZE: 10pt;
+	color:#005BAA;
+     FONT-FAMILY: font-size: 8pt;;
+    	text-decoration: none;
+                    text-transform: uppercase;
+        font-style : normal;
+}
+A.homelinksMain:visited
+{
+	font-weight: bold;
+    	FONT-SIZE: 10pt;
+	color:#005BAA;
+     FONT-FAMILY: font-size: 8pt;;
+    	text-decoration: none;
+                    text-transform: uppercase;
+        font-style : normal;
+}
+A.homelinksMain:hover
+{
+	font-weight: bold;
+    	FONT-SIZE: 10pt;
+	color:#000000;
+     FONT-FAMILY: font-size: 8pt;;
+    text-decoration: none;
+                text-transform: uppercase;
+        font-style : normal;
+}
+A.lang	{
+	color: #000000;
+	font-weight: normal;
+	FONT-SIZE: 8pt;
+}
+.homepageheader
+{
+	font-weight: bold;
+    	FONT-SIZE: 10pt;
+	color:#005BAA;
+     FONT-FAMILY: font-size: 8pt;;
+    text-decoration:none;
+        font-style : normal;
+}
+A.homepageheaderlink:active
+{
+	font-weight: bold;
+    	FONT-SIZE: 10pt;
+	color:#000000;
+     FONT-FAMILY: font-size: 8pt;;
+    text-decoration:none;
+        font-style : normal;
+}
+A.homepageheaderlink:link
+{
+	font-weight: bold;
+    	FONT-SIZE: 10pt;
+	color:#000000;
+     FONT-FAMILY: font-size: 8pt;;
+    	text-decoration: none;
+        font-style : normal;
+}
+A.homepageheaderlink:visited
+{
+	font-weight: bold;
+    	FONT-SIZE: 10pt;
+	color:#000000;
+     FONT-FAMILY: font-size: 8pt;;
+    	text-decoration: none;
+        font-style : normal;
+}
+A.homepageheaderlink:hover
+{
+	font-weight: bold;
+    	FONT-SIZE: 10pt;
+	color:#000000;
+     FONT-FAMILY: font-size: 8pt;;
+    text-decoration: underline;
+        font-style : normal;
+}
+                                          
+	.invSmallBold{                                       
+	vertical-align: top;                                 
+	FONT-WEIGHT: bold;                                   
+	FONT-SIZE: 5pt; FONT-STYLE: normal;                  
+	FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;  
+	}                                                    
+}              
+@media screen {                                       
+	.invSmall { 
+	vertical-align: top;                                   
+	FONT-WEIGHT: normal;                                  
+	FONT-SIZE: 8pt;                                       
+	FONT-STYLE: normal;                                   
+	FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif; 
+	} 
+                                                      
+	.invSmallbold {                                       
+	vertical-align: top;                                  
+	FONT-WEIGHT: bold;                                    
+	FONT-SIZE: 8pt;                                       
+	FONT-STYLE: normal;                                   
+	FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif; 
+	} 
+}    
+div.subsetBar
+{
+	background-color: #B6CEE6;
+}
+
+.sidebar
+{
+    FONT-SIZE: 8pt;
+    background-color:#B6CEE6;
+    FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+    margin-right: 10px;
+}
+
+.sideBarHeader
+{
+	background-color: #6E9DCD;
+	border: 1px solid #6E9DCD;
+}
+.sidebar BR {
+	line-height: 5px;
+}
+.sideBar .title
+{
+	font-size: 11pt
+}
+
+.recommendation
+{
+	background-color: #EDEDF9;
+	border: 1px solid #cccccc;
+}
+
+.recommendationTitle {	
+	color : #ff0000;
+	font-weight : bold;
+	font-size: 11pt;
+}
+.navLinkEmphasized	{
+		font-size:8pt;
+		font-weight:bold;
+		color: #000000;  
+		}
+a.prodlink
+{
+	color: #0071AD;
+	font-weight : bold;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 25px;
+	width : 100%;
+	background : #ADDBEF;
+	text-decoration : none;
+}		
+a.prodlink:hover
+{
+	color: #FFFFFF;
+	font-weight : bold;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 25px;
+	width : 100%;
+	background : #FFCF9C url(../images/tdfillover.gif);
+	text-decoration : none;
+}
+.prodlink
+{
+	color: #000000;
+	font-weight : bold;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 25px;
+	width : 182px;
+	background : #ADDBEF;
+	text-decoration : none;
+}
+
+
+
+a.toollink
+{
+	color: #FFFFFF;
+	font-weight : bold;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 25px;
+	width : 100%;
+	background : #0071AD;
+	text-decoration : none;
+}		
+a.toollink:hover
+{
+	color: #FFFFFF;
+	font-weight : bold;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 25px;
+	width : 100%;
+	background : #0071AD url(../images/tdfillsign.gif);
+	text-decoration : none;
+}
+.toollink
+{
+	color: #FFFFFF;
+	font-weight : bold;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 25px;
+	width : 100%;
+	background : #0071AD;
+	text-decoration : none;
+	margin-top : 5px;
+}
+
+a.uselink
+{
+	color: #0071AD;
+	font-weight : bold;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 25px;
+	width : 100%;
+	background : #DEEFFF;
+	text-decoration : none;
+}		
+a.uselink:hover
+{
+	color: #0071AD;
+	font-weight : bold;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 25px;
+	width : 100%;
+	background : #DEEFFF url(../images/tdfilluse.gif);
+	text-decoration : none;
+}
+.uselink
+{
+	color: #0071AD;
+	font-weight : bold;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 25px;
+	width : 100%;
+	background : #DEEFFF;
+	text-decoration : none;
+}
+
+.introSmG	{
+	font-family: font-size: 8pt;, Arial, Helvetica, sans-serif; 
+	font-weight: normal; 
+	font-size: 8pt;
+	color:#000000;
+	}
+a.introSmG	{
+	font-family: font-size: 8pt;, Arial, Helvetica, sans-serif; 
+	font-weight: bold; 
+	font-size: 8pt;
+	color:#0871E7;
+	}
+.introSmW, .introsmW	{
+	font-family: font-size: 8pt;, Arial, Helvetica, sans-serif; 
+	font-weight: normal; 
+	font-size: 8pt;
+	color:#FFFFFF;
+	}
+.altHeader
+{
+FONT-WEIGHT: bold;
+FONT-SIZE: 8pt;
+COLOR: #FFFFFF;
+FONT-FAMILY: font-size: 8pt;, Arial, Helvetica, sans-serif;
+BACKGROUND-COLOR: #999999}
+ 
+.altFrame
+{
+border : 1px solid #999999;
+}
+.hsBgColor1{
+	background : #FFFFFF;
+}
+.hsBgColor2{
+	border: 1px  #0071AD solid;
+}
+.hsBgColor3{
+	background : #0071AD;
+}
+.hsBgColor4{
+	background : #0071AD;
+}
+.borderPanel	{
+	border:1px #0066CC solid;
+}
+.uselink1 a
+{
+	color: #0071AD;
+	font-weight : normal;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 100%;
+	width : 100%;
+	background : #DEEFFF;
+	text-decoration : none;
+	padding-top:5px;
+	padding-left:15px;
+	padding-bottom:5px;
+	padding-right:15px;
+}
+.uselink1 a:hover
+{
+	color: #0071AD;
+	font-weight : normal;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 100%;
+	width : 100%;
+	background : #DEEFFF url(../images/tdfilluse.gif);
+	text-decoration : none;
+}
+.uselink1
+{
+	color: #0071AD;
+	font-weight : normal;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 25px;
+	width : 100%;
+	background : #DEEFFF;
+	text-decoration : none;
+	vertical-align:middle;
+	margin:2px;
+}
+.prodlink1 a
+{
+	color: #0071AD;
+	font-weight : bold;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 100%;
+	width : 100%;
+	background : #ADDBEF;
+	text-decoration : none;
+	padding-top:5px;
+	padding-left:15px;
+	padding-bottom:5px;
+	padding-right:15px;
+}
+.prodlink1 a:hover
+{
+	color: #0071AD;
+	font-weight : bold;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 100%;
+	width : 100%;
+	background : #ADDBEF url(../images/tdfillover.gif);
+	text-decoration : none;
+}
+.prodlink1
+{
+	color: #FFFFFF;
+	font-weight : bold;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 25px;
+	width : 100%;
+	background : #ADDBEF;
+	text-decoration : none;
+	vertical-align:middle;
+	margin:2px;
+}
+.signlink1 a
+{
+	color: #FFFFFF;
+	font-weight : bold;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 100%;
+	width : 100%;
+	background : #0071AD;
+	text-decoration : none;
+	padding-top:5px;
+	padding-left:15px;
+	padding-bottom:5px;
+	padding-right:15px;
+}
+.signlink1 a:hover
+{
+	color: #FFFFFF;
+	font-weight : bold;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 100%;
+	width : 100%;
+	background : #0071AD url(../images/tdfilluse.gif);
+	text-decoration : none;
+}
+.signlink1
+{
+	color: #FFFFFF;
+	font-weight : bold;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 25px;
+	width : 100%;
+	background : #0071AD;
+	text-decoration : none;
+	vertical-align:middle;
+	margin:2px;
+}
+.tdfillbg A:hover
+{
+color: #003366; 
+}
+.sideBar .tdfillbg {
+ background-image:url("images/tdfill.gif");
+ background-repeat: repeat-x;
+ background-position: left;
+}
+.newsbg{
+	background : #80c31c;
+	color: #FFFFFF;
+}
+a.newsbg{
+	color: #FFFFFF;
+}
+
+.guidebg{
+	background : #fead1e;
+	color: #FFFFFF;
+}
+.promobg{
+	background : #7AB800;
+	color: #FFFFFF;
+}
+.homepageImgbg{
+	background: #0075B0;
+}
+.usefulhdrbg{
+	background: #209bbc;
+	color: #FFFFFF;
+	height: 18px;
+	margin-top: 5px;
+	margin-left: 2px; 
+}
+
+.usefulbg{
+	background: #b1ebf9;
+	color: #FFFFFF;
+}
+.useful{
+	background: #b1ebf9;
+	color: #000000;
+}
+a.useful{
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.useful:hover{
+	color: #000000;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.signonbg{
+	background: #fead1e;
+		color: #FFFFFF;
+}
+.signbg{
+	background: #ff7900;
+}
+a.signbg{
+	background: #ff7900;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: none;
+	height: 18px;
+	margin-top: 5px;
+	margin-left: 2px; 
+}
+a.signbg:hover{
+	background: #CCCCCC;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: underline;
+	height: 18px;
+	margin-top: 5px;
+	margin-left: 2px; 
+}
+.linkuse a
+{
+	color: #000000;
+	font-weight : normal;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 100%;
+	width : 99%;
+	text-decoration : none;
+		padding-top:5px;
+	padding-left:2px;
+	padding-bottom:5px;
+	padding-right:15px;
+
+}
+.linkuse a:hover
+{
+	color: #FFFFFF;
+	font-weight : normal;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 100%;
+	width : 99%;
+	background: #72C7E7;
+	text-decoration : none;
+}
+.linkuse
+{
+	color: #000000;
+	font-weight : normal;
+	font-family : font-size: 8pt;, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	height : 25px;
+	width : 99%;
+	text-decoration : none;
+	vertical-align:middle;
+		margin:2px;
+
+}
+.bordermid	{
+	border:1px #0075B0 solid;
+}
+.midbg{
+	background: #0075B0;
+	color: #FFFFFF;
+}
+.bordernews	{
+	border:1px #72C7E7 solid;
+}
+.newsbg{
+	background: #72C7E7;
+}
+.borderpromo	{
+	border:1px #7AB800 solid;
+}
+.promobg	{
+	background: #80c31c;
+}
+.dividerline	{
+	border: thin dotted #CCCCCC;
+}
+
+.tdfillbg {
+background-color: #ccccff;
+	   border-top: 1px #fff5f7 solid;
+	   height: 24px;
+	  }
+
+
+.sectionHeader {
+	background-color: #0071AD;
+	color: #FFFFFF;
+	border: 1px #0071AD solid;	
+	width: 100%;
+	padding: 3px;
+	font-weight: bold;
+}
+
+a.edit {
+	color: #0071ad;
+}
+
+HR {
+	background-color: #0071ad;
+	height: 1px;
+	width: 100%;
+	margin-bottom: 10px;
+	border: none;
+}
+.searchText	{
+		font-size:12pt;
+		color: #0071ad;  
+		}
+.searchMsg	{
+		font-size:18pt;
+		font-weight:bold;
+		color: #0071ad;  
+		}
+
+#upsell	{
+	margin-top:3px;
+	width: 100%;
+	border-collapse:collapse;
+	display: none;
+	background-color:#F4F4F4;
+	border:1px solid #0071ad;
+}
+
+.upsellHdr, .upsellHdr a {
+	background-color:#0071ad;
+	color:white;
+	font-size:14pt;
+	padding: 3px;
+}
+.genTemplate{
+	border-top: 1px solid #0071ad;
+	background:	#F4F4F4;
+	width: 100%;
+}
+.upsellItem {
+	color:#0071ad;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:11pt;
+	font-weight:bold;
+	border-collapse:collapse;
+}
+.frame{
+     border: 1px solid #0071ad;
+}
+.languageBox
+{
+	background-color: white;
+	border: 1px solid #0071ad;
+	padding:5px;
+}
+.packageSearchContainer {
+	background-color:#F0F0F0;
+	border: 1px #999999 solid;
+}
+.packageSearchContainerHeader {	
+ background: #0071ad;
+ background-repeat: repeat-x;
+ background-position: left;
+	vertical-align:middle;
+	font-weight: bold;
+	color:white;
+}
+.packageSearchResultHeading {
+	background-color:#0071ad;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+#basketBkgHdr td{
+	border-bottom:1px solid #0071ad;
+}
+.upsellHdr {
+	color: white;
+	background-color: #0071ad;
+	font-size:14pt;
+	
+}
+A.upsellHdr {
+	color: white;
+	background-color: #0071ad;
+	font-size:14pt;
+	
+}
+#upsellHdrRight {
+	background-color: #0071ad;
+	font-weight: bold;
+	color: black;
+	text-align: right;
+}
+#basketTxtSection td{
+	padding: 5px;
+	border-top:1px solid #0071ad;
+}
+
+.basketBkgFeeHdr {
+	background-color: #0071ad;
+	font-weight: bold;
+}
+#basketBkgFeeHdrRight {
+	background-color: #0071ad;
+	color: #FFFFFF;
+	font-size : 12px;
+	font-weight: bold;
+	text-align: right;
+	padding: 5px;	
+}
+.sectiontitle
+{
+	font-family: Arial;
+	font-style: normal;
+	font-size: 14pt;
+	color: #0071ad;
+	border-bottom: 2px solid #0071ad;
+	padding-bottom: 5px;
+}
+
+
+.pagetitle
+{
+	font-family: Arial;
+	font-style: normal;
+	font-size: 14pt;
+	color: #0071ad;
+	border-bottom: 2px solid #0071ad;
+	padding-bottom: 5px;
+}
+.subheading
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10pt;
+	COLOR: #0071ad;
+	FONT-FAMILY: sans-serif, Arial, Helvetica;
+}
+a.subheading
+{
+		COLOR: #0071ad;
+}
+.subheadingsm
+{
+		FONT-WEIGHT: bold;
+		FONT-SIZE: 11px;
+		COLOR: #0071ad;
+		FONT-FAMILY: Arial, Helvetica, sans-serif;
+}
+.sideBox {
+	border: 1px solid #999999;
+	padding: 5px 5px 5px 5px;
+	background-color: #F0F0F0;
+	width: 218px;
+}
+.sideBoxSpacer {
+
+      height: 8px;
+background-color: #F0F0F0;
+      width: 200px;
+
+}
+.sidetitle 
+{
+   FONT-WEIGHT: bold;
+	font-size: 11pt !important;
+	color: #0071ad;
+	border-bottom: 1px solid #0071ad;
+	padding-bottom: 4px;
+	FONT-FAMILY: Arial;
+}
+a.sidetextemphasis
+{
+	font-size: 11px;
+	color: #0071ad;
+	FONT-WEIGHT: bold;
+	text-transform: capitalize; //RBA Added
+}
+hr
+{
+	border: 1px solid #0071ad;
+}
+.sideboxLink 
+{
+	color: #999999;
+	font-family: Arial;
+	FONT-WEIGHT: bold;
+	font-size: 11px;
+	padding-bottom: 3px;
+	border-bottom: 1px dashed #999999;
+	background-image: url(../images/sideLinkArrowGrey.gif);
+	background-repeat: no-repeat;
+}
+.sideboxLink A	 
+{
+	font-family: Arial;
+	font-weight: bold; 
+	color:#999999; 
+	font-size: 11px;
+	text-decoration: none;
+	background-image: url(../images/sideLinkArrowGrey.gif);
+	background-repeat: no-repeat;
+}
+.htltabsLine
+{
+	border-bottom: 2px solid #0071ad;
+	padding: 3px 3px 3px 3px;
+}
+.htltabOn A
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10pt;
+	COLOR: #FFF;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	BACKGROUND-COLOR: #0071ad;
+	border-bottom: 1px solid #0071ad;
+	padding: 2px 10px 2px 10px;
+	text-decoration: none;
+}
+.htltabOff A
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10pt;
+	COLOR: #999999;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	BACKGROUND-COLOR: #F0F0F0;
+	border-bottom: 1px solid #FFF;
+	padding: 2px 10px 1px 10px;
+	text-decoration: none;
+}
+.sortbarbg
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	BACKGROUND-COLOR: #0071ad;
+	padding: 5px 5px 5px 5px;
+	text-decoration: none;
+}
+.sortbarbg a
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	BACKGROUND-COLOR: #0071ad;
+	padding: 5px 5px 5px 5px;
+	text-decoration: none;
+}
+.upsellBorder {
+	border: 1px solid #0071ad;
+	background-color: #f4f4f4
+}
+.upsellBrdrBot {
+	border-bottom: 1px solid #0071ad;
+}
+.upsellitem
+{
+		FONT-WEIGHT: bold;
+		FONT-SIZE: 11pt;
+		COLOR: #0071ad;
+		FONT-FAMILY: Arial, Helvetica, sans-serif;
+}
+.summarysideBox
+{
+	border: 1px solid #0071ad;
+	padding: 5px 5px 5px 5px;
+	background-color: #ffffff;
+	width: 218px;
+}
+A.servicename
+{
+	font-size: 13px;
+	font-weight: bold;
+	color: #0071ad;
+	text-decoration: underline;
+}
+#sidebarsearchtitle {
+	font-family: Arial;
+   FONT-WEIGHT: bold;
+	font-size: 11pt;
+	color: #0071ad;
+	border-bottom: 1px solid #0071ad;
+	padding-bottom: 4px;
+}
+.reminderemailFrame
+{
+	border : 1px solid #0071ad;
+}
+.hotelname
+{
+ FONT-WEIGHT: bold;
+ FONT-SIZE: 11pt;
+ COLOR: #000000;
+ text-transform: capitalize;
+ FONT-FAMILY: Arial;
+ text-decoration: underline;
+}
+.hotelname A
+{
+ FONT-WEIGHT: bold;
+ FONT-SIZE: 11pt;
+ COLOR: #000000;
+ text-transform: capitalize;
+ FONT-FAMILY: Arial;
+ text-decoration: underline;
+}
+
+.HotelHotPick {
+background-color: #F0F0F0;
+border: 0px;
+padding: 0px 0px 5px 0px;
+}
+
+/* tabs*/
+
+.ui-widget-header { 
+border-bottom: 2px solid #0071ad/*{borderColorHeader}*/; 
+background: #ffffff/*{bgColorHeader}*/ /*{bgImgUrlHeader}*/ 50%/*{bgHeaderXPos}*/ 50%/*{bgHeaderYPos}*/ repeat-x/*{bgHeaderRepeat}*/; 
+color: #222222/*{fcHeader}*/; 
+font-weight: bold; 
+}
+.ui-widget-header a { 
+color: #222222/*{fcHeader}*/; 
+}
+
+
+
+.ui-state-default, .ui-widget-content .ui-state-default { 
+border: 1px solid #c7eafe/*{borderColorDefault}*/; 
+background: #c7eafe/*{bgColorDefault}*/ 50%/*{bgDefaultXPos}*/ 50%/*{bgDefaultYPos}*/ repeat-x/*{bgDefaultRepeat}*/; 
+font-weight: bold/*{fwDefault}*/; 
+color: #555555/*{fcDefault}*/; 
+outline: none; 
+}
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { 
+color: #0071ad/*{fcDefault}*/; 
+text-decoration: none; 
+outline: none; 
+font-weight: bold;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus { 
+border: 1px solid #0071ad/*{borderColorHover}*/; 
+background: #0071ad/*{bgColorHover}*/ 50%/*{bgHoverXPos}*/ 50%/*{bgHoverYPos}*/ repeat-x/*{bgHoverRepeat}*/; 
+font-weight: bold/*{fwDefault}*/; color: #ffffff/*{fcHover}*/; 
+outline: none; 
+}
+.ui-state-hover a, .ui-state-hover a:hover { 
+color: #ffffff/*{fcHover}*/; 
+text-decoration: none; 
+outline: none; 
+}
+.ui-state-active, .ui-widget-content .ui-state-active { 
+border: 1px solid #0071ad/*{borderColorActive}*/; 
+background: #0071ad/*{bgColorActive}*/ 50%/*{bgActiveXPos}*/ 50%/*{bgActiveYPos}*/ repeat-x/*{bgActiveRepeat}*/; 
+font-weight: bold/*{fwDefault}*/; 
+color: #FFFFFF/*{fcActive}*/; 
+outline: none; 
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { 
+color: #FFFFFF/*{fcActive}*/; 
+outline: none; 
+text-decoration: none; 
+outline: none; 
+font-weight: bold; 
+}
