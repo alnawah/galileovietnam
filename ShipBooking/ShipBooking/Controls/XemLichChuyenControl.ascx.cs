@@ -34,10 +34,13 @@ namespace ShipBooking.Controls
         {
             if (ddlNoiDi.SelectedValue == "" || ddlNoiDen.SelectedValue == "")
             {
+                grwHanhTrinh.DataSource = null;
+                grwHanhTrinh.DataBind();
                 return;
             }
             else
             {
+                
                 SearchHanhTrinh();
             }
         }

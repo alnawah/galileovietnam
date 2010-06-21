@@ -1,66 +1,65 @@
 <publishData>
   <publishTarget publishUrl="C:\Documents and Settings\Nguyen Quang Minh\Desktop\SB\">
-    <file relUrl="bin/de/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:01:59" />
-    <file relUrl="bin/.svn/text-base/ShipBooking.pdb.svn-base" publishTime="06/17/2010 08:25:11" />
-    <file relUrl="bin/ja/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
+    <file relUrl="bin/de/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:06:15" />
+    <file relUrl="bin/ko/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
+    <file relUrl="bin/.svn/text-base/ShipBooking.pdb.svn-base" publishTime="06/17/2010 15:11:31" />
     <file relUrl="Controls/DatVeReviewControl.ascx" publishTime="06/17/2010 08:25:49" />
     <file relUrl="Controls/AdminHanhTrinhControl.ascx" publishTime="06/17/2010 10:01:41" />
+    <file relUrl="App_Themes/MySkin/MySkin.skin" publishTime="04/20/2010 09:24:09" />
     <file relUrl="Images/tinh_trang_cho.png" publishTime="04/20/2010 09:25:14" />
-    <file relUrl="bin/es/.svn/entries" publishTime="06/17/2010 08:35:31" />
-    <file relUrl="bin/ShipBooking.dll" publishTime="06/17/2010 14:54:52" />
+    <file relUrl="bin/es/.svn/entries" publishTime="06/21/2010 09:14:20" />
+    <file relUrl="bin/ShipBooking.dll" publishTime="06/21/2010 17:41:13" />
     <file relUrl="bin/ar/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:01:58" />
     <file relUrl="bin/zh-CHT/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:01" />
-    <file relUrl="bin/ru/.svn/entries" publishTime="06/17/2010 08:35:30" />
+    <file relUrl="bin/ru/.svn/entries" publishTime="06/21/2010 09:14:20" />
     <file relUrl="App_Data/ShipBooking_log.ldf" publishTime="06/17/2010 08:25:31" />
-    <file relUrl="bin/.svn/all-wcprops" publishTime="06/17/2010 08:35:31" />
-    <file relUrl="bin/zh-CHT/.svn/all-wcprops" publishTime="06/17/2010 08:35:30" />
+    <file relUrl="bin/it/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
+    <file relUrl="Images/quan_ly_thanh_pho_button.png" publishTime="06/16/2010 14:08:08" />
     <file relUrl="bin/ko/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
     <file relUrl="Images/text_banvetau.png" publishTime="04/20/2010 09:25:14" />
-    <file relUrl="bin/pt/.svn/entries" publishTime="06/17/2010 08:35:30" />
-    <file relUrl="DatVe_Review.aspx" publishTime="04/20/2010 09:25:16" />
     <file relUrl="Admin_HanhTrinh.aspx" publishTime="05/28/2010 09:01:40" />
     <file relUrl="Images/menu_bar.gif" publishTime="04/20/2010 09:25:14" />
-    <file relUrl="Images/quan_ly_hanh_trinh_button.png" publishTime="06/16/2010 14:07:27" />
+    <file relUrl="Images/tim_kiem_hanh_trinh.png" publishTime="05/31/2010 15:56:23" />
+    <file relUrl="bin/cs/.svn/all-wcprops" publishTime="06/21/2010 09:12:37" />
     <file relUrl="Controls/DatVe_Step2.ascx" publishTime="06/17/2010 08:25:50" />
-    <file relUrl="bin/zh-CHS/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
-    <file relUrl="Web.config" publishTime="04/20/2010 09:25:16" />
-    <file relUrl="bin/ar/.svn/all-wcprops" publishTime="06/17/2010 08:35:31" />
-    <file relUrl="bin/fr/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:34" />
     <file relUrl="bin/hi/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
-    <file relUrl="bin/pt/.svn/all-wcprops" publishTime="06/17/2010 08:35:30" />
+    <file relUrl="Web.config" publishTime="04/20/2010 09:25:16" />
+    <file relUrl="bin/ar/.svn/all-wcprops" publishTime="06/21/2010 09:12:37" />
+    <file relUrl="bin/fr/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:34" />
+    <file relUrl="Controls/Layer/ContenControl.ascx" publishTime="04/20/2010 09:24:30" />
+    <file relUrl="bin/pt/.svn/all-wcprops" publishTime="06/21/2010 09:12:36" />
     <file relUrl="Images/dat_ve.png" publishTime="04/20/2010 09:25:14" />
     <file relUrl="bin/.svn/prop-base/ShipBooking.dll.svn-base" publishTime="06/17/2010 08:25:11" />
     <file relUrl="XemLichChuyen.aspx" publishTime="06/02/2010 15:34:16" />
     <file relUrl="bin/ko/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:06:54" />
-    <file relUrl="bin/ja/.svn/all-wcprops" publishTime="06/17/2010 08:35:30" />
+    <file relUrl="bin/it/.svn/entries" publishTime="06/21/2010 09:14:20" />
     <file relUrl="Images/Hinh-su.gif" publishTime="04/20/2010 09:25:14" />
-    <file relUrl="bin/zh-CHS/.svn/entries" publishTime="06/17/2010 08:35:30" />
+    <file relUrl="bin/ar/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:04" />
+    <file relUrl="bin/zh-CHS/.svn/entries" publishTime="06/21/2010 09:14:20" />
     <file relUrl="bin/de/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:04" />
     <file relUrl="bin/cs/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:06:50" />
     <file relUrl="Images/bang_gia_ve.png" publishTime="04/20/2010 09:25:14" />
-    <file relUrl="bin/ja/.svn/entries" publishTime="06/17/2010 08:35:30" />
-    <file relUrl="ChangePassword.aspx" publishTime="06/17/2010 08:25:50" />
+    <file relUrl="bin/ja/.svn/entries" publishTime="06/21/2010 09:14:20" />
+    <file relUrl="Images/lich_chuyen.png" publishTime="04/20/2010 09:25:14" />
     <file relUrl="bin/.svn/prop-base/ShipBooking.pdb.svn-base" publishTime="06/17/2010 08:25:11" />
-    <file relUrl="bin/tr-TR/.svn/all-wcprops" publishTime="06/17/2010 08:35:31" />
+    <file relUrl="bin/tr-TR/.svn/all-wcprops" publishTime="06/21/2010 09:12:37" />
     <file relUrl="Images/thong_tin_nguoi_nhan_ve.png" publishTime="05/13/2010 14:29:54" />
-    <file relUrl="bin/hi/.svn/entries" publishTime="06/17/2010 08:35:30" />
+    <file relUrl="bin/hi/.svn/entries" publishTime="06/21/2010 09:14:20" />
     <file relUrl="Images/xem_lich_chuyen.png" publishTime="06/02/2010 15:30:36" />
-    <file relUrl="bin/tr-TR/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:01" />
     <file relUrl="Images/galileo_logo.jpg" publishTime="04/20/2010 09:25:14" />
-    <file relUrl="bin/.svn/text-base/ShipBooking.dll.svn-base" publishTime="06/17/2010 08:25:11" />
+    <file relUrl="bin/.svn/text-base/ShipBooking.dll.svn-base" publishTime="06/17/2010 15:11:54" />
     <file relUrl="Controls/LoginControl.ascx" publishTime="06/17/2010 08:25:48" />
     <file relUrl="Controls/SearchHanhTrinhResultControl.ascx" publishTime="06/17/2010 09:29:44" />
     <file relUrl="Images/banner_blue.png" publishTime="04/20/2010 09:25:14" />
     <file relUrl="bin/AjaxControlToolkit.pdb" publishTime="02/29/2008 11:34:04" />
     <file relUrl="Login.aspx" publishTime="04/28/2010 09:56:31" />
     <file relUrl="Images/admin.jpg" publishTime="05/04/2010 08:10:56" />
-    <file relUrl="bin/fr/.svn/all-wcprops" publishTime="06/17/2010 08:35:31" />
+    <file relUrl="bin/fr/.svn/all-wcprops" publishTime="06/21/2010 09:12:37" />
     <file relUrl="bin/AjaxControlToolkit.dll" publishTime="02/29/2008 11:34:04" />
     <file relUrl="bin/.svn/prop-base/AjaxControlToolkit.dll.svn-base" publishTime="06/04/2010 12:01:58" />
-    <file relUrl="Images/tim_kiem_hanh_trinh.png" publishTime="05/31/2010 15:56:23" />
+    <file relUrl="bin/fr/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:04" />
     <file relUrl="bin/es/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:06:52" />
-    <file relUrl="bin/it/.svn/all-wcprops" publishTime="06/17/2010 08:35:31" />
-    <file relUrl="bin/ru/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:01" />
+    <file relUrl="bin/it/.svn/all-wcprops" publishTime="06/21/2010 09:12:37" />
     <file relUrl="DetailBooking.aspx" publishTime="05/17/2010 14:12:07" />
     <file relUrl="ThongTinHanhTrinh.aspx" publishTime="05/19/2010 15:05:57" />
     <file relUrl="bin/hi/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:04" />
@@ -68,34 +67,35 @@
     <file relUrl="Images/dat_ve_tau.png" publishTime="05/13/2010 14:29:54" />
     <file relUrl="bin/tr-TR/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
     <file relUrl="bin/he/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:06:43" />
-    <file relUrl="Controls/AdminTauControl.ascx" publishTime="05/28/2010 13:43:46" />
-    <file relUrl="Controls/AdminDetailBookingControl.ascx" publishTime="06/17/2010 13:39:03" />
     <file relUrl="Controls/AdminBookingFileControl.ascx" publishTime="06/17/2010 08:25:48" />
+    <file relUrl="Images/quan_ly_hanh_trinh_button.png" publishTime="06/16/2010 14:07:27" />
     <file relUrl="Images/quan_ly_tau_thuy.png" publishTime="05/13/2010 14:29:54" />
     <file relUrl="Images/thong_tin_tinh_trang_chuyen.png" publishTime="05/13/2010 14:29:54" />
     <file relUrl="Controls/ThongTinKhachControl.ascx" publishTime="06/17/2010 08:25:47" />
     <file relUrl="App_Data/ShipBooking.mdf" publishTime="06/17/2010 08:25:34" />
-    <file relUrl="bin/it/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
+    <file relUrl="Controls/Layer/Admin_BannerControl.ascx" publishTime="05/14/2010 08:20:05" />
     <file relUrl="Images/xem_lich_chuyen_button.png" publishTime="06/16/2010 16:12:34" />
     <file relUrl="Images/quan_ly_tau_thuy_button.png" publishTime="06/16/2010 14:08:57" />
-    <file relUrl="bin/he/.svn/all-wcprops" publishTime="06/17/2010 08:35:30" />
-    <file relUrl="bin/cs/.svn/entries" publishTime="06/17/2010 08:35:31" />
+    <file relUrl="bin/he/.svn/all-wcprops" publishTime="06/21/2010 09:12:37" />
+    <file relUrl="bin/cs/.svn/entries" publishTime="06/21/2010 09:14:20" />
     <file relUrl="bin/nl/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
     <file relUrl="Images/banner1.png" publishTime="04/20/2010 09:25:14" />
-    <file relUrl="bin/ShipBooking.pdb" publishTime="06/17/2010 14:54:52" />
+    <file relUrl="bin/ShipBooking.pdb" publishTime="06/21/2010 17:41:13" />
     <file relUrl="Images/thong_tin_khach.png" publishTime="05/31/2010 16:56:33" />
     <file relUrl="bin/ja/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
+    <file relUrl="bin/es/.svn/all-wcprops" publishTime="06/21/2010 09:12:37" />
     <file relUrl="bin/zh-CHS/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:01" />
     <file relUrl="Images/ket_thuc_booking.png" publishTime="05/31/2010 17:04:39" />
     <file relUrl="Controls/Admin_ThanhPhoControl.ascx" publishTime="05/14/2010 08:20:05" />
     <file relUrl="Admin_BookingFile.aspx" publishTime="06/01/2010 15:52:20" />
-    <file relUrl="bin/it/.svn/entries" publishTime="06/17/2010 08:35:31" />
+    <file relUrl="Admin_Master.Master" publishTime="06/17/2010 08:25:50" />
+    <file relUrl="bin/ja/.svn/all-wcprops" publishTime="06/21/2010 09:12:37" />
     <file relUrl="bin/hi/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:06:45" />
-    <file relUrl="Controls/Layer/ContenControl.ascx" publishTime="04/20/2010 09:24:30" />
-    <file relUrl="bin/ru/.svn/all-wcprops" publishTime="06/17/2010 08:35:30" />
+    <file relUrl="bin/zh-CHT/.svn/all-wcprops" publishTime="06/21/2010 09:12:37" />
+    <file relUrl="bin/ru/.svn/all-wcprops" publishTime="06/21/2010 09:12:37" />
     <file relUrl="KetThucBooking.aspx" publishTime="05/13/2010 14:29:55" />
     <file relUrl="bin/es/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:01:59" />
-    <file relUrl="bin/ar/.svn/entries" publishTime="06/17/2010 08:35:31" />
+    <file relUrl="bin/ar/.svn/entries" publishTime="06/21/2010 09:14:20" />
     <file relUrl="bin/ja/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:06:18" />
     <file relUrl="Images/CalendarIcon.png" publishTime="04/20/2010 09:25:14" />
     <file relUrl="bin/fr/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:01:59" />
@@ -103,80 +103,79 @@
     <file relUrl="App_Themes/MySkin/MyCss.css" publishTime="04/20/2010 09:24:09" />
     <file relUrl="bin/cs/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:01:59" />
     <file relUrl="BookingSep1.aspx" publishTime="05/31/2010 08:10:33" />
-    <file relUrl="bin/ko/.svn/all-wcprops" publishTime="06/17/2010 08:35:31" />
+    <file relUrl="bin/ko/.svn/all-wcprops" publishTime="06/21/2010 09:12:37" />
     <file relUrl="Images/quan_ly_booking.png" publishTime="05/13/2010 14:29:54" />
-    <file relUrl="bin/tr-TR/.svn/entries" publishTime="06/17/2010 08:35:31" />
+    <file relUrl="bin/tr-TR/.svn/entries" publishTime="06/21/2010 09:14:20" />
     <file relUrl="Controls/ThongTinHanhTrinhControl.ascx" publishTime="06/03/2010 16:43:03" />
     <file relUrl="DatVe_Step2.aspx" publishTime="04/20/2010 09:25:16" />
     <file relUrl="bin/.svn/text-base/AjaxControlToolkit.dll.svn-base" publishTime="06/04/2010 12:04:51" />
     <file relUrl="Default.aspx" publishTime="06/16/2010 16:19:07" />
     <file relUrl="Images/dat_ve_button.png" publishTime="06/16/2010 16:11:51" />
-    <file relUrl="Controls/XemLichChuyenControl.ascx" publishTime="06/04/2010 11:20:47" />
-    <file relUrl="bin/ko/.svn/entries" publishTime="06/17/2010 08:35:31" />
+    <file relUrl="Controls/XemLichChuyenControl.ascx" publishTime="06/21/2010 17:32:43" />
+    <file relUrl="bin/ko/.svn/entries" publishTime="06/21/2010 09:14:20" />
     <file relUrl="MyMaster.Master" publishTime="06/16/2010 14:21:10" />
-    <file relUrl="bin/he/.svn/entries" publishTime="06/17/2010 08:35:30" />
+    <file relUrl="bin/he/.svn/entries" publishTime="06/21/2010 09:14:20" />
     <file relUrl="bin/it/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:46" />
-    <file relUrl="Controls/Layer/Admin_BannerControl.ascx" publishTime="05/14/2010 08:20:05" />
+    <file relUrl="ChangePassword.aspx" publishTime="06/17/2010 08:25:50" />
     <file relUrl="Controls/Layer/RightControl.ascx" publishTime="04/20/2010 09:24:30" />
-    <file relUrl="App_Themes/MySkin/MySkin.skin" publishTime="04/20/2010 09:24:09" />
+    <file relUrl="bin/de/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:01:59" />
     <file relUrl="bin/he/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:04" />
     <file relUrl="bin/ru/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
-    <file relUrl="bin/.svn/prop-base/AjaxControlToolkit.pdb.svn-base" publishTime="06/04/2010 12:01:58" />
-    <file relUrl="Images/banner.png" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="DatVe_Review.aspx" publishTime="04/20/2010 09:25:16" />
     <file relUrl="Controls/Layer/BannerControl.ascx" publishTime="06/15/2010 17:24:27" />
-    <file relUrl="bin/it/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
+    <file relUrl="bin/pt/.svn/entries" publishTime="06/21/2010 09:14:20" />
     <file relUrl="Admin_Functions.aspx" publishTime="06/16/2010 14:28:46" />
-    <file relUrl="bin/nl/.svn/entries" publishTime="06/17/2010 08:35:31" />
-    <file relUrl="bin/de/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:06:15" />
+    <file relUrl="Controls/AdminTauControl.ascx" publishTime="05/28/2010 13:43:46" />
     <file relUrl="bin/ru/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:01" />
     <file relUrl="Images/quan_ly_hanh_trinh.png" publishTime="05/13/2010 14:29:54" />
     <file relUrl="bin/pt/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
     <file relUrl="Images/ket_qua_tim_kiem_hanhtrinh.png" publishTime="05/31/2010 16:36:13" />
     <file relUrl="Images/quan_ly_booking_button.png" publishTime="06/16/2010 14:06:39" />
     <file relUrl="bin/nl/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:39" />
-    <file relUrl="Images/quan_ly_thanh_pho_button.png" publishTime="06/16/2010 14:08:08" />
+    <file relUrl="Controls/Layer/FooterControl.ascx" publishTime="04/20/2010 09:24:30" />
+    <file relUrl="bin/hi/.svn/all-wcprops" publishTime="06/21/2010 09:12:37" />
     <file relUrl="ThongTinKhach.aspx" publishTime="04/28/2010 14:35:10" />
-    <file relUrl="bin/de/.svn/all-wcprops" publishTime="06/17/2010 08:35:30" />
-    <file relUrl="bin/hi/.svn/all-wcprops" publishTime="06/17/2010 08:35:30" />
-    <file relUrl="bin/zh-CHT/.svn/entries" publishTime="06/17/2010 08:35:30" />
-    <file relUrl="bin/cs/.svn/all-wcprops" publishTime="06/17/2010 08:35:31" />
-    <file relUrl="bin/fr/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:04" />
-    <file relUrl="bin/ko/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
-    <file relUrl="bin/de/.svn/entries" publishTime="06/17/2010 08:35:30" />
+    <file relUrl="bin/zh-CHT/.svn/entries" publishTime="06/21/2010 09:14:20" />
+    <file relUrl="bin/.svn/prop-base/AjaxControlToolkit.pdb.svn-base" publishTime="06/04/2010 12:01:58" />
+    <file relUrl="Images/banner.png" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="bin/.svn/all-wcprops" publishTime="06/21/2010 09:12:37" />
+    <file relUrl="bin/de/.svn/entries" publishTime="06/21/2010 09:14:20" />
+    <file relUrl="bin/pt/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:04:48" />
+    <file relUrl="bin/ar/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:11" />
+    <file relUrl="bin/zh-CHT/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
     <file relUrl="bin/he/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
     <file relUrl="bin/zh-CHS/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:06:41" />
-    <file relUrl="bin/ar/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:04" />
+    <file relUrl="bin/tr-TR/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:01" />
     <file relUrl="bin/cs/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:04" />
     <file relUrl="bin/zh-CHT/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:04" />
-    <file relUrl="bin/pt/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:04:48" />
-    <file relUrl="bin/.svn/entries" publishTime="06/17/2010 08:35:31" />
+    <file relUrl="bin/ru/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:01" />
+    <file relUrl="bin/.svn/entries" publishTime="06/21/2010 09:14:20" />
     <file relUrl="Admin_Tau.aspx" publishTime="05/14/2010 08:20:09" />
-    <file relUrl="bin/nl/.svn/all-wcprops" publishTime="06/17/2010 08:35:31" />
+    <file relUrl="bin/nl/.svn/all-wcprops" publishTime="06/21/2010 09:12:37" />
     <file relUrl="bin/nl/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
-    <file relUrl="bin/zh-CHT/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
-    <file relUrl="Images/lich_chuyen.png" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="bin/nl/.svn/entries" publishTime="06/21/2010 09:14:20" />
+    <file relUrl="Controls/AdminDetailBookingControl.ascx" publishTime="06/17/2010 13:39:03" />
     <file relUrl="Controls/Layer/LeftControl.ascx" publishTime="04/20/2010 09:24:30" />
     <file relUrl="Admin_ThanhPho.aspx" publishTime="05/14/2010 08:20:09" />
-    <file relUrl="bin/es/.svn/all-wcprops" publishTime="06/17/2010 08:35:31" />
-    <file relUrl="bin/ar/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:11" />
+    <file relUrl="bin/ja/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
+    <file relUrl="bin/de/.svn/all-wcprops" publishTime="06/21/2010 09:12:37" />
     <file relUrl="Images/tao_booking_step.png" publishTime="05/31/2010 16:52:32" />
-    <file relUrl="Admin_Master.Master" publishTime="06/17/2010 08:25:50" />
+    <file relUrl="bin/it/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
     <file relUrl="bin/tr-TR/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:36" />
-    <file relUrl="bin/zh-CHS/.svn/all-wcprops" publishTime="06/17/2010 08:35:30" />
-    <file relUrl="Controls/Layer/FooterControl.ascx" publishTime="04/20/2010 09:24:30" />
+    <file relUrl="bin/zh-CHS/.svn/all-wcprops" publishTime="06/21/2010 09:12:37" />
+    <file relUrl="bin/zh-CHS/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
     <file relUrl="bin/.svn/text-base/AjaxControlToolkit.pdb.svn-base" publishTime="06/04/2010 12:03:50" />
     <file relUrl="bin/pt/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
     <file relUrl="MenuScript.js" publishTime="04/20/2010 09:25:16" />
     <file relUrl="bin/es/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:04" />
-    <file relUrl="bin/fr/.svn/entries" publishTime="06/17/2010 08:35:31" />
+    <file relUrl="bin/fr/.svn/entries" publishTime="06/21/2010 09:14:20" />
   </publishTarget>
   <publishTarget publishUrl="C:\Documents and Settings\Quang Minh\Desktop\SB\">
-    <file relUrl="bin/de/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:32" />
+    <file relUrl="bin/de/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:32" />
+    <file relUrl="bin/ko/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:38" />
     <file relUrl="bin/.svn/text-base/ShipBooking.pdb.svn-base" publishTime="06/16/2010 20:10:58" />
-    <file relUrl="bin/ja/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:32" />
     <file relUrl="Controls/DatVeReviewControl.ascx" publishTime="06/16/2010 23:25:40" />
     <file relUrl="Controls/Admin_ThanhPhoControl.ascx" publishTime="05/13/2010 20:44:16" />
-    <file relUrl="App_Themes/MySkin/MySkin.skin" publishTime="04/17/2010 10:10:08" />
     <file relUrl="Images/tinh_trang_cho.png" publishTime="04/17/2010 10:10:28" />
     <file relUrl="bin/es/.svn/entries" publishTime="06/16/2010 20:11:30" />
     <file relUrl="bin/ShipBooking.dll" publishTime="06/16/2010 23:54:48" />
@@ -184,14 +183,14 @@
     <file relUrl="bin/zh-CHT/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:32" />
     <file relUrl="bin/ru/.svn/entries" publishTime="06/16/2010 20:11:30" />
     <file relUrl="App_Data/ShipBooking_log.ldf" publishTime="06/16/2010 22:19:44" />
-    <file relUrl="bin/it/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:40" />
+    <file relUrl="Admin_Master.Master" publishTime="06/16/2010 23:04:22" />
     <file relUrl="Images/quan_ly_thanh_pho_button.png" publishTime="06/16/2010 20:11:12" />
     <file relUrl="bin/ko/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:38" />
     <file relUrl="Images/text_banvetau.png" publishTime="04/17/2010 10:10:28" />
+    <file relUrl="bin/pt/.svn/entries" publishTime="06/16/2010 20:11:30" />
     <file relUrl="Admin_HanhTrinh.aspx" publishTime="05/30/2010 22:46:32" />
     <file relUrl="Images/menu_bar.gif" publishTime="04/17/2010 10:10:28" />
-    <file relUrl="Images/quan_ly_hanh_trinh_button.png" publishTime="06/16/2010 20:11:12" />
-    <file relUrl="bin/cs/.svn/all-wcprops" publishTime="06/04/2010 23:35:38" />
+    <file relUrl="Images/tim_kiem_hanh_trinh.png" publishTime="06/04/2010 23:35:28" />
     <file relUrl="Controls/DatVe_Step2.ascx" publishTime="06/16/2010 23:24:24" />
     <file relUrl="bin/hi/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:34" />
     <file relUrl="Web.config" publishTime="04/17/2010 10:10:34" />
@@ -199,23 +198,25 @@
     <file relUrl="bin/fr/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:38" />
     <file relUrl="bin/pt/.svn/all-wcprops" publishTime="06/04/2010 23:35:30" />
     <file relUrl="Images/dat_ve.png" publishTime="04/17/2010 10:10:28" />
+    <file relUrl="bin/zh-CHS/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:32" />
     <file relUrl="bin/.svn/prop-base/ShipBooking.dll.svn-base" publishTime="06/16/2010 20:11:00" />
     <file relUrl="XemLichChuyen.aspx" publishTime="06/04/2010 23:35:44" />
     <file relUrl="bin/ko/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:38" />
-    <file relUrl="bin/it/.svn/entries" publishTime="06/16/2010 20:11:30" />
+    <file relUrl="bin/ja/.svn/all-wcprops" publishTime="06/04/2010 23:35:32" />
+    <file relUrl="bin/zh-CHS/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:32" />
     <file relUrl="Images/Hinh-su.gif" publishTime="04/17/2010 10:10:28" />
     <file relUrl="bin/zh-CHS/.svn/entries" publishTime="06/16/2010 20:11:30" />
-    <file relUrl="bin/pt/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:30" />
     <file relUrl="bin/de/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:32" />
     <file relUrl="bin/cs/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:38" />
     <file relUrl="Images/bang_gia_ve.png" publishTime="04/17/2010 10:10:28" />
     <file relUrl="bin/ja/.svn/entries" publishTime="06/16/2010 20:11:30" />
+    <file relUrl="bin/zh-CHT/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:32" />
+    <file relUrl="ChangePassword.aspx" publishTime="06/16/2010 22:58:32" />
     <file relUrl="bin/.svn/prop-base/ShipBooking.pdb.svn-base" publishTime="06/16/2010 20:10:58" />
     <file relUrl="bin/tr-TR/.svn/all-wcprops" publishTime="06/04/2010 23:35:38" />
     <file relUrl="Images/thong_tin_nguoi_nhan_ve.png" publishTime="05/13/2010 18:47:24" />
     <file relUrl="bin/hi/.svn/entries" publishTime="06/16/2010 20:11:30" />
     <file relUrl="Images/xem_lich_chuyen.png" publishTime="06/04/2010 23:35:28" />
-    <file relUrl="bin/tr-TR/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:38" />
     <file relUrl="Images/galileo_logo.jpg" publishTime="04/17/2010 10:10:28" />
     <file relUrl="bin/.svn/text-base/ShipBooking.dll.svn-base" publishTime="06/16/2010 20:11:00" />
     <file relUrl="Controls/LoginControl.ascx" publishTime="06/16/2010 23:06:18" />
@@ -227,11 +228,10 @@
     <file relUrl="bin/fr/.svn/all-wcprops" publishTime="06/04/2010 23:35:38" />
     <file relUrl="bin/AjaxControlToolkit.dll" publishTime="06/04/2010 23:35:40" />
     <file relUrl="bin/.svn/prop-base/AjaxControlToolkit.dll.svn-base" publishTime="06/04/2010 23:35:38" />
-    <file relUrl="Images/tim_kiem_hanh_trinh.png" publishTime="06/04/2010 23:35:28" />
-    <file relUrl="bin/ru/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:32" />
+    <file relUrl="bin/ar/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:34" />
     <file relUrl="bin/es/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:38" />
     <file relUrl="bin/ja/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:32" />
-    <file relUrl="bin/.svn/all-wcprops" publishTime="06/16/2010 20:11:00" />
+    <file relUrl="bin/zh-CHT/.svn/all-wcprops" publishTime="06/04/2010 23:35:32" />
     <file relUrl="DetailBooking.aspx" publishTime="05/18/2010 21:56:02" />
     <file relUrl="ThongTinHanhTrinh.aspx" publishTime="05/30/2010 22:46:32" />
     <file relUrl="bin/hi/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:34" />
@@ -239,14 +239,13 @@
     <file relUrl="Images/dat_ve_tau.png" publishTime="05/13/2010 18:47:22" />
     <file relUrl="bin/tr-TR/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:38" />
     <file relUrl="bin/he/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:32" />
-    <file relUrl="Controls/AdminDetailBookingControl.ascx" publishTime="06/16/2010 23:27:10" />
+    <file relUrl="Controls/AdminTauControl.ascx" publishTime="05/30/2010 22:46:32" />
     <file relUrl="Controls/AdminBookingFileControl.ascx" publishTime="06/16/2010 23:28:48" />
+    <file relUrl="Images/quan_ly_hanh_trinh_button.png" publishTime="06/16/2010 20:11:12" />
     <file relUrl="Images/quan_ly_tau_thuy.png" publishTime="05/13/2010 18:47:24" />
     <file relUrl="Images/thong_tin_tinh_trang_chuyen.png" publishTime="05/13/2010 18:47:22" />
     <file relUrl="Controls/ThongTinKhachControl.ascx" publishTime="06/16/2010 23:23:12" />
     <file relUrl="App_Data/ShipBooking.mdf" publishTime="06/16/2010 22:19:44" />
-    <file relUrl="bin/it/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:40" />
-    <file relUrl="Controls/Layer/Admin_BannerControl.ascx" publishTime="05/13/2010 20:56:54" />
     <file relUrl="Images/xem_lich_chuyen_button.png" publishTime="06/16/2010 20:11:12" />
     <file relUrl="Images/quan_ly_tau_thuy_button.png" publishTime="06/16/2010 20:11:12" />
     <file relUrl="bin/he/.svn/all-wcprops" publishTime="06/04/2010 23:35:32" />
@@ -256,16 +255,18 @@
     <file relUrl="bin/ShipBooking.pdb" publishTime="06/16/2010 23:54:48" />
     <file relUrl="Images/thong_tin_khach.png" publishTime="06/04/2010 23:35:28" />
     <file relUrl="bin/ja/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:32" />
+    <file relUrl="bin/es/.svn/all-wcprops" publishTime="06/04/2010 23:35:38" />
     <file relUrl="bin/zh-CHS/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:32" />
     <file relUrl="Images/ket_thuc_booking.png" publishTime="06/04/2010 23:35:28" />
     <file relUrl="Admin_BookingFile.aspx" publishTime="05/13/2010 20:50:48" />
-    <file relUrl="bin/ja/.svn/all-wcprops" publishTime="06/04/2010 23:35:32" />
+    <file relUrl="bin/it/.svn/entries" publishTime="06/16/2010 20:11:30" />
     <file relUrl="bin/hi/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:34" />
     <file relUrl="Controls/Layer/ContenControl.ascx" publishTime="04/17/2010 10:10:16" />
     <file relUrl="bin/ru/.svn/all-wcprops" publishTime="06/04/2010 23:35:32" />
     <file relUrl="KetThucBooking.aspx" publishTime="05/13/2010 18:47:24" />
     <file relUrl="bin/es/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:38" />
     <file relUrl="bin/ar/.svn/entries" publishTime="06/16/2010 20:11:30" />
+    <file relUrl="Images/lich_chuyen.png" publishTime="04/17/2010 10:10:28" />
     <file relUrl="Images/CalendarIcon.png" publishTime="04/17/2010 10:10:28" />
     <file relUrl="bin/fr/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:38" />
     <file relUrl="SearchHanhTrinhResult.aspx" publishTime="05/30/2010 22:46:32" />
@@ -281,60 +282,59 @@
     <file relUrl="Default.aspx" publishTime="06/16/2010 20:11:12" />
     <file relUrl="Images/dat_ve_button.png" publishTime="06/16/2010 20:11:12" />
     <file relUrl="Controls/XemLichChuyenControl.ascx" publishTime="06/04/2010 23:35:42" />
-    <file relUrl="bin/ko/.svn/entries" publishTime="06/16/2010 20:11:30" />
     <file relUrl="MyMaster.Master" publishTime="06/15/2010 22:18:48" />
     <file relUrl="bin/he/.svn/entries" publishTime="06/16/2010 20:11:30" />
+    <file relUrl="Controls/Layer/LeftControl.ascx" publishTime="05/06/2010 18:37:52" />
     <file relUrl="bin/it/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:40" />
-    <file relUrl="ChangePassword.aspx" publishTime="06/16/2010 22:58:32" />
+    <file relUrl="Controls/Layer/Admin_BannerControl.ascx" publishTime="05/13/2010 20:56:54" />
     <file relUrl="Controls/Layer/RightControl.ascx" publishTime="04/17/2010 10:10:16" />
-    <file relUrl="bin/de/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:32" />
+    <file relUrl="App_Themes/MySkin/MySkin.skin" publishTime="04/17/2010 10:10:08" />
     <file relUrl="bin/he/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:32" />
     <file relUrl="bin/ru/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:32" />
-    <file relUrl="bin/cs/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:38" />
-    <file relUrl="DatVe_Review.aspx" publishTime="04/17/2010 10:10:36" />
+    <file relUrl="bin/.svn/prop-base/AjaxControlToolkit.pdb.svn-base" publishTime="06/04/2010 23:35:34" />
+    <file relUrl="bin/ko/.svn/entries" publishTime="06/16/2010 20:11:30" />
     <file relUrl="Controls/Layer/BannerControl.ascx" publishTime="06/15/2010 22:18:46" />
-    <file relUrl="bin/pt/.svn/entries" publishTime="06/16/2010 20:11:30" />
+    <file relUrl="bin/it/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:40" />
     <file relUrl="Admin_Functions.aspx" publishTime="06/16/2010 20:11:14" />
-    <file relUrl="bin/nl/.svn/entries" publishTime="06/16/2010 20:11:30" />
-    <file relUrl="Controls/AdminTauControl.ascx" publishTime="05/30/2010 22:46:32" />
+    <file relUrl="bin/de/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:32" />
     <file relUrl="bin/ru/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:32" />
     <file relUrl="Images/quan_ly_hanh_trinh.png" publishTime="05/13/2010 18:47:22" />
-    <file relUrl="bin/.svn/prop-base/AjaxControlToolkit.pdb.svn-base" publishTime="06/04/2010 23:35:34" />
+    <file relUrl="bin/pt/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:30" />
     <file relUrl="Images/ket_qua_tim_kiem_hanhtrinh.png" publishTime="06/04/2010 23:35:28" />
     <file relUrl="Images/quan_ly_booking_button.png" publishTime="06/16/2010 20:11:12" />
     <file relUrl="bin/nl/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:38" />
-    <file relUrl="Controls/Layer/FooterControl.ascx" publishTime="04/17/2010 10:10:16" />
     <file relUrl="bin/zh-CHT/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:32" />
     <file relUrl="ThongTinKhach.aspx" publishTime="05/06/2010 18:46:46" />
+    <file relUrl="bin/de/.svn/all-wcprops" publishTime="06/04/2010 23:35:32" />
     <file relUrl="bin/hi/.svn/all-wcprops" publishTime="06/04/2010 23:35:34" />
     <file relUrl="bin/zh-CHT/.svn/entries" publishTime="06/16/2010 20:11:30" />
-    <file relUrl="bin/zh-CHT/.svn/all-wcprops" publishTime="06/04/2010 23:35:32" />
+    <file relUrl="bin/cs/.svn/all-wcprops" publishTime="06/04/2010 23:35:38" />
     <file relUrl="Images/banner.png" publishTime="04/17/2010 10:10:28" />
-    <file relUrl="bin/ko/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:38" />
+    <file relUrl="bin/.svn/all-wcprops" publishTime="06/16/2010 20:11:00" />
     <file relUrl="bin/de/.svn/entries" publishTime="06/16/2010 20:11:30" />
-    <file relUrl="bin/ar/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:34" />
+    <file relUrl="bin/pt/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:30" />
     <file relUrl="Controls/AdminHanhTrinhControl.ascx" publishTime="06/04/2010 23:35:42" />
     <file relUrl="bin/he/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:32" />
-    <file relUrl="bin/zh-CHS/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:32" />
-    <file relUrl="bin/ar/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:34" />
-    <file relUrl="bin/fr/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:38" />
-    <file relUrl="bin/pt/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:30" />
+    <file relUrl="DatVe_Review.aspx" publishTime="04/17/2010 10:10:36" />
+    <file relUrl="bin/tr-TR/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:38" />
+    <file relUrl="bin/cs/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:38" />
+    <file relUrl="bin/ru/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:32" />
     <file relUrl="bin/.svn/entries" publishTime="06/16/2010 20:11:30" />
     <file relUrl="Admin_Tau.aspx" publishTime="05/13/2010 20:51:08" />
     <file relUrl="bin/nl/.svn/all-wcprops" publishTime="06/04/2010 23:35:38" />
     <file relUrl="bin/nl/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:38" />
-    <file relUrl="bin/zh-CHT/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:32" />
-    <file relUrl="Images/lich_chuyen.png" publishTime="04/17/2010 10:10:28" />
-    <file relUrl="Controls/Layer/LeftControl.ascx" publishTime="05/06/2010 18:37:52" />
+    <file relUrl="bin/nl/.svn/entries" publishTime="06/16/2010 20:11:30" />
+    <file relUrl="Controls/AdminDetailBookingControl.ascx" publishTime="06/16/2010 23:27:10" />
+    <file relUrl="bin/fr/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:38" />
     <file relUrl="bin/it/.svn/all-wcprops" publishTime="06/04/2010 23:35:40" />
     <file relUrl="Admin_ThanhPho.aspx" publishTime="05/13/2010 20:51:22" />
-    <file relUrl="bin/es/.svn/all-wcprops" publishTime="06/04/2010 23:35:38" />
-    <file relUrl="bin/de/.svn/all-wcprops" publishTime="06/04/2010 23:35:32" />
+    <file relUrl="bin/ja/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:32" />
+    <file relUrl="bin/ar/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:34" />
     <file relUrl="Images/tao_booking_step.png" publishTime="06/04/2010 23:35:28" />
-    <file relUrl="Admin_Master.Master" publishTime="06/16/2010 23:04:22" />
+    <file relUrl="bin/it/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:40" />
     <file relUrl="bin/tr-TR/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 23:35:38" />
     <file relUrl="bin/zh-CHS/.svn/all-wcprops" publishTime="06/04/2010 23:35:32" />
-    <file relUrl="bin/zh-CHS/AjaxControlToolkit.resources.dll" publishTime="06/04/2010 23:35:32" />
+    <file relUrl="Controls/Layer/FooterControl.ascx" publishTime="04/17/2010 10:10:16" />
     <file relUrl="bin/.svn/text-base/AjaxControlToolkit.pdb.svn-base" publishTime="06/04/2010 23:35:34" />
     <file relUrl="bin/cs/.svn/entries" publishTime="06/16/2010 20:11:30" />
     <file relUrl="MenuScript.js" publishTime="04/17/2010 10:10:36" />
@@ -343,11 +343,11 @@
   </publishTarget>
   <publishTarget publishUrl="D:\Working\SB\">
     <file relUrl="bin/de/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:06:15" />
-    <file relUrl="bin/ko/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
     <file relUrl="bin/.svn/text-base/ShipBooking.pdb.svn-base" publishTime="06/04/2010 12:03:14" />
+    <file relUrl="bin/ja/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
     <file relUrl="Controls/DatVeReviewControl.ascx" publishTime="05/31/2010 17:27:53" />
     <file relUrl="Controls/AdminHanhTrinhControl.ascx" publishTime="06/02/2010 14:42:57" />
-    <file relUrl="Images/admin_quan_ly_booking.png" publishTime="05/13/2010 14:29:54" />
+    <file relUrl="App_Themes/MySkin/MySkin.skin" publishTime="04/20/2010 09:24:09" />
     <file relUrl="Images/tinh_trang_cho.png" publishTime="04/20/2010 09:25:14" />
     <file relUrl="bin/es/.svn/entries" publishTime="06/04/2010 12:07:01" />
     <file relUrl="bin/ShipBooking.dll" publishTime="06/04/2010 14:38:28" />
@@ -355,9 +355,13 @@
     <file relUrl="bin/zh-CHT/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:01" />
     <file relUrl="bin/ru/.svn/entries" publishTime="06/04/2010 12:07:01" />
     <file relUrl="App_Data/ShipBooking_log.ldf" publishTime="06/04/2010 13:58:07" />
-    <file relUrl="bin/it/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
+    <file relUrl="bin/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
+    <file relUrl="bin/zh-CHT/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
     <file relUrl="bin/ko/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
     <file relUrl="Images/text_banvetau.png" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="bin/zh-CHT/.svn/entries" publishTime="06/04/2010 12:07:01" />
+    <file relUrl="bin/pt/.svn/entries" publishTime="06/04/2010 12:07:01" />
+    <file relUrl="DatVe_Review.aspx" publishTime="04/20/2010 09:25:16" />
     <file relUrl="Admin_HanhTrinh.aspx" publishTime="05/28/2010 09:01:40" />
     <file relUrl="Images/menu_bar.gif" publishTime="04/20/2010 09:25:14" />
     <file relUrl="Images/tim_kiem_hanh_trinh.png" publishTime="05/31/2010 15:56:23" />
@@ -366,27 +370,26 @@
     <file relUrl="Web.config" publishTime="04/20/2010 09:25:16" />
     <file relUrl="bin/ar/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
     <file relUrl="bin/fr/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:34" />
-    <file relUrl="Controls/Layer/ContenControl.ascx" publishTime="04/20/2010 09:24:30" />
     <file relUrl="bin/pt/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
     <file relUrl="Images/dat_ve.png" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="bin/zh-CHS/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
     <file relUrl="bin/.svn/prop-base/ShipBooking.dll.svn-base" publishTime="05/31/2010 08:10:32" />
     <file relUrl="XemLichChuyen.aspx" publishTime="06/02/2010 15:34:16" />
     <file relUrl="bin/ko/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:06:54" />
-    <file relUrl="bin/it/.svn/entries" publishTime="06/04/2010 12:07:01" />
+    <file relUrl="bin/ja/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
     <file relUrl="Images/Hinh-su.gif" publishTime="04/20/2010 09:25:14" />
-    <file relUrl="bin/ar/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:04" />
     <file relUrl="bin/zh-CHS/.svn/entries" publishTime="06/04/2010 12:07:01" />
     <file relUrl="bin/de/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:04" />
     <file relUrl="bin/cs/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:06:50" />
     <file relUrl="Images/bang_gia_ve.png" publishTime="04/20/2010 09:25:14" />
     <file relUrl="bin/ja/.svn/entries" publishTime="06/04/2010 12:07:01" />
-    <file relUrl="Images/lich_chuyen.png" publishTime="04/20/2010 09:25:14" />
     <file relUrl="bin/.svn/prop-base/ShipBooking.pdb.svn-base" publishTime="05/31/2010 08:10:30" />
-    <file relUrl="bin/de/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:01:59" />
+    <file relUrl="Images/thong_tin_khach.png" publishTime="05/31/2010 16:56:33" />
     <file relUrl="bin/tr-TR/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
     <file relUrl="Images/thong_tin_nguoi_nhan_ve.png" publishTime="05/13/2010 14:29:54" />
     <file relUrl="bin/hi/.svn/entries" publishTime="06/04/2010 12:07:01" />
     <file relUrl="Images/xem_lich_chuyen.png" publishTime="06/02/2010 15:30:36" />
+    <file relUrl="bin/tr-TR/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:01" />
     <file relUrl="Images/galileo_logo.jpg" publishTime="04/20/2010 09:25:14" />
     <file relUrl="bin/.svn/text-base/ShipBooking.dll.svn-base" publishTime="06/04/2010 12:03:41" />
     <file relUrl="Controls/LoginControl.ascx" publishTime="04/28/2010 11:22:36" />
@@ -398,9 +401,10 @@
     <file relUrl="bin/fr/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
     <file relUrl="bin/AjaxControlToolkit.dll" publishTime="02/29/2008 11:34:04" />
     <file relUrl="bin/.svn/prop-base/AjaxControlToolkit.dll.svn-base" publishTime="06/04/2010 12:01:58" />
-    <file relUrl="bin/it/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:46" />
+    <file relUrl="bin/fr/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:04" />
     <file relUrl="bin/es/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:06:52" />
     <file relUrl="bin/it/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
+    <file relUrl="bin/ru/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:01" />
     <file relUrl="DetailBooking.aspx" publishTime="05/17/2010 14:12:07" />
     <file relUrl="ThongTinHanhTrinh.aspx" publishTime="05/19/2010 15:05:57" />
     <file relUrl="bin/hi/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:04" />
@@ -408,28 +412,27 @@
     <file relUrl="Images/dat_ve_tau.png" publishTime="05/13/2010 14:29:54" />
     <file relUrl="bin/tr-TR/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
     <file relUrl="bin/he/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:06:43" />
+    <file relUrl="Controls/AdminTauControl.ascx" publishTime="05/28/2010 13:43:46" />
+    <file relUrl="Controls/AdminDetailBookingControl.ascx" publishTime="06/01/2010 13:47:43" />
     <file relUrl="Controls/AdminBookingFileControl.ascx" publishTime="06/04/2010 10:43:04" />
     <file relUrl="Images/quan_ly_tau_thuy.png" publishTime="05/13/2010 14:29:54" />
     <file relUrl="Images/thong_tin_tinh_trang_chuyen.png" publishTime="05/13/2010 14:29:54" />
     <file relUrl="Controls/ThongTinKhachControl.ascx" publishTime="05/31/2010 17:27:24" />
     <file relUrl="App_Data/ShipBooking.mdf" publishTime="06/04/2010 13:58:07" />
+    <file relUrl="bin/it/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
     <file relUrl="bin/he/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
     <file relUrl="bin/cs/.svn/entries" publishTime="06/04/2010 12:07:01" />
-    <file relUrl="bin/nl/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
     <file relUrl="Images/banner1.png" publishTime="04/20/2010 09:25:14" />
     <file relUrl="bin/ShipBooking.pdb" publishTime="06/04/2010 14:38:27" />
     <file relUrl="bin/.svn/prop-base/AjaxControlToolkit.pdb.svn-base" publishTime="06/04/2010 12:01:58" />
     <file relUrl="bin/ja/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
-    <file relUrl="bin/es/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
     <file relUrl="bin/zh-CHS/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:01" />
     <file relUrl="Images/ket_thuc_booking.png" publishTime="05/31/2010 17:04:39" />
     <file relUrl="Controls/Admin_ThanhPhoControl.ascx" publishTime="05/14/2010 08:20:05" />
     <file relUrl="Admin_BookingFile.aspx" publishTime="06/01/2010 15:52:20" />
-    <file relUrl="bin/ru/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:01" />
-    <file relUrl="Admin_Master.Master" publishTime="06/01/2010 16:12:10" />
-    <file relUrl="bin/ja/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
+    <file relUrl="bin/it/.svn/entries" publishTime="06/04/2010 12:07:01" />
     <file relUrl="bin/hi/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:06:45" />
-    <file relUrl="bin/zh-CHT/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
+    <file relUrl="Controls/Layer/ContenControl.ascx" publishTime="04/20/2010 09:24:30" />
     <file relUrl="bin/ru/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
     <file relUrl="KetThucBooking.aspx" publishTime="05/13/2010 14:29:55" />
     <file relUrl="bin/es/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:01:59" />
@@ -449,58 +452,55 @@
     <file relUrl="bin/.svn/text-base/AjaxControlToolkit.dll.svn-base" publishTime="06/04/2010 12:04:51" />
     <file relUrl="Default.aspx" publishTime="06/02/2010 15:46:35" />
     <file relUrl="bin/zh-CHS/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
-    <file relUrl="Controls/XemLichChuyenControl.ascx" publishTime="06/04/2010 11:20:47" />
-    <file relUrl="bin/ko/.svn/entries" publishTime="06/04/2010 12:07:01" />
+    <file relUrl="Images/admin_quan_ly_booking.png" publishTime="05/13/2010 14:29:54" />
     <file relUrl="MyMaster.Master" publishTime="06/02/2010 15:36:11" />
     <file relUrl="bin/he/.svn/entries" publishTime="06/04/2010 12:07:01" />
-    <file relUrl="bin/zh-CHS/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:06:41" />
+    <file relUrl="bin/it/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:46" />
     <file relUrl="Controls/Layer/Admin_BannerControl.ascx" publishTime="05/14/2010 08:20:05" />
     <file relUrl="Controls/Layer/RightControl.ascx" publishTime="04/20/2010 09:24:30" />
-    <file relUrl="App_Themes/MySkin/MySkin.skin" publishTime="04/20/2010 09:24:09" />
+    <file relUrl="bin/de/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:01:59" />
     <file relUrl="bin/he/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:04" />
     <file relUrl="bin/ru/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
-    <file relUrl="Images/banner.png" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="bin/ko/.svn/entries" publishTime="06/04/2010 12:07:01" />
     <file relUrl="Controls/Layer/BannerControl.ascx" publishTime="05/17/2010 16:09:43" />
-    <file relUrl="bin/pt/.svn/entries" publishTime="06/04/2010 12:07:01" />
+    <file relUrl="bin/it/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
     <file relUrl="Admin_Functions.aspx" publishTime="05/14/2010 08:20:09" />
-    <file relUrl="Controls/AdminTauControl.ascx" publishTime="05/28/2010 13:43:46" />
-    <file relUrl="Images/thong_tin_khach.png" publishTime="05/31/2010 16:56:33" />
+    <file relUrl="bin/nl/.svn/entries" publishTime="06/04/2010 12:07:01" />
+    <file relUrl="bin/nl/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
+    <file relUrl="bin/ru/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:01" />
     <file relUrl="Images/quan_ly_hanh_trinh.png" publishTime="05/13/2010 14:29:54" />
     <file relUrl="bin/pt/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
     <file relUrl="Images/ket_qua_tim_kiem_hanhtrinh.png" publishTime="05/31/2010 16:36:13" />
     <file relUrl="bin/nl/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:39" />
-    <file relUrl="Controls/Layer/FooterControl.ascx" publishTime="04/20/2010 09:24:30" />
     <file relUrl="bin/hi/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
     <file relUrl="ThongTinKhach.aspx" publishTime="04/28/2010 14:35:10" />
-    <file relUrl="bin/zh-CHT/.svn/entries" publishTime="06/04/2010 12:07:01" />
+    <file relUrl="bin/de/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
+    <file relUrl="Controls/XemLichChuyenControl.ascx" publishTime="06/04/2010 11:20:47" />
     <file relUrl="bin/cs/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
-    <file relUrl="bin/fr/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:04" />
-    <file relUrl="bin/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
+    <file relUrl="Images/banner.png" publishTime="04/20/2010 09:25:14" />
+    <file relUrl="bin/ko/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
     <file relUrl="bin/de/.svn/entries" publishTime="06/04/2010 12:07:01" />
-    <file relUrl="bin/pt/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:04:48" />
-    <file relUrl="bin/ar/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:11" />
-    <file relUrl="bin/zh-CHT/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
     <file relUrl="bin/he/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
-    <file relUrl="DatVe_Review.aspx" publishTime="04/20/2010 09:25:16" />
-    <file relUrl="bin/tr-TR/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:01" />
+    <file relUrl="bin/zh-CHS/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:06:41" />
+    <file relUrl="bin/ar/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:04" />
     <file relUrl="bin/cs/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:04" />
     <file relUrl="bin/zh-CHT/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:04" />
     <file relUrl="Images/admin_quan_ly_hanhtrinh.png" publishTime="05/13/2010 14:29:54" />
-    <file relUrl="bin/ru/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:01" />
+    <file relUrl="bin/pt/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:04:48" />
     <file relUrl="bin/.svn/entries" publishTime="06/04/2010 12:07:01" />
     <file relUrl="Admin_Tau.aspx" publishTime="05/14/2010 08:20:09" />
     <file relUrl="bin/nl/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
     <file relUrl="bin/nl/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
-    <file relUrl="bin/nl/.svn/entries" publishTime="06/04/2010 12:07:01" />
-    <file relUrl="Controls/AdminDetailBookingControl.ascx" publishTime="06/01/2010 13:47:43" />
+    <file relUrl="bin/zh-CHT/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
+    <file relUrl="Images/lich_chuyen.png" publishTime="04/20/2010 09:25:14" />
     <file relUrl="Controls/Layer/LeftControl.ascx" publishTime="04/20/2010 09:24:30" />
     <file relUrl="Admin_ThanhPho.aspx" publishTime="05/14/2010 08:20:09" />
-    <file relUrl="bin/ja/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
-    <file relUrl="bin/de/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
+    <file relUrl="bin/es/.svn/all-wcprops" publishTime="06/04/2010 12:07:01" />
+    <file relUrl="bin/ar/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:11" />
     <file relUrl="Images/tao_booking_step.png" publishTime="05/31/2010 16:52:32" />
-    <file relUrl="bin/it/.svn/prop-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:02:00" />
+    <file relUrl="Admin_Master.Master" publishTime="06/01/2010 16:12:10" />
     <file relUrl="bin/tr-TR/.svn/text-base/AjaxControlToolkit.resources.dll.svn-base" publishTime="06/04/2010 12:03:36" />
-    <file relUrl="bin/zh-CHS/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
+    <file relUrl="Controls/Layer/FooterControl.ascx" publishTime="04/20/2010 09:24:30" />
     <file relUrl="bin/.svn/text-base/AjaxControlToolkit.pdb.svn-base" publishTime="06/04/2010 12:03:50" />
     <file relUrl="bin/pt/AjaxControlToolkit.resources.dll" publishTime="02/29/2008 11:34:06" />
     <file relUrl="MenuScript.js" publishTime="04/20/2010 09:25:16" />
@@ -508,8 +508,10 @@
     <file relUrl="bin/fr/.svn/entries" publishTime="06/04/2010 12:07:01" />
   </publishTarget>
   <publishTarget publishUrl="F:\Working\ShipBooking\">
+    <file relUrl="Web.config" publishTime="05/12/2010 09:15:04" />
     <file relUrl="Admin.aspx" publishTime="05/14/2010 23:21:26" />
     <file relUrl="App_Themes/MySkin/MyCss.css" publishTime="05/12/2010 09:06:22" />
+    <file relUrl="Images/thong_tin_tinh_trang_chuyen.png" publishTime="05/12/2010 15:44:59" />
     <file relUrl="Controls/AdminTauControl.ascx" publishTime="05/12/2010 15:21:32" />
     <file relUrl="Controls/AdminControl.ascx" publishTime="05/18/2010 13:46:43" />
     <file relUrl="bin/.svn/text-base/ShipBooking.pdb.svn-base" publishTime="05/18/2010 13:46:25" />
@@ -521,6 +523,7 @@
     <file relUrl="Images/banner1.png" publishTime="05/12/2010 09:15:00" />
     <file relUrl="Images/thong_tin_nguoi_nhan_ve.png" publishTime="05/12/2010 15:49:07" />
     <file relUrl="Controls/ThongTinKhachControl.ascx" publishTime="05/18/2010 13:46:43" />
+    <file relUrl="Admin_BookingFile.aspx" publishTime="05/14/2010 23:21:26" />
     <file relUrl="Controls/Layer/FooterControl.ascx" publishTime="05/12/2010 09:13:49" />
     <file relUrl="Controls/DatVeReviewControl.ascx" publishTime="05/16/2010 20:22:02" />
     <file relUrl="Controls/DatVeControl.ascx" publishTime="05/18/2010 14:53:10" />
@@ -536,39 +539,36 @@
     <file relUrl="bin/ShipBooking.pdb" publishTime="05/18/2010 14:51:48" />
     <file relUrl="bin/.svn/prop-base/ShipBooking.pdb.svn-base" publishTime="05/18/2010 13:46:26" />
     <file relUrl="Controls/LoginControl.ascx" publishTime="05/12/2010 09:13:49" />
-    <file relUrl="DatVe_Step2.aspx" publishTime="05/12/2010 09:15:04" />
+    <file relUrl="ThongTinHanhTrinh.aspx" publishTime="05/18/2010 14:43:39" />
     <file relUrl="DetailBooking.aspx" publishTime="05/18/2010 13:47:04" />
     <file relUrl="Images/dat_ve_tau.png" publishTime="05/12/2010 15:47:07" />
     <file relUrl="App_Data/ShipBooking_log.ldf" publishTime="05/18/2010 14:53:34" />
     <file relUrl="Controls/ThongTinHanhTrinhControl.ascx" publishTime="05/18/2010 14:45:46" />
-    <file relUrl="Images/banner.png" publishTime="05/12/2010 09:15:00" />
-    <file relUrl="bin/ShipBooking.dll" publishTime="05/18/2010 14:51:48" />
+    <file relUrl="Controls/Layer/Admin_BannerControl.ascx" publishTime="05/14/2010 23:21:24" />
     <file relUrl="Controls/Layer/RightControl.ascx" publishTime="05/12/2010 09:13:49" />
     <file relUrl="Images/quan_ly_hanh_trinh.png" publishTime="05/12/2010 14:55:51" />
     <file relUrl="MyMaster.Master" publishTime="05/12/2010 09:15:04" />
-    <file relUrl="Images/Hinh-su.gif" publishTime="05/12/2010 09:15:00" />
+    <file relUrl="Admin_Master.Master" publishTime="05/14/2010 23:21:26" />
     <file relUrl="Login.aspx" publishTime="05/12/2010 09:15:04" />
     <file relUrl="bin/.svn/entries" publishTime="05/18/2010 13:46:28" />
     <file relUrl="DatVe.aspx" publishTime="05/12/2010 09:15:04" />
     <file relUrl="MenuScript.js" publishTime="05/12/2010 09:15:04" />
-    <file relUrl="Controls/Layer/Admin_BannerControl.ascx" publishTime="05/14/2010 23:21:24" />
+    <file relUrl="Images/banner.png" publishTime="05/12/2010 09:15:00" />
     <file relUrl="App_Themes/MySkin/MySkin.skin" publishTime="05/12/2010 09:06:22" />
     <file relUrl="Controls/ThemHanhKhachControl.ascx" publishTime="05/12/2010 09:13:49" />
-    <file relUrl="Images/lich_chuyen.png" publishTime="05/12/2010 09:15:00" />
     <file relUrl="Images/banner_blue.png" publishTime="05/12/2010 09:15:00" />
     <file relUrl="Controls/AdminBookingFileControl.ascx" publishTime="05/18/2010 13:46:43" />
-    <file relUrl="Admin_Master.Master" publishTime="05/14/2010 23:21:26" />
-    <file relUrl="Images/thong_tin_tinh_trang_chuyen.png" publishTime="05/12/2010 15:44:59" />
+    <file relUrl="DatVe_Step2.aspx" publishTime="05/12/2010 09:15:04" />
+    <file relUrl="bin/ShipBooking.dll" publishTime="05/18/2010 14:51:48" />
     <file relUrl="bin/.svn/prop-base/ShipBooking.dll.svn-base" publishTime="05/18/2010 13:46:28" />
     <file relUrl="Images/bang_gia_ve.png" publishTime="05/12/2010 09:15:00" />
     <file relUrl="Images/menu_bar.gif" publishTime="05/12/2010 09:15:00" />
     <file relUrl="KetThucBooking.aspx" publishTime="05/12/2010 15:38:21" />
     <file relUrl="Images/admin.jpg" publishTime="05/12/2010 09:15:00" />
     <file relUrl="Images/galileo_logo.jpg" publishTime="05/12/2010 09:15:00" />
-    <file relUrl="Web.config" publishTime="05/12/2010 09:15:04" />
-    <file relUrl="Admin_BookingFile.aspx" publishTime="05/14/2010 23:21:26" />
+    <file relUrl="Images/lich_chuyen.png" publishTime="05/12/2010 09:15:00" />
+    <file relUrl="Images/Hinh-su.gif" publishTime="05/12/2010 09:15:00" />
     <file relUrl="bin/.svn/all-wcprops" publishTime="05/18/2010 13:46:28" />
-    <file relUrl="Controls/Layer/ContenControl.ascx" publishTime="05/12/2010 09:13:49" />
     <file relUrl="Admin_ThanhPho.aspx" publishTime="05/14/2010 23:21:26" />
     <file relUrl="Images/dat_ve.png" publishTime="05/12/2010 09:15:00" />
     <file relUrl="Controls/Admin_ThanhPhoControl.ascx" publishTime="05/14/2010 23:21:24" />
@@ -577,11 +577,13 @@
     <file relUrl="App_Data/ShipBooking.mdf" publishTime="05/18/2010 13:46:40" />
     <file relUrl="ThongTinKhach.aspx" publishTime="05/12/2010 09:15:04" />
     <file relUrl="Default.aspx" publishTime="05/18/2010 14:51:41" />
-    <file relUrl="ThongTinHanhTrinh.aspx" publishTime="05/18/2010 14:43:39" />
+    <file relUrl="Controls/Layer/ContenControl.ascx" publishTime="05/12/2010 09:13:49" />
   </publishTarget>
   <publishTarget publishUrl="D:\Working\ShipBooking\">
+    <file relUrl="Web.config" publishTime="04/20/2010 06:55:16" />
     <file relUrl="Admin.aspx" publishTime="05/14/2010 05:50:09" />
     <file relUrl="App_Themes/MySkin/MyCss.css" publishTime="04/20/2010 06:54:09" />
+    <file relUrl="Images/thong_tin_tinh_trang_chuyen.png" publishTime="05/13/2010 11:59:54" />
     <file relUrl="Controls/AdminTauControl.ascx" publishTime="05/13/2010 11:58:47" />
     <file relUrl="Controls/AdminControl.ascx" publishTime="05/17/2010 13:20:20" />
     <file relUrl="bin/.svn/text-base/ShipBooking.pdb.svn-base" publishTime="05/17/2010 06:57:31" />
@@ -608,27 +610,25 @@
     <file relUrl="bin/ShipBooking.pdb" publishTime="05/17/2010 13:41:11" />
     <file relUrl="bin/.svn/prop-base/ShipBooking.pdb.svn-base" publishTime="05/17/2010 06:57:31" />
     <file relUrl="Controls/LoginControl.ascx" publishTime="04/28/2010 08:52:36" />
-    <file relUrl="DatVe_Step2.aspx" publishTime="04/20/2010 06:55:16" />
     <file relUrl="DetailBooking.aspx" publishTime="05/17/2010 11:42:07" />
     <file relUrl="Images/dat_ve_tau.png" publishTime="05/13/2010 11:59:54" />
     <file relUrl="App_Data/ShipBooking_log.ldf" publishTime="05/17/2010 13:41:13" />
-    <file relUrl="Images/banner.png" publishTime="04/20/2010 06:55:14" />
-    <file relUrl="bin/ShipBooking.dll" publishTime="05/17/2010 13:41:11" />
+    <file relUrl="Controls/Layer/Admin_BannerControl.ascx" publishTime="05/14/2010 05:50:05" />
     <file relUrl="Controls/Layer/RightControl.ascx" publishTime="04/20/2010 06:54:30" />
     <file relUrl="Images/quan_ly_hanh_trinh.png" publishTime="05/13/2010 11:59:54" />
     <file relUrl="MyMaster.Master" publishTime="05/11/2010 08:18:28" />
+    <file relUrl="Admin_Master.Master" publishTime="05/14/2010 05:50:09" />
     <file relUrl="Login.aspx" publishTime="04/28/2010 07:26:31" />
     <file relUrl="bin/.svn/entries" publishTime="05/17/2010 06:57:31" />
     <file relUrl="DatVe.aspx" publishTime="04/20/2010 06:55:16" />
     <file relUrl="MenuScript.js" publishTime="04/20/2010 06:55:16" />
-    <file relUrl="Controls/Layer/Admin_BannerControl.ascx" publishTime="05/14/2010 05:50:05" />
+    <file relUrl="Images/banner.png" publishTime="04/20/2010 06:55:14" />
     <file relUrl="App_Themes/MySkin/MySkin.skin" publishTime="04/20/2010 06:54:09" />
     <file relUrl="Controls/ThemHanhKhachControl.ascx" publishTime="04/20/2010 06:54:30" />
-    <file relUrl="Images/lich_chuyen.png" publishTime="04/20/2010 06:55:14" />
     <file relUrl="Images/banner_blue.png" publishTime="04/20/2010 06:55:14" />
     <file relUrl="Controls/AdminBookingFileControl.ascx" publishTime="05/17/2010 11:57:42" />
-    <file relUrl="Admin_Master.Master" publishTime="05/14/2010 05:50:09" />
-    <file relUrl="Images/thong_tin_tinh_trang_chuyen.png" publishTime="05/13/2010 11:59:54" />
+    <file relUrl="DatVe_Step2.aspx" publishTime="04/20/2010 06:55:16" />
+    <file relUrl="bin/ShipBooking.dll" publishTime="05/17/2010 13:41:11" />
     <file relUrl="bin/.svn/prop-base/ShipBooking.dll.svn-base" publishTime="05/17/2010 06:57:31" />
     <file relUrl="Images/bang_gia_ve.png" publishTime="04/20/2010 06:55:14" />
     <file relUrl="Images/menu_bar.gif" publishTime="04/20/2010 06:55:14" />
@@ -636,7 +636,7 @@
     <file relUrl="Images/admin.jpg" publishTime="05/04/2010 05:40:56" />
     <file relUrl="Images/tinh_trang_cho.png" publishTime="04/20/2010 06:55:14" />
     <file relUrl="Images/galileo_logo.jpg" publishTime="04/20/2010 06:55:14" />
-    <file relUrl="Web.config" publishTime="04/20/2010 06:55:16" />
+    <file relUrl="Images/lich_chuyen.png" publishTime="04/20/2010 06:55:14" />
     <file relUrl="Admin_BookingFile.aspx" publishTime="05/14/2010 05:50:09" />
     <file relUrl="bin/.svn/all-wcprops" publishTime="05/17/2010 06:57:31" />
     <file relUrl="Admin_ThanhPho.aspx" publishTime="05/14/2010 05:50:09" />
