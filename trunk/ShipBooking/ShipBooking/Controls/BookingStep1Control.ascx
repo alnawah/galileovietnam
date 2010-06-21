@@ -79,6 +79,13 @@
     {
         width: 68px;
     }
+    .style33
+    {
+        margin: auto;
+        border-style: none;
+        width: 584px;
+        height: auto;
+    }
     </style>
 <p style="text-align: center">
     <asp:Image ID="Image1" runat="server" Height="59px" 
@@ -93,7 +100,7 @@
     </tr>
     <tr>
         <td class="step1_table_contain_style">
-            <table class="step1_tblThongTinDatCho_Detail_Style">
+            <table class="style33">
                 <tr>
                     <td class="style12">
                                                 Loại hành trình:</td>
@@ -166,8 +173,8 @@
                     <td class="style28">
                         Số ghế:</td>
                     <td class="style29" colspan="3">
-                        <asp:CheckBoxList ID="CheckBoxListSoGhe" runat="server" Height="30px" 
-                            RepeatColumns="10" RepeatDirection="Horizontal" Width="340px">
+                        <asp:CheckBoxList ID="CheckBoxListSoGhe" runat="server" Height="29px" 
+                            RepeatColumns="10" RepeatDirection="Horizontal" Width="482px">
                         </asp:CheckBoxList>
                     </td>
                 </tr>

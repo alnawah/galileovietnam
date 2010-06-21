@@ -51,12 +51,54 @@
         
     .style2
     {
-        width: 153px;
+        width: 102px;
     }
     .style4
     {
-        width: 85px;
+        width: 111px;
         text-align: right;
+    }
+    
+    .style5
+    {
+        margin: auto;
+        border: 1px solid #006699;
+        width: 600px;
+        height: auto;
+    }
+    .style6
+    {
+        margin: auto;
+        border-style: none;
+        width: 458px;
+        height: auto;
+    }
+    
+    .style7
+    {
+        margin: auto;
+        border-style: none;
+        width: 500px;
+        height: auto;
+    }
+    .style8
+    {
+        color: #FFFFFF;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 586px;
+    }
+    .style9
+    {
+        border: 1px solid #006699;
+        width: 586px;
+    }
+    .style11
+    {
+        margin: auto;
+        border-style: none;
+        width: 529px;
+        height: auto;
     }
     
 </style>
@@ -67,14 +109,14 @@
 </p>
 <center>
     
-<table class="tblThongTinDatCho_Summary_Style">
+<table class="style5">
     <tr>
         <td bgcolor="#006699" class="table_header_style">
             Hành trình</td>
     </tr>
     <tr>
-        <td class="table_contain_style">
-            <table class="tblThongTinDatCho_Detail_Style">
+        <td class="table_contain_style" align="center">
+            <table class="style7">
                 <tr>
                     <td class="style3">
                         Loại hành trình:</td>
@@ -158,12 +200,9 @@
 </table>
     
 </center>
-
-<p style="text-align: center">
-    &nbsp;</p>
-
+<br />
 <center>
-    <asp:GridView ID="grvHanhKhach" runat="server" Width="800px" 
+    <asp:GridView ID="grvHanhKhach" runat="server" Width="600px" 
         AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" 
         BorderStyle="Solid" BorderWidth="1px" CellPadding="3" Height="71px">
         <FooterStyle BackColor="White" ForeColor="#000066" />
@@ -175,7 +214,7 @@
             <asp:BoundField DataField="TenKhach" HeaderText="Tên khách" >
                 <ItemStyle Width="250px" />
             </asp:BoundField>
-            <asp:BoundField DataField="LoaiTuoi" HeaderText="Tuổi" >
+            <asp:BoundField DataField="LoaiTuoi" HeaderText="Độ tuổi" >
                 <ItemStyle HorizontalAlign="Center" />
             </asp:BoundField>
             <asp:BoundField DataField="GiaVe" HeaderText="Giá vé" >
@@ -195,17 +234,17 @@
 <p style="text-align: center">
     <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
 </p>
-<table class="tblThongTinDatCho_Summary_Style">
+<table class="style5">
     <tr>
-        <td bgcolor="#006699" class="table_header_style">
+        <td bgcolor="#006699" class="style8">
             Thông tin để giao vé</td>
     </tr>
     <tr>
-        <td class="table_contain_style">
-            <table class="tblThongTinDatCho_Detail_Style">
+        <td class="style9" align="center">
+            <table class="style6">
                 <tr>
-                    <td class="ThongTinDatCho_Title_1">
-                        Tên người nhận vé</td>
+                    <td class="style3">
+                        Tên người nhận<span lang="en-us"> </span>vé<span lang="en-us">:</span></td>
                     <td class="ThongTinDatCho_Detail">
                         <asp:TextBox ID="txtTenNguoiNhan" runat="server" Width="279px"></asp:TextBox>
                         &nbsp;<span class="warning_text">(*)
@@ -213,8 +252,8 @@
                         </td>
                 </tr>
                 <tr>
-                    <td class="ThongTinDatCho_Title_1">
-                        Địa chỉ</td>
+                    <td class="style3">
+                        Địa chỉ<span lang="en-us">:</span></td>
                     <td class="ThongTinDatCho_Detail">
                         <asp:TextBox ID="txtDiaChiNguoiNhan" runat="server" Width="279px" Height="100px" 
                             TextMode="MultiLine"></asp:TextBox>
@@ -223,38 +262,38 @@
                         </td>
                 </tr>
                 <tr>
-                    <td class="ThongTinDatCho_Title_1">
-                        Tỉnh/Thành phố</td>
+                    <td class="style3">
+                        Tỉnh/Thành phố<span lang="en-us">:</span></td>
                     <td class="ThongTinDatCho_Detail">
                         <asp:DropDownList ID="ddlThanhPho" runat="server" Height="22px" Width="166px">
                         </asp:DropDownList>
                 </tr>
                 <tr>
-                    <td class="ThongTinDatCho_Title_1">
-                        Điện thoại</td>
+                    <td class="style3">
+                        Điện thoại<span lang="en-us">:</span></td>
                     <td class="ThongTinDatCho_Detail">
                         <asp:TextBox ID="txtDienThoaiNguoiNhan" runat="server" Width="163px"></asp:TextBox>
                         &nbsp;<span class="warning_text">(*)</span>
                     </td>
                 </tr>
                 <tr>
-                    <td class="ThongTinDatCho_Title_1">
-                        Email</td>
+                    <td class="style3">
+                        Email<span lang="en-us">:</span></td>
                     <td class="ThongTinDatCho_Detail">
                         <asp:TextBox ID="txtEmailNguoiNhan" runat="server" Width="279px"></asp:TextBox>
                         </td>
                 </tr>
                 <tr>
-                    <td class="ThongTinDatCho_Title_1">
-                        Các yêu cầu khác (nếu có)</td>
+                    <td class="style3">
+                        Các yêu cầu khác (nếu có)<span lang="en-us">:</span></td>
                     <td class="ThongTinDatCho_Detail">
                         <asp:TextBox ID="txtYeuCauKhac" runat="server" Width="279px" Height="100px" 
                             TextMode="MultiLine"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td class="ThongTinDatCho_Title_1">
-                        Thời gian giao vé</td>
+                    <td class="style3">
+                        Thời gian giao vé<span lang="en-us">:</span></td>
                     <td class="ThongTinDatCho_Detail">
                         <asp:DropDownList ID="ddlThoiGianGiaoVe" runat="server" Width="162px">
                         </asp:DropDownList>
@@ -268,14 +307,14 @@
 
 
 <br />
-<table class="tblThongTinDatCho_Summary_Style">
+<table class="style5">
     <tr>
         <td bgcolor="#006699" class="table_header_style">
             Hình thức thanh toán</td>
     </tr>
     <tr>
         <td class="table_contain_style">
-            <table class="tblThongTinDatCho_Detail_Style">
+            <table class="style11">
                 <tr>
                     <td class="ThongTinDatCho_Detail">
                         <asp:RadioButtonList ID="rblHinhThucThanhToan" runat="server">

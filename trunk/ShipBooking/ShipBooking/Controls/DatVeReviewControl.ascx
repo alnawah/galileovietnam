@@ -55,19 +55,51 @@
         text-align: right;
     }
     
+    .style5
+    {
+        margin: auto;
+        border: 1px solid #006699;
+        width: 600px;
+        height: auto;
+    }
+    .style6
+    {
+        margin: auto;
+        border-style: none;
+        width: 511px;
+        height: auto;
+    }
+    .style7
+    {
+        margin: auto;
+        border-style: none;
+        width: 503px;
+        height: auto;
+    }
+    
 </style>
 <p style="text-align: center">
     <asp:Image ID="Image1" runat="server" Height="59px" 
         ImageUrl="~/Images/ket_thuc_booking.png" Width="413px" />
 </p>
-<table class="tblThongTinDatCho_Summary_Style">
+<p style="text-align: center">
+    <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
+</p>
+<center>
+    <asp:CheckBoxList ID="CheckBoxListSoGhe" runat="server" Height="68px" 
+        RepeatColumns="10" RepeatDirection="Horizontal" Width="457px" 
+        Visible="False">
+    </asp:CheckBoxList>
+</center>
+<br /> 
+<table class="style5">
     <tr>
         <td bgcolor="#006699" class="table_header_style">
             Hành trình</td>
     </tr>
     <tr>
         <td class="table_contain_style">
-            <table class="tblThongTinDatCho_Detail_Style">
+            <table class="style6">
                 <tr>
                     <td class="style3">
                         Loại hành trình:</td>
@@ -151,7 +183,7 @@
 </table>
 <br />
 <center>
-    <asp:GridView ID="grvHanhKhach" runat="server" Width="800px" 
+    <asp:GridView ID="grvHanhKhach" runat="server" Width="602px" 
         AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" 
         BorderStyle="Solid" BorderWidth="1px" CellPadding="3" Height="71px">
         <FooterStyle BackColor="White" ForeColor="#000066" />
@@ -163,7 +195,7 @@
             <asp:BoundField DataField="TenKhach" HeaderText="Tên khách" >
                 <ItemStyle Width="250px" />
             </asp:BoundField>
-            <asp:BoundField DataField="LoaiTuoi" HeaderText="Tuổi" >
+            <asp:BoundField DataField="LoaiTuoi" HeaderText="Độ tuổi" >
                 <ItemStyle HorizontalAlign="Center" />
             </asp:BoundField>
             <asp:BoundField DataField="GiaVe" HeaderText="Giá vé" >
@@ -175,15 +207,16 @@
         <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
     </asp:GridView>
 </center>
+
 <br />
-<table class="tblThongTinDatCho_Summary_Style">
+<table class="style5">
     <tr>
         <td bgcolor="#006699" class="table_header_style">
             Thông tin để giao vé</td>
     </tr>
     <tr>
-        <td class="table_contain_style">
-            <table class="tblThongTinDatCho_Detail_Style">
+        <td class="table_contain_style" align="center">
+            <table class="style7">
                 <tr>
                     <td class="ThongTinDatCho_Title_1">
                         Tên người nhận vé:</td>
@@ -253,5 +286,11 @@
 <p style="text-align: center">
     &nbsp;<asp:Button ID="Button2" runat="server" onclick="Button2_Click" Text="Hoàn tất" 
         Width="104px" Height="26px" />
+    <asp:Button ID="Button3" runat="server" Text="Hoàn tất" 
+        Width="104px" Height="26px" onclick="Button3_Click" Visible="False" />
 </p>
+
+<p style="text-align: center">
+    &nbsp;</p>
+
 

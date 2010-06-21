@@ -124,7 +124,7 @@
                     <asp:GridView ID="grwHanhTrinh" runat="server" AutoGenerateColumns="False"
                         EmptyDataText="Chưa có dữ liệu nào"
                         BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" 
-                        CellPadding="3" Width="636px" 
+                        CellPadding="3" Width="740px" 
                         onselectedindexchanged="grwHanhTrinh_SelectedIndexChanged" 
                     PageSize="50">
                         <RowStyle ForeColor="#000066" />
@@ -133,13 +133,22 @@
                                 <ItemStyle HorizontalAlign="Center" Width="100px" />
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Giờ khởi hành" DataField="GioKhoiHanh" >
-                                <ItemStyle HorizontalAlign="Center" Width="150px" />
+                                <ItemStyle HorizontalAlign="Center" Width="100px" />
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Giờ đến" DataField="GioDen" >
-                                <ItemStyle HorizontalAlign="Center" Width="150px" />
+                                <ItemStyle HorizontalAlign="Center" Width="100px" />
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Ngày trong tuần" DataField="NgayTrongTuan" >
-                                <ItemStyle HorizontalAlign="Center" />
+                                <ItemStyle HorizontalAlign="Center" Width="120px" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="SoGhe" HeaderText="Số ghế">
+                                <ItemStyle HorizontalAlign="Center" Width="80px" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="TongThoiGian" HeaderText="Tổng thời gian">
+                                <ItemStyle HorizontalAlign="Center" Width="100px" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="GiaVeNguoiLon1" HeaderText="Giá vé">
+                                <ItemStyle HorizontalAlign="Right" />
                             </asp:BoundField>
                         </Columns>
                         <FooterStyle BackColor="White" ForeColor="#000066" />
