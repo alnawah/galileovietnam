@@ -42,6 +42,7 @@ namespace ShipBooking.Controls
         BookingFile booking = new BookingFile();
         HanhTrinh hanhtrinh = new HanhTrinh();
         NguoiNhanVe NguoiNhan = new NguoiNhanVe();
+        static bool bSelectAgainSoGhe;
         protected void Page_Load(object sender, EventArgs e)
         {
             loaichuyen = Request.QueryString["LoaiChuyen"];
@@ -83,6 +84,8 @@ namespace ShipBooking.Controls
             }
 
             hanhtrinh = HanhTrinhDB.GetInfo(MaHanhTrinh);
+            lblMsg.Text = "";
+            bSelectAgainSoGhe = false;
             if (!IsPostBack)
             {
                 FillBookingData();
@@ -91,12 +94,119 @@ namespace ShipBooking.Controls
             }
         }
 
+        protected void FillCheckBoxListSoGhe()
+        {
+            int nSoGhe = 0;
+            ListItem item;
+            List<HanhKhach> HKList = new List<HanhKhach>();
+            HKList = HanhKhachDB.GetListHangKhachByHanhTrinhAndDate(ngaydi, MaHanhTrinh);
+            nSoGhe = Convert.ToInt16(hanhtrinh.SoGhe);
+            for (int i = 1; i <= nSoGhe; i++)
+            {
+                item = new ListItem();
+                item.Text = Convert.ToString(i);
+                item.Value = Convert.ToString(i);
+                CheckBoxListSoGhe.Items.Add(item);
+                item = null;
+            }
+
+            //Remove những ghế đã được chọn trong ngày
+            int SoGheDaDat = 0;
+            for (int i = 1; i <= nSoGhe; i++)
+            {
+                item = new ListItem();
+                item.Text = Convert.ToString(i);
+                item.Value = Convert.ToString(i);
+
+                for (int j = 0; j < HKList.Count; j++)
+                {
+                    SoGheDaDat = Convert.ToInt16(HKList[j].SoGhe.Trim());
+                    if (i == SoGheDaDat)
+                    {
+                        CheckBoxListSoGhe.Items.Remove(item);
+                    }
+                }
+                item = null;
+            }
+        }
+
+        protected void CheckSoGheVuaDuocDat()
+        {
+            List<HanhKhach> HKList = new List<HanhKhach>();
+            HKList = HanhKhachDB.GetListHangKhachByHanhTrinhAndDate(ngaydi, MaHanhTrinh);
+
+            for (int i = 0; i < HKList.Count; i++)
+            {
+                for (int j = 0; j < listKhach.Count; j++)
+                {
+                    if (HKList[i].SoGhe.Trim() == listKhach[j].SoGhe.Trim())
+                    {
+                        lblMsg.Text = "Rất tiếc, số ghế " + listKhach[j].SoGhe.Trim() + " vừa mới được đặt, bạn hãy chọn số ghế khác";
+                        CheckBoxListSoGhe.Visible = true;
+                        FillCheckBoxListSoGhe();
+                        Button2.Visible = false;
+                        Button3.Visible = true;
+                        bSelectAgainSoGhe = true;
+                    }
+                }
+            }
+        }
+
+        protected bool CheckSoGhe()
+        {
+            lblMsg.Text = "";
+            bool isValid = false;
+            int sove = 0;
+            int soghe = 0;
+
+            sove = Convert.ToInt16(SoVe.Trim());
+            for (int i = 0; i < CheckBoxListSoGhe.Items.Count; i++)
+            {
+                if (CheckBoxListSoGhe.Items[i].Selected == true)
+                {
+                    soghe += 1;
+                }
+            }
+
+            if (sove != soghe)
+            {
+                isValid = false;
+            }
+            else
+            {
+                isValid = true;
+            }
+            return isValid;
+        }
+
+        protected void GetListSoGhe()
+        {
+            int j = 0;
+            for (int i = 0; i < CheckBoxListSoGhe.Items.Count; i++)
+            {
+                if (CheckBoxListSoGhe.Items[i].Selected == true)
+                {
+                    listKhach[j].SoGhe = CheckBoxListSoGhe.Items[i].Text.Trim();
+                    j++;
+                }
+            }
+        }
+
         protected void Button2_Click(object sender, EventArgs e)
         {
-            SaveNguoiNhanVeData();
-            SaveBookingFileData();
-            SaveHanhKhachData();
-            Response.Redirect("KetThucBooking.aspx?MaBF=" + booking.MaBF);
+            lblMsg.Text = "";
+            CheckSoGheVuaDuocDat();
+            if (bSelectAgainSoGhe == false)
+            {
+                SaveNguoiNhanVeData();
+                SaveBookingFileData();
+                SaveHanhKhachData();
+                Response.Redirect("KetThucBooking.aspx?MaBF=" + booking.MaBF);
+            }
+            else
+            {
+                return;
+            }
         }
 
         protected void FillBookingData()
@@ -237,6 +347,24 @@ namespace ShipBooking.Controls
             {
                 listKhach[i].MaBF = booking.MaBF.ToUpper().Trim();
                 HanhKhachDB.Insert(listKhach[i]);
+            }
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            lblMsg.Text = "";
+            if (CheckSoGhe() == true)
+            {
+                GetListSoGhe();
+                SaveNguoiNhanVeData();
+                SaveBookingFileData();
+                SaveHanhKhachData();
+                Response.Redirect("KetThucBooking.aspx?MaBF=" + booking.MaBF);
+            }
+            else
+            {
+                lblMsg.Text = "Chú ý: Số lượng ghế được chọn phải bằng số lượng vé";
+                return;
             }
         }
     }
