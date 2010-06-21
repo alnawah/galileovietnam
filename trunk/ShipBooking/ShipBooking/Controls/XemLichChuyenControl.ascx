@@ -141,10 +141,6 @@
                             <asp:BoundField HeaderText="Ngày trong tuần" DataField="NgayTrongTuan" >
                                 <ItemStyle HorizontalAlign="Center" />
                             </asp:BoundField>
-                            <asp:CommandField ButtonType="Button" SelectText="Chọn" ShowSelectButton="True">
-                                <ControlStyle Width="50px" />
-                                <ItemStyle HorizontalAlign="Center" />
-                            </asp:CommandField>
                         </Columns>
                         <FooterStyle BackColor="White" ForeColor="#000066" />
                         <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
