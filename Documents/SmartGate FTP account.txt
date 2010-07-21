@@ -1,3 +1,0 @@
-IP:		ftp.smartgate.vn
-User name: 	smartgate
-pass:		qwertyuiop

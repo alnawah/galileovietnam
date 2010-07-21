@@ -1,3 +1,0 @@
-http://112.78.2.84:8787/
-User name: smartgate
-Pass word: qwertyuiop
