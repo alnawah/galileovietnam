@@ -1,0 +1,132 @@
+html
+{
+	background-color: #94D5DA;
+	font: 14px Georgia,Serif;
+	background-image: url(../images/backgound.png);
+	background-repeat: repeat-x;
+}
+.content{
+	margin:auto;width:1024px;border:solid 1px black;padding:10px;
+}
+.banner{
+	margin:auto;
+	width:1024px;
+	background-image: url(../images/banner.png);
+	background-repeat: no-repeat;
+	height: 49px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-size: 12px;
+	background-position:right;
+	vertical-align: bottom;
+}
+.signup
+{
+	margin:auto;
+	width:1024px;
+	color:#00CCFF;
+	font-size:12px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+.main
+{
+	margin:auto;
+	width: 1024px;
+}
+.left_main{
+	width:389px;
+	float:left;
+	height:auto;
+	background-image: url(../images/bg_left_main.png);
+}
+.left_search_form{
+	width:360px;
+	height:auto;
+	float:right;
+	padding-right:5px;
+	background-image: url(../images/bg_search_form.png);
+	background-repeat: no-repeat;
+}
+.left_travel_guide_title{
+	float:right;
+	width:360px;
+	height:41px;
+	background-image: url(../images/title_travel_guide.png);
+	background-repeat: no-repeat;
+}
+.left_travel_guide{
+	width:360px;
+	float:left;
+	height:214px;
+	background-image: url(../images/bg_travel_guide.png);	
+}
+
+.right_main
+{
+	float: right;
+	width: 635px;
+	height: auto;
+	background-repeat: no-repeat;
+	background-position: right;
+	background-color: #FFFFFF;
+}
+.right_main_menu_bar{
+	padding-top:2px;
+	float:right;
+	width:633px;
+	height:6px;
+	background-image: url(../images/menu_bar.png);
+	background-position:right;
+	background-repeat: no-repeat;
+}
+.right_main_promotion
+{
+	width:619px;
+	height:413px;
+	background-image: url(../images/promotion.png);
+}
+.right_main_top_destination_banner
+{
+	width:635px;
+	height:75px;
+	background-image: url(../images/top_destination.png);
+}
+.right_main_top_destination_item
+{
+	border-style: outset;
+	float: right;
+	width: 200px;
+	height: 247px;
+	background-color: #EFF6EF;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+.right_main_top_destination_item_header
+{
+	width: 200px;
+	height: 30px;
+	background-color: #9E92BA;
+	margin-left: 2px;
+	margin-right: 2px;
+	font-family: Arial;
+	font-size: x-large;
+	font-weight:normal;
+	color: #FFFFFF;
+	vertical-align: middle;
+	text-align: center;
+}
+.right_main_top_destination_item_image
+{
+	width: 190px;
+	height:115px;
+}
+.footer
+{
+	margin:auto;
+	height: 114px;
+	width: auto;
+	background-image: none;
+	background-color: #74BEC9;
+}
