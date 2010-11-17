@@ -53,7 +53,7 @@ html
 	background-image: url(../images/bg_search_form.png);
 	background-repeat: no-repeat;
 }
-.left_travel_guide_title
+.left_header_travel_guide
 {
 	float: right;
 	width: 360px;
@@ -61,11 +61,18 @@ html
 	padding-right: 5px;
 	background-image: url(../images/title_travel_guide.png);
 	background-repeat: no-repeat;
-	color: #00B8DA;
+}
+.left_travel_guide_title
+{
+	float: right;
+	padding-left: 40px;
+	height: 30px;
+	width: 120px;
+	font-size: 14pt;
+	font-weight: normal;
+	padding-top: 10px;
+	color: #21B5FD;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: x-large;
-	text-align: right;
-	vertical-align: text-bottom;
 }
 .left_travel_guide
 {
