@@ -1,0 +1,17 @@
+﻿body
+{
+}
+.table_control
+{
+    
+}
+.table_control .col_label
+{
+    text-align: right;
+}
+.tab_container
+{
+    min-width:300px;
+    width:auto;
+    height:auto;
+}

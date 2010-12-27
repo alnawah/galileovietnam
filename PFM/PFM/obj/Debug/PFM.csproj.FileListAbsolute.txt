@@ -1,0 +1,5 @@
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\PFM\PFM\bin\PFM.dll
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\PFM\PFM\bin\PFM.pdb
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\PFM\PFM\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\PFM\PFM\obj\Debug\PFM.dll
+C:\Documents and Settings\Quang Minh\My Documents\Visual Studio 2008\Projects\PFM\PFM\obj\Debug\PFM.pdb
